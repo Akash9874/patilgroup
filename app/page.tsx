@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { ArrowRight, Menu, X } from 'lucide-react';
+import Link from 'next/link';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 // Counter hook for animated counting
 function useCounter(end: number, duration: number = 2000, start: number = 0) {
@@ -34,19 +36,11 @@ function useCounter(end: number, duration: number = 2000, start: number = 0) {
 }
 
 export default function Home() {
-  const [scrollY, setScrollY] = useState(0);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  useScrollAnimation();
   // Counter hooks for each stat
   const sleepers = useCounter(40, 2500);
   const employees = useCounter(5000, 2000);
   const zones = useCounter(14, 1500);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Intersection Observer for scroll animations
   useEffect(() => {
@@ -58,8 +52,6 @@ export default function Home() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          
           // Trigger counter animations when stats section becomes visible
           if (entry.target.id === 'stats-section') {
             sleepers.setIsVisible(true);
@@ -70,13 +62,6 @@ export default function Home() {
       });
     }, observerOptions);
 
-    // Observe all elements with animation classes
-    const animatedElements = document.querySelectorAll(
-      '.fade-in-section, .slide-in-left, .slide-in-right, .scale-in'
-    );
-    
-    animatedElements.forEach((el) => observer.observe(el));
-
     // Also observe the stats section
     const statsSection = document.getElementById('stats-section');
     if (statsSection) observer.observe(statsSection);
@@ -86,101 +71,6 @@ export default function Home() {
 
   return (
     <div className="overflow-x-hidden">
-      {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrollY > 50 
-          ? 'bg-white/95 backdrop-blur-sm shadow-sm' 
-          : 'bg-transparent'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <div className="flex items-center animate-fadeInLeft">
-              <img 
-                src="/pg.png" 
-                alt="Patil Group Logo" 
-                className="h-10 w-auto transition-all duration-300 hover-scale cursor-pointer"
-              />
-            </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8 animate-fadeInRight">
-              <a href="#" className={`transition-all duration-300 font-medium relative group ${
-                scrollY > 50 ? 'text-gray-700 hover:text-amber-700' : 'text-white hover:text-amber-200'
-              }`}>
-                Home
-                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                  scrollY > 50 ? 'bg-amber-700' : 'bg-amber-200'
-                }`}></span>
-              </a>
-              <a href="#" className={`transition-all duration-300 font-medium relative group ${
-                scrollY > 50 ? 'text-gray-700 hover:text-amber-700' : 'text-white hover:text-amber-200'
-              }`}>
-                About
-                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                  scrollY > 50 ? 'bg-amber-700' : 'bg-amber-200'
-                }`}></span>
-              </a>
-              <a href="#" className={`transition-all duration-300 font-medium relative group ${
-                scrollY > 50 ? 'text-gray-700 hover:text-amber-700' : 'text-white hover:text-amber-200'
-              }`}>
-                Products
-                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                  scrollY > 50 ? 'bg-amber-700' : 'bg-amber-200'
-                }`}></span>
-              </a>
-              <a href="#" className={`transition-all duration-300 font-medium relative group ${
-                scrollY > 50 ? 'text-gray-700 hover:text-amber-700' : 'text-white hover:text-amber-200'
-              }`}>
-                Solutions
-                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                  scrollY > 50 ? 'bg-amber-700' : 'bg-amber-200'
-                }`}></span>
-              </a>
-              <a href="#" className={`transition-all duration-300 font-medium relative group ${
-                scrollY > 50 ? 'text-gray-700 hover:text-amber-700' : 'text-white hover:text-amber-200'
-              }`}>
-                Projects
-                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                  scrollY > 50 ? 'bg-amber-700' : 'bg-amber-200'
-                }`}></span>
-              </a>
-              <button className="bg-amber-700 text-white px-6 py-2 rounded-full hover:bg-amber-800 transition-all duration-300 font-medium hover-lift hover-glow">
-                Contact
-              </button>
-            </div>
-
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className={`transition-all duration-300 hover-scale ${
-                  scrollY > 50 ? 'text-gray-700 hover:text-amber-700' : 'text-white hover:text-amber-200'
-                }`}
-              >
-                {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-              </button>
-            </div>
-          </div>
-
-          {/* Mobile Navigation */}
-          {isMobileMenuOpen && (
-            <div className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg animate-slideInFromBottom">
-              <div className="px-4 py-2 space-y-2">
-                <a href="#" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Home</a>
-                <a href="#" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">About</a>
-                <a href="#" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Products</a>
-                <a href="#" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Solutions</a>
-                <a href="#" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Projects</a>
-                <button className="w-full text-left px-3 py-2 bg-amber-700 text-white rounded-md hover:bg-amber-800 transition-all duration-300 hover-lift">
-                  Contact
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="relative h-screen overflow-hidden">
         {/* Video Background */}
@@ -331,10 +221,10 @@ export default function Home() {
       </section>
 
       {/* Our Solutions Section */}
-      <section className="bg-[#F2F2F2] overflow-hidden">
+      <section className="bg-[#F2F2F2] overflow-hidden fade-in-section">
         <div className="grid lg:grid-cols-5">
           {/* Left side - Content */}
-          <div className="lg:col-span-3 space-y-6 lg:space-y-8 p-8 sm:p-12 lg:p-16">
+          <div className="lg:col-span-3 space-y-6 lg:space-y-8 p-8 sm:p-12 lg:p-16 slide-in-left">
             <h2 
               className="flex items-center"
               style={{
@@ -393,7 +283,7 @@ export default function Home() {
 
           {/* Right side - Concrete Sleepers Image */}
           <div 
-            className="lg:col-span-2 min-h-[400px] lg:min-h-0 bg-cover bg-center"
+            className="lg:col-span-2 min-h-[400px] lg:min-h-0 bg-cover bg-center slide-in-right"
             style={{ 
               backgroundImage: 'url(/sleeper.png)',
               clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)'
@@ -405,7 +295,7 @@ export default function Home() {
       </section>
 
       {/* In News Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
+      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-12 lg:mb-16 fade-in-section">
             In News
