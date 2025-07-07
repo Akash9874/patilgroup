@@ -28,11 +28,13 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center animate-fadeInLeft">
-            <img 
-              src="/pg.png" 
-              alt="Patil Group Logo" 
-              className="h-10 w-auto transition-all duration-300 hover-scale cursor-pointer"
-            />
+            <Link href="/">
+              <img 
+                src="/pg.png" 
+                alt="Patil Group Logo" 
+                className="h-10 w-auto transition-all duration-300 hover-scale cursor-pointer"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
