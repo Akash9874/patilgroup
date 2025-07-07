@@ -44,10 +44,10 @@ const CMEPage = () => {
       {/* Key Objectives Section */}
       <section className="bg-white text-gray-800 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#8A393B] mb-20">Our key objectives :</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#8A393B] mb-20 fade-in-section">Our key objectives :</h2>
             <div className="space-y-16">
                 {/* Objective 1 */}
-                <div>
+                <div className="slide-in-left">
                     <div className="flex items-center">
                         <h3 className="text-2xl md:text-3xl font-semibold text-amber-500 whitespace-nowrap pr-4">Enhancing Overall Equipment Efficiency (OEE)</h3>
                         <div className="w-full h-0.5 bg-gradient-to-r from-blue-500 via-red-500 to-orange-500"></div>
@@ -59,7 +59,7 @@ const CMEPage = () => {
                     </div>
                 </div>
                 {/* Objective 2 */}
-                <div>
+                <div className="slide-in-right">
                     <div className="flex items-center">
                         <h3 className="text-2xl md:text-3xl font-semibold text-amber-500 whitespace-nowrap pr-4">Improving Product Quality & Process Efficiency</h3>
                         <div className="w-full h-0.5 bg-gradient-to-r from-blue-500 via-red-500 to-orange-500"></div>
@@ -71,7 +71,7 @@ const CMEPage = () => {
                     </div>
                 </div>
                 {/* Objective 3 */}
-                <div>
+                <div className="slide-in-left">
                     <div className="flex items-center">
                         <h3 className="text-2xl md:text-3xl font-semibold text-amber-500 whitespace-nowrap pr-4">Strengthening Health, Safety & Environment (HSE)</h3>
                         <div className="w-full h-0.5 bg-gradient-to-r from-blue-500 via-red-500 to-orange-500"></div>
@@ -83,7 +83,7 @@ const CMEPage = () => {
                     </div>
                 </div>
                 {/* Objective 4 */}
-                <div>
+                <div className="slide-in-right">
                     <div className="flex items-center">
                         <h3 className="text-2xl md:text-3xl font-semibold text-amber-500 whitespace-nowrap pr-4">Setting Global Benchmarks in Manufacturing</h3>
                         <div className="w-full h-0.5 bg-gradient-to-r from-blue-500 via-red-500 to-orange-500"></div>
@@ -101,28 +101,28 @@ const CMEPage = () => {
     {/* Our Initiatives Section */}
     <section className="bg-white text-gray-800 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#8A393B]">Our Initiatives</h2>
-            <p className="mt-4 text-base md:text-lg text-gray-700">To achieve these goals, the centre is actively implementing the following initiatives:</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#8A393B] fade-in-section">Our Initiatives</h2>
+            <p className="mt-4 text-base md:text-lg text-gray-700 fade-in-section">To achieve these goals, the centre is actively implementing the following initiatives:</p>
             <div className="mt-16 space-y-20">
                 {/* Initiative 1 */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                    <div className="md:col-span-1 bg-gray-200 h-48 rounded-lg"></div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center slide-in-left">
+                    <div className="md:col-span-1 bg-gray-200 h-48 rounded-lg scale-in"></div>
                     <div className="md:col-span-2">
                         <h3 className="text-2xl font-semibold mb-2">Lean Manufacturing</h3>
                         <p className="text-gray-700">We streamline operations by eliminating waste and optimizing resource use, ensuring maximum value for every step in our production process.</p>
                     </div>
                 </div>
                 {/* Initiative 2 */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                    <div className="md:col-span-1 bg-gray-200 h-48 rounded-lg"></div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center slide-in-right">
+                    <div className="md:col-span-1 bg-gray-200 h-48 rounded-lg scale-in"></div>
                     <div className="md:col-span-2">
                         <h3 className="text-2xl font-semibold mb-2">5S and Kaizen Methodologies</h3>
                         <p className="text-gray-700">By fostering discipline and continuous improvement at the ground level, we build a culture of efficiency, cleanliness, and proactive problem-solving.</p>
                     </div>
                 </div>
                 {/* Initiative 3 */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                    <div className="md:col-span-1 bg-gray-200 h-48 rounded-lg"></div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center slide-in-left">
+                    <div className="md:col-span-1 bg-gray-200 h-48 rounded-lg scale-in"></div>
                     <div className="md:col-span-2">
                         <h3 className="text-2xl font-semibold mb-2">Robotic Process Implementation & SPM Automation</h3>
                         <p className="text-gray-700">By fostering discipline and continuous improvement at the ground level, we build a culture of efficiency, cleanliness, and proactive problem-solving.</p>
@@ -136,7 +136,7 @@ const CMEPage = () => {
     <section className="bg-gray-100 text-gray-800">
         <div className="grid grid-cols-1 md:grid-cols-2 items-stretch">
             <div className="flex items-center justify-center p-8 md:p-16">
-                <div>
+                <div className="slide-in-left">
                     <h2 className="text-4xl font-bold text-[#8A393B]">
                         Skill Development Centre
                     </h2>
@@ -152,7 +152,7 @@ const CMEPage = () => {
                 </div>
             </div>
             <div 
-                className="bg-cover bg-center min-h-[400px] md:min-h-full"
+                className="bg-cover bg-center min-h-[400px] md:min-h-full scale-in"
                 style={{
                     backgroundImage: "url('/sleeper.png')",
                     clipPath: 'polygon(20% 0, 100% 0, 100% 100%, 0 100%)'
@@ -165,10 +165,10 @@ const CMEPage = () => {
     {/* Empowering Rural Youth Section */}
     <section className="bg-white text-gray-800 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#8A393B] mb-12">Empowering Rural Youth through Skill Development</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#8A393B] mb-12 fade-in-section">Empowering Rural Youth through Skill Development</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-                <div className="md:col-span-1 bg-gray-200 h-64 rounded-lg"></div>
-                <div className="md:col-span-2 space-y-6">
+                <div className="md:col-span-1 bg-gray-200 h-64 rounded-lg scale-in"></div>
+                <div className="md:col-span-2 space-y-6 slide-in-right">
                     <p className="text-gray-700 text-lg">
                         Recognizing the growing demand for skilled professionals in the railway industry, Patil Group is committed to playing its part in upskilling rural youth and preparing them for emerging opportunities.
                     </p>
@@ -183,19 +183,19 @@ const CMEPage = () => {
     {/* Inside the Training Program Section */}
     <section className="bg-white text-gray-800 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#8A393B] mb-12">Inside the Training Program</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#8A393B] mb-12 fade-in-section">Inside the Training Program</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-                <div className="bg-gray-200 h-96 rounded-3xl flex flex-col justify-end items-center p-4">
+                <div className="bg-gray-200 h-96 rounded-3xl flex flex-col justify-end items-center p-4 scale-in animate-delay-100">
                     <div className="bg-amber-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">1</div>
                 </div>
-                <div className="bg-gray-200 h-96 rounded-3xl flex flex-col justify-end items-center p-4">
+                <div className="bg-gray-200 h-96 rounded-3xl flex flex-col justify-end items-center p-4 scale-in animate-delay-300">
                     <div className="bg-amber-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">2</div>
                 </div>
-                <div className="bg-gray-200 h-96 rounded-3xl flex flex-col justify-end items-center p-4">
+                <div className="bg-gray-200 h-96 rounded-3xl flex flex-col justify-end items-center p-4 scale-in animate-delay-500">
                     <div className="bg-amber-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">3</div>
                 </div>
             </div>
-            <p className="max-w-4xl mx-auto text-gray-700 text-lg">
+            <p className="max-w-4xl mx-auto text-gray-700 text-lg fade-in-section">
                 Additionally, we arrange specialized sessions on various railway functions in collaboration with RDSO and other railway authorities, based on industry needs and requests. With these cutting-edge facilities, Patil Group ensures that trainees receive comprehensive, industry-relevant education, preparing them for successful careers in railway manufacturing and infrastructure.
             </p>
         </div>
@@ -205,7 +205,7 @@ const CMEPage = () => {
     <section className="bg-white text-gray-800 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
+                <div className="slide-in-left">
                     <h2 className="text-4xl md:text-5xl font-bold text-[#8A393B] mb-8">
                         First certificate from quality<br />forum of India
                     </h2>
@@ -213,7 +213,7 @@ const CMEPage = () => {
                         Every plant of Patil Group has successfully completed many Quality Circle projects. We had Participated in "CCQC-2020, Hyderabad chapter organized by QCFI (Quality Circle Forum of India) And awarded Gold Medal in Quality circle competition.
                     </p>
                 </div>
-                <div className="bg-gray-200 h-80 rounded-lg"></div>
+                <div className="bg-gray-200 h-80 rounded-lg scale-in"></div>
             </div>
         </div>
     </section>
