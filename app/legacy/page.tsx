@@ -21,9 +21,9 @@ interface TimelineIconProps {
 }
 
 const TimelineIntro = ({ scrollYProgress }: TimelineIntroProps) => {
-    const scale = useTransform(scrollYProgress, [0, 0.15], [0.8, 1]);
-    const opacity = useTransform(scrollYProgress, [0, 0.15], [0, 1]);
-    const pathLength = useTransform(scrollYProgress, [0.1, 0.4], [0, 1]);
+    const scale = useTransform(scrollYProgress, [0, 0.1], [0.8, 1]);
+    const opacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+    const pathLength = useTransform(scrollYProgress, [0.05, 0.25], [0, 1]);
 
     const leftPath = "M 50 50 H 0";
     const rightPath = "M 50 50 H 100";
@@ -190,7 +190,7 @@ const LegacyPage = () => {
       offset: ["start start", "end end"]
   });
 
-  const timelineScaleY = useTransform(scrollYProgress, [0.4, 1], [0, 1]);
+  const timelineScaleY = useTransform(scrollYProgress, [0.25, 0.85], [0, 1]);
   
   return (
     <div className="bg-[#1E1E1E] text-white">

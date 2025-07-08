@@ -8,7 +8,7 @@ const productsData = [
   {
     title: 'Fasteners',
     description: 'High-performance fastening solutions that secure rails in place, reducing vibration and improving track longevity.',
-    link: '#'
+    link: '/fasteners'
   },
   {
     title: 'Sleepers',
