@@ -115,7 +115,7 @@ const Navbar = () => {
                 navIsScrolled ? 'bg-amber-700' : 'bg-amber-200'
               }`}></span>
             </Link>
-            <Link href="/contact" onMouseEnter={() => setIsAboutMenuOpen(false)} className="bg-amber-700 text-white px-6 py-2 rounded-full hover:bg-amber-800 transition-all duration-300 font-medium hover-lift hover-glow">
+            <Link href="/contact" onMouseEnter={() => setIsAboutMenuOpen(false)} className="bg-[#8A393B] text-white px-6 py-2 rounded-full hover:bg-[#793032] transition-all duration-300 font-medium hover-lift hover-glow">
               Contact
             </Link>
           </div>
@@ -163,7 +163,7 @@ const Navbar = () => {
             <Link href="/projects" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Projects</Link>
             <Link href="/cme" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">CME</Link>
             <Link href="/careers" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Careers</Link>
-            <Link href="/contact" className="w-full text-left block px-3 py-2 bg-amber-700 text-white rounded-md hover:bg-amber-800 transition-all duration-300 hover-lift">
+            <Link href="/contact" className="w-full text-left block px-3 py-2 bg-[#8A393B] text-white rounded-md hover:bg-[#793032] transition-all duration-300 hover-lift">
               Contact
             </Link>
           </div>
