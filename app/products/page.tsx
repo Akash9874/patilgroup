@@ -23,7 +23,7 @@ const productsData = [
   {
     title: 'Inserts',
     description: 'We manufacture high-quality SGCI Inserts and Base Plates, crucial components for both Railway and Metro Rail tracks.',
-    link: '#'
+    link: '/inserts'
   }
 ];
 
