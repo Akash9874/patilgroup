@@ -391,44 +391,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 sm:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="md:col-span-2 fade-in-section">
-              <div className="text-2xl font-bold text-amber-400 mb-4 hover-scale cursor-pointer">
-                PATIL
-                <span className="block text-sm font-normal text-amber-300 leading-none">GROUP</span>
-              </div>
-              <p className="text-gray-400 max-w-md">
-                Leading India's railway infrastructure development with innovative track solutions 
-                and sustainable engineering practices.
-              </p>
-            </div>
-            <div className="fade-in-section animate-delay-200">
-              <h4 className="font-bold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Products</a></li>
-                <li><a href="#" className="hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Solutions</a></li>
-                <li><a href="#" className="hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Projects</a></li>
-              </ul>
-            </div>
-            <div className="fade-in-section animate-delay-400">
-              <h4 className="font-bold mb-4">Contact</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li className="hover:text-white transition-colors duration-300">Email: info@patilgroup.com</li>
-                <li className="hover:text-white transition-colors duration-300">Phone: +91 98765 43210</li>
-                <li className="hover:text-white transition-colors duration-300">Address: Mumbai, India</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center text-gray-400 fade-in-section animate-delay-600">
-            <p>&copy; 2025 Patil Group. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
