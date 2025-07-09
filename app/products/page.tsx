@@ -24,6 +24,21 @@ const productsData = [
     title: 'Inserts',
     description: 'We manufacture high-quality SGCI Inserts and Base Plates, crucial components for both Railway and Metro Rail tracks.',
     link: '/inserts'
+  },
+  {
+    title: 'Turnouts & Switches',
+    description: 'Engineered for strength and durability, our sleepers enhance track stability with minimal maintenance.',
+    link: '/turnouts'
+  },
+  {
+    title: 'Under Sleeper Pads (USP)',
+    description: 'High-quality pre-stressed steel wires designed for superior reinforcement in railway infrastructure.',
+    link: '/under-sleeper-pads'
+  },
+  {
+    title: 'Noise & Vibration Solution for Slab Track',
+    description: 'We manufacture high-quality SGCI Inserts and Base Plates, crucial components for both Railway and Metro Rail tracks.',
+    link: '/noise-vibration-solutions'
   }
 ];
 
