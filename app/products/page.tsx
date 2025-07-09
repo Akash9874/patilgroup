@@ -18,7 +18,7 @@ const productsData = [
   {
     title: 'Wires',
     description: 'High-quality pre-stressed steel wires designed for superior reinforcement in railway infrastructure.',
-    link: '#'
+    link: '/wires'
   },
   {
     title: 'Inserts',
