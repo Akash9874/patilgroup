@@ -304,36 +304,42 @@ export default function Home() {
           <div className="space-y-12">
             {/* News Item 1 */}
             <div className="max-w-md lg:max-w-lg fade-in-section animate-delay-200">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-500 mb-4 lg:mb-6 leading-tight hover:text-orange-600 transition-colors duration-300">
+              <h3 className="font-clash font-medium text-4xl leading-none text-[#F2913F] mb-4 lg:mb-6 transition-colors duration-300">
                 Patil Group recently acquired 'Apnatech'.
               </h3>
-              <button className="inline-flex items-center text-gray-800 hover:text-amber-700 font-semibold group mb-4 transition-all duration-300">
+              <button className="inline-flex items-center gap-[13px] text-black font-clash font-medium text-2xl leading-[72px] group transition-all duration-300">
                 Read more 
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={18} />
+                <span className="flex items-center justify-center w-7 h-7 rounded-full border border-[#8A393B] text-[#8A393B] transition-all duration-300 group-hover:bg-[#8A393B] group-hover:text-white">
+                  <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" size={16} />
+                </span>
               </button>
               <div className="w-full h-1 bg-gradient-to-r from-amber-800 via-blue-600 to-orange-500 rounded-full animate-gradient-shift"></div>
             </div>
 
             {/* News Item 2 */}
             <div className="max-w-md lg:max-w-lg lg:mx-auto fade-in-section animate-delay-400">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-500 mb-4 lg:mb-6 leading-tight hover:text-orange-600 transition-colors duration-300">
+              <h3 className="font-clash font-medium text-4xl leading-none text-[#F2913F] mb-4 lg:mb-6 transition-colors duration-300">
                 India's largest foundry opened in Bokaro by Patil group.
               </h3>
-              <button className="inline-flex items-center text-gray-800 hover:text-amber-700 font-semibold group mb-4 transition-all duration-300">
+              <button className="inline-flex items-center gap-[13px] text-black font-clash font-medium text-2xl leading-[72px] group transition-all duration-300">
                 Read more 
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={18} />
+                <span className="flex items-center justify-center w-7 h-7 rounded-full border border-[#8A393B] text-[#8A393B] transition-all duration-300 group-hover:bg-[#8A393B] group-hover:text-white">
+                  <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" size={16} />
+                </span>
               </button>
               <div className="w-full h-1 bg-gradient-to-r from-amber-800 via-blue-600 to-orange-500 rounded-full animate-gradient-shift"></div>
             </div>
 
             {/* News Item 3 */}
             <div className="max-w-md lg:max-w-lg ml-auto fade-in-section animate-delay-600">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-500 mb-4 lg:mb-6 leading-tight hover:text-orange-600 transition-colors duration-300">
+              <h3 className="font-clash font-medium text-4xl leading-none text-[#F2913F] mb-4 lg:mb-6 transition-colors duration-300">
                 India's Longest Railway Tunnel opens to Traffic
               </h3>
-              <button className="inline-flex items-center text-gray-800 hover:text-amber-700 font-semibold group mb-4 transition-all duration-300">
+              <button className="inline-flex items-center gap-[13px] text-black font-clash font-medium text-2xl leading-[72px] group transition-all duration-300">
                 Read more 
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" size={18} />
+                <span className="flex items-center justify-center w-7 h-7 rounded-full border border-[#8A393B] text-[#8A393B] transition-all duration-300 group-hover:bg-[#8A393B] group-hover:text-white">
+                  <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" size={16} />
+                </span>
               </button>
               <div className="w-full h-1 bg-gradient-to-r from-amber-800 via-blue-600 to-orange-500 rounded-full animate-gradient-shift"></div>
             </div>
