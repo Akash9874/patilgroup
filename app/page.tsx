@@ -296,14 +296,14 @@ export default function Home() {
 
       {/* In News Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-12 lg:mb-16 fade-in-section">
+        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-12 lg:mb-16 fade-in-section text-left">
             In News
           </h2>
           
-          <div className="space-y-12 lg:space-y-0 lg:relative">
+          <div className="space-y-12">
             {/* News Item 1 */}
-            <div className="lg:mb-16 max-w-md lg:max-w-lg fade-in-section animate-delay-200">
+            <div className="max-w-md lg:max-w-lg fade-in-section animate-delay-200">
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-500 mb-4 lg:mb-6 leading-tight hover:text-orange-600 transition-colors duration-300">
                 Patil Group recently acquired 'Apnatech'.
               </h3>
@@ -315,7 +315,7 @@ export default function Home() {
             </div>
 
             {/* News Item 2 */}
-            <div className="lg:mb-16 max-w-md lg:max-w-lg lg:mx-auto lg:translate-x-[-25%] fade-in-section animate-delay-400">
+            <div className="max-w-md lg:max-w-lg lg:mx-auto fade-in-section animate-delay-400">
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-500 mb-4 lg:mb-6 leading-tight hover:text-orange-600 transition-colors duration-300">
                 India's largest foundry opened in Bokaro by Patil group.
               </h3>
@@ -327,7 +327,7 @@ export default function Home() {
             </div>
 
             {/* News Item 3 */}
-            <div className="max-w-md lg:max-w-lg lg:ml-auto lg:mt-8 lg:translate-x-8 fade-in-section animate-delay-600">
+            <div className="max-w-md lg:max-w-lg ml-auto fade-in-section animate-delay-600">
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-orange-500 mb-4 lg:mb-6 leading-tight hover:text-orange-600 transition-colors duration-300">
                 India's Longest Railway Tunnel opens to Traffic
               </h3>
