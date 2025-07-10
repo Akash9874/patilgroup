@@ -135,7 +135,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             <div className="slide-in-left">
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-amber-800 mb-6 lg:mb-8 leading-tight">
+              <h2
+                className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 lg:mb-8 leading-tight"
+                style={{ color: '#8A393B' }}
+              >
                 Made in India
               </h2>
             </div>
@@ -173,7 +176,7 @@ export default function Home() {
             <div className="order-1 lg:order-2 lg:col-span-3 scale-in">
               <div className="relative hover-lift">
                 <img
-                  src="https://images.pexels.com/photos/3634750/pexels-photo-3634750.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                  src="/landing image.png"
                   alt="Modern Train"
                   className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl shadow-2xl transition-all duration-500 hover:shadow-3xl"
                 />
