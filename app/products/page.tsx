@@ -6,14 +6,14 @@ import { ArrowRight } from 'lucide-react';
 
 const productsData = [
   {
-    title: 'Fasteners',
-    description: 'High-performance fastening solutions that secure rails in place, reducing vibration and improving track longevity.',
-    link: '/fasteners'
-  },
-  {
     title: 'Sleepers',
     description: 'Engineered for strength and durability, our sleepers enhance track stability with minimal maintenance.',
     link: '/sleepers'
+  },
+  {
+    title: 'Fasteners',
+    description: 'High-performance fastening solutions that secure rails in place, reducing vibration and improving track longevity.',
+    link: '/fasteners'
   },
   {
     title: 'Wires',
