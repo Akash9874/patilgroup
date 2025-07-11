@@ -83,10 +83,10 @@ const Navbar = () => {
                 navIsScrolled ? 'bg-amber-700' : 'bg-amber-200'
               }`}></span>
             </Link>
-            <Link href="/solutions" onMouseEnter={() => setIsAboutMenuOpen(false)} className={`transition-all duration-300 font-medium relative group ${
+            <Link href="/systems" onMouseEnter={() => setIsAboutMenuOpen(false)} className={`transition-all duration-300 font-medium relative group ${
               navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-white hover:text-amber-200'
             }`}>
-              Solutions
+              Systems
               <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
                 navIsScrolled ? 'bg-amber-700' : 'bg-amber-200'
               }`}></span>
@@ -159,7 +159,7 @@ const Navbar = () => {
             <Link href="/responsibilities" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Our Responsibilities</Link>
             <Link href="/gallery" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Photo Gallery</Link>
             <Link href="/products" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Products</Link>
-            <Link href="/solutions" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Solutions</Link>
+            <Link href="/systems" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Systems</Link>
             <Link href="/projects" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Projects</Link>
             <Link href="/cme" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">CME</Link>
             <Link href="/careers" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Careers</Link>
