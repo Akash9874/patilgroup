@@ -3,10 +3,11 @@
 import React from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navbar from '@/components/Navbar';
+import { ArrowRight } from 'lucide-react';
 
 const LeadershipCard = () => (
   <div>
-    <div className="bg-gray-200 aspect-square"></div>
+    <div className="bg-[#D9D9D9] h-80"></div>
     <div className="bg-gray-300 h-20"></div>
   </div>
 );
@@ -53,23 +54,42 @@ const ManagementPage = () => {
       </section>
 
       {/* Our Leadership Section */}
-      <section className="bg-white text-gray-800 py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-5xl font-clash font-bold text-center text-[#8A393B] mb-20">
+      <section className="bg-white text-gray-800 py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-5xl font-clash font-bold text-[#8A393B] mb-16">
             Our leadership
           </h2>
-          
-          {/* Top 2 leaders */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto mb-8">
-            <LeadershipCard />
-            <LeadershipCard />
+        </div>
+        <div className="relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="space-y-8">
+              <div className="grid grid-cols-3 gap-8">
+                <LeadershipCard />
+                <LeadershipCard />
+                <LeadershipCard />
+              </div>
+              <div className="grid grid-cols-3 gap-8">
+                <LeadershipCard />
+                <LeadershipCard />
+              </div>
+            </div>
           </div>
 
-          {/* Other leaders */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {Array.from({ length: 9 }).map((_, index) => (
-              <LeadershipCard key={index} />
-            ))}
+          <div 
+            className="absolute top-0 right-0 w-2/5 h-[calc(50%_-_1rem)] bg-[#8A393B]"
+            style={{ clipPath: 'polygon(30% 0, 100% 0, 100% 100%, 0% 100%)' }}
+          >
+            <div className="absolute top-1/2 right-12 transform -translate-y-1/2">
+                <ArrowRight className="h-6 w-6 text-amber-500" />
+            </div>
+          </div>
+          <div 
+            className="absolute bottom-0 right-0 w-2/5 h-[calc(50%_-_1rem)] bg-[#8A393B]"
+            style={{ clipPath: 'polygon(0% 0, 100% 0, 100% 100%, 30% 100%)' }}
+          >
+            <div className="absolute top-1/2 right-12 transform -translate-y-1/2">
+                <ArrowRight className="h-6 w-6 text-amber-500" />
+            </div>
           </div>
         </div>
       </section>
