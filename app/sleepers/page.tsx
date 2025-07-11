@@ -28,6 +28,20 @@ const SleepersPage = () => {
       <SleeperVarieties />
       <ContentSlider />
       <CompositeSleepers />
+
+      {/* Under Sleeper Pads Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <h2 className="font-clash font-medium text-[68px] leading-[85px] tracking-[-0.25px] text-[#8A393B] mb-4 whitespace-nowrap">Under Sleeper Pads (USP)</h2>
+            <p className="text-xl text-gray-700 mb-8">Learn more about our Under Sleeper Pads for vibration and noise reduction.</p>
+            <a href="/under-sleeper-pads" className="inline-flex items-center bg-[#8A393B] text-white text-sm px-5 py-3 rounded-md hover:bg-[#793032] transition-colors group">
+              Read more
+            </a>
+          </div>
+        </div>
+      </section>
+
       <ExploreSolutions />
       
     </div>
