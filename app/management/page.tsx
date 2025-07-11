@@ -69,8 +69,8 @@ const ManagementPage = () => {
                 <LeadershipCard />
               </div>
               <div className="grid grid-cols-3 gap-8">
-                <LeadershipCard />
-                <LeadershipCard />
+            <LeadershipCard />
+            <LeadershipCard />
               </div>
             </div>
           </div>
