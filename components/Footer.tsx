@@ -58,8 +58,8 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-gray-500">&copy; {new Date().getFullYear()} Patil Group. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 sm:mt-0">
-            <Link href="#" className="text-gray-500 hover:text-white">Privacy Policy</Link>
-            <Link href="#" className="text-gray-500 hover:text-white">Terms of Service</Link>
+            <Link href="/privacy-policy" className="text-gray-500 hover:text-white">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="text-gray-500 hover:text-white">Terms of Service</Link>
           </div>
         </div>
       </div>
