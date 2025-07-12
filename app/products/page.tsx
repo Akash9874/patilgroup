@@ -28,7 +28,7 @@ const productsData = [
   {
     title: 'Turnouts & Switches',
     description: 'Engineered for strength and durability, our sleepers enhance track stability with minimal maintenance.',
-    link: '/turnouts'
+    link: '/turnouts-and-switches'
   },
   {
     title: 'Under Sleeper Pads (USP)',
