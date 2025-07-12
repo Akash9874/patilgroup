@@ -241,11 +241,11 @@ const LegacyPage = () => {
           
           <TimelineIntro scrollYProgress={scrollYProgress} />
           
-          <ul className="w-full">
-            {timelineData.map((item, index) => (
-              <TimelineItem key={index} {...item} isLeft={index % 2 === 0} />
-            ))}
-          </ul>
+            <ul className="w-full">
+              {timelineData.map((item, index) => (
+                <TimelineItem key={index} {...item} isLeft={index % 2 === 0} />
+              ))}
+            </ul>
         </div>
       </section>
 
