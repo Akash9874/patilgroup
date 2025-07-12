@@ -93,15 +93,20 @@ const SystemsContent = () => {
               <div className="relative max-w-screen-xl mx-auto h-full">
                 <div className="absolute left-5 top-0 h-full flex items-center w-6/12 transform transition-transform duration-500 ease-in-out group-hover:translate-x-[85%]">
                   <div className="pr-8">
-                    <h3 className="text-4xl font-bold font-clash tracking-wide text-amber-600">{system.title}</h3>
+                    <h3 className="text-3xl font-bold font-clash tracking-wide text-amber-600">{system.title}</h3>
                     <p className="mt-4 text-lg text-gray-600">{system.description}</p>
-                    <a href={system.link} className="group/link inline-flex items-center mt-6 text-lg font-medium text-gray-900">
+                    <a href={system.link} className="group/link inline-flex items-center mt-6 gap-[13px] font-clash font-medium text-2xl text-black" style={{ lineHeight: '72px' }}>
                       Read more
-                      <span className="ml-3 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full border border-gray-400 text-gray-600 transition-all duration-300 group-hover/link:bg-gray-900 group-hover/link:text-white group-hover/link:border-gray-900">
+                      <span className="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full border border-gray-400 text-gray-600 transition-all duration-300 group-hover/link:bg-black group-hover/link:text-white group-hover/link:border-black">
                         <ArrowRight size={16} className="transform transition-transform group-hover/link:translate-x-1" />
                       </span>
                     </a>
-                    <div className="mt-3 h-1.5 w-full max-w-sm bg-gradient-to-r from-[#8A393B] via-[#D97706] to-[#F2913F]" style={{ maskImage: 'linear-gradient(to right, black 70%, transparent 100%)' }}></div>
+                    <div 
+                      className="mt-3 h-1.5 w-full max-w-sm" 
+                      style={{ 
+                        background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)' 
+                      }}
+                    ></div>
                   </div>
                 </div>
               </div>

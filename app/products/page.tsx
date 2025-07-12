@@ -85,9 +85,9 @@ const ProductsContent = () => {
                   <div className="pr-8">
                     <h3 className="text-4xl font-bold font-clash tracking-wide">{product.title}</h3>
                     <p className="mt-4 text-lg text-gray-600">{product.description}</p>
-                    <a href={product.link} className="group/link inline-flex items-center mt-6 text-lg font-medium text-gray-900">
+                    <a href={product.link} className="group/link inline-flex items-center mt-6 gap-[13px] font-clash font-medium text-2xl text-black" style={{ lineHeight: '72px' }}>
                       Read more
-                      <span className="ml-3 flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full border border-gray-400 text-gray-600 transition-all duration-300 group-hover/link:bg-gray-900 group-hover/link:text-white group-hover/link:border-gray-900">
+                      <span className="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full border border-gray-400 text-gray-600 transition-all duration-300 group-hover/link:bg-black group-hover/link:text-white group-hover/link:border-black">
                         <ArrowRight size={16} className="transform transition-transform group-hover/link:translate-x-1" />
                       </span>
                     </a>
