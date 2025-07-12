@@ -33,10 +33,10 @@ const CareersContent = () => {
           >
             <div className="space-y-6 animate-fadeInUp w-full pl-[30%] pr-8 lg:pr-16">
               <h2 className="text-5xl font-bold leading-tight">
-                Career Title - Text to be updated
+                Join the Patil Group Family
               </h2>
               <p className="font-clash font-light text-2xl leading-[39px] tracking-[-0.25px] text-white">
-                Career description text will be provided by you and updated here. This is placeholder content that maintains the same styling and layout as the About Us page.
+                At Patil Group, we believe that our people are our greatest strength. As a leader in railway infrastructure and engineering, we offer an environment where innovation, excellence, and growth thrive. Whether you&apos;re an experienced professional or a young talent eager to make an impact, we provide opportunities to work on cutting-edge railway projects that shape the future of transportation.
               </p>
             </div>
           </div>
