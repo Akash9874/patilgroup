@@ -23,14 +23,14 @@ interface TimelineIconProps {
 const TimelineIntro = ({ scrollYProgress }: TimelineIntroProps) => {
     const scale = useTransform(scrollYProgress, [0, 0.1], [0.8, 1]);
     const opacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
-    const pathLength = useTransform(scrollYProgress, [0.05, 0.25], [0, 1]);
+    const pathLength = useTransform(scrollYProgress, [0.05, 0.15], [0, 1]);
 
     const leftPath = "M 50 50 H 0";
     const rightPath = "M 50 50 H 100";
     
     return (
-        <div className="h-[80vh] w-full relative flex flex-col items-center justify-center text-center">
-            <motion.div style={{ scale, opacity }}>
+        <div className="w-full relative flex flex-col items-center justify-center text-center py-16">
+            <motion.div style={{ scale, opacity }} className="relative z-10">
                 <h2 className="text-6xl font-clash font-bold text-[#8A393B] mb-4">
                     Our Journey
                 </h2>
@@ -39,10 +39,10 @@ const TimelineIntro = ({ scrollYProgress }: TimelineIntroProps) => {
                 </p>
             </motion.div>
 
-            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute top-0 left-0">
+            <svg width="100" height="40" viewBox="0 0 100 100" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-1">
                 {/* Center point */}
                 <motion.circle 
-                    cx="50" cy="50" r="1" fill="#8A393B" 
+                    cx="50" cy="50" r="2" fill="#8A393B" 
                     initial={{ scale: 0 }}
                     animate={{ scale: scrollYProgress.get() > 0 ? 1 : 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
@@ -52,7 +52,7 @@ const TimelineIntro = ({ scrollYProgress }: TimelineIntroProps) => {
                     d={leftPath}
                     style={{ pathLength }}
                     stroke="#8A393B"
-                    strokeWidth="1"
+                    strokeWidth="2"
                     fill="none"
                 />
                 {/* Right line */}
@@ -60,7 +60,7 @@ const TimelineIntro = ({ scrollYProgress }: TimelineIntroProps) => {
                     d={rightPath}
                     style={{ pathLength }}
                     stroke="#8A393B"
-                    strokeWidth="1"
+                    strokeWidth="2"
                     fill="none"
                 />
             </svg>
@@ -190,7 +190,7 @@ const LegacyPage = () => {
       offset: ["start start", "end end"]
   });
 
-  const timelineScaleY = useTransform(scrollYProgress, [0.25, 0.85], [0, 1]);
+  const timelineScaleY = useTransform(scrollYProgress, [0.15, 0.85], [0, 1]);
   
   return (
     <div className="bg-[#1E1E1E] text-white">
@@ -231,23 +231,27 @@ const LegacyPage = () => {
       </section>
 
       {/* Timeline Section */}
-      <section ref={timelineContainerRef} className="bg-white text-gray-800 py-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section ref={timelineContainerRef} className="bg-white text-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          
+          <motion.div 
+            style={{scaleY: timelineScaleY}}
+            className="absolute left-1/2 top-0 w-[2px] h-full bg-[#8A393B] origin-top -translate-x-1/2" 
+          />
           
           <TimelineIntro scrollYProgress={scrollYProgress} />
           
-          <div className="w-full relative mt-16">
-              <motion.div 
-              style={{scaleY: timelineScaleY}}
-              className="absolute left-1/2 top-0 w-[4px] h-full bg-[#8A393B] origin-top -translate-x-1/2" />
-            <ul className="w-full">
-              {timelineData.map((item, index) => (
-                <TimelineItem key={index} {...item} isLeft={index % 2 === 0} />
-              ))}
-            </ul>
-          </div>
+          <ul className="w-full">
+            {timelineData.map((item, index) => (
+              <TimelineItem key={index} {...item} isLeft={index % 2 === 0} />
+            ))}
+          </ul>
         </div>
       </section>
+
+      <footer className="bg-gray-800 text-white p-4 text-center">
+        &copy; 2023 Patil Group. All rights reserved.
+      </footer>
     </div>
   );
 };
