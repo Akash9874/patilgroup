@@ -12,9 +12,9 @@ const projectsData = [
   { title: 'Mumbai Line 2B', link: '/mumbai-line-2b' },
   { title: 'Mumbai Line 7X', link: '/mumbai-line-7x' },
   { title: 'Nagpur Metro', link: '/nagpur-metro' },
-  { title: 'L&T - Standard Gauge Sleeper Supply', link: '#' },
-  { title: 'IRCON - Special Sleeper Supply', link: '#' },
-  { title: 'IRCON - PSC Sleeper Supply', link: '#' },
+  { title: 'L&T - Standard Gauge Sleeper Supply', link: '/l&t-standard-gauge-sleeper-supply' },
+  { title: 'IRCON - Special Sleeper Supply', link: '/ircon-special-sleeper' },
+  { title: 'IRCON - PSC Sleeper Supply', link: '/ircon-psc-sleeper-supply' },
 ];
 
 const ProjectsPage = () => {
