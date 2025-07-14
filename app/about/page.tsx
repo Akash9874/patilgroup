@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import ImageCarousel from '@/components/ImageCarousel';
 
 const achievements = [
   { id: 1, image: '/image.png' },
@@ -27,7 +28,7 @@ const AboutUsPage = () => {
       <section className="relative h-screen">
         {/* Background Image */}
         <div className="absolute inset-0 h-full w-full">
-          <img src="/train.png" alt="Train" className="h-full w-full object-cover" />
+          <img src="/01_hero_train.jpg" alt="Train" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
 
@@ -134,16 +135,7 @@ const AboutUsPage = () => {
         </div>
       </section>
 
-      {/* Train Image Section */}
-      <section className="bg-white py-12">
-        <div className="px-4 sm:px-6 lg:px-[61px]">
-          <img 
-            src="/mt train.jpg" 
-            alt="Metro train on an elevated track" 
-            className="w-full h-[500px] object-cover scale-in"
-          />
-        </div>
-      </section>
+      <ImageCarousel />
 
       {/* Achievements Section */}
       <section className="bg-white text-gray-800 py-24">
