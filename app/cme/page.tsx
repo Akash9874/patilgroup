@@ -6,9 +6,9 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Image from 'next/image';
 
 const trainingImages = [
-  { id: 1, image: '/image.png' },
-  { id: 2, image: '/train 2.jpg' },
-  { id: 3, image: '/mt train.jpg' },
+  { id: 1, image: '/34_careers_banner.jpg' },
+  { id: 2, image: '/36_csr_responsibilities_banner.png' },
+  { id: 3, image: '/16_under_sleeper_pad_install.jpg' },
 ];
 
 const CMEPage = () => {
@@ -21,7 +21,7 @@ const CMEPage = () => {
       <section className="relative h-screen">
         {/* Background Image */}
         <div className="absolute inset-0 h-full w-full">
-          <img src="/train.png" alt="Train" className="h-full w-full object-cover" />
+          <img src="/34_careers_banner.jpg" alt="Train" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
 
@@ -114,7 +114,9 @@ const CMEPage = () => {
             <div className="mt-16 space-y-20">
                 {/* Initiative 1 */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center slide-in-left">
-                    <div className="md:col-span-1 bg-gray-200 h-48 rounded-lg scale-in"></div>
+                    <div className="md:col-span-1 h-48 rounded-lg scale-in">
+                        <Image src="/31_cme_lean_banner.png" alt="Lean Manufacturing" width={400} height={192} className="rounded-lg object-cover w-full h-full" />
+                    </div>
                     <div className="md:col-span-2">
                         <h3 className="text-2xl font-semibold mb-2">Lean Manufacturing</h3>
                         <p className="text-gray-700">We streamline operations by eliminating waste and optimizing resource use, ensuring maximum value for every step in our production process.</p>
@@ -122,7 +124,9 @@ const CMEPage = () => {
                 </div>
                 {/* Initiative 2 */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center slide-in-right">
-                    <div className="md:col-span-1 bg-gray-200 h-48 rounded-lg scale-in"></div>
+                    <div className="md:col-span-1 h-48 rounded-lg scale-in">
+                        <Image src="/32_cme_5s_banner.jpg" alt="5S and Kaizen Methodologies" width={400} height={192} className="rounded-lg object-cover w-full h-full" />
+                    </div>
                     <div className="md:col-span-2">
                         <h3 className="text-2xl font-semibold mb-2">5S and Kaizen Methodologies</h3>
                         <p className="text-gray-700">By fostering discipline and continuous improvement at the ground level, we build a culture of efficiency, cleanliness, and proactive problem-solving.</p>
@@ -130,7 +134,9 @@ const CMEPage = () => {
                 </div>
                 {/* Initiative 3 */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center slide-in-left">
-                    <div className="md:col-span-1 bg-gray-200 h-48 rounded-lg scale-in"></div>
+                    <div className="md:col-span-1 h-48 rounded-lg scale-in">
+                        <Image src="/33_cme_automation_banner.jpg" alt="Robotic Process Implementation & SPM Automation" width={400} height={192} className="rounded-lg object-cover w-full h-full" />
+                    </div>
                     <div className="md:col-span-2">
                         <h3 className="text-2xl font-semibold mb-2">Robotic Process Implementation & SPM Automation</h3>
                         <p className="text-gray-700">By fostering discipline and continuous improvement at the ground level, we build a culture of efficiency, cleanliness, and proactive problem-solving.</p>
@@ -162,7 +168,7 @@ const CMEPage = () => {
             <div 
                 className="bg-cover bg-center min-h-[400px] md:min-h-full scale-in"
                 style={{
-                    backgroundImage: "url('/sleeper.png')",
+                    backgroundImage: "url('/27_training_center.jpg')",
                     clipPath: 'polygon(20% 0, 100% 0, 100% 100%, 0 100%)'
                 }}
             >
@@ -175,7 +181,9 @@ const CMEPage = () => {
         <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-[#8A393B] mb-12 fade-in-section">Empowering Rural Youth through Skill Development</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
-                <div className="md:col-span-1 bg-gray-200 h-64 rounded-lg scale-in"></div>
+                <div className="md:col-span-1 h-64 rounded-lg scale-in">
+                    <Image src="/29_youth_certificate_ceremony.png" alt="Empowering Rural Youth" width={400} height={256} className="rounded-lg object-cover w-full h-full" />
+                </div>
                 <div className="md:col-span-2 space-y-6 slide-in-right">
                     <p className="text-gray-700 text-lg">
                         Recognizing the growing demand for skilled professionals in the railway industry, Patil Group is committed to playing its part in upskilling rural youth and preparing them for emerging opportunities.
@@ -211,10 +219,9 @@ const CMEPage = () => {
                 <Image
                   src={item.image}
                   alt={`Training Image ${item.id}`}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
                   className={`rounded-3xl transition-all duration-500 ${
-                    expanded === item.id ? 'opacity-100' : 'opacity-50'
+                    expanded === item.id ? 'opacity-100' : ''
                   }`}
                 />
                 <div className="relative bg-amber-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs z-10">
@@ -241,7 +248,9 @@ const CMEPage = () => {
                         Every plant of Patil Group has successfully completed many Quality Circle projects. We had Participated in "CCQC-2020, Hyderabad chapter organized by QCFI (Quality Circle Forum of India) And awarded Gold Medal in Quality circle competition.
                     </p>
                 </div>
-                <div className="bg-gray-200 h-80 rounded-lg scale-in"></div>
+                <div className="h-80 rounded-lg scale-in">
+                    <Image src="/award about.jpg" alt="First certificate from quality forum of India" width={500} height={320} className="rounded-lg object-cover w-full h-full" />
+                </div>
             </div>
         </div>
     </section>
