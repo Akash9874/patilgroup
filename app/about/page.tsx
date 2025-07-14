@@ -1,11 +1,26 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+
+const achievements = [
+  { id: 1, image: '/image.png' },
+  { id: 2, image: '/train 2.jpg' },
+  { id: 3, image: '/mt train.jpg' },
+  { id: 4, image: '/sleeper.png' },
+  { id: 5, image: '/train.png' },
+  { id: 6, image: '/landing image.png' },
+];
 
 const AboutUsPage = () => {
   useScrollAnimation();
+  const [expanded, setExpanded] = useState<number | null>(null);
+
+  const handleExpand = (id: number) => {
+    setExpanded(expanded === id ? null : id);
+  };
   
   return (
     <div className="bg-[#1E1E1E] text-white">
@@ -144,10 +159,25 @@ const AboutUsPage = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {Array.from({ length: 6 }).map((_, index) => (
-              <div key={index} className="bg-gray-200 rounded-2xl h-96 flex flex-col justify-end items-center p-4 scale-in">
-                <div className="bg-amber-500 text-white w-10 h-10 rounded-full flex items-center justify-center text-lg">
-                  {index + 1}
+            {achievements.map((achievement) => (
+              <div
+                key={achievement.id}
+                className={`relative bg-gray-200 rounded-2xl h-96 flex flex-col justify-end items-center p-4 cursor-pointer transition-all duration-500 ${
+                  expanded === achievement.id ? 'lg:col-span-2' : ''
+                }`}
+                onClick={() => handleExpand(achievement.id)}
+              >
+                <Image
+                  src={achievement.image}
+                  alt={`Achievement ${achievement.id}`}
+                  layout="fill"
+                  objectFit="cover"
+                  className={`rounded-2xl transition-all duration-500 ${
+                    expanded === achievement.id ? 'opacity-100' : 'opacity-50'
+                  }`}
+                />
+                <div className="relative bg-amber-500 text-white w-10 h-10 rounded-full flex items-center justify-center text-lg z-10">
+                  {achievement.id}
                 </div>
               </div>
             ))}
