@@ -4,11 +4,17 @@ import ContentSlider from '@/components/ContentSlider';
 import ExploreSolutions from '@/components/ExploreSolutions';
 
 const PlinthSystemPage = () => {
+  const sliderData = [
+    { image: '/25_alternate_material_CMA.jpg' },
+    { image: '/23_precast_plinth_process.jpg' },
+  ];
+
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative bg-[#212121] py-32 sm:py-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative bg-cover bg-center py-32 sm:py-40" style={{ backgroundImage: "url('/23_precast_plinth_process.jpg')" }}>
+        <div className="absolute inset-0 bg-black opacity-50" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-left">
             <h1 className="font-clash font-medium text-[96px] leading-[84px] tracking-[-0.25px] text-[#F2913F]">
               Plinth System
@@ -36,7 +42,7 @@ const PlinthSystemPage = () => {
           </div>
         </div>
       </div>
-      <ContentSlider slides={[]} />
+      <ContentSlider slides={sliderData} />
       <div className="bg-white pt-12 pb-24 sm:pt-16 sm:pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">

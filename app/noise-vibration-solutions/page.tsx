@@ -4,11 +4,19 @@ import ContentSlider from '@/components/ContentSlider';
 import ExploreSolutions from '@/components/ExploreSolutions';
 
 const NoiseVibrationSolutionsPage = () => {
+  const sliderData = [
+    {
+      image: "/10_noise_vibration_banner.jpg",
+    },
+    {
+      image: "/17_noise_vibration_system.jpg",
+    },
+  ];
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative bg-[#212121] py-32 sm:py-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative bg-cover bg-center py-32 sm:py-40" style={{ backgroundImage: "url('/10_noise_vibration_banner.jpg')" }}>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-left">
             <h1 className="font-clash font-medium text-[80px] leading-[84px] tracking-[-0.25px] text-[#F2913F]">
               Noise & Vibration Solution for <br /> Slab Track
@@ -46,7 +54,7 @@ const NoiseVibrationSolutionsPage = () => {
           </div>
         </div>
       </div>
-      <ContentSlider slides={[]} />
+      <ContentSlider slides={sliderData} />
       <div className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto">
