@@ -7,8 +7,8 @@ const UnderSleeperPadsPage = () => {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative bg-[#212121] py-32 sm:py-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative bg-cover bg-center py-32 sm:py-40" style={{ backgroundImage: "url('/09_under_sleeper_pads_banner.jpg')" }}>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-left">
             <h1 className="font-clash font-medium text-[96px] leading-[84px] tracking-[-0.25px] text-[#F2913F]">
               Under Sleeper Pads (USP)
@@ -48,7 +48,7 @@ const UnderSleeperPadsPage = () => {
           </div>
         </div>
       </div>
-      <ContentSlider />
+      <ContentSlider slides={[]} />
       <div className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="font-clash text-2xl text-black text-center max-w-4xl mx-auto" style={{ lineHeight: '28px' }}>

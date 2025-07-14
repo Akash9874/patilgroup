@@ -8,10 +8,15 @@ import ExploreSolutions from '@/components/ExploreSolutions';
 import { ArrowRight } from 'lucide-react';
 
 const InsertsPage = () => {
+  const insertSlides = [
+    { image: '/14_insert_and_baseplate_closeup.jpg' },
+    { image: '/14_insert_and_baseplate_carousel.jpg' }
+  ];
+
   return (
     <div className="bg-white">
-      <div className="bg-[#212121] py-48">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative bg-cover bg-center py-48" style={{ backgroundImage: "url('/07_inserts_banner.jpg')" }}>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-8xl font-medium font-clash text-[#F2913F] whitespace-nowrap" style={{ lineHeight: '64px', letterSpacing: '-0.25px' }}>
             SGCI Insert And Base Plates
           </h1>
@@ -19,7 +24,7 @@ const InsertsPage = () => {
       </div>
       <InsertFeatures />
       <InsertDetails />
-      <ContentSlider />
+      <ContentSlider slides={insertSlides} />
       
       {/* Noise & Vibration Solution Section */}
       <section className="py-20 bg-white">

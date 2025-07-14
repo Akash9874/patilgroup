@@ -9,12 +9,17 @@ import ExploreSolutions from '@/components/ExploreSolutions';
 import { ArrowRight } from 'lucide-react';
 
 const SleepersPage = () => {
+  const sleeperSlides = [
+    { image: '/12_sleeper_types.jpg' },
+    { image: '/concrete_carousel_sleeper.png' }
+  ];
+
   return (
     <>
       <main>
         {/* Hero Section */}
-        <div className="relative bg-[#212121] py-32 sm:py-40">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative bg-cover bg-center py-32 sm:py-40" style={{ backgroundImage: "url('/05_sleepers_banner.jpg')" }}>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-left">
               <h1 className="font-clash font-medium text-[96px] leading-[64px] tracking-[-0.25px] text-[#F2913F]">
                 Concrete Sleepers
@@ -25,7 +30,7 @@ const SleepersPage = () => {
 
         <SleeperFeatures />
         <SleeperVarieties />
-        <ContentSlider />
+        <ContentSlider slides={sleeperSlides} />
         <CompositeSleepers />
 
         {/* Under Sleeper Pads Section */}

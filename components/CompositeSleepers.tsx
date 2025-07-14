@@ -13,9 +13,10 @@ const CompositeSleepers = () => {
             Composite <br /> Sleepers
           </h2>
           <div 
-            className="w-full h-48 bg-[#D9D9D9]"
+            className="w-full h-48 bg-cover bg-center"
             style={{
-              clipPath: 'polygon(10% 0, 100% 0, 100% 100%, 0% 100%)'
+              clipPath: 'polygon(10% 0, 100% 0, 100% 100%, 0% 100%)',
+              backgroundImage: "url('/sleeper.png')"
             }}
           >
           </div>
