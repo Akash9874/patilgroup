@@ -4,6 +4,11 @@ import ContentSlider from '@/components/ContentSlider';
 import ExploreSolutions from '@/components/ExploreSolutions';
 
 const UnderSleeperPadsPage = () => {
+  const uspSlides = [
+    { image: '/09_under_sleeper_pads_banner.jpg' },
+    { image: '/usp_carousel.png' }
+  ];
+
   return (
     <div>
       {/* Hero Section */}
@@ -48,7 +53,7 @@ const UnderSleeperPadsPage = () => {
           </div>
         </div>
       </div>
-      <ContentSlider slides={[]} />
+      <ContentSlider slides={uspSlides} />
       <div className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="font-clash text-2xl text-black text-center max-w-4xl mx-auto" style={{ lineHeight: '28px' }}>

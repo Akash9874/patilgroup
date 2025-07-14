@@ -7,32 +7,38 @@ const systemsData = [
   {
     title: 'Ballastless Track - Urban Metro',
     description: 'Designed for high-availability metro corridors, these systems reduce downtime and structural fatigue in dense urban transit.',
-    link: '/ballastless-track-urban-metro'
+    link: '/ballastless-track-urban-metro',
+    image: '/20_ballastless_urban_metro_banner.jpg'
   },
   {
     title: 'Ballastless Track - Main Line',
     description: 'Built for high-speed, long-distance corridors — engineered to minimize maintenance across tunnels, bridges, and aprons.',
-    link: '/ballastless-track-main-line'
+    link: '/ballastless-track-main-line',
+    image: '/19_ballastless_mainline_banner.jpg'
   },
   {
     title: 'Flash Butt Welding of Rails',
     description: 'Our in-house welding plants handle high-precision rail panel fabrication using proven flash butt welding techniques.',
-    link: '/flash-butt-welding-of-rails'
+    link: '/flash-butt-welding-of-rails',
+    image: '/18_flash_butt_banner.jpg'
   },
   {
     title: 'Patil RHEDA System',
     description: 'A specialized ballastless track system for viaducts and tunnels — developed in partnership with German engineering standards.',
-    link: '/patil-rheda-system'
+    link: '/patil-rheda-system',
+    image: '/26_mobile_RHEDA_plant.jpg'
   },
   {
     title: 'Plinth System',
     description: 'A cast-in-place track solution ideal for metros and elevated structures where tight alignment and control are critical.',
-    link: '/plinth-system'
+    link: '/plinth-system',
+    image: '/02_railway_infra_symbol.jpg'
   },
   {
     title: 'Precast Plinth',
     description: 'Factory-prepared plinth units that offer cleaner installation, reduced onsite time, and greater curve control.',
-    link: '/precast-plinth'
+    link: '/precast-plinth',
+    image: '/23_precast_plinth_process.jpg'
   }
 ];
 
@@ -44,7 +50,7 @@ const SystemsContent = () => {
       <section className="relative h-screen">
         {/* Background Image */}
         <div className="absolute inset-0 h-full w-full">
-          <img src="/train.png" alt="Train" className="h-full w-full object-cover" />
+          <img src="/03_metro_curve_train.jpg" alt="Train" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
 
@@ -73,7 +79,7 @@ const SystemsContent = () => {
       </section>
 
       {/* Intro Section */}
-      <section className="bg-white text-gray-800 py-24">
+      <section className="bg-white text-gray-800 py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xl text-gray-600">
             Track systems are where structural integrity meets engineering detail. Over the years, we've developed and implemented advanced rail systems across urban metros, mainlines, tunnels, and yards — engineered to last, with a focus on precision and long-term performance.
@@ -85,10 +91,13 @@ const SystemsContent = () => {
       <section className="bg-white text-gray-800 pb-24 overflow-hidden">
         <div className="space-y-24">
           {systemsData.map((system, index) => (
-            <div key={index} className="relative group h-48 fade-in-section">
+            <div key={index} className="relative group h-56 fade-in-section">
               <div 
-                className="absolute top-0 left-0 h-full bg-gray-100 w-40 group-hover:w-5/12 transition-all duration-500 ease-in-out"
-                style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)' }}
+                className="absolute top-0 left-0 h-full bg-gray-100 w-40 group-hover:w-5/12 transition-all duration-500 ease-in-out bg-cover bg-center"
+                style={{ 
+                  clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)',
+                  backgroundImage: system.image ? `url(${system.image})` : 'none'
+                }}
               ></div>
               <div className="relative max-w-screen-xl mx-auto h-full">
                 <div className="absolute left-5 top-0 h-full flex items-center w-6/12 transform transition-transform duration-500 ease-in-out group-hover:translate-x-[85%]">
