@@ -1,28 +1,7 @@
 @font-face {
   font-family: 'Clash Grotesk';
-  src: url('https://db.onlinewebfonts.com/t/016e504ac3ecf55e402c55b78ba93dcc.woff2') format('woff2');
+  src: url('../fonts/ClashGrotesk-Regular.woff2') format('woff2');
   font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Clash Grotesk';
-  src: url('https://db.onlinewebfonts.com/t/7c1d32386d148bf5b8f2441999a7791f.woff2') format('woff2');
-  font-weight: 500; /* Medium */
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Clash Grotesk';
-  src: url('https://db.onlinewebfonts.com/t/a6a75593c6629a3e2001c4021703057e.woff2') format('woff2');
-  font-weight: 600; /* Semibold */
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Clash Grotesk';
-  src: url('https://db.onlinewebfonts.com/t/033e51405e36611910a191590b15e451.woff2') format('woff2');
-  font-weight: bold;
   font-style: normal;
 }
 

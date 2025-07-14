@@ -1,11 +1,19 @@
 "use client";
 
 import Navbar from '@/components/Navbar';
-import React from 'react';
+import React, { useState } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import Image from 'next/image';
+
+const trainingImages = [
+  { id: 1, image: '/image.png' },
+  { id: 2, image: '/train 2.jpg' },
+  { id: 3, image: '/mt train.jpg' },
+];
 
 const CMEPage = () => {
   useScrollAnimation();
+  const [expanded, setExpanded] = useState<number | null>(null);
   
   return (
     <div className="bg-[#1E1E1E] text-white">
@@ -180,29 +188,49 @@ const CMEPage = () => {
         </div>
     </section>
 
-    {/* Inside the Training Program Section */}
-    <section className="bg-white text-gray-800 py-20 px-4 sm:px-6 lg:px-8">
+      {/* Inside the Training Program Section */}
+      <section className="bg-white text-gray-800 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#8A393B] mb-12 fade-in-section">Inside the Training Program</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-                <div className="bg-gray-200 h-96 rounded-3xl flex flex-col justify-end items-center p-4 scale-in animate-delay-100">
-                    <div className="bg-amber-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">1</div>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#8A393B] mb-12 fade-in-section">
+            Inside the Training Program
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+            {trainingImages.map((item) => (
+              <div
+                key={item.id}
+                className={`relative bg-gray-200 h-96 rounded-3xl flex flex-col justify-end items-center p-4 cursor-pointer transition-all duration-500 ${
+                  expanded === item.id
+                    ? 'sm:col-span-3'
+                    : expanded !== null
+                    ? 'hidden'
+                    : ''
+                }`}
+                onMouseEnter={() => setExpanded(item.id)}
+                onMouseLeave={() => setExpanded(null)}
+              >
+                <Image
+                  src={item.image}
+                  alt={`Training Image ${item.id}`}
+                  layout="fill"
+                  objectFit="cover"
+                  className={`rounded-3xl transition-all duration-500 ${
+                    expanded === item.id ? 'opacity-100' : 'opacity-50'
+                  }`}
+                />
+                <div className="relative bg-amber-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs z-10">
+                  {item.id}
                 </div>
-                <div className="bg-gray-200 h-96 rounded-3xl flex flex-col justify-end items-center p-4 scale-in animate-delay-300">
-                    <div className="bg-amber-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">2</div>
-                </div>
-                <div className="bg-gray-200 h-96 rounded-3xl flex flex-col justify-end items-center p-4 scale-in animate-delay-500">
-                    <div className="bg-amber-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">3</div>
-                </div>
-            </div>
-            <p className="max-w-4xl mx-auto text-gray-700 text-lg fade-in-section">
-                Additionally, we arrange specialized sessions on various railway functions in collaboration with RDSO and other railway authorities, based on industry needs and requests. With these cutting-edge facilities, Patil Group ensures that trainees receive comprehensive, industry-relevant education, preparing them for successful careers in railway manufacturing and infrastructure.
-            </p>
+              </div>
+            ))}
+          </div>
+          <p className="max-w-4xl mx-auto text-gray-700 text-lg fade-in-section">
+            Additionally, we arrange specialized sessions on various railway functions in collaboration with RDSO and other railway authorities, based on industry needs and requests. With these cutting-edge facilities, Patil Group ensures that trainees receive comprehensive, industry-relevant education, preparing them for successful careers in railway manufacturing and infrastructure.
+          </p>
         </div>
-    </section>
+      </section>
 
-    {/* First Certificate Section */}
-    <section className="bg-white text-gray-800 py-20 px-4 sm:px-6 lg:px-8">
+      {/* First Certificate Section */}
+      <section className="bg-white text-gray-800 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className="slide-in-left">
