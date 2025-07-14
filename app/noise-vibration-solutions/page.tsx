@@ -46,7 +46,7 @@ const NoiseVibrationSolutionsPage = () => {
           </div>
         </div>
       </div>
-      <ContentSlider />
+      <ContentSlider slides={[]} />
       <div className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto">

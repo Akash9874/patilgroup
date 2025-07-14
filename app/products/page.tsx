@@ -8,27 +8,32 @@ const productsData = [
   {
     title: 'Sleepers',
     description: 'Engineered for strength and durability, our sleepers enhance track stability with minimal maintenance.',
-    link: '/sleepers'
+    link: '/sleepers',
+    image: '/05_sleepers_banner.jpg'
   },
   {
     title: 'Fasteners',
     description: 'High-performance fastening solutions that secure rails in place, reducing vibration and improving track longevity.',
-    link: '/fasteners'
+    link: '/fasteners',
+    image: '/11_fastener_types.jpg'
   },
   {
     title: 'Wires',
     description: 'High-quality pre-stressed steel wires designed for superior reinforcement in railway infrastructure.',
-    link: '/wires'
+    link: '/wires',
+    image: '/13_wire_rolls.jpg'
   },
   {
     title: 'Inserts',
     description: 'We manufacture high-quality SGCI Inserts and Base Plates, crucial components for both Railway and Metro Rail tracks.',
-    link: '/inserts'
+    link: '/inserts',
+    image: '/07_inserts_banner.jpg'
   },
   {
     title: 'Turnouts & Switches',
     description: 'Engineered for strength and durability, our sleepers enhance track stability with minimal maintenance.',
-    link: '/turnouts-and-switches'
+    link: '/turnouts-and-switches',
+    image: '/08_turnouts_switches_banner.jpg'
   }
 ];
 
@@ -74,10 +79,20 @@ const ProductsContent = () => {
           {productsData.map((product, index) => (
             <div key={index} className="relative group h-48 fade-in-section">
               {/* Grey background shape */}
-              <div 
-                className="absolute top-0 left-0 h-full bg-gray-100 w-40 group-hover:w-5/12 transition-all duration-500 ease-in-out"
-                style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)' }}
-              ></div>
+              {product.image ? (
+                <div
+                  className="absolute top-0 left-0 h-full w-40 group-hover:w-5/12 transition-all duration-500 ease-in-out bg-cover bg-center"
+                  style={{
+                    clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)',
+                    backgroundImage: `url(${product.image})`
+                  }}
+                ></div>
+              ) : (
+                <div
+                  className="absolute top-0 left-0 h-full bg-gray-100 w-40 group-hover:w-5/12 transition-all duration-500 ease-in-out"
+                  style={{ clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)' }}
+                ></div>
+              )}
               
               {/* Text content container */}
               <div className="relative max-w-screen-xl mx-auto h-full">

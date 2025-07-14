@@ -38,7 +38,7 @@ const BallastlessTrackUrbanMetroPage = () => {
           </div>
         </div>
       </div>
-      <ContentSlider />
+      <ContentSlider slides={[]} />
       <ExploreSolutions />
     </div>
   );

@@ -35,7 +35,7 @@ const PatilRhedaSystemPage = () => {
           </div>
         </div>
       </div>
-      <ContentSlider />
+      <ContentSlider slides={[]} />
       <div className="bg-white pt-12 pb-24 sm:pt-16 sm:pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">

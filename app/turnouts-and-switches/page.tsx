@@ -4,11 +4,16 @@ import ContentSlider from '@/components/ContentSlider';
 import ExploreSolutions from '@/components/ExploreSolutions';
 
 const TurnoutsAndSwitchesPage = () => {
+  const turnoutSlides = [
+    { image: '/08_turnouts_switches_banner.jpg' },
+    { image: '/15AerialViewTurnout.jpg' }
+  ];
+
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative bg-[#212121] py-32 sm:py-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative bg-cover bg-center py-32 sm:py-40" style={{ backgroundImage: "url('/15AerialViewTurnout.jpg')" }}>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-left">
             <h1 className="font-clash font-medium text-[96px] leading-[84px] tracking-[-0.25px] text-[#F2913F]">
               Turnouts & Switches
@@ -47,7 +52,7 @@ const TurnoutsAndSwitchesPage = () => {
           </div>
         </div>
       </div>
-      <ContentSlider />
+      <ContentSlider slides={turnoutSlides} />
 
       {/* Why Patil Turnouts? Section */}
       <div className="bg-white py-24 sm:py-32">
