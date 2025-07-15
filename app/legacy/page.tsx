@@ -215,14 +215,14 @@ const LegacyPage = () => {
 
           {/* Right side with black cut and text */}
           <div 
-            className="h-full bg-[#1E1E1E] flex items-center"
+            className="h-full bg-white flex items-center"
             style={{ clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0% 100%)' }}
           >
             <div className="space-y-6 animate-fadeInUp w-full pl-[30%] pr-8 lg:pr-16">
-              <h2 className="text-5xl font-bold leading-tight">
+              <h2 className="text-5xl font-bold leading-tight text-black">
                 Built on Legacy, Driven by Innovation
               </h2>
-              <p className="font-clash font-light text-2xl leading-[39px] tracking-[-0.25px] text-white">
+              <p className="font-clash font-light text-2xl leading-[39px] tracking-[-0.25px] text-black">
                 With decades of expertise, Patil Group has led the transformation of India's railway infrastructure, from introducing Concrete Sleepers to shaping the future with advanced track solutions. Our legacy of quality, innovation, and dedication to progress continues to fuel the evolution of global rail networks.
               </p>
             </div>

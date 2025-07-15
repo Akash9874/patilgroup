@@ -5,10 +5,18 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navbar from '@/components/Navbar';
 import { ArrowRight } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
+import Image from 'next/image';
 
 const LeadershipCard = ({ image, name, post }: { image: string, name: string, post: string }) => (
   <div className="bg-white text-gray-800">
-    <div className="bg-[#D9D9D9] h-96 bg-cover bg-center" style={{ backgroundImage: `url(${image})` }}></div>
+    <div className="relative bg-[#D9D9D9] h-[550px]">
+      <Image
+        src={image}
+        alt={name}
+        layout="fill"
+        objectFit="contain"
+      />
+    </div>
     <div className="bg-[#6F2527] text-white p-4 text-center font-clash">
       <p className="font-bold">{post}</p>
       <p>{name}</p>
@@ -75,7 +83,7 @@ const ManagementPage = () => {
           </div>
 
           {/* Right side with black cut and text */}
-          <div
+          <div 
             className="h-full bg-white flex items-center"
             style={{ clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0% 100%)' }}
           >
