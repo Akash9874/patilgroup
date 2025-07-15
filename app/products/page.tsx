@@ -61,11 +61,11 @@ const ProductsContent = () => {
 
           {/* Right side with black cut and text */}
           <div 
-            className="h-full bg-[#1E1E1E] flex items-center"
+            className="h-full bg-white flex items-center"
             style={{ clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0% 100%)' }}
           >
             <div className="space-y-6 animate-fadeInUp w-full pl-[30%] pr-8 lg:pr-16">
-              <h2 className="text-5xl font-bold leading-tight">
+              <h2 className="text-5xl font-bold leading-tight text-black">
                 Engineering Excellence for a Stronger Tomorrow
               </h2>
             </div>

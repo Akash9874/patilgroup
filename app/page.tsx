@@ -117,7 +117,7 @@ export default function Home() {
           <div 
             className="absolute inset-0"
             style={{
-              backgroundColor: '#1E1E1E',
+              backgroundColor: 'white',
               clipPath: 'polygon(0% 0%, 35% 0%, 25% 100%, 0% 100%)'
             }}
           ></div>
@@ -126,7 +126,7 @@ export default function Home() {
           <div 
             className="absolute inset-0"
             style={{
-              backgroundColor: '#1E1E1E',
+              backgroundColor: 'white',
               clipPath: 'polygon(85% 100%, 90% 0%, 100% 0%, 100% 100%)'
             }}
           ></div>
@@ -136,10 +136,10 @@ export default function Home() {
         <div className="relative z-10 h-full flex items-center">
           <div className="w-full">
             <div className="max-w-lg ml-4 sm:ml-6 lg:ml-12 xl:ml-16">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight mb-2 sm:mb-4 animate-fadeInUp">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-black leading-tight mb-2 sm:mb-4 animate-fadeInUp">
                 Delivering
               </h1>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-white leading-tight animate-fadeInUp animate-delay-300">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-black leading-tight animate-fadeInUp animate-delay-300">
                 Track solutions
               </h2>
             </div>

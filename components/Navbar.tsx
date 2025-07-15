@@ -55,7 +55,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 animate-fadeInRight">
             <Link href="/" onMouseEnter={() => setIsAboutMenuOpen(false)} className={`transition-all duration-300 font-medium relative group ${
-              navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-white hover:text-amber-200'
+              navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-black hover:text-amber-700'
             }`}>
               Home
               <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
@@ -65,7 +65,7 @@ const Navbar = () => {
             
             <div onMouseEnter={() => setIsAboutMenuOpen(true)}>
               <Link href="/about" className={`transition-all duration-300 font-medium relative group flex items-center gap-1 ${
-                navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-white hover:text-amber-200'
+                navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-black hover:text-amber-700'
               }`}>
                 About
                 <ChevronDown size={16} className={`transition-transform duration-300 ${isAboutMenuOpen ? 'rotate-180' : ''}`} />
@@ -76,7 +76,7 @@ const Navbar = () => {
             </div>
 
             <Link href="/products" onMouseEnter={() => setIsAboutMenuOpen(false)} className={`transition-all duration-300 font-medium relative group ${
-              navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-white hover:text-amber-200'
+              navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-black hover:text-amber-700'
             }`}>
               Products
               <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
@@ -84,7 +84,7 @@ const Navbar = () => {
               }`}></span>
             </Link>
             <Link href="/systems" onMouseEnter={() => setIsAboutMenuOpen(false)} className={`transition-all duration-300 font-medium relative group ${
-              navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-white hover:text-amber-200'
+              navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-black hover:text-amber-700'
             }`}>
               Systems
               <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
@@ -92,7 +92,7 @@ const Navbar = () => {
               }`}></span>
             </Link>
             <Link href="/projects" onMouseEnter={() => setIsAboutMenuOpen(false)} className={`transition-all duration-300 font-medium relative group ${
-              navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-white hover:text-amber-200'
+              navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-black hover:text-amber-700'
             }`}>
               Projects
               <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
@@ -100,7 +100,7 @@ const Navbar = () => {
               }`}></span>
             </Link>
             <Link href="/cme" onMouseEnter={() => setIsAboutMenuOpen(false)} className={`transition-all duration-300 font-medium relative group ${
-              navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-white hover:text-amber-200'
+              navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-black hover:text-amber-700'
             }`}>
               CME
               <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
@@ -108,7 +108,7 @@ const Navbar = () => {
               }`}></span>
             </Link>
             <Link href="/careers" onMouseEnter={() => setIsAboutMenuOpen(false)} className={`transition-all duration-300 font-medium relative group ${
-              navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-white hover:text-amber-200'
+              navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-black hover:text-amber-700'
             }`}>
               Careers
               <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
@@ -125,7 +125,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`transition-all duration-300 hover-scale ${
-                navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-white hover:text-amber-200'
+                navIsScrolled ? 'text-gray-700 hover:text-amber-700' : 'text-black hover:text-amber-700'
               }`}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

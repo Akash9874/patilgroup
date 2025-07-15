@@ -44,14 +44,14 @@ const AboutUsPage = () => {
 
           {/* Right side with black cut and text */}
           <div 
-            className="h-full bg-[#1E1E1E] flex items-center"
+            className="h-full bg-white flex items-center"
             style={{ clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0% 100%)' }}
           >
             <div className="space-y-6 animate-fadeInUp w-full pl-[30%] pr-8 lg:pr-16">
-              <h2 className="text-5xl font-bold leading-tight">
+              <h2 className="text-5xl font-bold leading-tight text-black">
                 Engineering the Future of Railways with Precision, Innovation & Purpose
               </h2>
-              <p className="font-clash font-light text-2xl leading-[39px] tracking-[-0.25px] text-white">
+              <p className="font-clash font-light text-2xl leading-[39px] tracking-[-0.25px] text-black">
                 For over 50 years, Patil Group has redefined standards in railway infrastructure—crafting advanced sleepers, fastening systems, and components that power India's mobility. Our commitment to quality, innovation, and sustainability drives everything we do.
               </p>
             </div>

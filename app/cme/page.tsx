@@ -37,11 +37,11 @@ const CMEPage = () => {
 
           {/* Right side with black cut and text */}
           <div 
-            className="h-full bg-[#1E1E1E] flex items-center"
+            className="h-full bg-white flex items-center"
             style={{ clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0% 100%)' }}
           >
             <div className="space-y-6 animate-fadeInUp w-full pl-[30%] pr-8 lg:pr-16">
-              <p className="font-clash font-light text-xl leading-relaxed text-white">
+              <p className="font-clash font-light text-xl leading-relaxed text-black">
                 The Patil Group has established the Dr. S. S. Patil Centre for Manufacturing Excellence as an in-house initiative, driven by a dedicated team of experts. This centre was created to achieve the highest standards in manufacturing excellence and cost management while fostering continuous improvement.
               </p>
             </div>
