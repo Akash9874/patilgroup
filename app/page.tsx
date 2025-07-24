@@ -96,7 +96,7 @@ export default function Home() {
   return (
     <div className="overflow-x-hidden" onMouseMove={handleMouseMove}>
       {/* Hero Section */}
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative h-[calc(100vh-4rem)] mt-16 overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
           <video
@@ -111,45 +111,34 @@ export default function Home() {
           </video>
         </div>
 
-        {/* Diagonal Cut Overlays - Increased left cut width for text */}
-        <div className="absolute inset-0">
-          {/* Left diagonal cut with #1E1E1E color - increased width to fit text */}
-          <div 
-            className="absolute inset-0"
-            style={{
-              backgroundColor: 'white',
-              clipPath: 'polygon(0% 0%, 35% 0%, 25% 100%, 0% 100%)'
-            }}
-          ></div>
-          
-          {/* Right diagonal cut with #1E1E1E color - kept narrow */}
-          <div 
-            className="absolute inset-0"
-            style={{
-              backgroundColor: 'white',
-              clipPath: 'polygon(85% 100%, 90% 0%, 100% 0%, 100% 100%)'
-            }}
-          ></div>
-        </div>
+        {/* White overlay with diagonal cut */}
+        <div
+          className="absolute inset-0 bg-white"
+          style={{
+            clipPath: 'polygon(0 0, 42% 0, 22% 100%, 0% 100%)',
+          }}
+        ></div>
 
         {/* Hero Content */}
         <div className="relative z-10 h-full flex items-center">
-          <div className="w-full">
-            <div className="max-w-lg ml-4 sm:ml-6 lg:ml-12 xl:ml-16">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-black leading-tight mb-2 sm:mb-4 animate-fadeInUp">
-                Delivering
+          <div className="w-full ml-4 sm:ml-6 lg:ml-12 xl:ml-16">
+            <div className="max-w-xl">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#8A393B] leading-tight mb-4 animate-fadeInUp">
+                Smarter Track Solutions, <br /> Safer Mobility
               </h1>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-black leading-tight animate-fadeInUp animate-delay-300">
-                Track solutions
+            </div>
+            <div
+              className="h-2 my-6 animate-fadeInUp animate-delay-200"
+              style={{
+                width: '30%',
+                background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
+              }}
+            />
+            <div className="max-w-xl">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#D97706] animate-fadeInUp animate-delay-400">
+                Railway Engineering
               </h2>
             </div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce animate-delay-500">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full p-1 hover-glow cursor-pointer">
-            <div className="w-1 h-3 bg-white/70 rounded-full mx-auto animate-pulse"></div>
           </div>
         </div>
       </section>
