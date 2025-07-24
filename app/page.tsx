@@ -5,37 +5,6 @@ import { ArrowRight, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import SolutionsCarousel from '@/components/SolutionsCarousel';
-
-// Counter hook for animated counting
-function useCounter(end: number, duration: number = 2000, start: number = 0) {
-  const [count, setCount] = useState(start);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    if (!isVisible) return;
-
-    let startTime: number;
-    let animationFrame: number;
-
-    const animate = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      setCount(Math.floor(easeOutQuart * (end - start) + start));
-
-      if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
-      }
-    };
-
-    animationFrame = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationFrame);
-  }, [end, duration, start, isVisible]);
-
-  return { count, setIsVisible };
-}
 
 const newsItems = [
   {
@@ -54,10 +23,6 @@ const newsItems = [
 
 export default function Home() {
   useScrollAnimation();
-  // Counter hooks for each stat
-  const sleepers = useCounter(40, 2500);
-  const employees = useCounter(5000, 2000);
-  const zones = useCounter(14, 1500);
 
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
@@ -73,39 +38,15 @@ export default function Home() {
     setCursorPos({ x: e.clientX, y: e.clientY });
   };
 
-  // Intersection Observer for scroll animations
   useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Trigger counter animations when stats section becomes visible
-          if (entry.target.id === 'stats-section') {
-            sleepers.setIsVisible(true);
-            employees.setIsVisible(true);
-            zones.setIsVisible(true);
-          }
-        }
-      });
-    }, observerOptions);
-
-    // Also observe the stats section
-    const statsSection = document.getElementById('stats-section');
-    if (statsSection) observer.observe(statsSection);
-
     const builtForInterval = setInterval(() => {
       setActiveBuiltForItem(prev => (prev + 1) % builtForItems.length);
     }, 3000);
 
     return () => {
-      observer.disconnect();
       clearInterval(builtForInterval);
     };
-  }, [sleepers, employees, zones, builtForItems.length]);
+  }, [builtForItems.length]);
 
   return (
     <div className="overflow-x-hidden" onMouseMove={handleMouseMove}>
@@ -216,7 +157,7 @@ export default function Home() {
           href="/projects"
           className="absolute inset-0 bg-cover bg-center group"
           style={{
-            backgroundImage: "url('/01_hero_train.jpg')",
+            backgroundImage: "url('/seework2.jpg')",
             clipPath: 'polygon(0 0, calc(50% - 1.5rem) 0, calc(50% + 1.5rem) 100%, 0 100%)'
           }}
         >
@@ -335,12 +276,12 @@ export default function Home() {
             {newsItems.map((item, index) => (
               <div
                 key={index}
-                className="max-w-md lg:max-w-lg fade-in-section"
+                className="w-[492px] h-[192px] flex flex-col items-start gap-[13px] fade-in-section"
                 style={{ marginLeft: index === 1 ? 'auto' : (index === 2 ? 'auto' : '0'), marginRight: index === 1 ? 'auto' : '0' }}
                 onMouseEnter={() => setHoveredImage(item.image)}
                 onMouseLeave={() => setHoveredImage(null)}
               >
-                <h3 className="font-clash font-medium text-4xl leading-none text-[#F2913F] mb-4 lg:mb-6 transition-colors duration-300">
+                <h3 className="font-clash font-medium text-4xl leading-none text-[#F2913F] transition-colors duration-300">
                   {item.title}
                 </h3>
                 <Link href="/news" className="inline-flex items-center gap-[13px] text-black font-clash font-medium text-2xl leading-[72px] group transition-all duration-300">
@@ -349,7 +290,12 @@ export default function Home() {
                     <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" size={16} />
                   </span>
                 </Link>
-                <div className="w-full h-1 bg-gradient-to-r from-amber-800 via-blue-600 to-orange-500 rounded-full animate-gradient-shift"></div>
+                <div
+                  className="w-full h-2 rounded-full"
+                  style={{
+                    background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
+                  }}
+                />
               </div>
             ))}
           </div>
@@ -374,57 +320,6 @@ export default function Home() {
           />
         </div>
       )}
-
-      {/* Numbers That Define Our Legacy Section */}
-      <section id="stats-section" className="py-20 sm:py-24 lg:py-32 bg-[#F2F2F2]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#8A393B] mb-16 lg:mb-20 text-center">
-            Numbers That Define Our Legacy
-          </h2>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Stat 1 - Sleepers */}
-            <div className="text-center">
-              <p className="text-4xl lg:text-5xl font-bold text-[#8A393B] mb-2">
-                +{sleepers.count} Million
-              </p>
-              <p className="text-lg text-black">
-                Sleepers Supplied
-              </p>
-            </div>
-
-            {/* Stat 2 - Employees */}
-            <div className="text-center">
-              <p className="text-4xl lg:text-5xl font-bold text-[#8A393B] mb-2">
-                +{employees.count.toLocaleString()}
-              </p>
-              <p className="text-lg text-black">
-                Employees
-              </p>
-            </div>
-
-            {/* Stat 3 - Railway Zones */}
-            <div className="text-center">
-              <p className="text-4xl lg:text-5xl font-bold text-[#8A393B] mb-2">
-                +{zones.count}
-              </p>
-              <p className="text-lg text-black">
-                Railway Zones Served
-              </p>
-            </div>
-
-            {/* Stat 4 - Largest */}
-            <div className="text-center">
-              <p className="text-4xl lg:text-5xl font-bold text-[#8A393B] mb-2">
-                Largest
-              </p>
-              <p className="text-lg text-black">
-                Rail Welding Depot in India
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

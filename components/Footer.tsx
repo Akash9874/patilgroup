@@ -1,65 +1,78 @@
+'use client';
+
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
-    <footer className="bg-[#1E1E1E] text-white py-12 sm:py-16 lg:py-20 fade-in-section">
+    <footer className="bg-[#8A393B] text-gray-200 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Logo and About Section */}
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Patil Group</h2>
-            <p className="text-gray-400">
-              Leading the way in innovative railway solutions for a connected future.
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
+          
+          {/* Contact Info */}
+          <div className="md:col-span-2 space-y-12">
+            <div>
+              <p className="font-medium">123 Market St. #22B</p>
+              <p className="font-medium">XYZOPINK, INDIA 44635</p>
+            </div>
+            <div className="space-y-6">
+              <p>
+                <a href="tel:4345484356" className="border-b border-gray-500 pb-1 hover:border-white transition-colors">
+                  (434) 548-4356
+                </a>
+              </p>
+              <p>
+                <a href="mailto:XYZ@PATIL.GROUP" className="border-b border-gray-500 pb-1 hover:border-white transition-colors">
+                  XYZ@PATIL.GROUP
+                </a>
+              </p>
+            </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Site Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><Link href="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
-              <li><Link href="/products" className="text-gray-400 hover:text-white">Products</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
+            <ul className="space-y-3">
+              <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
+              <li><Link href="/products" className="hover:text-white transition-colors">Products</Link></li>
+              <li><Link href="/systems" className="hover:text-white transition-colors">Systems</Link></li>
+              <li><Link href="/projects" className="hover:text-white transition-colors">Projects</Link></li>
+              <li><Link href="/cme" className="hover:text-white transition-colors">CME</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
+            <p className="text-sm text-gray-400 pt-8">&copy; {new Date().getFullYear()} Patil Group. All rights reserved.</p>
           </div>
 
-          {/* Products */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Our Products</h3>
-            <ul className="space-y-2">
-              <li><Link href="/fasteners" className="text-gray-400 hover:text-white">Fasteners</Link></li>
-              <li><Link href="/sleepers" className="text-gray-400 hover:text-white">Sleepers</Link></li>
-              <li><Link href="/inserts" className="text-gray-400 hover:text-white">Inserts</Link></li>
+          {/* Social & Policy */}
+          <div className="md:col-span-2 space-y-4">
+            <ul className="space-y-3">
+              <li><a href="#" className="hover:text-white transition-colors">Facebook</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Twitter</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
             </ul>
+            <div className="pt-8">
+              <Link href="/whistleblower-policy" className="inline-block bg-[#F2913F] text-black font-bold py-3 px-6 rounded-md text-sm hover:bg-orange-400 transition-colors">
+                WHISTLEBLOWER POLICY
+              </Link>
+            </div>
           </div>
-
-          {/* Newsletter */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Stay Updated</h3>
-            <p className="text-gray-400">Subscribe to our newsletter for the latest updates.</p>
-            <form className="flex">
-              <input 
-                type="email" 
-                placeholder="Your email" 
-                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-md focus:outline-none focus:ring-2 focus:ring-amber-500"
-              />
-              <button 
-                type="submit" 
-                className="bg-amber-600 hover:bg-amber-700 px-4 py-2 rounded-r-md"
+          
+          {/* Scroll to top */}
+          <div className="flex justify-end items-start">
+             <button 
+                onClick={scrollToTop} 
+                className="bg-[#F2913F] w-14 h-14 rounded-full flex items-center justify-center text-white hover:bg-orange-400 transition-colors"
+                aria-label="Scroll to top"
               >
-                <ArrowRight size={20} />
-              </button>
-            </form>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="mt-8 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-gray-500">&copy; {new Date().getFullYear()} Patil Group. All rights reserved.</p>
-          <div className="flex space-x-4 mt-4 sm:mt-0">
-            <Link href="/privacy-policy" className="text-gray-500 hover:text-white">Privacy Policy</Link>
-            <Link href="/terms-of-service" className="text-gray-500 hover:text-white">Terms of Service</Link>
+                <ArrowUp size={28} />
+             </button>
           </div>
         </div>
       </div>
