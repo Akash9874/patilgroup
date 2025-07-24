@@ -62,6 +62,13 @@ export default function Home() {
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
 
+  const builtForItems = [
+    "Built for scale.",
+    "Built to last.",
+    "Built to keep moving.",
+  ];
+  const [activeBuiltForItem, setActiveBuiltForItem] = useState(1);
+
   const handleMouseMove = (e: React.MouseEvent) => {
     setCursorPos({ x: e.clientX, y: e.clientY });
   };
@@ -90,8 +97,15 @@ export default function Home() {
     const statsSection = document.getElementById('stats-section');
     if (statsSection) observer.observe(statsSection);
 
-    return () => observer.disconnect();
-  }, [sleepers, employees, zones]);
+    const builtForInterval = setInterval(() => {
+      setActiveBuiltForItem(prev => (prev + 1) % builtForItems.length);
+    }, 3000);
+
+    return () => {
+      observer.disconnect();
+      clearInterval(builtForInterval);
+    };
+  }, [sleepers, employees, zones, builtForItems.length]);
 
   return (
     <div className="overflow-x-hidden" onMouseMove={handleMouseMove}>
@@ -112,12 +126,12 @@ export default function Home() {
         </div>
 
         {/* White overlay with diagonal cut */}
-        <div
+          <div 
           className="absolute inset-0 bg-white"
-          style={{
+            style={{
             clipPath: 'polygon(0 0, 42% 0, 22% 100%, 0% 100%)',
-          }}
-        ></div>
+            }}
+          ></div>
 
         {/* Hero Content */}
         <div className="relative z-10 h-full flex items-center">
@@ -143,110 +157,178 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Made in India Section 1 */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-            <div className="slide-in-left">
-              <h2
-                className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 lg:mb-8 leading-tight"
-                style={{ color: '#8A393B' }}
-              >
-                Made in India
+      {/* Engineering Infrastructure Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
+        <div className="mb-16">
+          <h2 className="font-clash font-medium text-[96px] leading-[85px] tracking-[-0.25px] text-[#8A393B] pl-4 sm:pl-6 lg:pl-8 xl:pl-16">
+            Engineering infrastructure
+          </h2>
+          <div className="flex items-center mt-4">
+            <div
+              className="h-[53px]"
+              style={{
+                width: '709px',
+                background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
+              }}
+            />
+            <h2 className="font-clash font-medium text-[96px] leading-[85px] tracking-[-0.25px] text-[#8A393B] ml-4 whitespace-nowrap">
+              for the long run
               </h2>
             </div>
-            <div className="space-y-6 slide-in-right lg:mt-16">
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-                Patil Group is a trusted leader in railway infrastructure, delivering 
-                high-quality track solutions for urban and interurban transport. 
-                From design to execution, we provide innovative and sustainable 
-                railway components that power seamless mobility.
-              </p>
-              <button className="inline-flex items-center gap-[13px] text-black font-clash font-bold text-2xl leading-[72px] group hover-lift transition-all duration-300">
-                Read more 
-                <span className="flex items-center justify-center w-7 h-7 rounded-full border border-[#8A393B] text-[#8A393B]">
-                  <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" size={16} />
-                </span>
-              </button>
-            </div>
-          </div>
         </div>
-      </section>
 
-      {/* Made in India Section 2 */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
-            <div className="order-2 lg:order-1 lg:col-span-2 fade-in-section">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6 lg:pr-0">
-                With over 50 years of legacy, Patil Group has been a key partner in India's railway 
-                infrastructure, driving innovation from wooden to concrete to composite sleepers
-              </h3>
-              <div className="mt-16 lg:mt-24">
-                <h4 className="text-3xl sm:text-4xl font-bold text-amber-800 mb-4 animate-gradient-shift bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 bg-clip-text text-transparent">
-                  Unmatched Expertise
-                </h4>
-              </div>
-            </div>
-            <div className="order-1 lg:order-2 lg:col-span-3 scale-in">
-              <div className="relative hover-lift">
-                <img
-                  src="/02_railway_infra_symbol.jpg"
-                  alt="Modern Train"
-                  className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl shadow-2xl transition-all duration-500 hover:shadow-3xl"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
-              </div>
-            </div>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="slide-in-left">
+            <img
+              src="/engineering-infra.jpg"
+              alt="Engineering Infrastructure"
+              className="w-full h-auto object-cover rounded-lg shadow-xl"
+            />
           </div>
-        </div>
-      </section>
 
-      {/* Committed to Progress Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white">
-        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
-          <div className="slide-in-left lg:col-span-3 pl-4 sm:pl-6 lg:pl-8 xl:pl-16">
-            <h2 
-              className="text-left"
-              style={{
-                fontFamily: 'Clash Grotesk, Arial, sans-serif',
-                fontStyle: 'normal',
-                fontWeight: 'bold',
-                fontSize: '86px',
-                lineHeight: '1.1',
-                color: '#8A393B'
-              }}
-            >
-              <div>Committed to Progress,</div>
-              <div>Driven by <span style={{ color: '#D97706' }}>Innovation</span></div>
-            </h2>
-          </div>
-          <div className="space-y-6 slide-in-right lg:col-span-2 pt-16 lg:pt-32 pr-4 sm:pr-6 lg:pr-8 xl:pr-16">
-            <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">
-              Patil Group has played a pivotal role in revolutionizing India's rail 
-              infrastructure, consistently delivering exceptional results with a 
-              focus on innovation, efficiency, and quality. From supplying over 
-              40 million sleepers to Indian Railways and industrial giants, the 
-              company has made significant contributions to the growth and 
-              modernization of the rail sector.
+          <div className="slide-in-right space-y-8 pr-4 sm:pr-6 lg:pr-8 xl:pr-16">
+            <p className="w-[640px] h-[99px] text-[#1E1E1E] text-[30px] font-medium font-clash leading-[32px]">
+              We make and deliver components that hold the railway together. Concrete sleepers, fastening systems, turnout parts and more.
             </p>
-            <Link href="/about" className="inline-flex items-center gap-2 text-black text-lg group hover-lift transition-all duration-300">
-              About us
-              <span className="flex items-center justify-center w-6 h-6 rounded-full border border-[#8A393B] text-[#8A393B] group-hover:bg-[#8A393B] group-hover:text-white transition-colors">
-                <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" size={14} />
-              </span>
-            </Link>
+            
+            <div className="space-y-4 pt-8">
+              {builtForItems.map((item, index) => (
+                <p
+                  key={index}
+                  className={`text-4xl font-bold transition-all duration-700 ease-in-out ${
+                    activeBuiltForItem === index
+                      ? 'text-[#D97706] opacity-100'
+                      : 'text-gray-300 opacity-70'
+                  }`}
+                >
+                  {item}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <SolutionsCarousel />
+      {/* See Our Work / Explore Products Section */}
+      <section className="w-full h-48 relative bg-white">
+        {/* Left Section: See Our Work */}
+        <Link
+          href="/projects"
+          className="absolute inset-0 bg-cover bg-center group"
+          style={{
+            backgroundImage: "url('/01_hero_train.jpg')",
+            clipPath: 'polygon(0 0, calc(50% - 1.5rem) 0, calc(50% + 1.5rem) 100%, 0 100%)'
+          }}
+        >
+          <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors duration-300"></div>
+          <div className="relative z-10 h-full">
+            <div className="w-1/2 h-full flex items-center justify-center">
+              <span className="text-2xl font-bold text-orange-400 flex items-center gap-4">
+                See Our Work
+                <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center group-hover:bg-white transition-colors">
+                  <ArrowRight className="w-5 h-5 text-white group-hover:text-orange-400"/>
+              </div>
+              </span>
+            </div>
+          </div>
+        </Link>
+
+        {/* Right Section: Explore our Products */}
+        <Link
+          href="/products"
+          className="absolute inset-0 bg-cover bg-center group"
+          style={{
+            backgroundImage: "url('/04_fasteners_banner.jpg')",
+            clipPath: 'polygon(calc(50% - 1.5rem + 24px) 0, 100% 0, 100% 100%, calc(50% + 1.5rem + 24px) 100%)'
+          }}
+        >
+          <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors duration-300"></div>
+          <div className="relative z-10 h-full">
+             <div className="w-1/2 h-full flex items-center justify-center ml-auto">
+                <span className="text-2xl font-bold text-white flex items-center gap-4">
+                  Explore our Products
+                  <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center group-hover:bg-white transition-colors">
+                    <ArrowRight className="w-5 h-5 text-white group-hover:text-black"/>
+              </div>
+                </span>
+            </div>
+          </div>
+        </Link>
+      </section>
+
+      {/* Legacy Stats Section */}
+      <section className="relative mt-16 h-[453px] bg-white overflow-hidden flex items-center justify-center">
+        {/* Left Shape */}
+        <div 
+          className="absolute left-0 top-0 bottom-0 w-28 bg-[#8A393B]"
+          style={{ clipPath: 'polygon(0 0, 30% 0, 100% 100%, 0 100%)' }}
+        ></div>
+        {/* Right Shape */}
+        <div 
+          className="absolute right-0 top-0 bottom-0 w-28 bg-[#8A393B]"
+          style={{ clipPath: 'polygon(70% 0, 100% 0, 100% 100%, 0 100%)' }}
+        ></div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-left">
+          <h2 className="font-clash font-medium text-[96px] leading-[85px] tracking-[-0.25px]">
+            <span className="text-[#F2913F]">50</span>
+            <span className="text-black"> plus years.</span>
+          </h2>
+          <h2 className="font-clash font-medium text-[96px] leading-[85px] tracking-[-0.25px] mt-2 ml-12">
+            <span className="text-[#F2913F]">10 million </span>
+            <span className="text-black">sleepers.</span>
+          </h2>
+          <h2 className="font-clash font-medium text-[96px] leading-[85px] tracking-[-0.25px] mt-2 ml-48">
+            <span className="text-[#F2913F]">Endless</span>
+            <span className="text-black"> track</span>
+          </h2>
+        </div>
+      </section>
+
+      {/* Nationwide Presence Section */}
+      <section className="relative mt-16 py-24 bg-white overflow-hidden">
+        {/* Background Grids */}
+        <div className="absolute inset-0 flex justify-between items-center z-0">
+          <img 
+            src="/grid.png" 
+            alt="Decorative grid" 
+            className="h-full w-auto opacity-100"
+          />
+          <img 
+            src="/grid.png" 
+            alt="Decorative grid" 
+            className="h-full w-auto opacity-100 transform scale-x-[-1]"
+          />
+        </div>
+
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+          <h2 className="text-6xl md:text-7xl font-semibold font-clash">
+            <span className="text-[#F2913F]">Nationwide</span>
+            <span className="text-[#8A393B]"> presence</span>
+          </h2>
+          <p className="mt-4 text-2xl md:text-3xl text-black font-medium font-clash">
+            From city metros to national corridors
+          </p>
+          <p className="mt-8 text-lg md:text-xl max-w-2xl mx-auto text-gray-700">
+            Our products run across India.
+            <br />
+            We support both new and upgrade projects at every scale.
+          </p>
+          <div
+            className="h-1.5 mt-12 mx-auto"
+              style={{
+              width: '40%',
+              background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
+            }}
+          />
+        </div>
+      </section>
 
       {/* In News Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 overflow-hidden">
         <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-amber-800 mb-12 lg:mb-16 fade-in-section text-left">
-            In News
+          <h2 className="font-clash font-bold text-[48px] leading-[45px] text-[#8A393B] mb-12 lg:mb-16 fade-in-section text-left">
+            News and updates
           </h2>
           
           <div className="space-y-12">
