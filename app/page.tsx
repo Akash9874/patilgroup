@@ -1,22 +1,25 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ArrowRight, Menu, X } from 'lucide-react';
+import { ArrowRight, Menu, X, Linkedin } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const newsItems = [
   {
-    title: "Patil Group recently acquired 'Apnatech'.",
+    date: "Mar 2024",
+    title: "Sleepers supplied for new Pune Metro corridor",
     image: '/image.png',
   },
   {
-    title: "India's largest foundry opened in Bokaro by Patil group.",
+    date: "Sep 2023",
+    title: "Recognised by RDSO for product innovation",
     image: '/train 2.jpg',
   },
   {
-    title: "India's Longest Railway Tunnel opens to Traffic",
+    date: "Dec 2023",
+    title: "Partnered on Mumbai Ahmedabad bullet train trial track",
     image: '/mt train.jpg',
   },
 ];
@@ -267,37 +270,66 @@ export default function Home() {
 
       {/* In News Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 overflow-hidden">
-        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-clash font-bold text-[48px] leading-[45px] text-[#8A393B] mb-12 lg:mb-16 fade-in-section text-left">
             News and updates
           </h2>
           
-          <div className="space-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {newsItems.map((item, index) => (
               <div
                 key={index}
-                className="w-[492px] h-[192px] flex flex-col items-start gap-[13px] fade-in-section"
-                style={{ marginLeft: index === 1 ? 'auto' : (index === 2 ? 'auto' : '0'), marginRight: index === 1 ? 'auto' : '0' }}
+                className="flex flex-col items-start gap-3 fade-in-section"
                 onMouseEnter={() => setHoveredImage(item.image)}
                 onMouseLeave={() => setHoveredImage(null)}
               >
-                <h3 className="font-clash font-medium text-4xl leading-none text-[#F2913F] transition-colors duration-300">
+                <p className="font-clash text-base text-gray-500">{item.date}</p>
+                <h3 className="font-clash font-medium text-2xl leading-tight text-[#F2913F] transition-colors duration-300 h-24">
                   {item.title}
                 </h3>
-                <Link href="/news" className="inline-flex items-center gap-[13px] text-black font-clash font-medium text-2xl leading-[72px] group transition-all duration-300">
+                <Link href="/news" className="inline-flex items-center gap-3 text-black font-clash font-medium text-lg group transition-all duration-300">
                   Read more
                   <span className="flex items-center justify-center w-7 h-7 rounded-full border border-[#8A393B] text-[#8A393B] transition-all duration-300 group-hover:bg-[#8A393B] group-hover:text-white">
                     <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" size={16} />
                   </span>
                 </Link>
                 <div
-                  className="w-full h-2 rounded-full"
+                  className="w-full h-[3px] rounded-full mt-2"
                   style={{
                     background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
                   }}
                 />
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LinkedIn Update Section */}
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="border-t border-gray-200 pt-16">
+            <div className="flex flex-col md:flex-row items-center gap-12">
+              <div className="w-full md:w-80 h-52 bg-gray-200 rounded-2xl flex-shrink-0">
+                {/* Image placeholder */}
+              </div>
+              <div className="flex flex-col items-start">
+                <p className="font-clash text-base text-[#8A393B]">Dec 2023</p>
+                <h3 className="font-clash font-medium text-3xl text-[#F2913F] mt-2 leading-tight">
+                  Partnered on Mumbai Ahmedabad bullet train trial track
+                </h3>
+                <a 
+                  href="#" 
+                  className="inline-flex items-center gap-2 text-[#0A66C2] font-bold text-2xl mt-4 group"
+                >
+                  <span>LinkedIn</span>
+                  <Linkedin className="h-7 w-7" fill="#0A66C2" strokeWidth={0}/>
+                  <span className="flex items-center justify-center w-7 h-7 rounded-full border-2 border-[#8A393B] text-[#8A393B] transition-all duration-300 group-hover:bg-[#8A393B] group-hover:text-white">
+                    <ArrowRight size={16} />
+                  </span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
