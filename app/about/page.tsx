@@ -1,214 +1,223 @@
 "use client";
 
 import React, { useState } from 'react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
-import ImageCarousel from '@/components/ImageCarousel';
-
-const achievements = [
-  { id: 1, image: '/image.png' },
-  { id: 2, image: '/train 2.jpg' },
-  { id: 3, image: '/mt train.jpg' },
-  { id: 4, image: '/sleeper.png' },
-  { id: 5, image: '/train.png' },
-  { id: 6, image: '/landing image.png' },
-];
+import { PlusCircle, ArrowRight } from 'lucide-react';
 
 const AboutUsPage = () => {
-  useScrollAnimation();
-  const [expanded, setExpanded] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState('Sleepers');
 
-  const handleExpand = (id: number) => {
-    setExpanded(expanded === id ? null : id);
-  };
+  const tabs = [
+    { name: 'Sleepers' },
+    { name: 'Fastening systems' },
+    { name: 'Turnout parts' },
+    { name: 'Rubber elements' },
+  ];
   
   return (
-    <div className="bg-[#1E1E1E] text-white">
-      <section className="relative h-screen">
-        {/* Background Image */}
-        <div className="absolute inset-0 h-full w-full">
-          <img src="/01_hero_train.jpg" alt="Train" className="h-full w-full object-cover" />
+    <div className="bg-white">
+      {/* Hero Section */}
+      <div className="relative bg-cover bg-center py-32 sm:py-40" style={{ backgroundImage: "url('/05_sleepers_banner.jpg')" }}>
           <div className="absolute inset-0 bg-black opacity-50"></div>
-        </div>
-
-        <div className="relative z-10 h-full grid grid-cols-1 md:grid-cols-2">
-          {/* Left side with "About us" title */}
-          <div className="flex items-center justify-center">
-            <div className="text-left px-4 sm:px-6 lg:px-8">
-              <h1 className="text-6xl md:text-8xl font-bold text-amber-500 animate-fadeInUp">
-                About us
-              </h1>
-            </div>
-          </div>
-
-          {/* Right side with black cut and text */}
-          <div 
-            className="h-full bg-white flex items-center"
-            style={{ clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0% 100%)' }}
-          >
-            <div className="space-y-6 animate-fadeInUp w-full pl-[30%] pr-8 lg:pr-16">
-              <h2 className="text-5xl font-bold leading-tight text-black">
-                Engineering the Future of Railways with Precision, Innovation & Purpose
-              </h2>
-              <p className="font-clash font-light text-2xl leading-[39px] tracking-[-0.25px] text-black">
-                For over 50 years, Patil Group has redefined standards in railway infrastructure—crafting advanced sleepers, fastening systems, and components that power India's mobility. Our commitment to quality, innovation, and sustainability drives everything we do.
-              </p>
-            </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-left">
+            <h1 className="font-clash font-medium text-[96px] leading-[64px] tracking-[-0.25px] text-[#F2913F]">
+              Through the tracks of time
+            </h1>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Pioneering Section */}
-      <section className="bg-white text-gray-800 py-20">
-        <div className="px-4 sm:px-6 lg:px-[59px]">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-16">
-            <div className="lg:col-span-1">
-              <h2 className="font-clash font-medium text-[96px] leading-[85px] tracking-[-0.25px] slide-in-left">
-                <span className="block text-[#8A393B] whitespace-nowrap">Pioneering the Railway</span>
-                <span className="block text-amber-500 mt-2">Revolution</span>
-              </h2>
-            </div>
-            <div className="lg:col-span-1 mt-8 lg:mt-32">
-              <div className="text-lg text-gray-600 space-y-6 text-justify slide-in-right">
-                <p>
-                  Patil Group began its journey by trading agricultural products, laying the foundation for a legacy built on trust and innovation. Over the decades, we have become a key partner to Indian Railways—transitioning from wooden to concrete and now to composite sleepers.
-                </p>
-                <p>
-                  Our commitment to quality, forward-thinking solutions, and industry-first advancements continues to support the evolving needs of India's railway infrastructure, ensuring safe and efficient transport across the nation.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Commitments Section */}
-      <section className="bg-white text-gray-800 py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-20">
-            {/* Global Presence & Future Vision */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-              <div className="md:col-span-1">
-                <h3 className="text-3xl font-clash font-medium text-[#8A393B] fade-in-section">
-                  Global Presence & Future Vision
-                </h3>
-              </div>
-              <div className="md:col-span-2">
-                <div className="h-3 w-[366px] bg-gradient-to-r from-[#8A393B] via-[#1E3888] to-[#F2913F] rounded-full mb-4 scale-in"></div>
-                <p className="font-clash font-normal text-2xl leading-[30px] text-[#5E5E5E] text-justify fade-in-section">
-                  With several turnkey projects under execution globally, Patil Group stands as a pioneer and a forward-thinking organization, ready to meet the evolving needs of Indian Railways and the global railway industry. As the future of rail transportation changes, Patil Group is well-prepared to continue its legacy of quality and innovation.
-                </p>
-              </div>
-            </div>
-
-            {/* Innovating for Metro Rail */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-              <div className="md:col-span-1">
-                <h3 className="text-3xl font-clash font-medium text-[#8A393B] fade-in-section">
-                  Innovating for Metro Rail
-                </h3>
-              </div>
-              <div className="md:col-span-2">
-                <div className="h-3 w-[366px] bg-gradient-to-r from-[#8A393B] via-[#1E3888] to-[#F2913F] rounded-full mb-4 scale-in"></div>
-                <p className="font-clash font-normal text-2xl leading-[30px] text-[#5E5E5E] text-justify fade-in-section">
-                  Our commitment to innovation extends to Metro Rail projects, where we supply Fasteners for Urban Rapid Mass Transport systems in cities like Delhi and Chennai. Through technology partnerships with global leaders, we ensure our products meet international standards, providing a technological edge.
-                </p>
-              </div>
-            </div>
-
-            {/* Quality Commitment */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-              <div className="md:col-span-1">
-                <h3 className="text-3xl font-clash font-medium text-[#8A393B] fade-in-section">
-                  Quality Commitment
-                </h3>
-              </div>
-              <div className="md:col-span-2">
-                <div className="h-3 w-[366px] bg-gradient-to-r from-[#8A393B] via-[#1E3888] to-[#F2913F] rounded-full mb-4 scale-in"></div>
-                <p className="font-clash font-normal text-2xl leading-[30px] text-[#5E5E5E] text-justify fade-in-section">
-                  With 20 manufacturing facilities across India, we are dedicated to delivering the highest-quality products that ensure the safety and comfort of millions of railway passengers every day. Our unique Quality Command Center at headquarters enforces strict standards across all units, reflecting our unwavering commitment to excellence—no matter the scale or challenge.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <ImageCarousel />
-
-      {/* Achievements Section */}
-      <section className="bg-white text-gray-800 py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-5xl md:text-6xl font-clash font-bold slide-in-left">
-            <span className="text-[#8A393B]">Our </span>
-            <span className="text-amber-500">Achievements</span>
-          </h2>
-          <p className="mt-4 max-w-4xl mx-auto text-xl text-gray-600 slide-in-right">
-            Patil Group has played a pivotal role in revolutionizing India's rail infrastructure, consistently delivering exceptional results with a focus on innovation, efficiency, and quality. From supplying over 40 million sleepers to Indian Railways and industrial giants, to managing India's two largest rail welding depots, the company has made significant contributions to the growth and modernization of the rail sector. Some key milestones include
+      {/* Journey Section */}
+      <section className="py-24 overflow-hidden">
+        <div className="px-4 sm:px-6 lg:px-8">
+          <p className="text-5xl font-semibold text-[#8A393B] max-w-4xl">
+            We began in the 1960s with a single concrete sleeper plant
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {achievements.map((achievement) => (
-              <div
-                key={achievement.id}
-                className={`relative bg-gray-200 rounded-2xl h-96 flex flex-col justify-end items-center p-4 cursor-pointer transition-all duration-500 ${
-                  expanded === achievement.id ? 'lg:col-span-2' : ''
-                }`}
-                onClick={() => handleExpand(achievement.id)}
-              >
-                <Image
-                  src={achievement.image}
-                  alt={`Achievement ${achievement.id}`}
-                  layout="fill"
-                  objectFit="cover"
-                  className={`rounded-2xl transition-all duration-500 ${
-                    expanded === achievement.id ? 'opacity-100' : 'opacity-50'
+        <div className="mt-12 flex items-center">
+          <div className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="ml-48">
+              <p className="text-5xl font-semibold text-[#8A393B] max-w-5xl">
+                Today, we supply track components to railways and metros across India
+              </p>
+            </div>
+          </div>
+          <div 
+            className="flex-shrink-0 w-96 h-24 bg-[#8A393B]"
+            style={{ clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0% 100%)' }}
+          ></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+          <div className="flex justify-center">
+            <div className="flex -space-x-16">
+              {tabs.map((tab) => (
+                <div
+                  key={tab.name}
+                  onClick={() => setActiveTab(tab.name)}
+                  className={`cursor-pointer text-2xl font-semibold whitespace-nowrap flex items-center justify-center text-center ${
+                    activeTab === tab.name
+                      ? 'bg-[#8A393B] text-[#F2913F]'
+                      : 'bg-gray-200 text-gray-500'
                   }`}
-                />
-                <div className="relative bg-amber-500 text-white w-10 h-10 rounded-full flex items-center justify-center text-lg z-10">
-                  {achievement.id}
+                  style={{ 
+                    clipPath: 'polygon(15% 0, 100% 0, 85% 100%, 0% 100%)', 
+                    width: '419px', 
+                    height: '187px' 
+                  }}
+                >
+                  {tab.name.includes(" ") ? (
+                    <span>
+                      {tab.name.split(" ")[0]}
+                      <br />
+                      {tab.name.split(" ")[1]}
+                    </span>
+                  ) : (
+                    <span>{tab.name}</span>
+                  )}
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+          </div>
+          <div className="text-center mt-16">
+            <a href="#" className="inline-flex items-center text-lg text-[#8A393B] font-semibold">
+              And more
+              <PlusCircle size={20} className="ml-2" />
+            </a>
+            <div
+              className="h-0.5 mt-2 mx-auto"
+              style={{
+                width: '100px',
+                background: 'linear-gradient(90deg, #1E3888, #F2913F)',
+              }}
+            />
           </div>
         </div>
       </section>
 
-      {/* Our Clientele and Our Presence Section */}
-      <section className="bg-white text-gray-800 py-24">
+      {/* Philosophy Section */}
+      <section className="py-32 bg-white relative overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-90"
+          style={{ backgroundImage: "url('/worldmap.png')" }}
+        ></div>
+        <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div className="text-center">
-              <h2 className="text-5xl md:text-6xl font-clash font-bold">
+                <div className="text-left">
+                    <h2 className="text-8xl font-bold text-[#8A393B]">Built for long life</h2>
+                </div>
+                <div className="text-center mt-4">
+                    <h2 className="text-8xl font-bold text-[#8A393B]">Delivered at scale</h2>
+              </div>
+                <div className="text-right mt-4">
+                    <p className="text-5xl text-[#F2913F]">Approved across systems</p>
+              </div>
+            </div>
+
+            <div className="mt-32">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+                <h3 className="text-7xl font-semibold text-black">The work has changed.</h3>
+              </div>
+              <div 
+                  className="h-7 mt-4"
+                  style={{ 
+                    width: '1102px',
+                    background: 'linear-gradient(to right, #8A393B, #1E3888, #F2913F, transparent)' 
+                  }}
+              ></div>
+            </div>
+
+            <div className="mt-24">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-right">
+                <h3 className="text-7xl font-semibold text-black">The approach has not.</h3>
+              </div>
+              <div 
+                  className="h-7 mt-4 ml-auto"
+                  style={{ 
+                    width: '1102px',
+                    background: 'linear-gradient(to left, #8A393B, #1E3888, #F2913F, transparent)' 
+                  }}
+              ></div>
+            </div>
+            
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p className="mt-32 text-5xl font-semibold text-[#8A393B]">We build what holds.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* In Service Section */}
+      <section className="py-24 bg-white text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-7xl font-bold text-black">In service</h2>
+          <p className="mt-8 text-5xl text-black">
+            <span className="text-[#F2913F]">40,00,000 sleepers and counting</span> used in 14 railway zones
+          </p>
+          <p className="mt-4 text-5xl text-black">
+            Over <span style={{
+              background: 'linear-gradient(to right, #8A393B, #F2913F)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              color: 'transparent'
+            }}>four hundred kilometres</span> delivered each year.
+          </p>
+        </div>
+      </section>
+
+      {/* Make in India Section */}
+      <section className="py-24 bg-white text-center relative">
+        <div className="flex justify-center items-center max-w-7xl mx-auto">
+          <img src="/indiaflag.png" alt="Indian Flag" className="w-[636px] h-96" />
+          <img src="/makeindia.png" alt="Make in India" className="h-56 mx-8" />
+          <img src="/indiaflag.png" alt="Indian Flag" className="w-[636px] h-96 transform scale-x-[-1]" />
+        </div>
+        <div className="mt-12">
+          <p className="text-5xl font-semibold text-black">Installed across India</p>
+          <div
+            className="h-2 mt-4 mx-auto"
+            style={{
+              width: '400px',
+              background: 'linear-gradient(to right, #F2913F, #1E3888, #8A393B)',
+            }}
+          />
+        </div>
+      </section>
+
+      <div className="border-t border-gray-200"></div>
+
+      {/* Clientele and Presence Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 text-center">
+            <div>
+              <h2 className="text-6xl font-bold">
                 <span className="text-[#8A393B]">Our </span>
-                <span className="text-amber-500">Clientele</span>
+                <span className="text-[#F2913F]">Clientele</span>
               </h2>
-              <a href="#" className="inline-flex items-center mt-4 text-lg text-black hover:text-gray-700">
+              <a href="#" className="inline-flex items-center mt-6 text-2xl text-black group">
                 View
-                <span className="flex items-center justify-center w-5 h-5 rounded-full border border-[#8A393B] text-[#8A393B] ml-2">
-                  <ArrowRight size={12} />
+                <span className="ml-3 flex items-center justify-center w-8 h-8 rounded-full border border-[#8A393B] text-[#8A393B] group-hover:bg-[#8A393B] group-hover:text-white transition-colors">
+                  <ArrowRight size={20} />
                 </span>
               </a>
             </div>
-            <div className="text-center">
-              <h2 className="text-5xl md:text-6xl font-clash font-bold">
+            <div>
+              <h2 className="text-6xl font-bold">
                 <span className="text-[#8A393B]">Our </span>
-                <span className="text-amber-500">Presence</span>
+                <span className="text-[#F2913F]">Presence</span>
               </h2>
-              <a href="#" className="inline-flex items-center mt-4 text-lg text-black hover:text-gray-700">
+              <a href="#" className="inline-flex items-center mt-6 text-2xl text-black group">
                 View
-                <span className="flex items-center justify-center w-5 h-5 rounded-full border border-[#8A393B] text-[#8A393B] ml-2">
-                  <ArrowRight size={12} />
+                <span className="ml-3 flex items-center justify-center w-8 h-8 rounded-full border border-[#8A393B] text-[#8A393B] group-hover:bg-[#8A393B] group-hover:text-white transition-colors">
+                  <ArrowRight size={20} />
                 </span>
               </a>
             </div>
           </div>
         </div>
       </section>
-
     </div>
   );
 };

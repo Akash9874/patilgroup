@@ -25,79 +25,45 @@ const ResponsibilitiesPage = () => {
       </section>
 
       {/* CSR Section */}
-      <section className="bg-gray-100 py-24 text-gray-800">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* White V-shape background */}
-          <div 
-            className="absolute inset-0 bg-white"
-            style={{
-              clipPath: 'polygon(0 0, 100% 0, 100% 15%, 50% 100%, 0 15%)'
-            }}
-          ></div>
-          
-          {/* Content Grid */}
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-y-10 text-center pt-8 pb-16">
-            {/* CSR Policy */}
-            <div className="md:col-start-1">
-              <h3 className="font-bold text-xl underline">CSR Policy</h3>
+      <section className="py-24 text-gray-800 space-y-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-3xl font-semibold text-[#8A393B]">
+                <div><a href="#" className="hover:underline">CSR Policy</a></div>
+                <div><a href="#" className="hover:underline">Composition of CSR Committee</a></div>
+                <div><a href="#" className="hover:underline">CSR PRIL Ar 2021-22</a></div>
             </div>
-            
-            {/* Composition of CSR Committee */}
-            <div className="md:col-start-2">
-              <h3 className="font-bold text-xl underline">Composition of CSR Committee</h3>
+        </div>
+        
+        <div>
+            <div className="relative text-center border-t-[11px]" style={{borderImage: 'linear-gradient(to right, #8A393B, #1E3888, #F2913F, transparent) 1'}}>
+                <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-8 text-4xl font-bold text-[#8A393B]">CSR Annual Action Plan_FY</span>
             </div>
-            
-            {/* CSR PRIL Ar 2021-22 */}
-            <div className="md:col-start-3">
-              <h3 className="font-bold text-xl underline">CSR PRIL<br/>Ar 2021-22</h3>
+        
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-2xl text-gray-600">
+                    <div><a href="#" className="hover:underline">2022-23</a></div>
+                    <div><a href="#" className="hover:underline">2023-24</a></div>
+                    <div><a href="#" className="hover:underline">2024-25</a></div>
+                </div>
             </div>
-            
-            {/* CSR Annual Action Plan_FY */}
-            <div className="md:col-start-2 mt-8">
-              <h4 className="text-xl font-semibold">CSR Annual Action Plan_FY</h4>
+        </div>
+
+        <div>
+            <div className="relative text-center border-t-[11px]" style={{borderImage: 'linear-gradient(to right, transparent, #8A393B 25%, #1E3888, #F2913F, #1E3888, #8A393B 75%, transparent) 1'}}>
+                <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-8 text-4xl font-bold text-[#8A393B]">Brochure</span>
             </div>
 
-            {/* 2022-23 */}
-            <div className="md:col-start-1 mt-8">
-              <a href="#" className="underline text-lg">2022-23</a>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-2xl text-gray-600">
+                    <div><a href="#" className="hover:underline">Corporate Brochure</a></div>
+                    <div><a href="#" className="hover:underline">Patil Group Fastening plant brochure</a></div>
+                    <div><a href="#" className="hover:underline">Cme brochure</a></div>
+                </div>
             </div>
-
-            {/* 2023-24 */}
-            <div className="md:col-start-2 mt-2">
-              <a href="#" className="underline text-lg">2023-24</a>
-            </div>
-
-            {/* 2024-25 */}
-            <div className="md:col-start-3 mt-8">
-              <a href="#" className="underline text-lg">2024-25</a>
-            </div>
-            
-            {/* Brochure */}
-            <div className="md:col-start-2 mt-8">
-              <h3 className="font-bold text-xl">Brochure</h3>
-            </div>
-
-            {/* Corporate Brochure */}
-            <div className="md:col-start-1 mt-12">
-              <p className="text-lg">Corporate</p>
-              <a href="#" className="underline text-lg">Brochure</a>
-            </div>
-
-            {/* Patil Group Fastening plant brochure */}
-            <div className="md:col-start-2 mt-2">
-              <p className="text-lg">Patil Group Fastening<br/>plant brochure</p>
-            </div>
-
-            {/* Cme brochure */}
-            <div className="md:col-start-3 mt-12">
-              <p className="text-lg">Cme</p>
-              <a href="#" className="underline text-lg">brochure</a>
-            </div>
-          </div>
         </div>
       </section>
     </div>
   );
 };
 
-export default ResponsibilitiesPage; 
+export default ResponsibilitiesPage;
