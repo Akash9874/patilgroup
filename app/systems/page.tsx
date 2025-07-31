@@ -39,6 +39,12 @@ const systemsData = [
     description: 'Factory-prepared plinth units that offer cleaner installation, reduced onsite time, and greater curve control.',
     link: '/precast-plinth',
     image: '/23_precast_plinth_process.jpg'
+  },
+  {
+    title: 'Turnouts & Switches',
+    description: 'Engineered for strength and durability, our sleepers enhance track stability with minimal maintenance.',
+    link: '/turnouts-and-switches',
+    image: '/08_turnouts_switches_banner.jpg'
   }
 ];
 

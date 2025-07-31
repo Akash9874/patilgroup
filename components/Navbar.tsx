@@ -28,6 +28,7 @@ const Navbar = () => {
     { href: '/news', label: 'In News' },
     { href: '/responsibilities', label: 'Our Responsibilities' },
     { href: '/gallery', label: 'Photo Gallery' },
+    { href: '/sustainability', label: 'Sustainability' },
   ];
 
   return (
@@ -166,6 +167,7 @@ const Navbar = () => {
             <Link href="/news" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">In News</Link>
             <Link href="/responsibilities" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Our Responsibilities</Link>
             <Link href="/gallery" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Photo Gallery</Link>
+            <Link href="/sustainability" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Sustainability</Link>
             <Link href="/products" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Products</Link>
             <Link href="/systems" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Systems</Link>
             <Link href="/projects" className="block px-3 py-2 text-gray-700 hover:text-amber-700 transition-all duration-300 hover:bg-amber-50 rounded-md">Projects</Link>

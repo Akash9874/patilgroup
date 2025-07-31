@@ -28,12 +28,6 @@ const productsData = [
     description: 'We manufacture high-quality SGCI Inserts and Base Plates, crucial components for both Railway and Metro Rail tracks.',
     link: '/inserts',
     image: '/07_inserts_banner.jpg'
-  },
-  {
-    title: 'Turnouts & Switches',
-    description: 'Engineered for strength and durability, our sleepers enhance track stability with minimal maintenance.',
-    link: '/turnouts-and-switches',
-    image: '/08_turnouts_switches_banner.jpg'
   }
 ];
 
@@ -54,7 +48,7 @@ const ProductsContent = () => {
           <div className="flex items-center justify-center">
             <div className="text-left px-4 sm:px-6 lg:px-8">
               <h1 className="text-6xl md:text-8xl font-bold text-amber-500 animate-fadeInUp">
-                Our Products
+                Track<br/>Components
               </h1>
             </div>
           </div>
@@ -65,8 +59,8 @@ const ProductsContent = () => {
             style={{ clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0% 100%)' }}
           >
             <div className="space-y-6 animate-fadeInUp w-full pl-[30%] pr-8 lg:pr-16">
-              <h2 className="text-5xl font-bold leading-tight text-black">
-                Engineering Excellence for a Stronger Tomorrow
+              <h2 className="text-7xl font-bold text-[#8A393B]">
+                Unseen.<br/>Unshifting
               </h2>
             </div>
           </div>

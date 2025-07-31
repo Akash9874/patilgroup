@@ -1,0 +1,15 @@
+.map-container {
+  width: 100%;
+  height: auto;
+}
+
+#features path {
+  fill: #8A393B;
+  stroke: #F2913F;
+  stroke-width: 1;
+  transition: fill 0.3s ease;
+}
+
+#features path:hover {
+  fill: #F2913F;
+}

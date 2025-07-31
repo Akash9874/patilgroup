@@ -209,12 +209,12 @@ const AboutUsPage = () => {
                 <span className="text-[#8A393B]">Our </span>
                 <span className="text-[#F2913F]">Presence</span>
               </h2>
-              <a href="#" className="inline-flex items-center mt-6 text-2xl text-black group">
+              <Link href="/our-presence" className="inline-flex items-center mt-6 text-2xl text-black group">
                 View
                 <span className="ml-3 flex items-center justify-center w-8 h-8 rounded-full border border-[#8A393B] text-[#8A393B] group-hover:bg-[#8A393B] group-hover:text-white transition-colors">
                   <ArrowRight size={20} />
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
