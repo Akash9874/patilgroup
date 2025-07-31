@@ -55,10 +55,10 @@ const Footer = () => {
               <li><a href="#" className="hover:text-white transition-colors">Facebook</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Twitter</a></li>
               <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
+              <li><a href="#" className="hover:text-white transition-.colors">Instagram</a></li>
             </ul>
             <div className="pt-8">
-              <Link href="/whistleblower-policy" className="inline-block bg-[#F2913F] text-black font-bold py-3 px-6 rounded-md text-sm hover:bg-orange-400 transition-colors">
+              <Link href="/whistleblower" className="inline-block bg-[#F2913F] text-black font-bold py-3 px-6 rounded-md text-sm hover:bg-orange-400 transition-colors">
                 WHISTLEBLOWER POLICY
               </Link>
             </div>
@@ -80,4 +80,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;
