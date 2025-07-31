@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { PlusCircle, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const AboutUsPage = () => {
   const [activeTab, setActiveTab] = useState('Sleepers');
@@ -12,12 +13,12 @@ const AboutUsPage = () => {
     { name: 'Turnout parts' },
     { name: 'Rubber elements' },
   ];
-  
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
       <div className="relative bg-cover bg-center py-32 sm:py-40" style={{ backgroundImage: "url('/05_sleepers_banner.jpg')" }}>
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-left">
             <h1 className="font-clash font-medium text-[96px] leading-[64px] tracking-[-0.25px] text-[#F2913F]">
@@ -34,7 +35,7 @@ const AboutUsPage = () => {
             We began in the 1960s with a single concrete sleeper plant
           </p>
         </div>
-
+        
         <div className="mt-12 flex items-center">
           <div className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="ml-48">
@@ -103,16 +104,16 @@ const AboutUsPage = () => {
           style={{ backgroundImage: "url('/worldmap.png')" }}
         ></div>
         <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-left">
                     <h2 className="text-8xl font-bold text-[#8A393B]">Built for long life</h2>
                 </div>
                 <div className="text-center mt-4">
                     <h2 className="text-8xl font-bold text-[#8A393B]">Delivered at scale</h2>
-              </div>
+                </div>
                 <div className="text-right mt-4">
                     <p className="text-5xl text-[#F2913F]">Approved across systems</p>
-              </div>
+                </div>
             </div>
 
             <div className="mt-32">
@@ -143,7 +144,7 @@ const AboutUsPage = () => {
             
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <p className="mt-32 text-5xl font-semibold text-[#8A393B]">We build what holds.</p>
-          </div>
+            </div>
         </div>
       </section>
 
@@ -184,7 +185,7 @@ const AboutUsPage = () => {
           />
         </div>
       </section>
-
+      
       <div className="border-t border-gray-200"></div>
 
       {/* Clientele and Presence Section */}
@@ -196,12 +197,12 @@ const AboutUsPage = () => {
                 <span className="text-[#8A393B]">Our </span>
                 <span className="text-[#F2913F]">Clientele</span>
               </h2>
-              <a href="#" className="inline-flex items-center mt-6 text-2xl text-black group">
+              <Link href="/our-clientele" className="inline-flex items-center mt-6 text-2xl text-black group">
                 View
                 <span className="ml-3 flex items-center justify-center w-8 h-8 rounded-full border border-[#8A393B] text-[#8A393B] group-hover:bg-[#8A393B] group-hover:text-white transition-colors">
                   <ArrowRight size={20} />
                 </span>
-              </a>
+              </Link>
             </div>
             <div>
               <h2 className="text-6xl font-bold">
@@ -222,4 +223,4 @@ const AboutUsPage = () => {
   );
 };
 
-export default AboutUsPage; 
+export default AboutUsPage;
