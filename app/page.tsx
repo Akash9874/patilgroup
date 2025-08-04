@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Image from 'next/image';
 import Link from 'next/link';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 import {
   Carousel,
   CarouselContent,
@@ -44,6 +46,20 @@ const projects = [
     link: "/ahmedabad-phase-2"
   },
 ];
+
+const StatCounter = ({ end, duration, suffix = '', prefix = '' }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  return (
+    <div ref={ref} className="text-5xl font-bold text-black mb-2">
+      {inView ? <CountUp end={end} duration={duration} separator="," suffix={suffix} prefix={prefix} /> : '0'}
+    </div>
+  );
+};
+
 
 export default function Home() {
   useScrollAnimation();
@@ -121,7 +137,7 @@ export default function Home() {
       {/* Built to Section */}
       <section className="h-96 flex">
         {/* Built to Scale */}
-        <div className="flex-1 bg-black flex flex-col justify-between p-6 lg:p-8">
+        <div className="flex-1 bg-black flex flex-col justify-between p-6 lg:p-8 fade-in-section">
           <div>
             <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-[#8A393B] mb-4 lg:mb-6">
               Built to Scale.
@@ -145,7 +161,7 @@ export default function Home() {
         </div>
 
         {/* Built to Last */}
-        <div className="flex-1 bg-black flex flex-col justify-between p-6 lg:p-8">
+        <div className="flex-1 bg-black flex flex-col justify-between p-6 lg:p-8 fade-in-section" style={{ transitionDelay: '200ms' }}>
           <div>
             <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-[#F2913F] mb-4 lg:mb-6">
               Built to Last.
@@ -170,7 +186,7 @@ export default function Home() {
         </div>
 
         {/* Built to Keep Moving */}
-        <div className="flex-1 bg-black flex flex-col justify-between p-6 lg:p-8">
+        <div className="flex-1 bg-black flex flex-col justify-between p-6 lg:p-8 fade-in-section" style={{ transitionDelay: '400ms' }}>
           <div>
             <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-[#F2913F] mb-4 lg:mb-6">
               Built to Keep Moving.
@@ -198,21 +214,21 @@ export default function Home() {
       <section className="bg-[#F5F4F1] relative py-24 overflow-hidden">
         {/* Background Grid Lines */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute left-1/3 top-0 bottom-0 w-px bg-gray-300"></div>
-          <div className="absolute left-2/3 top-0 bottom-0 w-px bg-gray-300"></div>
+          <div className="absolute left-1/3 top-0 bottom-0 w-px bg-gray-300 h-full scale-in"></div>
+          <div className="absolute left-2/3 top-0 bottom-0 w-px bg-gray-300 h-full scale-in" style={{ transitionDelay: '200ms' }}></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Top Content Area */}
-          <div className="flex items-center justify-center mb-24">
+          <div className="flex items-center justify-center mb-24 fade-in-section">
             {/* Image */}
             <div className="pr-32 z-0">
               <img
                 src="/engineering-infra.jpg"
                 alt="Train in station"
                 className="w-full max-w-3xl h-auto object-cover"
-          />
-        </div>
+              />
+            </div>
 
             {/* Text Box Area */}
             <div className="-ml-64 z-10">
@@ -239,16 +255,16 @@ export default function Home() {
 
           {/* Statistics Section */}
           <div className="grid grid-cols-3 text-center">
-              <div className="flex flex-col items-center justify-center">
-                  <div className="text-5xl font-bold text-black mb-2">50+</div>
+              <div className="flex flex-col items-center justify-center fade-in-section">
+                  <StatCounter end={50} duration={2.5} suffix="+" />
                   <div className="text-gray-500 text-base font-medium">years on the job</div>
               </div>
-              <div className="flex flex-col items-center justify-center">
-                  <div className="text-5xl font-bold text-black mb-2">100%</div>
+              <div className="flex flex-col items-center justify-center fade-in-section" style={{ transitionDelay: '200ms' }}>
+                  <StatCounter end={100} duration={2.5} suffix="%" />
                   <div className="text-gray-500 text-base font-medium">Clients Satisfactions</div>
               </div>
-              <div className="flex flex-col items-center justify-center">
-                  <div className="text-4xl font-bold text-black mb-2">1,00,00,000+</div>
+              <div className="flex flex-col items-center justify-center fade-in-section" style={{ transitionDelay: '400ms' }}>
+                  <StatCounter end={10000000} duration={2.5} suffix="+" />
                   <div className="text-gray-500 text-base font-medium">Happy Sleepers</div>
               </div>
           </div>
@@ -261,7 +277,7 @@ export default function Home() {
           opts={{ align: "start", loop: true }}
           className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         >
-          <div className="flex justify-between items-end mb-12">
+          <div className="flex justify-between items-end mb-12 fade-in-section">
             <div>
               <h2 className="text-4xl font-bold text-[#8A393B] mb-2">Our Projects</h2>
               <p className="text-gray-500">some placeholder text</p>
@@ -274,7 +290,7 @@ export default function Home() {
           <CarouselContent className="-ml-4">
             {projects.map((project, index) => (
               <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                <div>
+                <div className="fade-in-section">
                   <div className="mb-4 overflow-hidden rounded-2xl">
                     <Image
                       src={project.image}
@@ -287,8 +303,8 @@ export default function Home() {
                   <h3 className="text-2xl font-bold mb-2">{project.city}</h3>
                   <Link href={project.link} className="text-base font-medium text-gray-900 border-b border-gray-400 hover:border-gray-900 transition">
                     View Project
-        </Link>
-        </div>
+                  </Link>
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>
@@ -298,19 +314,19 @@ export default function Home() {
       {/* Nationwide Presence Section */}
       <section className="bg-[#F5F4F1] relative py-24 overflow-hidden">
         {/* Left background pattern */}
-        <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/3 pointer-events-none">
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/3 pointer-events-none fade-in-section">
             <img src="/grid.png" alt="background pattern" className="w-auto h-[400px] opacity-60" />
         </div>
         {/* Right background pattern */}
-        <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/3 pointer-events-none">
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/3 pointer-events-none fade-in-section">
             <img src="/grid.png" alt="background pattern" className="w-auto h-[400px] opacity-60" />
         </div>
 
-        <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
+        <div className="relative z-10 max-w-3xl mx-auto px-4 text-center fade-in-section">
             <h2 className="text-5xl font-bold mb-4">
                 <span
                     className="bg-clip-text text-transparent"
-          style={{
+                    style={{
                         backgroundImage: 'linear-gradient(90deg, #F2913F, #C4663B, #8A393B)',
                     }}
                 >
