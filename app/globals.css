@@ -93,11 +93,41 @@
 /* Smooth scrolling optimizations */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Performance optimizations for parallax */
-.parallax-container {
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Performance optimizations for all animations */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Hardware acceleration for smooth animations */
+.parallax-container,
+.fade-in-section,
+.slide-in-left,
+.slide-in-right,
+.scale-in,
+video,
+img {
   transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform, opacity;
+}
+
+/* Optimize video performance */
+video {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000px;
 }
@@ -207,23 +237,28 @@ html {
 }
 
 .animate-fadeInUp {
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform, opacity;
 }
 
 .animate-fadeInLeft {
-  animation: fadeInLeft 0.8s ease-out forwards;
+  animation: fadeInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform, opacity;
 }
 
 .animate-fadeInRight {
-  animation: fadeInRight 0.8s ease-out forwards;
+  animation: fadeInRight 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform, opacity;
 }
 
 .animate-slideInFromBottom {
-  animation: slideInFromBottom 0.8s ease-out forwards;
+  animation: slideInFromBottom 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform, opacity;
 }
 
 .animate-scaleIn {
-  animation: scaleIn 0.6s ease-out forwards;
+  animation: scaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  will-change: transform, opacity;
 }
 
 .animate-float {
@@ -282,75 +317,103 @@ html {
   animation-delay: 0.8s;
 }
 
-/* Hover animations */
+/* Hover animations with smooth easing */
 .hover-lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, box-shadow;
 }
 
 .hover-lift:hover {
-  transform: translateY(-5px);
+  transform: translate3d(0, -5px, 0);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .hover-scale {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
 }
 
 .hover-scale:hover {
-  transform: scale(1.05);
+  transform: scale3d(1.05, 1.05, 1);
 }
 
 .hover-glow {
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: box-shadow;
 }
 
 .hover-glow:hover {
   box-shadow: 0 0 20px rgba(217, 119, 6, 0.4);
 }
 
-/* Intersection Observer animations */
+/* Additional performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+/* Optimize carousel animations */
+.carousel {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Prevent layout thrashing */
+.prevent-layout-thrash {
+  contain: layout style paint;
+}
+
+/* Intersection Observer animations with smooth easing */
 .fade-in-section {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translate3d(0, 30px, 0);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
 }
 
 .fade-in-section.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .slide-in-left {
   opacity: 0;
-  transform: translateX(-50px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translate3d(-50px, 0, 0);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
 }
 
 .slide-in-left.is-visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .slide-in-right {
   opacity: 0;
-  transform: translateX(50px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translate3d(50px, 0, 0);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
 }
 
 .slide-in-right.is-visible {
   opacity: 1;
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .scale-in {
   opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: scale3d(0.8, 0.8, 1);
+  transition: opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform, opacity;
 }
 
 .scale-in.is-visible {
   opacity: 1;
-  transform: scale(1);
+  transform: scale3d(1, 1, 1);
 }
 
 /* Ensure images are optimized */
@@ -359,8 +422,14 @@ img {
   image-rendering: crisp-edges;
 }
 
+/* Smooth momentum scrolling for mobile */
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
 /* Improve text rendering */
-body, h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
