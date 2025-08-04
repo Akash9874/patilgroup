@@ -1,357 +1,339 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { ArrowRight, Menu, X, Linkedin } from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { useState, useEffect, useRef } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import Image from 'next/image';
+import Link from 'next/link';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
-const newsItems = [
+const projects = [
   {
-    date: "Mar 2024",
-    title: "Sleepers supplied for new Pune Metro corridor",
-    image: '/image.png',
+    city: "Bangalore Metro",
+    image: "/bangaloremetrohero.png",
+    link: "/projects"
   },
   {
-    date: "Sep 2023",
-    title: "Recognised by RDSO for product innovation",
-    image: '/train 2.jpg',
+    city: "Delhi Metro",
+    image: "/delhimetrohero.png",
+    link: "/delhi-phase-3"
   },
   {
-    date: "Dec 2023",
-    title: "Partnered on Mumbai Ahmedabad bullet train trial track",
-    image: '/mt train.jpg',
+    city: "Nagpur Metro",
+    image: "/nagpur-metro/banner.jpg",
+    link: "/nagpur-metro"
+  },
+  {
+    city: "Mumbai Metro",
+    image: "/mumbaimetrohero.png",
+    link: "/mumbai-line-2b"
+  },
+  {
+    city: "Kolkata Metro",
+    image: "/kolkata-stretch/banner.jpg",
+    link: "/kolkata-stretch"
+  },
+    {
+    city: "Ahmedabad Metro",
+    image: "/ahmedabad-phase-2/banner.jpg",
+    link: "/ahmedabad-phase-2"
   },
 ];
 
 export default function Home() {
   useScrollAnimation();
-
-  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-
-  const builtForItems = [
-    "Built for scale.",
-    "Built to last.",
-    "Built to keep moving.",
-  ];
-  const [activeBuiltForItem, setActiveBuiltForItem] = useState(1);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    setCursorPos({ x: e.clientX, y: e.clientY });
-  };
+  const [isHeroAnimated, setIsHeroAnimated] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const builtForInterval = setInterval(() => {
-      setActiveBuiltForItem(prev => (prev + 1) % builtForItems.length);
-    }, 3000);
+    const animationTimeout = setTimeout(() => {
+      setIsHeroAnimated(true);
+      if (videoRef.current) {
+        videoRef.current.play().catch(error => {
+          console.error("Video play failed:", error);
+        });
+      }
+    }, 500); // Start animation after 500ms
 
-    return () => {
-      clearInterval(builtForInterval);
-    };
-  }, [builtForItems.length]);
+    return () => clearTimeout(animationTimeout);
+  }, []);
 
   return (
-    <div className="overflow-x-hidden" onMouseMove={handleMouseMove}>
+    <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative h-[calc(100vh-4rem)] mt-16 overflow-hidden">
-        {/* Video Background */}
-        <div className="absolute inset-0 w-full h-full">
+      <section className="relative h-screen overflow-hidden bg-black">
+        {/* Video Background with Diagonal Cutout */}
+        <div 
+          className="absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out"
+          style={{
+            clipPath: isHeroAnimated 
+              ? 'polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%)' 
+              : 'polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)',
+          }}
+        >
           <video
-            autoPlay
+            ref={videoRef}
             loop
             muted
             playsInline
             className="w-full h-full object-cover"
+            preload="auto"
           >
             <source src="/herovideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
 
-        {/* White overlay with diagonal cut */}
-          <div 
-          className="absolute inset-0 bg-white"
-            style={{
-            clipPath: 'polygon(0 0, 42% 0, 22% 100%, 0% 100%)',
-            }}
-          ></div>
-
         {/* Hero Content */}
         <div className="relative z-10 h-full flex items-center">
-          <div className="w-full ml-4 sm:ml-6 lg:ml-12 xl:ml-16">
-            <div className="max-w-xl">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#8A393B] leading-tight mb-4 animate-fadeInUp">
-                Smarter Track Solutions, <br /> Safer Mobility
+          <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-16">
+            {/* Left Side Text */}
+            <div 
+              className={`absolute left-4 sm:left-6 lg:left-8 xl:left-16 top-1/2 transform -translate-y-1/2 pt-8 transition-opacity duration-1000 ease-in-out ${isHeroAnimated ? 'opacity-100' : 'opacity-0'}`}
+              style={{ transitionDelay: '800ms' }}
+            >
+              <h1 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight italic">
+                SMARTER TRACK<br />
+                SOLUTIONS,<br />
+                SAFER MOBILITY
               </h1>
             </div>
-            <div
-              className="h-2 my-6 animate-fadeInUp animate-delay-200"
-              style={{
-                width: '30%',
-                background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
-              }}
-            />
-            <div className="max-w-xl">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#D97706] animate-fadeInUp animate-delay-400">
-                Railway Engineering
+
+            {/* Right Side Text */}
+            <div 
+              className={`absolute right-4 sm:right-6 lg:right-8 xl:right-16 top-1/2 transform -translate-y-1/2 pt-8 transition-opacity duration-1000 ease-in-out ${isHeroAnimated ? 'opacity-100' : 'opacity-0'}`}
+              style={{ transitionDelay: '1200ms' }}
+            >
+              <h2 className="text-white font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight">
+                RAILWAY<br />
+                ENGINEERING
               </h2>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Built to Section */}
+      <section className="h-96 flex">
+        {/* Built to Scale */}
+        <div className="flex-1 bg-black flex flex-col justify-between p-6 lg:p-8">
+          <div>
+            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-[#8A393B] mb-4 lg:mb-6">
+              Built to Scale.
+          </h2>
+            <div className="mb-4 lg:mb-6">
+              <svg className="w-8 h-8 lg:w-10 lg:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <p className="text-gray-400 text-xs lg:text-sm mb-1">Mar 2024</p>
+            <h3 className="text-white text-sm lg:text-base xl:text-lg font-medium mb-3 lg:mb-4 leading-tight">
+              Sleepers supplied for new<br />
+              Pune Metro Corridor
+            </h3>
+            <button className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
+              Read More
+            </button>
+            </div>
+        </div>
+
+        {/* Built to Last */}
+        <div className="flex-1 bg-black flex flex-col justify-between p-6 lg:p-8">
+          <div>
+            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-[#F2913F] mb-4 lg:mb-6">
+              Built to Last.
+            </h2>
+            <div className="mb-4 lg:mb-6">
+              <svg className="w-8 h-8 lg:w-10 lg:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <p className="text-gray-400 text-xs lg:text-sm mb-1">Dec 2023</p>
+            <h3 className="text-white text-sm lg:text-base xl:text-lg font-medium mb-3 lg:mb-4 leading-tight">
+              Partnered on Mumbai-<br />
+              Ahmedabad bullet train trial<br />
+              track
+            </h3>
+            <button className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
+              Read More
+            </button>
+          </div>
+        </div>
+
+        {/* Built to Keep Moving */}
+        <div className="flex-1 bg-black flex flex-col justify-between p-6 lg:p-8">
+          <div>
+            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-[#F2913F] mb-4 lg:mb-6">
+              Built to Keep Moving.
+            </h2>
+            <div className="mb-4 lg:mb-6">
+              <svg className="w-8 h-8 lg:w-10 lg:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <p className="text-gray-400 text-xs lg:text-sm mb-1">Sep 2023</p>
+            <h3 className="text-white text-sm lg:text-base xl:text-lg font-medium mb-3 lg:mb-4 leading-tight">
+              Recognized by RDSO for<br />
+              product innovation
+            </h3>
+            <button className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
+              Read More
+            </button>
           </div>
         </div>
       </section>
 
       {/* Engineering Infrastructure Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
-        <div className="mb-16">
-          <h2 className="font-clash font-medium text-[96px] leading-[85px] tracking-[-0.25px] text-[#8A393B] pl-4 sm:pl-6 lg:pl-8 xl:pl-16">
-            Engineering infrastructure
-          </h2>
-          <div className="flex items-center mt-4">
-            <div
-              className="h-[53px]"
-              style={{
-                width: '709px',
-                background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
-              }}
-            />
-            <h2 className="font-clash font-medium text-[96px] leading-[85px] tracking-[-0.25px] text-[#8A393B] ml-4 whitespace-nowrap">
-              for the long run
-              </h2>
-            </div>
+      <section className="bg-[#F5F4F1] relative py-24 overflow-hidden">
+        {/* Background Grid Lines */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute left-1/3 top-0 bottom-0 w-px bg-gray-300"></div>
+          <div className="absolute left-2/3 top-0 bottom-0 w-px bg-gray-300"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="slide-in-left">
-            <img
-              src="/engineering-infra.jpg"
-              alt="Engineering Infrastructure"
-              className="w-full h-auto object-cover rounded-lg shadow-xl"
-            />
-          </div>
-
-          <div className="slide-in-right space-y-8 pr-4 sm:pr-6 lg:pr-8 xl:pr-16">
-            <p className="w-[640px] h-[99px] text-[#1E1E1E] text-[30px] font-medium font-clash leading-[32px]">
-              We make and deliver components that hold the railway together. Concrete sleepers, fastening systems, turnout parts and more.
-            </p>
-            
-            <div className="space-y-4 pt-8">
-              {builtForItems.map((item, index) => (
-                <p
-                  key={index}
-                  className={`text-4xl font-bold transition-all duration-700 ease-in-out ${
-                    activeBuiltForItem === index
-                      ? 'text-[#D97706] opacity-100'
-                      : 'text-gray-300 opacity-70'
-                  }`}
-                >
-                  {item}
-                </p>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* See Our Work / Explore Products Section */}
-      <section className="w-full h-48 relative bg-white">
-        {/* Left Section: See Our Work */}
-        <Link
-          href="/projects"
-          className="absolute inset-0 bg-cover bg-center group"
-          style={{
-            backgroundImage: "url('/seework2.jpg')",
-            clipPath: 'polygon(0 0, calc(50% - 1.5rem) 0, calc(50% + 1.5rem) 100%, 0 100%)'
-          }}
-        >
-          <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors duration-300"></div>
-          <div className="relative z-10 h-full">
-            <div className="w-1/2 h-full flex items-center justify-center">
-              <span className="text-2xl font-bold text-orange-400 flex items-center gap-4">
-                See Our Work
-                <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center group-hover:bg-white transition-colors">
-                  <ArrowRight className="w-5 h-5 text-white group-hover:text-orange-400"/>
-              </div>
-              </span>
-            </div>
-          </div>
-        </Link>
-
-        {/* Right Section: Explore our Products */}
-        <Link
-          href="/products"
-          className="absolute inset-0 bg-cover bg-center group"
-          style={{
-            backgroundImage: "url('/04_fasteners_banner.jpg')",
-            clipPath: 'polygon(calc(50% - 1.5rem + 24px) 0, 100% 0, 100% 100%, calc(50% + 1.5rem + 24px) 100%)'
-          }}
-        >
-          <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors duration-300"></div>
-          <div className="relative z-10 h-full">
-             <div className="w-1/2 h-full flex items-center justify-center ml-auto">
-                <span className="text-2xl font-bold text-white flex items-center gap-4">
-                  Explore our Products
-                  <div className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center group-hover:bg-white transition-colors">
-                    <ArrowRight className="w-5 h-5 text-white group-hover:text-black"/>
-              </div>
-                </span>
-            </div>
-          </div>
-        </Link>
-      </section>
-
-      {/* Legacy Stats Section */}
-      <section className="relative mt-16 h-[453px] bg-white overflow-hidden flex items-center justify-center">
-        {/* Left Shape */}
-        <div 
-          className="absolute left-0 top-0 bottom-0 w-28 bg-[#8A393B]"
-          style={{ clipPath: 'polygon(0 0, 30% 0, 100% 100%, 0 100%)' }}
-        ></div>
-        {/* Right Shape */}
-        <div 
-          className="absolute right-0 top-0 bottom-0 w-28 bg-[#8A393B]"
-          style={{ clipPath: 'polygon(70% 0, 100% 0, 100% 100%, 0 100%)' }}
-        ></div>
-
-        <div className="relative z-10 max-w-4xl mx-auto text-left">
-          <h2 className="font-clash font-medium text-[96px] leading-[85px] tracking-[-0.25px]">
-            <span className="text-[#F2913F]">50</span>
-            <span className="text-black"> plus years.</span>
-          </h2>
-          <h2 className="font-clash font-medium text-[96px] leading-[85px] tracking-[-0.25px] mt-2 ml-12">
-            <span className="text-[#F2913F]">10 million </span>
-            <span className="text-black">sleepers.</span>
-          </h2>
-          <h2 className="font-clash font-medium text-[96px] leading-[85px] tracking-[-0.25px] mt-2 ml-48">
-            <span className="text-[#F2913F]">Endless</span>
-            <span className="text-black"> track</span>
-          </h2>
-        </div>
-      </section>
-
-      {/* Nationwide Presence Section */}
-      <section className="relative mt-16 py-24 bg-white overflow-hidden">
-        {/* Background Grids */}
-        <div className="absolute inset-0 flex justify-between items-center z-0">
-          <img 
-            src="/grid.png" 
-            alt="Decorative grid" 
-            className="h-full w-auto opacity-100"
-          />
-          <img 
-            src="/grid.png" 
-            alt="Decorative grid" 
-            className="h-full w-auto opacity-100 transform scale-x-[-1]"
+        <div className="relative z-10 max-w-7xl mx-auto">
+          {/* Top Content Area */}
+          <div className="flex items-center justify-center mb-24">
+            {/* Image */}
+            <div className="pr-32 z-0">
+              <img
+                src="/engineering-infra.jpg"
+                alt="Train in station"
+                className="w-full max-w-3xl h-auto object-cover"
           />
         </div>
 
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h2 className="text-6xl md:text-7xl font-semibold font-clash">
-            <span className="text-[#F2913F]">Nationwide</span>
-            <span className="text-[#8A393B]"> presence</span>
-          </h2>
-          <p className="mt-4 text-2xl md:text-3xl text-black font-medium font-clash">
-            From city metros to national corridors
-          </p>
-          <p className="mt-8 text-lg md:text-xl max-w-2xl mx-auto text-gray-700">
-            Our products run across India.
-            <br />
-            We support both new and upgrade projects at every scale.
-          </p>
-          <div
-            className="h-1.5 mt-12 mx-auto"
-              style={{
-              width: '40%',
-              background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
-            }}
-          />
-        </div>
-      </section>
-
-      {/* In News Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-clash font-bold text-[48px] leading-[45px] text-[#8A393B] mb-12 lg:mb-16 fade-in-section text-left">
-            News and updates
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {newsItems.map((item, index) => (
+            {/* Text Box Area */}
+            <div className="-ml-64 z-10">
+              {/* Gradient Line */}
               <div
-                key={index}
-                className="flex flex-col items-start gap-3 fade-in-section"
-                onMouseEnter={() => setHoveredImage(item.image)}
-                onMouseLeave={() => setHoveredImage(null)}
-              >
-                <p className="font-clash text-base text-gray-500">{item.date}</p>
-                <h3 className="font-clash font-medium text-2xl leading-tight text-[#F2913F] transition-colors duration-300 h-24">
-                  {item.title}
-                </h3>
-                <Link href="/news" className="inline-flex items-center gap-3 text-black font-clash font-medium text-lg group transition-all duration-300">
-                  Read more
-                  <span className="flex items-center justify-center w-7 h-7 rounded-full border border-[#8A393B] text-[#8A393B] transition-all duration-300 group-hover:bg-[#8A393B] group-hover:text-white">
-                    <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" size={16} />
-                  </span>
-                </Link>
-                <div
-                  className="w-full h-[3px] rounded-full mt-2"
+                className="h-2 mb-4"
                   style={{
-                    background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
-                  }}
-                />
+                  width: '85%',
+                  background: 'linear-gradient(90deg, #F2913F 0%, #1E3888 50%, #8A393B 100%)',
+                }}
+              />
+              {/* White Text Box */}
+              <div className="bg-white p-12">
+                <h2 className="text-4xl font-bold text-[#8A393B] leading-tight mb-6">
+                  Engineering Infrastructure<br />
+                  for the long run.
+                </h2>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  We make and deliver components that hold the railway together. Concrete sleepers, fastening systems, turnout parts and more.
+                </p>
               </div>
-            ))}
+            </div>
+          </div>
+
+          {/* Statistics Section */}
+          <div className="grid grid-cols-3 text-center">
+              <div className="flex flex-col items-center justify-center">
+                  <div className="text-5xl font-bold text-black mb-2">50+</div>
+                  <div className="text-gray-500 text-base font-medium">years on the job</div>
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                  <div className="text-5xl font-bold text-black mb-2">100%</div>
+                  <div className="text-gray-500 text-base font-medium">Clients Satisfactions</div>
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                  <div className="text-4xl font-bold text-black mb-2">1,00,00,000+</div>
+                  <div className="text-gray-500 text-base font-medium">Happy Sleepers</div>
+              </div>
           </div>
         </div>
       </section>
 
-      {/* LinkedIn Update Section */}
-      <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border-t border-gray-200 pt-16">
-            <div className="flex flex-col md:flex-row items-center gap-12">
-              <div className="w-full md:w-80 h-52 bg-gray-200 rounded-2xl flex-shrink-0">
-                {/* Image placeholder */}
+      {/* Our Projects Section */}
+      <section className="bg-white py-24">
+        <Carousel
+          opts={{ align: "start", loop: true }}
+          className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        >
+          <div className="flex justify-between items-end mb-12">
+            <div>
+              <h2 className="text-4xl font-bold text-[#8A393B] mb-2">Our Projects</h2>
+              <p className="text-gray-500">some placeholder text</p>
               </div>
-              <div className="flex flex-col items-start">
-                <p className="font-clash text-base text-[#8A393B]">Dec 2023</p>
-                <h3 className="font-clash font-medium text-3xl text-[#F2913F] mt-2 leading-tight">
-                  Partnered on Mumbai Ahmedabad bullet train trial track
-                </h3>
-                <a 
-                  href="#" 
-                  className="inline-flex items-center gap-2 text-[#0A66C2] font-bold text-2xl mt-4 group"
-                >
-                  <span>LinkedIn</span>
-                  <Linkedin className="h-7 w-7" fill="#0A66C2" strokeWidth={0}/>
-                  <span className="flex items-center justify-center w-7 h-7 rounded-full border-2 border-[#8A393B] text-[#8A393B] transition-all duration-300 group-hover:bg-[#8A393B] group-hover:text-white">
-                    <ArrowRight size={16} />
-                  </span>
-                </a>
-              </div>
+            <div className="flex items-center gap-4">
+              <CarouselPrevious className="relative w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700" />
+              <CarouselNext className="relative w-12 h-12 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706]" />
             </div>
           </div>
+          <CarouselContent className="-ml-4">
+            {projects.map((project, index) => (
+              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                <div>
+                  <div className="mb-4 overflow-hidden rounded-2xl">
+                    <Image
+                      src={project.image}
+                      alt={project.city}
+                      width={400}
+                      height={500}
+                      className="w-full h-[450px] object-cover transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">{project.city}</h3>
+                  <Link href={project.link} className="text-base font-medium text-gray-900 border-b border-gray-400 hover:border-gray-900 transition">
+                    View Project
+        </Link>
         </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </section>
       
-      {hoveredImage && (
-        <div
-          className="pointer-events-none fixed z-50 transition-opacity duration-300"
-          style={{
-            left: cursorPos.x + 20,
-            top: cursorPos.y,
-            opacity: hoveredImage ? 1 : 0,
-          }}
-        >
-          <Image
-            src={hoveredImage}
-            alt="Hovered News Image"
-            width={300}
-            height={200}
-            className="rounded-lg shadow-2xl"
-          />
+      {/* Nationwide Presence Section */}
+      <section className="bg-[#F5F4F1] relative py-24 overflow-hidden">
+        {/* Left background pattern */}
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/3 pointer-events-none">
+            <img src="/grid.png" alt="background pattern" className="w-auto h-[400px] opacity-60" />
         </div>
-      )}
+        {/* Right background pattern */}
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/3 pointer-events-none">
+            <img src="/grid.png" alt="background pattern" className="w-auto h-[400px] opacity-60" />
+        </div>
+
+        <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
+            <h2 className="text-5xl font-bold mb-4">
+                <span
+                    className="bg-clip-text text-transparent"
+          style={{
+                        backgroundImage: 'linear-gradient(90deg, #F2913F, #C4663B, #8A393B)',
+                    }}
+                >
+                    Nationwide
+                </span>
+                <span className="text-gray-800"> Presence.</span>
+            </h2>
+            <div
+                className="h-1 w-48 mx-auto mb-8"
+                style={{
+                    background: 'linear-gradient(90deg, #F2913F 0%, #8A393B 100%)',
+                }}
+            />
+            <p className="text-xl text-gray-800 font-medium mb-6">
+                From city metros to national corridors
+            </p>
+            <p className="text-md text-gray-600 max-w-md mx-auto leading-relaxed">
+                Our products run across India.
+                <br />
+                We support both new and upgrade projects at every scale.
+            </p>
+        </div>
+      </section>
     </div>
   );
 }
