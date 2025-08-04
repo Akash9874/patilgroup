@@ -27,7 +27,7 @@ const projects = [
   },
   {
     city: "Nagpur Metro",
-    image: "/nagpur-metro/banner.jpg",
+    image: "/nagpurmetrohero.png",
     link: "/nagpur-metro"
   },
   {
@@ -37,12 +37,12 @@ const projects = [
   },
   {
     city: "Kolkata Metro",
-    image: "/kolkata-stretch/banner.jpg",
+    image: "/kolkataherometro.jpeg",
     link: "/kolkata-stretch"
   },
     {
     city: "Ahmedabad Metro",
-    image: "/ahmedabad-phase-2/banner.jpg",
+    image: "/ahemdabadmetrohero.jpeg",
     link: "/ahmedabad-phase-2"
   },
 ];
@@ -227,8 +227,8 @@ export default function Home() {
                 src="/engineering-infra.jpg"
                 alt="Train in station"
                 className="w-full max-w-3xl h-auto object-cover"
-              />
-            </div>
+          />
+        </div>
 
             {/* Text Box Area */}
             <div className="-ml-64 z-10">
@@ -304,7 +304,7 @@ export default function Home() {
                   <Link href={project.link} className="text-base font-medium text-gray-900 border-b border-gray-400 hover:border-gray-900 transition">
                     View Project
                   </Link>
-                </div>
+        </div>
               </CarouselItem>
             ))}
           </CarouselContent>
@@ -333,7 +333,7 @@ export default function Home() {
             <h2 className="text-6xl font-bold mb-6 text-white">
                 <span
                     className="bg-clip-text text-transparent"
-                    style={{
+          style={{
                         backgroundImage: 'linear-gradient(90deg, #F2913F, #ffcba4, #F2913F)',
                     }}
                 >
