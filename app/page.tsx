@@ -333,13 +333,12 @@ export default function Home() {
             <h2 className="text-8xl font-bold mb-6 text-white">
                 <span
                     className="bg-clip-text text-transparent"
-          style={{
+                    style={{
                         backgroundImage: 'linear-gradient(90deg, #F2913F, #ffcba4, #F2913F)',
                     }}
                 >
-                    Nationwide
+                    Nationwide Presence.
                 </span>
-                <span> Presence.</span>
             </h2>
             <div
                 className="h-1.5 w-64 mx-auto mb-10"
