@@ -330,7 +330,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center fade-in-section">
-            <h2 className="text-6xl font-bold mb-6 text-white">
+            <h2 className="text-8xl font-bold mb-6 text-white">
                 <span
                     className="bg-clip-text text-transparent"
           style={{
@@ -347,10 +347,10 @@ export default function Home() {
                     background: 'linear-gradient(90deg, #F2913F 0%, #ffcba4 100%)',
                 }}
             />
-            <p className="text-2xl text-gray-200 font-medium mb-8">
+            <p className="text-4xl text-gray-200 font-medium mb-8">
                 From city metros to national corridors
             </p>
-            <p className="text-lg text-gray-300 max-w-lg mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-lg mx-auto leading-relaxed">
                 Our products run across India.
                 <br />
                 We support both new and upgrade projects at every scale.
