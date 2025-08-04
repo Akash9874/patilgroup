@@ -312,38 +312,45 @@ export default function Home() {
       </section>
       
       {/* Nationwide Presence Section */}
-      <section className="bg-[#F5F4F1] relative py-24 overflow-hidden">
-        {/* Left background pattern */}
-        <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/3 pointer-events-none fade-in-section">
-            <img src="/grid.png" alt="background pattern" className="w-auto h-[400px] opacity-60" />
-        </div>
-        {/* Right background pattern */}
-        <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/3 pointer-events-none fade-in-section">
-            <img src="/grid.png" alt="background pattern" className="w-auto h-[400px] opacity-60" />
+      <section className="relative py-48 overflow-hidden">
+        {/* Background Video */}
+        <div className="absolute inset-0 w-full h-full z-0">
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+            >
+                <source src="/lppatil.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            {/* Add a dark overlay for better text readability */}
+            <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
 
-        <div className="relative z-10 max-w-3xl mx-auto px-4 text-center fade-in-section">
-            <h2 className="text-5xl font-bold mb-4">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center fade-in-section">
+            <h2 className="text-6xl font-bold mb-6 text-white">
                 <span
                     className="bg-clip-text text-transparent"
                     style={{
-                        backgroundImage: 'linear-gradient(90deg, #F2913F, #C4663B, #8A393B)',
+                        backgroundImage: 'linear-gradient(90deg, #F2913F, #ffcba4, #F2913F)',
                     }}
                 >
                     Nationwide
                 </span>
-                <span className="text-gray-800"> Presence.</span>
+                <span> Presence.</span>
             </h2>
             <div
-                className="h-1 w-48 mx-auto mb-8"
+                className="h-1.5 w-64 mx-auto mb-10"
                 style={{
-                    background: 'linear-gradient(90deg, #F2913F 0%, #8A393B 100%)',
+                    background: 'linear-gradient(90deg, #F2913F 0%, #ffcba4 100%)',
                 }}
             />
-            <p className="text-xl text-gray-800 font-medium mb-6">
+            <p className="text-2xl text-gray-200 font-medium mb-8">
                 From city metros to national corridors
             </p>
-            <p className="text-md text-gray-600 max-w-md mx-auto leading-relaxed">
+            <p className="text-lg text-gray-300 max-w-lg mx-auto leading-relaxed">
                 Our products run across India.
                 <br />
                 We support both new and upgrade projects at every scale.
