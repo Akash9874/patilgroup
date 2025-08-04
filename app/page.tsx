@@ -47,7 +47,7 @@ const projects = [
   },
 ];
 
-const StatCounter = ({ end, duration, suffix = '', prefix = '' }) => {
+const StatCounter = ({ end, duration, suffix = '', prefix = '' }: { end: number; duration: number; suffix?: string; prefix?: string }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
