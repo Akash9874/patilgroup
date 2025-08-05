@@ -10,27 +10,27 @@ const products = [
     {
       name: "Sleepers",
       description: "Concrete units for mainlines, metros, and turnouts",
-      link: "#"
+      link: "/sleepers"
     },
     {
       name: "Fasteners",
       description: "Clips, clamps, and insulators for securing rails",
-      link: "#"
+      link: "/fasteners"
     },
     {
       name: "Wires",
       description: "Pre stressed steel strands for sleeper reinforcement",
-      link: "#"
+      link: "/wires"
     },
     {
       name: "Inserts",
       description: "SGCI castings and base plates for fastening systems",
-      link: "#"
+      link: "/inserts"
     },
     {
       name: "Turnouts & Switches",
       description: "Complete assemblies for track diversion",
-      link: "#"
+      link: "/turnouts-and-switches"
     }
   ];
 
