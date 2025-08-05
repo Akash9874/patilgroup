@@ -113,11 +113,10 @@ export default function Home() {
               className={`absolute left-4 sm:left-6 lg:left-8 xl:left-16 top-1/2 transform -translate-y-1/2 pt-8 transition-opacity duration-1000 ease-in-out ${isHeroAnimated ? 'opacity-100' : 'opacity-0'}`}
               style={{ transitionDelay: '800ms' }}
             >
-              <h1 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight italic">
-                SMARTER TRACK<br />
-                SOLUTIONS,<br />
-                SAFER MOBILITY
-              </h1>
+              <h2 className="text-white font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight">
+                <span className={`transition-colors duration-1000 ${isHeroAnimated ? 'text-[#F2913F]' : 'text-white'}`}>RAILWAY</span><br />
+                <span className={`transition-colors duration-1000 ${isHeroAnimated ? 'text-[#8A393B]' : 'text-white'}`}>ENGINEERING</span>
+              </h2>
             </div>
 
             {/* Right Side Text */}
@@ -125,10 +124,11 @@ export default function Home() {
               className={`absolute right-4 sm:right-6 lg:right-8 xl:right-16 top-1/2 transform -translate-y-1/2 pt-8 transition-opacity duration-1000 ease-in-out ${isHeroAnimated ? 'opacity-100' : 'opacity-0'}`}
               style={{ transitionDelay: '1200ms' }}
             >
-              <h2 className="text-white font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight">
-                RAILWAY<br />
-                ENGINEERING
-              </h2>
+              <h1 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight italic">
+                SMARTER TRACK<br />
+                SOLUTIONS,<br />
+                SAFER MOBILITY
+              </h1>
             </div>
           </div>
         </div>
