@@ -80,11 +80,9 @@ const ProductsPage = () => {
                 <TypingAnimation text="Unshifting" />
               </h2>
               <hr className="border-gray-600 mb-8" />
-              <p className="text-lg text-gray-300 mb-6">
-                Amet eu facilisi posuere ut at cras non ipsum proin nunc purus tellus ultricies velit elementum ut dui sed augue ultrices phasellus ullamcorper condimentum ut suspendisse viverra ornare sit venenatis
-              </p>
-              <p className="text-lg text-gray-400">
-                Some placeholder text
+              <p className="text-xl text-gray-300 mb-6">
+                Quietly engineered —<br />
+                Built to endure what is never seen
               </p>
             </div>
             
