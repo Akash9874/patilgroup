@@ -35,10 +35,10 @@ const InsertsPage = () => {
         <div className="max-w-7xl mx-auto px-8">
           <h2 className="text-5xl font-bold text-[#8A393B] mb-8 fade-in-section">SGCI Inserts</h2>
           <div className="space-y-6 text-xl">
-            <TypingAnimation text="Patil Group manufactures SGCI inserts at its foundry in Kallakal, near Hyderabad." className="block" />
-            <TypingAnimation text="Production began in 2018 and includes all key steps: molten metal preparation, moulding, de-gating, shot blasting, and final grinding. The unit is equipped with modern systems, including robotics and IoT." className="block" />
-            <TypingAnimation text="Approved under QA-RDSO RT 381 Alt 9 and RT 6901 Alt 5. A second manufacturing unit was commissioned in 2020 in Bokaro, Jharkhand." className="block" />
-            <TypingAnimation text="Production for wider base sleeper inserts is also underway." className="block" />
+            <TypingAnimation text="Patil Group manufactures SGCI inserts at its foundry in Kallakal, near Hyderabad." className="block" speed={20} />
+            <TypingAnimation text="Production began in 2018 and includes all key steps: molten metal preparation, moulding, de-gating, shot blasting, and final grinding. The unit is equipped with modern systems, including robotics and IoT." className="block" speed={20} />
+            <TypingAnimation text="Approved under QA-RDSO RT 381 Alt 9 and RT 6901 Alt 5. A second manufacturing unit was commissioned in 2020 in Bokaro, Jharkhand." className="block" speed={20} />
+            <TypingAnimation text="Production for wider base sleeper inserts is also underway." className="block" speed={20} />
           </div>
         </div>
       </div>

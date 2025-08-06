@@ -77,7 +77,7 @@ const ProductsPage = () => {
             <div className="bg-black p-12 lg:p-16 text-left text-white">
               <h2 className="text-7xl md:text-8xl font-bold text-amber-500 mb-8">
                 Unseen<br/>
-                <TypingAnimation text="Unshifting" />
+                <TypingAnimation text="Unshifting" showCursor={true} />
               </h2>
               <hr className="border-gray-600 mb-8" />
               <p className="text-xl text-gray-300 mb-6">
