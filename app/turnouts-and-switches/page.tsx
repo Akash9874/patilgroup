@@ -2,8 +2,11 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const TurnoutsAndSwitchesPage = () => {
+  useScrollAnimation();
+
   return (
     <div className="bg-black text-white">
       {/* Hero Section */}
@@ -29,7 +32,7 @@ const TurnoutsAndSwitchesPage = () => {
       {/* Key Applications Section */}
       <div className="bg-black py-16">
         <div className="max-w-7xl mx-auto px-8 grid grid-cols-2 gap-8">
-          <div className="pr-8">
+          <div className="pr-8 slide-in-left">
             <h2 className="text-3xl font-semibold mb-6">Engineered for precise movement and control</h2>
             <h3 className="text-5xl font-bold text-[#8A393B] mb-6">Key Applications:</h3>
             <ul className="list-disc list-inside space-y-2 text-xl">
@@ -39,7 +42,7 @@ const TurnoutsAndSwitchesPage = () => {
               <li>All gauges and fastening types</li>
             </ul>
           </div>
-          <div className="border-l border-gray-700">
+          <div className="border-l border-gray-700 slide-in-right">
             {/* Divider */}
           </div>
         </div>
@@ -49,10 +52,10 @@ const TurnoutsAndSwitchesPage = () => {
       <div className="bg-[#F5F4F1] text-black py-16">
         <div className="max-w-7xl mx-auto px-8 relative">
           <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="relative z-10">
+            <div className="relative z-10 slide-in-left">
               <Image src="/engineering-infra.jpg" alt="Patil Turnouts" width={500} height={300} className="rounded-lg" />
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg -ml-24 relative z-20">
+            <div className="bg-white p-8 rounded-lg shadow-lg -ml-24 relative z-20 slide-in-right">
               <h3 className="text-3xl font-bold text-[#8A393B] mb-4">Why Patil Turnouts?</h3>
               <ul className="list-disc list-inside space-y-2 text-lg">
                 <li>Lower maintenance</li>
@@ -62,7 +65,7 @@ const TurnoutsAndSwitchesPage = () => {
               </ul>
             </div>
           </div>
-          <div className="mt-8 text-center md:text-left">
+          <div className="mt-8 text-center md:text-left fade-in-section">
             <p className="text-xl text-[#F2913F] font-semibold">
               Each switch is designed for balanced force transfer. It reduces wear, improves ride quality, and extends operational life.
             </p>

@@ -18,7 +18,6 @@ export const TypingAnimation = ({ text, className }: TypingAnimationProps) => {
 
   useEffect(() => {
     if (inView) {
-      setIsAnimating(true);
       let i = 0;
       const interval = setInterval(() => {
         if (i < text.length) {
@@ -26,9 +25,8 @@ export const TypingAnimation = ({ text, className }: TypingAnimationProps) => {
           i++;
         } else {
           clearInterval(interval);
-          setIsAnimating(false);
         }
-      }, 150);
+      }, 20); // Faster typing speed
       return () => clearInterval(interval);
     }
   }, [inView, text]);
@@ -36,10 +34,6 @@ export const TypingAnimation = ({ text, className }: TypingAnimationProps) => {
   return (
     <span ref={ref} className={className}>
       {displayedText}
-      <span
-        className={`inline-block w-px border-l-2 ${isAnimating ? 'animate-blink' : ''}`}
-        style={{ height: '1em', marginLeft: '2px' }}
-      >&nbsp;</span>
     </span>
   );
 };

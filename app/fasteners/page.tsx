@@ -1,14 +1,17 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const FastenersPage = () => {
+  useScrollAnimation();
+  
   return (
     <div className="bg-white text-black">
       <div className="relative h-auto md:h-[600px]">
         {/* Background Image */}
         <Image
-          src="/engineering-infra.jpg"
+          src="/fastenerhero.JPG"
           alt="Fasteners Hero Image"
           layout="fill"
           objectFit="cover"
@@ -31,11 +34,11 @@ const FastenersPage = () => {
         </div>
       </div>
 
-      <div className="bg-black">
+      <div className="bg-black pb-32">
         <div className="max-w-7xl mx-auto px-8 md:px-12 py-12 md:py-16">
             <div className="flex">
                 <div className="w-full md:w-3/4 pr-8 md:pr-12">
-                    <p className="text-xl md:text-2xl lg:text-3xl font-light text-white leading-relaxed">
+                    <p className="text-xl md:text-2xl lg:text-3xl font-light text-white leading-relaxed fade-in-section">
                         Patil Group has already set up global manufacturing facilities under the Make in India initiative capable of supplying world class fastening systems for railway infrastructure
                     </p>
                 </div>
@@ -46,17 +49,17 @@ const FastenersPage = () => {
 
       <div className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-8 md:px-12">
-          <h2 className="text-5xl font-bold text-[#8A393B] mb-12">
+          <h2 className="text-5xl font-bold text-[#8A393B] mb-12 fade-in-section">
             For Mainline Ballasted Track
           </h2>
 
           <div className="space-y-8">
             {/* Elastic Rail Clips */}
             <div className="grid md:grid-cols-3 gap-8 items-start border-t border-gray-200 pt-8">
-              <div className="md:col-span-1">
+              <div className="md:col-span-1 slide-in-left">
                 <h3 className="text-3xl font-semibold text-[#F2913F]">Elastic Rail Clips</h3>
               </div>
-              <div className="md:col-span-1">
+              <div className="md:col-span-1 slide-in-right">
                 <h4 className="text-lg font-bold text-[#F2913F]">ERC clips: mark III and V</h4>
                 <p className="text-lg text-gray-600 mt-2">
                   Manufactured in Ajmer<br />
@@ -67,17 +70,17 @@ const FastenersPage = () => {
 
             {/* GFN Liners */}
             <div className="grid md:grid-cols-3 gap-8 items-start border-t border-gray-200 pt-8">
-              <div className="md:col-span-1">
+              <div className="md:col-span-1 slide-in-left">
                 <h3 className="text-3xl font-semibold text-[#F2913F]">GFN Liners</h3>
               </div>
-              <div className="md:col-span-1">
+              <div className="md:col-span-1 slide-in-right">
                 <p className="text-lg text-gray-600 mt-2">
                   GFN liner production<br />
                   84 lakh units per annum<br />
                   RDSO approved
                 </p>
               </div>
-              <div className="md:col-span-1">
+              <div className="md:col-span-1 slide-in-left">
                 <h4 className="text-lg font-bold text-[#F2913F]">SKL 14 for Normal Tracks</h4>
                 <p className="text-lg text-gray-600 mt-2">
                   Spring deflection<br />
@@ -90,10 +93,10 @@ const FastenersPage = () => {
 
             {/* System W 14 HH */}
             <div className="grid md:grid-cols-3 gap-8 items-start border-t border-gray-200 pt-8">
-              <div className="md:col-span-1">
+              <div className="md:col-span-1 slide-in-left">
                 <h3 className="text-3xl font-semibold text-[#F2913F]">System W 14<br />HH</h3>
               </div>
-              <div className="md:col-span-1">
+              <div className="md:col-span-1 slide-in-right">
                 <h4 className="text-lg font-bold text-[#F2913F]">(Heavy Haul)</h4>
                 <p className="text-lg text-gray-600 mt-2">
                   Used in freight and heavy axle routes<br />
@@ -108,17 +111,22 @@ const FastenersPage = () => {
 
       <div className="bg-[#F5F4F1] py-16">
         <div className="max-w-7xl mx-auto px-8 md:px-12">
-          <h2 className="text-5xl font-bold text-[#8A393B] mb-12">
+          <h2 className="text-5xl font-bold text-[#8A393B] mb-12 fade-in-section">
             For Mainline Ballastless Track
           </h2>
 
           <div className="space-y-16">
             {/* System 300 */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
+              <div className="slide-in-left">
+                <div className="relative group">
                 <Image src="/fs300.jpg" alt="System 300" width={600} height={400} className="rounded-lg object-cover w-full h-full" />
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-[#F2913F] text-2xl font-bold text-center">System 300 for Ballastless Track</p>
+                </div>
               </div>
-              <div>
+              </div>
+              <div className="slide-in-right">
                 <ul className="space-y-4 text-lg">
                   <li className="flex justify-between border-b pb-2"><span>Maximum Axle Load (Upto)</span> <span className="text-[#F2913F] font-semibold">22.5 Tonne</span></li>
                   <li className="flex justify-between border-b pb-2"><span>Maximum Speed (Upto)</span> <span className="text-[#F2913F] font-semibold">300 kmph</span></li>
@@ -133,10 +141,15 @@ const FastenersPage = () => {
 
             {/* System DB 336 */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
+              <div className="slide-in-left">
+                <div className="relative group">
                 <Image src="/fs336.jpg" alt="System DB 336" width={600} height={400} className="rounded-lg object-cover w-full h-full" />
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-[#F2913F] text-2xl font-bold text-center">System DB 336 for Ballastless Track</p>
+                </div>
               </div>
-              <div>
+              </div>
+              <div className="slide-in-right">
                 <ul className="space-y-4 text-lg">
                   <li className="flex justify-between border-b pb-2"><span>Maximum Axle Load (Upto)</span> <span className="text-[#F2913F] font-semibold">22.5 Tonne</span></li>
                   <li className="flex justify-between border-b pb-2"><span>Maximum Speed (Upto)</span> <span className="text-[#F2913F] font-semibold">300 kmph</span></li>

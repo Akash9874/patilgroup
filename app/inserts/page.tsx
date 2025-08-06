@@ -2,14 +2,18 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { TypingAnimation } from '@/components/TypingAnimation';
 
 const InsertsPage = () => {
+  useScrollAnimation();
+
   return (
     <div className="bg-black text-white">
       {/* Hero Section */}
       <div className="relative h-[600px]">
         <Image
-          src="/engineering-infra.jpg" // placeholder
+          src="/inserthero.jpg" // placeholder
           alt="SGCI Insert And Base Plates"
           layout="fill"
           objectFit="cover"
@@ -29,12 +33,12 @@ const InsertsPage = () => {
       {/* SGCI Inserts Section */}
       <div className="bg-black py-16">
         <div className="max-w-7xl mx-auto px-8">
-          <h2 className="text-5xl font-bold text-[#8A393B] mb-8">SGCI Inserts</h2>
+          <h2 className="text-5xl font-bold text-[#8A393B] mb-8 fade-in-section">SGCI Inserts</h2>
           <div className="space-y-6 text-xl">
-            <p>Patil Group manufactures SGCI inserts at its foundry in Kallakal, near Hyderabad.</p>
-            <p>Production began in 2018 and includes all key steps: molten metal preparation, moulding, de-gating, shot blasting, and final grinding. The unit is equipped with modern systems, including robotics and IoT.</p>
-            <p>Approved under QA-RDSO RT 381 Alt 9 and RT 6901 Alt 5. A second manufacturing unit was commissioned in 2020 in Bokaro, Jharkhand.</p>
-            <p>Production for wider base sleeper inserts is also underway.</p>
+            <TypingAnimation text="Patil Group manufactures SGCI inserts at its foundry in Kallakal, near Hyderabad." className="block" />
+            <TypingAnimation text="Production began in 2018 and includes all key steps: molten metal preparation, moulding, de-gating, shot blasting, and final grinding. The unit is equipped with modern systems, including robotics and IoT." className="block" />
+            <TypingAnimation text="Approved under QA-RDSO RT 381 Alt 9 and RT 6901 Alt 5. A second manufacturing unit was commissioned in 2020 in Bokaro, Jharkhand." className="block" />
+            <TypingAnimation text="Production for wider base sleeper inserts is also underway." className="block" />
           </div>
         </div>
       </div>
@@ -43,15 +47,19 @@ const InsertsPage = () => {
       <div className="bg-black py-16">
         <div className="max-w-7xl mx-auto px-8">
           <div className="grid md:grid-cols-2 gap-8">
-            <Image src="/fs300.jpg" alt="Base Plate" width={500} height={300} className="rounded-lg" />
-            <Image src="/fs300.jpg" alt="Base Plate" width={500} height={300} className="rounded-lg" />
+            <div className="slide-in-left">
+              <Image src="/fs300.jpg" alt="Base Plate" width={500} height={300} className="rounded-lg" />
+            </div>
+            <div className="slide-in-right">
+              <Image src="/fs300.jpg" alt="Base Plate" width={500} height={300} className="rounded-lg" />
+            </div>
           </div>
         </div>
       </div>
 
       {/* Base Plates Section */}
       <div className="bg-black py-16">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-8 fade-in-section">
           <h2 className="text-5xl font-bold text-[#8A393B] mb-8">Base Plates for Metro Rails</h2>
           <p className="text-xl mb-8">Also manufactured at the same foundry. These plates are essential for slab track systems in urban rail infrastructure.</p>
           <h3 className="text-4xl font-bold mb-4">Explore More Railway Solutions</h3>

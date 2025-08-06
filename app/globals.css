@@ -416,6 +416,8 @@ video {
   transform: scale3d(1, 1, 1);
 }
 
+
+
 /* Ensure images are optimized */
 img {
   image-rendering: -webkit-optimize-contrast;
