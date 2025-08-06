@@ -88,7 +88,16 @@ const ProductsPage = () => {
             
             {/* Bottom-right image */}
             <div className="p-4 sm:p-6 lg:p-8 flex justify-end">
-              <img src="/11_fastener_types.jpg" alt="Railway component" className="w-full md:w-4/5 lg:w-2/3 h-auto object-cover" />
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full md:w-4/5 lg:w-2/3 h-auto object-cover"
+              >
+                <source src="/productvideo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
