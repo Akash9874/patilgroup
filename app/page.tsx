@@ -161,7 +161,7 @@ export default function Home() {
         </div>
 
         {/* Built to Last */}
-        <div className="flex-1 bg-black flex flex-col justify-between p-6 lg:p-8 fade-in-section" style={{ transitionDelay: '200ms' }}>
+        <div className="flex-1 bg-black flex flex-col justify-between p-6 lg:p-8 fade-in-section border-l border-gray-700" style={{ transitionDelay: '200ms' }}>
           <div>
             <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-[#F2913F] mb-4 lg:mb-6">
               Built to Last.
@@ -186,7 +186,7 @@ export default function Home() {
         </div>
 
         {/* Built to Keep Moving */}
-        <div className="flex-1 bg-black flex flex-col justify-between p-6 lg:p-8 fade-in-section" style={{ transitionDelay: '400ms' }}>
+        <div className="flex-1 bg-black flex flex-col justify-between p-6 lg:p-8 fade-in-section border-l border-gray-700" style={{ transitionDelay: '400ms' }}>
           <div>
             <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-[#F2913F] mb-4 lg:mb-6">
               Built to Keep Moving.

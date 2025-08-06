@@ -1,51 +1,69 @@
 "use client";
 
 import React from 'react';
-import InsertFeatures from '@/components/InsertFeatures';
-import InsertDetails from '@/components/InsertDetails';
-import ContentSlider from '@/components/ContentSlider';
-import ExploreSolutions from '@/components/ExploreSolutions';
-import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 const InsertsPage = () => {
-  const insertSlides = [
-    { image: '/14_insert_and_baseplate_closeup.jpg' },
-    { image: '/14_insert_and_baseplate_carousel.jpg' }
-  ];
-
   return (
-    <div className="bg-white">
-      <div className="relative bg-cover bg-center py-48" style={{ backgroundImage: "url('/07_inserts_banner.jpg')" }}>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-8xl font-medium font-clash text-[#F2913F] whitespace-nowrap" style={{ lineHeight: '64px', letterSpacing: '-0.25px' }}>
-            SGCI Insert And Base Plates
-          </h1>
-        </div>
-      </div>
-      <InsertFeatures />
-      <InsertDetails />
-      <ContentSlider slides={insertSlides} />
-      
-      {/* Noise & Vibration Solution Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h2 className="font-clash font-medium text-[68px] leading-[85px] tracking-[-0.25px] text-[#8A393B] mb-4 whitespace-nowrap">Noise & Vibration Solution for Slab Track</h2>
-            <p className="text-xl text-gray-700 mb-8">Explore our engineered solutions for track noise and vibration control.</p>
-            <a href="/noise-vibration-solutions" className="inline-flex items-center gap-3 bg-[#8A393B] text-white text-2xl px-6 py-4 rounded-md hover:bg-[#793032] transition-colors group">
-              Read more
-              <span className="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full border border-white/50">
-                <ArrowRight size={16} />
-              </span>
-            </a>
+    <div className="bg-black text-white">
+      {/* Hero Section */}
+      <div className="relative h-[600px]">
+        <Image
+          src="/engineering-infra.jpg" // placeholder
+          alt="SGCI Insert And Base Plates"
+          layout="fill"
+          objectFit="cover"
+          className="z-0"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-60 z-10" />
+        <div className="relative z-20 h-full flex items-center max-w-7xl mx-auto px-8">
+          <div className="w-1/2">
+            <p className="text-7xl font-bold text-[#8A393B] opacity-75">04</p>
+            <h1 className="text-7xl font-bold text-white mt-2">
+              SGCI Insert And<br/>Base Plates
+            </h1>
           </div>
         </div>
-      </section>
+      </div>
 
-      <div className="my-24" />
-      <ExploreSolutions />
+      {/* SGCI Inserts Section */}
+      <div className="bg-black py-16">
+        <div className="max-w-7xl mx-auto px-8">
+          <h2 className="text-5xl font-bold text-[#8A393B] mb-8">SGCI Inserts</h2>
+          <div className="space-y-6 text-xl">
+            <p>Patil Group manufactures SGCI inserts at its foundry in Kallakal, near Hyderabad.</p>
+            <p>Production began in 2018 and includes all key steps: molten metal preparation, moulding, de-gating, shot blasting, and final grinding. The unit is equipped with modern systems, including robotics and IoT.</p>
+            <p>Approved under QA-RDSO RT 381 Alt 9 and RT 6901 Alt 5. A second manufacturing unit was commissioned in 2020 in Bokaro, Jharkhand.</p>
+            <p>Production for wider base sleeper inserts is also underway.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Two Images Section */}
+      <div className="bg-black py-16">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            <Image src="/fs300.jpg" alt="Base Plate" width={500} height={300} className="rounded-lg" />
+            <Image src="/fs300.jpg" alt="Base Plate" width={500} height={300} className="rounded-lg" />
+          </div>
+        </div>
+      </div>
+
+      {/* Base Plates Section */}
+      <div className="bg-black py-16">
+        <div className="max-w-7xl mx-auto px-8">
+          <h2 className="text-5xl font-bold text-[#8A393B] mb-8">Base Plates for Metro Rails</h2>
+          <p className="text-xl mb-8">Also manufactured at the same foundry. These plates are essential for slab track systems in urban rail infrastructure.</p>
+          <h3 className="text-4xl font-bold mb-4">Explore More Railway Solutions</h3>
+          <p className="text-xl mb-4">Patil Group offers a complete portfolio of railway infrastructure products.</p>
+          <a href="#" className="text-[#F2913F] font-semibold flex items-center">
+            Read More 
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5-5 5M6 12h12" /></svg>
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default InsertsPage; 
+export default InsertsPage;
