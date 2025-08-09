@@ -1,57 +1,58 @@
 "use client";
 import React from 'react';
+import Navbar from '@/components/Navbar';
+import Image from 'next/image';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const CMEPage = () => {
+  useScrollAnimation();
+
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <div className="relative bg-cover bg-center py-32 sm:py-40" style={{ backgroundImage: "url('/05_sleepers_banner.jpg')" }}>
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left">
-            <h1 className="font-clash font-medium text-[96px] leading-[64px] tracking-[-0.25px] text-[#F2913F]">
-              Centre for Manufacturing Excellence
-            </h1>
-          </div>
+      <Navbar />
+      <section className="relative h-screen">
+        <div className="absolute inset-0">
+          <Image
+            src="/cmehero.jpg"
+            alt="Centre for Manufacturing Excellence"
+            layout="fill"
+            objectFit="cover"
+          />
+          <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
-      </div>
+        <div className="relative z-10 h-full flex items-end justify-end p-16 text-right">
+          <h1 className="text-5xl md:text-7xl font-bold font-clash leading-tight text-white">
+            Centre for<br />Manufacturing<br />Excellence
+          </h1>
+        </div>
+      </section>
 
-      {/* Focus Section */}
-      <section className="py-24 overflow-hidden relative">
-        <div className="absolute top-24 right-0 flex items-center">
-          <div className="text-right text-[#8A393B] font-semibold text-2xl pr-8">
-            <p>An in house initiative</p>
-            <p>Focused on</p>
-          </div>
-          <div 
-            className="w-48 h-24 bg-[#8A393B]"
-            style={{ clipPath: 'polygon(50% 0, 100% 0, 100% 100%, 0% 100%)' }}
+      <section className="bg-black text-white py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            className="h-2 mb-24"
+            style={{
+              background: 'linear-gradient(to right, #F2913F, #1E3888, #8A393B)',
+            }}
           ></div>
-        </div>
-
-        <div className="mt-48 space-y-12">
-          <div className="flex items-center">
-            <div className="w-1/4">
-              <img src="/cmetrack.png" alt="track" className="w-full h-12" />
+          <div className="space-y-24">
+            <div className="flex items-center justify-between scroll-animate">
+              <h2 className="text-5xl font-semibold text-amber-500">Systems</h2>
+              <div className="w-3/4">
+                <Image src="/cmetrack.png" alt="track" width={800} height={80} />
+              </div>
             </div>
-            <div className="w-3/4 pl-8">
-                <h2 className="text-8xl font-semibold text-orange-500">systems</h2>
+            <div className="flex items-center justify-between scroll-animate">
+              <div className="w-3/4">
+                <Image src="/cmetrack.png" alt="track" width={800} height={80} />
+              </div>
+              <h2 className="text-5xl font-semibold text-amber-500 text-right">Training</h2>
             </div>
-          </div>
-          <div className="flex items-center">
-            <div className="w-1/4">
-              <img src="/cmetrack.png" alt="track" className="w-full h-12" />
-            </div>
-            <div className="w-3/4 pl-8">
-                <h2 className="text-8xl font-semibold text-gray-400">training</h2>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <div className="w-1/4">
-              <img src="/cmetrack.png" alt="track" className="w-full h-12" />
-            </div>
-            <div className="w-3/4 pl-8">
-                <h2 className="text-8xl font-semibold text-gray-400">process discipline</h2>
+            <div className="flex items-center justify-between scroll-animate">
+              <h2 className="text-5xl font-semibold text-amber-500">Process discipline</h2>
+              <div className="w-2/3">
+                <Image src="/cmetrack.png" alt="track" width={800} height={80} />
+              </div>
             </div>
           </div>
         </div>
@@ -99,50 +100,33 @@ const CMEPage = () => {
         </div>
       </section>
 
-      {/* Uplifting Rural Youth Section */}
-      <section className="py-24 text-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-8xl font-bold text-[#8A393B]">Uplifting Rural Youth</h2>
-            <p className="mt-8 text-5xl text-black">Hands on training in manufacturing and infrastructure</p>
-            <p className="mt-2 text-5xl text-black">Direct pathways to employment</p>
-        </div>
-      </section>
-
-      {/* Inside the Program Section */}
-      <section className="py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                  <div>
-                      <h2 className="text-8xl font-bold text-black leading-tight">
-                          Inside the<br />Program
-                      </h2>
-                  </div>
-                  <div>
-                      <div className="h-24 bg-gray-200 mb-8">
-                          {/* Placeholder for the train image */}
-                      </div>
-                      <div className="text-4xl text-[#8A393B] font-semibold space-y-2">
-                          <p>Industry specific sessions</p>
-                          <p>Led in collaboration with RDSO</p>
-                          <p>and other railway bodies</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-      {/* Recognition Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 className="text-8xl font-bold text-[#8A393B]">Recognition</h2>
-                    <p className="mt-8 text-4xl text-black">Awarded by QCFI for Quality Circle projects</p>
-                </div>
-                <div className="h-96 bg-gray-200">
-                    {/* Placeholder for the image */}
-                </div>
+      <section className="bg-gray-100 py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-16 items-center">
+          <div className="space-y-16">
+            <div>
+              <h2 className="text-5xl font-bold text-amber-500">Inside the Program</h2>
+              <ul className="mt-4 space-y-2 text-2xl text-gray-800">
+                <li>Industry specific sessions</li>
+                <li>Led in collaboration with RDSO</li>
+                <li>and other railway bodies</li>
+              </ul>
             </div>
+            <div>
+              <h2 className="text-5xl font-bold text-[#8A393B]">Recognition</h2>
+              <p className="mt-4 text-2xl text-gray-800">
+                Awarded by QCFI for Quality Circle projects
+              </p>
+            </div>
+          </div>
+          <div>
+            <Image
+              src="/29_youth_certificate_ceremony.png"
+              alt="Youth certificate ceremony"
+              width={800}
+              height={600}
+              className="rounded-lg"
+            />
+          </div>
         </div>
       </section>
     </div>
