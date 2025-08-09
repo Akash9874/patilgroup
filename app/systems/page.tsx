@@ -53,43 +53,34 @@ const SystemsContent = () => {
 
   return (
     <>
-      <section className="relative h-screen">
-        {/* Background Image */}
-        <div className="absolute inset-0 h-full w-full">
-          <img src="/03_metro_curve_train.jpg" alt="Train" className="h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-        </div>
-
-        <div className="relative z-10 h-full grid grid-cols-1 md:grid-cols-2">
-          {/* Left side with "Our Systems" title */}
-          <div className="flex items-center justify-center">
-            <div className="text-left px-4 sm:px-6 lg:px-8">
-              <h1 className="text-6xl md:text-8xl font-bold text-amber-500 animate-fadeInUp">
-                Our Systems
-              </h1>
-            </div>
+      <section className="relative h-screen bg-black text-white">
+        {/* Top half */}
+        <div className="h-1/2 flex">
+          {/* Left side */}
+          <div className="w-1/2 flex items-center justify-center p-8">
+            <h1 className="text-8xl font-bold animate-fadeInUp">Our Systems</h1>
           </div>
-
-          {/* Right side with black cut and text */}
-          <div 
-            className="h-full bg-white flex items-center"
-            style={{ clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0% 100%)' }}
-          >
-            <div className="space-y-6 animate-fadeInUp w-full pl-[30%] pr-8 lg:pr-16">
-              <h2 className="text-5xl font-bold leading-tight text-black">
-                Engineering Excellence for a Stronger Tomorrow
-              </h2>
-            </div>
+          {/* Right side */}
+          <div className="w-1/2">
+            <img src="/engineering-infra.jpg" alt="Systems" className="h-full w-full object-cover" />
           </div>
         </div>
-      </section>
-
-      {/* Intro Section */}
-      <section className="bg-white text-gray-800 py-8">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-xl text-gray-600">
-            Track systems are where structural integrity meets engineering detail. Over the years, we've developed and implemented advanced rail systems across urban metros, mainlines, tunnels, and yards — engineered to last, with a focus on precision and long-term performance.
-          </p>
+        {/* Bottom half */}
+        <div className="h-1/2 flex">
+          {/* Left side */}
+          <div className="w-1/2">
+            <img src="/seework2.jpg" alt="Engineering Excellence" className="h-full w-full object-cover" />
+          </div>
+          {/* Right side */}
+          <div className="w-1/2 bg-[#1A1A1A] flex flex-col justify-center p-12 animate-fadeInUp">
+            <h2 className="text-5xl font-bold text-[#F2913F] leading-tight">
+              Engineering Excellence <br /> for a <span className="text-[#8A393B]">Stronger Tomorrow.</span>
+            </h2>
+            <div className="w-1/2 border-t border-gray-700 my-8"></div>
+            <p className="text-lg">
+              Track systems are where structural integrity meets engineering detail. Over the years, we've developed and implemented advanced rail systems across urban metros, mainlines, tunnels, and yards — engineered to last, with a focus on precision and long-term performance.
+            </p>
+          </div>
         </div>
       </section>
 

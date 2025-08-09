@@ -8,8 +8,8 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 
 const LeadershipCard = ({ image, name, post }: { image: string, name: string, post: string }) => (
-  <div className="bg-white text-gray-800">
-    <div className="relative bg-[#D9D9D9] h-[550px]">
+  <div className="bg-[#1E1E1E] text-white">
+    <div className="relative h-[550px] bg-white">
       <Image
         src={image}
         alt={name}
@@ -17,7 +17,7 @@ const LeadershipCard = ({ image, name, post }: { image: string, name: string, po
         objectFit="contain"
       />
     </div>
-    <div className="bg-[#6F2527] text-white p-4 text-center font-clash">
+    <div className="text-center mt-4 font-clash">
       <p className="font-bold">{post}</p>
       <p>{name}</p>
     </div>
@@ -27,8 +27,18 @@ const LeadershipCard = ({ image, name, post }: { image: string, name: string, po
 const leadershipData = [
   {
     image: '/management/Mr Vikash Kumar Gupta - Group CEO.jpg',
-    name: 'Mr Vikash Kumar Gupta',
-    post: 'Group CEO',
+    name: 'Mr. Vikash Kumar Gupta',
+    post: 'CEO',
+  },
+  {
+    image: '/management/_DSC5857.jpg',
+    name: 'Mr. B.N. Sajjan',
+    post: 'Executive Director- Corporate Affairs',
+  },
+  {
+    image: '/management/Mr Satish Chandra Ayla - CEO TRack Systems and Engineering.jpg',
+    name: 'Mr. Satish Chandra Alya',
+    post: 'Coo-Track',
   },
   {
     image: '/management/Mr Kaushik Ghosh - Group Managing Director.jpg',
@@ -39,16 +49,6 @@ const leadershipData = [
     image: '/management/Mr Jawahar Lal Sinhari - CFO.jpg',
     name: 'Mr Jawahar Lal Sinhari',
     post: 'CFO',
-  },
-  {
-    image: '/management/Mr Satish Chandra Ayla - CEO TRack Systems and Engineering.jpg',
-    name: 'Mr Satish Chandra Ayla',
-    post: 'CEO Track Systems and Engineering',
-  },
-  {
-    image: '/management/_DSC5857.jpg',
-    name: 'Name 5',
-    post: 'Post 5',
   },
   {
     image: '/management/_DSC5895.jpg',
@@ -69,77 +69,47 @@ const ManagementPage = () => {
       <Navbar />
       
       <section className="relative h-screen">
-        {/* Background Image */}
-        <div className="absolute inset-0 h-full w-full">
-          <img src="/train.png" alt="Train" className="h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0">
+          <Image
+            src="/train.png"
+            alt="Train at a station"
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
-
-        <div className="relative z-10 h-full grid grid-cols-1 md:grid-cols-2">
-          {/* Left side with "Management" title */}
-          <div className="flex items-center justify-center">
-            <div className="text-left px-4 sm:px-6 lg:px-8">
-              <h1 className="text-6xl md:text-8xl font-bold text-amber-500 animate-fadeInUp">
-                Management
-              </h1>
-            </div>
-          </div>
-
-          {/* Right side with white cut and text */}
-          <div 
-            className="h-full bg-white flex items-center"
-            style={{ clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0% 100%)' }}
-          >
-            <div className="space-y-6 animate-fadeInUp w-full pl-[30%] pr-8 lg:pr-16 text-center">
-              <h2 className="text-7xl font-bold leading-tight text-[#8A393B]">
-                Legacy in rail
-              </h2>
-              <p className="font-clash font-light text-4xl tracking-[-0.25px] text-black">
-                Led by experience
-              </p>
-              <div
-                className="h-2 mt-4 mx-auto"
-                style={{
-                  width: '200px',
-                  background: 'linear-gradient(to right, #F2913F, #1E3888, #8A393B)',
-                }}
-              />
-            </div>
+        <div className="absolute inset-y-0 left-0 w-[35%] bg-black flex items-center">
+          <div className="pl-16 md:pl-24">
+            <h2 className="text-white text-6xl md:text-7xl font-medium font-clash">Our</h2>
+            <h1 className="text-white text-8xl md:text-9xl font-bold font-clash -mt-4">Management</h1>
           </div>
         </div>
       </section>
 
       {/* Our Leadership Section */}
-      <section className="py-24 bg-white text-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-5xl font-clash font-bold text-[#8A393B] mb-16">
-            Our leadership
+      <section className="py-24 bg-[#1E1E1E] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-5xl font-clash font-bold text-amber-500 mb-4">
+            Legacy in Rail
           </h2>
+          <p className="text-2xl text-[#8A393B] font-semibold">Led by Experience</p>
         </div>
-        <div className="relative">
+        <div className="relative mt-16">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {leadershipData.map((leader, i) => (
-                <div key={i} className="flex-grow-0 flex-shrink-0 w-1/3 pl-8">
+                <div key={i} className="flex-grow-0 flex-shrink-0 w-full md:w-1/3 pl-8">
                   <LeadershipCard image={leader.image} name={leader.name} post={leader.post} />
                 </div>
               ))}
             </div>
           </div>
 
-          <div 
-            className="absolute top-0 right-0 w-2/5 h-full bg-[#8A393B]"
-            style={{ clipPath: 'polygon(30% 0, 100% 0, 100% 100%, 0% 100%)' }}
-          >
-            <div className="absolute top-1/2 right-12 transform -translate-y-1/2 flex space-x-4">
-              <button onClick={scrollPrev} className="p-2 rounded-full hover:bg-white/20 transition-colors">
-                <ArrowLeft className="h-8 w-8 text-amber-500" />
-              </button>
-              <button onClick={scrollNext} className="p-2 rounded-full hover:bg-white/20 transition-colors">
-                <ArrowRight className="h-8 w-8 text-amber-500" />
-              </button>
-            </div>
-          </div>
+          <button onClick={scrollPrev} className="absolute top-1/2 left-4 transform -translate-y-1/2 p-2 rounded-full hover:bg-white/20 transition-colors z-10">
+            <ArrowLeft className="h-8 w-8 text-amber-500" />
+          </button>
+          <button onClick={scrollNext} className="absolute top-1/2 right-4 transform -translate-y-1/2 p-2 rounded-full hover:bg-white/20 transition-colors z-10">
+            <ArrowRight className="h-8 w-8 text-amber-500" />
+          </button>
         </div>
       </section>
     </div>
