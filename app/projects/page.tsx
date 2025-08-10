@@ -212,16 +212,16 @@ const ProjectsPage = () => {
             {projectsData.map((project, index) => (
               <div key={index} className="flex-shrink-0 w-full md:w-1/4 px-4">
                 <Dialog>
-                  <div className="relative h-96 rounded-lg overflow-hidden group">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      layout="fill"
-                      objectFit="cover"
-                      className="transition-transform duration-500 group-hover:scale-110"
-                    />
+                <div className="relative h-96 rounded-lg overflow-hidden group">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="transition-transform duration-500 group-hover:scale-110"
+                  />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-                      <h3 className="text-white text-2xl font-bold">{project.title}</h3>
+                    <h3 className="text-white text-2xl font-bold">{project.title}</h3>
                     </div>
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <DialogTrigger asChild>
@@ -233,7 +233,7 @@ const ProjectsPage = () => {
                     </div>
                   </div>
 
-                  <DialogContent className="sm:max-w-[80vw] bg-[#18181B] text-gray-300 border-gray-700 p-0">
+                  <DialogContent className="sm:max-w-[80vw] bg-[#18181B] text-gray-300 border-gray-700 p-0 top-[60%]">
                     <DialogHeader className="p-6 border-b border-gray-700 sticky top-0 bg-[#18181B] z-10 flex flex-row items-center justify-between">
                       <DialogTitle className="text-3xl lg:text-4xl font-bold text-orange-500">{project.title}</DialogTitle>
                       <DialogClose asChild>
@@ -287,8 +287,8 @@ const ProjectsPage = () => {
                             </div>
                           )}
                         </div>
-                      </div>
-                    </div>
+                  </div>
+                </div>
                   </DialogContent>
                 </Dialog>
               </div>
@@ -296,7 +296,6 @@ const ProjectsPage = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };
