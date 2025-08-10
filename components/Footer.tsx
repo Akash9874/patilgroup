@@ -86,11 +86,18 @@ const Footer = () => {
               </button>
             </div>
             <div className="flex justify-between items-center">
-              <Link href="/whistleblower">
-                <button className="bg-[#F2913F] text-black font-bold py-3 px-6 rounded-full text-sm hover:bg-orange-400 transition-colors">
-                WHISTLEBLOWER POLICY
-                </button>
-              </Link>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/whistleblower">
+                  <button className="bg-[#F2913F] text-black font-bold py-3 px-6 rounded-full text-sm hover:bg-orange-400 transition-colors">
+                    WHISTLEBLOWER POLICY
+                  </button>
+                </Link>
+                <Link href="/privacy-policy">
+                  <button className="bg-[#F2913F] text-black font-bold py-3 px-6 rounded-full text-sm hover:bg-orange-400 transition-colors">
+                    PRIVACY POLICY
+                  </button>
+                </Link>
+              </div>
              <button 
                 onClick={scrollToTop} 
                 className="bg-[#F2913F] w-12 h-12 rounded-full flex items-center justify-center text-black hover:bg-orange-400 transition-colors"

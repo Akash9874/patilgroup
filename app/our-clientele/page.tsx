@@ -32,24 +32,18 @@ const logos2 = [
 
 const OurClientelePage = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-black text-white">
       {/* Hero Section */}
-      <div className="relative bg-cover bg-center py-48" style={{ backgroundImage: "url('/05_sleepers_banner.jpg')" }}>
-        <div className="absolute inset-0 bg-black opacity-70"></div>
-        <div className="relative z-10 max-w-4xl mx-auto text-center text-white px-4">
-          <h1 className="text-7xl font-bold text-orange-400">
-            Our Clientele
+      <div className="relative h-[60vh]">
+        <img
+          src="/engineering-infra.jpg"
+          alt="Architectural structure"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <h1 className="text-8xl font-bold text-white text-center leading-tight">
+            Our <br /> Clientele
           </h1>
-          <p className="mt-6 text-2xl leading-relaxed">
-            We've had the chance to work with some incredible companies over the years — brands that trusted us, challenged us, and grew with us.
-          </p>
-          <div
-            className="h-1.5 mt-8 mx-auto"
-            style={{
-              width: '200px',
-              background: 'linear-gradient(to right, #8A393B, #1E3888, #F2913F)',
-            }}
-          />
         </div>
       </div>
 
@@ -58,8 +52,8 @@ const OurClientelePage = () => {
         <div className="overflow-hidden">
           <div className="flex animate-scroll-slow">
             {logos1.map((logo, index) => (
-              <div key={index} className="flex-shrink-0 w-64 mx-8">
-                <img src={logo} alt={`Client logo ${index + 1}`} className="h-42 object-contain" />
+              <div key={index} className="flex-shrink-0 w-64 mx-8 flex justify-center items-center p-4 bg-white rounded-lg">
+                <img src={logo} alt={`Client logo ${index + 1}`} className="max-h-24 w-auto object-contain" />
               </div>
             ))}
           </div>
@@ -67,8 +61,8 @@ const OurClientelePage = () => {
         <div className="overflow-hidden mt-16">
           <div className="flex animate-scroll-slow-reverse">
             {logos2.map((logo, index) => (
-              <div key={index} className="flex-shrink-0 w-64 mx-8">
-                <img src={logo} alt={`Client logo ${index + 12}`} className="h-42 object-contain" />
+              <div key={index} className="flex-shrink-0 w-64 mx-8 flex justify-center items-center p-4 bg-white rounded-lg">
+                <img src={logo} alt={`Client logo ${index + 12}`} className="max-h-24 w-auto object-contain" />
               </div>
             ))}
           </div>

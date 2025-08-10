@@ -2,32 +2,35 @@
 
 import React from 'react';
 import Navbar from '@/components/Navbar';
+import { ArrowRight } from 'lucide-react'; // Changed from ChevronRight
+import { GridLines } from '@/components/GridLines';
 
 const PhotoGalleryPage = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-black text-white min-h-screen flex flex-col">
       <Navbar />
-      <div className="pt-24 pb-20 min-h-screen">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl font-bold text-gray-900 mb-8">
-            Photo Gallery
-          </h1>
-          
-          <img 
-            src="/train 2.jpg" 
-            alt="Indian Railways Train" 
-            className="w-full h-auto object-cover mb-12"
-          />
-
-          <div>
-            <div className="bg-gray-200 h-96 w-full mb-4"></div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="bg-gray-400 h-32"></div>
-              <div className="bg-gray-400 h-32"></div>
-              <div className="bg-gray-400 h-32"></div>
-              <div className="bg-gray-400 h-32"></div>
+      <div className="flex-grow flex items-center justify-center relative">
+        <GridLines />
+        <div className="w-full max-w-4xl px-4 sm:px-6 lg:px-8 relative">
+          <div className="relative group w-full aspect-[16/9]">
+            <img
+              src="/train 2.jpg"
+              alt="Indian Railways Train"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
+              <div className="w-12 h-12 bg-transparent border-2 border-orange-500 rounded-full flex items-center justify-center cursor-pointer">
+                <ArrowRight className="w-6 h-6 text-orange-500" />
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="bg-[#F3F0E8] w-full py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-5xl font-bold text-[#A43A25]">
+            Photo Gallery
+          </h1>
         </div>
       </div>
     </div>

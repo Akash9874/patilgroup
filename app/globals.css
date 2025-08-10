@@ -236,6 +236,23 @@ video {
   }
 }
 
+@keyframes scroll-slow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-slow {
+  animation: scroll-slow 40s linear infinite;
+}
+
+.animate-scroll-slow-reverse {
+  animation: scroll-slow 40s linear infinite reverse;
+}
+
 .animate-fadeInUp {
   animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   will-change: transform, opacity;
