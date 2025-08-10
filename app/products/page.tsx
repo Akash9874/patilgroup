@@ -27,11 +27,6 @@ const products = [
       description: "SGCI castings and base plates for fastening systems",
       link: "/inserts"
     },
-    {
-      name: "Turnouts & Switches",
-      description: "Complete assemblies for track diversion",
-      link: "/turnouts-and-switches"
-    }
   ];
 
 const ProductsPage = () => {
@@ -48,6 +43,9 @@ const ProductsPage = () => {
             muted
             playsInline
             className="w-full h-full object-cover"
+            preload="metadata"
+            loading="eager"
+            poster="/04_fasteners_banner.jpg"
           >
             <source src="/productherovideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -87,13 +85,15 @@ const ProductsPage = () => {
             </div>
             
             {/* Bottom-right image */}
-            <div className="p-4 sm:p-6 lg:p-8 flex justify-end">
+            <div className="flex justify-end">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full md:w-4/5 lg:w-2/3 h-auto object-cover"
+                className="w-full h-auto object-cover"
+                preload="metadata"
+                loading="lazy"
               >
                 <source src="/productvideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

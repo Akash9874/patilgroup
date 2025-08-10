@@ -16,6 +16,9 @@ const SleepersPage = () => {
           muted
           loop
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          preload="metadata"
+          loading="eager"
+          poster="/05_sleepers_banner.jpg"
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
@@ -101,20 +104,7 @@ const SleepersPage = () => {
             </div>
         </div>
     </div>
-    <div className="bg-black py-16">
-        <div className="max-w-7xl mx-auto px-8 md:px-12">
-            <div className="flex items-center">
-                <div className="w-11/12">
-                    <Image src="/concrete_carousel_sleeper.png" alt="Concrete Sleeper Carousel" width={1200} height={800} />
-                </div>
-                <div className="w-1/12 flex justify-center">
-                    <button className="w-16 h-16 rounded-full border-2 border-orange-400 text-orange-400 flex items-center justify-center hover:bg-orange-400 hover:text-white transition-colors">
-                        <ArrowRight size={32} />
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div className="bg-[#F5F4F1] py-16">
         <div className="max-w-7xl mx-auto px-8 md:px-12">
             <h2 className="text-5xl font-bold text-[#F2913F] mb-12 text-center fade-in-section">

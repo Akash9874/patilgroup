@@ -1,9 +1,13 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 import ContentSlider from '@/components/ContentSlider';
 import ExploreSolutions from '@/components/ExploreSolutions';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const FlashButtWeldingOfRailsPage = () => {
+  useScrollAnimation();
+
   const sliderData = [
     { image: '/21_flash_butt_equipment.jpg' },
     { image: '/18_flash_butt_banner.jpg' },
@@ -12,50 +16,56 @@ const FlashButtWeldingOfRailsPage = () => {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative bg-cover bg-center py-32 sm:py-40" style={{ backgroundImage: "url('/18_flash_butt_banner.jpg')" }}>
-        <div className="absolute inset-0 bg-black opacity-50" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left">
-            <h1 className="font-clash font-medium text-[96px] leading-[84px] tracking-[-0.25px] text-[#F2913F]">
-              Flash Butt Welding
-            </h1>
-          </div>
+      <section className="relative h-screen bg-black">
+        <div className="absolute inset-0 h-full w-full">
+          <Image src="/train 2.jpg" alt="Train at a station" width={1920} height={1080} className="h-full w-full object-cover" loading="eager" priority />
+          <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
-      </div>
+        <div className="relative z-10 h-full flex items-center justify-start pl-16 md:pl-24">
+          <h1 className="text-8xl font-bold text-white text-left leading-tight animate-fadeInUp">
+            Flash Butt<br />Welding
+          </h1>
+        </div>
+      </section>
 
-      {/* Description and Locations Section */}
-      <div className="bg-white py-24 sm:py-32">
+      {/* Description Section */}
+      <section className="bg-black py-20 text-white fade-in-section">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-3xl leading-relaxed">
+            Our flash butt welding plants deliver factory-controlled, high-integrity welded rail panels. Using precision electrical resistance welding, each joint is formed without filler, reducing thermal distortion and improving fatigue resistance.
+          </p>
+        </div>
+      </section>
+
+      {/* Locations and Applications Section */}
+      <section className="bg-black text-white py-24 sm:py-32 fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
-            <p className="text-lg sm:text-xl text-gray-700">
-              Our flash butt welding plants deliver factory-controlled, high-integrity welded rail panels. Using precision electrical resistance welding, each joint is formed without filler, reducing thermal distortion and improving fatigue resistance.
+          <div className="flex flex-col md:flex-row items-center gap-12 fade-in-section">
+            <div className="md:w-1/2">
+              <Image src="/21_flash_butt_equipment.jpg" alt="Flash butt welding equipment" width={600} height={400} className="rounded-lg shadow-lg" loading="lazy" />
+            </div>
+            <div className="md:w-1/2 bg-white text-black p-8 rounded-lg shadow-xl">
+              <h3 className="text-2xl font-bold text-[#8A393B]">Patil Group's welding plants are located in:</h3>
+              <ul className="mt-4 space-y-2 list-disc pl-6 text-lg">
+                <li>New Bongaigaon, Assam</li>
+                <li>Rangapani, West Bengal</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-24 max-w-4xl fade-in-section">
+            <p className="text-2xl text-gray-300 leading-relaxed">
+              These facilities support large-scale panel production and direct dispatch to project sites.
+              <span className="block text-orange-400 font-semibold mt-2">This system has been integral to:</span>
             </p>
-            <h2 className="mt-12 text-3xl font-bold text-[#8A393B]">
-              Patil Group's welding plants are located in:
-            </h2>
-            <ul className="mt-4 space-y-2 list-disc pl-5">
-              <li className="text-lg sm:text-xl text-gray-700">New Bongaigaon, Assam</li>
-              <li className="text-lg sm:text-xl text-gray-700">Rangapani, West Bengal</li>
+            <ul className="mt-6 space-y-3 list-disc pl-6 text-xl text-gray-400">
+              <li>Northeast Frontier Railway projects</li>
+              <li>Konkan Railway sections</li>
+              <li>Bridge and tunnel approaches requiring jointless long panels</li>
             </ul>
           </div>
         </div>
-      </div>
-      <ContentSlider slides={sliderData} />
-      <div className="bg-white pt-12 pb-24 sm:pt-16 sm:pb-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-lg sm:text-xl text-gray-700">
-              These facilities support large-scale panel production and direct dispatch to project sites. This system has been integral to:
-            </p>
-            <ul className="mt-4 space-y-2 list-disc pl-5">
-              <li className="text-lg sm:text-xl text-gray-700">Northeast Frontier Railway projects</li>
-              <li className="text-lg sm:text-xl text-gray-700">Konkan Railway sections</li>
-              <li className="text-lg sm:text-xl text-gray-700">Bridge and tunnel approaches requiring jointless long panels</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <ExploreSolutions />
+      </section>
+      
     </div>
   );
 };

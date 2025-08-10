@@ -98,7 +98,9 @@ export default function Home() {
             muted
             playsInline
             className="w-full h-full object-cover"
-            preload="auto"
+            preload="metadata"
+            loading="eager"
+            poster="/01_hero_train.jpg"
           >
             <source src="/herovideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -223,10 +225,15 @@ export default function Home() {
           <div className="flex items-center justify-center mb-24 fade-in-section">
             {/* Image */}
             <div className="pr-32 z-0">
-              <img
+              <Image
                 src="/engineering-infra.jpg"
                 alt="Train in station"
+                width={1200}
+                height={800}
                 className="w-full max-w-3xl h-auto object-cover"
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
           />
         </div>
 
@@ -298,6 +305,9 @@ export default function Home() {
                       width={400}
                       height={500}
                       className="w-full h-[450px] object-cover transition-transform duration-300 hover:scale-105"
+                      loading="lazy"
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                     />
                   </div>
                   <h3 className="text-2xl font-bold mb-2">{project.city}</h3>
@@ -321,6 +331,8 @@ export default function Home() {
                 muted
                 playsInline
                 className="w-full h-full object-cover"
+                preload="metadata"
+                loading="lazy"
             >
                 <source src="/lppatil.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

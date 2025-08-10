@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 
 const logos1 = [
   '/client logos/client 1.png',
@@ -35,10 +36,14 @@ const OurClientelePage = () => {
     <div className="bg-black text-white">
       {/* Hero Section */}
       <div className="relative h-[60vh]">
-        <img
+        <Image
           src="/engineering-infra.jpg"
           alt="Architectural structure"
+          width={1920}
+          height={1080}
           className="w-full h-full object-cover"
+          loading="eager"
+          priority
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <h1 className="text-8xl font-bold text-white text-center leading-tight">
@@ -53,7 +58,7 @@ const OurClientelePage = () => {
           <div className="flex animate-scroll-slow">
             {logos1.map((logo, index) => (
               <div key={index} className="flex-shrink-0 w-64 mx-8 flex justify-center items-center p-4 bg-white rounded-lg">
-                <img src={logo} alt={`Client logo ${index + 1}`} className="max-h-24 w-auto object-contain" />
+                <Image src={logo} alt={`Client logo ${index + 1}`} width={150} height={96} className="max-h-24 w-auto object-contain" loading="lazy" />
               </div>
             ))}
           </div>
@@ -62,7 +67,7 @@ const OurClientelePage = () => {
           <div className="flex animate-scroll-slow-reverse">
             {logos2.map((logo, index) => (
               <div key={index} className="flex-shrink-0 w-64 mx-8 flex justify-center items-center p-4 bg-white rounded-lg">
-                <img src={logo} alt={`Client logo ${index + 12}`} className="max-h-24 w-auto object-contain" />
+                <Image src={logo} alt={`Client logo ${index + 12}`} width={150} height={96} className="max-h-24 w-auto object-contain" loading="lazy" />
               </div>
             ))}
           </div>

@@ -9,6 +9,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Performance Optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* GPU acceleration for transforms */
+.animate-scroll-slow,
+.animate-scroll-slow-reverse,
+.fade-in-section,
+.hover\\:scale-105:hover {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Optimize video performance */
+video {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Improve image rendering */
+img, 
+.next-image {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

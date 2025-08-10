@@ -9,31 +9,27 @@ const BallastlessTrackUrbanMetroPage = () => {
   return (
     <div>
       <Navbar />
-      <section className="relative h-screen">
-        <div className="absolute inset-0">
-          <Image
-            src="/train.png"
-            alt="Train at a station"
-            layout="fill"
-            objectFit="cover"
-          />
+      <section className="relative h-screen bg-black">
+        <div className="absolute inset-0 h-full w-full">
+          <img src="/train 2.jpg" alt="Train at a station" className="h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
-        <div className="absolute inset-y-0 left-0 w-[45%] bg-black flex items-center">
-          <div className="pl-16 md:pl-24">
-            <h1 className="text-white text-6xl md:text-7xl font-bold font-clash leading-tight">
-              Ballastless Track For<br />Urban Metro
-            </h1>
-          </div>
+        <div className="relative z-10 h-full flex items-center justify-start pl-16 md:pl-24">
+          <h1 className="text-8xl font-bold text-white text-left leading-tight animate-fadeInUp">
+            Ballastless Track<br />For Urban Metro
+          </h1>
         </div>
       </section>
 
-      <section className="bg-black text-white py-24">
+      <section className="bg-black text-white py-24 fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-2xl font-bold max-w-4xl scroll-animate">
-            Urban metro systems demand high precision, uninterrupted service, and long-term structural integrity. Our ballastless track system for urban metros is based on pre-cast plinths, offering a modular, high-performance solution for elevated and underground corridors.
-          </p>
+          <div className="fade-in-section">
+            <p className="text-2xl font-bold max-w-4xl">
+              Urban metro systems demand high precision, uninterrupted service, and long-term structural integrity. Our ballastless track system for urban metros is based on pre-cast plinths, offering a modular, high-performance solution for elevated and underground corridors.
+            </p>
+          </div>
 
-          <div className="relative mt-24 scroll-animate">
+          <div className="relative mt-24 fade-in-section">
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="pt-16">
                 <Image
@@ -58,7 +54,7 @@ const BallastlessTrackUrbanMetroPage = () => {
             </div>
           </div>
 
-          <div className="mt-24 max-w-5xl scroll-animate">
+          <div className="mt-24 max-w-5xl fade-in-section">
             <p className="text-2xl font-bold text-[#F2913F]">
               With reduced on-site casting, consistent alignment, and low maintenance needs, it supports fast-track construction and dependable daily operation across dense urban environments.
             </p>
