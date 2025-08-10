@@ -1,23 +1,141 @@
 "use client";
 
 import React from 'react';
-import { ArrowRight, ArrowLeft } from 'lucide-react';
+import { ArrowRight, ArrowLeft, X } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogClose,
+} from "@/components/ui/dialog";
 
 const projectsData = [
-  { title: 'Delhi Phase III', link: '/delhi-phase-3', image: '/delhimetrohero.png' },
-  { title: 'Noida Corridor', link: '/noida-corridor', image: '/noidametro.jpg' },
-  { title: 'Kolkata Stretch', link: '/kolkataherometro.jpeg', image: '/kolkataherometro.jpeg' },
-  { title: 'Ahmedabad Phase II', link: '/ahmedabad-phase-2', image: '/ahemdabadmetrohero.jpeg' },
-  { title: 'Mumbai Line 2B', link: '/mumbai-line-2b', image: '/mumbaimetrohero.png' },
-  { title: 'Mumbai Line 7X', link: '/mumbai-line-7x', image: '/mumbaimetrohero.png' },
-  { title: 'Nagpur Metro', link: '/nagpur-metro', image: '/nagpurmetrohero.png' },
-  { title: 'L&T - Standard Gauge Sleeper Supply', link: '/l&t-standard-gauge-sleeper-supply', image: '/l&t-sleeper.jpg' },
-  { title: 'IRCON - Special Sleeper Supply', link: '/ircon-special-sleeper', image: '/ircon-sleeper.jpg' },
-  { title: 'IRCON - PSC Sleeper Supply', link: '/ircon-psc-sleeper-supply', image: '/ircon-psc-sleeper.jpg' },
+  {
+    title: 'Delhi Phase III',
+    image: '/delhimetrohero.png',
+    description: `Patil Group was entrusted with the supply and installation of fastening systems across key corridors of Delhi Metro Phase III. The project covered multiple extensions — including Kalindi Kunj to Botanical Garden, Noida City Centre to Sector 62, Dilshad Garden to Ghaziabad, and Escorts Mujesar to Ballabhgarh. We delivered and installed over 2 lakh fastening assemblies, supporting both elevated and underground track structures. The project demanded high precision and performance under challenging urban transit conditions.`,
+    client: 'Delhi Metro Rail Corporation (DMRC)',
+    principalClient: 'DMRC',
+    specs: [
+      'Fastener Types: 2-hole and 4-hole elastic rail clip systems',
+      'Models Used: Vossloh 336 (standard), ADFF-6 (for vibration-sensitive underground zones)',
+      'Compliance: RDSO standards (IRS-T-39), ISO 2631 (vibration control), and Metro safety norms',
+      'Application: Suitable for ballastless and ballasted track sections across the corridor',
+    ],
+    conclusion: 'This project reflects our continued partnership with DMRC in shaping India’s most advanced metro networks.',
+    showcaseImage: '/train 2.jpg'
+  },
+  {
+    title: 'Noida Corridor',
+    image: '/noidametro.jpg',
+    description: `Patil Group secured the supply of over 2.1 lakh fastening assemblies for the ballastless track on Line-8 (Janakpuri West - Majlis Park - R.K. Ashram), including 69,000 four-anchor and 1,44,150 two-anchor sets to support both elevated and underground segments.`,
+    client: 'Delhi Metro Rail Corporation (DMRC)',
+    principalClient: 'DMRC',
+    specs: [
+      'Fastener Configurations: 4-anchor & 2-anchor plate systems',
+      'Quantities Supplied: ~2.13 lakh unit sets',
+      'Usage Context: Ballastless track designed for speeds up to 110km/h, handling axle loads of up to 20t',
+      'Compliance: Pre-approved by Ministry of Railways, tested to RDSO/DMRC safety criteria per Metro footing Annexure C-II standards',
+    ],
+    conclusion: 'This deployment further establishes Patil Group’s role as a trusted partner for high-precision fastening solutions on modern metro corridors.',
+    showcaseImage: '/train 2.jpg'
+  },
+  {
+    title: 'Kolkata Stretch',
+    image: '/kolkataherometro.jpeg',
+    description: `Patil Group contributed to the expansion of the Kolkata Metro network by supplying fastening systems for the Noapara to Barasat via Bimanbandar corridor. This route includes underground, at-grade, and elevated sections. We supplied over 66,000 fastening assemblies engineered for the specific structural and vibration conditions of Kolkata’s mixed-terrain metro line.`,
+    client: 'Paras Railtech Pvt. Ltd.',
+    principalClient: 'Metro Authority, Kolkata',
+    specs: [
+      'Fastener Types: 2-hole and 4-hole elastic clip systems',
+      'Quantities Supplied: 38,317 (2-hole) + 28,493 (4-hole) sets',
+      'Application: Compatible with tunnel, elevated viaduct, and station slab tracks',
+      'Compliance: Supplied as per Metro safety and vibration standards, RDSO-compliant',
+    ],
+    conclusion: 'This project marks our growing presence in Eastern India’s transit infrastructure with robust, tested fastening solutions.',
+    showcaseImage: '/train 2.jpg'
+  },
+  {
+    title: 'Ahmedabad Phase II',
+    image: '/ahemdabadmetrohero.jpeg',
+    description: `For the Phase II expansion of the Ahmedabad Metro, Patil Group supplied fastening systems for the corridor stretching from Motera Stadium to Mahatma Mandir. Over 2 lakh fastening assemblies were delivered to support the construction of ballastless track systems across elevated and at-grade sections.`,
+    client: 'KEC International Ltd.',
+    principalClient: 'Gujarat Metro Rail Corporation (GMRCL)',
+    specs: [
+      'Fastener Types: 2-hole and 4-hole elastic systems',
+      'Quantities Supplied: 1,80,000 (2-hole) + 20,500 (4-hole) sets',
+      'Application: Engineered for elevated track sections and viaduct spans',
+      'Standards: RDSO-certified systems suitable for high-speed, low-vibration metro operations',
+    ],
+    conclusion: 'This delivery reinforced our continued partnership in Gujarat’s evolving metro infrastructure.',
+    showcaseImage: '/train 2.jpg'
+  },
+  {
+    title: 'Mumbai Line 2B',
+    image: '/mumbaimetrohero.png',
+    description: 'Details for this project are not available at the moment.',
+    client: 'N/A',
+    principalClient: 'N/A',
+    specs: [],
+    conclusion: '',
+    showcaseImage: '/mumbaimetrohero.png'
+  },
+  {
+    title: 'Mumbai Line 7X',
+    image: '/mumbaimetrohero.png',
+    description: 'Details for this project are not available at the moment.',
+    client: 'N/A',
+    principalClient: 'N/A',
+    specs: [],
+    conclusion: '',
+    showcaseImage: '/mumbaimetrohero.png'
+  },
+  {
+    title: 'Nagpur Metro',
+    image: '/nagpurmetrohero.png',
+    description: 'Details for this project are not available at the moment.',
+    client: 'N/A',
+    principalClient: 'N/A',
+    specs: [],
+    conclusion: '',
+    showcaseImage: '/nagpurmetrohero.png'
+  },
+  {
+    title: 'L&T - Standard Gauge Sleeper Supply',
+    image: '/l&t-sleeper.jpg',
+    description: 'Details for this project are not available at the moment.',
+    client: 'N/A',
+    principalClient: 'N/A',
+    specs: [],
+    conclusion: '',
+    showcaseImage: '/l&t-sleeper.jpg'
+  },
+  {
+    title: 'IRCON - Special Sleeper Supply',
+    image: '/ircon-sleeper.jpg',
+    description: 'Details for this project are not available at the moment.',
+    client: 'N/A',
+    principalClient: 'N/A',
+    specs: [],
+    conclusion: '',
+    showcaseImage: '/ircon-sleeper.jpg'
+  },
+  {
+    title: 'IRCON - PSC Sleeper Supply',
+    image: '/ircon-psc-sleeper.jpg',
+    description: 'Details for this project are not available at the moment.',
+    client: 'N/A',
+    principalClient: 'N/A',
+    specs: [],
+    conclusion: '',
+    showcaseImage: '/ircon-psc-sleeper.jpg'
+  },
 ];
 
 const ProjectsPage = () => {
@@ -93,22 +211,86 @@ const ProjectsPage = () => {
           <div className="flex">
             {projectsData.map((project, index) => (
               <div key={index} className="flex-shrink-0 w-full md:w-1/4 px-4">
-                <div className="relative h-96 rounded-lg overflow-hidden group">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end p-6">
-                    <h3 className="text-white text-2xl font-bold">{project.title}</h3>
+                <Dialog>
+                  <div className="relative h-96 rounded-lg overflow-hidden group">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                      <h3 className="text-white text-2xl font-bold">{project.title}</h3>
+                    </div>
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <DialogTrigger asChild>
+                        <button className="bg-orange-500 text-white font-bold py-2 px-4 rounded-full inline-flex items-center">
+                          <span>Read More</span>
+                          <ArrowRight size={16} className="ml-2" />
+                        </button>
+                      </DialogTrigger>
+                    </div>
                   </div>
-                </div>
-                <a href={project.link} className="inline-flex items-center mt-4 text-base text-black hover:text-[#8A393B]">
-                  Read more
-                  <ArrowRight size={16} className="ml-2" />
-                </a>
+
+                  <DialogContent className="sm:max-w-[80vw] bg-[#18181B] text-gray-300 border-gray-700 p-0">
+                    <DialogHeader className="p-6 border-b border-gray-700 sticky top-0 bg-[#18181B] z-10 flex flex-row items-center justify-between">
+                      <DialogTitle className="text-3xl lg:text-4xl font-bold text-orange-500">{project.title}</DialogTitle>
+                      <DialogClose asChild>
+                        <button className="p-1 rounded-full text-gray-400 hover:text-white hover:bg-gray-700 transition-colors">
+                          <X className="h-5 w-5" />
+                          <span className="sr-only">Close</span>
+                        </button>
+                      </DialogClose>
+                    </DialogHeader>
+                    <div className="max-h-[75vh] overflow-y-auto">
+                      <div className="grid grid-cols-1 lg:grid-cols-5 gap-x-12 p-6">
+                        <div className="lg:col-span-3">
+                          <Image
+                            src={project.showcaseImage || '/engineering-infra.jpg'}
+                            alt={project.title}
+                            width={1600}
+                            height={1200}
+                            className="rounded-lg object-cover w-full shadow-lg mb-6"
+                          />
+                           {project.conclusion && (
+                            <div className="border-l-4 border-orange-500 pl-4">
+                              <p className="text-lg font-medium text-gray-400 italic">"{project.conclusion}"</p>
+                            </div>
+                          )}
+                        </div>
+                        <div className="lg:col-span-2 space-y-6 mt-8 lg:mt-0">
+                          <div>
+                            <h4 className="text-lg font-semibold text-orange-400 mb-2 border-b border-gray-700 pb-2">Project Overview</h4>
+                            <p className="text-sm text-gray-400 leading-relaxed">{project.description}</p>
+                          </div>
+                          
+                          <div className="bg-zinc-800/50 p-4 rounded-lg border border-gray-700">
+                            <h4 className="text-lg font-semibold text-orange-400 mb-3">Project Details</h4>
+                            <div className="text-sm space-y-2">
+                              <p><strong className="text-gray-500 w-28 inline-block">Client:</strong> {project.client}</p>
+                              <p><strong className="text-gray-500 w-28 inline-block">Principal Client:</strong> {project.principalClient}</p>
+                            </div>
+                          </div>
+
+                          {project.specs && project.specs.length > 0 && (
+                            <div className="bg-zinc-800/50 p-4 rounded-lg border border-gray-700">
+                              <h4 className="text-lg font-semibold text-orange-400 mb-3">Specifications</h4>
+                              <ul className="space-y-2">
+                                {project.specs.map((spec, i) => (
+                                  <li key={i} className="flex items-start text-sm">
+                                    <ArrowRight size={14} className="mr-2 mt-0.5 text-orange-500 flex-shrink-0" />
+                                    <span>{spec}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </div>
             ))}
           </div>
