@@ -342,7 +342,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center fade-in-section">
-            <h2 className="text-8xl font-bold mb-6 text-white">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 text-white px-4">
                 <span
                     className="bg-clip-text text-transparent"
                     style={{

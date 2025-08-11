@@ -15,8 +15,8 @@ const BallastlessTrackMainLinePage = () => {
           <img src="/train 2.jpg" alt="Train at a station" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
-        <div className="relative z-10 h-full flex items-center justify-start pl-16 md:pl-24">
-          <h1 className="text-8xl font-bold text-white text-left leading-tight">
+        <div className="relative z-10 h-full flex items-center justify-start pl-4 sm:pl-8 md:pl-16 lg:pl-24">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white text-left leading-tight px-4">
             Ballastless Track<br />System for Main Line
           </h1>
         </div>

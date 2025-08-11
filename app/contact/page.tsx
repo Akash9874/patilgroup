@@ -7,7 +7,7 @@ const ContactPage = () => {
       <div className="relative h-[50vh]">
         <img src="/seework2.jpg" alt="Contact us background" className="w-full h-full object-cover" />
         <div className="absolute bottom-0 left-0 p-8">
-          <h1 className="text-8xl font-bold text-white">Contact</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white px-4">Contact</h1>
         </div>
         </div>
 

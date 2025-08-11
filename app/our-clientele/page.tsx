@@ -46,7 +46,7 @@ const OurClientelePage = () => {
           priority
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-8xl font-bold text-white text-center leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white text-center leading-tight px-4">
             Our <br /> Clientele
           </h1>
         </div>

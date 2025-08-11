@@ -12,15 +12,20 @@ const CMEPage = () => {
       <Navbar />
       <section className="relative h-screen">
         <div className="absolute inset-0">
-          <Image
-            src="/cmehero.jpg"
-            alt="Centre for Manufacturing Excellence"
-            layout="fill"
-            objectFit="cover"
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+            preload="metadata"
+          >
+            <source src="/cmeherovideo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
-        <div className="relative z-10 h-full flex items-end justify-end p-16 text-right">
+        <div className="relative z-10 h-full flex items-center justify-start p-16">
           <h1 className="text-5xl md:text-7xl font-bold font-clash leading-tight text-white">
             Centre for<br />Manufacturing<br />Excellence
           </h1>
@@ -120,8 +125,8 @@ const CMEPage = () => {
           </div>
           <div>
             <Image
-              src="/29_youth_certificate_ceremony.png"
-              alt="Youth certificate ceremony"
+              src="/cmelogo.png"
+              alt="CME Logo"
               width={800}
               height={600}
               className="rounded-lg"
