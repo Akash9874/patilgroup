@@ -24,7 +24,6 @@ const UnderSleeperPadsPage = () => {
           loop
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
           preload="metadata"
-          loading="eager"
           poster="/09_under_sleeper_pads_banner.jpg"
         />
         {/* Overlay */}

@@ -44,7 +44,6 @@ const ProductsPage = () => {
             playsInline
             className="w-full h-full object-cover"
             preload="metadata"
-            loading="eager"
             poster="/04_fasteners_banner.jpg"
           >
             <source src="/productherovideo.mp4" type="video/mp4" />
@@ -93,7 +92,6 @@ const ProductsPage = () => {
                 playsInline
                 className="w-full h-auto object-cover"
                 preload="metadata"
-                loading="lazy"
               >
                 <source src="/productvideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
