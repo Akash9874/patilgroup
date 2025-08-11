@@ -8,7 +8,7 @@ export function PerformanceMonitor() {
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       // Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+        const entries = list.getEntries() as LargestContentfulPaint[];
         entries.forEach((entry) => {
           console.log('LCP:', entry.startTime);
         });
@@ -22,7 +22,7 @@ export function PerformanceMonitor() {
 
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+        const entries = list.getEntries() as PerformanceEventTiming[];
         entries.forEach((entry) => {
           console.log('FID:', entry.processingStart - entry.startTime);
         });
@@ -37,7 +37,7 @@ export function PerformanceMonitor() {
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver((list) => {
         let clsValue = 0;
-        const entries = list.getEntries();
+        const entries = list.getEntries() as LayoutShift[];
         entries.forEach((entry) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
