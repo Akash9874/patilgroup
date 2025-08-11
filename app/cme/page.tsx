@@ -35,25 +35,25 @@ const CMEPage = () => {
       <section className="bg-black text-white py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
-            className="h-2 mb-24"
+            className="h-2 mb-24 fade-in-section"
             style={{
               background: 'linear-gradient(to right, #F2913F, #1E3888, #8A393B)',
             }}
           ></div>
           <div className="space-y-24">
-            <div className="flex items-center justify-between scroll-animate">
+            <div className="flex items-center justify-between slide-in-left">
               <h2 className="text-5xl font-semibold text-amber-500">Systems</h2>
               <div className="w-3/4">
                 <Image src="/cmetrack.png" alt="track" width={800} height={80} />
               </div>
             </div>
-            <div className="flex items-center justify-between scroll-animate">
+            <div className="flex items-center justify-between slide-in-right">
               <div className="w-3/4">
                 <Image src="/cmetrack.png" alt="track" width={800} height={80} />
               </div>
               <h2 className="text-5xl font-semibold text-amber-500 text-right">Training</h2>
             </div>
-            <div className="flex items-center justify-between scroll-animate">
+            <div className="flex items-center justify-between slide-in-left">
               <h2 className="text-5xl font-semibold text-amber-500">Process discipline</h2>
               <div className="w-2/3">
                 <Image src="/cmetrack.png" alt="track" width={800} height={80} />
@@ -66,7 +66,7 @@ const CMEPage = () => {
       {/* Focus Areas & Our Approach Section */}
       <section className="py-24 space-y-32">
         {/* Focus Areas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start px-4 sm:px-6 lg:px-8 fade-in-section">
           <h2 className="text-7xl font-bold text-black">Focus Areas</h2>
           <ul className="space-y-4 text-4xl text-gray-800">
             <li>Enhancing equipment efficiency</li>
@@ -76,7 +76,7 @@ const CMEPage = () => {
         </div>
 
         {/* Our Approach */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start px-4 sm:px-6 lg:px-8 fade-in-section">
           <h2 className="text-7xl font-bold text-[#8A393B]">Our Approach</h2>
           <ul className="space-y-4 text-4xl text-orange-500">
             <li>Lean manufacturing</li>
@@ -87,7 +87,7 @@ const CMEPage = () => {
       </section>
 
       {/* Skill Development Centre Section */}
-      <section className="relative bg-gray-100">
+      <section className="relative bg-gray-100 fade-in-section">
         <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="p-16">
                 <h2 className="text-6xl font-bold text-[#8A393B]">Skill Development Centre</h2>
@@ -107,7 +107,7 @@ const CMEPage = () => {
 
       <section className="bg-gray-100 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-16 items-center">
-          <div className="space-y-16">
+          <div className="space-y-16 fade-in-section">
             <div>
               <h2 className="text-5xl font-bold text-amber-500">Inside the Program</h2>
               <ul className="mt-4 space-y-2 text-2xl text-gray-800">
@@ -123,7 +123,7 @@ const CMEPage = () => {
               </p>
             </div>
           </div>
-          <div>
+          <div className="fade-in-section">
             <Image
               src="/cmelogo.png"
               alt="CME Logo"
