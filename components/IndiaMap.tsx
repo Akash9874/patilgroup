@@ -2,6 +2,8 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import './IndiaMap.css';
 
+type Pin = { x: number; y: number; label: string };
+
 const IndiaMap: React.FC = () => {
   const [svgMarkup, setSvgMarkup] = useState<string>('');
   const containerRef = useRef<HTMLDivElement>(null);
@@ -47,7 +49,7 @@ const IndiaMap: React.FC = () => {
   }, [svgMarkup]);
 
   // Pins defined as absolute percentages of the full SVG/container
-  const pinsByStateAbsolute = useMemo(
+  const pinsByStateAbsolute: Record<string, Pin[]> = useMemo(
     () => ({
       'IN-PB': [ { x: 21, y: 12, label: 'RUPNAGAR' } ],
       'IN-HP': [
@@ -60,9 +62,9 @@ const IndiaMap: React.FC = () => {
     []
   );
 
-  const activePins = useMemo(() => {
-    if (!hoveredStateId) return [] as Array<{ x: number; y: number; label: string }>;
-    return (pinsByStateAbsolute as any)[hoveredStateId] || [];
+  const activePins: Pin[] = useMemo(() => {
+    if (!hoveredStateId) return [];
+    return pinsByStateAbsolute[hoveredStateId] || [];
   }, [hoveredStateId, pinsByStateAbsolute]);
   return (
     <div className="map-container" aria-label="India map" ref={containerRef}>
