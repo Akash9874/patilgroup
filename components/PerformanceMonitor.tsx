@@ -6,11 +6,13 @@ export function PerformanceMonitor() {
   useEffect(() => {
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-      // Largest Contentful Paint
+      // Largest Contentful Paint (avoid DOM-specific TS types for wider compat)
       const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries() as LargestContentfulPaint[];
+        const entries = list.getEntries();
         entries.forEach((entry) => {
-          console.log('LCP:', entry.startTime);
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+          }
         });
       });
       
@@ -22,9 +24,14 @@ export function PerformanceMonitor() {
 
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries() as PerformanceEventTiming[];
+        const entries = list.getEntries();
         entries.forEach((entry) => {
-          console.log('FID:', entry.processingStart - entry.startTime);
+          if (entry.entryType === 'first-input') {
+            const anyEntry = entry as unknown as { processingStart?: number; startTime: number };
+            if (typeof anyEntry.processingStart === 'number') {
+              console.log('FID:', anyEntry.processingStart - anyEntry.startTime);
+            }
+          }
         });
       });
       
@@ -37,10 +44,13 @@ export function PerformanceMonitor() {
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver((list) => {
         let clsValue = 0;
-        const entries = list.getEntries() as LayoutShift[];
+        const entries = list.getEntries();
         entries.forEach((entry) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
+          if (entry.entryType === 'layout-shift') {
+            const ls = entry as unknown as { hadRecentInput?: boolean; value?: number };
+            if (!ls.hadRecentInput && typeof ls.value === 'number') {
+              clsValue += ls.value;
+            }
           }
         });
         console.log('CLS:', clsValue);
