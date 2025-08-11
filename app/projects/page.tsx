@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { ArrowRight, ArrowLeft, X } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -139,6 +140,7 @@ const projectsData = [
 ];
 
 const ProjectsPage = () => {
+  useScrollAnimation();
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     loop: true,
@@ -152,16 +154,22 @@ const ProjectsPage = () => {
   return (
     <>
       <Navbar />
-      <section className="relative h-screen">
+      <section className="relative h-screen overflow-hidden">
         <div className="absolute inset-0">
-          <Image
-            src="/tower.png"
-            alt="Modern architecture"
-            layout="fill"
-            objectFit="cover"
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+            preload="metadata"
+          >
+            <source src="/djiproject.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-black/40" />
         </div>
-        <div className="absolute inset-y-0 left-0 w-[35%] bg-black flex items-center">
+        <div className="relative z-10 h-full flex items-center">
           <div className="pl-16 md:pl-24">
             <h2 className="text-white text-6xl md:text-7xl font-medium font-clash">Our</h2>
             <h1 className="text-white text-8xl md:text-9xl font-bold font-clash -mt-4">Projects</h1>
@@ -169,7 +177,7 @@ const ProjectsPage = () => {
         </div>
       </section>
 
-      <section className="bg-black text-white">
+      <section className="bg-black text-white fade-in-section">
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/2">
             <Image
@@ -196,7 +204,7 @@ const ProjectsPage = () => {
         </div>
       </section>
 
-      <section className="bg-white py-24">
+      <section className="bg-white py-24 fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-end mb-8">
           <div className="flex items-center space-x-4">
             <button onClick={scrollPrev} className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 text-gray-400 hover:bg-gray-100 transition-colors">

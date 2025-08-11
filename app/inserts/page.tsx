@@ -13,7 +13,7 @@ const InsertsPage = () => {
       {/* Hero Section */}
       <div className="relative h-[600px]">
         <Image
-          src="/inserthero.jpg" // placeholder
+          src="/insertsheroimage.jpg"
           alt="SGCI Insert And Base Plates"
           layout="fill"
           objectFit="cover"
@@ -48,10 +48,10 @@ const InsertsPage = () => {
         <div className="max-w-7xl mx-auto px-8">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="slide-in-left">
-              <Image src="/fs300.jpg" alt="Base Plate" width={500} height={300} className="rounded-lg" />
+              <Image src="/insertsimage.png" alt="SGCI Inserts" width={500} height={300} className="rounded-lg object-cover w-full h-auto" />
             </div>
             <div className="slide-in-right">
-              <Image src="/fs300.jpg" alt="Base Plate" width={500} height={300} className="rounded-lg" />
+              <Image src="/insertsimage1.png" alt="SGCI Inserts 2" width={500} height={300} className="rounded-lg object-cover w-full h-auto" />
             </div>
           </div>
         </div>

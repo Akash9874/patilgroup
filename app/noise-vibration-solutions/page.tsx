@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import ContentSlider from '@/components/ContentSlider';
 import ExploreSolutions from '@/components/ExploreSolutions';
 
@@ -12,57 +13,89 @@ const NoiseVibrationSolutionsPage = () => {
       image: "/17_noise_vibration_system.jpg",
     },
   ];
+  useScrollAnimation();
+
   return (
     <div>
-      {/* Hero Section */}
-      <div className="relative bg-cover bg-center py-32 sm:py-40" style={{ backgroundImage: "url('/10_noise_vibration_banner.jpg')" }}>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left">
-            <h1 className="font-clash font-medium text-[80px] leading-[84px] tracking-[-0.25px] text-[#F2913F]">
-              Noise & Vibration Solution for <br /> Slab Track
-            </h1>
+      {/* Hero Section (copied from USP style) */}
+      <div className="relative h-auto md:h-[600px]">
+        {/* Background Video/Image */}
+        <video
+          src="/sleepersherovideo.mp4"
+          autoPlay
+          muted
+          loop
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          preload="metadata"
+          poster="/10_noise_vibration_banner.jpg"
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+        
+        {/* Content */}
+        <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row h-full z-20">
+          {/* Left Panel */}
+          <div className="w-full md:w-1/3 flex flex-col justify-center p-8 md:p-12">
+            <div className="text-left">
+              <p className="text-5xl lg:text-6xl font-bold text-white opacity-50">07</p>
+              <h1 className="text-5xl lg:text-6xl font-bold text-white mt-2">
+                Noise & Vibration Solutions
+              </h1>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Mass-Spring System Section */}
-      <div className="bg-white py-24 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h2 className="font-clash font-medium text-[40px] leading-[37px] tracking-[-0.25px] text-[#8A393B]">
-              Mass-Spring System for Urban <br /> Acoustic Isolation
-            </h2>
-            <p className="mt-6 text-lg sm:text-xl text-gray-700">
-              Urban transit systems often suffer from structure-borne noise and vibration — especially in elevated or slab track scenarios. Patil Group's Mass-Spring System addresses this using a layered structure that isolates vibrations at the source.
+      {/* Statement Band Section (post-hero) */}
+      <section className="relative bg-black text-white py-14 fade-in-section">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-snug">
+            Mass spring system designed for urban transit.
+          </p>
+          <p className="mt-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-snug">
+            Isolates vibration at the source — for quieter cities.
+          </p>
+        </div>
+        <div className="hidden sm:block absolute top-1/2 right-6 sm:right-8 md:right-12 h-24 w-px -translate-y-1/2 bg-white/30"></div>
+      </section>
+
+      {/* Features + Statement Section (single section) */}
+      <section className="bg-[#F5F4F1] py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+            {/* Left image */}
+            <div className="slide-in-left">
+              <img
+                src="/usp_carousel.png"
+                alt="Noise & Vibration Illustration"
+                className="rounded-lg w-full h-[320px] sm:h-[360px] object-cover"
+              />
+            </div>
+            {/* Right features card */}
+            <div className="bg-white rounded-lg shadow-sm p-6 sm:p-8 slide-in-right">
+              <h3 className="text-2xl font-extrabold text-[#8A393B] mb-4">Features</h3>
+              <ul className="list-disc pl-6 space-y-3 text-gray-800 text-lg">
+                <li>Reduces structure borne and airborne noise</li>
+                <li>Prevents transmission to nearby buildings</li>
+                <li>Used in elevated metro lines across major cities</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom statement lines */}
+          <div className="mt-12 animate-fadeInUp">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F2913F]">
+              Deployed in projects like Mumbai Metro
+            </p>
+            <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F2913F]">
+              Elevated Sections.
+            </p>
+            <p className="mt-2 text-3xl sm:text-4xl md:text-5xl font-bold text-[#8A393B]">
+              Proven under real world conditions.
             </p>
           </div>
         </div>
-      </div>
-
-      {/* Features Section */}
-      <div className="bg-white pb-24 sm:pb-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h2 className="font-clash font-medium text-[96px] leading-[85px] tracking-[-0.25px] text-amber-500">
-              Features
-            </h2>
-            <ul className="mt-6 space-y-2 list-disc pl-5">
-              <li className="text-lg sm:text-xl text-gray-700">Reduces both structure-borne and secondary airborne noise</li>
-              <li className="text-lg sm:text-xl text-gray-700">Prevents transmission to adjacent buildings and sensitive areas</li>
-              <li className="text-lg sm:text-xl text-gray-700">Adopted in elevated metro systems for quieter city infrastructure</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <ContentSlider slides={sliderData} />
-      <div className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto">
-            Our system is currently deployed in projects like the Mumbai Metro Elevated Sections, delivering proven performance in real-world conditions.
-          </p>
-        </div>
-      </div>
-      <ExploreSolutions />
+      </section>
     </div>
   );
 };

@@ -1,6 +1,8 @@
 import React from 'react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const SustainabilityPage = () => {
+  useScrollAnimation();
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -13,7 +15,7 @@ const SustainabilityPage = () => {
         </div>
       </div>
       {/* Page content will go here */}
-      <section className="py-24 overflow-hidden">
+      <section className="py-24 overflow-hidden fade-in-section">
         <div className="flex items-center">
           <div className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <p className="text-5xl font-bold text-[#8A393B]">
@@ -28,7 +30,7 @@ const SustainabilityPage = () => {
         </div>
       </section>
 
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 fade-in-section">
         <div className="max-w-7xl mx-auto">
           <div>
             <h2 className="text-6xl font-bold">
@@ -65,7 +67,7 @@ const SustainabilityPage = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-gray-100">
+      <section className="py-24 bg-gray-100 fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-5xl">
             <span className="text-orange-400 font-bold">Every decision</span>
@@ -78,7 +80,7 @@ const SustainabilityPage = () => {
         </div>
       </section>
 
-      <section className="py-32">
+      <section className="py-32 fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-between items-end mb-4">
             <p className="text-2xl text-[#8A393B] font-bold text-left">

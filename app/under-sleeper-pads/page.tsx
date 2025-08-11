@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import ContentSlider from '@/components/ContentSlider';
 import ExploreSolutions from '@/components/ExploreSolutions';
 
@@ -9,59 +10,90 @@ const UnderSleeperPadsPage = () => {
     { image: '/usp_carousel.png' }
   ];
 
+  useScrollAnimation();
+
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative bg-cover bg-center py-32 sm:py-40" style={{ backgroundImage: "url('/09_under_sleeper_pads_banner.jpg')" }}>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left">
-            <h1 className="font-clash font-medium text-[96px] leading-[84px] tracking-[-0.25px] text-[#F2913F]">
-              Under Sleeper Pads (USP)
-            </h1>
+      <div className="relative h-auto md:h-[600px]">
+        {/* Background Video (same style as Sleepers hero) */}
+        <video
+          src="/sleepersherovideo.mp4"
+          autoPlay
+          muted
+          loop
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          preload="metadata"
+          loading="eager"
+          poster="/09_under_sleeper_pads_banner.jpg"
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+        
+        {/* Content */}
+        <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row h-full z-20">
+          {/* Left Panel */}
+          <div className="w-full md:w-1/3 flex flex-col justify-center p-8 md:p-12">
+            <div className="text-left">
+              <p className="text-5xl lg:text-6xl font-bold text-white opacity-50">06</p>
+              <h1 className="text-5xl lg:text-6xl font-bold text-white mt-2">
+                Under Sleeper Pads (USP)
+              </h1>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Enhanced Track Resilience Section */}
-      <div className="bg-white py-24 sm:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h2 className="font-clash font-medium text-4xl sm:text-5xl text-[#8A393B] leading-tight">
-              Enhanced Track Resilience with <br /> Noise & Vibration Control
-            </h2>
-            <p className="mt-6 text-lg sm:text-xl text-gray-700">
-              Under Sleeper Pads (USP) are resilient layers attached beneath concrete sleepers. Their purpose is to absorb vibration, distribute load evenly, and extend track life — even under extreme rail traffic.
+      {/* Statement Band Section (post-hero) */}
+      <section className="relative bg-black text-white py-14 fade-in-section">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-snug">
+            Engineered to absorb vibration, reduce noise, and
+            increase track resilience under high loads.
+          </p>
+        </div>
+        <div className="hidden sm:block absolute top-1/2 right-6 sm:right-8 md:right-12 h-24 w-px -translate-y-1/2 bg-white/30"></div>
+      </section>
+
+      {/* Benefits + Statement Section (single section) */}
+      <section className="bg-[#F5F4F1] py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+            {/* Left image */}
+            <div className="slide-in-left">
+              <img
+                src="/usp_carousel.png"
+                alt="USP Illustration"
+                className="rounded-lg w-full h-[320px] sm:h-[360px] object-cover"
+              />
+            </div>
+            {/* Right benefits card */}
+            <div className="bg-white rounded-lg shadow-sm p-6 sm:p-8 slide-in-right">
+              <h3 className="text-2xl font-extrabold text-[#8A393B] mb-4">Benefits:</h3>
+              <ul className="list-disc pl-6 space-y-3 text-gray-800 text-lg">
+                <li>Better load distribution.</li>
+                <li>Reduced ballast wear.</li>
+                <li>Lower noise and higher ride comfort.</li>
+                <li>Less variation in track stiffness.</li>
+                <li>Longer life and fewer tamping cycles</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom statement lines */}
+          <div className="mt-12 animate-fadeInUp">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F2913F]">
+              Manufactured using EVA based compounds, in
+            </p>
+            <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#F2913F]">
+              collaboration with Angst Pfister.
+            </p>
+            <p className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold text-[#3A3A3A]">
+              Our USP systems meet global railway standards.
             </p>
           </div>
         </div>
-      </div>
-
-      {/* Benefits of USP Section */}
-      <div className="bg-white pb-24 sm:pb-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <h2 className="font-clash font-medium text-4xl sm:text-5xl text-amber-500 leading-tight">
-              Benefits of USP:
-            </h2>
-            <ul className="mt-6 space-y-2 list-disc pl-5">
-              <li className="text-lg sm:text-xl text-gray-700">Better load distribution over the track</li>
-              <li className="text-lg sm:text-xl text-gray-700">Reduced ballast wear and degradation</li>
-              <li className="text-lg sm:text-xl text-gray-700">Enhanced riding comfort and lower noise</li>
-              <li className="text-lg sm:text-xl text-gray-700">Minimized track stiffness variations</li>
-              <li className="text-lg sm:text-xl text-gray-700">Longer lifecycle and reduced tamping cycles</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <ContentSlider slides={uspSlides} />
-      <div className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="font-clash text-2xl text-black text-center max-w-4xl mx-auto" style={{ lineHeight: '28px' }}>
-            Manufactured using EVA-based material in collaboration with M/s Angst+Pfister, our USP technology meets the highest standards in modern railway engineering.
-          </p>
-        </div>
-      </div>
-      <ExploreSolutions />
+      </section>
     </div>
   );
 };

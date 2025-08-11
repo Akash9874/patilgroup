@@ -62,7 +62,7 @@ const SystemsContent = () => {
           </div>
           {/* Right side */}
           <div className="w-1/2">
-            <img src="/engineering-infra.jpg" alt="Systems" className="h-full w-full object-cover" />
+            <img src="/oursysystemsimage.JPG" alt="Systems" className="h-full w-full object-cover" />
           </div>
         </div>
         {/* Bottom half */}

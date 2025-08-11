@@ -1,6 +1,8 @@
 import React from 'react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const ContactPage = () => {
+  useScrollAnimation();
   return (
     <div className="bg-black text-white min-h-screen">
       {/* Image Section */}
@@ -12,7 +14,7 @@ const ContactPage = () => {
         </div>
 
       {/* Content Section */}
-      <div className="text-center py-20 px-4">
+      <div className="text-center py-20 px-4 fade-in-section">
         <p className="text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
             Contact RouteWise Transport today for reliable and efficient trucking services. Our team is ready to assist you with your transportation needs.
           </p>

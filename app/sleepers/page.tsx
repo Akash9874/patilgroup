@@ -11,13 +11,12 @@ const SleepersPage = () => {
       <div className="relative h-auto md:h-[600px]">
         {/* Background Image */}
         <video
-          src="/sleepersherovideo.mp4"
+          src="/sleepersvideo.mp4"
           autoPlay
           muted
           loop
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
           preload="metadata"
-          loading="eager"
           poster="/05_sleepers_banner.jpg"
         />
         {/* Overlay */}
@@ -168,7 +167,18 @@ const SleepersPage = () => {
               <p className="mt-4 text-xl">Used in slab track to reduce noise and vibration</p>
             </div>
             <div className="slide-in-right">
-              <Image src="/12_sleeper_types.jpg" alt="Mass Spring System" width={600} height={400} className="rounded-lg" />
+              <div className="relative rounded-lg overflow-hidden">
+                <video
+                  src="/sleepersherovideo.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                  preload="metadata"
+                  poster="/12_sleeper_types.jpg"
+                />
+              </div>
             </div>
           </div>
         </div>

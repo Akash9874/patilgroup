@@ -11,7 +11,7 @@ const FastenersPage = () => {
       <div className="relative h-auto md:h-[600px]">
         {/* Background Image */}
         <Image
-          src="/fastenerhero.JPG"
+          src="/fastenerheroimage.JPG"
           alt="Fasteners Hero Image"
           layout="fill"
           objectFit="cover"

@@ -1,10 +1,12 @@
 "use client";
 import React from 'react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const WhistleblowerPage = () => {
+  useScrollAnimation();
   return (
     <div className="bg-black text-white min-h-screen py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto fade-in-section">
         <h1 className="text-5xl font-bold text-center text-orange-500">
           Whistleblower Policy
         </h1>

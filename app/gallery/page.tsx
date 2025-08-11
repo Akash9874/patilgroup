@@ -1,12 +1,14 @@
 "use client";
 
 import React from 'react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import { ArrowRight } from 'lucide-react'; // Changed from ChevronRight
 import { GridLines } from '@/components/GridLines';
 
 const PhotoGalleryPage = () => {
+  useScrollAnimation();
   return (
     <div className="bg-black text-white min-h-screen flex flex-col">
       <Navbar />
@@ -31,7 +33,7 @@ const PhotoGalleryPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#F3F0E8] w-full py-16">
+      <div className="bg-[#F3F0E8] w-full py-16 fade-in-section">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl font-bold text-[#A43A25]">
             Photo Gallery

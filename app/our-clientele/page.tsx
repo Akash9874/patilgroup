@@ -53,7 +53,7 @@ const OurClientelePage = () => {
       </div>
 
       {/* Logos Section */}
-      <section className="py-20">
+      <section className="py-20 fade-in-section">
         <div className="overflow-hidden">
           <div className="flex animate-scroll-slow">
             {logos1.map((logo, index) => (

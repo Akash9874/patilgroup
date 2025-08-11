@@ -14,7 +14,7 @@ const ResponsibilitiesPage = () => {
       {/* Hero Section */}
       <section className="relative h-screen bg-black">
         <div className="absolute inset-0 h-full w-full">
-          <img src="/train 2.jpg" alt="Train at a station" className="h-full w-full object-cover" />
+          <img src="/ourrespoheroimage.jpg" alt="Our Responsibility" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
         <div className="relative z-10 h-full flex items-center justify-start pl-4 sm:pl-8 md:pl-16 lg:pl-24">

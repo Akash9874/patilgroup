@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { ArrowRight } from 'lucide-react';
 
 const carouselImages = [
@@ -10,6 +11,7 @@ const carouselImages = [
 
 const ResearchAndDevelopmentPage = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  useScrollAnimation();
 
   const nextImage = () => {
     setCurrentImage((prevImage) => (prevImage + 1) % carouselImages.length);
@@ -28,7 +30,7 @@ const ResearchAndDevelopmentPage = () => {
       </div>
 
       {/* Content Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 fade-in-section">
         <div className="max-w-7xl mx-auto">
           <div className="w-full md:w-1/2 ml-auto mb-16">
             <p className="text-xl text-gray-700 leading-relaxed">
@@ -62,7 +64,7 @@ const ResearchAndDevelopmentPage = () => {
       </section>
 
       {/* Image Carousel Section */}
-      <section className="py-24">
+      <section className="py-24 fade-in-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex">
                   <div className="w-11/12">
@@ -81,7 +83,7 @@ const ResearchAndDevelopmentPage = () => {
       </section>
 
       {/* Mobile PATIL RHEDA Sleeper Plant Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 fade-in-section">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-6xl font-bold">
             <span className="text-[#8A393B]">Mobile PATIL RHEDA </span>
@@ -112,7 +114,7 @@ const ResearchAndDevelopmentPage = () => {
       </section>
 
       {/* Mini Mobile Plant Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 fade-in-section">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-6xl font-bold">
             <span className="text-orange-400">Mini Mobile Plant for </span>
