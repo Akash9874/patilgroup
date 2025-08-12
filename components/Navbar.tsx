@@ -29,6 +29,7 @@ const Navbar = () => {
     { href: '/management', label: 'Management' },
     { href: '/news', label: 'In News' },
     { href: '/responsibilities', label: 'Our Responsibilities' },
+    { href: '/safety', label: 'Safety' },
     { href: '/gallery', label: 'Photo Gallery' },
     { href: '/sustainability', label: 'Sustainability' },
   ];
