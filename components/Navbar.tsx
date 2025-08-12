@@ -38,6 +38,7 @@ const Navbar = () => {
     { href: '/sleepers', label: 'Sleepers' },
     { href: '/wires', label: 'Wires' },
     { href: '/inserts', label: 'Inserts' },
+    { href: '/precast', label: 'Precast' },
     { href: '/under-sleeper-pads', label: 'Under Sleeper Pads' },
     { href: '/noise-vibration-solutions', label: 'Noise & Vibration Solutions' },
   ];

@@ -26,7 +26,12 @@ const products = [
       name: "Inserts",
       description: "SGCI castings and base plates for fastening systems",
       link: "/inserts"
-    },
+      },
+      {
+        name: "Precast",
+        description: "Precast plinth units for rapid installation and uniform geometry",
+        link: "/precast",
+      },
   ];
 
 const ProductsPage = () => {
