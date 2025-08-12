@@ -17,7 +17,7 @@ const SleepersPage = () => {
           loop
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
           preload="metadata"
-          poster="/05_sleepers_banner.jpg"
+          
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
