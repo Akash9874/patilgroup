@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { ArrowRight } from 'lucide-react';
 
@@ -61,15 +62,15 @@ const SystemsContent = () => {
             <h1 className="text-8xl font-bold animate-fadeInUp">Our Systems</h1>
           </div>
           {/* Right side */}
-          <div className="w-1/2">
-            <img src="/oursysystemsimage.JPG" alt="Systems" className="h-full w-full object-cover" />
+          <div className="w-1/2 relative">
+            <Image src="/rndimage.JPG" alt="Systems" fill className="object-cover" sizes="50vw" priority />
           </div>
         </div>
         {/* Bottom half */}
         <div className="h-1/2 flex">
           {/* Left side */}
-          <div className="w-1/2">
-            <img src="/seework2.jpg" alt="Engineering Excellence" className="h-full w-full object-cover" />
+          <div className="w-1/2 relative">
+            <Image src="/seework2.jpg" alt="Engineering Excellence" fill className="object-cover" sizes="50vw" />
           </div>
           {/* Right side */}
           <div className="w-1/2 bg-[#1A1A1A] flex flex-col justify-center p-12 animate-fadeInUp">

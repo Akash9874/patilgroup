@@ -12,7 +12,7 @@ const SafetyPage = () => {
       <div className="relative h-auto md:h-[600px]">
         {/* Background Image */}
         <Image
-          src="/safety-hero.jpg" // place any image in /public as a placeholder
+          src="/safetyhero.JPG"
           alt="Safety"
           layout="fill"
           objectFit="cover"
@@ -24,7 +24,7 @@ const SafetyPage = () => {
         {/* Content */}
         <div className="relative z-20 max-w-7xl mx-auto h-full flex items-center">
           <div className="w-full md:w-1/2 p-8 md:p-12 fade-in-section">
-            <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">Safety</h1>
+            <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">Railway Side Safety</h1>
           </div>
         </div>
       </div>

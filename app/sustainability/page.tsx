@@ -1,5 +1,6 @@
 "use client";
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import Image from 'next/image';
 
 export default function SustainabilityPage() {
   useScrollAnimation();
@@ -7,10 +8,13 @@ export default function SustainabilityPage() {
     <div>
       <section className="relative h-[70vh] md:h-[80vh] w-full overflow-hidden fade-in-section">
         {/* Background image */}
-        <img
-          src="/delhimetrohero.png"
+        <Image
+          src="/sustainabilityhero.JPG"
           alt="Sustainability background"
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
         />
         {/* Dark overlay for legibility */}
         <div className="absolute inset-0 bg-black/60" />

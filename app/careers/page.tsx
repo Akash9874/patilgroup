@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import ApplyForm from '@/components/ApplyForm';
 import { Linkedin, ArrowRight } from 'lucide-react';
@@ -13,13 +14,13 @@ const CareersContent = () => {
   
   return (
     <>
-      <section className="relative h-screen bg-black flex items-center justify-center">
+      <section className="relative h-screen bg-black flex items-center">
         <div className="absolute inset-0 h-full w-full opacity-60">
-          <img src="/engineering-infra.jpg" alt="Architectural Structure" className="h-full w-full object-cover" />
+          <Image src="/ourreso.jpg" alt="Architectural Structure" fill className="object-cover" priority sizes="100vw" />
         </div>
 
-        <div className="relative z-10 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white animate-fadeInUp px-4">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white animate-fadeInUp">
             Careers
           </h1>
         </div>

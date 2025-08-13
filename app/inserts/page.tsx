@@ -51,7 +51,7 @@ const InsertsPage = () => {
               <Image src="/insertsimage.png" alt="SGCI Inserts" width={500} height={300} className="rounded-lg object-cover w-full h-auto" />
             </div>
             <div className="slide-in-right">
-              <Image src="/insertsimage1.png" alt="SGCI Inserts 2" width={500} height={300} className="rounded-lg object-cover w-full h-auto" />
+              <Image src="/insertsimage2.jpg" alt="SGCI Inserts 2" width={500} height={300} className="rounded-lg object-cover w-full h-auto" />
             </div>
           </div>
         </div>

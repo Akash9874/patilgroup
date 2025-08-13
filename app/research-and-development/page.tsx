@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const ResearchAndDevelopmentPage = () => {
@@ -10,7 +11,7 @@ const ResearchAndDevelopmentPage = () => {
       {/* Hero Section */}
       <div className="relative h-auto md:h-[600px]">
         {/* Background Image */}
-        <img src="/rnd-hero.jpg" alt="R&D Hero" className="absolute inset-0 w-full h-full object-cover" />
+        <Image src="/rndimage2.JPG" alt="R&D Hero" fill className="object-cover" priority sizes="100vw" />
         <div className="absolute inset-0 bg-black/60"></div>
         {/* Left-aligned overlay text */}
         <div className="relative z-10 max-w-7xl mx-auto h-full flex items-center">

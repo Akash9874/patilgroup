@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { PlusCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -21,10 +22,13 @@ const AboutUsPage = () => {
     <div className="bg-white">
       {/* Hero Section */}
       <section className="relative h-screen overflow-hidden">
-        <img
-          src="/05_sleepers_banner.jpg"
+        <Image
+          src="/abouthero.JPG"
           alt="About Hero"
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 h-full flex items-center">

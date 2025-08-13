@@ -79,7 +79,7 @@ const SleepersPage = () => {
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="slide-in-left">
-                    <Image src="/12_sleeper_types.jpg" alt="Sleeper Types" width={600} height={400} className="rounded-lg" />
+                    <Image src="/sleeperstype.jpg" alt="Sleeper Types" width={600} height={400} className="rounded-lg" />
                 </div>
                 <div className="bg-white p-8 rounded-lg shadow-lg slide-in-right">
                     <h3 className="text-3xl font-bold text-[#8A393B] mb-4">Broad Gauge</h3>
@@ -111,7 +111,7 @@ const SleepersPage = () => {
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="slide-in-left">
-                    <Image src="/12_sleeper_types.jpg" alt="Composite Sleepers" width={600} height={400} className="rounded-lg" />
+                    <Image src="/sleepertype2.jpg" alt="Composite Sleepers" width={600} height={400} className="rounded-lg" />
                 </div>
                 <div className="bg-white p-8 rounded-lg shadow-lg slide-in-right">
                     <ul className="list-disc list-inside text-lg space-y-2">
