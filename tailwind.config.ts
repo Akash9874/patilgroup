@@ -2,11 +2,8 @@ import type { Config } from 'tailwindcss';
 
 const config: Config = {
   darkMode: ['class'],
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  // Keep content globs focused to reduce scanning time
+  content: ['./components/**/*.{ts,tsx}', './app/**/*.{ts,tsx,mdx}'],
   theme: {
     extend: {
       fontFamily: {
