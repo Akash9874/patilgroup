@@ -71,13 +71,19 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center animate-fadeInLeft -ml-8 sm:-ml-12 lg:-ml-16">
-            <Link href="/" onMouseEnter={() => setIsAboutMenuOpen(false)}>
-              <img 
-                src="/pg.png" 
-                alt="Patil Group Logo" 
-                className="h-14 w-auto transition-all duration-300 hover-scale cursor-pointer"
-              />
-            </Link>
+              <Link href="/" onMouseEnter={() => setIsAboutMenuOpen(false)}>
+                <picture>
+                  <source srcSet="/pg.png" type="image/png" />
+                  <img
+                    src="/pg.png"
+                    alt="Patil Group Logo"
+                    width={112}
+                    height={56}
+                    loading="eager"
+                    className="h-14 w-auto transition-all duration-300 hover-scale cursor-pointer"
+                  />
+                </picture>
+              </Link>
           </div>
 
           {/* Desktop Navigation */}

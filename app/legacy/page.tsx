@@ -25,7 +25,9 @@ export default function LegacyPage() {
       </section>
 
       {/* Adjust 'trainXOffset' to nudge the train horizontally (px). Positive moves right, negative left. */}
-      <TrackTimeline items={legacyTimeline} trackSrc="/legacytrack.svg" trainSrc="/legacytrain.svg" trainXOffset={-98} />
+      <div className="content-visibility-auto">
+        <TrackTimeline items={legacyTimeline} trackSrc="/legacytrack.svg" trainSrc="/legacytrain.svg" trainXOffset={-98} />
+        </div>
     </div>
   );
 }

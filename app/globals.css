@@ -1,9 +1,4 @@
-@font-face {
-  font-family: 'Clash Grotesk';
-  src: url('../fonts/ClashGrotesk-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
+/* Using next/font/local in layout; removing duplicate @font-face to prevent double loading */
 
 @tailwind base;
 @tailwind components;
@@ -395,6 +390,12 @@ video {
 /* Additional performance optimizations */
 * {
   box-sizing: border-box;
+}
+
+/* Reduce layout & paint cost for below-the-fold content */
+.content-visibility-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1000px 1500px;
 }
 
 /* Optimize carousel animations */
