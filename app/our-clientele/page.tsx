@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const logos1 = [
   '/client logos/client 1.png',
@@ -14,10 +15,10 @@ const logos1 = [
   '/client logos/client 9.png',
   '/client logos/client 10.png',
   '/client logos/client 11.png',
+  '/client logos/client 12.png',
 ];
 
 const logos2 = [
-    '/client logos/client 12.png',
     '/client logos/client 13.png',
     '/client logos/client 14.png',
     '/client logos/client 15.png',
@@ -32,6 +33,8 @@ const logos2 = [
 ];
 
 const OurClientelePage = () => {
+  useScrollAnimation();
+
   return (
     <div className="bg-black text-white">
       {/* Hero Section */}
@@ -52,24 +55,55 @@ const OurClientelePage = () => {
         </div>
       </div>
 
-      {/* Logos Section */}
-      <section className="py-20 fade-in-section">
-        <div className="overflow-hidden">
-          <div className="flex animate-scroll-slow">
-            {logos1.map((logo, index) => (
-              <div key={index} className="flex-shrink-0 w-64 mx-8 flex justify-center items-center p-4 bg-white rounded-lg">
-                <Image src={logo} alt={`Client logo ${index + 1}`} width={150} height={96} className="max-h-24 w-auto object-contain" loading="lazy" />
+      {/* Two continuous marquee rows */}
+      <section className="py-20 fade-in-section is-visible">
+        <div className="max-w-7xl mx-auto space-y-12">
+          {/* Row 1: first 12 logos */}
+          <div className="overflow-hidden">
+            <div className="flex animate-marquee">
+              <div className="flex gap-8 flex-none">
+                {logos1.map((logo, index) => (
+                  <div key={`row1-a-${index}`} className="flex-none w-44">
+                    <div className="h-32 w-full flex justify-center items-center p-4 bg-white rounded-lg">
+                      <Image src={logo} alt={`Client logo ${index + 1}`} width={160} height={96} className="max-h-24 w-auto object-contain" loading="lazy" />
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+              <div className="flex gap-8 flex-none" aria-hidden="true">
+                {logos1.map((logo, index) => (
+                  <div key={`row1-b-${index}`} className="flex-none w-44">
+                    <div className="h-32 w-full flex justify-center items-center p-4 bg-white rounded-lg">
+                      <Image src={logo} alt="" width={160} height={96} className="max-h-24 w-auto object-contain" loading="lazy" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="overflow-hidden mt-16">
-          <div className="flex animate-scroll-slow-reverse">
-            {logos2.map((logo, index) => (
-              <div key={index} className="flex-shrink-0 w-64 mx-8 flex justify-center items-center p-4 bg-white rounded-lg">
-                <Image src={logo} alt={`Client logo ${index + 12}`} width={150} height={96} className="max-h-24 w-auto object-contain" loading="lazy" />
+
+          {/* Row 2: remaining 11 logos */}
+          <div className="overflow-hidden">
+            <div className="flex animate-marquee-reverse">
+              <div className="flex gap-8 flex-none">
+                {logos2.map((logo, index) => (
+                  <div key={`row2-a-${index}`} className="flex-none w-44">
+                    <div className="h-32 w-full flex justify-center items-center p-4 bg-white rounded-lg">
+                      <Image src={logo} alt={`Client logo ${index + 1}`} width={160} height={96} className="max-h-24 w-auto object-contain" loading="lazy" />
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+              <div className="flex gap-8 flex-none" aria-hidden="true">
+                {logos2.map((logo, index) => (
+                  <div key={`row2-b-${index}`} className="flex-none w-44">
+                    <div className="h-32 w-full flex justify-center items-center p-4 bg-white rounded-lg">
+                      <Image src={logo} alt="" width={160} height={96} className="max-h-24 w-auto object-contain" loading="lazy" />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
