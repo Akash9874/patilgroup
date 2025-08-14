@@ -35,8 +35,8 @@ const Navbar = () => {
   ];
 
   const productLinks = [
-    { href: '/fasteners', label: 'Fasteners' },
     { href: '/sleepers', label: 'Sleepers' },
+    { href: '/fasteners', label: 'Fasteners' },
     { href: '/wires', label: 'Wires' },
     { href: '/inserts', label: 'Inserts' },
     { href: '/precast', label: 'Precast' },

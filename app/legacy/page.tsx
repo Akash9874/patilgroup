@@ -1,4 +1,5 @@
 "use client";
+import { TypingAnimation } from '@/components/TypingAnimation';
 
 export default function LegacyPage() {
   const TrackTimeline = require('../../components/legacy/TrackTimeline').default as any;
@@ -25,6 +26,19 @@ export default function LegacyPage() {
               <span className="block">Legacy</span>
               </h1>
           </div>
+        </div>
+      </section>
+
+      {/* Text block after hero */}
+      <section className="bg-black text-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-14">
+          <TypingAnimation
+            text="Grounded in Use"
+            showCursor
+            speed={80}
+            className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold text-[#F2913F]"
+            cursorColor="#F2913F"
+          />
         </div>
       </section>
 

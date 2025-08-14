@@ -34,7 +34,6 @@ const UnderSleeperPadsPage = () => {
           {/* Left Panel */}
           <div className="w-full md:w-1/3 flex flex-col justify-center p-8 md:p-12">
             <div className="text-left">
-              <p className="text-5xl lg:text-6xl font-bold text-white opacity-50">06</p>
               <h1 className="text-5xl lg:text-6xl font-bold text-white mt-2">
                 Under Sleeper Pads (USP)
               </h1>

@@ -59,16 +59,26 @@ export default function TrackTimeline({
 	return (
 		<section ref={containerRef} className="relative bg-white py-24">
 			<div className="relative max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-                {/* Centered vertical track (repeated background) */}
-                <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-56 md:w-72 pointer-events-none"
-					style={{ backgroundImage: `url(${trackSrc})`, backgroundRepeat: 'repeat-y', backgroundSize: 'contain', backgroundPosition: 'center' }}
+				{/* Centered vertical track (background image), layered twice to avoid visible seams */}
+				<div
+					className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-56 md:w-72 pointer-events-none"
+					style={{
+						// Sleepers (horizontal ties): 18px spacing, 6px thickness
+						backgroundImage:
+							'repeating-linear-gradient(to bottom, transparent 0, transparent 12px, #e6e6e6 12px, #e6e6e6 18px), ' +
+							// Rails (two vertical bars)
+							'linear-gradient(to right, transparent 0, transparent 46%, #9e9e9e 46%, #6e6e6e 48%, transparent 48%, transparent 52%, #6e6e6e 52%, #9e9e9e 54%, transparent 54%, transparent 100%)',
+						backgroundRepeat: 'no-repeat repeat, no-repeat',
+						backgroundSize: '12% 18px, 100% 100%',
+						backgroundPosition: 'center top, center',
+					}}
 				/>
 
 				{/* Track unrevealed overlay (below the train). This makes the track appear revealed as train passes. */}
-                <motion.div
-                    className="absolute left-1/2 -translate-x-1/2 w-56 md:w-72 bg-white/70 pointer-events-none"
-                    style={{ top: overlayTopPx, bottom: 0 }}
-                />
+				<motion.div
+					className="absolute left-1/2 -translate-x-1/2 w-56 md:w-72 bg-white pointer-events-none"
+					style={{ top: overlayTopPx, bottom: 0 }}
+				/>
 
                 <motion.img
                     src={trainSrc}

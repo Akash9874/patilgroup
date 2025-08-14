@@ -8,7 +8,7 @@ const OurPresencePage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative h-[60vh] overflow-hidden bg-black">
+      <section className="relative h-[45vh] overflow-hidden bg-black">
         <video
           autoPlay
           muted
@@ -28,8 +28,8 @@ const OurPresencePage = () => {
           </h1>
         </div>
       </section>
-      <div className="container mx-auto py-12 fade-in-section flex justify-center">
-        <div className="w-full max-w-5xl">
+      <div className="mx-auto py-10 fade-in-section flex justify-end pr-6 lg:pr-12">
+        <div className="w-full max-w-7xl">
           <IndiaMap />
         </div>
       </div>

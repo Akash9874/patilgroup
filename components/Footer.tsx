@@ -14,6 +14,17 @@ const Footer = () => {
 
   return (
     <footer className="bg-black text-white">
+      {/* Contact headline above address */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+          <span className="text-amber-500">Get in touch with us for all</span><br />
+          <span className="text-[#8A393B]">your railway needs.</span>
+        </h2>
+        <p className="mt-6 max-w-3xl text-sm sm:text-base text-gray-300">
+          By addressing the growing demands of modern railways while offering substantial cost and environmental benefits, Patil Group's composite sleepers represent the future of sustainable, high-performance railway infrastructure.
+        </p>
+      </div>
+
       {/* Pre-footer section */}
       <div className="relative bg-black pt-16 border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
@@ -28,8 +39,8 @@ const Footer = () => {
           </div>
           <div className="absolute right-0 bottom-0">
             <Image 
-              src="/tower.png"
-              alt="Cityscape"
+              src="/trainfooter.svg"
+              alt="Footer illustration"
               width={600}
               height={300}
               className="object-contain"

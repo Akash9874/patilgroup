@@ -10,27 +10,32 @@ const products = [
     {
       name: "Sleepers",
       description: "Concrete units for mainlines, metros, and turnouts",
-      link: "/sleepers"
+      link: "/sleepers",
+      image: "/sleepersslider.jpg",
     },
     {
       name: "Fasteners",
       description: "Clips, clamps, and insulators for securing rails",
-      link: "/fasteners"
+      link: "/fasteners",
+      image: "/fastenerslider.webp",
     },
     {
       name: "Wires",
       description: "Pre stressed steel strands for sleeper reinforcement",
-      link: "/wires"
+      link: "/wires",
+      image: "/htswireslider.jpg",
     },
     {
       name: "Inserts",
       description: "SGCI castings and base plates for fastening systems",
-      link: "/inserts"
+      link: "/inserts",
+      image: "/insertsslider.jpg",
       },
       {
         name: "Precast",
         description: "Precast plinth units for rapid installation and uniform geometry",
         link: "/precast",
+        image: "/precastslider.jpg",
       },
   ];
 
@@ -65,67 +70,57 @@ const ProductsPage = () => {
         </div>
       </section>
 
-      {/* Unseen Unshifting Section - New Layout */}
-      <section className="bg-[#F5F4F1] fade-in-section">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-stretch">
-          {/* Left side with full-height image */}
-          <div className="h-full">
-            <img src="/seework2.jpg" alt="Building by the sea" className="w-full h-full object-cover" />
-          </div>
-
-          {/* Right side with content */}
-          <div className="flex flex-col justify-between">
-            {/* Top content box */}
-            <div className="bg-black p-12 lg:p-16 text-left text-white">
-              <h2 className="text-7xl md:text-8xl font-bold text-amber-500 mb-8">
-                Unseen<br/>
-                <TypingAnimation text="Unshifting" showCursor={true} />
-              </h2>
-              <hr className="border-gray-600 mb-8" />
-              <p className="text-xl text-gray-300 mb-6">
-                Quietly engineered —<br />
-                Built to endure what is never seen
-              </p>
+      {/* Middle section redesigned to match Systems page style */}
+      <section className="bg-white text-gray-800 pb-24 overflow-hidden">
+        <div className="space-y-24">
+          {products.map((p, index) => (
+            <div key={index} className="relative group h-56 fade-in-section">
+              <div 
+                className="absolute top-0 left-0 h-full bg-gray-100 w-40 group-hover:w-5/12 transition-all duration-500 ease-in-out bg-cover bg-center"
+                style={{ 
+                  clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)',
+                  backgroundImage: `url(${p.image})`
+                }}
+              ></div>
+              <div className="relative max-w-screen-xl mx-auto h-full">
+                <div className="absolute left-5 top-0 h-full flex items-center w-6/12 transform transition-transform duration-500 ease-in-out group-hover:translate-x-[85%]">
+                  <div className="pr-8">
+                    <h3 className="text-3xl font-bold font-clash tracking-wide text-amber-600">{p.name}</h3>
+                    <p className="mt-4 text-lg text-gray-600">{p.description}</p>
+                    <a href={p.link} className="group/link inline-flex items-center mt-6 gap-[13px] font-clash font-medium text-2xl text-black" style={{ lineHeight: '72px' }}>
+                      Read more
+                      <span className="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-full border border-gray-400 text-gray-600 transition-all duration-300 group-hover/link:bg-black group-hover/link:text-white group-hover/link:border-black">
+                        <ArrowRight size={16} className="transform transition-transform group-hover/link:translate-x-1" />
+                      </span>
+                    </a>
+                    <div 
+                      className="mt-3 h-1.5 w-full max-w-sm" 
+                      style={{ 
+                        background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)' 
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            {/* Bottom-right image */}
-            <div className="flex justify-end">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-auto object-cover"
-                preload="metadata"
-              >
-                <source src="/productvideo.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* Get in touch Section */}
-      <section className="bg-white text-black py-24 fade-in-section relative overflow-hidden">
-        <GridLines />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-16 relative z-10">
-          {/* Left side */}
-          <div className="flex flex-col justify-between">
-            <div>
-              <img src="/engineproduct.png" alt="Engine blueprint" className="w-full h-auto object-contain" />
-            </div>
-            <div>
-              <h2 className="text-5xl md:text-6xl font-bold leading-tight">
-                <span className="text-[#8A393B]">Get in touch for </span>
-                <span className="text-amber-500">specifications or supply.</span>
-              </h2>
-              <div className="mt-6 h-1.5 w-full max-w-sm bg-gradient-to-r from-[#8A393B] via-amber-500 to-transparent"></div>
-            </div>
-          </div>
-
-          {/* Right side - Animated Product List */}
-          <AnimatedProductList products={products} />
+      {/* CTA after slider */}
+      <section className="bg-white text-black py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-5xl md:text-7xl font-extrabold leading-[1.1]">
+            <span className="text-[#8A393B]">Get in touch for</span><br/>
+            <span className="text-[#F2913F]">specifications or supply.</span>
+          </h2>
+          <div
+            className="mt-6 h-1.5 w-80"
+            style={{
+              background:
+                'linear-gradient(90deg, #8A393B 0%, #1E3888 20%, #F2913F 60%, rgba(242,145,63,0) 100%)',
+            }}
+          />
         </div>
       </section>
     </div>

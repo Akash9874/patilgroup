@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { TypingAnimation } from '@/components/TypingAnimation';
 
 const FastenersPage = () => {
   useScrollAnimation();
@@ -25,7 +26,6 @@ const FastenersPage = () => {
           {/* Left Panel */}
           <div className="w-full md:w-1/3 flex flex-col justify-center p-8 md:p-12">
             <div className="text-left">
-              <p className="text-5xl lg:text-6xl font-bold text-white opacity-50">01</p>
               <h1 className="text-5xl lg:text-6xl font-bold text-white mt-2">
                 Fasteners
               </h1>
@@ -34,15 +34,19 @@ const FastenersPage = () => {
         </div>
       </div>
 
-      <div className="bg-black pb-32">
-        <div className="max-w-7xl mx-auto px-8 md:px-12 py-12 md:py-16">
+      <div className="bg-black py-10 md:py-12">
+        <div className="max-w-5xl mx-auto px-8 md:px-12">
             <div className="flex">
-                <div className="w-full md:w-3/4 pr-8 md:pr-12">
-                    <p className="text-xl md:text-2xl lg:text-3xl font-light text-white leading-relaxed fade-in-section">
-                        Patil Group has already set up global manufacturing facilities under the Make in India initiative capable of supplying world class fastening systems for railway infrastructure
-                    </p>
+                <div className="w-full md:w-4/5 pr-6 md:pr-10">
+                    <TypingAnimation
+                      text="Patil Group has already set up global manufacturing facilities under the Make in India initiative capable of supplying world class fastening systems for railway infrastructure"
+                      showCursor
+                      speed={30}
+                      className="block text-lg md:text-2xl font-light text-white leading-relaxed fade-in-section"
+                      cursorColor="#ffffff"
+                    />
                 </div>
-                <div className="hidden md:block md:w-1/4 border-l border-gray-200"></div>
+                <div className="hidden md:block md:w-1/5 border-l border-gray-700/40"></div>
             </div>
         </div>
       </div>

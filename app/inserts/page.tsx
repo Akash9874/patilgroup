@@ -22,7 +22,6 @@ const InsertsPage = () => {
         <div className="absolute inset-0 bg-black bg-opacity-60 z-10" />
         <div className="relative z-20 h-full flex items-center max-w-7xl mx-auto px-8">
           <div className="w-1/2">
-            <p className="text-7xl font-bold text-[#8A393B] opacity-75">04</p>
             <h1 className="text-7xl font-bold text-white mt-2">
               SGCI Insert And<br/>Base Plates
             </h1>

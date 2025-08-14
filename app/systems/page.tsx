@@ -18,12 +18,6 @@ const systemsData = [
     image: '/19_ballastless_mainline_banner.jpg'
   },
   {
-    title: 'Flash Butt Welding of Rails',
-    description: 'Our in-house welding plants handle high-precision rail panel fabrication using proven flash butt welding techniques.',
-    link: '/flash-butt-welding-of-rails',
-    image: '/18_flash_butt_banner.jpg'
-  },
-  {
     title: 'Patil RHEDA System',
     description: 'A specialized ballastless track system for viaducts and tunnels — developed in partnership with German engineering standards.',
     link: '/patil-rheda-system',
@@ -46,6 +40,12 @@ const systemsData = [
     description: 'Engineered for strength and durability, our sleepers enhance track stability with minimal maintenance.',
     link: '/turnouts-and-switches',
     image: '/08_turnouts_switches_banner.jpg'
+  },
+  {
+    title: 'Flash Butt Welding of Rails',
+    description: 'Our in-house welding plants handle high-precision rail panel fabrication using proven flash butt welding techniques.',
+    link: '/flash-butt-welding-of-rails',
+    image: '/18_flash_butt_banner.jpg'
   }
 ];
 
@@ -70,7 +70,7 @@ const SystemsContent = () => {
         <div className="h-1/2 flex">
           {/* Left side */}
           <div className="w-1/2 relative">
-            <Image src="/seework2.jpg" alt="Engineering Excellence" fill className="object-cover" sizes="50vw" />
+            <Image src="/system23.jpg" alt="Engineering Excellence" fill className="object-cover" sizes="50vw" />
           </div>
           {/* Right side */}
           <div className="w-1/2 bg-[#1A1A1A] flex flex-col justify-center p-12 animate-fadeInUp">
