@@ -40,7 +40,7 @@ const OurClientelePage = () => {
       {/* Hero Section */}
       <div className="relative h-[60vh]">
         <Image
-          src="/engineering-infra.jpg"
+          src="/clientimage.jpg"
           alt="Architectural structure"
           width={1920}
           height={1080}

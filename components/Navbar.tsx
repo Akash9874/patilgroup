@@ -31,6 +31,8 @@ const Navbar = () => {
     { href: '/responsibilities', label: 'Our Responsibilities' },
     { href: '/safety', label: 'Safety' },
     { href: '/sustainability', label: 'Sustainability' },
+    { href: '/our-clientele', label: 'Our Clientele' },
+    { href: '/our-presence', label: 'Our Presence' },
   ];
 
   const productLinks = [
@@ -44,11 +46,8 @@ const Navbar = () => {
   const systemLinks = [
     { href: '/flash-butt-welding-of-rails', label: 'Flash Butt Welding' },
     { href: '/patil-rheda-system', label: 'Patil RHEDA System' },
-    { href: '/plinth-system', label: 'Plinth System' },
     { href: '/precast-plinth', label: 'Precast Plinth' },
-    { href: '/ballastless-track-main-line', label: 'Ballastless Track Main Line' },
     { href: '/ballastless-track-urban-metro', label: 'Ballastless Track Urban Metro' },
-    { href: '/turnouts-and-switches', label: 'Turnouts & Switches' },
   ];
 
   return (

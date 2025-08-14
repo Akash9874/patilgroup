@@ -17,7 +17,7 @@ const PatilRhedaSystemPage = () => {
       {/* Hero Section */}
       <section className="relative h-screen bg-black">
         <div className="absolute inset-0 h-full w-full">
-          <img src="/train 2.jpg" alt="Train at a station" className="h-full w-full object-cover" />
+          <img src="/rhedahero.jpeg" alt="Patil RHEDA System" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
         <div className="relative z-10 h-full flex items-center justify-start pl-4 sm:pl-8 md:pl-16 lg:pl-24">
@@ -41,7 +41,7 @@ const PatilRhedaSystemPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-12 fade-in-section">
             <div className="md:w-1/2">
-              <img src="/engineering-infra.jpg" alt="Abstract technology background" className="rounded-lg shadow-lg" />
+              <img src="/rheda1.jpg" alt="Patil RHEDA implementation" className="rounded-lg shadow-lg" />
             </div>
             <div className="md:w-1/2 bg-white text-black p-8 rounded-lg shadow-xl">
               <h3 className="text-2xl font-bold text-[#8A393B]">It has been implemented in:</h3>

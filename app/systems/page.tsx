@@ -1,22 +1,17 @@
 "use client";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { ArrowRight } from 'lucide-react';
 
 const systemsData = [
   {
-    title: 'Ballastless Track - Urban Metro',
+    title: 'Ballastless Track',
     description: 'Designed for high-availability metro corridors, these systems reduce downtime and structural fatigue in dense urban transit.',
     link: '/ballastless-track-urban-metro',
-    image: '/20_ballastless_urban_metro_banner.jpg'
+    image: '/ballasttrack.png'
   },
-  {
-    title: 'Ballastless Track - Main Line',
-    description: 'Built for high-speed, long-distance corridors — engineered to minimize maintenance across tunnels, bridges, and aprons.',
-    link: '/ballastless-track-main-line',
-    image: '/19_ballastless_mainline_banner.jpg'
-  },
+
   {
     title: 'Patil RHEDA System',
     description: 'A specialized ballastless track system for viaducts and tunnels — developed in partnership with German engineering standards.',
@@ -24,30 +19,69 @@ const systemsData = [
     image: '/26_mobile_RHEDA_plant.jpg'
   },
   {
-    title: 'Plinth System',
-    description: 'A cast-in-place track solution ideal for metros and elevated structures where tight alignment and control are critical.',
-    link: '/plinth-system',
-    image: '/02_railway_infra_symbol.jpg'
-  },
-  {
     title: 'Precast Plinth',
     description: 'Factory-prepared plinth units that offer cleaner installation, reduced onsite time, and greater curve control.',
     link: '/precast-plinth',
-    image: '/23_precast_plinth_process.jpg'
+    image: '/precast1.jpg'
   },
-  {
-    title: 'Turnouts & Switches',
-    description: 'Engineered for strength and durability, our sleepers enhance track stability with minimal maintenance.',
-    link: '/turnouts-and-switches',
-    image: '/08_turnouts_switches_banner.jpg'
-  },
+  
   {
     title: 'Flash Butt Welding of Rails',
     description: 'Our in-house welding plants handle high-precision rail panel fabrication using proven flash butt welding techniques.',
     link: '/flash-butt-welding-of-rails',
-    image: '/18_flash_butt_banner.jpg'
+    image: '/flashbuttslider.jpeg'
   }
 ];
+
+// Simple typewriter component that supports multiple colored segments and an optional line break
+const TypewriterText: React.FC<{
+  segments: { text: string; className?: string; lineBreakBefore?: boolean }[];
+  typingSpeedMs?: number;
+}> = ({ segments, typingSpeedMs = 40 }) => {
+  const [segmentIndex, setSegmentIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [showCaret, setShowCaret] = useState(true);
+
+  useEffect(() => {
+    const caretTimer = setInterval(() => setShowCaret((v) => !v), 500);
+    return () => clearInterval(caretTimer);
+  }, []);
+
+  useEffect(() => {
+    if (segmentIndex >= segments.length) return;
+    const current = segments[segmentIndex].text;
+    const timer = setTimeout(() => {
+      if (charIndex < current.length) {
+        setCharIndex((c) => c + 1);
+      } else {
+        setSegmentIndex((s) => s + 1);
+        setCharIndex(0);
+      }
+    }, typingSpeedMs);
+    return () => clearTimeout(timer);
+  }, [charIndex, segmentIndex, segments, typingSpeedMs]);
+
+  return (
+    <span>
+      {segments.map((seg, idx) => {
+        const isCurrent = idx === segmentIndex;
+        const isCompleted = idx < segmentIndex;
+        const content = isCompleted
+          ? seg.text
+          : isCurrent
+          ? seg.text.substring(0, charIndex)
+          : '';
+        return (
+          <React.Fragment key={idx}>
+            {seg.lineBreakBefore && <br />}
+            <span className={seg.className}>{content}</span>
+          </React.Fragment>
+        );
+      })}
+      <span className="inline-block w-1 ml-1 align-baseline" style={{ opacity: showCaret ? 1 : 0, backgroundColor: '#ffffff', height: '1em' }}></span>
+    </span>
+  );
+};
 
 const SystemsContent = () => {
   useScrollAnimation();
@@ -74,8 +108,14 @@ const SystemsContent = () => {
           </div>
           {/* Right side */}
           <div className="w-1/2 bg-[#1A1A1A] flex flex-col justify-center p-12 animate-fadeInUp">
-            <h2 className="text-5xl font-bold text-[#F2913F] leading-tight">
-              Engineering Excellence <br /> for a <span className="text-[#8A393B]">Stronger Tomorrow.</span>
+            <h2 className="text-5xl font-bold leading-tight">
+              <TypewriterText
+                segments={[
+                  { text: 'Engineering Excellence', className: 'text-[#F2913F]' },
+                  { text: 'for a ', lineBreakBefore: true },
+                  { text: 'Stronger Tomorrow.', className: 'text-[#8A393B]' },
+                ]}
+              />
             </h2>
             <div className="w-1/2 border-t border-gray-700 my-8"></div>
             <p className="text-lg">
