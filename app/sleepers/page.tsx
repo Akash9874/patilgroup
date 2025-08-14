@@ -108,7 +108,7 @@ const SleepersPage = () => {
         </div>
     </div>
 
-    <div className="bg-[#F5F4F1] py-16">
+    <div className="bg-black py-16">
         <div className="max-w-7xl mx-auto px-8 md:px-12">
             <h2 className="text-5xl font-bold text-[#F2913F] mb-12 text-center fade-in-section">
                 Composite Sleepers
@@ -117,7 +117,7 @@ const SleepersPage = () => {
                 <div className="slide-in-left">
                     <Image src="/sleepertype2.jpg" alt="Composite Sleepers" width={600} height={400} className="rounded-lg" />
                 </div>
-                <div className="bg-white p-8 rounded-lg shadow-lg slide-in-right">
+                <div className="bg-white text-black p-8 rounded-lg shadow-lg slide-in-right">
                     <ul className="list-disc list-inside text-lg space-y-2">
                         <li>India's largest supplier of PSC sleepers</li>
                         <li>12 plants</li>
@@ -127,12 +127,12 @@ const SleepersPage = () => {
             </div>
             <div className="flex justify-center mt-12 fade-in-section">
                 <div className="flex space-x-2">
-                    <span className="w-2 h-2 bg-gray-300 rounded-full"></span>
-                    <span className="w-8 h-2 bg-gray-400 rounded-full"></span>
-                    <span className="w-2 h-2 bg-gray-300 rounded-full"></span>
-                    <span className="w-2 h-2 bg-gray-300 rounded-full"></span>
-                    <span className="w-2 h-2 bg-gray-300 rounded-full"></span>
-                    <span className="w-2 h-2 bg-gray-300 rounded-full"></span>
+                    <span className="w-2 h-2 bg-gray-500 rounded-full"></span>
+                    <span className="w-8 h-2 bg-gray-300 rounded-full"></span>
+                    <span className="w-2 h-2 bg-gray-500 rounded-full"></span>
+                    <span className="w-2 h-2 bg-gray-500 rounded-full"></span>
+                    <span className="w-2 h-2 bg-gray-500 rounded-full"></span>
+                    <span className="w-2 h-2 bg-gray-500 rounded-full"></span>
                 </div>
             </div>
         </div>

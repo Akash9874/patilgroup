@@ -9,7 +9,7 @@ export default function LegacyPage() {
       <section className="relative h-[70vh] md:h-[80vh] w-full overflow-hidden">
         {/* Background video */}
         <video
-          src="/ourlegacyhero2.mp4"
+          src="/ourlegacy1.mp4"
           autoPlay
           muted
           loop
@@ -22,8 +22,8 @@ export default function LegacyPage() {
         <div className="relative z-10 h-full max-w-7xl mx-auto flex items-end md:items-center">
           <div className="px-6 md:px-8 lg:px-12 pb-10 md:pb-0">
             <h1 className="text-white font-bold leading-none text-6xl sm:text-7xl md:text-8xl lg:text-9xl drop-shadow-lg">
-              <span className="block">Our</span>
-              <span className="block">Legacy</span>
+              <span className="block text-[#F2913F]">Our</span>
+              <span className="block text-[#8A393B]">Legacy</span>
               </h1>
           </div>
         </div>

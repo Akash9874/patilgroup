@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { TypingAnimation } from '@/components/TypingAnimation';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const SafetyPage = () => {
@@ -12,7 +13,7 @@ const SafetyPage = () => {
       <div className="relative h-auto md:h-[600px]">
         {/* Background Image */}
         <Image
-          src="/safetyhero.JPG"
+          src="/safetyside.jpg"
           alt="Safety"
           layout="fill"
           objectFit="cover"
@@ -24,7 +25,7 @@ const SafetyPage = () => {
         {/* Content */}
         <div className="relative z-20 max-w-7xl mx-auto h-full flex items-center">
           <div className="w-full md:w-1/2 p-8 md:p-12 fade-in-section">
-            <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">Railway Side Safety</h1>
+            <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">Rail wayside safety</h1>
           </div>
         </div>
       </div>
@@ -33,10 +34,22 @@ const SafetyPage = () => {
       <section className="bg-black text-white py-16 fade-in-section">
         <div className="max-w-7xl mx-auto px-8 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div className="text-left">
-            <h2 className="text-4xl md:text-6xl font-bold text-[#8A393B]">Protecting tracks</h2>
+            <TypingAnimation
+              text="Protecting tracks"
+              showCursor
+              speed={70}
+              className="text-4xl md:text-6xl font-bold text-[#8A393B]"
+              cursorColor="#8A393B"
+            />
           </div>
           <div className="text-center">
-            <h3 className="text-2xl md:text-4xl font-bold text-amber-500">Securing Journeys</h3>
+            <TypingAnimation
+              text="Securing Journeys"
+              showCursor
+              speed={70}
+              className="text-2xl md:text-4xl font-bold text-amber-500"
+              cursorColor="#F2913F"
+            />
             <p className="mt-4 text-sm md:text-base text-gray-200 max-w-xl mx-auto">
               Patil Group builds practical, durable solutions to keep railway corridors safe and operational. From high speed routes to regional lines, our systems are made to prevent intrusions, reduce risks and ensure uninterrupted train movement.
             </p>
@@ -91,10 +104,10 @@ const SafetyPage = () => {
         <div className="max-w-5xl mx-auto px-8">
           <div className="flex items-center gap-4">
             <div className="hidden md:block flex-1 h-1 bg-gradient-to-r from-transparent to-[#F2913F]"></div>
-            <h3 className="text-3xl md:text-4xl font-bold text-amber-500 text-center whitespace-nowrap">Made for Indian Railways</h3>
+            <h3 className="text-4xl md:text-6xl font-bold text-amber-500 text-center whitespace-nowrap">Made for Indian Railways</h3>
             <div className="hidden md:block flex-1 h-1 bg-gradient-to-l from-transparent to-[#F2913F]"></div>
           </div>
-          <p className="mt-4 text-sm md:text-base text-gray-200 text-center max-w-3xl mx-auto">
+          <p className="mt-4 text-base md:text-lg text-gray-200 text-center max-w-3xl mx-auto">
             Every product is manufactured under strict quality control in a factory environment. This ensures consistent
             strength, precise dimensions and long service life — meeting the standards of modern railway operations.
           </p>

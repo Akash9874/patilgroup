@@ -22,7 +22,7 @@ const PrecastPage = () => {
       <div className="relative h-auto md:h-[600px]">
         {/* Background Image */}
         <Image
-          src="/precast-hero.jpg" // replace with any suitable image in public/
+          src="/precast1.jpg"
           alt="Precast Solutions"
           layout="fill"
           objectFit="cover"
@@ -51,7 +51,7 @@ const PrecastPage = () => {
           {/* Left Image */}
           <div className="relative h-[380px] md:h-[520px] slide-in-left">
             <Image
-              src="/23_precast_plinth_process.jpg"
+              src="/precast2.jpg"
               alt="Precast manufacturing"
               layout="fill"
               objectFit="cover"

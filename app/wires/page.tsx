@@ -45,8 +45,8 @@ const WiresPage = () => {
               <p className="text-2xl text-gray-400">(Andhra Pradesh)</p>
             </div>
             <div className="border-r border-gray-700 px-4 slide-in-right">
-              <h3 className="text-4xl font-semibold text-[#8A393B]">Ajmer</h3>
-              <p className="text-2xl text-gray-400">(Andhra Pradesh)</p>
+              <h3 className="text-4xl font-semibold text-[#8A393B]">Medchal</h3>
+              <p className="text-2xl text-gray-400">(Telangana)</p>
             </div>
             <div className="pl-4 slide-in-left">
               <h3 className="text-4xl font-semibold text-[#8A393B]">Bokaro</h3>

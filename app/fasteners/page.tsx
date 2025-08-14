@@ -64,8 +64,8 @@ const FastenersPage = () => {
                 <h3 className="text-3xl font-semibold text-[#F2913F]">Elastic Rail Clips</h3>
               </div>
               <div className="md:col-span-1 slide-in-right">
-                <h4 className="text-lg font-bold text-[#F2913F]">ERC clips: mark III and V</h4>
-                <p className="text-lg text-gray-600 mt-2">
+                <h4 className="text-2xl md:text-3xl font-bold text-[#F2913F]">ERC clips: mark III and V</h4>
+                <p className="text-xl md:text-2xl text-gray-600 mt-2">
                   Manufactured in Ajmer<br />
                   Approved by RDSO for Indian Railways and freight corridors
                 </p>
@@ -78,15 +78,15 @@ const FastenersPage = () => {
                 <h3 className="text-3xl font-semibold text-[#F2913F]">GFN Liners</h3>
               </div>
               <div className="md:col-span-1 slide-in-right">
-                <p className="text-lg text-gray-600 mt-2">
+                <p className="text-xl md:text-2xl text-gray-600 mt-2">
                   GFN liner production<br />
                   84 lakh units per annum<br />
                   RDSO approved
                 </p>
               </div>
               <div className="md:col-span-1 slide-in-left">
-                <h4 className="text-lg font-bold text-[#F2913F]">SKL 14 for Normal Tracks</h4>
-                <p className="text-lg text-gray-600 mt-2">
+                <h4 className="text-2xl md:text-3xl font-bold text-[#F2913F]">SKL 14 for Normal Tracks</h4>
+                <p className="text-xl md:text-2xl text-gray-600 mt-2">
                   Spring deflection<br />
                   tilting protection<br />
                   high tensioning force<br />
@@ -101,8 +101,8 @@ const FastenersPage = () => {
                 <h3 className="text-3xl font-semibold text-[#F2913F]">System W 14<br />HH</h3>
               </div>
               <div className="md:col-span-1 slide-in-right">
-                <h4 className="text-lg font-bold text-[#F2913F]">(Heavy Haul)</h4>
-                <p className="text-lg text-gray-600 mt-2">
+                <h4 className="text-2xl md:text-3xl font-bold text-[#F2913F]">(Heavy Haul)</h4>
+                <p className="text-xl md:text-2xl text-gray-600 mt-2">
                   Used in freight and heavy axle routes<br />
                   Allows tension clamping and tilt protection<br />
                   Reduces long term maintenance

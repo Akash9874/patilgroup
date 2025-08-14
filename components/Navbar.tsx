@@ -30,7 +30,6 @@ const Navbar = () => {
     { href: '/news', label: 'In News' },
     { href: '/responsibilities', label: 'Our Responsibilities' },
     { href: '/safety', label: 'Safety' },
-    { href: '/gallery', label: 'Photo Gallery' },
     { href: '/sustainability', label: 'Sustainability' },
   ];
 
@@ -40,8 +39,6 @@ const Navbar = () => {
     { href: '/wires', label: 'Wires' },
     { href: '/inserts', label: 'Inserts' },
     { href: '/precast', label: 'Precast' },
-    { href: '/under-sleeper-pads', label: 'Under Sleeper Pads' },
-    { href: '/noise-vibration-solutions', label: 'Noise & Vibration Solutions' },
   ];
 
   const systemLinks = [

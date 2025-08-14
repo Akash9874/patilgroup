@@ -13,7 +13,7 @@ const InsertsPage = () => {
       {/* Hero Section */}
       <div className="relative h-[600px]">
         <Image
-          src="/insertsheroimage.jpg"
+          src="/insertshero1.jpg"
           alt="SGCI Insert And Base Plates"
           layout="fill"
           objectFit="cover"
@@ -47,7 +47,7 @@ const InsertsPage = () => {
         <div className="max-w-7xl mx-auto px-8">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="slide-in-left">
-              <Image src="/insertsimage.png" alt="SGCI Inserts" width={500} height={300} className="rounded-lg object-cover w-full h-auto" />
+              <Image src="/insertsimage.png" alt="SGCI Inserts" width={350} height={80} className="rounded-lg object-cover w-300 h-100 mx-auto" />
             </div>
             <div className="slide-in-right">
               <Image src="/insertsimage2.jpg" alt="SGCI Inserts 2" width={500} height={300} className="rounded-lg object-cover w-full h-auto" />
@@ -59,10 +59,10 @@ const InsertsPage = () => {
       {/* Base Plates Section */}
       <div className="bg-black py-16">
         <div className="max-w-7xl mx-auto px-8 fade-in-section">
-          <h2 className="text-5xl font-bold text-[#8A393B] mb-8">Base Plates for Metro Rails</h2>
-          <p className="text-xl mb-8">Also manufactured at the same foundry. These plates are essential for slab track systems in urban rail infrastructure.</p>
-          <h3 className="text-4xl font-bold mb-4">Explore More Railway Solutions</h3>
-          <p className="text-xl mb-4">Patil Group offers a complete portfolio of railway infrastructure products.</p>
+          <h2 className="text-6xl md:text-7xl font-bold text-[#8A393B] mb-8">Base Plates for Metro Rails</h2>
+          <p className="text-2xl md:text-3xl mb-8">Also manufactured at the same foundry. These plates are essential for slab track systems in urban rail infrastructure.</p>
+          <h3 className="text-5xl md:text-6xl font-bold mb-4">Explore More Railway Solutions</h3>
+          <p className="text-2xl md:text-3xl mb-4">Patil Group offers a complete portfolio of railway infrastructure products.</p>
           <a href="#" className="text-[#F2913F] font-semibold flex items-center">
             Read More 
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5-5 5M6 12h12" /></svg>
