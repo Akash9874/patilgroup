@@ -17,12 +17,12 @@ import {
 const projects = [
   {
     city: "Bangalore Metro",
-    image: "/bangaloremetrohero.png",
+    image: "/bangaloremonu.webp",
     link: "/projects"
   },
   {
     city: "Delhi Metro",
-    image: "/delhimetrohero.png",
+    image: "/delhimonu.jpg",
     link: "/delhi-phase-3"
   },
   {
@@ -32,17 +32,17 @@ const projects = [
   },
   {
     city: "Mumbai Metro",
-    image: "/mumbaimetrohero.png",
+    image: "/mumbaimonu.jpeg",
     link: "/mumbai-line-2b"
   },
   {
     city: "Kolkata Metro",
-    image: "/kolkataherometro.jpeg",
+    image: "/kolkatamonu.jpg",
     link: "/kolkata-stretch"
   },
     {
     city: "Ahmedabad Metro",
-    image: "/ahemdabadmetrohero.jpeg",
+    image: "/ahemdabadmonu.webp",
     link: "/ahmedabad-phase-2"
   },
 ];
@@ -270,7 +270,7 @@ export default function Home() {
                   <div className="text-gray-500 text-base font-medium">Clients Satisfactions</div>
               </div>
               <div className="flex flex-col items-center justify-center fade-in-section" style={{ transitionDelay: '400ms' }}>
-                  <StatCounter end={10000000} duration={2.5} suffix="+" />
+                  <StatCounter end={4000000} duration={2.5} suffix="+" />
                   <div className="text-gray-500 text-base font-medium">Happy Sleepers</div>
               </div>
           </div>
@@ -286,7 +286,7 @@ export default function Home() {
           <div className="flex justify-between items-end mb-12 fade-in-section">
             <div>
               <h2 className="text-4xl font-bold text-[#8A393B] mb-2">Our Projects</h2>
-              <p className="text-gray-500">some placeholder text</p>
+              <p className="text-gray-500"></p>
               </div>
             <div className="flex items-center gap-4">
               <CarouselPrevious className="relative w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700" />
