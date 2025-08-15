@@ -8,13 +8,6 @@ const IndiaMap: React.FC = () => {
   const [svgMarkup, setSvgMarkup] = useState<string>('');
   const containerRef = useRef<HTMLDivElement>(null);
   const [hoveredStateId, setHoveredStateId] = useState<string | null>(null);
-  const [pinCenter, setPinCenter] = useState<{ x: number; y: number } | null>(null);
-  const [stateRectPct, setStateRectPct] = useState<{
-    left: number;
-    top: number;
-    width: number;
-    height: number;
-  } | null>(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -42,11 +35,10 @@ const IndiaMap: React.FC = () => {
       if (!target) return;
       const stateEl = target.closest('[id^="IN-"]');
       const id = stateEl?.getAttribute('id');
-      if (id) setHoveredStateId(id.toUpperCase());
+      if (id) setHoveredStateId(id);
     };
     const onLeave = () => {
       setHoveredStateId(null);
-      setPinCenter(null);
     };
     svgEl.addEventListener('pointerover', onOver);
     svgEl.addEventListener('pointerleave', onLeave);
@@ -84,65 +76,79 @@ const IndiaMap: React.FC = () => {
     []
   );
 
-  // Optional per-state, per-label overrides: position as ratio within hovered state's bounding box
-  const pinOverrides: Record<string, Record<string, { rx: number; ry: number }>> = useMemo(
-    () => ({
-      'IN-AP': {
-        // Bobbili (Vizianagaram district, NE Andhra Pradesh) – near the top-right of the state
-        Bobbili: { rx: 0.82, ry: 0.20 },
-      },
-    }),
-    []
-  );
 
-  // When hovered state changes, compute the visual centroid to place pins
-  useEffect(() => {
-    if (!hoveredStateId) {
-      setPinCenter(null);
-      return;
-    }
-    if (!containerRef.current) return;
-    const svgEl = containerRef.current.querySelector('svg') as SVGSVGElement | null;
-    if (!svgEl) return;
-    const stateEl = svgEl.querySelector(`#${hoveredStateId}`) as SVGGraphicsElement | null;
-    if (!stateEl) return;
-    // Compute center using DOMClientRect to avoid transform inconsistencies
-    const stateRect = stateEl.getBoundingClientRect();
-    const containerRect = containerRef.current.getBoundingClientRect();
-    const cx = stateRect.left + stateRect.width / 2;
-    const cy = stateRect.top + stateRect.height / 2;
-    const cxPct = ((cx - containerRect.left) / containerRect.width) * 100;
-    const cyPct = ((cy - containerRect.top) / containerRect.height) * 100;
-    setPinCenter({ x: cxPct, y: cyPct });
-    setStateRectPct({
-      left: ((stateRect.left - containerRect.left) / containerRect.width) * 100,
-      top: ((stateRect.top - containerRect.top) / containerRect.height) * 100,
-      width: (stateRect.width / containerRect.width) * 100,
-      height: (stateRect.height / containerRect.height) * 100,
-    });
-  }, [hoveredStateId]);
 
+  // Compute all pins for all states at once
   const activePins: Pin[] = useMemo(() => {
-    if (!hoveredStateId) return [];
-    const labels = labelsByState[hoveredStateId] || [];
-    if (labels.length === 0) return [];
-
-    const overrides = pinOverrides[hoveredStateId] || {};
     const pins: Pin[] = [];
-    labels.forEach((label, idx) => {
-      const ov = overrides[label];
-      if (ov && stateRectPct) {
-        const x = stateRectPct.left + ov.rx * stateRectPct.width;
-        const y = stateRectPct.top + ov.ry * stateRectPct.height;
-        pins.push({ x, y, label });
-      } else if (pinCenter) {
-        const spacing = 2.5;
-        const startY = pinCenter.y - ((labels.length - 1) * spacing) / 2;
-        pins.push({ x: pinCenter.x, y: startY + idx * spacing, label });
-      }
+    
+    // Predefined positions for each state's pins (as percentage of container)
+    // Adjusted to ensure pins stay within the map boundaries
+    const statePositions: Record<string, { x: number; y: number }> = {
+      'IN-UT': { x: 18, y: 25 },      // Uttarakhand - North
+      'IN-AP': { x: 17, y: 75 },      // Andhra Pradesh - Southeast coast  
+      'IN-BR': { x: 30, y: 38 },      // Bihar - East
+      'IN-WB': { x: 33, y: 47 },      // West Bengal - East
+      'IN-TG': { x: 19, y: 65 },      // Telangana - South-central
+      'IN-OD': { x: 27, y: 56 },      // Odisha - East coast
+      'IN-AS': { x: 40, y: 39 },      // Assam - Northeast (moved left from edge)
+      'IN-UP': { x: 20, y: 33 },      // Uttar Pradesh - North-central
+      'IN-RJ': { x: 10, y: 33 },      // Rajasthan - Northwest
+      'IN-CT': { x: 25, y: 50 },      // Chhattisgarh - Central-east
+      'IN-JH': { x: 29, y: 48 },      // Jharkhand - East
+      'IN-HR': { x: 13, y: 28 },      // Haryana - North
+      'IN-GJ': { x: 5, y: 47 },      // Gujarat - West
+      'IN-KA': { x: 15, y: 80 },      // Karnataka - Southwest
+      'IN-TN': { x: 18, y: 85 },      // Tamil Nadu - South
+      'IN-DL': { x: 15, y: 30 },      // Delhi - North
+      'IN-MP': { x: 17, y: 47 },      // Madhya Pradesh - Central
+    };
+
+    Object.entries(labelsByState).forEach(([stateId, labels]) => {
+      const statePos = statePositions[stateId];
+      if (!statePos || labels.length === 0) return;
+      
+      labels.forEach((label, idx) => {
+        // For states with multiple locations, spread them horizontally and vertically
+        let xOffset = 0;
+        let yOffset = 0;
+        
+        // Special handling for states with multiple locations
+        if (stateId === 'IN-TG' && labels.length > 1) {
+          // Telangana - spread horizontally
+          xOffset = (idx - 1) * 3;
+          yOffset = idx * 1.5;
+        } else if (stateId === 'IN-AP' && labels.length > 1) {
+          // Andhra Pradesh - one north, one south
+          if (label === 'Bobbili') {
+            yOffset = -3; // Northern AP
+          } else if (label === 'Kovvur') {
+            yOffset = 2; // Southern AP
+          }
+        } else if (stateId === 'IN-AS' && labels.length > 1) {
+          // Assam - spread horizontally
+          xOffset = (idx - 0.5) * 4;
+        } else if (stateId === 'IN-KA' && labels.length > 1) {
+          // Karnataka - Tumkur near Bangalore, Hubli northwest
+          if (label === 'Hubli') {
+            xOffset = -3;
+            yOffset = -2;
+          }
+        } else {
+          // Default stacking for other states with multiple locations
+          yOffset = idx * 2;
+        }
+        
+        pins.push({
+          x: statePos.x + xOffset,
+          y: statePos.y + yOffset,
+          label
+        });
+      });
     });
+    
     return pins;
-  }, [hoveredStateId, labelsByState, pinOverrides, stateRectPct, pinCenter]);
+  }, [labelsByState]);
   return (
     <div className="map-container" aria-label="India map" ref={containerRef}>
       {/* Inline the SVG so we can style paths and hover states */}
@@ -153,21 +159,19 @@ const IndiaMap: React.FC = () => {
           dangerouslySetInnerHTML={{ __html: svgMarkup }}
         />
       )}
-      {/* Pins overlay, shown only when hovering a state with configured pins */}
-      {activePins.length > 0 && (
-        <div className="pins-overlay">
-          {activePins.map((pin, idx) => (
-            <div
-              key={`${pin.label}-${idx}`}
-              className="pin"
-              style={{ left: `${pin.x}%`, top: `${pin.y}%` }}
-            >
-              <div className="dot" />
-              <div className="label">{pin.label}</div>
-            </div>
-          ))}
-        </div>
-      )}
+      {/* Pins overlay, always visible */}
+      <div className="pins-overlay">
+        {activePins.map((pin, idx) => (
+          <div
+            key={`${pin.label}-${idx}`}
+            className="pin"
+            style={{ left: `${pin.x}%`, top: `${pin.y}%` }}
+          >
+            <div className="dot" />
+            <div className="label">{pin.label}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
