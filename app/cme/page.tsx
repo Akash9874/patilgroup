@@ -26,7 +26,7 @@ const CMEPage = () => {
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
         <div className="relative z-10 h-full flex items-center justify-start p-16">
-          <h1 className="text-5xl md:text-7xl font-bold font-clash leading-tight text-white">
+          <h1 className="text-5xl md:text-7xl font-bold font-clash leading-tight text-white fade-in-section">
             Centre for<br />Manufacturing<br />Excellence
           </h1>
         </div>
@@ -59,7 +59,7 @@ const CMEPage = () => {
 
             {/* Right: Description text */}
             <div>
-              <p className="text-xl md:text-2xl lg:text-3xl leading-relaxed">
+              <p className="text-xl md:text-2xl lg:text-3xl leading-relaxed fade-in-section">
                 The Patil Group has established the Dr. S. S. Patil Centre for Manufacturing Excellence as an in-house initiative,
                 driven by a dedicated team of experts. This centre was created to achieve the highest standards in manufacturing
                 excellence and cost management while fostering continuous improvement.
@@ -74,7 +74,7 @@ const CMEPage = () => {
         {/* Title Bar */}
         <div className="bg-black">
           <div className="max-w-7xl mx-auto px-6 md:px-12 py-6">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#F2913F]">Our Key Objectives</h2>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-[#F2913F] fade-in-section">Our Key Objectives</h2>
           </div>
         </div>
 
@@ -84,23 +84,22 @@ const CMEPage = () => {
             {/* Left column with divider */}
             <div className="border-r border-gray-200 p-6 md:p-10 flex flex-col justify-between min-h-[26rem] md:min-h-[32rem]">
               <div>
-                <h3 className="text-3xl md:text-4xl font-bold text-[#8A393B]">
+                <h3 className="text-3xl md:text-4xl font-bold text-[#8A393B] fade-in-section">
                   Enhancing Overall
                   <br />
                   Equipment Efficiency (OEE)
                 </h3>
               </div>
-              <p className="text-base md:text-lg text-black/90 max-w-xl">
+              <p className="text-base md:text-lg text-black/90 max-w-xl fade-in-section">
                 We aim to maximize productivity by reducing downtime, improving performance, and ensuring equipment runs at its best—every shift, every day.
               </p>
             </div>
 
-            {/* Right column with circular image */}
+            {/* Right column with rectangular image */}
             <div className="relative p-6 md:p-10 flex items-center justify-center">
-              <div className="w-64 h-64 md:w-80 md:h-80 lg:w-[28rem] lg:h-[28rem] rounded-full overflow-hidden shadow-lg">
-                <img src="/engineering-infra.jpg" alt="OEE Visual" className="w-full h-full object-cover" />
+              <div className="w-80 h-64 md:w-96 md:h-72 lg:w-[30rem] lg:h-[22rem] rounded-lg overflow-hidden shadow-lg">
+                <img src="/cmehero.JPG" alt="OEE Visual" className="w-full h-full object-cover" />
               </div>
-              <ArrowRight className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 text-[#F2913F]" size={36} />
             </div>
           </div>
         </div>
@@ -109,13 +108,13 @@ const CMEPage = () => {
       {/* Initiatives Grid */}
       <section className="bg-black text-white py-16 md:py-20 fade-in-section">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <p className="text-xl md:text-2xl mb-8 md:mb-12">
+          <p className="text-xl md:text-2xl mb-8 md:mb-12 fade-in-section">
             To achieve these goals, the centre is actively implementing the following initiatives:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 bg-black border border-gray-800">
             {/* Card 1 */}
-            <div className="p-6 md:p-10 border-b md:border-b border-gray-800 md:border-r">
+            <div className="p-6 md:p-10 border-b md:border-b border-gray-800 md:border-r fade-in-section">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-4 md:mb-6">
                 Lean Manufacturing
               </h3>
@@ -125,7 +124,7 @@ const CMEPage = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="p-6 md:p-10 border-b md:border-b border-gray-800">
+            <div className="p-6 md:p-10 border-b md:border-b border-gray-800 fade-in-section">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-4 md:mb-6">
                 5S and Kaizen Methodologies
               </h3>
@@ -135,7 +134,7 @@ const CMEPage = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="p-6 md:p-10 md:border-r border-gray-800">
+            <div className="p-6 md:p-10 md:border-r border-gray-800 fade-in-section">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-4 md:mb-6">
                 Robotic Process Implementation
                 <br className="hidden md:block" /> & SPM Automation
@@ -146,7 +145,7 @@ const CMEPage = () => {
             </div>
 
             {/* Card 4 */}
-            <div className="p-6 md:p-10">
+            <div className="p-6 md:p-10 fade-in-section">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-4 md:mb-6">
                 IoT-enabled Condition Monitoring
               </h3>
@@ -163,13 +162,13 @@ const CMEPage = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left: Text */}
           <div>
-            <h2 className="text-5xl md:text-7xl font-extrabold text-[#F2913F]">DOJO Centers.</h2>
-            <h3 className="mt-3 text-3xl md:text-4xl font-semibold text-[#8A393B]">
+            <h2 className="text-5xl md:text-7xl font-extrabold text-[#F2913F] fade-in-section">DOJO Centers.</h2>
+            <h3 className="mt-3 text-3xl md:text-4xl font-semibold text-[#8A393B] fade-in-section">
               Enhanced skill development centers for
               <br className="hidden md:block" /> people development
             </h3>
 
-            <div className="mt-8 space-y-6 text-lg md:text-xl leading-relaxed">
+            <div className="mt-8 space-y-6 text-lg md:text-xl leading-relaxed fade-in-section">
               <p>
                 To support Indian Railways with a next-generation workforce, Patil Group has established a Skill Development Centre at its largest facility in Kargi Road.
               </p>
@@ -198,16 +197,14 @@ const CMEPage = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left: Copy */}
           <div>
-            <h2 className="text-6xl md:text-8xl font-extrabold text-[#F2913F] leading-tight">
-              Empowering Rural Youth
-              <br />
-              through Skill Development
+            <h2 className="text-6xl md:text-5xl font-extrabold text-[#F2913F] leading-tight fade-in-section">
+              Empowering Rural Youth through Skill Development
             </h2>
-            <h3 className="mt-4 text-3xl md:text-5xl font-semibold text-[#8A393B]">
+            <h3 className="mt-4 text-3xl md:text-5xl font-semibold text-[#8A393B] fade-in-section">
               Skilling Rural India for a Smarter Tomorrow
             </h3>
 
-            <div className="mt-8 space-y-6 text-xl md:text-2xl leading-relaxed">
+            <div className="mt-8 space-y-6 text-xl md:text-1xl leading-relaxed fade-in-section">
               <p>
                 Recognizing the growing demand for skilled professionals in the railway industry, Patil Group is committed to playing its part in upskilling rural youth and preparing them for emerging opportunities.
               </p>
@@ -218,9 +215,9 @@ const CMEPage = () => {
           </div>
 
           {/* Right: Image */}
-          <div className="flex justify-center md:justify-end">
+          <div className="flex justify-center md:justify-end md:translate-x-8 lg:translate-x-12 xl:translate-x-16">
             <img
-              src="/engineering-infra.jpg"
+              src="/cmeonemore.JPG"
               alt="Skill development visual"
               className="w-full max-w-xl md:max-w-none md:w-[520px] lg:w-[640px] h-auto rounded-md object-cover"
             />
@@ -231,16 +228,16 @@ const CMEPage = () => {
       {/* Inside the Training Program */}
       <section className="bg-black text-white py-16 md:py-24 fade-in-section">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <h2 className="text-4xl md:text-6xl font-extrabold text-center text-[#F2913F]">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-center text-[#F2913F] fade-in-section">
             Inside the Training Program
           </h2>
-          <p className="mt-4 text-sm md:text-base text-white/80 text-center max-w-4xl mx-auto">
+          <p className="mt-4 text-sm md:text-base text-white/80 text-center max-w-4xl mx-auto fade-in-section">
             Holistic Learning for Impactful Careers: Through this initiative, Patil Group aims to create a highly skilled workforce,
             contributing to the success of Indian Railways while empowering young professionals with stable and rewarding careers.
           </p>
 
           {/* Card 1 */}
-          <div className="mt-10 rounded-2xl bg-[#8A393B]/90 px-6 md:px-10 py-8 relative">
+          <div className="mt-10 rounded-2xl bg-[#8A393B]/90 px-6 md:px-10 py-8 relative fade-in-section transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-[#8A393B] cursor-pointer">
             <span className="absolute right-6 top-6 text-5xl md:text-7xl font-extrabold text-[#F2913F]">1</span>
             <h3 className="text-3xl md:text-4xl font-bold">Program Highlights</h3>
             <ul className="mt-4 list-disc pl-6 space-y-3 text-white/90 text-lg md:text-xl lg:text-2xl">
@@ -251,7 +248,7 @@ const CMEPage = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="mt-8 rounded-2xl bg-[#F2913F] px-6 md:px-10 py-8 relative text-black">
+          <div className="mt-8 rounded-2xl bg-[#F2913F] px-6 md:px-10 py-8 relative text-black fade-in-section transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-[#ff9a3f] cursor-pointer">
             <span className="absolute right-6 top-6 text-5xl md:text-7xl font-extrabold text-[#8A393B]">2</span>
             <h3 className="text-3xl md:text-4xl font-extrabold">Current Training Modules</h3>
             <ul className="mt-4 list-disc pl-6 space-y-3 text-lg md:text-xl lg:text-2xl">
@@ -264,7 +261,7 @@ const CMEPage = () => {
           </div>
 
           {/* Card 3 */}
-          <div className="mt-8 rounded-2xl bg-[#8A393B]/90 px-6 md:px-10 py-8 relative">
+          <div className="mt-8 rounded-2xl bg-[#8A393B]/90 px-6 md:px-10 py-8 relative fade-in-section transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-[#8A393B] cursor-pointer">
             <span className="absolute right-6 top-6 text-5xl md:text-7xl font-extrabold text-[#F2913F]">3</span>
             <h3 className="text-3xl md:text-4xl font-bold">State-of-the-art Facilities</h3>
             <ul className="mt-4 list-disc pl-6 space-y-3 text-white/90 text-lg md:text-xl lg:text-2xl">
@@ -289,14 +286,14 @@ const CMEPage = () => {
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left: Heading + Copy */}
           <div>
-            <h2 className="text-5xl md:text-7xl font-extrabold text-[#F2913F] leading-tight">
+            <h2 className="text-5xl md:text-7xl font-extrabold text-[#F2913F] leading-tight fade-in-section">
               First certificate from
               <br />
               quality forum of India
             </h2>
-            <p className="mt-6 text-base md:text-lg text-white/90 max-w-2xl">
+            <p className="mt-6 text-base md:text-lg text-white/90 max-w-2xl fade-in-section">
               Every plant of Patil Group has successfully completed many Quality Circle projects. We had participated in
-              “CCQC-2020, Hyderabad chapter” organized by QCFI (Quality Circle Forum of India) and were awarded a Gold Medal
+              "CCQC-2020, Hyderabad chapter" organized by QCFI (Quality Circle Forum of India) and were awarded a Gold Medal
               in the Quality Circle competition.
             </p>
           </div>
@@ -304,7 +301,7 @@ const CMEPage = () => {
           {/* Right: Circular Image */}
           <div className="relative flex justify-center md:justify-end">
             <div className="w-64 h-64 md:w-80 md:h-80 lg:w-[26rem] lg:h-[26rem] rounded-full overflow-hidden">
-              <img src="/engineering-infra.jpg" alt="Quality recognition visual" className="w-full h-full object-cover" />
+              <img src="/awardcme.jpg" alt="Quality recognition visual" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

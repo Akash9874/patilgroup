@@ -91,36 +91,6 @@ const PrecastPlinthPage = () => {
         </div>
       </section>
 
-      {/* Product Portfolio Section */}
-      <section className="bg-white text-black py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-5xl md:text-6xl font-extrabold text-[#8A393B]">Product Portfolio</h2>
-
-          <div className="mt-16">
-            <a href="/precast" className="block group">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-[#F2913F]">U Drains</h3>
-                  <p className="mt-4 text-lg md:text-xl max-w-3xl">
-                    for rapid surface water management in urban and highway projects
-                  </p>
-                </div>
-                <span className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full border border-[#F2913F] text-[#F2913F] transition-all duration-300 group-hover:bg-[#F2913F] group-hover:text-white">
-                  <ArrowRight size={20} />
-                </span>
-              </div>
-              <div
-                className="mt-8 h-1.5 w-80"
-                style={{
-                  background:
-                    'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
-                }}
-              />
-            </a>
-          </div>
-        </div>
-      </section>
-
     </div>
   );
 };
