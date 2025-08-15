@@ -1,26 +1,51 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAboutMenuOpen, setIsAboutMenuOpen] = useState(false);
   const [isProductsMenuOpen, setIsProductsMenuOpen] = useState(false);
   const [isSystemsMenuOpen, setIsSystemsMenuOpen] = useState(false);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          
+          // Show navbar when scrolling up, hide when scrolling down
+          if (currentScrollY < lastScrollY.current || currentScrollY <= 10) {
+            // Scrolling up or at the top of page
+            setIsVisible(true);
+          } else if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+            // Scrolling down and past 100px
+            setIsVisible(false);
+          }
+          
+          setScrollY(currentScrollY);
+          lastScrollY.current = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener('scroll', handleScroll);
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
+  // Always show navbar when dropdown menus are open
+  const shouldShowNavbar = isVisible || isAboutMenuOpen || isProductsMenuOpen || isSystemsMenuOpen;
   const navIsScrolled = scrollY > 50 || isAboutMenuOpen || isProductsMenuOpen || isSystemsMenuOpen;
 
   const aboutLinks = [
@@ -56,6 +81,8 @@ const Navbar = () => {
         navIsScrolled
           ? 'bg-black/40 backdrop-blur-sm shadow-sm' 
           : 'bg-black/30'
+      } ${
+        shouldShowNavbar ? 'translate-y-0' : '-translate-y-full'
       }`}
       onMouseLeave={() => {
         setIsAboutMenuOpen(false);
@@ -64,7 +91,7 @@ const Navbar = () => {
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-26">
           {/* Logo */}
           <div className="flex items-center animate-fadeInLeft -ml-8 sm:-ml-12 lg:-ml-16">
               <Link href="/" onMouseEnter={() => setIsAboutMenuOpen(false)}>
@@ -73,10 +100,10 @@ const Navbar = () => {
                   <img
                     src="/pg.png"
                     alt="Patil Group Logo"
-                    width={140}
-                    height={70}
+                    width={175}
+                    height={90}
                     loading="eager"
-                    className="h-16 sm:h-18 lg:h-20 w-auto transition-all duration-300 hover-scale cursor-pointer"
+                    className="h-18 sm:h-20 lg:h-24 w-auto transition-all duration-300 hover-scale cursor-pointer"
                   />
                 </picture>
               </Link>
