@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { TypingAnimation } from '@/components/TypingAnimation';
+import { TiltCard } from '@/components/TiltCard';
 
 const InsertsPage = () => {
   useScrollAnimation();
@@ -42,15 +43,47 @@ const InsertsPage = () => {
         </div>
       </div>
 
-      {/* Two Images Section */}
+      {/* Two Images Section with Tilt Effect */}
       <div className="bg-black py-16">
         <div className="max-w-7xl mx-auto px-8">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="slide-in-left">
-              <Image src="/insertsimage.png" alt="SGCI Inserts" width={350} height={80} className="rounded-lg object-cover w-300 h-100 mx-auto" />
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="slide-in-left flex justify-center">
+              <TiltCard
+                className="inline-block"
+                maxTilt={10}
+                scale={1}
+                glareEnable={true}
+                glareMaxOpacity={0.3}
+              >
+                <div className="relative overflow-hidden rounded-xl shadow-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-1">
+                  <Image 
+                    src="/insertsimage.png" 
+                    alt="SGCI Inserts" 
+                    width={400} 
+                    height={120} 
+                    className="rounded-lg object-cover w-90 h-90" 
+                  />
+                </div>
+              </TiltCard>
             </div>
-            <div className="slide-in-right">
-              <Image src="/insertsimage2.jpg" alt="SGCI Inserts 2" width={500} height={300} className="rounded-lg object-cover w-full h-auto" />
+            <div className="slide-in-right flex justify-center">
+              <TiltCard
+                className="inline-block"
+                maxTilt={10}
+                scale={1}
+                glareEnable={true}
+                glareMaxOpacity={0.1}
+              >
+                <div className="relative overflow-hidden rounded-xl shadow-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-1">
+                  <Image 
+                    src="/insertsimage2.jpg" 
+                    alt="SGCI Inserts 2" 
+                    width={500} 
+                    height={200} 
+                    className="rounded-lg object-cover w-full h-auto" 
+                  />
+                </div>
+              </TiltCard>
             </div>
           </div>
         </div>

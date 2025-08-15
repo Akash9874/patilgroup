@@ -99,6 +99,35 @@ const SafetyPage = () => {
         </div>
       </section>
 
+      {/* Safety image showcase section */}
+      <section className="bg-gray-50 py-16 md:py-24 fade-in-section">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* First safety image */}
+            <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+              <Image
+                src="/safety2.jpg"
+                alt="Railway safety infrastructure"
+                width={600}
+                height={400}
+                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            
+            {/* Second safety image */}
+            <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+              <Image
+                src="/safety3.jpg"
+                alt="Track safety solutions"
+                width={600}
+                height={400}
+                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Made for Indian Railways - moved to last */}
       <section className="bg-black text-white py-16 fade-in-section">
         <div className="max-w-5xl mx-auto px-8">
