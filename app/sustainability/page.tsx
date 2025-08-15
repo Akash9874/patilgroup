@@ -1,21 +1,25 @@
 "use client";
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Image from 'next/image';
+import { TypingAnimation } from '@/components/TypingAnimation';
 
 export default function SustainabilityPage() {
   useScrollAnimation();
   return (
     <div>
       <section className="relative h-[70vh] md:h-[80vh] w-full overflow-hidden fade-in-section">
-        {/* Background image */}
-        <Image
-          src="/sustainabilityhero.JPG"
-          alt="Sustainability background"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
+        {/* Background video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          preload="metadata"
+        >
+          <source src="/sustainhero.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         {/* Dark overlay for legibility */}
         <div className="absolute inset-0 bg-black/60" />
 
@@ -33,13 +37,27 @@ export default function SustainabilityPage() {
       <section className="bg-black py-16 md:py-24 fade-in-section">
         <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#8A393B] leading-tight slide-in-left">
-              Quiet changes.<br />
-              Tangible outcomes.
+            <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#8A393B] leading-tight">
+              <TypingAnimation
+                text="Quiet changes.
+Tangible outcomes."
+                showCursor={true}
+                speed={80}
+                startAfterMs={500}
+                cursorColor="#8A393B"
+                className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#8A393B] leading-tight"
+              />
             </p>
-            <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#F2913F] leading-tight md:text-right slide-in-right">
-              Built into every plant,<br />
-              every process.
+            <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#F2913F] leading-tight md:text-right">
+              <TypingAnimation
+                text="Built into every plant,
+every process."
+                showCursor={true}
+                speed={80}
+                startAfterMs={1500}
+                cursorColor="#F2913F"
+                className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#F2913F] leading-tight md:text-right"
+              />
             </p>
           </div>
         </div>
@@ -82,6 +100,46 @@ export default function SustainabilityPage() {
                 <li>Multi-stage dust extraction across units</li>
                 <li>Cleaner environment for every worker</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Image showcase section */}
+      <section className="bg-gray-50 py-16 md:py-24 fade-in-section">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* First image */}
+            <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+              <Image
+                src="/sustain.jpg"
+                alt="Sustainability initiative"
+                width={400}
+                height={300}
+                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            
+            {/* Second image */}
+            <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+              <Image
+                src="/sustain2.jpg"
+                alt="Environmental practices"
+                width={400}
+                height={300}
+                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            
+            {/* Third image */}
+            <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+              <Image
+                src="/sustainabilityhero.jpg"
+                alt="Green technology"
+                width={400}
+                height={300}
+                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
             </div>
           </div>
         </div>
