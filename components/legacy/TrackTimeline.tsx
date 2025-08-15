@@ -57,11 +57,11 @@ export default function TrackTimeline({
 	}, [items]);
 
 	return (
-		<section ref={containerRef} className="relative bg-white py-24">
-			<div className="relative max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+		<section ref={containerRef} className="relative bg-white py-32">
+			<div className="relative max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
 				{/* Centered vertical track (background image), layered twice to avoid visible seams */}
 				<div
-					className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-56 md:w-72 pointer-events-none"
+					className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-48 md:w-60 lg:w-64 pointer-events-none"
 					style={{
 						// Sleepers (horizontal ties): 18px spacing, 6px thickness
 						backgroundImage:
@@ -76,7 +76,7 @@ export default function TrackTimeline({
 
 				{/* Track unrevealed overlay (below the train). This makes the track appear revealed as train passes. */}
 				<motion.div
-					className="absolute left-1/2 -translate-x-1/2 w-56 md:w-72 bg-white pointer-events-none"
+					className="absolute left-1/2 -translate-x-1/2 w-48 md:w-60 lg:w-64 bg-white pointer-events-none"
 					style={{ top: overlayTopPx, bottom: 0 }}
 				/>
 
@@ -87,10 +87,10 @@ export default function TrackTimeline({
                     style={{ y: trainY, x: trainXOffset }}
                 />
 
-				<ul className="relative space-y-24">
+				<ul className="relative space-y-32">
 					{normalizedItems.map((item, index) => (
 						<li key={`${item.year}-${index}`} className="relative">
-							<div className={`grid grid-cols-1 md:grid-cols-2 gap-8 items-start ${item.side === 'left' ? '' : ''}`}>
+							<div className={`grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-20 items-start ${item.side === 'left' ? '' : ''}`}>
 								{item.side === 'left' ? (
 									<>
 										<motion.div
@@ -100,9 +100,9 @@ export default function TrackTimeline({
 											viewport={{ once: true, amount: 0.3 }}
 											className="text-right"
 										>
-											<p className="text-4xl md:text-5xl font-extrabold text-[#8A393B]">{item.year}</p>
-											<h4 className="text-2xl md:text-3xl font-semibold mt-2 text-[#8A393B]">{item.title}</h4>
-											{item.body && <p className="text-lg text-gray-700 mt-3">{item.body}</p>}
+											<p className="text-4xl md:text-5xl font-extrabold text-[#F2913F]">{item.year}</p>
+											<h4 className="text-2xl md:text-3xl font-semibold mt-4 text-[#8A393B] leading-relaxed">{item.title}</h4>
+											{item.body && <p className="text-lg text-gray-700 mt-4 leading-relaxed">{item.body}</p>}
 										</motion.div>
 										<div className="hidden md:block" />
 									</>
@@ -115,9 +115,9 @@ export default function TrackTimeline({
 											transition={{ duration: 0.6 }}
 											viewport={{ once: true, amount: 0.3 }}
 										>
-											<p className="text-4xl md:text-5xl font-extrabold text-[#8A393B]">{item.year}</p>
-											<h4 className="text-2xl md:text-3xl font-semibold mt-2 text-[#8A393B]">{item.title}</h4>
-											{item.body && <p className="text-lg text-gray-700 mt-3">{item.body}</p>}
+											<p className="text-4xl md:text-5xl font-extrabold text-[#F2913F]">{item.year}</p>
+											<h4 className="text-2xl md:text-3xl font-semibold mt-4 text-[#8A393B] leading-relaxed">{item.title}</h4>
+											{item.body && <p className="text-lg text-gray-700 mt-4 leading-relaxed">{item.body}</p>}
 										</motion.div>
 									</>
 								)}
