@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
+import { TypingAnimation } from '@/components/TypingAnimation';
 import {
   Dialog,
   DialogContent,
@@ -80,61 +81,94 @@ const projectsData = [
   {
     title: 'Mumbai Line 2B',
     image: '/mumbaimonu.jpeg',
-    description: 'Details for this project are not available at the moment.',
-    client: 'N/A',
-    principalClient: 'N/A',
-    specs: [],
-    conclusion: '',
+    description: `Patil Group supplied fastening systems for Mumbai Metro Line 2B, a critical corridor connecting DN Nagar to Mandale via Bandra. We delivered over 76,000 fastening assemblies, designed for high-traffic, elevated urban infrastructure.`,
+    client: 'KEC International Ltd.',
+    principalClient: 'Mumbai Metropolitan Region Development Authority (MMRDA)',
+    specs: [
+      'Fastener Types: 2-hole and 4-hole elastic clip sets',
+      'Quantities Supplied: 58,218 (2-hole) + 18,697 (4-hole) sets',
+      'Application: Designed for elevated viaduct track sections under heavy axle load',
+      'Standards: Fully compliant with RDSO and MMRDA performance norms for metro systems',
+    ],
+    conclusion: 'This project demonstrates our expertise in delivering robust fastening solutions for Mumbai\'s expanding metro network.',
     showcaseImage: '/mumbaimetrohero.png'
   },
   {
     title: 'Mumbai Line 7X',
     image: '/mumbaimonu2.jpg',
-    description: 'Details for this project are not available at the moment.',
-    client: 'N/A',
-    principalClient: 'N/A',
-    specs: [],
-    conclusion: '',
+    description: `Patil Group supplied fastening systems for the extension of Mumbai Metro Line 7, connecting Gundavali to the Chhatrapati Shivaji International Airport (CSIA). This strategic link enhances airport connectivity via the western suburbs. We delivered over 85,000 fastening assemblies, engineered for durability in high-traffic urban transit.`,
+    client: 'Paras Railtech Pvt. Ltd.',
+    principalClient: 'DMRC',
+    specs: [
+      'Fastener Types: 2-hole and 4-hole elastic systems',
+      'Quantities Supplied: 56,420 (2-hole) + 29,800 (4-hole) sets',
+      'Application: Suitable for metro tracks including elevated and airport corridor sections',
+      'Standards: Conforms to RDSO and DMRC metro infrastructure guidelines',
+    ],
+    conclusion: 'This project marks our continued involvement in Mumbai\'s next-generation urban mobility solutions.',
     showcaseImage: '/mumbaimetrohero.png'
   },
   {
     title: 'Nagpur Metro',
     image: '/nagpurmetrohero.png',
-    description: 'Details for this project are not available at the moment.',
-    client: 'N/A',
-    principalClient: 'N/A',
-    specs: [],
-    conclusion: '',
+    description: `Patil Group supplied fastening systems for Nagpur Metro, a critical infrastructure project connecting key areas of the city. We delivered over 100,000 fastening assemblies, designed for high-traffic, elevated urban infrastructure to support Maharashtra's expanding metro network.`,
+    client: 'SEW-VSE Joint Venture',
+    principalClient: 'Maharashtra Metro Rail Corporation Ltd. (Maha Metro)',
+    specs: [
+      'Fastener Types: 2-hole and 4-hole clip-based systems',
+      'Quantities Supplied: 88,000 (2-hole) + 12,500 (4-hole) sets',
+      'Application: Elevated viaduct and station track structures',
+      'Standards: Designed and supplied as per Maha Metro and RDSO guidelines',
+    ],
+    conclusion: 'This partnership extended our footprint across Maharashtra\'s expanding metro infrastructure.',
     showcaseImage: '/nagpurmetrohero.png'
   },
   {
     title: 'L&T - Standard Gauge Sleeper Supply',
     image: '/lntmonu.webp',
-    description: 'Details for this project are not available at the moment.',
-    client: 'N/A',
-    principalClient: 'N/A',
-    specs: [],
-    conclusion: '',
+    description: `We supplied over 17,000 pre-stressed concrete (PSC) sleepers to L&T for standard gauge urban rail construction. These sleepers were produced to match L&T's specifications while meeting Indian Railway and metro compliance norms.`,
+    client: 'Larsen & Toubro (L&T)',
+    principalClient: 'L&T Rail Projects',
+    specs: [
+      'Product Type: PSC sleepers for standard gauge application',
+      'Compliance: Designed as per L&T technical requirements and metro standards',
+      'Quantity Supplied: 17,600 units',
+      'Application: Urban transit corridors and depot track',
+      'Manufacturing: Supplied from our certified PSC sleeper plants',
+    ],
+    conclusion: 'This project added to our growing collaborations with India\'s largest EPC contractors in modern rail infrastructure.',
     showcaseImage: '/l&t-sleeper.jpg'
   },
   {
     title: 'IRCON - Special Sleeper Supply',
     image: '/irconmonu.jpg',
-    description: 'Details for this project are not available at the moment.',
-    client: 'N/A',
-    principalClient: 'N/A',
-    specs: [],
-    conclusion: '',
+    description: `We supplied a range of specialized concrete sleepers to IRCON including those used in turnouts, bridges, and level crossings. These sleepers were custom-engineered to meet non-standard geometries and high-precision requirements.`,
+    client: 'IRCON International Ltd.',
+    principalClient: 'IRCON',
+    specs: [
+      'Product Type: PSC sleepers for standard gauge application',
+      'Compliance: Designed and manufactured to project-specific and RDSO standards',
+      'Quantity Supplied: Not specified',
+      'Application: Used in junctions and high-stress structural zones',
+      'Manufacturing: Produced at our specialized sleeper units with custom moulding capabilities',
+    ],
+    conclusion: 'This project highlights our expertise in delivering tailored sleeper solutions for complex rail configurations.',
     showcaseImage: '/ircon-sleeper.jpg'
   },
   {
     title: 'IRCON - PSC Sleeper Supply',
     image: '/irconmonu2.jpg',
-    description: 'Details for this project are not available at the moment.',
-    client: 'N/A',
-    principalClient: 'N/A',
-    specs: [],
-    conclusion: '',
+    description: `We manufactured, transported, and delivered pre-stressed concrete (PSC) sleepers to IRCON for large-scale railway development projects. The supply was executed under stringent quality protocols to meet performance and durability requirements across diverse terrains.`,
+    client: 'IRCON International Ltd.',
+    principalClient: 'IRCON',
+    specs: [
+      'Product Type: Standard PSC sleepers for mainline rail',
+      'Compliance: RDSO approved design and loading standards',
+      'Quantity Supplied: Not specified',
+      'Application: General railway infrastructure across multiple project sites',
+      'Execution: End-to-end delivery including manufacturing and logistics',
+    ],
+    conclusion: 'This project reinforced our long-standing relationship with IRCON and our role in national railway expansion.',
     showcaseImage: '/ircon-psc-sleeper.jpg'
   },
 ];
@@ -195,14 +229,19 @@ const ProjectsPage = () => {
           <div className="md:w-1/2 flex items-center p-8 md:p-16">
             <div>
               <h2 className="text-5xl font-bold font-clash leading-tight">
-                <span className="text-amber-500">Engineering Excellence<br />for a </span>
-                <span className="text-[#8A393B]">Stronger Tomorrow</span>
+                <TypingAnimation
+                  text="Engineering Excellence for a Stronger Tomorrow"
+                  showCursor={true}
+                  speed={100}
+                  startAfterMs={500}
+                  cursorColor="#F2913F"
+                  textParts={[
+                    { text: "Engineering Excellence\nfor a ", className: "text-amber-500" },
+                    { text: "Stronger Tomorrow", className: "text-[#8A393B]" }
+                  ]}
+                />
               </h2>
               <div className="w-32 h-0.5 bg-white mt-6 mb-8"></div>
-              <h3 className="text-xl font-semibold text-gray-400 mb-4">Some placeholder text</h3>
-              <p className="text-lg text-gray-300">
-                Amet eu facilisi posuere ut at cras non ipsum proin nunc purus tellus ultricies velit elementum ut dui sed augue ultrices phasellus ullamcorper condimentum ut suspendisse viverra ornare sit venenatis
-              </p>
             </div>
           </div>
         </div>
