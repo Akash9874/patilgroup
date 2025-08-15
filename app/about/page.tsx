@@ -5,6 +5,36 @@ import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { PlusCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
+
+const StatCounter = ({ end, duration, suffix = '', prefix = '', className = '' }: { 
+  end: number; 
+  duration: number; 
+  suffix?: string; 
+  prefix?: string; 
+  className?: string;
+}) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+    rootMargin: '50px',
+  });
+
+  return (
+    <span ref={ref} className={className}>
+      <CountUp 
+        start={0}
+        end={inView ? end : 0} 
+        duration={duration} 
+        separator="," 
+        suffix={suffix} 
+        prefix={prefix}
+        preserveValue={true}
+      />
+    </span>
+  );
+};
 
 const AboutUsPage = () => {
   const [activeTab, setActiveTab] = useState('Sleepers');
@@ -112,7 +142,17 @@ const AboutUsPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-7xl font-bold text-black">In service</h2>
           <p className="mt-8 text-5xl text-black">
-            <span className="text-[#F2913F]">40,00,000 sleepers and counting</span> used in 14 railway zones
+            <StatCounter 
+              end={4000000} 
+              duration={2.5} 
+              suffix=" sleepers and counting" 
+              className="text-[#F2913F]"
+            /> used in <StatCounter 
+              end={14} 
+              duration={2} 
+              suffix=" railway zones"
+              className="text-[#F2913F]"
+            />
           </p>
           <p className="mt-4 text-5xl text-black">
             Over <span style={{
