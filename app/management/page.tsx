@@ -26,19 +26,24 @@ const LeadershipCard = ({ image, name, post }: { image: string, name: string, po
 
 const leadershipData = [
   {
-    image: '/management/Mr Vikash Kumar Gupta - Group CEO.jpg',
-    name: 'Mr. Vikash Kumar Gupta',
-    post: 'CEO',
+    image: '/management/lapatil.jpg',
+    name: 'Dr. L. S. Patil',
+    post: 'Executive Chairman',
   },
   {
-    image: '/management/_DSC5857.jpg',
-    name: 'Mr. B.N. Sajjan',
-    post: 'Executive Director- Corporate Affairs',
+    image: '/management/padmajapatil.jpg',
+    name: 'Mrs. Padmaja Patil',
+    post: 'Director',
   },
   {
-    image: '/management/Mr Satish Chandra Ayla - CEO TRack Systems and Engineering.jpg',
-    name: 'Mr. Satish Chandra Alya',
-    post: 'Coo-Track',
+    image: '/management/manish.jpg',
+    name: 'Mr. Manish Ishwarlal Panchal',
+    post: 'Executive Director',
+  },
+  {
+    image: '/management/ajay.jpg',
+    name: 'Dr. Ajay Rajput',
+    post: 'Managing Director',
   },
   {
     image: '/management/Mr Kaushik Ghosh - Group Managing Director.jpg',
@@ -46,14 +51,39 @@ const leadershipData = [
     post: 'Group Managing Director',
   },
   {
+    image: '/management/Mr Vikash Kumar Gupta - Group CEO.jpg',
+    name: 'Mr. Vikash Kumar Gupta',
+    post: 'CEO',
+  },
+  {
+    image: '/management/avchandra.jpg',
+    name: 'Mr. A.V. Chandra Gupta',
+    post: 'CEO - Growth Centre',
+  },
+  {
     image: '/management/Mr Jawahar Lal Sinhari - CFO.jpg',
     name: 'Mr Jawahar Lal Sinhari',
     post: 'CFO',
   },
   {
+    image: '/management/sajjan.jpg',
+    name: 'Mr. B.N. Sajjan',
+    post: 'Executive Director- Corporate Affairs',
+  },
+  {
     image: '/management/_DSC5895.jpg',
-    name: 'Name 6',
-    post: 'Post 6',
+    name: 'Mr. D.Prince',
+    post: 'Director - Sleeper Operations',
+  },
+  {
+    image: '/management/_DSC5857.jpg',
+    name: 'Mr. GowriSankar Lavudi',
+    post: 'Vice President - RMBD',
+  },
+  {
+    image: '/management/Mr Satish Chandra Ayla - CEO TRack Systems and Engineering.jpg',
+    name: 'Mr. Satish Chandra Alya',
+    post: 'Coo-Track',
   },
 ];
 
