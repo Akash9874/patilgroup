@@ -98,9 +98,8 @@ export default function Home() {
             muted
             playsInline
             className="w-full h-full object-cover"
-            preload="none"
+            preload="metadata"
             poster="/01_hero_train.jpg"
-            loading="lazy"
           >
             <source src="/herovideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -233,8 +232,6 @@ export default function Home() {
                 className="w-full max-w-3xl h-auto object-cover"
                 loading="lazy"
                 placeholder="blur"
-                quality={85}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
           />
         </div>
@@ -307,11 +304,8 @@ export default function Home() {
                       width={400}
                       height={500}
                       className="w-full h-[450px] object-cover transition-transform duration-300 hover:scale-105"
-                      loading={index < 2 ? "eager" : "lazy"}
-                      priority={index < 2}
+                      loading="lazy"
                       placeholder="blur"
-                      quality={85}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                       blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                     />
                   </div>
@@ -336,9 +330,8 @@ export default function Home() {
                 muted
                 playsInline
                 className="w-full h-full object-cover"
-                preload="none"
-                loading="lazy"
-                poster="/nationwide-presence-poster.jpg"
+                preload="metadata"
+              
             >
                 <source src="/lppatil.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

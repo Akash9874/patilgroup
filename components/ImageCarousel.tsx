@@ -32,13 +32,9 @@ export default function ImageCarousel() {
             <Image
               src={src}
               alt={`Carousel image ${index + 1}`}
-              fill
-              style={{ objectFit: 'cover' }}
+              layout="fill"
+              objectFit="cover"
               className="px-4 sm:px-6 lg:px-[61px]"
-              loading={index === 0 ? "eager" : "lazy"}
-              priority={index === 0}
-              quality={85}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
             />
           </div>
         ))}

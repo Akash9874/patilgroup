@@ -132,72 +132,7 @@ const ResearchAndDevelopmentPage = () => {
         </div>
       </section>
 
-      {/* Unit 1 */}
-      <section className="bg-white text-black py-20 fade-in-section">
-        <div className="max-w-7xl mx-auto px-8 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          {/* Text column */}
-          <div className="slide-in-left">
-            <h3 className="text-5xl md:text-6xl font-extrabold text-amber-500">Unit 1</h3>
-            <p className="mt-6 text-xl font-semibold">This is designated as TRUCK – 1</p>
-            <p className="mt-4 text-lg text-[#8A393B] font-semibold">This track is shifted with all the equipments and machineries required for manufacturing the sleeper.</p>
-            <p className="mt-2 text-lg text-[#8A393B] font-semibold">These equipments include:</p>
-            <ul className="mt-4 list-disc list-inside space-y-2 text-lg">
-              <li>Mini concrete mixer with concrete bucket with trolley track.</li>
-              <li>Vibrating table fitted with high frequency vibrators.</li>
-              <li>Overhead monorail wire rope hoist.</li>
-              <li>Demoulding machine.</li>
-              <li>Roller track to move the moulds.</li>
-            </ul>
-          </div>
-          {/* Image column */}
-          <div className="slide-in-right">
-            <img src="/fastener_carousel_image.png" alt="Unit 1 equipment" className="w-full h-[260px] md:h-[380px] object-cover rounded" />
-          </div>
-        </div>
-      </section>
 
-      {/* Unit 2 */}
-      <section className="bg-white text-black py-20 fade-in-section">
-        <div className="max-w-7xl mx-auto px-8 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          {/* Text column */}
-          <div className="slide-in-left">
-            <h3 className="text-5xl md:text-6xl font-extrabold text-amber-500">Unit 2</h3>
-            <p className="mt-6 text-xl font-semibold">This is designated as TRUCK – II.</p>
-            <p className="mt-4 text-lg text-[#8A393B] font-semibold">This truck is fitted with all the equipments required for the generation and distribution of steam.</p>
-            <p className="mt-2 text-lg text-[#8A393B] font-semibold">These equipments are,</p>
-            <ul className="mt-4 list-disc list-inside space-y-2 text-lg">
-              <li>200 kgs/hr, diesel oil fired steam boiler</li>
-              <li>3 kl. Capacity diesel oil tank</li>
-              <li>10 kl. Capacity boiler water tank</li>
-            </ul>
-          </div>
-          {/* Image column */}
-          <div className="slide-in-right">
-            <img src="/fastener_carousel_image.png" alt="Unit 2 equipment" className="w-full h-[260px] md:h-[380px] object-cover rounded" />
-          </div>
-        </div>
-      </section>
-
-      {/* Unit 3 */}
-      <section className="bg-white text-black py-20 fade-in-section">
-        <div className="max-w-7xl mx-auto px-8 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          {/* Text column */}
-          <div className="slide-in-left">
-            <h3 className="text-5xl md:text-6xl font-extrabold text-amber-500">Unit 3</h3>
-            <p className="mt-6 text-xl font-semibold">This is designated as TRUCK – III.</p>
-            <p className="mt-4 text-lg text-[#8A393B] font-semibold">
-              This is used to shift moulds from work centre to work centre and also to shift the ready sleepers to the laying site.
-            </p>
-            <p className="mt-2 text-lg text-[#8A393B] font-semibold">
-              This truck is fitted with a hydraulic boom crane of 1000 kg capacity.
-            </p>
-          </div>
-          {/* Image column */}
-          <div className="slide-in-right">
-            <img src="/fastener_carousel_image.png" alt="Unit 3 equipment" className="w-full h-[260px] md:h-[380px] object-cover rounded" />
-          </div>
-        </div>
-      </section>
 
       {/* New Design of Concrete Sleeper */}
       <section className="bg-white text-black py-20 fade-in-section">

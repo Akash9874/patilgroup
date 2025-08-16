@@ -1,6 +1,5 @@
 "use client";
 import React from 'react';
-import Image from 'next/image';
 import ContentSlider from '@/components/ContentSlider';
 import ExploreSolutions from '@/components/ExploreSolutions';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -18,7 +17,7 @@ const PatilRhedaSystemPage = () => {
       {/* Hero Section */}
       <section className="relative h-screen bg-black">
         <div className="absolute inset-0 h-full w-full">
-          <Image src="/rhedahero.jpeg" alt="Patil RHEDA System" fill style={{ objectFit: 'cover' }} priority quality={85} sizes="100vw" />
+          <img src="/rhedahero.jpeg" alt="Patil RHEDA System" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
         <div className="relative z-10 h-full flex items-center justify-start pl-4 sm:pl-8 md:pl-16 lg:pl-24">
