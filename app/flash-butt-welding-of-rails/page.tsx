@@ -18,7 +18,7 @@ const FlashButtWeldingOfRailsPage = () => {
       {/* Hero Section */}
       <section className="relative h-screen bg-black">
         <div className="absolute inset-0 h-full w-full">
-          <Image src="/train 2.jpg" alt="Train at a station" width={1920} height={1080} className="h-full w-full object-cover" loading="eager" priority />
+          <Image src="/flashbuttslider.jpeg" alt="Flash butt welding operation" width={1920} height={1080} className="h-full w-full object-cover" loading="eager" priority />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
         <div className="relative z-10 h-full flex items-center justify-start pl-4 sm:pl-8 md:pl-16 lg:pl-24">
@@ -42,7 +42,7 @@ const FlashButtWeldingOfRailsPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-12 fade-in-section">
             <div className="md:w-1/2">
-              <Image src="/21_flash_butt_equipment.jpg" alt="Flash butt welding equipment" width={600} height={400} className="rounded-lg shadow-lg" loading="lazy" />
+              <Image src="/flashbutt2.webp" alt="Flash butt welding equipment" width={600} height={400} className="rounded-lg shadow-lg" loading="lazy" />
             </div>
             <div className="md:w-1/2 bg-white text-black p-8 rounded-lg shadow-xl">
               <h3 className="text-2xl font-bold text-[#8A393B]">Patil Group's welding plants are located in:</h3>
