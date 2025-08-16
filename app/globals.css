@@ -23,6 +23,8 @@
 video {
   transform: translateZ(0);
   backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
 }
 
 /* Improve image rendering */
@@ -30,6 +32,13 @@ img,
 .next-image {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+  content-visibility: auto;
+  contain-intrinsic-size: 500px 300px;
+}
+
+/* Intersection Observer optimizations */
+.fade-in-section {
+  content-visibility: auto;
 }
 
 :root {
