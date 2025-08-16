@@ -23,9 +23,9 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         {/* Preload critical resources */}
-        <link rel="preload" href="/fonts/ClashGrotesk-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+
         <link rel="preload" href="/herovideo.mp4" as="video" type="video/mp4" />
-        <link rel="preload" href="/01_hero_train.jpg" as="image" />
+
         <link rel="preload" href="/pg.png" as="image" />
         
         {/* DNS prefetch for external resources */}

@@ -99,7 +99,7 @@ export default function Home() {
             playsInline
             className="w-full h-full object-cover"
             preload="metadata"
-            poster="/01_hero_train.jpg"
+
           >
             <source src="/herovideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
