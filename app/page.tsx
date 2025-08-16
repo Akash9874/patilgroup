@@ -331,7 +331,7 @@ export default function Home() {
                 playsInline
                 className="w-full h-full object-cover"
                 preload="metadata"
-                poster="/pg.png"
+              
             >
                 <source src="/lppatil.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
