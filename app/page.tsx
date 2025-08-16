@@ -23,27 +23,27 @@ const projects = [
   {
     city: "Delhi Metro",
     image: "/delhimonu.jpg",
-    link: "/delhi-phase-3"
+    link: "/projects"
   },
   {
     city: "Nagpur Metro",
     image: "/nagpurmetrohero.png",
-    link: "/nagpur-metro"
+    link: "/projects"
   },
   {
     city: "Mumbai Metro",
     image: "/mumbaimonu.jpeg",
-    link: "/mumbai-line-2b"
+    link: "/projects"
   },
   {
     city: "Kolkata Metro",
     image: "/kolkatamonu.jpg",
-    link: "/kolkata-stretch"
+    link: "/projects"
   },
     {
     city: "Ahmedabad Metro",
     image: "/ahemdabadmonu.webp",
-    link: "/ahmedabad-phase-2"
+    link: "/projects"
   },
 ];
 
