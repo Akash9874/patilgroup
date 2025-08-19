@@ -117,6 +117,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        
+        {/* CIN Information */}
+        <div className="border-t border-gray-800 pt-6 mt-8">
+          <p className="text-gray-400 text-sm text-center">
+            CIN: U60100TG1996PTC023894
+          </p>
+        </div>
       </div>
     </footer>
   );

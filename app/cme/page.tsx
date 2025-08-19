@@ -90,7 +90,7 @@ const CMEPage = () => {
                   Equipment Efficiency (OEE)
                 </h3>
               </div>
-              <p className="text-base md:text-lg text-black/90 max-w-xl fade-in-section">
+              <p className="text-lg md:text-xl lg:text-4xl text-black/90 max-w-xl fade-in-section">
                 We aim to maximize productivity by reducing downtime, improving performance, and ensuring equipment runs at its best—every shift, every day.
               </p>
             </div>
@@ -112,9 +112,9 @@ const CMEPage = () => {
             To achieve these goals, the centre is actively implementing the following initiatives:
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 bg-black border border-gray-800">
+          <div className="grid grid-cols-1 md:grid-cols-2 bg-black">
             {/* Card 1 */}
-            <div className="p-6 md:p-10 border-b md:border-b border-gray-800 md:border-r fade-in-section">
+            <div className="p-6 md:p-10 fade-in-section">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-4 md:mb-6">
                 Lean Manufacturing
               </h3>
@@ -124,7 +124,7 @@ const CMEPage = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="p-6 md:p-10 border-b md:border-b border-gray-800 fade-in-section">
+            <div className="p-6 md:p-10 fade-in-section">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-4 md:mb-6">
                 5S and Kaizen Methodologies
               </h3>
@@ -134,7 +134,7 @@ const CMEPage = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="p-6 md:p-10 md:border-r border-gray-800 fade-in-section">
+            <div className="p-6 md:p-10 fade-in-section">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-4 md:mb-6">
                 Robotic Process Implementation
                 <br className="hidden md:block" /> & SPM Automation
