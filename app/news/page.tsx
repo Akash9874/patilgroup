@@ -79,7 +79,7 @@ const NewsPage = () => {
     <div className="bg-[#F1EFF0] text-gray-800 overflow-hidden">
       <Navbar />
       
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative h-[60vh] overflow-hidden">
         {/* Background Video */}
         <video
           autoPlay
