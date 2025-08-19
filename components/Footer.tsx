@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Facebook, Instagram, Linkedin, Twitter, ArrowUp, Send } from 'lucide-react';
+import { Linkedin, ArrowUp, Send } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -26,11 +26,12 @@ const Footer = () => {
       </div>
 
       {/* Pre-footer section */}
-      <div className="relative bg-black pt-16 border-b border-gray-800">
+      <div className="relative bg-black pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="space-y-4">
-            <h3 className="text-3xl font-bold">123 Market St. #22B</h3>
-            <p className="text-3xl font-bold">XYZOPINK, INDIA 44635</p>
+            <h3 className="text-3xl font-bold">Legend Apartments, 6-3-1342/4</h3>
+            <p className="text-3xl font-bold">Raj Bhavan Rd, Raj Bhavan Quarters Colony</p>
+            <p className="text-3xl font-bold">Somajiguda, Hyderabad, Telangana 500082</p>
             <Link href="/contact">
               <button className="bg-[#F2913F] text-black font-bold py-3 px-8 rounded-full text-sm hover:bg-orange-400 transition-colors">
                 Contact Us
@@ -57,16 +58,13 @@ const Footer = () => {
             <div className="space-y-6">
             <p className="max-w-xs">Discover Inspired Solutions Tailored to Your Unique Style and Needs.</p>
             <p className="text-sm">
-              <a href="mailto:XYZ@PATIL.GROUP" className="hover:text-orange-400 transition-colors">XYZ@PATIL.GROUP</a>
+              <a href="mailto:info@patilgroup.com" className="hover:text-orange-400 transition-colors">info@patilgroup.com</a>
               </p>
               <p>
-              <a href="tel:4345464356" className="hover:text-orange-400 transition-colors">(434) 546-4356</a>
+              <a href="tel:+914039556700" className="hover:text-orange-400 transition-colors">+91 40 3955 6700</a>
               </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-400 transition-colors"><Facebook size={20} /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-400 transition-colors"><Instagram size={20} /></a>
               <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-400 transition-colors"><Linkedin size={20} /></a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-400 transition-colors"><Twitter size={20} /></a>
             </div>
           </div>
 
