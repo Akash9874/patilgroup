@@ -76,14 +76,14 @@ const ProductsPage = () => {
           {products.map((p, index) => (
             <div key={index} className="relative group h-56 fade-in-section">
               <div 
-                className="absolute top-0 left-0 h-full bg-gray-100 w-40 group-hover:w-5/12 transition-all duration-500 ease-in-out bg-cover bg-center"
+                className="absolute top-0 left-0 h-full bg-gray-100 w-5/12 bg-cover bg-center"
                 style={{ 
                   clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)',
                   backgroundImage: `url(${p.image})`
                 }}
               ></div>
               <div className="relative max-w-screen-xl mx-auto h-full">
-                <div className="absolute left-5 top-0 h-full flex items-center w-6/12 transform transition-transform duration-500 ease-in-out group-hover:translate-x-[85%]">
+                <div className="absolute left-5 top-0 h-full flex items-center w-6/12 transform translate-x-[85%]">
                   <div className="pr-8">
                     <h3 className="text-3xl font-bold font-clash tracking-wide text-amber-600">{p.name}</h3>
                     <p className="mt-4 text-lg text-gray-600">{p.description}</p>

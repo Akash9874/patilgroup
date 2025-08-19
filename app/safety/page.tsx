@@ -60,73 +60,94 @@ const SafetyPage = () => {
 
       {/* Track fencing / Precast Safety Infrastructure */}
       <section className="relative bg-white text-black py-16">
-        {/* Vertical borders to match design */}
-        <div className="absolute inset-y-0 left-0 w-px bg-gray-300"></div>
-        <div className="absolute inset-y-0 right-0 w-px bg-gray-300"></div>
+        <div className="max-w-7xl mx-auto px-8 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Left column - All content */}
+            <div className="lg:col-span-2 slide-in-left">
+              {/* Main headings */}
+              <h3 className="text-6xl md:text-7xl lg:text-8xl font-bold text-amber-500 mb-8">Track fencing</h3>
+              
+              <h3 className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#8A393B] leading-tight mb-16">
+                Precast Safety<br />Infrastructure
+              </h3>
 
-        <div className="max-w-7xl mx-auto px-8 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left column headings */}
-          <div className="slide-in-left">
-            <h3 className="text-5xl md:text-6xl font-bold text-amber-500">Track fencing</h3>
-            <h3 className="mt-16 text-5xl md:text-6xl font-bold text-[#8A393B] leading-tight">Precast Safety
-              <br />Infrastructure</h3>
-          </div>
+              {/* Content sections with spacing */}
+              <div className="space-y-8">
+                <div>
+                  <h4 className="text-2xl md:text-3xl font-bold text-black mb-4">W beam fence</h4>
+                  <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">
+                    Galvanized steel with a corrugated W profile. Designed to stop animals, vehicles and trespassers from entering the track zone. Already in use along corridors such as Mumbai to Ahmedabad.
+                  </p>
+                </div>
 
-          {/* Right column content with divider */}
-          <div className="md:border-l border-gray-300 md:pl-8 slide-in-right">
-            <div className="space-y-6 text-lg md:text-xl text-gray-800 leading-relaxed">
-              <p>
-                <span className="font-semibold">W beam fence</span> — Galvanized steel with a corrugated W
-                profile. Designed to stop animals, vehicles and trespassers from entering the track zone. Already in use along corridors such as Mumbai to Ahmedabad.
-              </p>
-              <p>
-                <span className="font-semibold">Fixed knot wire fence</span> — High tensile mesh for reliable perimeter security. Quick to install, adaptable to uneven terrain and effective against human and animal entry.
-              </p>
-              <p>
-                <span className="font-semibold">Crash barriers and security walls</span> — Shield work zones, protect trackside equipment and prevent unauthorized access.
-              </p>
-              <p>
-                <span className="font-semibold">Platform copings</span> — Precision made with anti slip surfaces and tactile indicators to guide passengers safely.
-              </p>
-              <p>
-                <span className="font-semibold">Cable troughs and drains</span> — Protect signaling and power lines while keeping tracks free from water damage.
-              </p>
-              <p>
-                <span className="font-semibold">Noise barriers</span> — Reduce disturbance in residential areas and improve safety by limiting distractions.
-              </p>
+                <div>
+                  <h4 className="text-2xl md:text-3xl font-bold text-black mb-4">Fixed knot wire fence</h4>
+                  <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">
+                    High tensile mesh for reliable perimeter security. Quick to install, adaptable to uneven terrain and effective against human and animal entry.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-2xl md:text-3xl font-bold text-black mb-4">Crash barriers and security walls</h4>
+                  <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">
+                    Shield work zones, protect trackside equipment and prevent unauthorized access.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-2xl md:text-3xl font-bold text-black mb-4">Platform copings</h4>
+                  <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">
+                    Precision made with anti slip surfaces and tactile indicators to guide passengers safely.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-2xl md:text-3xl font-bold text-black mb-4">Cable troughs and drains</h4>
+                  <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">
+                    Protect signaling and power lines while keeping tracks free from water damage.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-2xl md:text-3xl font-bold text-black mb-4">Noise barriers</h4>
+                  <p className="text-xl md:text-2xl text-gray-800 leading-relaxed">
+                    Reduce disturbance in residential areas and improve safety by limiting distractions.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right column - Images */}
+            <div className="lg:col-span-1">
+              <div className="space-y-8 sticky top-8">
+                {/* First safety image */}
+                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Image
+                    src="/safety2.jpg"
+                    alt="Railway track fencing and safety infrastructure"
+                    width={600}
+                    height={400}
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                
+                {/* Second safety image */}
+                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Image
+                    src="/safety3.jpg"
+                    alt="Railway tracks and safety systems"
+                    width={600}
+                    height={400}
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Safety image showcase section */}
-      <section className="bg-gray-50 py-16 md:py-24 fade-in-section">
-        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* First safety image */}
-            <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-              <Image
-                src="/safety2.jpg"
-                alt="Railway safety infrastructure"
-                width={600}
-                height={400}
-                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            
-            {/* Second safety image */}
-            <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-              <Image
-                src="/safety3.jpg"
-                alt="Track safety solutions"
-                width={600}
-                height={400}
-                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Made for Indian Railways - moved to last */}
       <section className="bg-black text-white py-16 fade-in-section">
