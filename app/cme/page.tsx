@@ -25,8 +25,8 @@ const CMEPage = () => {
           </video>
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
-        <div className="relative z-10 h-full flex items-center justify-start p-16">
-          <h1 className="text-5xl md:text-7xl font-bold font-clash leading-tight text-white fade-in-section">
+        <div className="relative z-10 h-full flex items-center justify-start p-4 sm:p-8 md:p-16">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold font-clash leading-tight text-white fade-in-section">
             Centre for<br />Manufacturing<br />Excellence
           </h1>
         </div>
@@ -39,9 +39,9 @@ const CMEPage = () => {
 	  
 
       {/* Intro Section (post-hero) */}
-      <section className="bg-black text-white py-16 fade-in-section">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <section className="bg-black text-white py-8 sm:py-12 md:py-16 fade-in-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-center">
             {/* Left: Moving CME logo video */}
             <div className="w-full flex justify-center md:justify-start">
               <video
@@ -59,7 +59,7 @@ const CMEPage = () => {
 
             {/* Right: Description text */}
             <div>
-              <p className="text-xl md:text-2xl lg:text-3xl leading-relaxed fade-in-section">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed fade-in-section">
                 The Patil Group has established the Dr. S. S. Patil Centre for Manufacturing Excellence as an in-house initiative,
                 driven by a dedicated team of experts. This centre was created to achieve the highest standards in manufacturing
                 excellence and cost management while fostering continuous improvement.
@@ -73,8 +73,8 @@ const CMEPage = () => {
       <section className="fade-in-section">
         {/* Title Bar */}
         <div className="bg-black">
-          <div className="max-w-7xl mx-auto px-6 md:px-12 py-6">
-            <h2 className="text-3xl md:text-5xl font-extrabold text-[#F2913F] fade-in-section">Our Key Objectives</h2>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-4 sm:py-6">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-[#F2913F] fade-in-section">Our Key Objectives</h2>
           </div>
         </div>
 
@@ -82,19 +82,19 @@ const CMEPage = () => {
         <div className="bg-white">
           <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2">
             {/* Left column with divider */}
-            <div className="border-r border-gray-200 p-6 md:p-10 flex flex-col justify-between min-h-[26rem] md:min-h-[32rem]">
+            <div className="border-r border-gray-200 p-4 sm:p-6 md:p-10 flex flex-col justify-between min-h-[20rem] sm:min-h-[26rem] md:min-h-[32rem]">
               <div>
-                <h3 className="text-3xl md:text-4xl font-bold text-[#8A393B] fade-in-section">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#8A393B] fade-in-section">
                 </h3>
               </div>
-              <p className="text-lg md:text-xl lg:text-4xl text-black/90 max-w-xl fade-in-section">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-black/90 max-w-xl fade-in-section">
                 We aim to maximize productivity by reducing downtime, improving performance, and ensuring equipment runs at its best—every shift, every day.
               </p>
             </div>
 
             {/* Right column with rectangular image */}
-            <div className="relative p-6 md:p-10 flex items-center justify-center">
-              <div className="w-80 h-64 md:w-96 md:h-72 lg:w-[30rem] lg:h-[22rem] rounded-lg overflow-hidden shadow-lg">
+            <div className="relative p-4 sm:p-6 md:p-10 flex items-center justify-center">
+              <div className="w-64 h-48 sm:w-80 sm:h-64 md:w-96 md:h-72 lg:w-[30rem] lg:h-[22rem] rounded-lg overflow-hidden shadow-lg">
                 <img src="/cmehero.JPG" alt="OEE Visual" className="w-full h-full object-cover" />
               </div>
             </div>
@@ -103,52 +103,52 @@ const CMEPage = () => {
       </section>
 
       {/* Our Key Objectives - New Card Design */}
-      <section className="bg-black text-white py-16 md:py-20 fade-in-section">
-        <div className="max-w-5xl mx-auto px-6 md:px-12">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F2913F] text-center mb-6 fade-in-section">
+      <section className="bg-black text-white py-8 sm:py-12 md:py-16 lg:py-20 fade-in-section">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#F2913F] text-center mb-4 sm:mb-6 fade-in-section">
             Our Key Objectives
           </h2>
-          <p className="text-lg md:text-xl lg:text-2xl text-center mb-12 md:mb-16 fade-in-section">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16 fade-in-section">
             To achieve these goals, the centre is actively implementing the following initiatives:
           </p>
 
-          <div className="space-y-6 md:space-y-8">
+          <div className="space-y-4 sm:space-y-6 md:space-y-8">
             {/* Card 1 - Lean Manufacturing */}
-            <div className="bg-[#8A393B] rounded-3xl p-8 md:p-12 fade-in-section cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#8A393B]/30 hover:bg-[#9d4447]">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F2913F] mb-4 md:mb-6 transition-colors duration-300 hover:text-[#ffb366]">
+            <div className="bg-[#8A393B] rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 fade-in-section cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#8A393B]/30 hover:bg-[#9d4447]">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#F2913F] mb-3 sm:mb-4 md:mb-6 transition-colors duration-300 hover:text-[#ffb366]">
                 Lean Manufacturing
               </h3>
-              <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-white transition-all duration-300">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-white transition-all duration-300">
                 We streamline operations by eliminating waste and optimizing resource use, ensuring maximum value for every step in our production process.
               </p>
             </div>
 
             {/* Card 2 - 5S and Kaizen */}
-            <div className="bg-[#F2913F] rounded-3xl p-8 md:p-12 fade-in-section cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#F2913F]/30 hover:bg-[#ff9f4a]">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-4 md:mb-6 transition-colors duration-300 hover:text-[#6d2f32]">
+            <div className="bg-[#F2913F] rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 fade-in-section cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#F2913F]/30 hover:bg-[#ff9f4a]">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#8A393B] mb-3 sm:mb-4 md:mb-6 transition-colors duration-300 hover:text-[#6d2f32]">
                 5S and Kaizen Methodologies
               </h3>
-              <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-black transition-all duration-300">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-black transition-all duration-300">
                 By fostering discipline and continuous improvement at the ground level, we build a culture of efficiency, cleanliness, and proactive problem-solving.
               </p>
             </div>
 
             {/* Card 3 - Robotic Process */}
-            <div className="bg-[#8A393B] rounded-3xl p-8 md:p-12 fade-in-section cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#8A393B]/30 hover:bg-[#9d4447]">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F2913F] mb-4 md:mb-6 transition-colors duration-300 hover:text-[#ffb366]">
+            <div className="bg-[#8A393B] rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 fade-in-section cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#8A393B]/30 hover:bg-[#9d4447]">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#F2913F] mb-3 sm:mb-4 md:mb-6 transition-colors duration-300 hover:text-[#ffb366]">
                 Robotic Process Implementation & SPM Automation
               </h3>
-              <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-white transition-all duration-300">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-white transition-all duration-300">
                 We deploy advanced robotics and tailor-made Special Purpose Machines to automate repetitive tasks, boost precision, and enhance speed on the shop floor.
               </p>
             </div>
 
             {/* Card 4 - IoT-enabled */}
-            <div className="bg-[#F2913F] rounded-3xl p-8 md:p-12 fade-in-section cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#F2913F]/30 hover:bg-[#ff9f4a]">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-4 md:mb-6 transition-colors duration-300 hover:text-[#6d2f32]">
+            <div className="bg-[#F2913F] rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 fade-in-section cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#F2913F]/30 hover:bg-[#ff9f4a]">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#8A393B] mb-3 sm:mb-4 md:mb-6 transition-colors duration-300 hover:text-[#6d2f32]">
                 IoT-enabled Condition Monitoring
               </h3>
-              <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-black transition-all duration-300">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed text-black transition-all duration-300">
                 Our smart systems track equipment health in real time, helping predict failures before they occur—reducing downtime and extending machine life.
               </p>
             </div>

@@ -83,6 +83,93 @@ export default function Home() {
     <div className="overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative h-screen overflow-hidden bg-black">
+        {/* Optimized Mobile Layout */}
+        <div className="sm:hidden h-full flex relative">
+          {/* Enhanced Left Side - Text Content */}
+          <div className="w-[65%] ultra-small-adjust mobile-gradient flex items-center relative z-20">
+            <div className="px-3 py-6 w-full">
+              <div 
+                className={`transition-all duration-1000 ease-in-out transform ${isHeroAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                style={{ transitionDelay: '800ms' }}
+              >
+                {/* Main Heading */}
+                <div className="mb-6">
+                  <h2 className="text-[#F2913F] font-extrabold text-2xl sm:text-3xl leading-[0.9] tracking-tight mb-1 mobile-hero-text mobile-heading">
+                    RAILWAY
+                  </h2>
+                  <h2 className="text-[#F2913F] font-extrabold text-2xl sm:text-3xl leading-[0.9] tracking-tight mobile-hero-text mobile-heading">
+                    ENGINEERING
+                  </h2>
+                </div>
+                
+                {/* Animated Accent Line */}
+                <div className="w-12 h-1 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mb-4 rounded-full accent-line mobile-smooth"></div>
+                
+                {/* Subtitle */}
+                <div className="space-y-1">
+                  <h1 className="text-white font-semibold text-base leading-tight mobile-hero-text mobile-smooth">
+                    SMARTER TRACK
+                  </h1>
+                  <h1 className="text-white font-semibold text-base leading-tight mobile-hero-text mobile-smooth">
+                    SOLUTIONS,
+                  </h1>
+                  <h1 className="text-white font-semibold text-base leading-tight mobile-hero-text mobile-smooth">
+                    SAFER MOBILITY
+                  </h1>
+                </div>
+                
+                {/* Interactive CTA Hint */}
+                <div className="mt-6">
+                  <p className="text-gray-400 text-xs font-medium tracking-wide swipe-hint">
+                    Swipe to explore →
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Subtle overlay pattern */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="w-full h-full" style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23F2913F' fill-opacity='0.1'%3E%3Cpath d='M0 0h40v40H0z'/%3E%3Cpath d='M0 0h20v20H0z'/%3E%3C/g%3E%3C/svg%3E")`,
+                backgroundSize: '20px 20px'
+              }}></div>
+            </div>
+          </div>
+          
+          {/* Enhanced Right Side - Video */}
+          <div className="w-[35%] ultra-small-video relative overflow-hidden">
+            {/* Video Container with Better Clipping */}
+            <div 
+              className="absolute inset-0 transition-all duration-1000 ease-in-out"
+              style={{
+                clipPath: isHeroAnimated 
+                  ? 'polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)' 
+                  : 'polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)',
+              }}
+            >
+              <video
+                ref={videoRef}
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover scale-105"
+                preload="metadata"
+              >
+                <source src="/herovideo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              
+              {/* Subtle overlay for better integration */}
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/20"></div>
+            </div>
+            
+            {/* Edge shadow for depth */}
+            <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-black/30 to-transparent z-10"></div>
+          </div>
+        </div>
+
+        {/* Desktop Layout - Original Design */}
+        <div className="hidden sm:block h-full">
         {/* Video Background with Diagonal Cutout */}
         <div 
           className="absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out"
@@ -99,7 +186,6 @@ export default function Home() {
             playsInline
             className="w-full h-full object-cover"
             preload="metadata"
-
           >
             <source src="/herovideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -108,13 +194,13 @@ export default function Home() {
 
         {/* Hero Content */}
         <div className="relative z-10 h-full flex items-center">
-          <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-16">
+            <div className="w-full px-6 lg:px-8 xl:px-16">
             {/* Left Side Text */}
             <div 
-              className={`absolute left-4 sm:left-6 lg:left-8 xl:left-16 top-1/2 transform -translate-y-1/2 pt-8 transition-opacity duration-1000 ease-in-out ${isHeroAnimated ? 'opacity-100' : 'opacity-0'}`}
+                className={`absolute left-6 lg:left-8 xl:left-16 top-1/2 transform -translate-y-1/2 pt-8 transition-opacity duration-1000 ease-in-out ${isHeroAnimated ? 'opacity-100' : 'opacity-0'}`}
               style={{ transitionDelay: '800ms' }}
             >
-              <h2 className="text-white font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight">
+                <h2 className="text-white font-bold text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight">
                 <span className={`transition-colors duration-1000 ${isHeroAnimated ? 'text-[#F2913F]' : 'text-white'}`}>RAILWAY</span><br />
                 <span className={`transition-colors duration-1000 ${isHeroAnimated ? 'text-[#8A393B]' : 'text-white'}`}>ENGINEERING</span>
               </h2>
@@ -122,198 +208,375 @@ export default function Home() {
 
             {/* Right Side Text */}
             <div 
-              className={`absolute right-4 sm:right-6 lg:right-8 xl:right-16 top-1/2 transform -translate-y-1/2 pt-8 transition-opacity duration-1000 ease-in-out ${isHeroAnimated ? 'opacity-100' : 'opacity-0'}`}
+                className={`absolute right-6 lg:right-8 xl:right-16 top-1/2 transform -translate-y-1/2 pt-8 transition-opacity duration-1000 ease-in-out ${isHeroAnimated ? 'opacity-100' : 'opacity-0'}`}
               style={{ transitionDelay: '1200ms' }}
             >
-              <h1 className="text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight italic">
+                <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-5xl leading-tight italic">
                 SMARTER TRACK<br />
                 SOLUTIONS,<br />
                 SAFER MOBILITY
               </h1>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Built to Section */}
-      <section className="h-96 flex">
-        {/* Built to Scale */}
-        <div className="flex-1 bg-black flex flex-col justify-between p-6 lg:p-8 fade-in-section">
-          <div>
-            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-[#8A393B] mb-4 lg:mb-6">
-              Built to Scale.
-          </h2>
-            <div className="mb-4 lg:mb-6">
-              <svg className="w-8 h-8 lg:w-10 lg:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
+      {/* Responsive Built to Section */}
+      <section className="bg-black">
+        {/* Mobile: Vertical Stack */}
+        <div className="md:hidden">
+          {/* Built to Scale - Mobile */}
+          <div className="bg-black p-6 fade-in-section border-b border-gray-700">
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 mt-1">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <h2 className="text-2xl font-bold text-[#8A393B] mb-2">
+                  Built to Scale.
+                </h2>
+                <p className="text-gray-400 text-xs mb-3">Mar 2024</p>
+                <h3 className="text-white text-base font-medium mb-4 leading-tight">
+                  Sleepers supplied for new Pune Metro Corridor
+                </h3>
+                <button className="text-[#F2913F] font-medium text-sm hover:text-[#D97706] transition-colors duration-300 flex items-center group">
+                  Read More
+                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-          <div>
-            <p className="text-gray-400 text-xs lg:text-sm mb-1">Mar 2024</p>
-            <h3 className="text-white text-sm lg:text-base xl:text-lg font-medium mb-3 lg:mb-4 leading-tight">
-              Sleepers supplied for new<br />
-              Pune Metro Corridor
-            </h3>
-            <button className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
-              Read More
-            </button>
-            </div>
-        </div>
 
-        {/* Built to Last */}
-        <div className="flex-1 bg-black flex flex-col justify-between p-6 lg:p-8 fade-in-section border-l border-gray-700" style={{ transitionDelay: '200ms' }}>
-          <div>
-            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-[#F2913F] mb-4 lg:mb-6">
-              Built to Last.
-            </h2>
-            <div className="mb-4 lg:mb-6">
-              <svg className="w-8 h-8 lg:w-10 lg:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+          {/* Built to Last - Mobile */}
+          <div className="bg-black p-6 fade-in-section border-b border-gray-700" style={{ animationDelay: '200ms' }}>
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 mt-1">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <h2 className="text-2xl font-bold text-[#F2913F] mb-2">
+                  Built to Last.
+                </h2>
+                <p className="text-gray-400 text-xs mb-3">Dec 2023</p>
+                <h3 className="text-white text-base font-medium mb-4 leading-tight">
+                  Partnered on Mumbai-Ahmedabad bullet train trial track
+                </h3>
+                <button className="text-[#F2913F] font-medium text-sm hover:text-[#D97706] transition-colors duration-300 flex items-center group">
+                  Read More
+                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
-          <div>
-            <p className="text-gray-400 text-xs lg:text-sm mb-1">Dec 2023</p>
-            <h3 className="text-white text-sm lg:text-base xl:text-lg font-medium mb-3 lg:mb-4 leading-tight">
-              Partnered on Mumbai-<br />
-              Ahmedabad bullet train trial<br />
-              track
-            </h3>
-            <button className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
-              Read More
-            </button>
+
+          {/* Built to Keep Moving - Mobile */}
+          <div className="bg-black p-6 fade-in-section" style={{ animationDelay: '400ms' }}>
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 mt-1">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <h2 className="text-2xl font-bold text-[#F2913F] mb-2">
+                  Built to Keep Moving.
+                </h2>
+                <p className="text-gray-400 text-xs mb-3">Sep 2023</p>
+                <h3 className="text-white text-base font-medium mb-4 leading-tight">
+                  Recognized by RDSO for product innovation
+                </h3>
+                <button className="text-[#F2913F] font-medium text-sm hover:text-[#D97706] transition-colors duration-300 flex items-center group">
+                  Read More
+                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-
-        {/* Built to Keep Moving */}
-        <div className="flex-1 bg-black flex flex-col justify-between p-6 lg:p-8 fade-in-section border-l border-gray-700" style={{ transitionDelay: '400ms' }}>
-          <div>
-            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-[#F2913F] mb-4 lg:mb-6">
-              Built to Keep Moving.
-            </h2>
-            <div className="mb-4 lg:mb-6">
-              <svg className="w-8 h-8 lg:w-10 lg:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-              </svg>
+        
+        {/* Desktop: Original Horizontal Layout */}
+        <div className="hidden md:flex h-96">
+          {/* Built to Scale - Desktop */}
+          <div className="flex-1 bg-black flex flex-col justify-between p-4 sm:p-6 lg:p-8 fade-in-section">
+            <div>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#8A393B] mb-3 sm:mb-4 lg:mb-6">
+                Built to Scale.
+              </h2>
+              <div className="mb-4 lg:mb-6">
+                <svg className="w-8 h-8 lg:w-10 lg:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <p className="text-gray-400 text-xs lg:text-sm mb-1">Mar 2024</p>
+              <h3 className="text-white text-sm lg:text-base xl:text-lg font-medium mb-3 lg:mb-4 leading-tight">
+                Sleepers supplied for new<br />
+                Pune Metro Corridor
+              </h3>
+              <button className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
+                Read More
+              </button>
             </div>
           </div>
-          <div>
-            <p className="text-gray-400 text-xs lg:text-sm mb-1">Sep 2023</p>
-            <h3 className="text-white text-sm lg:text-base xl:text-lg font-medium mb-3 lg:mb-4 leading-tight">
-              Recognized by RDSO for<br />
-              product innovation
-            </h3>
-            <button className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
-              Read More
-            </button>
+
+          {/* Built to Last - Desktop */}
+          <div className="flex-1 bg-black flex flex-col justify-between p-4 sm:p-6 lg:p-8 fade-in-section border-l border-gray-700" style={{ transitionDelay: '200ms' }}>
+            <div>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#F2913F] mb-3 sm:mb-4 lg:mb-6">
+                Built to Last.
+              </h2>
+              <div className="mb-4 lg:mb-6">
+                <svg className="w-8 h-8 lg:w-10 lg:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <p className="text-gray-400 text-xs lg:text-sm mb-1">Dec 2023</p>
+              <h3 className="text-white text-sm lg:text-base xl:text-lg font-medium mb-3 lg:mb-4 leading-tight">
+                Partnered on Mumbai-<br />
+                Ahmedabad bullet train trial<br />
+                track
+              </h3>
+              <button className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
+                Read More
+              </button>
+            </div>
+          </div>
+
+          {/* Built to Keep Moving - Desktop */}
+          <div className="flex-1 bg-black flex flex-col justify-between p-4 sm:p-6 lg:p-8 fade-in-section border-l border-gray-700" style={{ transitionDelay: '400ms' }}>
+            <div>
+              <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#F2913F] mb-3 sm:mb-4 lg:mb-6">
+                Built to Keep Moving.
+              </h2>
+              <div className="mb-4 lg:mb-6">
+                <svg className="w-8 h-8 lg:w-10 lg:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <p className="text-gray-400 text-xs lg:text-sm mb-1">Sep 2023</p>
+              <h3 className="text-white text-sm lg:text-base xl:text-lg font-medium mb-3 lg:mb-4 leading-tight">
+                Recognized by RDSO for<br />
+                product innovation
+              </h3>
+              <button className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
+                Read More
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Engineering Infrastructure Section */}
-      <section className="bg-[#F5F4F1] relative py-24 overflow-hidden">
-        {/* Background Grid Lines */}
-        <div className="absolute inset-0 pointer-events-none">
+      {/* Responsive Engineering Infrastructure Section */}
+      <section className="bg-[#F5F4F1] relative py-12 md:py-24 overflow-hidden">
+        {/* Background Grid Lines - Hidden on mobile */}
+        <div className="absolute inset-0 pointer-events-none hidden md:block">
           <div className="absolute left-1/3 top-0 bottom-0 w-px bg-gray-300 h-full scale-in"></div>
           <div className="absolute left-2/3 top-0 bottom-0 w-px bg-gray-300 h-full scale-in" style={{ transitionDelay: '200ms' }}></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto">
-          {/* Top Content Area */}
-          <div className="flex items-center justify-center mb-24 fade-in-section">
-            {/* Image */}
-            <div className="pr-32 z-0">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Mobile Layout */}
+          <div className="md:hidden space-y-8">
+            {/* Mobile Content */}
+            <div className="fade-in-section">
+              {/* Gradient Line */}
+              <div
+                className="h-1.5 mb-6 rounded-full"
+                style={{
+                  width: '60px',
+                  background: 'linear-gradient(90deg, #F2913F 0%, #1E3888 50%, #8A393B 100%)',
+                }}
+              />
+              {/* Mobile Text */}
+              <div className="bg-white rounded-2xl p-6 shadow-lg">
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#8A393B] leading-tight mb-4">
+                  Engineering Infrastructure for the long run.
+                </h2>
+                <p className="text-gray-700 text-base leading-relaxed">
+                  We make and deliver components that hold the railway together. Concrete sleepers, fastening systems, turnout parts and more.
+                </p>
+              </div>
+            </div>
+            
+            {/* Mobile Image */}
+            <div className="fade-in-section">
               <Image
                 src="/engineering-infra.jpg"
                 alt="Train in station"
                 width={1200}
                 height={800}
-                className="w-full max-w-3xl h-auto object-cover"
+                className="w-full h-64 sm:h-80 object-cover rounded-2xl shadow-lg"
                 loading="lazy"
                 placeholder="blur"
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-          />
-        </div>
-
-            {/* Text Box Area */}
-            <div className="-ml-64 z-10">
-              {/* Gradient Line */}
-              <div
-                className="h-2 mb-4"
-                  style={{
-                  width: '85%',
-                  background: 'linear-gradient(90deg, #F2913F 0%, #1E3888 50%, #8A393B 100%)',
-                }}
               />
-              {/* White Text Box */}
-              <div className="bg-white p-12">
-                <h2 className="text-4xl font-bold text-[#8A393B] leading-tight mb-6">
-                  Engineering Infrastructure<br />
-                  for the long run.
-                </h2>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  We make and deliver components that hold the railway together. Concrete sleepers, fastening systems, turnout parts and more.
-                </p>
+            </div>
+          </div>
+
+          {/* Desktop Layout - Original */}
+          <div className="hidden md:block">
+            <div className="flex items-center justify-center mb-24 fade-in-section">
+              {/* Image */}
+              <div className="pr-32 z-0">
+                <Image
+                  src="/engineering-infra.jpg"
+                  alt="Train in station"
+                  width={1200}
+                  height={800}
+                  className="w-full max-w-3xl h-auto object-cover"
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                />
+              </div>
+
+              {/* Text Box Area */}
+              <div className="-ml-64 z-10">
+                {/* Gradient Line */}
+                <div
+                  className="h-2 mb-4"
+                  style={{
+                    width: '85%',
+                    background: 'linear-gradient(90deg, #F2913F 0%, #1E3888 50%, #8A393B 100%)',
+                  }}
+                />
+                {/* White Text Box */}
+                <div className="bg-white p-12">
+                  <h2 className="text-4xl font-bold text-[#8A393B] leading-tight mb-6">
+                    Engineering Infrastructure<br />
+                    for the long run.
+                  </h2>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    We make and deliver components that hold the railway together. Concrete sleepers, fastening systems, turnout parts and more.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Statistics Section */}
-          <div className="grid grid-cols-3 text-center">
-              <div className="flex flex-col items-center justify-center fade-in-section">
+          {/* Responsive Statistics Section */}
+          <div className="mt-12 md:mt-0">
+            {/* Mobile Stats - Clean Cards without Icons */}
+            <div className="md:hidden space-y-3">
+              <div className="bg-white rounded-xl p-4 shadow-sm fade-in-section">
+                <div className="text-center">
                   <StatCounter end={50} duration={2.5} suffix="+" />
-                  <div className="text-gray-500 text-base font-medium">years on the job</div>
+                  <div className="text-gray-500 text-xs font-medium mt-1">years on the job</div>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-xl p-4 shadow-sm fade-in-section" style={{ animationDelay: '200ms' }}>
+                <div className="text-center">
+                  <StatCounter end={100} duration={2.5} suffix="%" />
+                  <div className="text-gray-500 text-xs font-medium mt-1">Clients Satisfactions</div>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-xl p-4 shadow-sm fade-in-section" style={{ animationDelay: '400ms' }}>
+                <div className="text-center">
+                  <StatCounter end={4000000} duration={2.5} suffix="+" />
+                  <div className="text-gray-500 text-xs font-medium mt-1">Safe Sleepers</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Desktop Stats - Original Grid */}
+            <div className="hidden md:grid grid-cols-3 text-center">
+              <div className="flex flex-col items-center justify-center fade-in-section">
+                <StatCounter end={50} duration={2.5} suffix="+" />
+                <div className="text-gray-500 text-base font-medium">years on the job</div>
               </div>
               <div className="flex flex-col items-center justify-center fade-in-section" style={{ transitionDelay: '200ms' }}>
-                  <StatCounter end={100} duration={2.5} suffix="%" />
-                  <div className="text-gray-500 text-base font-medium">Clients Satisfactions</div>
+                <StatCounter end={100} duration={2.5} suffix="%" />
+                <div className="text-gray-500 text-base font-medium">Clients Satisfactions</div>
               </div>
               <div className="flex flex-col items-center justify-center fade-in-section" style={{ transitionDelay: '400ms' }}>
-                  <StatCounter end={4000000} duration={2.5} suffix="+" />
-                  <div className="text-gray-500 text-base font-medium">Safe Sleepers</div>
+                <StatCounter end={4000000} duration={2.5} suffix="+" />
+                <div className="text-gray-500 text-base font-medium">Safe Sleepers</div>
               </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Our Projects Section */}
-      <section className="bg-white py-24">
+      {/* Responsive Our Projects Section */}
+      <section className="bg-white py-12 sm:py-16 md:py-24">
         <Carousel
           opts={{ align: "start", loop: true }}
           className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         >
-          <div className="flex justify-between items-end mb-12 fade-in-section">
-            <div>
-              <h2 className="text-4xl font-bold text-[#8A393B] mb-2">Our Projects</h2>
-              <p className="text-gray-500"></p>
+          {/* Mobile-Optimized Header */}
+          <div className="mb-8 sm:mb-10 md:mb-12 fade-in-section">
+            {/* Mobile Layout */}
+            <div className="md:hidden text-center mb-6">
+              <h2 className="text-3xl font-bold text-[#8A393B] mb-4">Our Projects</h2>
+              <div className="flex items-center justify-center gap-3">
+                <CarouselPrevious className="relative w-10 h-10 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 shadow-sm" />
+                <CarouselNext className="relative w-10 h-10 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706] shadow-sm" />
               </div>
-            <div className="flex items-center gap-4">
-              <CarouselPrevious className="relative w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700" />
-              <CarouselNext className="relative w-12 h-12 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706]" />
+            </div>
+            
+            {/* Desktop Layout */}
+            <div className="hidden md:flex justify-between items-end">
+              <div>
+                <h2 className="text-4xl font-bold text-[#8A393B] mb-2">Our Projects</h2>
+              </div>
+              <div className="flex items-center gap-4">
+                <CarouselPrevious className="relative w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700" />
+                <CarouselNext className="relative w-12 h-12 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706]" />
+              </div>
             </div>
           </div>
-          <CarouselContent className="-ml-4">
+          
+          {/* Responsive Carousel Content */}
+          <CarouselContent className="-ml-2 sm:-ml-4">
             {projects.map((project, index) => (
-              <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                <div className="fade-in-section">
-                  <div className="mb-4 overflow-hidden rounded-2xl">
+              <CarouselItem key={index} className="pl-2 sm:pl-4 basis-4/5 sm:basis-3/5 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+                <div className="fade-in-section group">
+                  {/* Mobile-Optimized Image Container */}
+                  <div className="mb-3 sm:mb-4 overflow-hidden rounded-xl sm:rounded-2xl bg-gray-100">
                     <Image
                       src={project.image}
                       alt={project.city}
                       width={400}
                       height={500}
-                      className="w-full h-[450px] object-cover transition-transform duration-300 hover:scale-105"
+                      className="w-full h-[280px] sm:h-[350px] md:h-[400px] lg:h-[450px] object-cover transition-transform duration-300 group-hover:scale-105"
                       loading="lazy"
                       placeholder="blur"
                       blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                     />
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">{project.city}</h3>
-                  <Link href={project.link} className="text-base font-medium text-gray-900 border-b border-gray-400 hover:border-gray-900 transition">
-                    View Project
-                  </Link>
-        </div>
+                  
+                  {/* Mobile-Optimized Text Content */}
+                  <div className="px-1 sm:px-0">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 text-gray-900 group-hover:text-[#8A393B] transition-colors duration-300">{project.city}</h3>
+                    <Link 
+                      href={project.link} 
+                      className="inline-flex items-center text-sm sm:text-base font-medium text-gray-700 hover:text-[#F2913F] border-b border-gray-300 hover:border-[#F2913F] transition-all duration-300 group-hover:translate-x-1"
+                    >
+                      View Project
+                      <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>

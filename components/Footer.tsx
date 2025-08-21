@@ -15,56 +15,56 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white">
       {/* Contact headline above address */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 md:pt-16">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight">
           <span className="text-amber-500">Get in touch with us for all</span><br />
           <span className="text-[#8A393B]">your railway needs.</span>
         </h2>
-        <p className="mt-6 max-w-3xl text-sm sm:text-base text-gray-300">
+        <p className="mt-4 sm:mt-6 max-w-3xl text-xs sm:text-sm md:text-base text-gray-300">
           By addressing the growing demands of modern railways while offering substantial cost and environmental benefits, Patil Group's composite sleepers represent the future of sustainable, high-performance railway infrastructure.
         </p>
       </div>
 
       {/* Pre-footer section */}
-      <div className="relative bg-black pt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <div className="space-y-4">
-            <h3 className="text-3xl font-bold">Legend Apartments, 6-3-1342/4</h3>
-            <p className="text-3xl font-bold">Raj Bhavan Rd, Raj Bhavan Quarters Colony</p>
-            <p className="text-3xl font-bold">Somajiguda, Hyderabad, Telangana 500082</p>
+      <div className="relative bg-black pt-8 sm:pt-12 md:pt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
+          <div className="space-y-3 sm:space-y-4 mb-6 md:mb-0">
+            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Legend Apartments, 6-3-1342/4</h3>
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Raj Bhavan Rd, Raj Bhavan Quarters Colony</p>
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Somajiguda, Hyderabad, Telangana 500082</p>
             <Link href="/contact">
-              <button className="bg-[#F2913F] text-black font-bold py-3 px-8 rounded-full text-sm hover:bg-orange-400 transition-colors">
+              <button className="bg-[#F2913F] text-black font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-full text-xs sm:text-sm hover:bg-orange-400 transition-colors">
                 Contact Us
               </button>
             </Link>
           </div>
-          <div className="absolute right-0 bottom-0">
+          <div className="relative md:absolute right-0 bottom-0 mt-4 md:mt-0">
             <Image 
               src="/trainfooter.svg"
               alt="Footer illustration"
-              width={600}
-              height={300}
-              className="object-contain"
+              width={400}
+              height={200}
+              className="object-contain w-64 sm:w-80 md:w-96 lg:w-[500px] xl:w-[600px] h-auto"
             />
           </div>
         </div>
       </div>
 
       {/* Main footer section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
 
           {/* About & Socials */}
             <div className="space-y-6">
-            <p className="max-w-xs">Discover Inspired Solutions Tailored to Your Unique Style and Needs.</p>
-            <p className="text-sm">
+            <p className="max-w-xs text-sm sm:text-base">Discover Inspired Solutions Tailored to Your Unique Style and Needs.</p>
+            <p className="text-xs sm:text-sm">
               <a href="mailto:info@patilgroup.com" className="hover:text-orange-400 transition-colors">info@patilgroup.com</a>
               </p>
-              <p>
+              <p className="text-sm sm:text-base">
               <a href="tel:+914039556700" className="hover:text-orange-400 transition-colors">+91 40 3955 6700</a>
               </p>
-            <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-400 transition-colors"><Linkedin size={20} /></a>
+            <div className="flex space-x-3 sm:space-x-4">
+              <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-400 transition-colors"><Linkedin size={16} className="sm:w-5 sm:h-5" /></a>
             </div>
           </div>
 

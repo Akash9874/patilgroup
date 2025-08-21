@@ -527,3 +527,373 @@ h1, h2, h3, h4, h5, h6, p {
 ::-webkit-scrollbar-thumb:hover {
   background: #b45309;
 }
+
+/* Modern Mobile Navigation Enhancements */
+@media (max-width: 1024px) {
+  /* Custom scrollbar for mobile navigation */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(245, 158, 11, 0.3) transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(245, 158, 11, 0.4);
+    border-radius: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(245, 158, 11, 0.6);
+  }
+  
+  /* Slide up animation for menu items */
+  .animate-slideUp {
+    animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  
+  @keyframes slideUpFade {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Touch optimization */
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(245, 158, 11, 0.1);
+  }
+  
+  /* Enhanced backdrop blur effect */
+  @supports (backdrop-filter: blur(20px)) {
+    .backdrop-blur-xl {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+  }
+  
+  /* Gradient hover effects */
+  .hover\:bg-gradient-to-r:hover {
+    background-size: 100% 100%;
+  }
+  
+  /* Scale animation for buttons */
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+  
+  .active\:scale-95:active {
+    transform: scale(0.95);
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 640px) {
+  /* Smaller scrollbar on very small screens */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 2px !important;
+  }
+  
+  /* Optimize touch targets for accessibility */
+  nav button, nav a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Prevent zoom on input focus */
+  input, select, textarea {
+    font-size: 16px;
+  }
+  
+  /* Enhanced mobile menu animations */
+  .animate-slideUp {
+    animation-duration: 0.3s;
+  }
+  
+  /* Better visual hierarchy on small screens */
+  .mobile-nav-panel {
+    margin: 12px;
+    border-radius: 16px;
+  }
+}
+
+/* Pulse animation for interactive elements */
+@keyframes pulse-amber {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.hover\:animate-pulse:hover {
+  animation: pulse-amber 1.5s ease-in-out infinite;
+}
+
+/* Mobile Hero Section Enhancements */
+@media (max-width: 640px) {
+  /* Enhanced text rendering for mobile */
+  .mobile-hero-text {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Subtle animation for the accent line */
+  .accent-line {
+    animation: expandLine 1.2s ease-out 1.2s forwards;
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  
+  @keyframes expandLine {
+    to {
+      transform: scaleX(1);
+    }
+  }
+  
+  /* Optimized video performance on mobile */
+  video {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  /* Better gradient performance */
+  .mobile-gradient {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+  }
+  
+  /* Smooth transitions for mobile interactions */
+  .mobile-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Typography optimization for small screens */
+  .mobile-heading {
+    font-feature-settings: 'kern' 1, 'liga' 1;
+    letter-spacing: -0.02em;
+  }
+  
+  /* Touch-friendly interactive hints */
+  .swipe-hint {
+    animation: fadeInUp 2s ease-out 2s forwards;
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 0.6;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Mobile Timeline Enhancements */
+  .timeline-dot {
+    animation: dotPulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes dotPulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(242, 145, 63, 0.4);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 0 0 10px rgba(242, 145, 63, 0);
+    }
+  }
+  
+  /* Timeline card hover effects */
+  .timeline-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .timeline-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  /* Mobile Leadership Card Enhancements */
+  .leadership-card-mobile {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(135deg, rgba(55, 65, 81, 0.5), rgba(75, 85, 99, 0.3));
+  }
+  
+  .leadership-card-mobile:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, rgba(55, 65, 81, 0.7), rgba(75, 85, 99, 0.5));
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Leadership image hover effect */
+  .leadership-image {
+    transition: all 0.3s ease;
+  }
+  
+  .leadership-card-mobile:hover .leadership-image {
+    transform: scale(1.05);
+  }
+  
+  /* Enhanced Auto Carousel */
+  .carousel-card {
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: fadeInUp 0.5s ease-out;
+  }
+  
+  .carousel-indicator {
+    transition: all 0.3s ease;
+  }
+  
+  .carousel-indicator.active {
+    background: linear-gradient(90deg, #F2913F, #8A393B);
+    animation: indicatorPulse 2.5s ease-in-out infinite;
+  }
+  
+  @keyframes indicatorPulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+  }
+  
+  /* Carousel content animations */
+  .carousel-content-enter {
+    animation: contentSlideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  @keyframes contentSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  /* Progress bar animation */
+  .progress-bar {
+    background: linear-gradient(90deg, #F2913F 0%, #8A393B 100%);
+    background-size: 200% 100%;
+    animation: progressGradient 2.5s ease-in-out infinite;
+  }
+  
+  @keyframes progressGradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  /* Smooth slide animations */
+  .slide-enter {
+    animation: slideInRight 0.5s ease-out;
+  }
+  
+  .slide-exit {
+    animation: slideOutLeft 0.5s ease-out;
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideOutLeft {
+    from {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
+  
+  /* Client Logo Mobile Enhancements */
+  .client-logo-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  }
+  
+  .client-logo-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Logo fade-in animation */
+  .logo-fade-in {
+    animation: logoFadeIn 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  @keyframes logoFadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Mobile grid stagger animation */
+  .mobile-logo-grid .client-logo-card:nth-child(1) { animation-delay: 0.1s; }
+  .mobile-logo-grid .client-logo-card:nth-child(2) { animation-delay: 0.2s; }
+  .mobile-logo-grid .client-logo-card:nth-child(3) { animation-delay: 0.3s; }
+  .mobile-logo-grid .client-logo-card:nth-child(4) { animation-delay: 0.4s; }
+  .mobile-logo-grid .client-logo-card:nth-child(5) { animation-delay: 0.5s; }
+  .mobile-logo-grid .client-logo-card:nth-child(6) { animation-delay: 0.6s; }
+  
+  /* Continue pattern for all logos */
+  .mobile-logo-grid .client-logo-card:nth-child(n+7) { animation-delay: 0.7s; }
+}
+
+/* Ultra-small mobile devices (iPhone SE, etc.) */
+@media (max-width: 400px) {
+  .mobile-hero-text {
+    font-size: clamp(0.875rem, 4vw, 1.25rem);
+  }
+  
+  .mobile-heading {
+    font-size: clamp(1.25rem, 6vw, 1.875rem);
+    line-height: 0.85;
+  }
+  
+  .accent-line {
+    width: clamp(2rem, 12vw, 3rem);
+  }
+  
+  /* Adjust proportions for very small screens */
+  .ultra-small-adjust {
+    width: 70% !important;
+  }
+  
+  .ultra-small-video {
+    width: 30% !important;
+  }
+}

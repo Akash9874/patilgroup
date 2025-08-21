@@ -57,8 +57,41 @@ export default function TrackTimeline({
 	}, [items]);
 
 	return (
-		<section ref={containerRef} className="relative bg-white py-32">
-			<div className="relative max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
+		<section ref={containerRef} className="relative bg-white py-16 sm:py-24 md:py-32">
+			{/* Mobile Timeline Layout */}
+			<div className="md:hidden px-4 sm:px-6">
+				<div className="relative max-w-2xl mx-auto">
+					{/* Simple Mobile Track Line */}
+					<div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-[#F2913F] via-[#8A393B] to-[#1E3888] rounded-full" />
+					
+					{/* Mobile Timeline Items */}
+					<div className="space-y-12">
+						{normalizedItems.map((item, index) => (
+							<motion.div
+								key={`${item.year}-${index}`}
+								initial={{ opacity: 0, x: -20 }}
+								whileInView={{ opacity: 1, x: 0 }}
+								transition={{ duration: 0.6, delay: index * 0.1 }}
+								viewport={{ once: true, amount: 0.3 }}
+								className="relative pl-20"
+							>
+								{/* Enhanced Timeline Dot */}
+								<div className="absolute left-6 top-2 w-6 h-6 bg-[#F2913F] rounded-full border-4 border-white shadow-lg timeline-dot" />
+								
+								{/* Enhanced Content Card */}
+								<div className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 shadow-sm timeline-card border border-gray-100">
+									<p className="text-2xl sm:text-3xl font-extrabold text-[#F2913F] mb-3">{item.year}</p>
+									<h4 className="text-lg sm:text-xl font-semibold text-[#8A393B] leading-relaxed mb-2">{item.title}</h4>
+									{item.body && <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{item.body}</p>}
+								</div>
+							</motion.div>
+						))}
+					</div>
+				</div>
+			</div>
+			
+			{/* Desktop Timeline Layout - Original */}
+			<div className="hidden md:block relative max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
 				{/* Centered vertical track (background image), layered twice to avoid visible seams */}
 				<div
 					className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-48 md:w-60 lg:w-64 pointer-events-none"

@@ -151,6 +151,14 @@ const IndiaMap: React.FC = () => {
   }, [labelsByState]);
   return (
     <div className="map-container" aria-label="India map" ref={containerRef}>
+      {/* Enhanced Mobile Instructions */}
+      <div className="md:hidden text-center mb-4">
+        <p className="text-xs text-gray-500 bg-gray-100 rounded-full px-3 py-1 inline-flex items-center gap-1">
+          <div className="w-2 h-2 bg-[#F2913F] rounded-full animate-pulse"></div>
+          Tap locations to explore
+        </p>
+      </div>
+      
       {/* Inline the SVG so we can style paths and hover states */}
       {svgMarkup && (
         <div
@@ -159,18 +167,37 @@ const IndiaMap: React.FC = () => {
           dangerouslySetInnerHTML={{ __html: svgMarkup }}
         />
       )}
-      {/* Pins overlay, always visible */}
+      
+      {/* Enhanced Pins overlay */}
       <div className="pins-overlay">
         {activePins.map((pin, idx) => (
           <div
             key={`${pin.label}-${idx}`}
-            className="pin"
+            className="pin group"
             style={{ left: `${pin.x}%`, top: `${pin.y}%` }}
+            role="button"
+            tabIndex={0}
+            aria-label={`Location: ${pin.label}`}
           >
             <div className="dot" />
-            <div className="label">{pin.label}</div>
+            <div className="label group-hover:scale-110 transition-transform duration-300">{pin.label}</div>
           </div>
         ))}
+      </div>
+      
+      {/* Mobile Map Legend */}
+      <div className="md:hidden mt-6 flex justify-center">
+        <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200 flex items-center gap-4">
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 bg-[#F2913F] rounded-full"></div>
+            <span className="text-xs text-gray-600 font-medium">Manufacturing Hub</span>
+          </div>
+          <div className="w-px h-4 bg-gray-300"></div>
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 bg-[#8A393B] rounded-full"></div>
+            <span className="text-xs text-gray-600 font-medium">Project Site</span>
+          </div>
+        </div>
       </div>
     </div>
   );
