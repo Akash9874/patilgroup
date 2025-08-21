@@ -101,13 +101,15 @@ const ManagementPage = () => {
       <section className="relative h-screen">
         <div className="absolute inset-0">
           <Image
-            src="/train.png"
-            alt="Train at a station"
+            src="/managementhero.webp"
+            alt="Management hero background"
             layout="fill"
             objectFit="cover"
           />
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
-        <div className="absolute inset-y-0 left-0 w-[35%] bg-black flex items-center">
+        <div className="relative z-10 h-full flex items-center">
           <div className="pl-16 md:pl-24">
             <h2 className="text-white text-6xl md:text-7xl font-medium font-clash">Our</h2>
             <h1 className="text-white text-8xl md:text-9xl font-bold font-clash -mt-4">Management</h1>
