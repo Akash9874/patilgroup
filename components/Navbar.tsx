@@ -53,7 +53,7 @@ const Navbar = () => {
     { href: '/legacy', label: 'Our Legacy' },
     { href: '/management', label: 'Management' },
     { href: '/news', label: 'In News' },
-    { href: '/responsibilities', label: 'Our Responsibilities' },
+    { href: '/responsibilities', label: 'Our Resources' },
     { href: '/safety', label: 'Safety' },
     { href: '/sustainability', label: 'Sustainability' },
     { href: '/our-clientele', label: 'Our Clientele' },
