@@ -21,7 +21,7 @@ const projects = [
     link: "/projects"
   },
   {
-    city: "Delhi Metro",
+    city: "Delhi Phase III",
     image: "/delhimonu.jpg",
     link: "/projects"
   },
@@ -31,17 +31,17 @@ const projects = [
     link: "/projects"
   },
   {
-    city: "Mumbai Metro",
+    city: "Mumbai Line 7B",
     image: "/mumbaimonu.jpeg",
     link: "/projects"
   },
   {
-    city: "Kolkata Metro",
+    city: "Kolkata Stretch",
     image: "/kolkatamonu.jpg",
     link: "/projects"
   },
     {
-    city: "Ahmedabad Metro",
+    city: "Ahmedabad Phase II",
     image: "/ahemdabadmonu.webp",
     link: "/projects"
   },
@@ -271,7 +271,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center justify-center fade-in-section" style={{ transitionDelay: '400ms' }}>
                   <StatCounter end={4000000} duration={2.5} suffix="+" />
-                  <div className="text-gray-500 text-base font-medium">Happy Sleepers</div>
+                  <div className="text-gray-500 text-base font-medium">Safe Sleepers</div>
               </div>
           </div>
         </div>
