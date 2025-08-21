@@ -105,51 +105,53 @@ const CMEPage = () => {
         </div>
       </section>
 
-      {/* Initiatives Grid */}
+      {/* Our Key Objectives - New Card Design */}
       <section className="bg-black text-white py-16 md:py-20 fade-in-section">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <p className="text-xl md:text-2xl mb-8 md:mb-12 fade-in-section">
+        <div className="max-w-5xl mx-auto px-6 md:px-12">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#F2913F] text-center mb-6 fade-in-section">
+            Our Key Objectives
+          </h2>
+          <p className="text-lg md:text-xl lg:text-2xl text-center mb-12 md:mb-16 fade-in-section">
             To achieve these goals, the centre is actively implementing the following initiatives:
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 bg-black">
-            {/* Card 1 */}
-            <div className="p-6 md:p-10 fade-in-section">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-4 md:mb-6">
+          <div className="space-y-6 md:space-y-8">
+            {/* Card 1 - Lean Manufacturing */}
+            <div className="bg-[#8A393B] rounded-3xl p-8 md:p-12 fade-in-section cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#8A393B]/30 hover:bg-[#9d4447]">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F2913F] mb-4 md:mb-6 transition-colors duration-300 hover:text-[#ffb366]">
                 Lean Manufacturing
               </h3>
-              <p className="text-lg md:text-xl leading-relaxed max-w-2xl">
+              <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-white transition-all duration-300">
                 We streamline operations by eliminating waste and optimizing resource use, ensuring maximum value for every step in our production process.
               </p>
             </div>
 
-            {/* Card 2 */}
-            <div className="p-6 md:p-10 fade-in-section">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-4 md:mb-6">
+            {/* Card 2 - 5S and Kaizen */}
+            <div className="bg-[#F2913F] rounded-3xl p-8 md:p-12 fade-in-section cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#F2913F]/30 hover:bg-[#ff9f4a]">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-4 md:mb-6 transition-colors duration-300 hover:text-[#6d2f32]">
                 5S and Kaizen Methodologies
               </h3>
-              <p className="text-lg md:text-xl leading-relaxed max-w-2xl">
+              <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-black transition-all duration-300">
                 By fostering discipline and continuous improvement at the ground level, we build a culture of efficiency, cleanliness, and proactive problem-solving.
               </p>
             </div>
 
-            {/* Card 3 */}
-            <div className="p-6 md:p-10 fade-in-section">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-4 md:mb-6">
-                Robotic Process Implementation
-                <br className="hidden md:block" /> & SPM Automation
+            {/* Card 3 - Robotic Process */}
+            <div className="bg-[#8A393B] rounded-3xl p-8 md:p-12 fade-in-section cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#8A393B]/30 hover:bg-[#9d4447]">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F2913F] mb-4 md:mb-6 transition-colors duration-300 hover:text-[#ffb366]">
+                Robotic Process Implementation & SPM Automation
               </h3>
-              <p className="text-lg md:text-xl leading-relaxed max-w-2xl">
+              <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-white transition-all duration-300">
                 We deploy advanced robotics and tailor-made Special Purpose Machines to automate repetitive tasks, boost precision, and enhance speed on the shop floor.
               </p>
             </div>
 
-            {/* Card 4 */}
-            <div className="p-6 md:p-10 fade-in-section">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-4 md:mb-6">
+            {/* Card 4 - IoT-enabled */}
+            <div className="bg-[#F2913F] rounded-3xl p-8 md:p-12 fade-in-section cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#F2913F]/30 hover:bg-[#ff9f4a]">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-4 md:mb-6 transition-colors duration-300 hover:text-[#6d2f32]">
                 IoT-enabled Condition Monitoring
               </h3>
-              <p className="text-lg md:text-xl leading-relaxed max-w-2xl">
+              <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-black transition-all duration-300">
                 Our smart systems track equipment health in real time, helping predict failures before they occur—reducing downtime and extending machine life.
               </p>
             </div>
@@ -225,55 +227,103 @@ const CMEPage = () => {
         </div>
       </section>
 
-      {/* Inside the Training Program */}
+      {/* Inside the Training Program - New Horizontal Design */}
       <section className="bg-black text-white py-16 md:py-24 fade-in-section">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <h2 className="text-4xl md:text-6xl font-extrabold text-center text-[#F2913F] fade-in-section">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-center text-[#F2913F] fade-in-section">
             Inside the Training Program
           </h2>
-          <p className="mt-4 text-sm md:text-base text-white/80 text-center max-w-4xl mx-auto fade-in-section">
+          <p className="mt-6 text-lg md:text-xl lg:text-2xl text-white/90 text-center max-w-6xl mx-auto fade-in-section leading-relaxed">
             Holistic Learning for Impactful Careers: Through this initiative, Patil Group aims to create a highly skilled workforce,
             contributing to the success of Indian Railways while empowering young professionals with stable and rewarding careers.
           </p>
 
-          {/* Card 1 */}
-          <div className="mt-10 rounded-2xl bg-[#8A393B]/90 px-6 md:px-10 py-8 relative fade-in-section transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-[#8A393B] cursor-pointer">
-            <span className="absolute right-6 top-6 text-5xl md:text-7xl font-extrabold text-[#F2913F]">1</span>
-            <h3 className="text-3xl md:text-4xl font-bold">Program Highlights</h3>
-            <ul className="mt-4 list-disc pl-6 space-y-3 text-white/90 text-lg md:text-xl lg:text-2xl">
-              <li>Each training batch consists of 30 students</li>
-              <li>A comprehensive curriculum covering key aspects of railway manufacturing</li>
-              <li>In-house training programs for continuous learning and skill enhancement</li>
-            </ul>
+          {/* 3 Cards in Horizontal Row */}
+          <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {/* Card 1 - Program Highlights */}
+            <div className="rounded-3xl bg-[#8A393B] p-6 lg:p-8 relative fade-in-section min-h-[500px] flex flex-col cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#8A393B]/30 hover:bg-[#9d4447] group">
+              <div className="text-6xl lg:text-7xl font-extrabold text-[#F2913F] mb-4 transition-all duration-300 group-hover:text-[#ffb366] group-hover:scale-110">1</div>
+              <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-[#F2913F] mb-6 transition-colors duration-300 group-hover:text-[#ffb366]">
+                Program Highlights
+              </h3>
+              <ul className="space-y-3 lg:space-y-4 text-white text-base lg:text-lg xl:text-xl leading-relaxed flex-grow transition-all duration-300">
+                <li className="flex items-start transition-all duration-300 group-hover:translate-x-2">
+                  <span className="text-[#F2913F] mr-3 transition-colors duration-300 group-hover:text-[#ffb366]">•</span>
+                  Each training batch consists of 30 students
+                </li>
+                <li className="flex items-start transition-all duration-300 group-hover:translate-x-2">
+                  <span className="text-[#F2913F] mr-3 transition-colors duration-300 group-hover:text-[#ffb366]">•</span>
+                  A comprehensive curriculum covering key aspects of railway manufacturing
+                </li>
+                <li className="flex items-start transition-all duration-300 group-hover:translate-x-2">
+                  <span className="text-[#F2913F] mr-3 transition-colors duration-300 group-hover:text-[#ffb366]">•</span>
+                  In-house training programs for continuous learning and skill enhancement
+                </li>
+              </ul>
+            </div>
+
+            {/* Card 2 - Current Training Modules */}
+            <div className="rounded-3xl bg-[#F2913F] p-6 lg:p-8 relative fade-in-section min-h-[500px] flex flex-col cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#F2913F]/30 hover:bg-[#ff9f4a] group">
+              <div className="text-6xl lg:text-7xl font-extrabold text-[#8A393B] mb-4 transition-all duration-300 group-hover:text-[#6d2f32] group-hover:scale-110">2</div>
+              <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-[#8A393B] mb-6 transition-colors duration-300 group-hover:text-[#6d2f32]">
+                Current Training Modules
+              </h3>
+              <ul className="space-y-3 lg:space-y-4 text-black text-base lg:text-lg xl:text-xl leading-relaxed flex-grow transition-all duration-300">
+                <li className="flex items-start transition-all duration-300 group-hover:translate-x-2">
+                  <span className="text-[#8A393B] mr-3 transition-colors duration-300 group-hover:text-[#6d2f32]">•</span>
+                  Concrete Mixing and Casting
+                </li>
+                <li className="flex items-start transition-all duration-300 group-hover:translate-x-2">
+                  <span className="text-[#8A393B] mr-3 transition-colors duration-300 group-hover:text-[#6d2f32]">•</span>
+                  Advanced Pre-Stressing Techniques (Hi-Tech)
+                </li>
+                <li className="flex items-start transition-all duration-300 group-hover:translate-x-2">
+                  <span className="text-[#8A393B] mr-3 transition-colors duration-300 group-hover:text-[#6d2f32]">•</span>
+                  Manufacturing & Quality Control of Concrete Sleepers
+                </li>
+                <li className="flex items-start transition-all duration-300 group-hover:translate-x-2">
+                  <span className="text-[#8A393B] mr-3 transition-colors duration-300 group-hover:text-[#6d2f32]">•</span>
+                  Production of Rail Track Components (Clips, Pads, etc.)
+                </li>
+                <li className="flex items-start transition-all duration-300 group-hover:translate-x-2">
+                  <span className="text-[#8A393B] mr-3 transition-colors duration-300 group-hover:text-[#6d2f32]">•</span>
+                  Railway Welding Technique
+                </li>
+              </ul>
+            </div>
+
+            {/* Card 3 - State-of-the-art Facilities */}
+            <div className="rounded-3xl bg-[#8A393B] p-6 lg:p-8 relative fade-in-section min-h-[500px] flex flex-col cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#8A393B]/30 hover:bg-[#9d4447] group">
+              <div className="text-6xl lg:text-7xl font-extrabold text-[#F2913F] mb-4 transition-all duration-300 group-hover:text-[#ffb366] group-hover:scale-110">3</div>
+              <h3 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-[#F2913F] mb-6 transition-colors duration-300 group-hover:text-[#ffb366]">
+                State-of-the-art Facilities
+              </h3>
+              <ul className="space-y-3 lg:space-y-4 text-white text-base lg:text-lg xl:text-xl leading-relaxed flex-grow transition-all duration-300">
+                <li className="flex items-start transition-all duration-300 group-hover:translate-x-2">
+                  <span className="text-[#F2913F] mr-3 transition-colors duration-300 group-hover:text-[#ffb366]">•</span>
+                  4 Classrooms for theoretical instruction
+                </li>
+                <li className="flex items-start transition-all duration-300 group-hover:translate-x-2">
+                  <span className="text-[#F2913F] mr-3 transition-colors duration-300 group-hover:text-[#ffb366]">•</span>
+                  Full-fledged Concrete Laboratory for material testing and analysis
+                </li>
+                <li className="flex items-start transition-all duration-300 group-hover:translate-x-2">
+                  <span className="text-[#F2913F] mr-3 transition-colors duration-300 group-hover:text-[#ffb366]">•</span>
+                  Pre-Stressing Bed for practical training in advanced pre-stressing techniques
+                </li>
+                <li className="flex items-start transition-all duration-300 group-hover:translate-x-2">
+                  <span className="text-[#F2913F] mr-3 transition-colors duration-300 group-hover:text-[#ffb366]">•</span>
+                  Metallurgical & Forging Training Lab for specialized skill development
+                </li>
+                <li className="flex items-start transition-all duration-300 group-hover:translate-x-2">
+                  <span className="text-[#F2913F] mr-3 transition-colors duration-300 group-hover:text-[#ffb366]">•</span>
+                  Computer Lab for digital learning and simulation-based training
+                </li>
+              </ul>
+            </div>
           </div>
 
-          {/* Card 2 */}
-          <div className="mt-8 rounded-2xl bg-[#F2913F] px-6 md:px-10 py-8 relative text-black fade-in-section transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-[#ff9a3f] cursor-pointer">
-            <span className="absolute right-6 top-6 text-5xl md:text-7xl font-extrabold text-[#8A393B]">2</span>
-            <h3 className="text-3xl md:text-4xl font-extrabold">Current Training Modules</h3>
-            <ul className="mt-4 list-disc pl-6 space-y-3 text-lg md:text-xl lg:text-2xl">
-              <li>Concrete Mixing and Casting</li>
-              <li>Advanced Pre-Stressing Techniques (Hi-Tech)</li>
-              <li>Manufacturing & Quality Control of Concrete Sleepers</li>
-              <li>Production of Rail Track Components (Clips, Pads, etc.)</li>
-              <li>Railway Welding Technique</li>
-            </ul>
-          </div>
-
-          {/* Card 3 */}
-          <div className="mt-8 rounded-2xl bg-[#8A393B]/90 px-6 md:px-10 py-8 relative fade-in-section transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:bg-[#8A393B] cursor-pointer">
-            <span className="absolute right-6 top-6 text-5xl md:text-7xl font-extrabold text-[#F2913F]">3</span>
-            <h3 className="text-3xl md:text-4xl font-bold">State-of-the-art Facilities</h3>
-            <ul className="mt-4 list-disc pl-6 space-y-3 text-white/90 text-lg md:text-xl lg:text-2xl">
-              <li>4 Classrooms for theoretical instruction</li>
-              <li>Full-fledged Concrete Laboratory for material testing and analysis</li>
-              <li>Pre-Stressing Bed for practical training in advanced pre-stressing techniques</li>
-              <li>Metallurgical & Forging Training Lab for specialized skill development</li>
-              <li>Computer Lab for digital learning and simulation-based training</li>
-            </ul>
-          </div>
-
-          <p className="mt-10 text-center text-white/80 text-sm md:text-base max-w-5xl mx-auto">
+          <p className="mt-12 md:mt-16 text-center text-white/90 text-lg md:text-xl lg:text-2xl max-w-6xl mx-auto leading-relaxed">
             Additionally, we arrange specialized sessions on various railway functions in collaboration with RDSO and other railway authorities,
             based on industry needs and requests. With these cutting-edge facilities, Patil Group ensures that trainees receive comprehensive,
             industry-relevant education, preparing them for successful careers in railway manufacturing and infrastructure.
