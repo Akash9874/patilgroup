@@ -85,9 +85,6 @@ const CMEPage = () => {
             <div className="border-r border-gray-200 p-6 md:p-10 flex flex-col justify-between min-h-[26rem] md:min-h-[32rem]">
               <div>
                 <h3 className="text-3xl md:text-4xl font-bold text-[#8A393B] fade-in-section">
-                  Enhancing Overall
-                  <br />
-                  Equipment Efficiency (OEE)
                 </h3>
               </div>
               <p className="text-lg md:text-xl lg:text-4xl text-black/90 max-w-xl fade-in-section">
@@ -259,8 +256,8 @@ const CMEPage = () => {
                   <span className="text-[#F2913F] mr-3 transition-colors duration-300 group-hover:text-[#ffb366]">•</span>
                   In-house training programs for continuous learning and skill enhancement
                 </li>
-              </ul>
-            </div>
+            </ul>
+          </div>
 
             {/* Card 2 - Current Training Modules */}
             <div className="rounded-3xl bg-[#F2913F] p-6 lg:p-8 relative fade-in-section min-h-[500px] flex flex-col cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#F2913F]/30 hover:bg-[#ff9f4a] group">
@@ -289,8 +286,8 @@ const CMEPage = () => {
                   <span className="text-[#8A393B] mr-3 transition-colors duration-300 group-hover:text-[#6d2f32]">•</span>
                   Railway Welding Technique
                 </li>
-              </ul>
-            </div>
+            </ul>
+          </div>
 
             {/* Card 3 - State-of-the-art Facilities */}
             <div className="rounded-3xl bg-[#8A393B] p-6 lg:p-8 relative fade-in-section min-h-[500px] flex flex-col cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#8A393B]/30 hover:bg-[#9d4447] group">
@@ -319,7 +316,7 @@ const CMEPage = () => {
                   <span className="text-[#F2913F] mr-3 transition-colors duration-300 group-hover:text-[#ffb366]">•</span>
                   Computer Lab for digital learning and simulation-based training
                 </li>
-              </ul>
+            </ul>
             </div>
           </div>
 
