@@ -40,12 +40,12 @@ export default function SustainabilityPage() {
           </div>
         </div>
         
-        {/* Desktop Layout - Original */}
+        {/* Desktop Layout - Bottom left positioning */}
         <div className="hidden md:block">
           <div className="absolute inset-0 bg-black/60" />
-          <div className="relative z-10 h-full max-w-7xl mx-auto flex items-end md:items-center">
-            <div className="px-6 md:px-8 lg:px-12 pb-10 md:pb-0 slide-in-left">
-              <h1 className="text-white font-bold leading-none text-6xl sm:text-7xl md:text-8xl lg:text-9xl">
+          <div className="absolute bottom-0 left-0 z-10">
+            <div className="px-6 md:px-8 lg:px-12 pb-16">
+              <h1 className="text-white font-bold leading-none text-6xl sm:text-7xl md:text-8xl lg:text-9xl drop-shadow-lg">
                 Sustainability
               </h1>
             </div>
@@ -134,15 +134,15 @@ every process."
             {[
               {
                 title: "Solar generation",
-                items: ["18 sites across India", "5.4 megawatts on-grid", "Reduced dependence on fossil sources"]
+                items: ["With 18 sites across India and an on-grid capacity of 5.4 megawatts, our solar generation network significantly reduces dependence on fossil fuels and lowers the overall carbon footprint of operations. This renewable infrastructure powers a substantial share of our manufacturing activities, ensuring cleaner and more sustainable production."]
               },
               {
                 title: "Water reuse", 
-                items: ["Recycled curing water through closed-loop WTPs", "Reduced consumption", "Zero discharge processes in place"]
+                items: ["Recycled curing water is processed through closed-loop Water Treatment Plants (WTPs), dramatically reducing overall consumption and ensuring efficient use of every drop. By implementing zero-discharge processes across all facilities, the system prevents waste and protects natural water bodies from contamination."]
               },
               {
                 title: "Dust control",
-                items: ["Factory air managed at source", "Multi-stage dust extraction across units", "Cleaner environment for every worker"]
+                items: ["Factory air is managed at the source through advanced multi-stage dust extraction systems installed across all units, creating a cleaner, safer, and healthier environment for every worker. High-efficiency filtration technology ensures that airborne particles are captured before they spread, maintaining optimal air quality standards throughout operations."]
               }
             ].map((section, index) => (
               <div key={index} className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:shadow-md transition-shadow duration-300">
@@ -162,98 +162,65 @@ every process."
             ))}
           </div>
           
-          {/* Desktop Content - Original */}
-          <div className="hidden md:block mt-16 space-y-16">
-            {/* Solar generation */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-              <h3 className="text-4xl md:text-5xl font-extrabold text-[#F2913F] slide-in-left">Solar generation</h3>
-              <ul className="text-xl md:text-2xl text-black leading-8 list-disc list-inside slide-in-right">
-                <li>18 sites across India</li>
-                <li>5.4 megawatts on-grid</li>
-                <li>Reduced dependence on fossil sources</li>
-              </ul>
-            </div>
-
-            {/* Water reuse */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-              <h3 className="text-4xl md:text-5xl font-extrabold text-[#F2913F] slide-in-left">Water reuse</h3>
-              <ul className="text-xl md:text-2xl text-black leading-8 list-disc list-inside slide-in-right">
-                <li>Recycled curing water through closed-loop WTPs</li>
-                <li>Reduced consumption</li>
-                <li>Zero discharge processes in place</li>
-              </ul>
-            </div>
-
-            {/* Dust control */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-              <h3 className="text-4xl md:text-5xl font-extrabold text-[#F2913F] slide-in-left">Dust control</h3>
-              <ul className="text-xl md:text-2xl text-black leading-8 list-disc list-inside slide-in-right">
-                <li>Factory air managed at source</li>
-                <li>Multi-stage dust extraction across units</li>
-                <li>Cleaner environment for every worker</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Responsive Image showcase section */}
-      <section className="bg-gray-50 py-8 sm:py-12 md:py-16 lg:py-24 fade-in-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-          {/* Mobile Layout - Single column */}
-          <div className="md:hidden space-y-4">
-            {[
-              { src: "/sustain.jpg", alt: "Sustainability initiative" },
-              { src: "/sustain2.jpg", alt: "Environmental practices" },
-              { src: "/sustainabilityhero.jpg", alt: "Green technology" }
-            ].map((img, index) => (
-              <div key={index} className="relative group overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  width={400}
-                  height={300}
-                  className="w-full h-56 sm:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          {/* Desktop Content - Safety page style layout */}
+          <div className="hidden md:block mt-16">
+            <div className="space-y-8">
+              {/* Solar generation */}
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">Solar generation</h3>
+                <div className="space-y-3 text-xl md:text-2xl text-gray-800 leading-relaxed mb-6 text-justify">
+                  <p>With 18 sites across India and an on-grid capacity of 5.4 megawatts, our solar generation network significantly reduces dependence on fossil fuels and lowers the overall carbon footprint of operations. This renewable infrastructure powers a substantial share of our manufacturing activities, ensuring cleaner and more sustainable production. Designed for scalability, the system continues to expand as energy demands grow, reinforcing long-term environmental goals. By integrating solar energy into daily operations, we demonstrate a strong commitment to innovation, responsibility, and the transition toward a greener future across all our facilities.</p>
+                </div>
+                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
+                  <Image
+                    src="/solargeneration.webp"
+                    alt="Solar generation facility"
+                    width={800}
+                    height={400}
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
               </div>
-            ))}
-          </div>
-          
-          {/* Desktop Layout - Original */}
-          <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-              <Image
-                src="/sustain.jpg"
-                alt="Sustainability initiative"
-                width={400}
-                height={300}
-                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            
-            <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-              <Image
-                src="/sustain2.jpg"
-                alt="Environmental practices"
-                width={400}
-                height={300}
-                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            
-            <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-              <Image
-                src="/sustainabilityhero.jpg"
-                alt="Green technology"
-                width={400}
-                height={300}
-                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
+
+              {/* Water reuse */}
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">Water reuse</h3>
+                <div className="space-y-3 text-xl md:text-2xl text-gray-800 leading-relaxed mb-6 text-justify">
+                  <p>Recycled curing water is processed through closed-loop Water Treatment Plants (WTPs), dramatically reducing overall consumption and ensuring efficient use of every drop. By implementing zero-discharge processes across all facilities, the system prevents waste and protects natural water bodies from contamination. This comprehensive approach not only conserves a vital resource but also aligns with global sustainability standards. Designed for long-term reliability, the water management framework supports both operational efficiency and environmental stewardship, reflecting our commitment to responsible resource utilization and sustainable manufacturing practices.</p>
+                </div>
+                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
+                  <Image
+                    src="/wateresue.jpg"
+                    alt="Water reuse system"
+                    width={800}
+                    height={700}
+                    className="w-full h-97 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+
+              {/* Dust control */}
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">Dust control</h3>
+                <div className="space-y-3 text-xl md:text-2xl text-gray-800 leading-relaxed mb-6 text-justify">
+                  <p>Factory air is managed at the source through advanced multi-stage dust extraction systems installed across all units, creating a cleaner, safer, and healthier environment for every worker. High-efficiency filtration technology ensures that airborne particles are captured before they spread, maintaining optimal air quality standards throughout operations. These systems not only safeguard employee health but also protect sensitive machinery from dust-related wear, extending equipment life and reducing downtime. Designed for continuous performance and low maintenance, the dust control framework reflects our commitment to workplace safety, regulatory compliance, and sustainable industrial practices.</p>
+                </div>
+                <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
+                  <Image
+                    src="/dust control.jpg"
+                    alt="Dust control system"
+                    width={800}
+                    height={400}
+                    className="w-full h-97 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
+
 
       {/* Responsive Efficiency and intent statements */}
       <section className="bg-[#F5F4F1] py-8 sm:py-12 md:py-16 fade-in-section">
