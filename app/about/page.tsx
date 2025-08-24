@@ -120,11 +120,11 @@ const AboutUsPage = () => {
           </div>
         </div>
         
-        {/* Desktop Layout - Left Bottom Position */}
+        {/* Desktop Layout - Bottom Left Position */}
         <div className="hidden lg:block">
           <div className="absolute inset-0 bg-black/40" />
-          <div className="relative z-10 h-full flex items-end pb-16">
-            <div className="w-full px-6 sm:px-8 md:px-12">
+          <div className="absolute bottom-0 left-0 z-10">
+            <div className="px-6 sm:px-8 md:px-12 pb-16">
               <h1 className="text-white font-bold leading-[0.95] text-6xl md:text-7xl lg:text-8xl">
                 Through<br />the tracks<br />of time
               </h1>
