@@ -91,7 +91,7 @@ const cardVariants = {
     scale: 1,
     transition: {
       duration: 0.7,
-      ease: [0.25, 0.25, 0.25, 0.75],
+      ease: "easeOut",
     },
   },
   hover: {
@@ -212,7 +212,7 @@ const NewsPage = () => {
             viewport={{ once: true }}
             transition={{ 
               duration: 0.8, 
-              ease: [0.25, 0.25, 0.25, 0.75]
+              ease: "easeOut"
             }}
           >
             Our Latest News
