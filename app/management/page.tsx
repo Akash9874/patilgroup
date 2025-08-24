@@ -141,11 +141,11 @@ const ManagementPage = () => {
           </div>
         </div>
         
-        {/* Desktop Layout - Original Left Positioning */}
+        {/* Desktop Layout - Bottom Left Positioning */}
         <div className="hidden lg:block">
           <div className="absolute inset-0 bg-black/40"></div>
-          <div className="relative z-10 h-full flex items-center">
-            <div className="pl-16 xl:pl-24">
+          <div className="absolute bottom-0 left-0 z-10">
+            <div className="pl-16 xl:pl-24 pb-16">
               <h2 className="text-white text-6xl lg:text-7xl font-medium font-clash">Our</h2>
               <h1 className="text-white text-8xl lg:text-9xl font-bold font-clash -mt-3 lg:-mt-4">Management</h1>
             </div>
