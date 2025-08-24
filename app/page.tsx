@@ -491,7 +491,7 @@ export default function Home() {
               <div className="bg-white rounded-xl p-4 shadow-sm fade-in-section" style={{ animationDelay: '400ms' }}>
                 <div className="text-center">
                   <StatCounter end={4000000} duration={2.5} suffix="+" />
-                  <div className="text-gray-500 text-xs font-medium mt-1">Safe Sleepers</div>
+                  <div className="text-gray-500 text-xs font-medium mt-1">Safe Sleepers per year</div>
                 </div>
               </div>
             </div>
@@ -508,7 +508,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center justify-center fade-in-section" style={{ transitionDelay: '400ms' }}>
                 <StatCounter end={4000000} duration={2.5} suffix="+" />
-                <div className="text-gray-500 text-base font-medium">Safe Sleepers</div>
+                <div className="text-gray-500 text-base font-medium">Safe Sleepers per year</div>
               </div>
             </div>
           </div>

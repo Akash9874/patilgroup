@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Linkedin, ArrowUp, Send } from 'lucide-react';
+import { Linkedin, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -16,7 +16,7 @@ const Footer = () => {
     <footer className="bg-black text-white">
       {/* Contact headline above address */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 md:pt-16">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-extrabold leading-tight">
           <span className="text-amber-500">Get in touch with us for all</span><br />
           <span className="text-[#8A393B]">your railway needs.</span>
         </h2>
@@ -28,11 +28,13 @@ const Footer = () => {
       {/* Pre-footer section */}
       <div className="relative bg-black pt-8 sm:pt-12 md:pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
-          <div className="space-y-3 sm:space-y-4 mb-6 md:mb-0">
-            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Legend Apartments, 6-3-1342/4</h3>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Raj Bhavan Rd, Raj Bhavan Quarters Colony</p>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Somajiguda, Hyderabad, Telangana 500082</p>
-            <Link href="/contact">
+          <div className="mb-6 md:mb-0">
+            <div className="space-y-3 sm:space-y-4">
+              <h3 className="text-lg sm:text-xl md:text-2xl lg:text-xl font-bold">Legend Apartments, 6-3-1342/4</h3>
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-xl font-bold">Raj Bhavan Rd, Raj Bhavan Quarters Colony</p>
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-xl font-bold">Somajiguda, Hyderabad, Telangana 500082</p>
+            </div>
+            <Link href="/contact" className="inline-block mt-6">
               <button className="bg-[#F2913F] text-black font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-full text-xs sm:text-sm hover:bg-orange-400 transition-colors">
                 Contact Us
               </button>
@@ -42,7 +44,7 @@ const Footer = () => {
             <Image 
               src="/trainfooter.svg"
               alt="Footer illustration"
-              width={400}
+              width={350}
               height={200}
               className="object-contain w-64 sm:w-80 md:w-96 lg:w-[500px] xl:w-[600px] h-auto"
             />
@@ -81,19 +83,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter Subscription */}
+          {/* Action Buttons */}
           <div className="md:col-span-2">
-            <h4 className="font-bold mb-4">Subscribe to our Newsletter</h4>
-            <div className="relative mb-8">
-              <input 
-                type="email" 
-                placeholder="Email" 
-                className="w-full bg-gray-800 border border-gray-700 rounded-full py-3 px-6 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-400"
-              />
-              <button className="absolute right-2 top-1/2 -translate-y-1/2 bg-white w-8 h-8 rounded-full flex items-center justify-center text-black">
-                <Send size={16} />
-              </button>
-            </div>
             <div className="flex justify-between items-center">
               <div className="flex flex-wrap gap-4">
                 <Link href="/whistleblower">
