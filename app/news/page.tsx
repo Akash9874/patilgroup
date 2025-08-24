@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navbar from '@/components/Navbar';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const cards = [
   {
@@ -68,7 +68,7 @@ const cards = [
 ];
 
 // Animation variants
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -79,7 +79,7 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { 
     opacity: 0, 
     y: 60,
@@ -91,7 +91,7 @@ const cardVariants = {
     scale: 1,
     transition: {
       duration: 0.7,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   },
   hover: {
@@ -99,31 +99,31 @@ const cardVariants = {
     scale: 1.02,
     transition: {
       duration: 0.3,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   },
 };
 
-const imageVariants = {
+const imageVariants: Variants = {
   rest: { scale: 1, filter: "brightness(1)" },
   hover: { 
     scale: 1.1, 
     filter: "brightness(1.1)",
     transition: {
       duration: 0.4,
-      ease: "easeOut",
+      ease: "easeOut" as const,
     },
   },
 };
 
-const textVariants = {
+const textVariants: Variants = {
   hidden: { opacity: 0, x: -30 },
   visible: {
     opacity: 1,
     x: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: "easeOut" as const,
       delay: 0.2,
     },
   },
@@ -212,7 +212,7 @@ const NewsPage = () => {
             viewport={{ once: true }}
             transition={{ 
               duration: 0.8, 
-              ease: "easeOut"
+              ease: "easeOut" as const
             }}
           >
             Our Latest News
