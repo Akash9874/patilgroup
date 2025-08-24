@@ -74,7 +74,7 @@ const CMEPage = () => {
         {/* Title Bar */}
         <div className="bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-4 sm:py-6">
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-[#F2913F] fade-in-section">Our Key Objectives</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-[#F2913F] fade-in-section">Our Key Goals</h2>
           </div>
         </div>
 
@@ -84,17 +84,52 @@ const CMEPage = () => {
             {/* Left column with divider */}
             <div className="border-r border-gray-200 p-4 sm:p-6 md:p-10 flex flex-col justify-between min-h-[20rem] sm:min-h-[26rem] md:min-h-[32rem]">
               <div>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#8A393B] fade-in-section">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#F2913F] fade-in-section mb-4">
+                  ZERO BAD
+                </h2>
+                <div className="mb-8 space-y-3 fade-in-section">
+                  <div className="bg-[#8A393B] rounded-xl p-4 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#8A393B]/30 hover:bg-[#9d4447]">
+                    <p className="text-white font-bold text-base sm:text-lg md:text-xl">
+                      <span className="text-[#F2913F]">B-</span> 0 Breakdown
+                    </p>
+                  </div>
+                  <div className="bg-[#F2913F] rounded-xl p-4 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#F2913F]/30 hover:bg-[#ff9f4a]">
+                    <p className="text-black font-bold text-base sm:text-lg md:text-xl">
+                      <span className="text-[#8A393B]">A-</span> 0 Accidents
+                    </p>
+                  </div>
+                  <div className="bg-[#8A393B] rounded-xl p-4 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#8A393B]/30 hover:bg-[#9d4447]">
+                    <p className="text-white font-bold text-base sm:text-lg md:text-xl">
+                      <span className="text-[#F2913F]">D-</span> 0 Downtime
+                    </p>
+                  </div>
+                </div>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#8A393B] fade-in-section mb-4">
+                  Focus Area
                 </h3>
+                <ul className="space-y-2 text-base sm:text-lg md:text-3xl text-black/90 fade-in-section">
+                  <li className="flex items-start">
+                    <span className="text-[#F2913F] mr-3">•</span>
+                    Ensure HSE (Health, Safety and Environment)
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#F2913F] mr-3">•</span>
+                    Improving process and product quality
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#F2913F] mr-3">•</span>
+                    Enhance equipment and operations reliability
+                  </li>
+                </ul>
               </div>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-black/90 max-w-xl fade-in-section">
-                We aim to maximize productivity by reducing downtime, improving performance, and ensuring equipment runs at its best—every shift, every day.
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-black/90 max-w-xl fade-in-section mt-6">
+                Achieving Process Excellence through Statistical quality control (SQC) and statistical process control (SPC)
               </p>
             </div>
 
             {/* Right column with rectangular image */}
             <div className="relative p-4 sm:p-6 md:p-10 flex items-center justify-center">
-              <div className="w-64 h-48 sm:w-80 sm:h-64 md:w-96 md:h-72 lg:w-[30rem] lg:h-[22rem] rounded-lg overflow-hidden shadow-lg">
+              <div className="w-85 h-69 sm:w-96 sm:h-80 md:w-[32rem] md:h-97 lg:w-[40rem] lg:h-[30rem] rounded-lg overflow-hidden shadow-lg">
                 <img src="/cmehero.JPG" alt="OEE Visual" className="w-full h-full object-cover" />
               </div>
             </div>
