@@ -30,8 +30,8 @@ const BallastlessTrackUrbanMetroPage = () => {
           </div>
 
           <div className="relative mt-24 fade-in-section">
-            <div className="grid md:grid-cols-2 gap-8 items-start">
-              <div className="pt-16">
+            <div className="flex flex-row gap-8 items-center">
+              <div className="flex-shrink-0">
                 <Image
                   src="/ballastlesstrack1.jpg"
                   alt="Ballastless track detail"
@@ -40,25 +40,15 @@ const BallastlessTrackUrbanMetroPage = () => {
                   className="rounded-lg"
                 />
               </div>
-              <div className="bg-white text-black p-8 rounded-lg shadow-lg">
+              <div className="bg-white text-black p-8 rounded-lg shadow-lg flex-1">
                 <h3 className="text-2xl font-bold text-[#8A393B] mb-4">
-                  This system has been successfully deployed in multiple metro projects, including:
+                  With reduced on-site casting, consistent alignment, and low maintenance needs, it supports fast-track construction and dependable daily operation across dense urban environments.
                 </h3>
-                <ul className="list-disc list-inside space-y-2 text-lg">
-                  <li>Bangalore Metro</li>
-                  <li>Delhi Metro</li>
-                  <li>Mumbai Metro</li>
-                  <li>Chennai Metro</li>
-                </ul>
               </div>
             </div>
           </div>
 
-          <div className="mt-24 max-w-5xl fade-in-section">
-            <p className="text-2xl font-bold text-[#F2913F]">
-              With reduced on-site casting, consistent alignment, and low maintenance needs, it supports fast-track construction and dependable daily operation across dense urban environments.
-            </p>
-          </div>
+
         </div>
       </section>
 
@@ -80,8 +70,8 @@ const BallastlessTrackUrbanMetroPage = () => {
           </div>
 
           <div className="relative mt-24 fade-in-section">
-            <div className="grid md:grid-cols-2 gap-8 items-start">
-              <div className="pt-16">
+            <div className="flex flex-row gap-8 items-center">
+              <div className="flex-shrink-0">
                 <Image
                   src="/balltrack3.webp"
                   alt="Ballastless main line banner"
@@ -90,14 +80,15 @@ const BallastlessTrackUrbanMetroPage = () => {
                   className="rounded-lg"
                 />
               </div>
-              <div className="bg-white text-black p-8 rounded-lg shadow-lg">
+              <div className="bg-white text-black p-8 rounded-lg shadow-lg flex-1">
                 <h3 className="text-3xl md:text-4xl font-bold text-[#8A393B] mb-4">
-                  This system is currently in use in:
+                  This system has been successfully deployed in multiple metro projects, including:
                 </h3>
                 <ul className="list-disc list-inside space-y-2 text-xl md:text-2xl">
-                  <li>Jammu-Baramulla Line (Jammu & Kashmir)</li>
-                  <li>Dedicated Freight Corridor sections</li>
-                  <li>Northern Railways bridge zones</li>
+                  <li>Bangalore Metro</li>
+                  <li>Delhi Metro</li>
+                  <li>Mumbai Metro</li>
+                  <li>Chennai Metro</li>
                 </ul>
               </div>
             </div>

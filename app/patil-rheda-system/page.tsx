@@ -36,6 +36,17 @@ const PatilRhedaSystemPage = () => {
         </div>
       </section>
 
+      {/* Introduction Section */}
+      <section className="bg-black py-16 fade-in-section">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white text-black p-8 rounded-lg shadow-lg">
+            <p className="text-2xl md:text-3xl leading-relaxed text-center">
+              At Patil Group, we offer the Patil RHEDA system, a flexible solution that adapts to the unique requirements of every project. Its core design uses modified bi-block sleepers embedded in a monolithic concrete slab, delivering strength and durability. With highly elastic rail fastenings, we ensure the vertical rail deflection needed for balanced load distribution and smooth, reliable train travel.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Implemented In Section */}
       <section className="bg-black text-white py-24 sm:py-32 fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

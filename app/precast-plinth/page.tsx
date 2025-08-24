@@ -19,7 +19,7 @@ const PrecastPlinthPage = () => {
       {/* Hero Section */}
       <section className="relative h-screen bg-black">
         <div className="absolute inset-0 h-full w-full">
-          <img src="/precast2.jpg" alt="Precast Plinth" className="h-full w-full object-cover" />
+          <img src="/preeeeeee.jpg" alt="Precast Plinth" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
         <div className="relative z-10 h-full flex items-center justify-start pl-4 sm:pl-8 md:pl-16 lg:pl-24">
@@ -29,49 +29,60 @@ const PrecastPlinthPage = () => {
         </div>
       </section>
 
-      {/* Built for speed, strength, and precision Section with typing animation */}
+      {/* Precast Plinth Content Section */}
       <section className="bg-black text-white py-20 fade-in-section">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-bold leading-[1.05] text-[56px] md:text-[72px] tracking-[-0.25px]">
-            <TypingAnimation
-              text={'built for '}
-              className="text-amber-500"
-              speed={70}
-              showCursor={false}
-            />
-            <TypingAnimation
-              text={'speed, strength,'}
-              className="text-[#8A393B]"
-              speed={70}
-              startAfterMs={('built for '.length * 70) + 150}
-              showCursor={false}
-            />
-            <TypingAnimation
-              text={'\nand precision'}
-              className="text-[#8A393B]"
-              speed={70}
-              startAfterMs={(('built for '.length + 'speed, strength,'.length) * 70) + 300}
-              showCursor={true}
-              cursorColor="#F2913F"
-            />
-          </h2>
-          <div className="mt-6 border-t border-gray-700"></div>
-          <div className="mt-6 space-y-4 text-lg md:text-xl text-gray-200 leading-relaxed">
-            <p>Patil Group operates 14 precast manufacturing facilities — total capacity 3,410 cubic metres per day.</p>
-            <p>By March 2027 — capacity will increase by 2,120 cubic metres per day through plant upgrades and four new facilities.</p>
-            <p>By August 2025 — supply will grow by 400 cubic metres per day via four strategic partners.</p>
-            <p>A dedicated design centre advances precast technology — delivering efficient, sustainable, and cost-optimised solutions for diverse infrastructure.</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#8A393B] mb-8">Pre-cast Plinth</h2>
+          
+          <div className="space-y-6 text-xl md:text-2xl lg:text-2xl text-gray-200 leading-relaxed">
+            <p>
+              Patil Rail Infrastructure Pvt. Ltd and ITD Bangkok together developed an innovative modification to the existing plinth type track structure adopted with fastening system.
+            </p>
+            
+            <p>
+              In this system, we bring in the plinth as a pre-cast element, same as the existing plinth structure to be used 300-1 fastening system.
+            </p>
+            
+            <p className="font-semibold text-white">Such a system brings in the following advantages:</p>
+            
+            <ul className="list-disc list-inside space-y-2 ml-4">
+              <li>Cost effectiveness</li>
+              <li>Better quality of work</li>
+              <li>Time saving</li>
+              <li>Lesser quantum of work on site</li>
+            </ul>
+            
+            <p>
+              Due to the above advantages, many Metro authorities are showing keen interest in this system and are willing to adopt it in their upcoming projects.
+            </p>
+            
+            <h3 className="text-2xl md:text-3xl font-bold text-amber-500 mt-8 mb-4">
+              The Plinth Solutions can be implemented in the following situations:
+            </h3>
+            
+            <ol className="list-decimal list-inside space-y-2 ml-4">
+              <li>Elevated track</li>
+              <li>Depots</li>
+              <li>Tunnels & viaducts.</li>
+            </ol>
+            
+            <p className="font-semibold text-white">
+              Plinth system of Urban Metro is meant for speeds up to 110 kmph.
+            </p>
+            
+            <p>
+              Our varied references in this product make us hopeful to aspire for further forthcoming urban metro projects in various cities.
+            </p>
           </div>
         </div>
       </section>
-
 
       {/* Used In Section */}
       <section className="bg-black text-white py-24 sm:py-32 fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-12 fade-in-section">
             <div className="md:w-1/2">
-              <img src="/engineering-infra.jpg" alt="Abstract technology background" className="rounded-lg shadow-lg" />
+              <img src="/precasttrack.jpeg" alt="Precast track technology" className="rounded-lg shadow-lg" />
             </div>
             <div className="md:w-1/2 bg-white text-black p-8 rounded-lg shadow-xl">
               <h3 className="text-2xl font-bold text-[#8A393B]">This system has been used in:</h3>

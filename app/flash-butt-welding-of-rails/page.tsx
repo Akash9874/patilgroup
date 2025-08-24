@@ -37,6 +37,17 @@ const FlashButtWeldingOfRailsPage = () => {
         </div>
       </section>
 
+      {/* Introduction Section */}
+      <section className="bg-black py-16 fade-in-section">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white text-black p-8 rounded-lg shadow-lg">
+            <p className="text-2xl md:text-3xl leading-relaxed text-center">
+              Patil Group operates India's largest Flash Butt Welding depots, equipped to weld 20-rail panels with advanced infrastructure. With mechanised rail handling systems, these facilities ensure efficiency, safety, and world-class precision for Indian Railways.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Locations and Applications Section */}
       <section className="bg-black text-white py-24 sm:py-32 fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,11 +64,11 @@ const FlashButtWeldingOfRailsPage = () => {
             </div>
           </div>
           <div className="mt-24 max-w-4xl fade-in-section">
-            <p className="text-2xl text-gray-300 leading-relaxed">
+            <p className="text-3xl md:text-4xl text-gray-300 leading-relaxed">
               These facilities support large-scale panel production and direct dispatch to project sites.
               <span className="block text-orange-400 font-semibold mt-2">This system has been integral to:</span>
             </p>
-            <ul className="mt-6 space-y-3 list-disc pl-6 text-xl text-gray-400">
+            <ul className="mt-6 space-y-3 list-disc pl-6 text-2xl md:text-3xl text-gray-400">
               <li>Northeast Frontier Railway projects</li>
               <li>Konkan Railway sections</li>
               <li>Bridge and tunnel approaches requiring jointless long panels</li>

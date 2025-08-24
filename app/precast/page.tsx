@@ -133,8 +133,8 @@ const PrecastPage = () => {
               onMouseEnter={() => setHoveredProduct('u-drains')}
               onMouseLeave={() => setHoveredProduct(null)}
             >
-              <div>
-                <h4 className="text-3xl md:text-4xl font-semibold text-amber-500">U Drains</h4>
+            <div>
+              <h4 className="text-3xl md:text-4xl font-semibold text-amber-500">U Drains</h4>
                 <p className="mt-4 text-lg md:text-xl lg:text-2xl max-w-4xl">
                   Engineered for rapid surface water management, our U Drains ensure smooth flow and easy maintenance in urban and highway projects. Designed with precision, they handle heavy rainfall and stormwater effectively, reducing the risk of flooding and erosion. Their modular construction allows quick installation, while the durable materials provide long service life with minimal upkeep. From city streets to expressways, U Drains deliver reliable drainage solutions that keep infrastructure safe and sustainable.
                 </p>
@@ -527,9 +527,9 @@ const PrecastPage = () => {
                 <h4 className="text-3xl md:text-4xl font-semibold text-amber-500">Platform Walls</h4>
                 <p className="mt-4 text-lg md:text-xl lg:text-2xl max-w-4xl">
                   Precast platform walls tailored for railway stations, offering uniform finish and long-term durability. Manufactured with precision-moulded concrete, these walls provide structural stability, consistent alignment, and superior surface finish for safe passenger movement.
-                </p>
-                <div className="mt-8 h-1.5 w-56 bg-gradient-to-r from-[#8A393B] via-amber-500 to-transparent"></div>
-              </div>
+              </p>
+              <div className="mt-8 h-1.5 w-56 bg-gradient-to-r from-[#8A393B] via-amber-500 to-transparent"></div>
+            </div>
               
               {/* Hover Image */}
               {hoveredProduct === 'platform-walls' && (
