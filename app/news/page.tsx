@@ -4,10 +4,11 @@ import React, { useState, useEffect } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navbar from '@/components/Navbar';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const cards = [
   {
-    image: '/21_flash_butt_equipment.jpg',
+    image: '/engineering-infra.jpg',
     title: 'Modern Fastening for high speed trains.',
     paragraphs: [
       "Under the Atmanirbhar Bharat initiative, Patil Group has developed a modern fastening system for Indian Railways' ballasted tracks, supporting semi-high-speed (200 kmph) and heavy axle load operations with ±1 mm gauge tolerance.",
@@ -66,6 +67,68 @@ const cards = [
   },
 ];
 
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { 
+    opacity: 0, 
+    y: 60,
+    scale: 0.95,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.7,
+      ease: [0.25, 0.25, 0.25, 0.75],
+    },
+  },
+  hover: {
+    y: -8,
+    scale: 1.02,
+    transition: {
+      duration: 0.3,
+      ease: "easeOut",
+    },
+  },
+};
+
+const imageVariants = {
+  rest: { scale: 1, filter: "brightness(1)" },
+  hover: { 
+    scale: 1.1, 
+    filter: "brightness(1.1)",
+    transition: {
+      duration: 0.4,
+      ease: "easeOut",
+    },
+  },
+};
+
+const textVariants = {
+  hidden: { opacity: 0, x: -30 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      delay: 0.2,
+    },
+  },
+};
+
 const NewsPage = () => {
   useScrollAnimation();
   const [index, setIndex] = useState(0);
@@ -110,7 +173,6 @@ const NewsPage = () => {
 
   return (
     <div className="bg-[#F1EFF0] text-gray-800 overflow-hidden">
-      <Navbar />
       
       <section className="relative h-[50vh] sm:h-[60vh] overflow-hidden">
         {/* Background Video */}
@@ -143,9 +205,18 @@ const NewsPage = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-clash font-bold mb-6 sm:mb-8 md:mb-10 text-transparent bg-clip-text bg-gradient-to-r from-[#F2913F] to-[#8A393B] text-center lg:text-left">
+          <motion.h2 
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-clash font-bold mb-6 sm:mb-8 md:mb-10 text-transparent bg-clip-text bg-gradient-to-r from-[#F2913F] to-[#8A393B] text-center lg:text-left"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ 
+              duration: 0.8, 
+              ease: [0.25, 0.25, 0.25, 0.75]
+            }}
+          >
             Our Latest News
-          </h2>
+          </motion.h2>
 
           {/* Mobile Auto Carousel */}
           <div className="lg:hidden">
@@ -313,43 +384,132 @@ const NewsPage = () => {
             </div>
           </div>
 
-          {/* Desktop Layout - Original */}
+          {/* Desktop Layout - Vertical Stack with Animations */}
           <div className="hidden lg:block">
-            <div className="bg-white rounded-lg sm:rounded-xl shadow-md p-4 sm:p-6 md:p-8 lg:p-10 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-start transition-all duration-300">
-              {/* Left image */}
-              <div>
-                <img src={card.image} alt={card.title} className="rounded-lg w-full h-[240px] sm:h-[300px] md:h-[360px] lg:h-[420px] object-cover" />
-              </div>
-              {/* Right content */}
-              <div>
-                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#8A393B] to-[#F2913F]">
-                  {card.title}
-                </h3>
-                {card.paragraphs.map((p, i) => (
-                  <p key={i} className={`mt-${i === 0 ? '4 sm:mt-6' : '3 sm:mt-4'} text-gray-700 text-sm sm:text-base md:text-lg`}>{p}</p>
-                ))}
-                {card.bullets.length > 0 && (
-                  <>
-                    <p className="mt-4 sm:mt-6 text-gray-900 font-semibold text-base sm:text-lg">Key innovations include:</p>
-                    <ul className="mt-2 sm:mt-3 space-y-2 sm:space-y-3 md:space-y-4 text-gray-700 text-sm sm:text-base md:text-lg">
-                      {card.bullets.map((b, i) => (
-                        <li key={i} className="flex items-start"><span className="mt-1 sm:mt-2 mr-2 sm:mr-3 block h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-[#F2913F]" />{b}</li>
+            <motion.div 
+              className="space-y-8"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+            >
+              {cards.map((newsCard, cardIndex) => (
+                <motion.div 
+                  key={cardIndex}
+                  variants={cardVariants}
+                  whileHover="hover"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-2xl border border-gray-100 overflow-hidden cursor-pointer group"
+                >
+                  <div className="grid grid-cols-1 md:grid-cols-3 items-start">
+                    {/* Left image with hover effects */}
+                    <motion.div 
+                      className="md:col-span-1 overflow-hidden relative"
+                      initial="rest"
+                      whileHover="hover"
+                      variants={imageVariants}
+                    >
+                      <motion.img 
+                        src={newsCard.image} 
+                        alt={newsCard.title} 
+                        className="w-full h-[200px] md:h-[240px] object-cover"
+                        variants={imageVariants}
+                      />
+                      {/* Overlay gradient that appears on hover */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-[#F2913F]/20 to-[#8A393B]/20"
+                        initial={{ opacity: 0 }}
+                        whileHover={{ opacity: 1 }}
+                        transition={{ duration: 0.3 }}
+                      />
+                    </motion.div>
+                    
+                    {/* Right content with staggered text animations */}
+                    <motion.div 
+                      className="md:col-span-2 p-6 md:p-8"
+                      variants={textVariants}
+                    >
+                      <motion.h3 
+                        className="text-xl md:text-2xl lg:text-3xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#F2913F] to-[#8A393B] mb-4"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: cardIndex * 0.1 }}
+                      >
+                        {newsCard.title}
+                      </motion.h3>
+                      
+                      <motion.div 
+                        className="space-y-3"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: cardIndex * 0.1 + 0.2 }}
+                      >
+                        {newsCard.paragraphs.map((paragraph, paragraphIndex) => (
+                          <motion.p 
+                            key={paragraphIndex} 
+                            className="text-gray-700 text-base md:text-lg leading-relaxed"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ 
+                              duration: 0.5, 
+                              delay: cardIndex * 0.1 + 0.3 + paragraphIndex * 0.1 
+                            }}
+                          >
+                            {paragraph}
+                          </motion.p>
+                        ))}
+                        
+                        {newsCard.bullets.length > 0 && (
+                          <motion.div 
+                            className="mt-4"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: cardIndex * 0.1 + 0.5 }}
+                          >
+                            <p className="text-gray-900 font-semibold text-base md:text-lg mb-3">Key innovations include:</p>
+                            <ul className="space-y-2 text-gray-700 text-base md:text-lg">
+                              {newsCard.bullets.map((bullet, bulletIndex) => (
+                                <motion.li 
+                                  key={bulletIndex} 
+                                  className="flex items-start"
+                                  initial={{ opacity: 0, x: -15 }}
+                                  whileInView={{ opacity: 1, x: 0 }}
+                                  viewport={{ once: true }}
+                                  transition={{ 
+                                    duration: 0.4, 
+                                    delay: cardIndex * 0.1 + 0.6 + bulletIndex * 0.1 
+                                  }}
+                                >
+                                  <motion.span 
+                                    className="mt-2 mr-3 block h-2 w-2 rounded-full bg-[#F2913F] flex-shrink-0"
+                                    initial={{ scale: 0 }}
+                                    whileInView={{ scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ 
+                                      duration: 0.3, 
+                                      delay: cardIndex * 0.1 + 0.7 + bulletIndex * 0.1,
+                                      type: "spring",
+                                      stiffness: 200
+                                    }}
+                                  />
+                                  <span>{bullet}</span>
+                                </motion.li>
                       ))}
                     </ul>
-                  </>
+                          </motion.div>
                 )}
+                      </motion.div>
+                    </motion.div>
               </div>
-            </div>
-
-            {/* Desktop Navigation Arrows */}
-            <div className="flex justify-center items-center gap-4 sm:gap-6 mt-6 sm:mt-8">
-              <button onClick={prev} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-amber-500 text-white flex items-center justify-center hover:bg-amber-600 transition-colors">
-                <ArrowLeft className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
-              </button>
-              <button onClick={next} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-amber-500 text-white flex items-center justify-center hover:bg-amber-600 transition-colors">
-                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
-              </button>
-            </div>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </section>
