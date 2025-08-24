@@ -36,8 +36,8 @@ export default function LegacyPage() {
           </div>
         </div>
 
-        {/* Desktop Layout - Original with bottom positioning */}
-        <div className="hidden md:block relative z-10 h-full max-w-7xl mx-auto flex items-end">
+        {/* Desktop Layout - Bottom left positioning */}
+        <div className="hidden md:block absolute bottom-0 left-0 z-10">
           <div className="px-6 md:px-8 lg:px-12 pb-16">
             <h1 className="text-white font-bold leading-none text-6xl sm:text-7xl md:text-8xl lg:text-9xl drop-shadow-lg">
               <span className="block text-[#F2913F]">Our</span>

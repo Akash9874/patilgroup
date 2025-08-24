@@ -81,7 +81,7 @@ export default function TrackTimeline({
 								{/* Enhanced Content Card */}
 								<div className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 shadow-sm timeline-card border border-gray-100">
 									<p className="text-2xl sm:text-3xl font-extrabold text-[#F2913F] mb-3">{item.year}</p>
-									<h4 className="text-lg sm:text-xl font-semibold text-[#8A393B] leading-relaxed mb-2">{item.title}</h4>
+									<h4 className="text-lg sm:text-xl font-semibold text-[#8A393B] leading-relaxed mb-2 text-justify">{item.title}</h4>
 									{item.body && <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{item.body}</p>}
 								</div>
 							</motion.div>
@@ -134,7 +134,7 @@ export default function TrackTimeline({
 											className="text-right"
 										>
 											<p className="text-4xl md:text-5xl font-extrabold text-[#F2913F]">{item.year}</p>
-											<h4 className="text-2xl md:text-3xl font-semibold mt-4 text-[#8A393B] leading-relaxed">{item.title}</h4>
+											<h4 className="text-2xl md:text-3xl font-semibold mt-4 text-[#8A393B] leading-relaxed text-justify">{item.title}</h4>
 											{item.body && <p className="text-lg text-gray-700 mt-4 leading-relaxed">{item.body}</p>}
 										</motion.div>
 										<div className="hidden md:block" />
@@ -149,7 +149,7 @@ export default function TrackTimeline({
 											viewport={{ once: true, amount: 0.3 }}
 										>
 											<p className="text-4xl md:text-5xl font-extrabold text-[#F2913F]">{item.year}</p>
-											<h4 className="text-2xl md:text-3xl font-semibold mt-4 text-[#8A393B] leading-relaxed">{item.title}</h4>
+											<h4 className="text-2xl md:text-3xl font-semibold mt-4 text-[#8A393B] leading-relaxed text-justify">{item.title}</h4>
 											{item.body && <p className="text-lg text-gray-700 mt-4 leading-relaxed">{item.body}</p>}
 										</motion.div>
 									</>

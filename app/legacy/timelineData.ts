@@ -1,12 +1,9 @@
 export const legacyTimeline = [
 	{ year: '1980s', title: 'Early adoption by Indian Railways — Expansion into new railway zones', side: 'right' as const },
-	{ year: '1990s', title: 'Kargi Road plant commissioned', side: 'left' as const },
-	{ year: '1990s', title: 'In-house R&D begins — Track systems become modular — Completion of KRCL Mumbai project, over 20 lakh sleepers supplied — Madurai unit established', side: 'right' as const },
-	{ year: '2000s', title: 'Took over Kaipadar unit and shifted Nagpur plant to Anara — Start of urban rail and metro projects — Turnkey capabilities introduced.', side: 'left' as const },
-	{ year: '2005', title: 'Over 1 lakh sleepers supplied to Bangladesh', side: 'right' as const },
-	{ year: '2010s', title: 'Approved for high speed and freight corridors — Product range widens — Supplied sleepers to Sri Lanka — Began manufacturing inserts at foundry units.', side: 'left' as const },
-	{ year: '2019-2020', title: 'Capacity increased by 40% with shift from single cavity to twin cavity moulding — Second foundry unit set up in Bokaro.', side: 'right' as const },
-	{ year: '2020s', title: 'National scale delivery — New systems for defence and rapid transit', side: 'left' as const },
+	{ year: '1990s', title: 'The Kargi Road plant was commissioned, marking a major milestone in operations. This phase also saw the launch of in-house R&D and the introduction of modular track systems. The KRCL Mumbai project was successfully completed with the supply of over 20 lakh sleepers, followed by the establishment of the Madurai unit, further expanding the company\'s presence.', side: 'left' as const },
+	{ year: '2000s', title: 'The Kaipadar unit was taken over, and the Nagpur plant was relocated to Anara, strengthening the company\'s manufacturing base. This period marked the beginning of urban rail and metro projects, alongside the introduction of turnkey capabilities. Over 1 lakh sleepers were supplied to Bangladesh, and Apna Technologies & Solutions Private Limited was acquired, further diversifying the company\'s expertise.', side: 'right' as const },
+	{ year: '2010s', title: 'The company was approved for high-speed and freight corridors, marking a significant expansion in scope. The product range widened further, with sleepers supplied to Sri Lanka and the commencement of insert manufacturing at the foundry units. During this phase, Daya Engineering Works Private Limited and ICON Sleeper Track Private Limited were also acquired, strengthening the company\'s capabilities.', side: 'left' as const },
+	{ year: '2020s', title: 'Capacity was enhanced by 40% with the transition from single-cavity to twin-cavity moulding, marking a major leap in efficiency. A second foundry unit was established in Bokaro, enabling delivery at a truly national scale. This period also saw the development of new systems for defence and rapid transit, along with the acquisition of Coromandel Concrete Products Private Limited, further broadening the company\'s footprint.', side: 'right' as const },
 ];
 
 
