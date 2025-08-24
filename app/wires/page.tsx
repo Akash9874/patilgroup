@@ -12,7 +12,7 @@ const WiresPage = () => {
       {/* Hero Section */}
       <div className="relative h-[600px]">
         <Image
-          src="/wireshero.jpg" // placeholder
+          src="/wires123.jpg"
           alt="HTS Wires"
           layout="fill"
           objectFit="cover"
@@ -56,22 +56,30 @@ const WiresPage = () => {
         </div>
       </div>
 
-      {/* Product Types Section */}
+      {/* HTS Wires Introduction */}
       <div className="bg-white text-black py-16">
         <div className="max-w-7xl mx-auto px-8">
+          <div className="mb-16 fade-in-section">
+            <h2 className="text-4xl font-bold text-[#8A393B] mb-6">HTS Wires: Strength Behind Every Track</h2>
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+              Patil Group is India's largest HTS wire manufacturer for concrete sleepers, producing 3-ply 3 mm and 7-ply 9.5 mm strand wires at ISO 9001-certified plants.
+              With a total capacity of 60,000 MTPA, we are among the largest suppliers of steel wires for ports, tunnels, major bridges, and Indian Railways' largest single order.
+            </p>
+          </div>
+          
           <h2 className="text-5xl font-bold text-[#F2913F] mb-12 fade-in-section">Product Types</h2>
           <div className="space-y-8">
             <div className="grid md:grid-cols-2 gap-8 items-center border-t border-gray-200 pt-8 slide-in-left">
-              <p className="text-2xl text-[#8A393B] font-semibold">3 ply × 3 mm HTS stranded wires</p>
-              <p className="text-lg text-gray-600">as per IS 6006:1983</p>
+              <p className="text-3xl md:text-4xl text-[#8A393B] font-semibold">3 ply × 3 mm HTS stranded wires</p>
+              <p className="text-xl md:text-2xl text-gray-600">as per IS 6006:1983</p>
             </div>
             <div className="grid md:grid-cols-2 gap-8 items-center border-t border-gray-200 pt-8 slide-in-right">
-              <p className="text-2xl text-[#8A393B] font-semibold">7 ply × 9.5 mm HTS stranded wires</p>
-              <p className="text-lg text-gray-600">as per IS 6006:1983</p>
+              <p className="text-3xl md:text-4xl text-[#8A393B] font-semibold">7 ply × 9.5 mm HTS stranded wires</p>
+              <p className="text-xl md:text-2xl text-gray-600">as per IS 6006:1983</p>
             </div>
             <div className="grid md:grid-cols-2 gap-8 items-start border-t border-gray-200 pt-8 slide-in-left">
-              <p className="text-2xl text-[#8A393B] font-semibold">4 mm HT wire (indented)</p>
-              <ul className="list-disc list-inside text-lg text-gray-600 space-y-2">
+              <p className="text-3xl md:text-4xl text-[#8A393B] font-semibold">4 mm HT wire (indented)</p>
+              <ul className="list-disc list-inside text-xl md:text-2xl text-gray-600 space-y-2">
                 <li>as per IS 6003:1983</li>
                 <li>stress-relieved, hard drawn</li>
                 <li>used in spun poles and PSCC turnout sleepers</li>
@@ -86,7 +94,7 @@ const WiresPage = () => {
         <div className="max-w-7xl mx-auto px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative slide-in-left">
-              <Image src="/wireimage.jpg" alt="Steel wire products" width={500} height={300} className="rounded-lg" />
+              <Image src="/wire4321.jpg" alt="Steel wire products" width={500} height={300} className="rounded-lg" />
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg -ml-16 slide-in-right">
               <h3 className="text-2xl font-bold text-[#8A393B] mb-4">High tensile steel wire products for prestressed concrete applications</h3>
