@@ -51,26 +51,38 @@ const FastenersPage = () => {
         </div>
       </div>
 
-      <div className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-8 md:px-12">
-          <h2 className="text-5xl font-bold text-[#8A393B] mb-12 fade-in-section">
-            For Mainline Ballasted Track
-          </h2>
+             <div className="bg-white py-16">
+         <div className="max-w-7xl mx-auto px-8 md:px-12">
+           <div className="mb-16 fade-in-section">
+             <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+               Fasteners are the critical link between rails and sleepers, ensuring safety and performance across diverse track conditions. Patil Group, in collaboration with global leaders in fastening technology, has built proven expertise in designing, manufacturing, and supplying advanced fastening systems for modern rail networks.
+             </p>
+           </div>
+           
+           <h2 className="text-5xl font-bold text-[#8A393B] mb-12 fade-in-section">
+             For Mainline Ballasted Track
+           </h2>
 
           <div className="space-y-8">
-            {/* Elastic Rail Clips */}
-            <div className="grid md:grid-cols-3 gap-8 items-start border-t border-gray-200 pt-8">
-              <div className="md:col-span-1 slide-in-left">
-                <h3 className="text-3xl font-semibold text-[#F2913F]">Elastic Rail Clips</h3>
-              </div>
-              <div className="md:col-span-1 slide-in-right">
-                <h4 className="text-2xl md:text-3xl font-bold text-[#F2913F]">ERC clips: mark III and V</h4>
-                <p className="text-xl md:text-2xl text-gray-600 mt-2">
-                  Manufactured in Ajmer<br />
-                  Approved by RDSO for Indian Railways and freight corridors
-                </p>
-              </div>
-            </div>
+                         {/* Elastic Rail Clips */}
+             <div className="grid md:grid-cols-3 gap-8 items-start border-t border-gray-200 pt-8">
+               <div className="md:col-span-1 slide-in-left">
+                 <h3 className="text-3xl font-semibold text-[#F2913F]">Elastic Rail Clips</h3>
+               </div>
+               <div className="md:col-span-1 slide-in-right">
+                 <h4 className="text-2xl md:text-3xl font-bold text-[#F2913F]">ERC clips: mark III and V</h4>
+                 <p className="text-xl md:text-2xl text-gray-600 mt-2">
+                   Manufactured in Medchal<br />
+                   Approved by RDSO for Indian Railways and freight corridors
+                 </p>
+               </div>
+               <div className="md:col-span-1 slide-in-left">
+                 <h4 className="text-2xl md:text-3xl font-bold text-[#F2913F]">Production Capacity</h4>
+                 <p className="text-xl md:text-2xl text-gray-600 mt-2">
+                   Manufactured around 110000 units Per Annum
+                 </p>
+               </div>
+             </div>
 
             {/* GFN Liners */}
             <div className="grid md:grid-cols-3 gap-8 items-start border-t border-gray-200 pt-8">
@@ -85,31 +97,55 @@ const FastenersPage = () => {
                 </p>
               </div>
               <div className="md:col-span-1 slide-in-left">
-                <h4 className="text-2xl md:text-3xl font-bold text-[#F2913F]">SKL 14 for Normal Tracks</h4>
+                <h4 className="text-2xl md:text-3xl font-bold text-[#F2913F]">SKL Series</h4>
                 <p className="text-xl md:text-2xl text-gray-600 mt-2">
-                  Spring deflection<br />
-                  tilting protection<br />
-                  high tensioning force<br />
-                  Pre assembled and maintenance free
+                  - SKL 12<br />
+                  - SKL 15<br />
+                  - System W 14 HH
                 </p>
               </div>
             </div>
 
-            {/* System W 14 HH */}
-            <div className="grid md:grid-cols-3 gap-8 items-start border-t border-gray-200 pt-8">
-              <div className="md:col-span-1 slide-in-left">
-                <h3 className="text-3xl font-semibold text-[#F2913F]">System W 14<br />HH</h3>
-              </div>
-              <div className="md:col-span-1 slide-in-right">
-                <h4 className="text-2xl md:text-3xl font-bold text-[#F2913F]">(Heavy Haul)</h4>
-                <p className="text-xl md:text-2xl text-gray-600 mt-2">
-                  Used in freight and heavy axle routes<br />
-                  Allows tension clamping and tilt protection<br />
-                  Reduces long term maintenance
-                </p>
-              </div>
-            </div>
-          </div>
+                         {/* System W 14 HH */}
+             <div className="grid md:grid-cols-3 gap-8 items-start border-t border-gray-200 pt-8">
+               <div className="md:col-span-1 slide-in-left">
+                 <h3 className="text-3xl font-semibold text-[#F2913F]">System W 14<br />HH</h3>
+               </div>
+               <div className="md:col-span-1 slide-in-right">
+                 <h4 className="text-2xl md:text-3xl font-bold text-[#F2913F]">(Heavy Haul)</h4>
+                 <p className="text-xl md:text-2xl text-gray-600 mt-2">
+                   Used in freight and heavy axle routes
+                 </p>
+               </div>
+               <div className="md:col-span-1 slide-in-left">
+                 <p className="text-xl md:text-2xl text-gray-600 mt-2">
+                   Allows tension clamping and tilt protection<br />
+                   Reduces long term maintenance
+                 </p>
+               </div>
+             </div>
+
+             {/* Lab Facilities */}
+             <div className="grid md:grid-cols-3 gap-8 items-start border-t border-gray-200 pt-8">
+               <div className="md:col-span-1 slide-in-left">
+                 <h3 className="text-3xl font-semibold text-[#F2913F]">Lab Facilities</h3>
+               </div>
+               <div className="md:col-span-1 slide-in-right">
+                 <p className="text-xl md:text-2xl text-gray-600 mt-2">
+                   - World class labs<br />
+                   - Fatigue testing machines<br />
+                   - GOM Scanner<br />
+                   - Salt spray testing machine<br />
+                   - UTM
+                 </p>
+               </div>
+               <div className="md:col-span-1 slide-in-left">
+                 <p className="text-xl md:text-2xl text-gray-600 mt-2">
+                   According to STR(Standard Technology Requirement) by RDSO. These testing machines are not available anywhere in india.
+                 </p>
+               </div>
+             </div>
+           </div>
         </div>
       </div>
 
