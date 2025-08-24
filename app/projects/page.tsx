@@ -232,8 +232,8 @@ const ProjectsPage = () => {
                 <TypingAnimation
                   text="Engineering Excellence for a Stronger Tomorrow"
                   showCursor={true}
-                  speed={100}
-                  startAfterMs={500}
+                  speed={50}
+                  startAfterMs={200}
                   cursorColor="#F2913F"
                   textParts={[
                     { text: "Engineering Excellence\nfor a ", className: "text-amber-500" },
