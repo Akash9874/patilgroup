@@ -9,36 +9,79 @@ const SleepersPage = () => {
     useScrollAnimation();
   return (
     <div className="bg-white text-black">
-      <div className="relative h-auto md:h-[600px]">
-        {/* Background Image */}
-        <video
-          src="/1.mp4"
-          autoPlay
-          muted
-          loop
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
-          preload="metadata"
+      <div className="relative">
+        {/* Mobile Layout */}
+        <div className="md:hidden h-screen relative">
+          <video
+            src="/1.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-0"
+            preload="metadata"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 z-10"></div>
           
-        />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+          <div className="relative z-20 h-full flex items-center justify-center">
+            <div className="text-center px-6">
+              <div className="bg-black/70 backdrop-blur-md rounded-3xl p-8 border border-white/10 shadow-2xl">
+                <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4">
+                  Concrete Sleepers
+                </h1>
+                <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full shadow-lg"></div>
+                <p className="text-gray-200 text-sm mt-4 font-medium">
+                  Engineered for durability and performance
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         
-        {/* Content */}
-        <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row h-full z-20">
-          {/* Left Panel */}
-          <div className="w-full md:w-1/3 flex flex-col justify-center p-8 md:p-12">
-            <div className="text-left">
-              <h1 className="text-5xl lg:text-6xl font-bold text-white mt-2">
-                Concrete Sleepers
-              </h1>
+        {/* Desktop Layout */}
+        <div className="hidden md:block relative h-auto md:h-[600px]">
+          <video
+            src="/1.mp4"
+            autoPlay
+            muted
+            loop
+            className="absolute top-0 left-0 w-full h-full object-cover z-0"
+            preload="metadata"
+          />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+          
+          {/* Content */}
+          <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row h-full z-20">
+            {/* Left Panel */}
+            <div className="w-full md:w-1/3 flex flex-col justify-center p-8 md:p-12">
+              <div className="text-left">
+                <h1 className="text-5xl lg:text-6xl font-bold text-white mt-2">
+                  Concrete Sleepers
+                </h1>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-black py-10 md:py-12">
-        <div className="max-w-5xl mx-auto px-8 md:px-12">
-            <div className="flex">
+      <div className="bg-black py-8 sm:py-10 md:py-12">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+            {/* Mobile Layout */}
+            <div className="md:hidden text-center fade-in-section">
+              <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/30">
+                <TypingAnimation
+                  text="Patil Group manufactures pre stressed concrete sleepers designed for high load, high speed rail conditions"
+                  showCursor
+                  speed={30}
+                  className="block text-base sm:text-lg font-light text-white leading-relaxed"
+                  cursorColor="#ffffff"
+                />
+              </div>
+            </div>
+            
+            {/* Desktop Layout */}
+            <div className="hidden md:flex">
                 <div className="w-full md:w-4/5 pr-6 md:pr-10">
                     <TypingAnimation
                         text="Patil Group manufactures pre stressed concrete sleepers designed for high load, high speed rail conditions"
@@ -54,23 +97,102 @@ const SleepersPage = () => {
       </div>
 
       {/* Composite Sleepers Section */}
-      <div className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-8 md:px-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#8A393B] mb-8 fade-in-section">
-            Composite Sleepers: Smarter, Sustainable Track Solutions
-          </h2>
+      <div className="bg-white py-8 sm:py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          {/* Mobile Header */}
+          <div className="md:hidden text-center mb-8 fade-in-section">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#8A393B] mb-4 leading-tight">
+              Composite Sleepers: Smarter, Sustainable Track Solutions
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full"></div>
+          </div>
+          
+          {/* Desktop Header */}
+          <div className="hidden md:block">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#8A393B] mb-8 fade-in-section">
+              Composite Sleepers: Smarter, Sustainable Track Solutions
+            </h2>
+          </div>
 
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-16 fade-in-section">
-            We introduced EFG TieTek design composite sleepers to India as a durable, eco-friendly alternative to wood and steel. Made from recyclable materials and tested to AREMA standards, they offer a service life of 60+ years. RDSO-approved and in use on Indian Railways since 2002, our sleepers set new benchmarks in strength, safety, and sustainability.
-          </p>
+          {/* Mobile Introduction */}
+          <div className="md:hidden mb-8 fade-in-section">
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 border border-gray-200">
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed text-justify">
+                We introduced EFG TieTek design composite sleepers to India as a durable, eco-friendly alternative to wood and steel. Made from recyclable materials and tested to AREMA standards, they offer a service life of 60+ years. RDSO-approved and in use on Indian Railways since 2002, our sleepers set new benchmarks in strength, safety, and sustainability.
+              </p>
+            </div>
+          </div>
+
+          {/* Desktop Introduction */}
+          <div className="hidden md:block">
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-16 fade-in-section">
+              We introduced EFG TieTek design composite sleepers to India as a durable, eco-friendly alternative to wood and steel. Made from recyclable materials and tested to AREMA standards, they offer a service life of 60+ years. RDSO-approved and in use on Indian Railways since 2002, our sleepers set new benchmarks in strength, safety, and sustainability.
+            </p>
+          </div>
 
           {/* Our Composite Sleeper Range */}
-          <div className="mb-16">
-            <h3 className="text-3xl md:text-4xl font-bold text-[#F2913F] mb-12 fade-in-section">
-              Our Composite Sleeper Range
-            </h3>
+          <div className="mb-8 sm:mb-12 md:mb-16">
+            {/* Mobile Range Header */}
+            <div className="md:hidden text-center mb-6 fade-in-section">
+              <h3 className="text-xl sm:text-2xl font-bold text-[#F2913F] mb-2">
+                Our Composite Sleeper Range
+              </h3>
+              <div className="w-16 h-0.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full"></div>
+            </div>
             
-            <div className="space-y-12">
+            {/* Desktop Range Header */}
+            <div className="hidden md:block">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#F2913F] mb-12 fade-in-section">
+                Our Composite Sleeper Range
+              </h3>
+            </div>
+            
+            {/* Mobile Cards */}
+            <div className="md:hidden space-y-4 mb-8">
+              {[
+                {
+                  title: "Standard Composite Sleepers",
+                  points: [
+                    "Designed as a direct replacement for wooden and steel channel sleepers.",
+                    "Manufactured to AREMA standards, with proven installation across global railroads.",
+                    "Life span of 40–60 years, resistant to corrosion, fire, moisture, and insect attack."
+                  ]
+                },
+                {
+                  title: "Bridge & Girder Applications",
+                  points: [
+                    "Approved by RDSO for use on steel girder bridges in India.",
+                    "Installed successfully across bridges in Northern, Eastern, South Eastern, and North Central Railways since 2002."
+                  ]
+                },
+                {
+                  title: "Special & Custom Sleepers",
+                  points: [
+                    "Tailored for ballasted track, open-deck bridges, points & crossings, and level crossings.",
+                    "Flexible for ballastless and slab track systems, including metro applications."
+                  ]
+                }
+              ].map((item, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden fade-in-section">
+                  <div className="bg-gradient-to-r from-[#8A393B] to-[#a0453f] p-4">
+                    <h4 className="text-lg font-bold text-white">{item.title}</h4>
+                  </div>
+                  <div className="p-4">
+                    <ul className="space-y-2">
+                      {item.points.map((point, i) => (
+                        <li key={i} className="flex items-start text-sm text-gray-700">
+                          <span className="w-1.5 h-1.5 bg-[#F2913F] rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            {/* Desktop Layout */}
+            <div className="hidden md:block space-y-12">
               {/* Standard Composite Sleepers */}
               <div className="bg-[#F5F4F1] rounded-lg p-8 fade-in-section">
                 <h4 className="text-2xl font-bold text-[#8A393B] mb-4">Standard Composite Sleepers</h4>
@@ -124,11 +246,38 @@ const SleepersPage = () => {
 
           {/* Why Choose Composite Sleepers */}
           <div>
-            <h3 className="text-3xl md:text-4xl font-bold text-[#F2913F] mb-12 fade-in-section">
-              Why Choose Composite Sleepers
-            </h3>
+            {/* Mobile Benefits Header */}
+            <div className="md:hidden text-center mb-6 fade-in-section">
+              <h3 className="text-xl sm:text-2xl font-bold text-[#F2913F] mb-2">
+                Why Choose Composite Sleepers
+              </h3>
+              <div className="w-16 h-0.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full"></div>
+            </div>
             
-            <div className="grid md:grid-cols-2 gap-8">
+            {/* Desktop Benefits Header */}
+            <div className="hidden md:block">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#F2913F] mb-12 fade-in-section">
+                Why Choose Composite Sleepers
+              </h3>
+            </div>
+            
+            {/* Mobile Benefits Cards */}
+            <div className="md:hidden space-y-4">
+              {[
+                { title: "Sustainability", desc: "100% recyclable, using waste plastics and rubber." },
+                { title: "Performance", desc: "High strength, low life-cycle cost, and superior fatigue resistance." },
+                { title: "Safety", desc: "Low electrical conductivity, fire resistance, and excellent vibration damping." },
+                { title: "Maintainability", desc: "Easy installation, minimal maintenance, and compatibility with standard fittings." }
+              ].map((benefit, index) => (
+                <div key={index} className="bg-gradient-to-br from-[#8A393B] to-[#a0453f] text-white rounded-xl p-6 shadow-lg fade-in-section">
+                  <h4 className="text-lg font-bold mb-3 text-[#F2913F]">{benefit.title}</h4>
+                  <p className="text-sm leading-relaxed">{benefit.desc}</p>
+                </div>
+              ))}
+            </div>
+            
+            {/* Desktop Benefits Grid */}
+            <div className="hidden md:grid md:grid-cols-2 gap-8">
               <div className="bg-gradient-to-br from-[#8A393B] to-[#a0453f] text-white rounded-lg p-8 fade-in-section">
                 <h4 className="text-xl font-bold mb-4 text-[#F2913F]">Sustainability</h4>
                 <p>100% recyclable, using waste plastics and rubber.</p>
@@ -142,273 +291,420 @@ const SleepersPage = () => {
               <div className="bg-gradient-to-br from-[#8A393B] to-[#a0453f] text-white rounded-lg p-8 fade-in-section">
                 <h4 className="text-xl font-bold mb-4 text-[#F2913F]">Safety</h4>
                 <p>Low electrical conductivity, fire resistance, and excellent vibration damping.</p>
-            </div>
+              </div>
               
               <div className="bg-gradient-to-br from-[#8A393B] to-[#a0453f] text-white rounded-lg p-8 fade-in-section">
                 <h4 className="text-xl font-bold mb-4 text-[#F2913F]">Maintainability</h4>
                 <p>Easy installation, minimal maintenance, and compatibility with standard fittings.</p>
-            </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-[#F5F4F1] py-16">
-        <div className="max-w-7xl mx-auto px-8 md:px-12">
-            <h2 className="text-5xl font-bold text-[#F2913F] mb-12 text-center fade-in-section">
+      <div className="bg-[#F5F4F1] py-8 sm:py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+            {/* Mobile Header */}
+            <div className="lg:hidden text-center mb-8 fade-in-section">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#F2913F] mb-4">
                 Sleeper Types
-            </h2>
+              </h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full"></div>
+            </div>
             
-            <div className="grid lg:grid-cols-3 gap-8 items-start">
+            {/* Desktop Header */}
+            <div className="hidden lg:block">
+              <h2 className="text-5xl font-bold text-[#F2913F] mb-12 text-center fade-in-section">
+                Sleeper Types
+              </h2>
+            </div>
+            
+            {/* Mobile Layout - Cards with Images */}
+            <div className="lg:hidden">
+              {/* Mobile Images Section */}
+              <div className="flex flex-col items-center space-y-4 mb-8 fade-in-section">
+                <div className="slide-in-up">
+                  <Image 
+                    src="/sleeper1.jpg" 
+                    alt="Sleeper Types" 
+                    width={600} 
+                    height={400} 
+                    className="rounded-lg shadow-lg w-full max-w-sm" 
+                  />
+                </div>
+                <div className="slide-in-up" style={{ animationDelay: '100ms' }}>
+                  <Image 
+                    src="/sleeper2.jpg" 
+                    alt="Sleeper Types" 
+                    width={600} 
+                    height={400} 
+                    className="rounded-lg shadow-lg w-full max-w-sm" 
+                  />
+                </div>
+                <div className="slide-in-up" style={{ animationDelay: '200ms' }}>
+                  <Image 
+                    src="/sleeper3.jpg" 
+                    alt="Sleeper Types" 
+                    width={600} 
+                    height={400} 
+                    className="rounded-lg shadow-lg w-full max-w-sm" 
+                  />
+                </div>
+              </div>
+
+              {/* Mobile Technical Data Cards */}
+              <div className="space-y-6">
+                {[
+                  {
+                    title: "MAIN TRACK SLEEPERS",
+                    subtitle: "TECHNICAL DATA - RT 8746 (WB)",
+                    color: "from-[#8A393B] to-[#a0453f]",
+                    specs: [
+                      { label: "Permissible axle load", value: "25 metric tonnes" },
+                      { label: "Maximum speed", value: "100km/h" },
+                      { label: "Concrete grade", value: "M60" },
+                      { label: "Concrete volume", value: "136237.5 cm3" },
+                      { label: "Weight (without rail fastenings)", value: "347 kg" },
+                      { label: "Length", value: "2750 mm" },
+                      { label: "Width", value: "230 mm" },
+                      { label: "Height of sleeper centre", value: "200 mm" }
+                    ]
+                  },
+                  {
+                    title: "SWITCH EXPANSION JOINT SLEEPER",
+                    subtitle: "TECHNICAL DATA - RT 4149 (SEJ)",
+                    color: "from-[#F2913F] to-[#e67e22]",
+                    specs: [
+                      { label: "Permissible axle load", value: "25 metric tonnes" },
+                      { label: "Maximum speed", value: "100km/h" },
+                      { label: "Concrete grade", value: "M60" },
+                      { label: "Concrete volume", value: "161975 cm3" },
+                      { label: "Weight (without rail fastenings)", value: "405 kg" },
+                      { label: "Length", value: "2750 mm" },
+                      { label: "Width", value: "300 mm" },
+                      { label: "Height of sleeper centre", value: "190 mm" }
+                    ]
+                  },
+                  {
+                    title: "TURNOUT SLEEPER",
+                    subtitle: "TECHNICAL DATA - 1 IN 12",
+                    color: "from-gray-700 to-gray-800",
+                    specs: [
+                      { label: "Permissible axle load", value: "25 metric tonnes" },
+                      { label: "Maximum speed", value: "100km/h" },
+                      { label: "Concrete grade", value: "M60" },
+                      { label: "No of sleepers", value: "96" },
+                      { label: "Sleeper RMT", value: "326.29" },
+                      { label: "Width", value: "240 mm" },
+                      { label: "Sleeper height", value: "230 mm" }
+                    ]
+                  }
+                ].map((sleeper, index) => (
+                  <div key={index} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden fade-in-section">
+                    {/* Card Header */}
+                    <div className={`bg-gradient-to-r ${sleeper.color} p-6 text-white`}>
+                      <h3 className="text-lg sm:text-xl font-bold mb-1">{sleeper.title}</h3>
+                      <p className="text-sm opacity-90">{sleeper.subtitle}</p>
+                    </div>
+                    
+                    {/* Card Content */}
+                    <div className="p-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {sleeper.specs.map((spec, i) => (
+                          <div key={i} className="bg-gray-50 rounded-lg p-3">
+                            <p className="text-xs text-gray-600 mb-1">{spec.label}:</p>
+                            <p className="text-sm font-bold text-[#F2913F]">{spec.value}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Desktop Layout - Original Table */}
+            <div className="hidden lg:block">
+              <div className="grid lg:grid-cols-3 gap-8 items-start">
                 {/* Technical Data Table */}
                 <div className="lg:col-span-2 overflow-x-auto fade-in-section">
-                    <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
-                        <table className="w-full text-xs">
-                        <thead>
-                            <tr className="bg-gradient-to-r from-[#8A393B] to-[#a0453f]">
-                                <th className="p-4 text-center border-r border-white/20 text-white">
-                                    <div className="font-bold text-sm mb-1">MAIN TRACK SLEEPERS</div>
-                                    <div className="text-xs opacity-90 font-medium">TECHNICAL DATA - RT 8746 (WB)</div>
-                                </th>
-                                <th className="p-4 text-center border-r border-white/20 text-white">
-                                    <div className="font-bold text-sm mb-1">SWITH EXPANSION JOINT SLEEPER</div>
-                                    <div className="text-xs opacity-90 font-medium">TECHNICAL DATA - RT 4149 (SEJ)</div>
-                                </th>
-                                <th className="p-4 text-center text-white">
-                                    <div className="font-bold text-sm mb-1">TURNOUT SLEEPER</div>
-                                    <div className="text-xs opacity-90 font-medium">TECHNICAL DATA - 1 IN 12</div>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody className="text-[#F2913F]">
-                            <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Permissible axle load:</span><br />
-                                    <span className="font-bold text-sm">25 metric tonnes</span>
-                                </td>
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Permissible axle load:</span><br />
-                                    <span className="font-bold text-sm">25 metric tonnes</span>
-                                </td>
-                                <td className="p-3 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Permissible axle load:</span><br />
-                                    <span className="font-bold text-sm">25 metric tonnes</span>
-                                </td>
-                            </tr>
-                            <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Maximum speed:</span><br />
-                                    <span className="font-bold text-sm">100km/h</span>
-                                </td>
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Maximum speed:</span><br />
-                                    <span className="font-bold text-sm">100km/h</span>
-                                </td>
-                                <td className="p-3 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Maximum speed:</span><br />
-                                    <span className="font-bold text-sm">100km/h</span>
-                                </td>
-                            </tr>
-                            <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Concrete grade:</span><br />
-                                    <span className="font-bold text-sm">M60</span>
-                                </td>
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Concrete grade:</span><br />
-                                    <span className="font-bold text-sm">M60</span>
-                                </td>
-                                <td className="p-3 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Concrete grade:</span><br />
-                                    <span className="font-bold text-sm">M60</span>
-                                </td>
-                            </tr>
-                            <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Concrete volume:</span><br />
-                                    <span className="font-bold text-sm">136237.5 cm3</span>
-                                </td>
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Concrete volume:</span><br />
-                                    <span className="font-bold text-sm">161975 cm3</span>
-                                </td>
-                                <td className="p-3 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">No of sleepers:</span><br />
-                                    <span className="font-bold text-sm">96</span>
-                                </td>
-                            </tr>
-                            <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Weight (without rail fastenings):</span><br />
-                                    <span className="font-bold text-sm">347 kg</span>
-                                </td>
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Weight (without rail fastenings):</span><br />
-                                    <span className="font-bold text-sm">405 kg</span>
-                                </td>
-                                <td className="p-3 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Sleeper RMT:</span><br />
-                                    <span className="font-bold text-sm">326.29</span>
-                                </td>
-                            </tr>
-                            <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Length:</span><br />
-                                    <span className="font-bold text-sm">2750 mm</span>
-                                </td>
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Length:</span><br />
-                                    <span className="font-bold text-sm">2750 mm</span>
-                                </td>
-                                <td className="p-3 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Width:</span><br />
-                                    <span className="font-bold text-sm">240 mm</span>
-                                </td>
-                            </tr>
-                            <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Width:</span><br />
-                                    <span className="font-bold text-sm">230 mm</span>
-                                </td>
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Width:</span><br />
-                                    <span className="font-bold text-sm">300 mm</span>
-                                </td>
-                                <td className="p-3 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Sleeper height:</span><br />
-                                    <span className="font-bold text-sm">230 mm</span>
-                                </td>
-                            </tr>
-                            <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Height of rail-seat centre:</span><br />
-                                    <span className="font-bold text-sm">230 mm</span>
-                                </td>
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Height of rail-seat centre:</span><br />
-                                    <span className="font-bold text-sm">190 mm</span>
-                                </td>
-                                <td className="p-3 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Height of rail-seat centre:</span><br />
-                                    <span className="font-bold text-sm">230 mm</span>
-                                </td>
-                            </tr>
-                            <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Top Width of rail-seat centre:</span><br />
-                                    <span className="font-bold text-sm">210 mm</span>
-                                </td>
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Top Width of rail-seat centre:</span><br />
-                                    <span className="font-bold text-sm">300mm</span>
-                                </td>
-                                <td className="p-3 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Top Width of rail-seat centre:</span><br />
-                                    <span className="font-bold text-sm">240 mm</span>
-                                </td>
-                            </tr>
-                            <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Bottom Width of rail-seat centre:</span><br />
-                                    <span className="font-bold text-sm">230 mm</span>
-                                </td>
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Bottom Width of rail-seat centre:</span><br />
-                                    <span className="font-bold text-sm">320 mm</span>
-                                </td>
-                                <td className="p-3 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Bottom Width of rail-seat centre:</span><br />
-                                    <span className="font-bold text-sm">260 mm</span>
-                                </td>
-                            </tr>
-                            <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Top Width of sleeper centre:</span><br />
-                                    <span className="font-bold text-sm">180 mm</span>
-                                </td>
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Top Width of sleeper centre:</span><br />
-                                    <span className="font-bold text-sm">300 mm</span>
-                                </td>
-                                <td className="p-3 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Top Width of sleeper centre:</span><br />
-                                    <span className="font-bold text-sm">240 mm</span>
-                                </td>
-                            </tr>
-                            <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Width of sleeper centre:</span><br />
-                                    <span className="font-bold text-sm">230 mm</span>
-                                </td>
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Bottom Width of sleeper centre:</span><br />
-                                    <span className="font-bold text-sm">320 mm</span>
-                                </td>
-                                <td className="p-3 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Bottom Width of sleeper centre:</span><br />
-                                    <span className="font-bold text-sm">260 mm</span>
-                                </td>
-                            </tr>
-                            <tr className="hover:bg-gray-50/50 transition-colors duration-200">
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Height of sleeper centre:</span><br />
-                                    <span className="font-bold text-sm">200 mm</span>
-                                </td>
-                                <td className="p-3 border-r border-gray-100 text-center font-medium">
-                                    <span className="text-gray-700 text-xs">Height of sleeper centre:</span><br />
-                                    <span className="font-bold text-sm">190 mm</span>
-                                </td>
-                                <td className="p-3 text-center font-medium">
-                                    <span className="text-gray-700 text-xs font-bold text-sm">-</span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            
-                        {/* Image Section */}
-            <div className="lg:col-span-1 flex flex-col items-center space-y-6 fade-in-section">
-                <div className="slide-in-right">
-                    <Image 
-                        src="/sleeper1.jpg" 
-                        alt="Sleeper Types" 
-                        width={800} 
-                        height={1000} 
-                        className="rounded-lg shadow-lg w-full max-w-xl" 
-                    />
-                </div>
-                <div className="slide-in-right" style={{ animationDelay: '200ms' }}>
-                    <Image 
-                        src="/sleeper2.jpg" 
-                        alt="Sleeper Types" 
-                        width={800} 
-                        height={1000} 
-                        className="rounded-lg shadow-lg w-full max-w-xl" 
-                    />
-                </div>
-                <div className="slide-in-right" style={{ animationDelay: '400ms' }}>
-                    <Image 
-                        src="/sleeper3.jpg" 
-                        alt="Sleeper Types" 
-                        width={800} 
-                        height={1000} 
-                        className="rounded-lg shadow-lg w-full max-w-xl" 
-                    />
+                  <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+                    <table className="w-full text-xs">
+                    <thead>
+                        <tr className="bg-gradient-to-r from-[#8A393B] to-[#a0453f]">
+                            <th className="p-4 text-center border-r border-white/20 text-white">
+                                <div className="font-bold text-sm mb-1">MAIN TRACK SLEEPERS</div>
+                                <div className="text-xs opacity-90 font-medium">TECHNICAL DATA - RT 8746 (WB)</div>
+                            </th>
+                            <th className="p-4 text-center border-r border-white/20 text-white">
+                                <div className="font-bold text-sm mb-1">SWITH EXPANSION JOINT SLEEPER</div>
+                                <div className="text-xs opacity-90 font-medium">TECHNICAL DATA - RT 4149 (SEJ)</div>
+                            </th>
+                            <th className="p-4 text-center text-white">
+                                <div className="font-bold text-sm mb-1">TURNOUT SLEEPER</div>
+                                <div className="text-xs opacity-90 font-medium">TECHNICAL DATA - 1 IN 12</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody className="text-[#F2913F]">
+                        <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Permissible axle load:</span><br />
+                                <span className="font-bold text-sm">25 metric tonnes</span>
+                            </td>
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Permissible axle load:</span><br />
+                                <span className="font-bold text-sm">25 metric tonnes</span>
+                            </td>
+                            <td className="p-3 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Permissible axle load:</span><br />
+                                <span className="font-bold text-sm">25 metric tonnes</span>
+                            </td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Maximum speed:</span><br />
+                                <span className="font-bold text-sm">100km/h</span>
+                            </td>
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Maximum speed:</span><br />
+                                <span className="font-bold text-sm">100km/h</span>
+                            </td>
+                            <td className="p-3 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Maximum speed:</span><br />
+                                <span className="font-bold text-sm">100km/h</span>
+                            </td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Concrete grade:</span><br />
+                                <span className="font-bold text-sm">M60</span>
+                            </td>
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Concrete grade:</span><br />
+                                <span className="font-bold text-sm">M60</span>
+                            </td>
+                            <td className="p-3 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Concrete grade:</span><br />
+                                <span className="font-bold text-sm">M60</span>
+                            </td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Concrete volume:</span><br />
+                                <span className="font-bold text-sm">136237.5 cm3</span>
+                            </td>
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Concrete volume:</span><br />
+                                <span className="font-bold text-sm">161975 cm3</span>
+                            </td>
+                            <td className="p-3 text-center font-medium">
+                                <span className="text-gray-700 text-xs">No of sleepers:</span><br />
+                                <span className="font-bold text-sm">96</span>
+                            </td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Weight (without rail fastenings):</span><br />
+                                <span className="font-bold text-sm">347 kg</span>
+                            </td>
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Weight (without rail fastenings):</span><br />
+                                <span className="font-bold text-sm">405 kg</span>
+                            </td>
+                            <td className="p-3 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Sleeper RMT:</span><br />
+                                <span className="font-bold text-sm">326.29</span>
+                            </td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Length:</span><br />
+                                <span className="font-bold text-sm">2750 mm</span>
+                            </td>
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Length:</span><br />
+                                <span className="font-bold text-sm">2750 mm</span>
+                            </td>
+                            <td className="p-3 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Width:</span><br />
+                                <span className="font-bold text-sm">240 mm</span>
+                            </td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Width:</span><br />
+                                <span className="font-bold text-sm">230 mm</span>
+                            </td>
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Width:</span><br />
+                                <span className="font-bold text-sm">300 mm</span>
+                            </td>
+                            <td className="p-3 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Sleeper height:</span><br />
+                                <span className="font-bold text-sm">230 mm</span>
+                            </td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Height of rail-seat centre:</span><br />
+                                <span className="font-bold text-sm">230 mm</span>
+                            </td>
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Height of rail-seat centre:</span><br />
+                                <span className="font-bold text-sm">190 mm</span>
+                            </td>
+                            <td className="p-3 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Height of rail-seat centre:</span><br />
+                                <span className="font-bold text-sm">230 mm</span>
+                            </td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Top Width of rail-seat centre:</span><br />
+                                <span className="font-bold text-sm">210 mm</span>
+                            </td>
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Top Width of rail-seat centre:</span><br />
+                                <span className="font-bold text-sm">300mm</span>
+                            </td>
+                            <td className="p-3 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Top Width of rail-seat centre:</span><br />
+                                <span className="font-bold text-sm">240 mm</span>
+                            </td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Bottom Width of rail-seat centre:</span><br />
+                                <span className="font-bold text-sm">230 mm</span>
+                            </td>
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Bottom Width of rail-seat centre:</span><br />
+                                <span className="font-bold text-sm">320 mm</span>
+                            </td>
+                            <td className="p-3 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Bottom Width of rail-seat centre:</span><br />
+                                <span className="font-bold text-sm">260 mm</span>
+                            </td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Top Width of sleeper centre:</span><br />
+                                <span className="font-bold text-sm">180 mm</span>
+                            </td>
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Top Width of sleeper centre:</span><br />
+                                <span className="font-bold text-sm">300 mm</span>
+                            </td>
+                            <td className="p-3 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Top Width of sleeper centre:</span><br />
+                                <span className="font-bold text-sm">240 mm</span>
+                            </td>
+                        </tr>
+                        <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Width of sleeper centre:</span><br />
+                                <span className="font-bold text-sm">230 mm</span>
+                            </td>
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Bottom Width of sleeper centre:</span><br />
+                                <span className="font-bold text-sm">320 mm</span>
+                            </td>
+                            <td className="p-3 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Bottom Width of sleeper centre:</span><br />
+                                <span className="font-bold text-sm">260 mm</span>
+                            </td>
+                        </tr>
+                        <tr className="hover:bg-gray-50/50 transition-colors duration-200">
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Height of sleeper centre:</span><br />
+                                <span className="font-bold text-sm">200 mm</span>
+                            </td>
+                            <td className="p-3 border-r border-gray-100 text-center font-medium">
+                                <span className="text-gray-700 text-xs">Height of sleeper centre:</span><br />
+                                <span className="font-bold text-sm">190 mm</span>
+                            </td>
+                            <td className="p-3 text-center font-medium">
+                                <span className="text-gray-700 text-xs font-bold text-sm">-</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
                 </div>
                 </div>
+                
+                {/* Image Section */}
+                <div className="lg:col-span-1 flex flex-col items-center space-y-6 fade-in-section">
+                    <div className="slide-in-right">
+                        <Image 
+                            src="/sleeper1.jpg" 
+                            alt="Sleeper Types" 
+                            width={800} 
+                            height={1000} 
+                            className="rounded-lg shadow-lg w-full max-w-xl" 
+                        />
+                    </div>
+                    <div className="slide-in-right" style={{ animationDelay: '200ms' }}>
+                        <Image 
+                            src="/sleeper2.jpg" 
+                            alt="Sleeper Types" 
+                            width={800} 
+                            height={1000} 
+                            className="rounded-lg shadow-lg w-full max-w-xl" 
+                        />
+                    </div>
+                    <div className="slide-in-right" style={{ animationDelay: '400ms' }}>
+                        <Image 
+                            src="/sleeper3.jpg" 
+                            alt="Sleeper Types" 
+                            width={800} 
+                            height={1000} 
+                            className="rounded-lg shadow-lg w-full max-w-xl" 
+                        />
+                    </div>
+                </div>
+              </div>
             </div>
         </div>
-    </div>
+      </div>
 
+      <div className="bg-white py-8 sm:py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          {/* Mobile Header */}
+          <div className="md:hidden text-center mb-8 fade-in-section">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#8A393B] mb-4">
+              Manufactured for
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full"></div>
+          </div>
+          
+          {/* Desktop Header */}
+          <div className="hidden md:block">
+            <h2 className="text-5xl font-bold text-[#8A393B] mb-12 fade-in-section">
+              Manufactured for
+            </h2>
+          </div>
 
-    <div className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-8 md:px-12">
-          <h2 className="text-5xl font-bold text-[#8A393B] mb-12 fade-in-section">
-            Manufactured for
-          </h2>
+          {/* Mobile Layout - Cards */}
+          <div className="md:hidden space-y-4">
+            {[
+              "Broad Gauge",
+              "Metros", 
+              "Points and Crossings",
+              "Guard Rail",
+              "Dual Gauge Systems"
+            ].map((item, index) => (
+              <div key={index} className="bg-gradient-to-r from-[#F2913F] to-[#e67e22] text-white rounded-xl p-6 shadow-lg fade-in-section">
+                <div className="flex items-center">
+                  <div className="w-3 h-3 bg-white rounded-full mr-4"></div>
+                  <h3 className="text-lg sm:text-xl font-bold">{item}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
 
-          <div className="space-y-8">
+          {/* Desktop Layout */}
+          <div className="hidden md:block space-y-8">
             <div className="grid md:grid-cols-3 gap-8 border-b border-gray-200 pb-8 fade-in-section">
                 <p className="text-2xl text-[#F2913F]">Broad Gauge</p>
                 <p className="text-2xl text-[#F2913F]">Metros</p>
@@ -421,16 +717,59 @@ const SleepersPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-black text-white py-16">
-        <div className="max-w-7xl mx-auto px-8 md:px-12 text-center fade-in-section">
-          <div className="h-1 bg-gradient-to-r from-[#8A393B] via-[#1E3888] to-[#F2913F] mb-8"></div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            Includes India's first ISO certified composite plant
-          </h2>
-          <div className="h-1 bg-gradient-to-l from-[#8A393B] via-[#1E3888] to-[#F2913F]"></div>
+
+      <div className="bg-black text-white py-8 sm:py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          {/* Mobile Layout */}
+          <div className="md:hidden text-center fade-in-section">
+            <div className="bg-gray-900/50 backdrop-blur-sm rounded-3xl p-8 border border-gray-700/30">
+              <div className="h-1 bg-gradient-to-r from-[#8A393B] via-[#1E3888] to-[#F2913F] mb-6 rounded-full"></div>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6 leading-tight">
+                Includes India's first ISO certified composite plant
+              </h2>
+              <div className="h-1 bg-gradient-to-l from-[#8A393B] via-[#1E3888] to-[#F2913F] rounded-full"></div>
+            </div>
+          </div>
+          
+          {/* Desktop Layout */}
+          <div className="hidden md:block text-center fade-in-section">
+            <div className="h-1 bg-gradient-to-r from-[#8A393B] via-[#1E3888] to-[#F2913F] mb-8"></div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              Includes India's first ISO certified composite plant
+            </h2>
+            <div className="h-1 bg-gradient-to-l from-[#8A393B] via-[#1E3888] to-[#F2913F]"></div>
+          </div>
         </div>
-        <div className="max-w-7xl mx-auto px-8 md:px-12 mt-16">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        
+        {/* Mass Spring System Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 mt-8 sm:mt-12 md:mt-16">
+          {/* Mobile Layout */}
+          <div className="md:hidden space-y-8">
+            <div className="text-center fade-in-section">
+              <h3 className="text-3xl sm:text-4xl font-bold text-[#F2913F] mb-4 leading-tight">Mass Spring System</h3>
+              <div className="w-20 h-1 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mb-4 rounded-full"></div>
+              <p className="text-base sm:text-lg text-gray-200 leading-relaxed">
+                Used in slab track to reduce noise and vibration
+              </p>
+            </div>
+            <div className="fade-in-section">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-700/30">
+                <video
+                  src="/2.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-64 sm:h-80 object-cover"
+                  preload="metadata"
+                  poster="/12_sleeper_types.jpg"
+                />
+              </div>
+            </div>
+          </div>
+          
+          {/* Desktop Layout */}
+          <div className="hidden md:grid md:grid-cols-2 gap-12 items-center">
             <div className="slide-in-left">
               <h3 className="text-5xl font-bold text-[#F2913F]">Mass Spring System</h3>
               <p className="mt-4 text-xl">Used in slab track to reduce noise and vibration</p>
@@ -452,9 +791,37 @@ const SleepersPage = () => {
           </div>
         </div>
       </div>
-    <div className="bg-black text-white py-16">
-        <div className="max-w-7xl mx-auto px-8 md:px-12">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+
+      <div className="bg-black text-white py-8 sm:py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+            {/* Mobile Layout */}
+            <div className="md:hidden space-y-8 fade-in-section">
+              <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/30">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#F2913F] leading-tight mb-6">
+                  Custom designed for urban zones rail via ducts and elevated metro lines
+                </h3>
+                <div className="space-y-4">
+                  <div className="bg-gray-800/50 rounded-lg p-4">
+                    <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
+                      Functions by isolating vibration at source
+                    </p>
+                  </div>
+                  <div className="bg-gray-800/50 rounded-lg p-4">
+                    <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
+                      Minimizes secondary noise in nearby buildings
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-6 p-4 bg-gradient-to-r from-[#F2913F]/20 to-[#8A393B]/20 rounded-lg border border-[#F2913F]/30">
+                  <p className="text-base sm:text-lg font-bold text-[#F2913F]">
+                    Executed on elevated corridors of Mumbai Metro
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Desktop Layout */}
+            <div className="hidden md:grid md:grid-cols-2 gap-12 items-center">
                 <div className="slide-in-left">
                     <h3 className="text-4xl font-bold text-[#F2913F] leading-tight">
                         Custom designed for urban zones<br />
@@ -472,7 +839,7 @@ const SleepersPage = () => {
                 </div>
             </div>
         </div>
-    </div>
+      </div>
     </div>
   );
 };
