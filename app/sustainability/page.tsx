@@ -129,35 +129,71 @@ every process."
             </h2>
           </div>
 
-          {/* Mobile Content - Card Layout */}
-          <div className="md:hidden mt-8 space-y-4">
+          {/* Mobile Content - Enhanced Card Layout with Images */}
+          <div className="md:hidden mt-8 space-y-6">
             {[
               {
                 title: "Solar generation",
-                items: ["With 18 sites across India and an on-grid capacity of 5.4 megawatts, our solar generation network significantly reduces dependence on fossil fuels and lowers the overall carbon footprint of operations. This renewable infrastructure powers a substantial share of our manufacturing activities, ensuring cleaner and more sustainable production."]
+                items: ["With 18 sites across India and an on-grid capacity of 5.4 megawatts, our solar generation network significantly reduces dependence on fossil fuels and lowers the overall carbon footprint of operations. This renewable infrastructure powers a substantial share of our manufacturing activities, ensuring cleaner and more sustainable production."],
+                image: "/solargeneration.webp",
+                color: "from-green-500 to-emerald-600"
               },
               {
                 title: "Water reuse", 
-                items: ["Recycled curing water is processed through closed-loop Water Treatment Plants (WTPs), dramatically reducing overall consumption and ensuring efficient use of every drop. By implementing zero-discharge processes across all facilities, the system prevents waste and protects natural water bodies from contamination."]
+                items: ["Recycled curing water is processed through closed-loop Water Treatment Plants (WTPs), dramatically reducing overall consumption and ensuring efficient use of every drop. By implementing zero-discharge processes across all facilities, the system prevents waste and protects natural water bodies from contamination."],
+                image: "/wateresue.jpg",
+                color: "from-blue-500 to-cyan-600"
               },
               {
                 title: "Dust control",
-                items: ["Factory air is managed at the source through advanced multi-stage dust extraction systems installed across all units, creating a cleaner, safer, and healthier environment for every worker. High-efficiency filtration technology ensures that airborne particles are captured before they spread, maintaining optimal air quality standards throughout operations."]
+                items: ["Factory air is managed at the source through advanced multi-stage dust extraction systems installed across all units, creating a cleaner, safer, and healthier environment for every worker. High-efficiency filtration technology ensures that airborne particles are captured before they spread, maintaining optimal air quality standards throughout operations."],
+                image: "/dust control.jpg",
+                color: "from-gray-500 to-slate-600"
               }
             ].map((section, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-5 border border-gray-100 hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-xl sm:text-2xl font-bold text-[#F2913F] mb-4 flex items-center">
-                  <div className="w-3 h-3 bg-[#F2913F] rounded-full mr-3"></div>
-                  {section.title}
-                </h3>
-                <ul className="space-y-2 text-sm sm:text-base text-gray-700 leading-relaxed">
-                  {section.items.map((item, i) => (
-                    <li key={i} className="flex items-start">
-                      <span className="mt-1.5 mr-3 w-1.5 h-1.5 bg-[#8A393B] rounded-full flex-shrink-0"></span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+              <div key={index} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 fade-in-section">
+                {/* Mobile Card Header with Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={section.image}
+                    alt={section.title}
+                    width={600}
+                    height={300}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white drop-shadow-lg leading-tight">
+                      {section.title}
+                    </h3>
+                    <div className={`w-16 h-1 bg-gradient-to-r ${section.color} mt-2 rounded-full shadow-lg`}></div>
+                  </div>
+                </div>
+                
+                {/* Mobile Card Content */}
+                <div className="p-6">
+                  <div className="space-y-3">
+                    {section.items.map((item, i) => (
+                      <div key={i} className="text-sm sm:text-base text-gray-700 leading-relaxed text-justify">
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Mobile Card Footer */}
+                <div className="px-6 pb-6">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-[#8A393B] font-medium text-sm">
+                      <div className="w-2 h-2 bg-[#F2913F] rounded-full mr-2"></div>
+                      Sustainability Initiative
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-xs text-green-600 font-medium">Active</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
