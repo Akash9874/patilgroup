@@ -384,6 +384,21 @@ export default function Home() {
 
       {/* Responsive Engineering Infrastructure Section */}
       <section className="bg-[#F5F4F1] relative py-12 md:py-24 overflow-hidden">
+        {/* Precast Solutions CTA */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 md:mb-12">
+          <div className="flex justify-center md:justify-end fade-in-section">
+            <Link 
+              href="/precast" 
+              className="group inline-flex items-center gap-2 bg-[#F2913F] hover:bg-[#8A393B] px-4 py-2 md:px-6 md:py-3 rounded-full shadow-sm hover:shadow-md transition-all duration-300 text-sm md:text-base font-medium text-white"
+            >
+              Explore Precast Solutions
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+        
         {/* Background Grid Lines - Hidden on mobile */}
         <div className="absolute inset-0 pointer-events-none hidden md:block">
           <div className="absolute left-1/3 top-0 bottom-0 w-px bg-gray-300 h-full scale-in"></div>
