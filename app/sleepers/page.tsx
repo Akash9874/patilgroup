@@ -142,7 +142,7 @@ const SleepersPage = () => {
               <div className="bg-gradient-to-br from-[#8A393B] to-[#a0453f] text-white rounded-lg p-8 fade-in-section">
                 <h4 className="text-xl font-bold mb-4 text-[#F2913F]">Safety</h4>
                 <p>Low electrical conductivity, fire resistance, and excellent vibration damping.</p>
-              </div>
+            </div>
               
               <div className="bg-gradient-to-br from-[#8A393B] to-[#a0453f] text-white rounded-lg p-8 fade-in-section">
                 <h4 className="text-xl font-bold mb-4 text-[#F2913F]">Maintainability</h4>
@@ -396,7 +396,7 @@ const SleepersPage = () => {
                         className="rounded-lg shadow-lg w-full max-w-xl" 
                     />
                 </div>
-            </div>
+                </div>
             </div>
         </div>
     </div>
