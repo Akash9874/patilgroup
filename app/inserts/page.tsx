@@ -82,15 +82,15 @@ const InsertsPage = () => {
                 glareEnable={true}
                 glareMaxOpacity={0.1}
               >
-                                 <div className="relative overflow-hidden rounded-xl shadow-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-1">
-                   <Image 
+                <div className="relative overflow-hidden rounded-xl shadow-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-1">
+                  <Image 
                      src="/insertss69.jpg" 
-                     alt="SGCI Inserts 2" 
-                     width={500} 
+                    alt="SGCI Inserts 2" 
+                    width={500} 
                      height={300} 
                      className="rounded-lg object-cover w-full h-150" 
-                   />
-                 </div>
+                  />
+                </div>
               </TiltCard>
             </div>
           </div>

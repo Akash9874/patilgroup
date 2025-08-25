@@ -31,7 +31,7 @@ const projectsData = [
       'Application: Suitable for ballastless and ballasted track sections across the corridor',
     ],
     conclusion: 'This project reflects our continued partnership with DMRC in shaping India’s most advanced metro networks.',
-    showcaseImage: '/train 2.jpg'
+    showcaseImage: '/projectrailway.jpg'
   },
   {
     title: 'Noida Corridor',
@@ -46,7 +46,7 @@ const projectsData = [
       'Compliance: Pre-approved by Ministry of Railways, tested to RDSO/DMRC safety criteria per Metro footing Annexure C-II standards',
     ],
     conclusion: 'This deployment further establishes Patil Group’s role as a trusted partner for high-precision fastening solutions on modern metro corridors.',
-    showcaseImage: '/train 2.jpg'
+    showcaseImage: '/projectrailway.jpg'
   },
   {
     title: 'Kolkata Stretch',
@@ -61,7 +61,7 @@ const projectsData = [
       'Compliance: Supplied as per Metro safety and vibration standards, RDSO-compliant',
     ],
     conclusion: 'This project marks our growing presence in Eastern India’s transit infrastructure with robust, tested fastening solutions.',
-    showcaseImage: '/train 2.jpg'
+    showcaseImage: '/projectrailway.jpg'
   },
   {
     title: 'Ahmedabad Phase II',
@@ -76,7 +76,7 @@ const projectsData = [
       'Standards: RDSO-certified systems suitable for high-speed, low-vibration metro operations',
     ],
     conclusion: 'This delivery reinforced our continued partnership in Gujarat’s evolving metro infrastructure.',
-    showcaseImage: '/train 2.jpg'
+    showcaseImage: '/projectrailway.jpg'
   },
   {
     title: 'Mumbai Line 2B',
@@ -91,7 +91,7 @@ const projectsData = [
       'Standards: Fully compliant with RDSO and MMRDA performance norms for metro systems',
     ],
     conclusion: 'This project demonstrates our expertise in delivering robust fastening solutions for Mumbai\'s expanding metro network.',
-    showcaseImage: '/mumbaimetrohero.png'
+    showcaseImage: '/projectrailway.jpg'
   },
   {
     title: 'Mumbai Line 7X',
@@ -106,7 +106,7 @@ const projectsData = [
       'Standards: Conforms to RDSO and DMRC metro infrastructure guidelines',
     ],
     conclusion: 'This project marks our continued involvement in Mumbai\'s next-generation urban mobility solutions.',
-    showcaseImage: '/mumbaimetrohero.png'
+    showcaseImage: '/projectrailway.jpg'
   },
   {
     title: 'Nagpur Metro',
@@ -121,7 +121,7 @@ const projectsData = [
       'Standards: Designed and supplied as per Maha Metro and RDSO guidelines',
     ],
     conclusion: 'This partnership extended our footprint across Maharashtra\'s expanding metro infrastructure.',
-    showcaseImage: '/nagpurmetrohero.png'
+    showcaseImage: '/projectrailway.jpg'
   },
   {
     title: 'L&T - Standard Gauge Sleeper Supply',
@@ -137,7 +137,7 @@ const projectsData = [
       'Manufacturing: Supplied from our certified PSC sleeper plants',
     ],
     conclusion: 'This project added to our growing collaborations with India\'s largest EPC contractors in modern rail infrastructure.',
-    showcaseImage: '/l&t-sleeper.jpg'
+    showcaseImage: '/projectrailway.jpg'
   },
   {
     title: 'IRCON - Special Sleeper Supply',
@@ -153,7 +153,7 @@ const projectsData = [
       'Manufacturing: Produced at our specialized sleeper units with custom moulding capabilities',
     ],
     conclusion: 'This project highlights our expertise in delivering tailored sleeper solutions for complex rail configurations.',
-    showcaseImage: '/ircon-sleeper.jpg'
+    showcaseImage: '/projectrailway.jpg'
   },
   {
     title: 'IRCON - PSC Sleeper Supply',
@@ -169,7 +169,7 @@ const projectsData = [
       'Execution: End-to-end delivery including manufacturing and logistics',
     ],
     conclusion: 'This project reinforced our long-standing relationship with IRCON and our role in national railway expansion.',
-    showcaseImage: '/ircon-psc-sleeper.jpg'
+    showcaseImage: '/projectrailway.jpg'
   },
 ];
 
