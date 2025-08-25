@@ -451,10 +451,10 @@ const Navbar = () => {
              <div className="p-2 border-t border-gray-700/30">
                <div className="space-y-1">
                  {[
-                   { href: '/projects', label: 'Projects', icon: '📋' },
-                   { href: '/cme', label: 'CME', icon: '🏭' },
-                   { href: '/research-and-development', label: 'R&D', icon: '🔬' },
-                   { href: '/careers', label: 'Careers', icon: '💼' }
+                   { href: '/projects', label: 'Projects' },
+                   { href: '/cme', label: 'CME' },
+                   { href: '/research-and-development', label: 'R&D' },
+                   { href: '/careers', label: 'Careers' }
                  ].map((item, index) => (
                    <Link 
                      key={item.href}
@@ -463,7 +463,6 @@ const Navbar = () => {
                      className={`group flex items-center px-4 py-3 text-white hover:text-amber-400 transition-all duration-300 hover:bg-gradient-to-r hover:from-amber-500/10 hover:to-transparent rounded-xl text-base font-medium animate-slideUp touch-manipulation`}
                      style={{ animationDelay: `${index * 50}ms` }}
                    >
-                     <span className="text-lg mr-3 group-hover:scale-110 transition-transform duration-300">{item.icon}</span>
                      <div className="w-2 h-2 bg-gray-600 rounded-full mr-3 opacity-0 group-hover:opacity-100 group-hover:bg-amber-400 transition-all duration-300" />
                      {item.label}
                    </Link>
@@ -479,7 +478,6 @@ const Navbar = () => {
                  >
                    <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                    <span className="relative flex items-center">
-                     <span className="text-xl mr-2 group-hover:animate-pulse">📞</span>
                      Contact Us
                      <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
                    </span>

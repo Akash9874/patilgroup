@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Navbar from '@/components/Navbar';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
@@ -89,10 +89,32 @@ const leadershipData = [
 
 const ManagementPage = () => {
   useScrollAnimation();
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const [emblaRef, emblaApi] = useEmblaCarousel({ slidesToScroll: 'auto', containScroll: 'trimSnaps' });
+  const [mobileEmblaRef, mobileEmblaApi] = useEmblaCarousel({ 
+    align: 'center',
+    containScroll: 'trimSnaps',
+    dragFree: true,
+    loop: false
+  });
 
   const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
   const scrollNext = () => emblaApi && emblaApi.scrollNext();
+  
+  const mobileScrollPrev = () => mobileEmblaApi && mobileEmblaApi.scrollPrev();
+  const mobileScrollNext = () => mobileEmblaApi && mobileEmblaApi.scrollNext();
+
+  const onSelect = () => {
+    if (!mobileEmblaApi) return;
+    setSelectedIndex(mobileEmblaApi.selectedScrollSnap());
+  };
+
+  useEffect(() => {
+    if (!mobileEmblaApi) return;
+    onSelect();
+    mobileEmblaApi.on('select', onSelect);
+    return () => mobileEmblaApi.off('select', onSelect);
+  }, [mobileEmblaApi]);
   
   return (
     <div className="bg-[#1E1E1E] text-white">
@@ -178,41 +200,79 @@ const ManagementPage = () => {
             </div>
           </div>
           
-          {/* Mobile Layout - Enhanced Grid */}
-          <div className="md:hidden space-y-4">
-            {leadershipData.map((leader, i) => (
-              <div key={i} className="leadership-card-mobile rounded-2xl p-6 border border-gray-700/30 backdrop-blur-sm">
-                <div className="flex items-center space-x-4">
-                  {/* Enhanced Mobile Image */}
-                  <div className="flex-shrink-0">
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden bg-white ring-2 ring-amber-500/20">
-                      <Image
-                        src={leader.image}
-                        alt={leader.name}
-                        width={100}
-                        height={100}
-                        className="w-full h-full object-cover leadership-image"
-                      />
+          {/* Mobile Layout - Swipeable Carousel */}
+          <div className="md:hidden relative">
+            <div className="overflow-hidden" ref={mobileEmblaRef}>
+              <div className="flex touch-pan-y">
+                {leadershipData.map((leader, i) => (
+                  <div key={i} className="flex-shrink-0 w-[90%] sm:w-[80%] pl-4 first:pl-6 last:pr-6">
+                    <div className="leadership-card-mobile rounded-2xl border border-gray-700/30 backdrop-blur-sm bg-gray-800/20 overflow-hidden shadow-xl">
+                      {/* Full Photo Container */}
+                      <div className="relative h-[300px] sm:h-[350px] bg-white">
+                        <Image
+                          src={leader.image}
+                          alt={leader.name}
+                          fill
+                          className="object-contain"
+                          sizes="(max-width: 640px) 90vw, 80vw"
+                        />
+                      </div>
+                      
+                      {/* Designation and Name Below Photo */}
+                      <div className="p-4 sm:p-6 text-center bg-[#1E1E1E]">
+                        <p className="text-sm sm:text-base text-amber-400 font-bold uppercase tracking-wider mb-2">
+                          {leader.post}
+                        </p>
+                        <h3 className="text-base sm:text-lg font-semibold text-white leading-tight">
+                          {leader.name}
+                        </h3>
+                        {/* Visual accent */}
+                        <div className="w-16 h-1 bg-gradient-to-r from-amber-500 to-[#8A393B] mx-auto mt-3 rounded-full"></div>
+                      </div>
                     </div>
                   </div>
-                  
-                  {/* Enhanced Mobile Content */}
-                  <div className="flex-1 min-w-0">
-                    <p className="text-xs sm:text-sm text-amber-400 font-semibold uppercase tracking-wider mb-1">{leader.post}</p>
-                    <h3 className="text-lg sm:text-xl font-bold text-white leading-tight">{leader.name}</h3>
-                    {/* Visual accent */}
-                    <div className="w-12 h-0.5 bg-gradient-to-r from-amber-500 to-transparent mt-2 rounded-full"></div>
-                  </div>
-                  
-                  {/* Mobile indicator */}
-                  <div className="flex-shrink-0">
-                    <div className="w-8 h-8 rounded-full bg-amber-500/10 flex items-center justify-center">
-                      <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Mobile Navigation Arrows */}
+            <button 
+              onClick={mobileScrollPrev} 
+              className="absolute top-1/2 left-2 transform -translate-y-1/2 p-2 rounded-full bg-gray-800/80 hover:bg-gray-700/80 transition-colors z-10 backdrop-blur-sm border border-gray-600/30"
+              aria-label="Previous management member"
+            >
+              <ArrowLeft className="h-5 w-5 text-amber-500" />
+            </button>
+            <button 
+              onClick={mobileScrollNext} 
+              className="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 rounded-full bg-gray-800/80 hover:bg-gray-700/80 transition-colors z-10 backdrop-blur-sm border border-gray-600/30"
+              aria-label="Next management member"
+            >
+              <ArrowRight className="h-5 w-5 text-amber-500" />
+            </button>
+
+            {/* Mobile Scroll Indicator */}
+            <div className="flex justify-center mt-6 space-x-2">
+              {leadershipData.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => mobileEmblaApi && mobileEmblaApi.scrollTo(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === selectedIndex 
+                      ? 'bg-amber-500 scale-125' 
+                      : 'bg-gray-600 opacity-50 hover:opacity-75'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+            
+            {/* Mobile Swipe Hint */}
+            <div className="text-center mt-4">
+              <p className="text-xs text-gray-400 font-medium">
+                ← Swipe to explore →
+              </p>
+            </div>
           </div>
           
           {/* Desktop Layout - Original Carousel */}
