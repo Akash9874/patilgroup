@@ -83,88 +83,65 @@ export default function Home() {
     <div className="overflow-x-hidden">
       {/* Hero Section */}
       <section className="relative h-screen overflow-hidden bg-black">
-        {/* Optimized Mobile Layout */}
-        <div className="sm:hidden h-full flex relative">
-          {/* Enhanced Left Side - Text Content */}
-          <div className="w-[65%] ultra-small-adjust mobile-gradient flex items-center relative z-20">
-            <div className="px-3 py-6 w-full">
+        {/* Optimized Mobile Layout - Full Video with Text Overlay */}
+        <div className="sm:hidden h-full relative">
+          {/* Full-width Video Background */}
+          <div className="absolute inset-0 w-full h-full">
+            <video
+              ref={videoRef}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+              preload="metadata"
+            >
+              <source src="/herovideo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          
+          {/* Text Overlay */}
+          <div className="absolute inset-0 flex items-center z-20">
+            <div className="px-6 py-6 w-full">
               <div 
                 className={`transition-all duration-1000 ease-in-out transform ${isHeroAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                 style={{ transitionDelay: '800ms' }}
               >
                 {/* Main Heading */}
                 <div className="mb-6">
-                  <h2 className="text-[#F2913F] font-extrabold text-2xl sm:text-3xl leading-[0.9] tracking-tight mb-1 mobile-hero-text mobile-heading">
+                  <h2 className="text-[#F2913F] font-extrabold text-3xl sm:text-4xl leading-[0.9] tracking-tight mb-1 mobile-hero-text mobile-heading drop-shadow-lg">
                     RAILWAY
                   </h2>
-                  <h2 className="text-[#F2913F] font-extrabold text-2xl sm:text-3xl leading-[0.9] tracking-tight mobile-hero-text mobile-heading">
+                  <h2 className="text-[#F2913F] font-extrabold text-3xl sm:text-4xl leading-[0.9] tracking-tight mobile-hero-text mobile-heading drop-shadow-lg">
                     ENGINEERING
                   </h2>
                 </div>
                 
                 {/* Animated Accent Line */}
-                <div className="w-12 h-1 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mb-4 rounded-full accent-line mobile-smooth"></div>
+                <div className="w-16 h-1 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mb-6 rounded-full accent-line mobile-smooth drop-shadow-sm"></div>
                 
                 {/* Subtitle */}
                 <div className="space-y-1">
-                  <h1 className="text-white font-semibold text-base leading-tight mobile-hero-text mobile-smooth">
+                  <h1 className="text-white font-semibold text-lg leading-tight mobile-hero-text mobile-smooth drop-shadow-lg">
                     SMARTER TRACK
                   </h1>
-                  <h1 className="text-white font-semibold text-base leading-tight mobile-hero-text mobile-smooth">
+                  <h1 className="text-white font-semibold text-lg leading-tight mobile-hero-text mobile-smooth drop-shadow-lg">
                     SOLUTIONS,
                   </h1>
-                  <h1 className="text-white font-semibold text-base leading-tight mobile-hero-text mobile-smooth">
+                  <h1 className="text-white font-semibold text-lg leading-tight mobile-hero-text mobile-smooth drop-shadow-lg">
                     SAFER MOBILITY
                   </h1>
                 </div>
                 
                 {/* Interactive CTA Hint */}
-                <div className="mt-6">
-                  <p className="text-gray-400 text-xs font-medium tracking-wide swipe-hint">
+                <div className="mt-8">
+                  <p className="text-gray-200 text-sm font-medium tracking-wide swipe-hint drop-shadow-md">
                     Swipe to explore →
                   </p>
                 </div>
               </div>
             </div>
-            
-            {/* Subtle overlay pattern */}
-            <div className="absolute inset-0 opacity-5">
-              <div className="w-full h-full" style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23F2913F' fill-opacity='0.1'%3E%3Cpath d='M0 0h40v40H0z'/%3E%3Cpath d='M0 0h20v20H0z'/%3E%3C/g%3E%3C/svg%3E")`,
-                backgroundSize: '20px 20px'
-              }}></div>
-            </div>
-          </div>
-          
-          {/* Enhanced Right Side - Video */}
-          <div className="w-[35%] ultra-small-video relative overflow-hidden">
-            {/* Video Container with Better Clipping */}
-            <div 
-              className="absolute inset-0 transition-all duration-1000 ease-in-out"
-              style={{
-                clipPath: isHeroAnimated 
-                  ? 'polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)' 
-                  : 'polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)',
-              }}
-            >
-              <video
-                ref={videoRef}
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover scale-105"
-                preload="metadata"
-              >
-                <source src="/herovideo.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              
-              {/* Subtle overlay for better integration */}
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/20"></div>
-            </div>
-            
-            {/* Edge shadow for depth */}
-            <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-black/30 to-transparent z-10"></div>
           </div>
         </div>
 
