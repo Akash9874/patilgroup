@@ -113,7 +113,11 @@ const ManagementPage = () => {
     if (!mobileEmblaApi) return;
     onSelect();
     mobileEmblaApi.on('select', onSelect);
-    return () => mobileEmblaApi.off('select', onSelect);
+    return () => {
+      if (mobileEmblaApi) {
+        mobileEmblaApi.off('select', onSelect);
+      }
+    };
   }, [mobileEmblaApi]);
   
   return (
