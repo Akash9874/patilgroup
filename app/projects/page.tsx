@@ -204,16 +204,16 @@ const ProjectsPage = () => {
           <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="relative z-10 h-full flex items-center">
-          <div className="pl-16 md:pl-24">
-            <h2 className="text-white text-6xl md:text-7xl font-medium font-clash">Our</h2>
-            <h1 className="text-white text-8xl md:text-9xl font-bold font-clash -mt-4">Projects</h1>
+          <div className="pl-6 sm:pl-8 md:pl-16 lg:pl-24">
+            <h2 className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium font-clash">Our</h2>
+            <h1 className="text-white text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-bold font-clash -mt-1 sm:-mt-2 md:-mt-4">Projects</h1>
           </div>
         </div>
       </section>
 
       <section className="bg-black text-white fade-in-section">
         <div className="flex flex-col md:flex-row">
-          <div className="md:w-1/2 relative">
+          <div className="w-full md:w-1/2 relative h-64 sm:h-80 md:h-auto">
             <video
               autoPlay
               loop
@@ -226,9 +226,9 @@ const ProjectsPage = () => {
               Your browser does not support the video tag.
             </video>
           </div>
-          <div className="md:w-1/2 flex items-center p-8 md:p-16">
+          <div className="w-full md:w-1/2 flex items-center p-6 sm:p-8 md:p-16">
             <div>
-              <h2 className="text-5xl font-bold font-clash leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-clash leading-tight">
                 <TypingAnimation
                   text="Engineering Excellence for a Stronger Tomorrow"
                   showCursor={true}
@@ -241,29 +241,29 @@ const ProjectsPage = () => {
                   ]}
                 />
               </h2>
-              <div className="w-32 h-0.5 bg-white mt-6 mb-8"></div>
+              <div className="w-24 sm:w-32 h-0.5 bg-white mt-4 sm:mt-6 mb-6 sm:mb-8"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-24 fade-in-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-end mb-8">
+      <section className="bg-white py-12 sm:py-16 md:py-24 fade-in-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center sm:justify-end mb-6 sm:mb-8">
           <div className="flex items-center space-x-4">
-            <button onClick={scrollPrev} className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300 text-gray-400 hover:bg-gray-100 transition-colors">
-              <ArrowLeft size={24} />
+            <button onClick={scrollPrev} className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border border-gray-300 text-gray-400 hover:bg-gray-100 transition-colors">
+              <ArrowLeft size={20} className="sm:w-6 sm:h-6" />
             </button>
-            <button onClick={scrollNext} className="w-12 h-12 flex items-center justify-center rounded-full bg-amber-500 text-white hover:bg-amber-600 transition-colors">
-              <ArrowRight size={24} />
+            <button onClick={scrollNext} className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-amber-500 text-white hover:bg-amber-600 transition-colors">
+              <ArrowRight size={20} className="sm:w-6 sm:h-6" />
             </button>
           </div>
         </div>
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {projectsData.map((project, index) => (
-              <div key={index} className="flex-shrink-0 w-full md:w-1/4 px-4">
+              <div key={index} className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-2 sm:px-4">
                 <Dialog>
-                <div className="relative h-96 rounded-lg overflow-hidden group">
+                <div className="relative h-72 sm:h-80 md:h-96 rounded-lg overflow-hidden group">
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -271,32 +271,83 @@ const ProjectsPage = () => {
                     objectFit="cover"
                     className="transition-transform duration-500 group-hover:scale-110"
                   />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-                    <h3 className="text-white text-2xl font-bold">{project.title}</h3>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 sm:p-6">
+                    <h3 className="text-white text-lg sm:text-xl md:text-2xl font-bold">{project.title}</h3>
                     </div>
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <DialogTrigger asChild>
-                        <button className="bg-orange-500 text-white font-bold py-2 px-4 rounded-full inline-flex items-center">
+                        <button className="bg-orange-500 text-white font-bold py-2 px-3 sm:py-2 sm:px-4 rounded-full inline-flex items-center text-sm sm:text-base">
                           <span>Read More</span>
-                          <ArrowRight size={16} className="ml-2" />
+                          <ArrowRight size={14} className="ml-2 sm:w-4 sm:h-4" />
                         </button>
                       </DialogTrigger>
                     </div>
                   </div>
 
-                  <DialogContent className="sm:max-w-[80vw] bg-[#18181B] text-gray-300 border-gray-700 p-0 top-[60%]">
-                    <DialogHeader className="p-6 border-b border-gray-700 sticky top-0 bg-[#18181B] z-10 flex flex-row items-center justify-between">
-                      <DialogTitle className="text-3xl lg:text-4xl font-bold text-orange-500">{project.title}</DialogTitle>
+                  <DialogContent className="w-[98vw] h-[95vh] max-w-none sm:max-w-[95vw] sm:w-auto sm:h-auto lg:max-w-[85vw] bg-[#18181B] text-gray-300 border-gray-700 p-0 m-0">
+                    <DialogHeader className="p-3 sm:p-4 lg:p-6 border-b border-gray-700 sticky top-0 bg-[#18181B] z-10 flex flex-row items-center justify-between">
+                      <DialogTitle className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-orange-500 pr-2 sm:pr-4 leading-tight">{project.title}</DialogTitle>
                       <DialogClose asChild>
-                        <button className="p-1 rounded-full text-gray-400 hover:text-white hover:bg-gray-700 transition-colors">
-                          <X className="h-5 w-5" />
+                        <button className="p-2 sm:p-1 rounded-full text-gray-400 hover:text-white hover:bg-gray-700 transition-colors flex-shrink-0 touch-manipulation">
+                          <X className="h-5 w-5 sm:h-4 sm:w-4 lg:h-5 lg:w-5" />
                           <span className="sr-only">Close</span>
                         </button>
                       </DialogClose>
                     </DialogHeader>
-                    <div className="max-h-[75vh] overflow-y-auto">
-                      <div className="grid grid-cols-1 lg:grid-cols-5 gap-x-12 p-6">
-                        <div className="lg:col-span-3">
+                    <div className="max-h-[calc(95vh-80px)] sm:max-h-[75vh] overflow-y-auto">
+                      {/* Mobile Layout */}
+                      <div className="block lg:hidden p-3 sm:p-4 space-y-4">
+                        <Image
+                          src={project.showcaseImage || '/engineering-infra.jpg'}
+                          alt={project.title}
+                          width={1600}
+                          height={1200}
+                          className="rounded-lg object-cover w-full shadow-lg"
+                        />
+                        
+                        <div>
+                          <h4 className="text-base font-semibold text-orange-400 mb-2 border-b border-gray-700 pb-2">Project Overview</h4>
+                          <p className="text-sm text-gray-400 leading-relaxed">{project.description}</p>
+                        </div>
+                        
+                        <div className="bg-zinc-800/50 p-3 rounded-lg border border-gray-700">
+                          <h4 className="text-base font-semibold text-orange-400 mb-3">Project Details</h4>
+                          <div className="text-sm space-y-2">
+                            <div className="flex flex-col space-y-1">
+                              <strong className="text-gray-500">Client:</strong>
+                              <span className="text-gray-300">{project.client}</span>
+                            </div>
+                            <div className="flex flex-col space-y-1">
+                              <strong className="text-gray-500">Principal Client:</strong>
+                              <span className="text-gray-300">{project.principalClient}</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {project.specs && project.specs.length > 0 && (
+                          <div className="bg-zinc-800/50 p-3 rounded-lg border border-gray-700">
+                            <h4 className="text-base font-semibold text-orange-400 mb-3">Specifications</h4>
+                            <ul className="space-y-2">
+                              {project.specs.map((spec, i) => (
+                                <li key={i} className="flex items-start text-sm">
+                                  <ArrowRight size={14} className="mr-2 mt-0.5 text-orange-500 flex-shrink-0" />
+                                  <span className="text-gray-300">{spec}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+
+                        {project.conclusion && (
+                          <div className="border-l-4 border-orange-500 pl-3 bg-zinc-800/30 p-3 rounded-r-lg">
+                            <p className="text-sm font-medium text-gray-400 italic">"{project.conclusion}"</p>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Desktop Layout */}
+                      <div className="hidden lg:grid grid-cols-5 gap-12 p-6">
+                        <div className="col-span-3">
                           <Image
                             src={project.showcaseImage || '/engineering-infra.jpg'}
                             alt={project.title}
@@ -310,7 +361,7 @@ const ProjectsPage = () => {
                             </div>
                           )}
                         </div>
-                        <div className="lg:col-span-2 space-y-6 mt-8 lg:mt-0">
+                        <div className="col-span-2 space-y-6">
                           <div>
                             <h4 className="text-lg font-semibold text-orange-400 mb-2 border-b border-gray-700 pb-2">Project Overview</h4>
                             <p className="text-sm text-gray-400 leading-relaxed">{project.description}</p>
@@ -338,8 +389,8 @@ const ProjectsPage = () => {
                             </div>
                           )}
                         </div>
-                  </div>
-                </div>
+                      </div>
+                    </div>
                   </DialogContent>
                 </Dialog>
               </div>
@@ -351,4 +402,4 @@ const ProjectsPage = () => {
   );
 };
 
-export default ProjectsPage; 
+export default ProjectsPage;
