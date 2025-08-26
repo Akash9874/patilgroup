@@ -284,8 +284,8 @@ const ProjectsPage = () => {
                     </div>
                   </div>
 
-                  <DialogContent className="w-[98vw] h-[95vh] max-w-none sm:max-w-[95vw] sm:w-auto sm:h-auto lg:max-w-[85vw] bg-[#18181B] text-gray-300 border-gray-700 p-0 m-0">
-                    <DialogHeader className="p-3 sm:p-4 lg:p-6 border-b border-gray-700 sticky top-0 bg-[#18181B] z-10 flex flex-row items-center justify-between">
+                  <DialogContent className="w-[94vw] h-[85vh] max-w-none sm:max-w-[85vw] sm:w-auto sm:h-auto lg:max-w-[85vw] bg-[#18181B] text-gray-300 border border-gray-600 shadow-2xl p-0 rounded-lg sm:rounded-xl overflow-hidden fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+                    <DialogHeader className="p-2 sm:p-3 lg:p-6 border-b border-gray-700 sticky top-0 bg-[#18181B] z-10 flex flex-row items-center justify-between">
                       <DialogTitle className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-orange-500 pr-2 sm:pr-4 leading-tight">{project.title}</DialogTitle>
                       <DialogClose asChild>
                         <button className="p-2 sm:p-1 rounded-full text-gray-400 hover:text-white hover:bg-gray-700 transition-colors flex-shrink-0 touch-manipulation">
@@ -294,25 +294,25 @@ const ProjectsPage = () => {
                         </button>
                       </DialogClose>
                     </DialogHeader>
-                    <div className="max-h-[calc(95vh-80px)] sm:max-h-[75vh] overflow-y-auto">
+                    <div className="max-h-[calc(85vh-60px)] sm:max-h-[calc(70vh-70px)] overflow-y-auto">
                       {/* Mobile Layout */}
-                      <div className="block lg:hidden p-3 sm:p-4 space-y-4">
+                      <div className="block lg:hidden p-3 sm:p-4 space-y-3 sm:space-y-4">
                         <Image
                           src={project.showcaseImage || '/engineering-infra.jpg'}
                           alt={project.title}
                           width={1600}
                           height={1200}
-                          className="rounded-lg object-cover w-full shadow-lg"
+                          className="rounded-lg object-cover w-full h-40 sm:h-48 shadow-lg"
                         />
                         
                         <div>
-                          <h4 className="text-base font-semibold text-orange-400 mb-2 border-b border-gray-700 pb-2">Project Overview</h4>
-                          <p className="text-sm text-gray-400 leading-relaxed">{project.description}</p>
+                          <h4 className="text-base sm:text-lg font-semibold text-orange-400 mb-3 border-b border-gray-700 pb-2">Project Overview</h4>
+                          <p className="text-sm sm:text-base text-gray-400 leading-relaxed">{project.description}</p>
                         </div>
                         
-                        <div className="bg-zinc-800/50 p-3 rounded-lg border border-gray-700">
-                          <h4 className="text-base font-semibold text-orange-400 mb-3">Project Details</h4>
-                          <div className="text-sm space-y-2">
+                        <div className="bg-zinc-800/50 p-3 sm:p-4 rounded-lg border border-gray-700">
+                          <h4 className="text-base sm:text-lg font-semibold text-orange-400 mb-3">Project Details</h4>
+                          <div className="text-sm sm:text-base space-y-2">
                             <div className="flex flex-col space-y-1">
                               <strong className="text-gray-500">Client:</strong>
                               <span className="text-gray-300">{project.client}</span>
@@ -325,11 +325,11 @@ const ProjectsPage = () => {
                         </div>
 
                         {project.specs && project.specs.length > 0 && (
-                          <div className="bg-zinc-800/50 p-3 rounded-lg border border-gray-700">
-                            <h4 className="text-base font-semibold text-orange-400 mb-3">Specifications</h4>
+                          <div className="bg-zinc-800/50 p-3 sm:p-4 rounded-lg border border-gray-700">
+                            <h4 className="text-base sm:text-lg font-semibold text-orange-400 mb-3">Specifications</h4>
                             <ul className="space-y-2">
                               {project.specs.map((spec, i) => (
-                                <li key={i} className="flex items-start text-sm">
+                                <li key={i} className="flex items-start text-sm sm:text-base">
                                   <ArrowRight size={14} className="mr-2 mt-0.5 text-orange-500 flex-shrink-0" />
                                   <span className="text-gray-300">{spec}</span>
                                 </li>
@@ -339,8 +339,8 @@ const ProjectsPage = () => {
                         )}
 
                         {project.conclusion && (
-                          <div className="border-l-4 border-orange-500 pl-3 bg-zinc-800/30 p-3 rounded-r-lg">
-                            <p className="text-sm font-medium text-gray-400 italic">"{project.conclusion}"</p>
+                          <div className="border-l-4 border-orange-500 pl-3 bg-zinc-800/30 p-3 sm:p-4 rounded-r-lg">
+                            <p className="text-sm sm:text-base font-medium text-gray-400 italic leading-relaxed">"{project.conclusion}"</p>
                           </div>
                         )}
                       </div>
