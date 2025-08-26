@@ -338,7 +338,9 @@ const Navbar = () => {
              {/* Full Screen Mobile Navigation */}
        <div 
          className={`lg:hidden fixed z-[9999] bg-black transition-all duration-500 ease-in-out ${
-           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+           isMobileMenuOpen 
+             ? 'translate-x-0 opacity-100 visible' 
+             : 'translate-x-full opacity-0 invisible'
          }`}
          style={{ 
            position: 'fixed',
@@ -349,7 +351,8 @@ const Navbar = () => {
            width: '100vw', 
            height: '100vh',
            backgroundColor: '#000000',
-           zIndex: 9999
+           zIndex: 9999,
+           transform: isMobileMenuOpen ? 'translateX(0)' : 'translateX(100%)'
          }}
        >         
          {/* Full Screen Navigation Panel */}
