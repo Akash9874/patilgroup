@@ -12,6 +12,46 @@ const clashGrotesk = localFont({
 export const metadata: Metadata = {
   title: 'Patil Group - Delivering Track Solutions | Railway Infrastructure',
   description: 'Trusted leader in railway infrastructure, delivering high-quality track solutions for urban and interurban transport. Made in India with over 50 years of expertise.',
+  icons: {
+    icon: [
+      { url: '/pg.png', sizes: '32x32', type: 'image/png' },
+      { url: '/pg.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/pg.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/pg.png',
+  },
+  openGraph: {
+    title: 'Patil Group - Delivering Track Solutions | Railway Infrastructure',
+    description: 'Trusted leader in railway infrastructure, delivering high-quality track solutions for urban and interurban transport. Made in India with over 50 years of expertise.',
+    url: 'https://patilgroup.com',
+    siteName: 'Patil Group',
+    images: [
+      {
+        url: '/pg.png',
+        width: 1200,
+        height: 630,
+        alt: 'Patil Group Logo',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Patil Group - Delivering Track Solutions | Railway Infrastructure',
+    description: 'Trusted leader in railway infrastructure, delivering high-quality track solutions for urban and interurban transport. Made in India with over 50 years of expertise.',
+    images: ['/pg.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -22,10 +62,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        {/* Favicon and app icons */}
+        <link rel="icon" type="image/png" sizes="32x32" href="/pg.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/pg.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/pg.png" />
+        <link rel="shortcut icon" href="/pg.png" />
+        
         {/* Preload critical resources */}
-
         <link rel="preload" href="/herovideo.mp4" as="video" type="video/mp4" />
-
         <link rel="preload" href="/pg.png" as="image" />
         
         {/* DNS prefetch for external resources */}
