@@ -14,27 +14,46 @@ const PatilRhedaSystemPage = () => {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative h-screen">
-        {/* Background Image */}
-        <img src="/rhedahero.jpeg" alt="Patil RHEDA System" className="h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
+      <div className="relative">
+        {/* Mobile Layout */}
+        <div className="md:hidden h-screen relative">
+          <img src="/rhedahero.jpeg" alt="Patil RHEDA System" className="h-full w-full object-cover z-0" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 z-10"></div>
+          
+          <div className="relative z-20 h-full flex items-center justify-center">
+            <div className="text-center px-6">
+              <div className="bg-black/70 backdrop-blur-md rounded-3xl p-8 border border-white/10 shadow-2xl">
+                <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4">
+                  Patil RHEDA System
+                </h1>
+                <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full shadow-lg"></div>
+                <p className="text-gray-200 text-sm mt-4 font-medium">
+                  Advanced Slab Track Solution
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         
-        {/* Centered Card Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center z-20">
-          <div className="text-center px-6">
-            <div className="bg-black/70 backdrop-blur-md rounded-3xl p-6 sm:p-8 md:p-10 border border-white/10 shadow-2xl">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+        {/* Desktop Layout */}
+        <div className="hidden md:block relative h-[600px]">
+          <img src="/rhedahero.jpeg" alt="Patil RHEDA System" className="h-full w-full object-cover z-0" />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+          
+          {/* Content */}
+          <div className="absolute bottom-0 left-0 z-20">
+            <div className="px-6 sm:px-8 md:px-12 pb-16">
+              <h1 className="text-white font-bold leading-[0.95] text-6xl md:text-7xl lg:text-8xl">
                 Patil RHEDA System
               </h1>
-              <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full shadow-lg"></div>
-              <p className="text-gray-200 text-sm sm:text-base mt-4 font-medium">
+              <p className="text-gray-200 text-lg mt-4 font-medium">
                 Advanced Slab Track Solution
               </p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Description Section */}
       <section className="bg-black py-12 sm:py-16 md:py-20 text-white fade-in-section">
