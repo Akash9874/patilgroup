@@ -98,65 +98,44 @@ const ResearchAndDevelopmentPage = () => {
         </div>
       </section>
 
-      {/* Mobile PATIL RHEDA Sleeper Plant */}
+      {/* Stricter Tolerance Track */}
       <section className="bg-white text-black py-8 sm:py-12 md:py-16 lg:py-20 fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold">
-            <span className="text-[#8A393B]">Mobile PATIL RHEDA</span>
-            <br />
-            <span className="text-amber-500">Sleeper Plant</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#8A393B]">
+            Stricter Tolerance Track
           </h2>
+          <div className="mt-4 sm:mt-6 h-px w-full bg-gray-200"></div>
 
-          <div className="mt-6 sm:mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
-            <div className="space-y-3 sm:space-y-4">
+          <div className="mt-6 sm:mt-8 md:mt-10 space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
               <p>
-                PATIL RHEDA sleepers are specially designed for high speed rail tracks and the greatest advantage is that it is laid Ballastless.
+              Existing Track gauge (Broad Gauge) 1673 mm - 2 to + 3 (1671mm to 1676 mm). Indian railways is in the process of enhancing operating speed of trains from existing 110 Kmph to 160 Kmph and above.
               </p>
+            
               <p>
-                At present in India, these sleepers are still under trial runs. They are ideally suited for laying washable aprons, at stations; this greatly contributes to the cleanliness of the station yard. So, Indian Railways are seriously considering, using these PATIL RHEDA sleepers for washable aprons at railway stations, especially for the platform tracks.
-              </p>
-              <p>
-                As the requirement of these sleepers will not be in huge quantities like the mono block sleepers, bulk production plants for these sleepers is not advisable and also not economical, as their transportation charges from the place of manufacture to the place of laying will not be economical.
+              For increasing the speed, stricter tolerances are mandatory for better control of gauge and other track parameters. PRIL's has implemented stricter tolerances of +/-1 mm, on wider gauge sleepers which are more stringent than European standards. It is laid in Indian Railway's nominated section. Since parameters are tighter and has lesser slack gauge, reduced sinusoidal movement of vehicles shall ensure a better ride index, thereby enhancing the comfort and safety of passengers.
               </p>
             </div>
-            <div className="space-y-3 sm:space-y-4">
-              <p>
-                So a mini plant was visualized and the basic concept drawings was reengineered by our R&D Team, who immediately realized its potential and also the simple operating technology. The best point in its favour was that it can reach any station which is nearby any motorable road. This mobile plant can reach the place where the laying of these sleepers is programmed, manufacture and deliver the required quantity of sleepers and move on to the next station of operation. This totally eliminates the setting up of bulk manufacturing plants and transportation of the sleepers to their destination.
-              </p>
-              <p>
-                So a priority was given to the preparation of the working drawings and the evaluation of the time required for building this mobile plant. This presentation indicates the major activities involved in building this mobile plant and the estimated time duration to achieve this goal.
-              </p>
-            </div>
+
+          <div className="mt-8 sm:mt-12 md:mt-16 flex justify-center">
+            <Image
+              src="/rndgauge.jpg"
+              alt="Stricter Tolerance Track Gauge"
+              width={800}
+              height={600}
+              className="rounded-lg shadow-lg w-full max-w-4xl h-auto object-cover"
+            />
           </div>
-        </div>
-      </section>
 
-      {/* Mini Mobile Plant for PATIL RHEDA – Sleepers */}
-      <section className="bg-white text-black py-8 sm:py-12 md:py-16 fade-in-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold">
-            <span className="text-amber-500">Mini Mobile Plant</span>
-            <br />
-            <span className="text-[#8A393B]">for PATIL RHEDA – Sleepers</span>
-          </h2>
-
-          <div className="mt-6 sm:mt-8 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed space-y-4 sm:space-y-6">
-            <div>
-              <p className="font-semibold">The essence of this plant is in three parts.</p>
-              <ol className="list-decimal list-inside mt-2 space-y-1">
-                <li>Manufacturing</li>
-                <li>Steam curing</li>
-                <li>Shifting of sleepers to their destination</li>
-              </ol>
-            </div>
-            <p>
-              Individual activities under these groupings are programmed and are mounted on trucks to form this mobile plant. The following description provides a clear concept of the working of each of the activities.
+          <div className="mt-8 sm:mt-12 md:mt-16">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#F2913F] mb-4 sm:mb-6">
+              Liner less Fastening system
+            </h3>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
+              The major problem today is rail foot corrosion leading to premature renewal of rails due to moisture entrapment in the liners. Our Patil Liner Less Fastening system will solve the problem. This Patil liner less fastening system has been developed indigenously.
             </p>
           </div>
         </div>
       </section>
-
-
 
       {/* New Design of Concrete Sleeper */}
       <section className="bg-white text-black py-8 sm:py-12 md:py-16 lg:py-20 fade-in-section">

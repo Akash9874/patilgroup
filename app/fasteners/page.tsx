@@ -87,13 +87,26 @@ const FastenersPage = () => {
              </p>
            </div>
            
+           <div className="mb-8 sm:mb-12 md:mb-16 fade-in-section">
+             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
+               PRIL's journey in the Track Fastening Domain is well-established and extensive. For the past two decades, PRIL has been a key supplier of fastening systems for Ballastless Track, initially working through a JV mode. PRIL built the local vendors base for manufacturing of various fastening's component.
+             </p>
+             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
+               In 2020, PRIL embarked on a new chapter by establishing a state-of-the-art fastening manufacturing Plant. This Plant brought all production processes under one roof, eliminating the previous dependency on multiple vendors. Now PRIL's have successfully developed in-house capabilities in manufacturing of fastenings, including in core areas like die tool design and heat treatment.
+             </p>
+             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
+               Today's PRIL's is the largest fastening supplier for Metros and supplying to Indian Railways in different zones.
+             </p>
+           </div>
+           
            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-6 sm:mb-8 md:mb-12 fade-in-section">
              For Mainline Ballasted Track
            </h2>
 
           <div className="space-y-6 sm:space-y-8">
                          {/* Elastic Rail Clips */}
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-start border-t border-gray-200 pt-6 sm:pt-8">
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-start pt-6 sm:pt-8">
+               <div className="col-span-full h-px bg-gradient-to-r from-[#F2913F] via-[#8A393B] to-[#F2913F] mb-4 sm:mb-6"></div>
                <div className="md:col-span-1 slide-in-left mb-4 md:mb-0">
                  <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F2913F]">Elastic Rail Clips</h3>
                </div>
@@ -113,7 +126,8 @@ const FastenersPage = () => {
              </div>
 
             {/* GFN Liners */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-start border-t border-gray-200 pt-6 sm:pt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-start pt-6 sm:pt-8">
+              <div className="col-span-full h-px bg-gradient-to-r from-[#F2913F] via-[#8A393B] to-[#F2913F] mb-4 sm:mb-6"></div>
               <div className="md:col-span-1 slide-in-left mb-4 md:mb-0">
                 <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F2913F]">GFN Liners</h3>
               </div>
@@ -135,7 +149,8 @@ const FastenersPage = () => {
             </div>
 
                          {/* System W 14 HH */}
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-start border-t border-gray-200 pt-6 sm:pt-8">
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-start pt-6 sm:pt-8">
+               <div className="col-span-full h-px bg-gradient-to-r from-[#F2913F] via-[#8A393B] to-[#F2913F] mb-4 sm:mb-6"></div>
                <div className="md:col-span-1 slide-in-left mb-4 md:mb-0">
                  <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F2913F]">System W 14<br />HH</h3>
                </div>
@@ -154,7 +169,8 @@ const FastenersPage = () => {
              </div>
 
              {/* Lab Facilities */}
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-start border-t border-gray-200 pt-6 sm:pt-8">
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-start pt-6 sm:pt-8">
+               <div className="col-span-full h-px bg-gradient-to-r from-[#F2913F] via-[#8A393B] to-[#F2913F] mb-4 sm:mb-6"></div>
                <div className="md:col-span-1 slide-in-left mb-4 md:mb-0">
                  <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F2913F]">Lab Facilities</h3>
                </div>
@@ -263,6 +279,120 @@ const FastenersPage = () => {
                   </li>
                 </ul>
                 <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg">Optimized for vibration and noise reduction. Ideal for urban rail and steel structure tracks.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* W Clamp Section */}
+      <div className="bg-white py-8 sm:py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-6 sm:mb-8 md:mb-12 fade-in-section">
+            W Clamp
+          </h2>
+
+          <div className="space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed fade-in-section mb-12">
+            <p>
+              The W clamp is a resilient fastening component used in railway tracks.
+            </p>
+            <p>
+              It ensures secure holding of rails to sleepers — maintaining track stability under dynamic loads.
+            </p>
+            <p>
+              Its design allows controlled flexibility, reducing vibration and stress on the fastening system.
+            </p>
+            <p>
+              Patil Group manufactures W clamps with precision engineering and tested spring steel — built for long service life, safety, and performance across diverse track conditions.
+            </p>
+          </div>
+
+          <div className="space-y-8 sm:space-y-12 md:space-y-16">
+            {/* System 336 Assembly (SKL 12 Clamp) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
+              <div className="slide-in-left">
+                <div className="relative group">
+                  <div className="w-full h-80 bg-gray-100 rounded-lg flex items-center justify-center">
+                    <p className="text-gray-500 text-lg">System 336 Assembly Image</p>
+                  </div>
+                </div>
+              </div>
+              <div className="slide-in-right">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F] mb-4">System 336 Assembly (SKL 12 Clamp)</h3>
+                <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg">
+                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
+                    <span className="font-medium">Maximum Axle Load (Upto)</span> 
+                    <span className="text-[#F2913F] font-semibold">18 Tonne</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
+                    <span className="font-medium">Maximum Speed (Upto)</span> 
+                    <span className="text-[#F2913F] font-semibold">110 kmph</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
+                    <span className="font-medium">Curve radius (minimum)</span> 
+                    <span className="text-[#F2913F] font-semibold">120 m</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
+                    <span className="font-medium">Toe Load (per clip)</span> 
+                    <span className="text-[#F2913F] font-semibold">9 kN</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
+                    <span className="font-medium">Insulation</span> 
+                    <span className="text-[#F2913F] font-semibold">≥ 5 kΩ</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
+                    <span className="font-medium">Static stiffness of pad</span> 
+                    <span className="text-[#F2913F] font-semibold">22.5 kN/mm</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
+                    <span className="font-medium">Longitudinal rail restraint (as per EN 13146)</span> 
+                    <span className="text-[#F2913F] font-semibold">9 kN</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* W 14 Assembly (SKL 14 Clamp) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
+              <div className="slide-in-left order-2 md:order-1">
+                <div className="relative group">
+                  <div className="w-full h-80 bg-gray-100 rounded-lg flex items-center justify-center">
+                    <p className="text-gray-500 text-lg">W 14 Assembly Image</p>
+                  </div>
+                </div>
+              </div>
+              <div className="slide-in-right order-1 md:order-2">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F] mb-4">W 14 Assembly (SKL 14 Clamp)</h3>
+                <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg">
+                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
+                    <span className="font-medium">Maximum Axle Load (Upto)</span> 
+                    <span className="text-[#F2913F] font-semibold">22 Tonne</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
+                    <span className="font-medium">Maximum Speed (Upto)</span> 
+                    <span className="text-[#F2913F] font-semibold">200 kmph</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
+                    <span className="font-medium">Curve radius (minimum)</span> 
+                    <span className="text-[#F2913F] font-semibold">175 m</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
+                    <span className="font-medium">Toe Load (per clip)</span> 
+                    <span className="text-[#F2913F] font-semibold">9 kN</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
+                    <span className="font-medium">Insulation</span> 
+                    <span className="text-[#F2913F] font-semibold">≥ 5 kΩ</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
+                    <span className="font-medium">Static stiffness of pad</span> 
+                    <span className="text-[#F2913F] font-semibold">100 kN/mm</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
+                    <span className="font-medium">Longitudinal restraint (as per EN 13146)</span> 
+                    <span className="text-[#F2913F] font-semibold">9 kN</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

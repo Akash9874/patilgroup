@@ -19,27 +19,25 @@ const PrecastPlinthPage = () => {
       <div className="relative">
         {/* Mobile Layout */}
         <div className="md:hidden h-screen relative">
-          <img src="/preeeeeee.jpg" alt="Precast Plinth" className="h-full w-full object-cover z-0" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 z-10"></div>
+          <img src="/preee.jpg" alt="Precast Plinth" className="h-full w-full object-cover z-0" />
+          <div className="absolute inset-0 bg-black/50 z-10"></div>
           
-          <div className="relative z-20 h-full flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center z-20">
             <div className="text-center px-6">
-              <div className="bg-black/70 backdrop-blur-md rounded-3xl p-8 border border-white/10 shadow-2xl">
-                <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4">
-                  Precast Plinth
-                </h1>
-                <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full shadow-lg"></div>
-                <p className="text-gray-200 text-sm mt-4 font-medium">
-                  Modular Track Infrastructure
-                </p>
-              </div>
+              <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-4 drop-shadow-2xl">
+                Precast Plinth
+              </h1>
+              <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full shadow-lg"></div>
+              <p className="text-gray-200 text-base mt-4 font-medium">
+                Modular Track Infrastructure
+              </p>
             </div>
           </div>
         </div>
         
         {/* Desktop Layout */}
         <div className="hidden md:block relative h-[600px]">
-          <img src="/preeeeeee.jpg" alt="Precast Plinth" className="h-full w-full object-cover z-0" />
+          <img src="/preee.jpg" alt="Precast Plinth" className="h-full w-full object-cover z-0" />
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
           

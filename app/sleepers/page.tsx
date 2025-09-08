@@ -662,6 +662,15 @@ const SleepersPage = () => {
                             className="rounded-lg shadow-lg w-full max-w-xl" 
                         />
                     </div>
+                    <div className="slide-in-right" style={{ animationDelay: '600ms' }}>
+                        <Image 
+                            src="/composleepers.webp" 
+                            alt="Composite Sleepers" 
+                            width={800} 
+                            height={1000} 
+                            className="rounded-lg shadow-lg w-full max-w-xl" 
+                        />
+                    </div>
                 </div>
               </div>
             </div>

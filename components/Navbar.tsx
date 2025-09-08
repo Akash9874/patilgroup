@@ -57,7 +57,6 @@ const Navbar = () => {
     { href: '/management', label: 'Management' },
     { href: '/news', label: 'In News' },
     { href: '/responsibilities', label: 'Our Resources' },
-    { href: '/safety', label: 'Safety' },
     { href: '/sustainability', label: 'Sustainability' },
     { href: '/our-clientele', label: 'Our Clientele' },
     { href: '/our-presence', label: 'Our Presence' },
@@ -69,6 +68,7 @@ const Navbar = () => {
     { href: '/wires', label: 'Wires' },
     { href: '/inserts', label: 'Inserts' },
     { href: '/precast', label: 'Precast' },
+    { href: '/safety', label: 'Safety' },
   ];
 
   const systemLinks = [
@@ -447,13 +447,6 @@ const Navbar = () => {
                        Our Resources
                      </Link>
                      <Link 
-                       href="/safety" 
-                       onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
-                     >
-                       Safety
-                     </Link>
-                     <Link 
                        href="/sustainability" 
                        onClick={() => setIsMobileMenuOpen(false)}
                        className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
@@ -538,6 +531,13 @@ const Navbar = () => {
                        className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
                      >
                        Precast
+                     </Link>
+                     <Link 
+                       href="/safety" 
+                       onClick={() => setIsMobileMenuOpen(false)}
+                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                     >
+                       Safety
                      </Link>
                    </div>
                  </div>

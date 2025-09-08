@@ -17,27 +17,25 @@ const PatilRhedaSystemPage = () => {
       <div className="relative">
         {/* Mobile Layout */}
         <div className="md:hidden h-screen relative">
-          <img src="/rhedahero.jpeg" alt="Patil RHEDA System" className="h-full w-full object-cover z-0" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 z-10"></div>
+          <img src="/rhedarjeda.jpg" alt="Patil RHEDA System" className="h-full w-full object-cover z-0" />
+          <div className="absolute inset-0 bg-black/50 z-10"></div>
           
-          <div className="relative z-20 h-full flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center z-20">
             <div className="text-center px-6">
-              <div className="bg-black/70 backdrop-blur-md rounded-3xl p-8 border border-white/10 shadow-2xl">
-                <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4">
-                  Patil RHEDA System
-                </h1>
-                <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full shadow-lg"></div>
-                <p className="text-gray-200 text-sm mt-4 font-medium">
-                  Advanced Slab Track Solution
-                </p>
-              </div>
+              <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-4 drop-shadow-2xl">
+                Patil RHEDA<br />System
+              </h1>
+              <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full shadow-lg"></div>
+              <p className="text-gray-200 text-base mt-4 font-medium">
+                Advanced Slab Track Solution
+              </p>
             </div>
           </div>
         </div>
         
         {/* Desktop Layout */}
         <div className="hidden md:block relative h-[600px]">
-          <img src="/rhedahero.jpeg" alt="Patil RHEDA System" className="h-full w-full object-cover z-0" />
+          <img src="/rhedarjeda.jpg" alt="Patil RHEDA System" className="h-full w-full object-cover z-0" />
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
           

@@ -219,12 +219,12 @@ export default function Home() {
                 <h3 className="text-white text-base font-medium mb-4 leading-tight">
                   Sleepers supplied for new Pune Metro Corridor
                 </h3>
-                <button className="text-[#F2913F] font-medium text-sm hover:text-[#D97706] transition-colors duration-300 flex items-center group">
+                <Link href="/news" className="text-[#F2913F] font-medium text-sm hover:text-[#D97706] transition-colors duration-300 flex items-center group">
                   Read More
                   <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -245,12 +245,12 @@ export default function Home() {
                 <h3 className="text-white text-base font-medium mb-4 leading-tight">
                   Partnered on Mumbai-Ahmedabad bullet train trial track
                 </h3>
-                <button className="text-[#F2913F] font-medium text-sm hover:text-[#D97706] transition-colors duration-300 flex items-center group">
+                <Link href="/news" className="text-[#F2913F] font-medium text-sm hover:text-[#D97706] transition-colors duration-300 flex items-center group">
                   Read More
                   <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -271,12 +271,12 @@ export default function Home() {
                 <h3 className="text-white text-base font-medium mb-4 leading-tight">
                   Recognized by RDSO for product innovation
                 </h3>
-                <button className="text-[#F2913F] font-medium text-sm hover:text-[#D97706] transition-colors duration-300 flex items-center group">
+                <Link href="/news" className="text-[#F2913F] font-medium text-sm hover:text-[#D97706] transition-colors duration-300 flex items-center group">
                   Read More
                   <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -302,9 +302,9 @@ export default function Home() {
                 Sleepers supplied for new<br />
                 Pune Metro Corridor
               </h3>
-              <button className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
+              <Link href="/news" className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
                 Read More
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -327,9 +327,9 @@ export default function Home() {
                 Ahmedabad bullet train trial<br />
                 track
               </h3>
-              <button className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
+              <Link href="/news" className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
                 Read More
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -351,9 +351,9 @@ export default function Home() {
                 Recognized by RDSO for<br />
                 product innovation
               </h3>
-              <button className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
+              <Link href="/news" className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
                 Read More
-              </button>
+              </Link>
             </div>
           </div>
         </div>
