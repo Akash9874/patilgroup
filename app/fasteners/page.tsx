@@ -312,9 +312,13 @@ const FastenersPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
               <div className="slide-in-left">
                 <div className="relative group">
-                  <div className="w-full h-80 bg-gray-100 rounded-lg flex items-center justify-center">
-                    <p className="text-gray-500 text-lg">System 336 Assembly Image</p>
-                  </div>
+                  <Image
+                    src="/skl12.jpg"
+                    alt="System 336 Assembly (SKL 12 Clamp)"
+                    width={600}
+                    height={400}
+                    className="rounded-lg shadow-lg w-full h-80 object-cover"
+                  />
                 </div>
               </div>
               <div className="slide-in-right">
@@ -356,9 +360,13 @@ const FastenersPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
               <div className="slide-in-left order-2 md:order-1">
                 <div className="relative group">
-                  <div className="w-full h-80 bg-gray-100 rounded-lg flex items-center justify-center">
-                    <p className="text-gray-500 text-lg">W 14 Assembly Image</p>
-                  </div>
+                  <Image
+                    src="/skl14.jpg"
+                    alt="W 14 Assembly (SKL 14 Clamp)"
+                    width={600}
+                    height={400}
+                    className="rounded-lg shadow-lg w-full h-80 object-cover"
+                  />
                 </div>
               </div>
               <div className="slide-in-right order-1 md:order-2">
@@ -395,6 +403,25 @@ const FastenersPage = () => {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Fatigue Testing Section */}
+      <div className="bg-white py-8 sm:py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-6 sm:mb-8 md:mb-12 fade-in-section">
+            Fatigue Testing
+          </h2>
+          
+          <div className="mt-8 sm:mt-12 md:mt-16 flex justify-center fade-in-section">
+            <Image
+              src="/fatigue.jpg"
+              alt="Fatigue Testing Equipment"
+              width={800}
+              height={600}
+              className="rounded-lg shadow-lg w-full max-w-4xl h-auto object-cover"
+            />
           </div>
         </div>
       </div>

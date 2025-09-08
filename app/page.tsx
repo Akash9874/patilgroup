@@ -13,6 +13,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import SwitchingText from '@/components/SwitchingText';
 
 const projects = [
   {
@@ -104,43 +105,7 @@ export default function Home() {
           {/* Text Overlay */}
           <div className="absolute inset-0 flex items-center z-20">
             <div className="px-6 py-6 w-full">
-              <div 
-                className={`transition-all duration-1000 ease-in-out transform ${isHeroAnimated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-                style={{ transitionDelay: '800ms' }}
-              >
-                {/* Main Heading */}
-                <div className="mb-6">
-                  <h2 className="text-[#F2913F] font-extrabold text-3xl sm:text-4xl leading-[0.9] tracking-tight mb-1 mobile-hero-text mobile-heading drop-shadow-lg">
-                    RAILWAY
-                  </h2>
-                  <h2 className="text-[#F2913F] font-extrabold text-3xl sm:text-4xl leading-[0.9] tracking-tight mobile-hero-text mobile-heading drop-shadow-lg">
-                    ENGINEERING
-                  </h2>
-                </div>
-                
-                {/* Animated Accent Line */}
-                <div className="w-16 h-1 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mb-6 rounded-full accent-line mobile-smooth drop-shadow-sm"></div>
-                
-                {/* Subtitle */}
-                <div className="space-y-1">
-                  <h1 className="text-white font-semibold text-lg leading-tight mobile-hero-text mobile-smooth drop-shadow-lg">
-                    SMARTER TRACK
-                  </h1>
-                  <h1 className="text-white font-semibold text-lg leading-tight mobile-hero-text mobile-smooth drop-shadow-lg">
-                    SOLUTIONS,
-                  </h1>
-                  <h1 className="text-white font-semibold text-lg leading-tight mobile-hero-text mobile-smooth drop-shadow-lg">
-                    SAFER MOBILITY
-                  </h1>
-                </div>
-                
-                {/* Interactive CTA Hint */}
-                <div className="mt-8">
-                  <p className="text-gray-200 text-sm font-medium tracking-wide swipe-hint drop-shadow-md">
-                    Swipe to explore →
-                  </p>
-                </div>
-              </div>
+              <SwitchingText isMobile={true} isAnimated={isHeroAnimated} />
             </div>
           </div>
         </div>
@@ -171,31 +136,8 @@ export default function Home() {
 
         {/* Hero Content */}
         <div className="relative z-10 h-full flex items-center">
-            <div className="w-full px-6 lg:px-8 xl:px-16">
-            {/* Left Side Text */}
-            <div 
-                className={`absolute left-6 lg:left-8 xl:left-16 top-1/2 transform -translate-y-1/2 pt-8 transition-opacity duration-1000 ease-in-out ${isHeroAnimated ? 'opacity-100' : 'opacity-0'}`}
-              style={{ transitionDelay: '800ms' }}
-            >
-                <h2 className="text-white font-bold text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight">
-                <span className={`transition-colors duration-1000 ${isHeroAnimated ? 'text-[#F2913F]' : 'text-white'}`}>RAILWAY</span><br />
-                <span className={`transition-colors duration-1000 ${isHeroAnimated ? 'text-[#8A393B]' : 'text-white'}`}>ENGINEERING</span>
-              </h2>
-            </div>
-
-            {/* Right Side Text */}
-            <div 
-                className={`absolute right-6 lg:right-8 xl:right-16 top-1/2 transform -translate-y-1/2 pt-8 transition-opacity duration-1000 ease-in-out ${isHeroAnimated ? 'opacity-100' : 'opacity-0'}`}
-              style={{ transitionDelay: '1200ms' }}
-            >
-                <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-5xl leading-tight italic">
-                SMARTER TRACK<br />
-                SOLUTIONS,<br />
-                SAFER MOBILITY
-              </h1>
-              </div>
-            </div>
-          </div>
+          <SwitchingText isMobile={false} isAnimated={isHeroAnimated} />
+        </div>
         </div>
       </section>
 
