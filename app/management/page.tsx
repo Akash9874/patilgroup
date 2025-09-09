@@ -83,7 +83,7 @@ const leadershipData = [
   {
     image: '/management/Mr Satish Chandra Ayla - CEO TRack Systems and Engineering.jpg',
     name: 'Mr. Satish Chandra Alya',
-    post: 'Coo-Track',
+    post: 'COO-Ballast Less Track',
   },
 ];
 
