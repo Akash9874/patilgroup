@@ -20,12 +20,12 @@ const ResponsibilitiesPage = () => {
             <div className="absolute inset-0 bg-black/60"></div>
           </div>
           <div className="relative z-10 flex-1 flex items-center justify-center px-6">
-            <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight drop-shadow-lg animate-fadeInUp">
+            <div className="text-center max-w-lg mx-auto">
+              <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight drop-shadow-2xl animate-fadeInUp">
                 Our Resources
               </h1>
-              <div className="w-20 h-1 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-6 rounded-full animate-pulse"></div>
-              <p className="text-gray-200 text-sm mt-4 font-medium tracking-wide">
+              <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full animate-pulse shadow-lg"></div>
+              <p className="text-white text-xl sm:text-2xl mt-8 font-medium tracking-wide drop-shadow-xl leading-relaxed">
                 Empowering communities through responsibility
               </p>
             </div>

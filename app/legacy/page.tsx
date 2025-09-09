@@ -23,15 +23,13 @@ export default function LegacyPage() {
         <div className="md:hidden absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
           <div className="relative z-10 h-full flex items-center justify-center">
-            <div className="text-center px-4">
-              <div className="bg-black/60 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
-                <h1 className="text-white font-bold leading-tight">
-                  <span className="block text-3xl sm:text-4xl text-[#F2913F] mb-2">Our</span>
-                  <span className="block text-3xl sm:text-4xl text-[#8A393B]">Legacy</span>
-                </h1>
-                <div className="w-16 h-1 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-6 rounded-full"></div>
-                <p className="text-gray-200 text-sm mt-4">Journey through decades of innovation</p>
-              </div>
+            <div className="text-center px-4 w-full max-w-lg mx-auto">
+              <h1 className="text-white font-bold leading-tight drop-shadow-2xl">
+                <span className="block text-5xl sm:text-6xl text-[#F2913F] mb-3">Our</span>
+                <span className="block text-5xl sm:text-6xl text-[#8A393B]">Legacy</span>
+              </h1>
+              <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full shadow-lg"></div>
+              <p className="text-white text-xl sm:text-2xl mt-8 drop-shadow-xl font-medium">Journey through decades of innovation</p>
             </div>
           </div>
         </div>

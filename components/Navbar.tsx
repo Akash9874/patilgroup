@@ -358,8 +358,7 @@ const Navbar = () => {
          {/* Full Screen Navigation Panel */}
          <div className="w-full h-full bg-black flex flex-col overflow-hidden">
            {/* Header */}
-           <div className="flex items-center justify-between px-6 py-6 border-b border-gray-800 shrink-0">
-             <h2 className="text-xl font-bold text-white">Navigation Menu</h2>
+           <div className="flex items-center justify-end px-6 py-6 border-b border-gray-800 shrink-0">
              <button
                onClick={() => setIsMobileMenuOpen(false)}
                className="p-2 text-white hover:text-amber-400 transition-colors duration-200"
@@ -637,14 +636,6 @@ const Navbar = () => {
                  <span className="text-lg font-medium">Career</span>
                </Link>
 
-               {/* Gallery (Projects alternative) */}
-               <Link 
-                 href="/projects" 
-                 onClick={() => setIsMobileMenuOpen(false)}
-                 className="block py-4 border-b border-gray-800 text-white hover:text-amber-400 transition-colors duration-200"
-               >
-                 <span className="text-lg font-medium">Gallery</span>
-               </Link>
 
                {/* Contact Us */}
                <Link 

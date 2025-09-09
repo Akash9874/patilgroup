@@ -876,11 +876,11 @@ h1, h2, h3, h4, h5, h6, p {
 /* Ultra-small mobile devices (iPhone SE, etc.) */
 @media (max-width: 400px) {
   .mobile-hero-text {
-    font-size: clamp(0.875rem, 4vw, 1.25rem);
+    font-size: clamp(1.25rem, 6vw, 1.75rem);
   }
   
   .mobile-heading {
-    font-size: clamp(1.25rem, 6vw, 1.875rem);
+    font-size: clamp(1.875rem, 8vw, 2.5rem);
     line-height: 0.85;
   }
   

@@ -13,11 +13,15 @@ const ExploreSolutions = () => {
       >
         <video 
           className="w-full h-full object-cover"
-          src="/herovideo.mp4" 
           autoPlay 
           loop 
           muted 
-        />
+        >
+          <source src="/herovideo.webm" type="video/webm" />
+          <source src="/herovideo.avi" type="video/avi" />
+          <source src="/herovideo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

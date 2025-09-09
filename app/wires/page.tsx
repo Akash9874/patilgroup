@@ -23,16 +23,14 @@ const WiresPage = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 z-10"></div>
           
           <div className="relative z-20 h-full flex items-center justify-center">
-            <div className="text-center px-6">
-              <div className="bg-black/70 backdrop-blur-md rounded-3xl p-8 border border-white/10 shadow-2xl">
-                <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4">
-                  HTS WIRES
-                </h1>
-                <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full shadow-lg"></div>
-                <p className="text-gray-200 text-sm mt-4 font-medium">
-                  High Tensile Steel Wires for Railway Infrastructure
-                </p>
-              </div>
+            <div className="text-center px-6 w-full max-w-lg mx-auto">
+              <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-3 drop-shadow-2xl">
+                HTS WIRES
+              </h1>
+              <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full shadow-lg"></div>
+              <p className="text-white text-xl sm:text-2xl mt-8 font-medium drop-shadow-xl leading-relaxed">
+                High Tensile Steel Wires for Railway Infrastructure
+              </p>
             </div>
           </div>
         </div>
@@ -74,8 +72,8 @@ const WiresPage = () => {
               <p className="text-lg sm:text-xl md:text-2xl text-gray-400">(Andhra Pradesh)</p>
             </div>
             <div className="md:border-r border-gray-700 md:px-4 slide-in-right p-4 sm:p-6 border border-gray-700 md:border-0 rounded-lg md:rounded-none">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#8A393B]">Roopangarh</h3>
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-400">(Rajasthan)</p>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#8A393B]">Medchal</h3>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-400">(Telangana)</p>
             </div>
             <div className="md:pl-4 slide-in-left p-4 sm:p-6 border border-gray-700 md:border-0 rounded-lg md:rounded-none sm:col-span-2 md:col-span-1">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#8A393B]">Bokaro</h3>

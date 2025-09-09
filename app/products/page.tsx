@@ -56,7 +56,7 @@ const ProductsPage = () => {
             preload="metadata"
            
           >
-            <source src="/productherovideo.mp4" type="video/mp4" />
+            <source src="/productherovideo (1).webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -64,12 +64,12 @@ const ProductsPage = () => {
 
         {/* Mobile Layout */}
         <div className="md:hidden relative z-10 h-full flex items-center justify-center">
-          <div className="text-center px-6">
-            <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight drop-shadow-lg animate-fadeInUp">
+          <div className="text-center px-6 w-full max-w-lg mx-auto">
+            <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight drop-shadow-2xl animate-fadeInUp">
               Track<br/>Components
             </h1>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-6 rounded-full animate-pulse"></div>
-            <p className="text-gray-200 text-sm mt-4 font-medium tracking-wide">
+            <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full animate-pulse shadow-lg"></div>
+            <p className="text-white text-xl sm:text-2xl mt-8 font-medium tracking-wide drop-shadow-xl leading-relaxed">
               Explore our railway solutions
             </p>
           </div>

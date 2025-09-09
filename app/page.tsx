@@ -97,6 +97,8 @@ export default function Home() {
               className="w-full h-full object-cover"
               preload="metadata"
             >
+              <source src="/herovideo.webm" type="video/webm" />
+              <source src="/herovideo.avi" type="video/avi" />
               <source src="/herovideo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -129,6 +131,8 @@ export default function Home() {
             className="w-full h-full object-cover"
             preload="metadata"
           >
+            <source src="/herovideo.webm" type="video/webm" />
+            <source src="/herovideo.avi" type="video/avi" />
             <source src="/herovideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -308,21 +312,16 @@ export default function Home() {
           <div className="flex justify-center md:justify-end fade-in-section">
             <Link 
               href="/precast" 
-              className="group inline-flex items-center gap-2 bg-[#F2913F] hover:bg-[#8A393B] px-4 py-2 md:px-6 md:py-3 rounded-full shadow-sm hover:shadow-md transition-all duration-300 text-sm md:text-base font-medium text-white"
+              className="group inline-flex items-center gap-3 bg-[#F2913F] hover:bg-[#8A393B] px-6 py-3 md:px-8 md:py-4 rounded-full shadow-sm hover:shadow-md transition-all duration-300 text-base md:text-lg font-medium text-white"
             >
               Explore Precast Solutions
-              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
           </div>
         </div>
         
-        {/* Background Grid Lines - Hidden on mobile */}
-        <div className="absolute inset-0 pointer-events-none hidden md:block">
-          <div className="absolute left-1/3 top-0 bottom-0 w-px bg-gray-300 h-full scale-in"></div>
-          <div className="absolute left-2/3 top-0 bottom-0 w-px bg-gray-300 h-full scale-in" style={{ transitionDelay: '200ms' }}></div>
-        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Mobile Layout */}
@@ -459,8 +458,8 @@ export default function Home() {
           <div className="mb-8 sm:mb-10 md:mb-12 fade-in-section">
             {/* Mobile Layout */}
             <div className="md:hidden text-center mb-6">
-              <h2 className="text-3xl font-bold text-[#8A393B] mb-4">Our Projects</h2>
-              <div className="flex items-center justify-center gap-3">
+              <h2 className="text-3xl font-bold text-[#8A393B] mb-8">Our Projects</h2>
+              <div className="flex items-center justify-center gap-1">
                 <CarouselPrevious className="relative w-10 h-10 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 shadow-sm" />
                 <CarouselNext className="relative w-10 h-10 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706] shadow-sm" />
               </div>
@@ -471,7 +470,7 @@ export default function Home() {
               <div>
                 <h2 className="text-4xl font-bold text-[#8A393B] mb-2">Our Projects</h2>
               </div>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-0">
                 <CarouselPrevious className="relative w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700" />
                 <CarouselNext className="relative w-12 h-12 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706]" />
               </div>

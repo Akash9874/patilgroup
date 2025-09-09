@@ -9,12 +9,13 @@ import Image from 'next/image';
 
 const LeadershipCard = ({ image, name, post }: { image: string, name: string, post: string }) => (
   <div className="bg-[#1E1E1E] text-white">
-    <div className="relative h-[400px] sm:h-[500px] md:h-[550px] bg-white">
+    <div className="relative h-[450px] sm:h-[550px] md:h-[600px] bg-white">
       <Image
         src={image}
         alt={name}
         layout="fill"
-        objectFit="contain"
+        objectFit="cover"
+        objectPosition="center top"
       />
     </div>
     <div className="text-center mt-3 sm:mt-4 font-clash px-2">
@@ -83,7 +84,22 @@ const leadershipData = [
   {
     image: '/management/Mr Satish Chandra Ayla - CEO TRack Systems and Engineering.jpg',
     name: 'Mr. Satish Chandra Alya',
-    post: 'COO-Ballast Less Track',
+    post: 'Coo-Track',
+  },
+  {
+    image: '/management/arjyakumar.jpg',
+    name: 'Mr Arjya Kumar Mishra',
+    post: 'Group CHRO',
+  },
+  {
+    image: '/management/phanikumar.jpg',
+    name: 'Mr.DVR Phani Kumar',
+    post: 'CEO Track Systems,Engineering & Contracting',
+  },
+  {
+    image: '/management/rahulagarwal.jpg',
+    name: 'Mr Rahul Agarwal',
+    post: 'Director Foundry',
   },
 ];
 
@@ -142,13 +158,11 @@ const ManagementPage = () => {
         <div className="md:hidden absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
           <div className="relative z-10 h-full flex items-center justify-center">
-            <div className="text-center px-4">
-              <div className="bg-black/70 backdrop-blur-md rounded-3xl p-8 mx-2 border border-white/10 shadow-2xl">
-                <h2 className="text-white text-2xl sm:text-3xl font-medium font-clash mb-2">Our</h2>
-                <h1 className="text-white text-3xl sm:text-4xl font-bold font-clash leading-tight">Management</h1>
-                <div className="w-20 h-1 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-6 rounded-full"></div>
-                <p className="text-gray-200 text-sm mt-4 leading-relaxed">Meet our experienced leadership team</p>
-              </div>
+            <div className="text-center px-4 w-full max-w-lg mx-auto">
+              <h2 className="text-white text-4xl sm:text-5xl font-medium font-clash mb-3 drop-shadow-2xl">Our</h2>
+              <h1 className="text-white text-5xl sm:text-6xl font-bold font-clash leading-tight drop-shadow-2xl">Management</h1>
+              <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full shadow-lg"></div>
+              <p className="text-white text-xl sm:text-2xl mt-8 leading-relaxed drop-shadow-xl font-medium">Meet our experienced leadership team</p>
             </div>
           </div>
         </div>
@@ -212,12 +226,12 @@ const ManagementPage = () => {
                   <div key={i} className="flex-shrink-0 w-[90%] sm:w-[80%] pl-4 first:pl-6 last:pr-6">
                     <div className="leadership-card-mobile rounded-2xl border border-gray-700/30 backdrop-blur-sm bg-gray-800/20 overflow-hidden shadow-xl">
                       {/* Full Photo Container */}
-                      <div className="relative h-[300px] sm:h-[350px] bg-white">
+                      <div className="relative h-[350px] sm:h-[400px] bg-white">
                         <Image
                           src={leader.image}
                           alt={leader.name}
                           fill
-                          className="object-contain"
+                          className="object-cover object-center-top"
                           sizes="(max-width: 640px) 90vw, 80vw"
                         />
                       </div>
@@ -291,11 +305,11 @@ const ManagementPage = () => {
               </div>
             </div>
 
-            <button onClick={scrollPrev} className="absolute top-1/2 left-4 transform -translate-y-1/2 p-2 rounded-full hover:bg-white/20 transition-colors z-10">
-              <ArrowLeft className="h-8 w-8 text-amber-500" />
+            <button onClick={scrollPrev} className="absolute top-1/2 -left-16 transform -translate-y-1/2 p-3 rounded-full bg-gray-800/80 hover:bg-gray-700/80 transition-colors z-10 backdrop-blur-sm border border-gray-600/30">
+              <ArrowLeft className="h-6 w-6 text-amber-500" />
             </button>
-            <button onClick={scrollNext} className="absolute top-1/2 right-4 transform -translate-y-1/2 p-2 rounded-full hover:bg-white/20 transition-colors z-10">
-              <ArrowRight className="h-8 w-8 text-amber-500" />
+            <button onClick={scrollNext} className="absolute top-1/2 -right-16 transform -translate-y-1/2 p-3 rounded-full bg-gray-800/80 hover:bg-gray-700/80 transition-colors z-10 backdrop-blur-sm border border-gray-600/30">
+              <ArrowRight className="h-6 w-6 text-amber-500" />
             </button>
           </div>
         </div>

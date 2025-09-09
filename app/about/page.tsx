@@ -72,31 +72,28 @@ const AboutUsPage = () => {
           
           {/* Mobile Content Container */}
           <div className="relative z-10 h-full flex items-center justify-center px-4">
-            <div className="w-full max-w-sm mx-auto">
-              {/* Enhanced Mobile Card */}
-              <div className="bg-black/70 backdrop-blur-md rounded-3xl p-8 border border-white/10 shadow-2xl">
-                {/* Title */}
-                <h1 className="text-white font-bold leading-tight text-center">
-                  <span className="text-2xl sm:text-3xl block mb-2">Through the</span>
-                  <span className="text-2xl sm:text-3xl block">tracks of time</span>
-                </h1>
-                
-                {/* Animated Accent Line */}
-                <div className="flex justify-center mt-6 mb-6">
-                  <div className="w-20 h-1 bg-gradient-to-r from-[#F2913F] via-[#1E3888] to-[#8A393B] rounded-full animate-pulse"></div>
-                </div>
-                
-                {/* Subtitle */}
-                <p className="text-gray-200 text-center text-base leading-relaxed">
-                  Decades of expertise in railway engineering excellence
+            <div className="w-full max-w-lg mx-auto text-center">
+              {/* Title */}
+              <h1 className="text-white font-bold leading-tight text-center drop-shadow-2xl">
+                <span className="text-4xl sm:text-5xl block mb-3">Through the</span>
+                <span className="text-4xl sm:text-5xl block">tracks of time</span>
+              </h1>
+              
+              {/* Animated Accent Line */}
+              <div className="flex justify-center mt-8 mb-8">
+                <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] via-[#1E3888] to-[#8A393B] rounded-full animate-pulse shadow-lg"></div>
+              </div>
+              
+              {/* Subtitle */}
+              <p className="text-white text-center text-xl sm:text-2xl leading-relaxed drop-shadow-xl font-medium">
+                Decades of expertise in railway engineering excellence
+              </p>
+              
+              {/* Optional scroll hint */}
+              <div className="text-center mt-8">
+                <p className="text-white/80 text-sm font-medium animate-bounce drop-shadow-lg">
+                  Scroll to explore ↓
                 </p>
-                
-                {/* Optional scroll hint */}
-                <div className="text-center mt-6">
-                  <p className="text-gray-400 text-xs font-medium animate-bounce">
-                    Scroll to explore ↓
-                  </p>
-                </div>
               </div>
             </div>
           </div>

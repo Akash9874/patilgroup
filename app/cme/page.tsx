@@ -20,7 +20,7 @@ const CMEPage = () => {
             className="w-full h-full object-cover"
             preload="metadata"
           >
-            <source src="/cmeherovideo.mp4" type="video/mp4" />
+            <source src="/cmeherovideo.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-black opacity-50"></div>

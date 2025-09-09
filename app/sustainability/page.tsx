@@ -18,7 +18,7 @@ export default function SustainabilityPage() {
           className="absolute inset-0 w-full h-full object-cover"
           preload="metadata"
         >
-          <source src="/sustainhero.mp4" type="video/mp4" />
+          <source src="/sustainhero.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
         
@@ -26,16 +26,14 @@ export default function SustainabilityPage() {
         <div className="md:hidden absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30" />
           <div className="relative z-10 h-full flex items-center justify-center">
-            <div className="text-center px-4">
-              <div className="bg-black/70 backdrop-blur-md rounded-3xl p-8 border border-white/10 shadow-2xl">
-                <h1 className="text-white font-bold leading-tight text-3xl sm:text-4xl">
-                  Sustainability
-                </h1>
-                <div className="w-20 h-1 bg-gradient-to-r from-green-400 via-[#F2913F] to-[#8A393B] mx-auto mt-6 rounded-full animate-pulse"></div>
-                <p className="text-gray-200 text-sm mt-4 leading-relaxed">
-                  Green innovation in railway engineering
-                </p>
-              </div>
+            <div className="text-center px-4 w-full max-w-lg mx-auto">
+              <h1 className="text-white font-bold leading-tight text-5xl sm:text-6xl drop-shadow-2xl">
+                Sustainability
+              </h1>
+              <div className="w-24 h-1.5 bg-gradient-to-r from-green-400 via-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full animate-pulse shadow-lg"></div>
+              <p className="text-white text-xl sm:text-2xl mt-8 leading-relaxed drop-shadow-xl font-medium">
+                Green innovation in railway engineering
+              </p>
             </div>
           </div>
         </div>
