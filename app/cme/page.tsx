@@ -1,11 +1,58 @@
 "use client";
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { ArrowRight } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { type CarouselApi } from "@/components/ui/carousel";
 
 const CMEPage = () => {
   useScrollAnimation();
+
+  const [api, setApi] = useState<CarouselApi>();
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const autoPlayRef = useRef<NodeJS.Timeout>();
+
+  useEffect(() => {
+    if (!api) return;
+
+    const startAutoPlay = () => {
+      if (autoPlayRef.current) {
+        clearInterval(autoPlayRef.current);
+      }
+      
+      autoPlayRef.current = setInterval(() => {
+        if (isAutoPlaying) {
+          api.scrollNext();
+        }
+      }, 3000);
+    };
+
+    startAutoPlay();
+
+    return () => {
+      if (autoPlayRef.current) {
+        clearInterval(autoPlayRef.current);
+      }
+    };
+  }, [api, isAutoPlaying]);
+
+  const handleMouseEnter = () => {
+    setIsAutoPlaying(false);
+    if (autoPlayRef.current) {
+      clearInterval(autoPlayRef.current);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsAutoPlaying(true);
+  };
 
   return (
     <div className="bg-white">
@@ -377,10 +424,57 @@ const CMEPage = () => {
             </p>
           </div>
 
-          {/* Right: Circular Image */}
+          {/* Right: Award Images Carousel */}
           <div className="relative flex justify-center md:justify-end">
-            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[26rem] xl:h-[26rem] rounded-full overflow-hidden">
-              <img src="/awardcme.jpg" alt="Quality recognition visual" className="w-full h-full object-cover" />
+            <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-[26rem] xl:h-[26rem]">
+              <Carousel
+                setApi={setApi}
+                opts={{ align: "start", loop: true }}
+                className="w-full h-full"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <CarouselContent className="h-full">
+                  <CarouselItem className="h-full">
+                    <div className="w-full h-full rounded-full overflow-hidden">
+                      <img 
+                        src="/awardcme.jpg" 
+                        alt="Quality recognition award from QCFI" 
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem className="h-full">
+                    <div className="w-full h-full rounded-full overflow-hidden">
+                      <img 
+                        src="/award2.jpg" 
+                        alt="Award 2 - Quality Excellence" 
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem className="h-full">
+                    <div className="w-full h-full rounded-full overflow-hidden">
+                      <img 
+                        src="/award3.jpg" 
+                        alt="Award 3 - Manufacturing Excellence" 
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem className="h-full">
+                    <div className="w-full h-full rounded-full overflow-hidden">
+                      <img 
+                        src="/award4.jpg" 
+                        alt="Award 4 - Industry Recognition" 
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+                      />
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full border border-gray-300 bg-white/90 hover:bg-white text-gray-700 hover:text-[#F2913F] transition-colors duration-300" />
+                <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706] transition-colors duration-300" />
+              </Carousel>
             </div>
           </div>
         </div>

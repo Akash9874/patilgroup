@@ -69,7 +69,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/pg.png" />
         
         {/* Preload critical resources */}
-        <link rel="preload" href="/herovideo.webm" as="video" type="video/webm" />
+        <link rel="preload" href="/herovideo.mp4" as="video" type="video/mp4" />
         <link rel="preload" href="/pg.png" as="image" />
         
         {/* DNS prefetch for external resources */}
