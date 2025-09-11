@@ -72,12 +72,12 @@ const WiresPage = () => {
               <p className="text-lg sm:text-xl md:text-2xl text-gray-400">(Andhra Pradesh)</p>
             </div>
             <div className="md:border-r border-gray-700 md:px-4 slide-in-right p-4 sm:p-6 border border-gray-700 md:border-0 rounded-lg md:rounded-none">
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#8A393B]">Medchal</h3>
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-400">(Telangana)</p>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#8A393B]">Ropangarh</h3>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-400">(Rajasthan)</p>
             </div>
             <div className="md:pl-4 slide-in-left p-4 sm:p-6 border border-gray-700 md:border-0 rounded-lg md:rounded-none sm:col-span-2 md:col-span-1">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#8A393B]">Bokaro</h3>
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-400">(Jharkand)</p>
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-400">(Jharkhand)</p>
             </div>
           </div>
         </div>
