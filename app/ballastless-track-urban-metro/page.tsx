@@ -162,8 +162,8 @@ const BallastlessTrackUrbanMetroPage = () => {
             <div className="flex flex-col md:flex-row gap-6 sm:gap-8 items-start md:items-stretch">
               <div className="w-full md:w-1/2 order-2 md:order-1">
                 <Image
-                  src="/balltrack3.webp"
-                  alt="Ballastless main line banner"
+                  src="/Ballastless-track-with-discrete-rail-seats-on-a-continuously-reinforced-concrete-pavement.png"
+                  alt="Ballastless track with discrete rail seats on continuously reinforced concrete pavement"
                   width={500}
                   height={500}
                   className="rounded-lg w-full h-auto object-cover"

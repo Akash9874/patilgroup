@@ -122,7 +122,7 @@ const ApplyForm = () => {
         </h2>
         
         {/* Hidden form for Netlify Forms detection */}
-        <form name="career-application" netlify="true" hidden>
+        <form name="career-application" data-netlify="true" hidden>
           <input type="text" name="first-name" />
           <input type="text" name="last-name" />
           <input type="email" name="email" />
