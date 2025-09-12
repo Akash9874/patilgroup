@@ -257,7 +257,13 @@
     # Performance headers
     X-DNS-Prefetch-Control = "on"
     
-    # Content Security Policy (basic - your Next.js config has more detailed CSP)
+    # Enhanced Content Security Policy (migrated from Next.js config)
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' 'sha256-' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https: wss: ws:; media-src 'self' https: blob: data:; object-src 'none'; child-src 'self' blob:; worker-src 'self' blob:; frame-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; manifest-src 'self'; prefetch-src 'self'; navigate-to 'self' https:; upgrade-insecure-requests"
+    
+    # CSP Report-Only for testing
+    Content-Security-Policy-Report-Only = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https:; media-src 'self' https: blob: data:; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; report-uri /api/csp-report"
+    
+    # Browser feature permissions
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), accelerometer=(), gyroscope=(), magnetometer=()"
     
     # Cross-Origin headers
