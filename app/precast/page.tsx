@@ -11,9 +11,9 @@ const PrecastPage = () => {
   const [hoveredProduct, setHoveredProduct] = useState<string | null>(null);
 
   const typingSpeedMs = 70;
-  const firstText = 'Built For ';
-  const secondText = 'Speed, Strength,';
-  const thirdText = '\nAnd recision';
+  const firstText = 'built for ';
+  const secondText = 'speed, strength,';
+  const thirdText = '\nand precision';
   const secondStart = firstText.length * typingSpeedMs + 150;
   const thirdStart = (firstText.length + secondText.length) * typingSpeedMs + 300;
 
