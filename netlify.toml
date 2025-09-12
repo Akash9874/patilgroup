@@ -8,6 +8,8 @@
 [build.environment]
   NODE_ENV = "production"
   NEXT_TELEMETRY_DISABLED = "1"
+  # Increase file upload limit for resumes (10MB)
+  NETLIFY_FORMS_MAX_FILE_SIZE = "10485760"
 
 # ========================================
 # VIDEO FILES - Long cache with byte-range support
@@ -321,6 +323,44 @@
 
 [build.processing.images]
   compress = true
+
+# ========================================
+# FORM HANDLING & NOTIFICATIONS
+# ========================================
+
+# Career application form notifications
+[[forms]]
+  name = "career-application"
+  
+  # Email notifications for form submissions (includes file attachments)
+  [forms.notifications]
+    email = "careers@patilgroup.com"
+    subject = "New Career Application - Patil Group"
+    include_attachments = true
+    
+  # Auto-reply to applicants
+  [forms.auto_reply]
+    enabled = true
+    subject = "Application Received - Patil Group Careers"
+    body = """
+    Dear Applicant,
+
+    Thank you for your interest in joining Patil Group!
+
+    We have successfully received your application and resume. Our HR team will review it carefully and contact you within 5-7 business days regarding the next steps in our recruitment process.
+
+    Your application details:
+    - Position: {{position}}
+    - Contact Email: {{email}}
+    - Phone: {{phone}}
+
+    If you have any questions, please feel free to contact us at careers@patilgroup.com
+
+    Best regards,
+    Human Resources Team
+    Patil Group
+    """
+
 
 # ========================================
 # PLUGINS
