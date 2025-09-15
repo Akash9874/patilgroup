@@ -97,8 +97,7 @@ export default function Home() {
               className="w-full h-full object-cover"
               preload="metadata"
             >
-              <source src="/herovideo.webm" type="video/webm" />
-              <source src="/herovideo.avi" type="video/avi" />
+              <source src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/f322e306934e467e14d0ece7835151b7/manifest/video.m3u8" type="application/x-mpegURL" />
               <source src="/herovideo.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -131,8 +130,7 @@ export default function Home() {
             className="w-full h-full object-cover"
             preload="metadata"
           >
-            <source src="/herovideo.webm" type="video/webm" />
-            <source src="/herovideo.avi" type="video/avi" />
+            <source src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/f322e306934e467e14d0ece7835151b7/manifest/video.m3u8" type="application/x-mpegURL" />
             <source src="/herovideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
