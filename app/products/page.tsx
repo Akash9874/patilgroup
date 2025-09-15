@@ -5,6 +5,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { AnimatedProductList } from '@/components/AnimatedProductList';
 import { TypingAnimation } from '@/components/TypingAnimation';
 import { GridLines } from '@/components/GridLines';
+import HLSVideo from '@/components/HLSVideo';
 
 const products = [
     {
@@ -47,18 +48,16 @@ const ProductsPage = () => {
       <section className="relative h-screen">
         {/* Background Video */}
         <div className="absolute inset-0 w-full h-full">
-          <video
+          <HLSVideo
+            src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/7f508f8619fc694d88c228bc4df4c260/manifest/video.m3u8"
+            fallbackSrc="/productherovideo.mp4"
             autoPlay
             loop
             muted
             playsInline
             className="w-full h-full object-cover"
             preload="metadata"
-          >
-            <source src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/7f508f8619fc694d88c228bc4df4c260/manifest/video.m3u8" type="application/x-mpegURL" />
-            <source src="/productherovideo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
 

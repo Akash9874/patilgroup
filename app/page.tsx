@@ -14,6 +14,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import SwitchingText from '@/components/SwitchingText';
+import HLSVideo from '@/components/HLSVideo';
 
 const projects = [
   {
@@ -88,19 +89,17 @@ export default function Home() {
         <div className="sm:hidden h-full relative">
           {/* Full-width Video Background */}
           <div className="absolute inset-0 w-full h-full">
-            <video
+            <HLSVideo
               ref={videoRef}
+              src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/f322e306934e467e14d0ece7835151b7/manifest/video.m3u8"
+              fallbackSrc="/herovideo.mp4"
               autoPlay
               loop
               muted
               playsInline
               className="w-full h-full object-cover"
               preload="metadata"
-            >
-              <source src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/f322e306934e467e14d0ece7835151b7/manifest/video.m3u8" type="application/x-mpegURL" />
-              <source src="/herovideo.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            />
           </div>
           
           {/* Text Overlay */}
@@ -122,18 +121,16 @@ export default function Home() {
               : 'polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%)',
           }}
         >
-          <video
+          <HLSVideo
             ref={videoRef}
+            src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/f322e306934e467e14d0ece7835151b7/manifest/video.m3u8"
+            fallbackSrc="/herovideo.mp4"
             loop
             muted
             playsInline
             className="w-full h-full object-cover"
             preload="metadata"
-          >
-            <source src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/f322e306934e467e14d0ece7835151b7/manifest/video.m3u8" type="application/x-mpegURL" />
-            <source src="/herovideo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          />
         </div>
 
         {/* Hero Content */}
