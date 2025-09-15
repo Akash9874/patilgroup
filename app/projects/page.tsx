@@ -8,6 +8,7 @@ import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import { TypingAnimation } from '@/components/TypingAnimation';
+import HLSVideo from '@/components/HLSVideo';
 import {
   Dialog,
   DialogContent,
@@ -190,17 +191,16 @@ const ProjectsPage = () => {
       <Navbar />
       <section className="relative h-screen overflow-hidden">
         <div className="absolute inset-0">
-          <video
+          <HLSVideo
+            src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/ae093ac5c8019622880548a174967052/manifest/video.m3u8"
+            fallbackSrc="/djiproject.mp4"
             autoPlay
             loop
             muted
             playsInline
             className="w-full h-full object-cover"
             preload="metadata"
-          >
-            <source src="/djiproject.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          />
           <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="relative z-10 h-full flex items-center">
@@ -214,17 +214,16 @@ const ProjectsPage = () => {
       <section className="bg-black text-white fade-in-section">
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-1/2 relative h-64 sm:h-80 md:h-auto">
-            <video
+            <HLSVideo
+              src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/2c070583f0d3688bf90d8f706eedbc1e/manifest/video.m3u8"
+              fallbackSrc="/systemvideo.mp4"
               autoPlay
               loop
               muted
               playsInline
               className="object-cover w-full h-full"
               preload="metadata"
-            >
-              <source src="/systemvideo.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            />
           </div>
           <div className="w-full md:w-1/2 flex items-center p-6 sm:p-8 md:p-16">
             <div>

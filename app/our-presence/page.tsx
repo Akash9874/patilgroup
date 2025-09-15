@@ -2,6 +2,7 @@
 import React from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import IndiaMap from '../../components/IndiaMap';
+import HLSVideo from '@/components/HLSVideo';
 
 const OurPresencePage = () => {
   useScrollAnimation();
@@ -9,7 +10,9 @@ const OurPresencePage = () => {
     <div className="bg-white">
       {/* Responsive Hero Section */}
       <section className="relative h-[50vh] sm:h-[60vh] md:h-[45vh] overflow-hidden bg-black">
-        <video
+        <HLSVideo
+          src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/b8827e1671f7ff0a0f082f98ddd944c4/manifest/video.m3u8"
+          fallbackSrc="/lppatil.mp4"
           autoPlay
           muted
           loop
@@ -17,10 +20,7 @@ const OurPresencePage = () => {
           className="absolute inset-0 w-full h-full object-cover"
           preload="metadata"
           poster="/worldmap.png"
-        >
-          <source src="/lppatil.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        />
         
         {/* Mobile Layout */}
         <div className="md:hidden absolute inset-0">
