@@ -28,78 +28,78 @@ const LeadershipCard = ({ image, name, post }: { image: string, name: string, po
 const leadershipData = [
   {
     image: '/management/lapatil.jpg',
-    name: 'Dr. L. S. Patil',
+    name: 'Dr.L. S. Patil',
     post: 'Executive Chairman',
   },
   {
     image: '/management/padmajapatil.jpg',
-    name: 'Mrs. Padmaja Patil',
+    name: 'Mrs.Padmaja Patil',
     post: 'Director',
   },
   {
+    image: '/management/Mr Vikash Kumar Gupta - Group CEO.jpg',
+    name: 'Mr.Vikash Kumar Gupta',
+    post: 'Group Director & CEO',
+  },
+  {
     image: '/management/manish.jpg',
-    name: 'Mr. Manish Ishwarlal Panchal',
+    name: 'Mr.Manish Ishwarlal Panchal',
     post: 'Executive Director',
   },
   {
     image: '/management/ajay.jpg',
-    name: 'Dr. Ajay Rajput',
-    post: 'Managing Director',
+    name: 'Dr.Ajay Rajput',
+    post: 'MD Marketing',
   },
   {
     image: '/management/Mr Kaushik Ghosh - Group Managing Director.jpg',
-    name: 'Mr Kaushik Ghosh',
-    post: 'Group Managing Director',
-  },
-  {
-    image: '/management/Mr Vikash Kumar Gupta - Group CEO.jpg',
-    name: 'Mr. Vikash Kumar Gupta',
-    post: 'CEO',
+    name: 'Mr.Kaushik Ghosh',
+    post: 'MD Track System',
   },
   {
     image: '/management/avchandra.jpg',
-    name: 'Mr. A.V. Chandra Gupta',
+    name: 'Mr.A.V. Chandra Gupta',
     post: 'CEO - Growth Centre',
   },
   {
     image: '/management/Mr Jawahar Lal Sinhari - CFO.jpg',
-    name: 'Mr Jawahar Lal Sinhari',
-    post: 'CFO',
+    name: 'Mr.Jawahar Lal Sinhari',
+    post: 'Group CFO',
   },
   {
     image: '/management/sajjan.jpg',
-    name: 'Mr. B.N. Sajjan',
+    name: 'Mr.B.N. Sajjan',
     post: 'Executive Director- Corporate Affairs',
   },
   {
     image: '/management/_DSC5895.jpg',
-    name: 'Mr. D.Prince',
+    name: 'Mr.D.Prince',
     post: 'Director - Sleeper Operations',
   },
   {
-    image: '/management/_DSC5857.jpg',
-    name: 'Mr. GowriSankar Lavudi',
-    post: 'Vice President - RMBD',
-  },
-  {
-    image: '/management/Mr Satish Chandra Ayla - CEO TRack Systems and Engineering.jpg',
-    name: 'Mr. Satish Chandra Alya',
-    post: 'COO-Track',
-  },
-  {
     image: '/management/arjyakumar.jpg',
-    name: 'Mr Arjya Kumar Mishra',
+    name: 'Mr.Arjya Kumar Mishra',
     post: 'Group CHRO',
   },
   {
     image: '/management/phanikumar.jpg',
     name: 'Mr.DVR Phani Kumar',
-    post: 'CEO Track Systems,Engineering & Contracting',
+    post: 'CEO Track Systems,Engg & Contracting',
   },
   {
     image: '/management/rahulagarwal.jpg',
-    name: 'Mr Rahul Agarwal',
+    name: 'Mr.Rahul Agarwal',
     post: 'Director Foundry',
+  },
+  {
+    image: '/management/Mr Satish Chandra Ayla - CEO TRack Systems and Engineering.jpg',
+    name: 'Mr.Satish Chandra Alya',
+    post: 'COO-Track',
+  },
+  {
+    image: '/management/_DSC5857.jpg',
+    name: 'Mr.Gowri Sankar Lavudi',
+    post: 'Vice President - RMBD',
   },
 ];
 

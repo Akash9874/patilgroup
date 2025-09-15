@@ -133,14 +133,8 @@ const FastenersPage = () => {
            </div>
            
            <div className="mb-8 sm:mb-12 md:mb-16 fade-in-section">
-             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
-               PRIL's journey in the Track Fastening Domain is well-established and extensive. For the past two decades, PRIL has been a key supplier of fastening systems for Ballastless Track, initially working through a JV mode. PRIL built the local vendors base for manufacturing of various fastening's component.
-             </p>
-             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4">
-               In 2020, PRIL embarked on a new chapter by establishing a state-of-the-art fastening manufacturing Plant. This Plant brought all production processes under one roof, eliminating the previous dependency on multiple vendors. Now PRIL's have successfully developed in-house capabilities in manufacturing of fastenings, including in core areas like die tool design and heat treatment.
-             </p>
              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
-               Today's PRIL's is the largest fastening supplier for Metros and supplying to Indian Railways in different zones.
+               Patil Group has over two decades of experience in track fastening systems — beginning with joint ventures and the development of a local vendor base. In 2020, the Group established a dedicated fastening plant, bringing all processes under one roof and adding in-house capabilities in die tool design and heat treatment. Today, Patil Group is the largest fastening supplier for metros and a trusted partner to Indian Railways across multiple zones.
              </p>
            </div>
            
@@ -481,6 +475,12 @@ const FastenersPage = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-6 sm:mb-8 md:mb-12 fade-in-section">
             Fatigue Testing
           </h2>
+          
+          <div className="mb-8 sm:mb-12 md:mb-16 fade-in-section">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
+              Our laboratories are equipped with world-class facilities including India's first fatigue testing machine for railway fastening systems. It simulates real track conditions and subjects components to millions of load cycles, with five million cycles equating to more than ten years of service life in the lab. Earlier, such advanced testing was available only in Europe — this capability now sets a new benchmark for safety and reliability in India.
+            </p>
+          </div>
           
           <div className="mt-8 sm:mt-12 md:mt-16 flex justify-center fade-in-section">
             <Image

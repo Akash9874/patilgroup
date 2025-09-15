@@ -17,15 +17,31 @@ const ContactPage = () => {
 
       {/* Content Section */}
       <div className="text-center py-20 px-4 fade-in-section">
-        <p className="text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-            Contact RouteWise Transport today for reliable and efficient trucking services. Our team is ready to assist you with your transportation needs.
-          </p>
         <div className="mt-8 mx-auto w-1/2 h-0.5 bg-gradient-to-r from-[#8A393B] via-orange-400 to-blue-500"></div>
-        <div className="mt-20 w-full max-w-5xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center text-lg space-y-4 md:space-y-0">
-            <p>Number: 1982912123</p>
-            <p>Email: info@routewise.com</p>
-            <p>Address: 123 Main St</p>
+        <div className="mt-20 w-full max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            {/* Phone */}
+            <div className="text-center">
+              <h3 className="text-2xl md:text-3xl font-semibold text-[#8A393B] mb-4">Phone</h3>
+              <p className="text-xl md:text-2xl text-gray-300">+91 40 3955 6700</p>
+            </div>
+            
+            {/* Email */}
+            <div className="text-center">
+              <h3 className="text-2xl md:text-3xl font-semibold text-[#8A393B] mb-4">Email</h3>
+              <p className="text-xl md:text-2xl text-gray-300">info@patilgroup.com</p>
+            </div>
+            
+            {/* Address */}
+            <div className="text-center">
+              <h3 className="text-2xl md:text-3xl font-semibold text-[#8A393B] mb-4">Address</h3>
+              <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
+                Legend Apartments, 6-3-1342/4<br />
+                Raj Bhavan Rd, Raj Bhavan Quarters Colony<br />
+                Somajiguda, Hyderabad<br />
+                Telangana 500082
+              </p>
+            </div>
           </div>
           </div>
         </div>

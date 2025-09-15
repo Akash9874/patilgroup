@@ -137,17 +137,17 @@ const CMEPage = () => {
                 <div className="mb-6 sm:mb-8 space-y-2 sm:space-y-3 fade-in-section">
                   <div className="bg-[#8A393B] rounded-xl p-3 sm:p-4 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#8A393B]/30 hover:bg-[#9d4447]">
                     <p className="text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl">
-                      <span className="text-[#F2913F]">B-</span> 0 Breakdown
+                      Zero Breakdown
                     </p>
                   </div>
                   <div className="bg-[#F2913F] rounded-xl p-3 sm:p-4 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#F2913F]/30 hover:bg-[#ff9f4a]">
                     <p className="text-black font-bold text-sm sm:text-base md:text-lg lg:text-xl">
-                      <span className="text-[#8A393B]">A-</span> 0 Accidents
+                      Zero Accidents
                     </p>
                   </div>
                   <div className="bg-[#8A393B] rounded-xl p-3 sm:p-4 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#8A393B]/30 hover:bg-[#9d4447]">
                     <p className="text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl">
-                      <span className="text-[#F2913F]">D-</span> 0 Downtime
+                      Zero Downtime
                     </p>
                   </div>
                 </div>
