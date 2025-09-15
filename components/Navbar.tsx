@@ -59,7 +59,6 @@ const Navbar = () => {
     { href: '/responsibilities', label: 'Our Resources' },
     { href: '/sustainability', label: 'Sustainability' },
     { href: '/our-clientele', label: 'Our Clientele' },
-    { href: '/our-presence', label: 'Our Presence' },
   ];
 
   const productLinks = [
@@ -370,12 +369,6 @@ const Navbar = () => {
            
            {/* Brand Section */}
            <div className="px-6 py-6 border-b border-gray-800 shrink-0">
-             <h1 className="text-3xl font-bold text-white tracking-tight">
-               PATIL GROUP
-             </h1>
-             <p className="text-gray-400 text-sm mt-2 tracking-wide">
-               RAILWAY ENGINEERING EXCELLENCE
-             </p>
            </div>
            
            {/* Navigation Content */}
@@ -458,13 +451,6 @@ const Navbar = () => {
                        className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
                      >
                        Our Clientele
-                     </Link>
-                     <Link 
-                       href="/our-presence" 
-                       onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
-                     >
-                       Our Presence
                      </Link>
                    </div>
                  </div>
