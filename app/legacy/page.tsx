@@ -1,5 +1,6 @@
 "use client";
 import { TypingAnimation } from '@/components/TypingAnimation';
+import HLSVideo from '@/components/HLSVideo';
 
 export default function LegacyPage() {
   const TrackTimeline = require('../../components/legacy/TrackTimeline').default as any;
@@ -9,8 +10,9 @@ export default function LegacyPage() {
       {/* Responsive Legacy Hero Section */}
       <section className="relative h-[70vh] md:h-[80vh] w-full overflow-hidden">
         {/* Background video */}
-        <video
-          src="/ourlegacy1.mp4"
+        <HLSVideo
+          src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/ceec789bbff98173c6c4a3fda4c5520d/manifest/video.m3u8"
+          fallbackSrc="/ourlegacy1.mp4"
           autoPlay
           muted
           loop

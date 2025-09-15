@@ -11,6 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { type CarouselApi } from "@/components/ui/carousel";
+import HLSVideo from '@/components/HLSVideo';
 
 const CMEPage = () => {
   useScrollAnimation();
@@ -59,17 +60,16 @@ const CMEPage = () => {
       <Navbar />
       <section className="relative h-screen">
         <div className="absolute inset-0">
-          <video
+          <HLSVideo
+            src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/012c31e4679d5efd6ce8fc4e507dccca/manifest/video.m3u8"
+            fallbackSrc="/cmeherovideo.mp4"
             autoPlay
             loop
             muted
             playsInline
             className="w-full h-full object-cover"
             preload="metadata"
-          >
-            <source src="/cmeherovideo.webm" type="video/webm" />
-            Your browser does not support the video tag.
-          </video>
+          />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
         <div className="relative z-10 h-full flex items-center justify-start p-4 sm:p-8 md:p-16">
