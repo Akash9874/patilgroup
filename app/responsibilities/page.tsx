@@ -129,7 +129,7 @@ const ResponsibilitiesPage = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
               {brochures.map((brochure, index) => (
-                <div key={index} className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
+                <div key={index} className="bg-black rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
                   {/* Card Header with Cover Image or PDF Preview */}
                   <div className="relative h-80 bg-white overflow-hidden">
                     {brochure.hasCoverImage && brochure.coverImage ? (
@@ -161,18 +161,18 @@ const ResponsibilitiesPage = () => {
                   </div>
                   
                   {/* Card Content */}
-                  <div className="p-8 text-white">
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
+                  <div className="p-8" style={{color: '#F2913F'}}>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight" style={{color: '#F2913F'}}>
                       {brochure.title}
                     </h3>
-                    <p className="text-gray-300 text-base mb-6 leading-relaxed">
+                    <p className="text-base mb-6 leading-relaxed" style={{color: '#F2913F'}}>
                       {brochure.description}
                     </p>
                     
                     {/* File Info */}
-                    <div className="flex items-center gap-4 mb-8 text-sm text-gray-400">
+                    <div className="flex items-center gap-4 mb-8 text-sm" style={{color: '#F2913F'}}>
                       <span className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                        <div className="w-2 h-2 rounded-full" style={{backgroundColor: '#F2913F'}}></div>
                         PDF Format
                       </span>
                       <span>•</span>
@@ -183,14 +183,20 @@ const ResponsibilitiesPage = () => {
                     <div className="flex gap-4">
                       <button
                         onClick={() => window.open(`/Brochure/${brochure.filename}`, '_blank')}
-                        className="flex-1 flex items-center justify-center gap-3 bg-gray-700 hover:bg-gray-600 text-white px-6 py-4 rounded-xl font-medium transition-colors duration-200 text-lg"
+                        className="flex-1 flex items-center justify-center gap-3 text-black px-6 py-4 rounded-xl font-medium transition-colors duration-200 text-lg"
+                        style={{backgroundColor: '#F2913F'}}
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E6822B'}
+                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#F2913F'}
                       >
                         <Eye size={20} />
                         Quick View
                       </button>
                       <button
                         onClick={() => handleDownload(brochure.filename, brochure.title)}
-                        className="flex-1 flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 rounded-xl font-medium transition-colors duration-200 text-lg"
+                        className="flex-1 flex items-center justify-center gap-3 text-black px-6 py-4 rounded-xl font-medium transition-colors duration-200 text-lg"
+                        style={{backgroundColor: '#F2913F'}}
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E6822B'}
+                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#F2913F'}
                       >
                         <Download size={20} />
                         Download

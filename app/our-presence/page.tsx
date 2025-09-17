@@ -63,10 +63,79 @@ const OurPresencePage = () => {
           </p>
         </div>
         
-        {/* Map Container */}
-        <div className="mx-auto py-6 sm:py-8 md:py-10 fade-in-section flex justify-center md:justify-end pr-0 md:pr-6 lg:pr-12 px-4 md:px-0">
-          <div className="w-full max-w-2xl md:max-w-7xl">
-            <IndiaMap />
+        {/* Map Container with Legend */}
+        <div className="mx-auto py-6 sm:py-8 md:py-10 fade-in-section px-4 md:px-6 lg:px-12">
+          <div className="flex flex-col md:flex-row items-start gap-8 max-w-7xl mx-auto">
+            {/* Map */}
+            <div className="w-full md:flex-1">
+              <IndiaMap />
+            </div>
+            
+            {/* Legend - Hidden on mobile */}
+            <div className="hidden md:block md:w-80 lg:w-96">
+              <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 sticky top-8">
+                <h3 className="text-xl lg:text-2xl font-bold text-[#8A393B] mb-6 text-center">
+                  Our Locations
+                </h3>
+                
+                {/* Legend Items */}
+                <div className="space-y-4 max-h-96 overflow-y-auto">
+                  {[
+                    { state: "Telangana", cities: ["Medchal", "Kallakal", "Wadiyaram"], color: "#F2913F" },
+                    { state: "Chhattisgarh", cities: ["Kargi"], color: "#F2913F" },
+                    { state: "Jharkhand", cities: ["Bokaro"], color: "#F2913F" },
+                    { state: "Odisha", cities: ["Kaipadar"], color: "#F2913F" },
+                    { state: "West Bengal", cities: ["Anara"], color: "#F2913F" },
+                    { state: "Rajasthan", cities: ["Roopangarh"], color: "#F2913F" },
+                    { state: "Uttar Pradesh", cities: ["Burhwal"], color: "#F2913F" },
+                    { state: "Delhi", cities: ["Delhi"], color: "#F2913F" },
+                    { state: "Assam", cities: ["Mirza", "Bongaigaon"], color: "#F2913F" },
+                    { state: "Gujarat", cities: ["Udvada"], color: "#F2913F" },
+                    { state: "Karnataka", cities: ["Tumkur", "Hubli"], color: "#F2913F" },
+                    { state: "Tamil Nadu", cities: ["Tirumangalam"], color: "#F2913F" },
+                    { state: "Andhra Pradesh", cities: ["Bobbili", "Kovvur"], color: "#F2913F" },
+                    { state: "Bihar", cities: ["Gaya"], color: "#F2913F" },
+                    { state: "Haryana", cities: ["Sholaka"], color: "#F2913F" },
+                    { state: "Madhya Pradesh", cities: ["Bhopal"], color: "#F2913F" },
+                    { state: "Uttarakhand", cities: ["Pathri"], color: "#F2913F" }
+                  ].map((location, index) => (
+                    <div key={index} className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                      <div 
+                        className="w-3 h-3 rounded-full mt-1 flex-shrink-0"
+                        style={{ backgroundColor: location.color }}
+                      ></div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="font-semibold text-[#8A393B] text-sm mb-1">{location.state}</h4>
+                        <div className="flex flex-wrap gap-1">
+                          {location.cities.map((city, cityIndex) => (
+                            <span 
+                              key={cityIndex} 
+                              className="text-xs bg-[#F2913F]/10 text-[#F2913F] px-2 py-1 rounded-full font-medium"
+                            >
+                              {city}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Legend Statistics */}
+                <div className="mt-6 pt-4 border-t border-gray-200">
+                  <div className="grid grid-cols-2 gap-4 text-center">
+                    <div className="bg-gradient-to-br from-[#8A393B]/10 to-[#8A393B]/5 rounded-lg p-3">
+                      <p className="text-xl font-bold text-[#8A393B]">17</p>
+                      <p className="text-xs text-gray-600 font-medium">States</p>
+                    </div>
+                    <div className="bg-gradient-to-br from-[#F2913F]/10 to-[#F2913F]/5 rounded-lg p-3">
+                      <p className="text-xl font-bold text-[#F2913F]">25+</p>
+                      <p className="text-xs text-gray-600 font-medium">Locations</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         

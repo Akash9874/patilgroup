@@ -85,23 +85,23 @@ const IndiaMap: React.FC = () => {
     // Predefined positions for each state's pins (as percentage of container)
     // Adjusted to ensure pins stay within the map boundaries
     const statePositions: Record<string, { x: number; y: number }> = {
-      'IN-UT': { x: 18, y: 25 },      // Uttarakhand - North
-      'IN-AP': { x: 17, y: 75 },      // Andhra Pradesh - Southeast coast  
-      'IN-BR': { x: 30, y: 38 },      // Bihar - East
-      'IN-WB': { x: 33, y: 47 },      // West Bengal - East
-      'IN-TG': { x: 19, y: 65 },      // Telangana - South-central
-      'IN-OD': { x: 27, y: 56 },      // Odisha - East coast
-      'IN-AS': { x: 40, y: 39 },      // Assam - Northeast (moved left from edge)
-      'IN-UP': { x: 20, y: 33 },      // Uttar Pradesh - North-central
+      'IN-UT': { x: 25, y: 25 },      // Uttarakhand - North
+      'IN-AP': { x: 25, y: 75 },      // Andhra Pradesh - Southeast coast  
+      'IN-BR': { x: 45, y: 40 },      // Bihar - East
+      'IN-WB': { x: 48, y: 47 },      // West Bengal - East
+      'IN-TG': { x: 27, y: 65 },      // Telangana - South-central
+      'IN-OD': { x: 40, y: 56 },      // Odisha - East coast
+      'IN-AS': { x: 55, y: 39 },      // Assam - Northeast (moved left from edge)
+      'IN-UP': { x: 28, y: 33 },      // Uttar Pradesh - North-central
       'IN-RJ': { x: 10, y: 33 },      // Rajasthan - Northwest
-      'IN-CT': { x: 25, y: 50 },      // Chhattisgarh - Central-east
-      'IN-JH': { x: 29, y: 48 },      // Jharkhand - East
-      'IN-HR': { x: 13, y: 28 },      // Haryana - North
+      'IN-CT': { x: 35, y: 50 },      // Chhattisgarh - Central-east
+      'IN-JH': { x: 39, y: 48 },      // Jharkhand - East
+      'IN-HR': { x: 18, y: 28 },      // Haryana - North
       'IN-GJ': { x: 5, y: 47 },      // Gujarat - West
-      'IN-KA': { x: 15, y: 80 },      // Karnataka - Southwest
-      'IN-TN': { x: 18, y: 85 },      // Tamil Nadu - South
-      'IN-DL': { x: 15, y: 30 },      // Delhi - North
-      'IN-MP': { x: 17, y: 47 },      // Madhya Pradesh - Central
+      'IN-KA': { x: 20, y: 80 },      // Karnataka - Southwest
+      'IN-TN': { x: 24, y: 85 },      // Tamil Nadu - South
+      'IN-DL': { x: 22, y: 32 },      // Delhi - North
+      'IN-MP': { x: 25, y: 50 },      // Madhya Pradesh - Central
     };
 
     Object.entries(labelsByState).forEach(([stateId, labels]) => {
