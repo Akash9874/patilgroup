@@ -58,53 +58,26 @@ const SafetyPage = () => {
         </div>
       </div>
 
-      {/* Responsive Protecting tracks / Securing Journeys */}
-      <section className="bg-black text-white py-8 sm:py-12 md:py-16 fade-in-section">
+      {/* Protecting tracks / Securing Journeys */}
+      <section className="bg-white text-black py-8 sm:py-12 md:py-16 fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-          {/* Mobile Layout */}
-          <div className="md:hidden text-center space-y-6">
-            <TypingAnimation
-              text="Protecting tracks"
-              showCursor
-              speed={70}
-              className="text-2xl sm:text-3xl font-bold text-[#8A393B]"
-              cursorColor="#8A393B"
-            />
-            <TypingAnimation
-              text="Securing Journeys"
-              showCursor
-              speed={70}
-              className="text-xl sm:text-2xl font-bold text-amber-500"
-              cursorColor="#F2913F"
-            />
-                          <p className="text-sm sm:text-base text-gray-200 leading-relaxed px-4 text-justify">
-                Patil Group builds practical, durable solutions to keep railway corridors safe and operational. From high speed routes to regional lines, our systems are made to prevent intrusions, reduce risks and ensure uninterrupted train movement.
-              </p>
+          {/* Split Heading Layout */}
+          <div className="text-center mb-8 sm:mb-12">
+            <div className="space-y-2 sm:space-y-4">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#8A393B] leading-tight">
+                Protecting tracks
+              </h2>
+              <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#F2913F] leading-tight">
+                Securing Journeys
+              </h3>
+            </div>
           </div>
           
-          {/* Desktop Layout - Original */}
-          <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            <div className="text-left">
-              <TypingAnimation
-                text="Protecting tracks"
-                showCursor
-                speed={70}
-                className="text-4xl md:text-6xl font-bold text-[#8A393B]"
-                cursorColor="#8A393B"
-              />
-            </div>
+          {/* Description text */}
             <div className="text-center">
-              <TypingAnimation
-                text="Securing Journeys"
-                showCursor
-                speed={70}
-                className="text-2xl md:text-4xl font-bold text-amber-500"
-                cursorColor="#F2913F"
-              />
-              <p className="mt-4 text-sm md:text-base text-gray-200 max-w-xl mx-auto text-justify">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed max-w-5xl mx-auto text-justify">
                 Patil Group builds practical, durable solutions to keep railway corridors safe and operational. From high speed routes to regional lines, our systems are made to prevent intrusions, reduce risks and ensure uninterrupted train movement.
               </p>
-            </div>
           </div>
         </div>
       </section>
@@ -287,9 +260,9 @@ const SafetyPage = () => {
                         height={400}
                         className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                       />
-                    </div>
                   </div>
-
+                </div>
+                
                   <div>
                     <h4 className="text-2xl md:text-3xl font-bold text-black mb-4">Noise barriers</h4>
                     <p className="text-xl md:text-2xl text-gray-800 leading-relaxed mb-6 text-justify">
@@ -305,7 +278,7 @@ const SafetyPage = () => {
                       />
                     </div>
                   </div>
-                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -313,55 +286,33 @@ const SafetyPage = () => {
 
 
 
-      {/* Responsive Made for Indian Railways */}
-      <section className="bg-black text-white py-8 sm:py-12 md:py-16 fade-in-section">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
-          {/* Mobile Layout */}
-          <div className="md:hidden">
-            <div className="bg-gradient-to-br from-gray-800/40 to-gray-900/60 backdrop-blur-lg rounded-3xl p-8 border border-gray-600/30 shadow-2xl">
-              <div className="text-center">
-                <div className="inline-block">
-                  <h3 className="text-2xl sm:text-3xl font-bold text-amber-500 mb-4 relative">
-                    Made for Indian Railways
-                    <div className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-amber-500 to-transparent"></div>
-                  </h3>
-                </div>
-                <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mb-6 rounded-full shadow-lg"></div>
-                
-                {/* Quality Features */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-                    <p className="text-white text-sm font-semibold">Factory Environment</p>
-                  </div>
-                  <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-                    <p className="text-white text-sm font-semibold">Quality Control</p>
-                  </div>
-                  <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-                    <p className="text-white text-sm font-semibold">Consistent Strength</p>
-                  </div>
-                  <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-                    <p className="text-white text-sm font-semibold">Precise Dimensions</p>
-                  </div>
-                </div>
-                
-                <p className="text-sm sm:text-base text-gray-200 leading-relaxed text-center italic">
-                  "Every product meets the standards of modern railway operations with long service life and reliability."
-                </p>
+      {/* Made for Indian Railways */}
+      <section className="bg-white text-black py-8 sm:py-12 md:py-16 fade-in-section">
+        <div className="w-full pt-8">
+          {/* Heading with full-width gradient lines */}
+          <div className="relative mb-8">
+            <div className="flex items-center">
+              <div className="flex-1 h-2" style={{
+                background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
+              }}></div>
+              <div className="px-8">
+                <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#F2913F] leading-tight whitespace-nowrap">
+                  Made for Indian Railways
+                </h3>
               </div>
+              <div className="flex-1 h-2" style={{
+                background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
+              }}></div>
             </div>
           </div>
           
-          {/* Desktop Layout - Original */}
-          <div className="hidden md:block">
-            <div className="flex items-center gap-4">
-              <div className="flex-1 h-1 bg-gradient-to-r from-transparent to-[#F2913F]"></div>
-              <h3 className="text-4xl md:text-6xl font-bold text-amber-500 text-center whitespace-nowrap">Made for Indian Railways</h3>
-              <div className="flex-1 h-1 bg-gradient-to-l from-transparent to-[#F2913F]"></div>
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
+            {/* Description */}
+            <div className="text-center">
+              <p className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed max-w-4xl mx-auto">
+                Every product is manufactured under strict quality control in a factory environment. This ensures consistent strength, precise dimensions and long service life — meeting the standards of modern railway operations.
+              </p>
             </div>
-            <p className="mt-4 text-base md:text-lg text-gray-200 text-center max-w-3xl mx-auto text-justify">
-              Every product is manufactured under strict quality control in a factory environment. This ensures consistent
-              strength, precise dimensions and long service life — meeting the standards of modern railway operations.
-            </p>
           </div>
         </div>
       </section>

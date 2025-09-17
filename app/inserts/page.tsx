@@ -58,160 +58,273 @@ const InsertsPage = () => {
       </div>
 
       {/* Precision Castings Section */}
-      <div className="bg-black py-8 sm:py-12 md:py-16">
+      <div className="bg-white text-black py-8 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-6 sm:mb-8 fade-in-section">Precision Castings for Modern Mobility</h2>
-          <div className="space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl">
-            <TypingAnimation text="Patil Group manufactures ductile iron and cast iron castings on advanced DISA ARPA 450 and ARPA 300 lines. With facilities in Bokaro (23,000 MT) and Hyderabad (13,000 MT), we deliver castings from 1 kg to 40 kg with assured consistency." className="block leading-relaxed" speed={20} />
-            <TypingAnimation text="Both plants hold RDSO and Delhi Metro approvals and are equipped with special-purpose machines and IoT systems, fully aligned with Industry 4.0 standards" className="block leading-relaxed" speed={20} />
+          <div className="fade-in-section">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#8A393B] mb-4">
+              Precision Castings
+            </h2>
+            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#F2913F] mb-8 sm:mb-12">
+              for Modern Mobility
+            </h3>
+            <div className="space-y-6 sm:space-y-8 text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed">
+              <p className="text-justify">
+                Patil Group manufactures ductile iron and cast iron castings on advanced DISA ARPA 450 and ARPA 300 lines. With facilities in Bokaro (23,000 MT) and Hyderabad (13,000 MT), we deliver castings from 1 kg to 40 kg with assured consistency.
+              </p>
+              <p className="text-justify">
+                Both plants hold RDSO and Delhi Metro approvals and are equipped with special-purpose machines and IoT systems, fully aligned with Industry 4.0 standards
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
       {/* SGCI Inserts Section */}
-      <div className="bg-black py-8 sm:py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-6 sm:mb-8 fade-in-section">SGCI Inserts</h2>
-          <div className="space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl">
-            <TypingAnimation text="Patil Group produces SGCI inserts for all sleeper types, with our Bokaro plant housing the country's largest facility at a capacity of 1.3 million inserts per month." className="block leading-relaxed" speed={20} />
-          </div>
-        </div>
-      </div>
-
-      {/* Two Images Section with Tilt Effect */}
-      <div className="bg-black py-8 sm:py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
-            {/* Mobile: Regular images, Desktop: Tilt cards */}
-            <div className="slide-in-left flex justify-center">
-              {/* Mobile Image */}
-              <div className="md:hidden relative overflow-hidden rounded-xl shadow-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-1">
-                <Image 
-                  src="/inserts45.jpg" 
-                  alt="SGCI Inserts" 
-                  width={400} 
-                  height={300} 
-                  className="rounded-lg object-cover w-full h-auto" 
-                />
-              </div>
-              {/* Desktop Tilt Card */}
-              <div className="hidden md:block">
-                <TiltCard
-                  className="inline-block"
-                  maxTilt={10}
-                  scale={1}
-                  glareEnable={true}
-                  glareMaxOpacity={0.3}
-                >
-                  <div className="relative overflow-hidden rounded-xl shadow-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-1">
+      <section className="bg-white py-8 sm:py-10 md:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center fade-in-section">
+            
+            {/* Left side - Product Images */}
+            <div className="lg:col-span-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                
+                {/* SGCI Insert RT 6901 */}
+                <div className="text-center">
+                  <div className="bg-gray-50 rounded-lg p-6 mb-4">
                     <Image 
                       src="/inserts45.jpg" 
-                      alt="SGCI Inserts" 
-                      width={400} 
-                      height={300} 
-                      className="rounded-lg object-cover w-full h-auto" 
+                      alt="SGCI Insert RT 6901" 
+                      width={300} 
+                      height={350} 
+                      className="mx-auto object-contain h-64 w-auto" 
                     />
                   </div>
-                </TiltCard>
+                  <div className="space-y-1">
+                    <h4 className="text-lg sm:text-xl font-bold text-black">SGCI INSERT</h4>
+                    <p className="text-lg sm:text-xl text-black">RT 6901</p>
+                    <p className="text-lg sm:text-xl text-black">1.484 Kg</p>
               </div>
             </div>
-            <div className="slide-in-right flex justify-center">
-              {/* Mobile Image */}
-              <div className="md:hidden relative overflow-hidden rounded-xl shadow-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-1">
-                <Image 
-                  src="/insertss69.jpg" 
-                  alt="SGCI Inserts 2" 
-                  width={500} 
-                  height={300} 
-                  className="rounded-lg object-cover w-full h-auto" 
-                />
-              </div>
-              {/* Desktop Tilt Card */}
-              <div className="hidden md:block">
-                <TiltCard
-                  className="inline-block"
-                  maxTilt={10}
-                  scale={1}
-                  glareEnable={true}
-                  glareMaxOpacity={0.1}
-                >
-                  <div className="relative overflow-hidden rounded-xl shadow-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-1">
+
+                {/* SGCI Insert RT 3705 */}
+                <div className="text-center">
+                  <div className="bg-gray-50 rounded-lg p-6 mb-4">
                     <Image 
                       src="/insertss69.jpg" 
-                      alt="SGCI Inserts 2" 
-                      width={500} 
-                      height={300} 
-                      className="rounded-lg object-cover w-full h-auto" 
+                      alt="SGCI Insert RT 3705" 
+                      width={300} 
+                      height={350} 
+                      className="mx-auto object-contain h-64 w-auto" 
                     />
                   </div>
-                </TiltCard>
+                  <div className="space-y-1">
+                    <h4 className="text-lg sm:text-xl font-bold text-black">SGCI INSERT</h4>
+                    <p className="text-lg sm:text-xl text-black">RT 3705</p>
+                    <p className="text-lg sm:text-xl text-black">1.97 Kg</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side - Content */}
+            <div className="lg:col-span-1 relative">
+              <div className="flex items-center mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] leading-tight whitespace-nowrap">
+                  SGCI Inserts
+                </h2>
+                {/* Inline Gradient Line */}
+                <div 
+                  className="hidden lg:block ml-4 flex-shrink-0"
+                  style={{
+                    width: '400px',
+                    height: '28px',
+                    background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
+                  }}
+                />
+              </div>
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700 leading-relaxed text-justify">
+                Patil Group produces SGCI inserts for all sleeper types, with our Bokaro plant housing the country's largest facility at a capacity of 1.3 million inserts per month.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Base Plates Section */}
+      <section className="bg-white py-8 sm:py-10 md:py-12 relative">
+        {/* Left Edge Gradient Line */}
+        <div 
+          className="absolute hidden lg:block fade-in-section"
+          style={{
+            width: '364px',
+            height: '28px',
+            left: '0px',
+            top: '60px',
+            background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
+          }}
+        />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          {/* Section Header */}
+          <div className="text-left mb-8 sm:mb-12 fade-in-section">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#8A393B]">
+              Base Plates
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center fade-in-section">
+            
+            {/* Left side - Content */}
+            <div className="lg:col-span-2">
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700 leading-relaxed text-justify">
+                We manufacture 2-hole and 4-hole base plates for metro projects, supplying directly to MMRDA and DMRC to support reliable urban transit.
+              </p>
+            </div>
+
+            {/* Right side - Product Image and Specs */}
+            <div className="lg:col-span-1 text-center">
+              <div className="bg-gray-50 rounded-lg p-6 mb-4">
+            <Image
+              src="/baseplates.jpg"
+                  alt="MMRDA Project Coated 4 hole Base Plate" 
+                  width={500} 
+              height={500}
+                  className="mx-auto object-contain h-96 w-auto" 
+                />
+              </div>
+              <div className="space-y-1">
+                <h4 className="text-lg sm:text-xl font-bold text-black">MMRDA Project</h4>
+                <p className="text-lg sm:text-xl text-black">Coated 4 hole Base Plate</p>
+                <p className="text-lg sm:text-xl text-black">9.30 kg</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Base Plates Section */}
-      <div className="bg-black py-8 sm:py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 fade-in-section">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#8A393B] mb-6 sm:mb-8">Base Plates</h2>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 leading-relaxed">We manufacture 2-hole and 4-hole base plates for metro projects, supplying directly to MMRDA and DMRC to support reliable urban transit.</p>
-          <div className="flex justify-center mt-8 sm:mt-10 md:mt-12 fade-in-section">
-            <Image
-              src="/baseplates.jpg"
-              alt="Base Plates for Metro Projects"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-xl object-cover w-full max-w-2xl h-auto"
-            />
-          </div>
-        </div>
-      </div>
+      </section>
 
       {/* Railway Braking System Section */}
-      <div className="bg-black py-8 sm:py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 fade-in-section">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#8A393B] mb-6 sm:mb-8">Railway Braking System</h2>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 leading-relaxed">Our foundries deliver critical castings for railway braking assemblies, including lining holders, double eyes, hinges, levers, connectors, covers, and cylinders—ensuring safety and durability in service.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-8 sm:mt-10 md:mt-12 fade-in-section">
-            <div className="flex justify-center">
+      <section className="bg-white py-8 sm:py-10 md:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center fade-in-section">
+            
+            {/* Left side - Product Images */}
+            <div className="lg:col-span-2">
+              <div className="space-y-12">
+                
+                {/* Hinge Component */}
+                <div className="flex flex-col items-start">
+                  <div className="bg-gray-50 rounded-lg p-6 mb-4 w-full max-w-sm">
               <Image
                 src="/bsytem1.jpg"
-                alt="Railway Braking System Components"
-                width={500}
-                height={350}
-                className="rounded-lg shadow-xl object-cover w-full h-auto max-w-lg"
+                        alt="DAKO-CZ India Pvt Ltd Hinge" 
+                        width={300} 
+                        height={200} 
+                        className="mx-auto object-contain h-40 w-auto" 
               />
             </div>
-            <div className="flex justify-center">
+                  <div className="space-y-1">
+                    <h4 className="text-lg sm:text-xl font-bold text-black">DAKO-CZ India Pvt Ltd, Hyderabad</h4>
+                    <p className="text-lg sm:text-xl text-black">Hinge</p>
+                    <p className="text-lg sm:text-xl text-black">BK 5551</p>
+                    <p className="text-lg sm:text-xl text-black">13.0kg</p>
+                  </div>
+                </div>
+
+                {/* Lining Holder Component */}
+                <div className="flex flex-col items-start">
+                  <div className="bg-gray-50 rounded-lg p-6 mb-4 w-full max-w-sm">
               <Image
                 src="/bsystem2.jpg"
-                alt="Railway Braking System Assembly"
-                width={500}
-                height={350}
-                className="rounded-lg shadow-xl object-cover w-full h-auto max-w-lg"
-              />
+                        alt="DAKO-CZ India Pvt Ltd Lining Holder" 
+                        width={300} 
+                        height={200} 
+                        className="mx-auto object-contain h-40 w-auto" 
+                      />
+                    </div>
+                  <div className="space-y-1">
+                    <h4 className="text-lg sm:text-xl font-bold text-black">DAKO-CZ India Pvt Ltd, Hyderabad</h4>
+                    <p className="text-lg sm:text-xl text-black">Lining Holder LH & RH</p>
+                    <p className="text-lg sm:text-xl text-black">20270-163 & 20270-164</p>
+                    <p className="text-lg sm:text-xl text-black">8.10 kg</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side - Content */}
+            <div className="lg:col-span-3 relative">
+              <div className="flex items-center mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] leading-tight whitespace-nowrap">
+                  Railway Braking System
+                </h2>
+                {/* Inline Gradient Line */}
+                <div 
+                  className="hidden lg:block ml-4 flex-shrink-0"
+                  style={{
+                    width: '400px',
+                    height: '28px',
+                    background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
+                  }}
+                />
+              </div>
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700 leading-relaxed text-justify">
+                Our foundries deliver critical castings for railway braking assemblies, including lining holders, double eyes, hinges, levers, connectors, covers, and cylinders—ensuring safety and durability in service.
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Railway Suspension System Section */}
-      <div className="bg-black py-8 sm:py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 fade-in-section">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#8A393B] mb-6 sm:mb-8">Railway Suspension System</h2>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 leading-relaxed">We supply precision castings for suspension assemblies, covering eight labyrinth ring types and suspension tubes, engineered for stability and long service life.</p>
-          <div className="flex justify-center mt-8 sm:mt-10 md:mt-12 fade-in-section">
+      <section className="bg-white py-4 sm:py-6 md:py-8 relative">
+        {/* Left Edge Gradient Line */}
+        <div 
+          className="absolute hidden lg:block fade-in-section"
+          style={{
+            width: '364px',
+            height: '28px',
+            left: '0px',
+            top: '20px',
+            background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
+          }}
+        />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start fade-in-section -mt-4">
+            
+            {/* Left side - Content */}
+            <div className="lg:col-span-2">
+              <div className="mb-4">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] leading-tight whitespace-nowrap mb-4">
+                  Railway Suspension System
+                </h2>
+              </div>
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700 leading-relaxed text-justify">
+                We supply precision castings for suspension assemblies, covering eight labyrinth ring types and suspension tubes, engineered for stability and long service life
+              </p>
+            </div>
+
+            {/* Right side - Product Image and Specs */}
+            <div className="lg:col-span-1 text-center">
+              <div className="bg-gray-50 rounded-lg p-6 mb-4">
             <Image
               src="/suspension.jpg"
-              alt="Railway Suspension System Components"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-xl object-cover w-full max-w-2xl h-auto"
-            />
+                  alt="Indore Nitriders Lining Ladyrinthring" 
+                  width={300} 
+                  height={300} 
+                  className="mx-auto object-contain h-64 w-auto" 
+                />
+              </div>
+              <div className="space-y-1 text-left">
+                <h4 className="text-lg sm:text-xl font-bold text-black">Indore Nitriders; Indore Lining</h4>
+                <p className="text-lg sm:text-xl text-black">Ladyrinthring (8 different Parts)</p>
+                <p className="text-lg sm:text-xl text-black">1209-01-211-927</p>
+                <p className="text-lg sm:text-xl text-black">10.00 to 30.00kg</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

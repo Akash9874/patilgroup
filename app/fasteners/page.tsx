@@ -127,199 +127,299 @@ const FastenersPage = () => {
              <div className="bg-white py-8 sm:py-12 md:py-16">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
            <div className="mb-8 sm:mb-12 md:mb-16 fade-in-section">
-             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
+             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed">
                Fasteners are the critical link between rails and sleepers, ensuring safety and performance across diverse track conditions. Patil Group, in collaboration with global leaders in fastening technology, has built proven expertise in designing, manufacturing, and supplying advanced fastening systems for modern rail networks.
              </p>
            </div>
            
            <div className="mb-8 sm:mb-12 md:mb-16 fade-in-section">
-             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
+             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed">
                Patil Group has over two decades of experience in track fastening systems — beginning with joint ventures and the development of a local vendor base. In 2020, the Group established a dedicated fastening plant, bringing all processes under one roof and adding in-house capabilities in die tool design and heat treatment. Today, Patil Group is the largest fastening supplier for metros and a trusted partner to Indian Railways across multiple zones.
              </p>
            </div>
            
-           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-6 sm:mb-8 md:mb-12 fade-in-section">
-             For Mainline Ballasted Track
-           </h2>
-
-          <div className="space-y-6 sm:space-y-8">
-                         {/* Elastic Rail Clips */}
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-start pt-6 sm:pt-8">
-               <div className="col-span-full h-px bg-gradient-to-r from-[#F2913F] via-[#8A393B] to-[#F2913F] mb-4 sm:mb-6"></div>
-               <div className="md:col-span-1 slide-in-left mb-4 md:mb-0">
-                 <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F2913F]">Elastic Rail Clips</h3>
-               </div>
-               <div className="md:col-span-1 slide-in-right mb-4 md:mb-0">
-                 <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#F2913F]">ERC clips: mark III and V</h4>
-                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mt-2">
-                   Manufactured in Medchal<br />
-                   Approved by RDSO for Indian Railways and freight corridors
-                 </p>
-               </div>
-               <div className="md:col-span-1 slide-in-left">
-                 <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#F2913F]">Production Capacity</h4>
-                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mt-2">
-                   Manufactured around 110000 units Per Annum
-                 </p>
-               </div>
-             </div>
-
-            {/* GFN Liners */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-start pt-6 sm:pt-8">
-              <div className="col-span-full h-px bg-gradient-to-r from-[#F2913F] via-[#8A393B] to-[#F2913F] mb-4 sm:mb-6"></div>
-              <div className="md:col-span-1 slide-in-left mb-4 md:mb-0">
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F2913F]">GFN Liners</h3>
-              </div>
-              <div className="md:col-span-1 slide-in-right mb-4 md:mb-0">
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mt-2">
-                  GFN liner production<br />
-                  84 lakh units per annum<br />
-                  RDSO approved
-                </p>
-              </div>
-              <div className="md:col-span-1 slide-in-left">
-                <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#F2913F]">SKL Series</h4>
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mt-2">
-                  - SKL 12<br />
-                  - SKL 15<br />
-                  - System W 14 HH
-                </p>
-              </div>
-            </div>
-
-                         {/* System W 14 HH */}
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-start pt-6 sm:pt-8">
-               <div className="col-span-full h-px bg-gradient-to-r from-[#F2913F] via-[#8A393B] to-[#F2913F] mb-4 sm:mb-6"></div>
-               <div className="md:col-span-1 slide-in-left mb-4 md:mb-0">
-                 <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F2913F]">System W 14<br />HH</h3>
-               </div>
-               <div className="md:col-span-1 slide-in-right mb-4 md:mb-0">
-                 <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#F2913F]">(Heavy Haul)</h4>
-                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mt-2">
-                   Used in freight and heavy axle routes
-                 </p>
-               </div>
-               <div className="md:col-span-1 slide-in-left">
-                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mt-2">
-                   Allows tension clamping and tilt protection<br />
-                   Reduces long term maintenance
-                 </p>
-               </div>
-             </div>
-
-             {/* Lab Facilities */}
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-start pt-6 sm:pt-8">
-               <div className="col-span-full h-px bg-gradient-to-r from-[#F2913F] via-[#8A393B] to-[#F2913F] mb-4 sm:mb-6"></div>
-               <div className="md:col-span-1 slide-in-left mb-4 md:mb-0">
-                 <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#F2913F]">Lab Facilities</h3>
-               </div>
-               <div className="md:col-span-1 slide-in-right mb-4 md:mb-0">
-                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mt-2">
-                   - World class labs<br />
-                   - Fatigue testing machines<br />
-                   - GOM Scanner<br />
-                   - Salt spray testing machine<br />
-                   - UTM
-                 </p>
-               </div>
-               <div className="md:col-span-1 slide-in-left">
-                 <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mt-2">
-                   According to STR(Standard Technology Requirement) by RDSO. These testing machines are not available anywhere in india.
-                 </p>
-               </div>
-             </div>
-           </div>
         </div>
       </div>
 
-      <div className="bg-[#F5F4F1] py-8 sm:py-12 md:py-16">
+      {/* For Mainline Ballasted Track Section */}
+      <section className="bg-white py-8 sm:py-10 md:py-12 relative">
+        {/* Right Edge Gradient Line */}
+        <div 
+          className="absolute hidden lg:block fade-in-section"
+          style={{
+            width: '864px',
+            height: '28px',
+            right: '0px',
+            top: '60px',
+            background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
+          }}
+        />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-6 sm:mb-8 md:mb-12 fade-in-section">
-            For Mainline Ballastless Track
-          </h2>
+          {/* Section Header */}
+          <div className="fade-in-section mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#8A393B] mb-8">
+              For Mainline Ballasted Track
+            </h2>
+          </div>
 
-          <div className="space-y-8 sm:space-y-12 md:space-y-16">
-            {/* System 300 */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
-              <div className="slide-in-left order-2 md:order-1">
-                <div className="relative group">
-                <Image src="/fs300.jpg" alt="System 300" width={600} height={400} className="rounded-lg object-cover w-full h-full" />
-                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-[#F2913F] text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-center px-4">System 300 for Ballastless Track</p>
+          {/* Content Grid */}
+          <div className="space-y-8 fade-in-section">
+            
+            {/* Elastic Rail Clips Row */}
+            <div className="bg-[#F5F4F1] rounded-lg p-8 lg:p-10">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
+                <div>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F2913F]">
+                    Elastic Rail Clips
+                  </h3>
+                </div>
+                <div>
+                  <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F] mb-4">
+                    ERC clips: mark III and V
+                  </h4>
+                  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+                    Manufactured in Medchal<br />
+                    Approved by RDSO for Indian Railways and freight corridors
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F] mb-4">
+                    Production Capacity
+                  </h4>
+                  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+                    Manufactured around 110000 units Per Annum
+                  </p>
                 </div>
               </div>
+            </div>
+
+            {/* GFN Liners Row */}
+            <div className="bg-[#F5F4F1] rounded-lg p-8 lg:p-10">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
+                <div>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F2913F]">
+                    GFN Liners
+                  </h3>
+                </div>
+                <div>
+                  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+                    GFN liner production<br />
+                    84 lakh units per annum<br />
+                    RDSO approved
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F] mb-4">
+                    SKL Series
+                  </h4>
+                  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+                    - SKL 12<br />
+                    - SKL 15<br />
+                    - System W 14 HH
+                  </p>
+                </div>
               </div>
-              <div className="slide-in-right order-1 md:order-2">
-                <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg">
-                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
-                    <span className="font-medium">Maximum Axle Load (Upto)</span> 
-                    <span className="text-[#F2913F] font-semibold">22.5 Tonne</span>
-                  </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
-                    <span className="font-medium">Maximum Speed (Upto)</span> 
-                    <span className="text-[#F2913F] font-semibold">300 kmph</span>
-                  </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
-                    <span className="font-medium">Toe Load (per clip)</span> 
-                    <span className="text-[#F2913F] font-semibold">9 kN</span>
-                  </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
-                    <span className="font-medium">Insulation</span> 
-                    <span className="text-[#F2913F] font-semibold">2.5 kΩ</span>
-                  </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
-                    <span className="font-medium">Static stiffness of pad</span> 
-                    <span className="text-[#F2913F] font-semibold">22.5 kN/mm</span>
-                  </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
-                    <span className="font-medium">Longitudinal restraint (as per EN 13146)</span> 
-                    <span className="text-[#F2913F] font-semibold">9 kN</span>
-                  </li>
-                </ul>
-                <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg">Pre assembled system suitable for all slab track installations</p>
+            </div>
+
+            {/* System W 14 HH Row */}
+            <div className="bg-[#F5F4F1] rounded-lg p-8 lg:p-10">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
+                <div>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F2913F]">
+                    System W 14<br />HH
+                  </h3>
+                </div>
+                <div>
+                  <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F] mb-4">
+                    (Heavy Haul)
+                  </h4>
+                  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+                    Used in freight and heavy axle routes
+                  </p>
+                </div>
+                <div>
+                  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+                    Allows tension clamping and tilt protection<br /><br />
+                    Reduces long term maintenance
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Lab Facilities Row */}
+            <div className="bg-[#F5F4F1] rounded-lg p-8 lg:p-10">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
+                <div>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F2913F]">
+                    Lab Facilities
+                  </h3>
+                </div>
+                <div>
+                  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+                    - World class labs<br />
+                    - Fatigue testing machines<br />
+                    - GOM Scanner<br />
+                    - Salt spray testing machine<br />
+                    - UTM
+                  </p>
+                </div>
+                <div>
+                  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+                    According to STR(Standard Technology Requirement) by RDSO. These testing machines are not available anywhere in india.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* For Mainline Ballastless Track Section */}
+      <section className="bg-white py-8 sm:py-10 md:py-12 relative">
+        {/* Left and Right Edge Gradients */}
+        <div
+          className="absolute hidden lg:block fade-in-section"
+          style={{
+            width: '564px',
+            height: '28px',
+            left: '0px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
+          }}
+        />
+
+        <div
+          className="absolute hidden lg:block fade-in-section"
+          style={{
+            width: '564px',
+            height: '28px',
+            right: '0px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
+          }}
+        />
+
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 lg:px-8 fade-in-section">
+          <h2 className="text-[#8A393B] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-3">
+            For Mainline Ballastless Track
+          </h2>
+        </div>
+      </section>
+
+      <div className="bg-[#F5F4F1] py-8 sm:py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          <div className="space-y-12">
+            
+            {/* System 300 */}
+            <div className="bg-white rounded-lg p-8 lg:p-10 shadow-lg">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div className="order-2 lg:order-1">
+                  <div className="relative">
+                    <Image 
+                      src="/fs300.jpg" 
+                      alt="System 300" 
+                      width={400} 
+                      height={300} 
+                      className="rounded-lg object-cover w-full h-64" 
+                    />
+                    <div className="absolute top-4 left-4">
+                      <div className="bg-[#F2913F] text-white px-4 py-2 rounded font-bold">
+                        FS 300
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="order-1 lg:order-2">
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                      <span className="text-gray-700 text-lg">Maximum Axle Load (Upto)</span>
+                      <span className="text-[#F2913F] font-bold text-lg">22.5 Ton</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                      <span className="text-gray-700 text-lg">Maximum Speed (Upto)</span>
+                      <span className="text-[#F2913F] font-bold text-lg">300 Kmph</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                      <span className="text-gray-700 text-lg">Toe Load (per clip)</span>
+                      <span className="text-[#F2913F] font-bold text-lg">9 KN</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                      <span className="text-gray-700 text-lg">Insulation</span>
+                      <span className="text-[#F2913F] font-bold text-lg">2.5 KΩ</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                      <span className="text-gray-700 text-lg">Static stiffness of pad</span>
+                      <span className="text-[#F2913F] font-bold text-lg">22.5 KN/mm</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                      <span className="text-gray-700 text-lg">Longitudinal restraint (as per EN 13146)</span>
+                      <span className="text-[#F2913F] font-bold text-lg">9 KN</span>
+                    </div>
+                    <div className="pt-4">
+                      <p className="text-gray-700 text-lg">Pre assembled system suitable for all slab track installations</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* System DB 336 */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
-              <div className="slide-in-left">
-                <div className="relative group">
-                <Image src="/fs336.jpg" alt="System DB 336" width={600} height={400} className="rounded-lg object-cover w-full h-full" />
-                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-[#F2913F] text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-center px-4">System DB 336 for Ballastless Track</p>
+            <div className="bg-white rounded-lg p-8 lg:p-10 shadow-lg">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <div>
+                  <div className="relative">
+                    <Image 
+                      src="/fs336.jpg" 
+                      alt="System DB 336" 
+                      width={400} 
+                      height={300} 
+                      className="rounded-lg object-cover w-full h-64" 
+                    />
+                    <div className="absolute top-4 left-4">
+                      <div className="bg-[#F2913F] text-white px-4 py-2 rounded font-bold">
+                        FS 336
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                      <span className="text-gray-700 text-lg">Maximum Axle Load (Upto)</span>
+                      <span className="text-[#F2913F] font-bold text-lg">22.5 Ton</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                      <span className="text-gray-700 text-lg">Maximum Speed (Upto)</span>
+                      <span className="text-[#F2913F] font-bold text-lg">300 Kmph</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                      <span className="text-gray-700 text-lg">Toe Load (per clip)</span>
+                      <span className="text-[#F2913F] font-bold text-lg">9 KN</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                      <span className="text-gray-700 text-lg">Insulation</span>
+                      <span className="text-[#F2913F] font-bold text-lg">2.5 KΩ</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                      <span className="text-gray-700 text-lg">Static stiffness of pad</span>
+                      <span className="text-[#F2913F] font-bold text-lg">22.5 KN/mm</span>
+                    </div>
+                    <div className="flex justify-between items-center border-b border-gray-200 pb-3">
+                      <span className="text-gray-700 text-lg">Longitudinal restraint (as per EN 13146)</span>
+                      <span className="text-[#F2913F] font-bold text-lg">9 KN</span>
+                    </div>
+                    <div className="pt-4">
+                      <p className="text-gray-700 text-lg">Optimized for vibration and noise reduction.<br />Ideal for urban rail and steel structure tracks.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              </div>
-              <div className="slide-in-right">
-                <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg">
-                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
-                    <span className="font-medium">Maximum Axle Load (Upto)</span> 
-                    <span className="text-[#F2913F] font-semibold">22.5 Tonne</span>
-                  </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
-                    <span className="font-medium">Maximum Speed (Upto)</span> 
-                    <span className="text-[#F2913F] font-semibold">300 kmph</span>
-                  </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
-                    <span className="font-medium">Toe Load (per clip)</span> 
-                    <span className="text-[#F2913F] font-semibold">9 kN</span>
-                  </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
-                    <span className="font-medium">Insulation</span> 
-                    <span className="text-[#F2913F] font-semibold">2-5 kΩ</span>
-                  </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
-                    <span className="font-medium">Static stiffness of pad</span> 
-                    <span className="text-[#F2913F] font-semibold">22.5 kN/mm</span>
-                  </li>
-                  <li className="flex flex-col sm:flex-row sm:justify-between border-b pb-2">
-                    <span className="font-medium">Longitudinal restraint (as per EN 13146)</span> 
-                    <span className="text-[#F2913F] font-semibold">9 kN</span>
-                  </li>
-                </ul>
-                <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg">Optimized for vibration and noise reduction. Ideal for urban rail and steel structure tracks.</p>
-              </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -334,7 +434,7 @@ const FastenersPage = () => {
           {/* Introduction with Carousel */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12">
             {/* Left: Introduction Text */}
-            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed fade-in-section">
+            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed text-justify fade-in-section">
               <p>
                 The W clamp is a resilient fastening component used in railway tracks.
               </p>

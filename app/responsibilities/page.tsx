@@ -1,11 +1,38 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { Download, Eye, X } from 'lucide-react';
+import Image from 'next/image';
 
 const ResponsibilitiesPage = () => {
   useScrollAnimation();
+
+  const brochures = [
+    {
+      title: "Corporate Brochure",
+      filename: "PG Brochure .pdf",
+      description: "Complete overview of Patil Group's services and capabilities",
+      coverImage: "/Brochure/coverimage1.jpg",
+      hasCoverImage: true
+    },
+    {
+      title: "Precast brochure",
+      filename: "precastbrochure.pdf",
+      description: "Comprehensive guide to our precast concrete solutions",
+      coverImage: "/Brochure/coverimage2.jpg",
+      hasCoverImage: true
+    }
+  ];
+
+
+  const handleDownload = (filename: string, title: string) => {
+    const link = document.createElement('a');
+    link.href = `/Brochure/${filename}`;
+    link.download = filename;
+    link.click();
+  };
 
   return (
     <div className="bg-white">
@@ -46,112 +73,137 @@ const ResponsibilitiesPage = () => {
         </div>
       </section>
 
-      {/* CSR Section */}
-      <section className="bg-[#F5F5F7] text-gray-800 overflow-x-hidden">
-        {/* Mobile Layout */}
-        <div className="lg:hidden py-12 sm:py-16">
-          <div className="max-w-4xl mx-auto px-6">
-            {/* Mobile Section Header */}
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#8A393B] mb-4">
-                Our Resources
+      {/* CSR Resources Section */}
+      <section className="bg-white text-black py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Top Section with all three components */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            {/* CSR Policy */}
+            <div className="text-center lg:text-left">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-8">
+                CSR Policy
               </h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full"></div>
-              <p className="text-gray-600 mt-4 text-lg">Corporate social responsibility and documentation</p>
             </div>
-
-            <div className="space-y-8">
-              {/* CSR Policy Card */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
-                <h3 className="text-xl sm:text-2xl font-bold text-[#8A393B] mb-4">CSR Policy</h3>
-                <div className="space-y-3 mb-4">
-                  <div className="h-1.5 bg-gradient-to-r from-blue-600 via-orange-500 to-transparent rounded-full"></div>
-                  <div className="w-2/3 h-1.5 bg-gradient-to-r from-blue-600 via-orange-500 to-transparent rounded-full"></div>
-                </div>
-                <p className="text-lg text-gray-600">Corporate Brochure</p>
+            
+            {/* CSR Committee - Center */}
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F2913F] mb-6">
+                Composition of<br />
+                CSR Committee
+              </h2>
+              <p className="text-lg md:text-xl text-gray-600 mb-8">CSR Annual Action Plan_FY</p>
+              
+              {/* Year Display */}
+              <div className="flex justify-center items-center space-x-8 md:space-x-16 mb-6">
+                <div className="text-xl md:text-2xl font-bold text-black">2022-23</div>
+                <div className="text-xl md:text-2xl font-bold text-black">2024-25</div>
               </div>
-
-              {/* CSR Committee Card */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
-                <h3 className="text-xl sm:text-2xl font-bold text-orange-500 mb-4">Composition of CSR Committee</h3>
-                <p className="text-base text-gray-500 mb-6">CSR Annual Action Plan_FY</p>
-                <div className="flex justify-between items-center mb-4 text-lg font-semibold bg-gray-50 rounded-lg p-4">
-                  <span className="text-[#8A393B]">2022-23</span>
-                  <span className="text-orange-500">2024-25</span>
-                </div>
-                <p className="text-lg font-semibold text-center bg-gray-50 rounded-lg p-3">2023-24</p>
-              </div>
-
-              {/* Brochures Card */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
-                <h3 className="text-xl sm:text-2xl font-bold text-orange-500 mb-4">Brochures</h3>
-                <div className="space-y-4">
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <p className="text-lg text-gray-700 font-medium">Patil Group Fastening plant brochure</p>
-                  </div>
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <p className="text-lg text-gray-700 font-medium">CME brochure</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* CSR Annual Report Card */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
-                <h3 className="text-xl sm:text-2xl font-bold text-[#8A393B] mb-4">CSR PRIL AR 2021-22</h3>
-                <div className="space-y-3 mb-4">
-                  <div className="h-1.5 bg-gradient-to-l from-blue-600 via-orange-500 to-transparent rounded-full"></div>
-                  <div className="w-2/3 h-1.5 bg-gradient-to-l from-blue-600 via-orange-500 to-transparent rounded-full ml-auto"></div>
-                </div>
-                <p className="text-lg text-gray-600">Annual Report Documentation</p>
-              </div>
+              <div className="text-xl md:text-2xl font-bold text-black">2023-24</div>
+            </div>
+            
+            {/* CSR PRIL */}
+            <div className="text-center lg:text-right">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-8">
+                CSR PRIL<br />
+                Ar 2021- 22
+              </h2>
             </div>
           </div>
-        </div>
 
-        {/* Desktop Layout */}
-        <div className="hidden lg:block py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Column 1 */}
-              <div className="lg:border-r border-gray-300 lg:pr-8 space-y-12 text-center lg:text-left">
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#8A393B]">CSR Policy</h3>
-                <div className="space-y-6 -ml-4 sm:-ml-6 lg:-ml-8">
-                  <div className="h-2 bg-gradient-to-r from-blue-600 via-orange-500 to-transparent rounded-full"></div>
-                  <div className="w-2/3 h-2 bg-gradient-to-r from-blue-600 via-orange-500 to-transparent rounded-full"></div>
-                </div>
-                <p className="text-2xl text-gray-600">Corporate Brochure</p>
+          {/* Bottom Section with Brochures */}
+          <div className="w-full">
+            {/* Brochure heading with gradient lines */}
+            <div className="flex items-center mb-12">
+              <div className="flex-1 h-2" style={{
+                background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
+              }}></div>
+              <div className="px-8">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F2913F] leading-tight whitespace-nowrap">
+                  Brochure
+                </h2>
+              </div>
+              <div className="flex-1 h-2" style={{
+                background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
+              }}></div>
               </div>
 
-              {/* Column 2 */}
-              <div className="lg:border-r border-gray-300 lg:px-8 text-center space-y-16">
-                <div>
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-500">Composition of CSR Committee</h3>
-                  <p className="text-xl text-gray-500 mt-2">CSR Annual Action Plan_FY</p>
-                  <div className="flex justify-between items-center mt-8 text-2xl font-semibold px-4">
-                    <span>2022-23</span>
-                    <span>2024-25</span>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+              {brochures.map((brochure, index) => (
+                <div key={index} className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
+                  {/* Card Header with Cover Image or PDF Preview */}
+                  <div className="relative h-80 bg-white overflow-hidden">
+                    {brochure.hasCoverImage && brochure.coverImage ? (
+                      <>
+                        <Image
+                          src={brochure.coverImage}
+                          alt={`${brochure.title} Cover`}
+                          fill
+                          className="object-cover object-center"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                      </>
+                    ) : (
+                      <>
+                        <iframe
+                          src={`/Brochure/${brochure.filename}#page=1&view=FitH&toolbar=0&navpanes=0&scrollbar=0`}
+                          className="w-full h-full transform scale-150 origin-top-left pointer-events-none"
+                          title={`${brochure.title} Preview`}
+                          style={{
+                            width: '150%',
+                            height: '150%',
+                            transform: 'scale(0.67) translate(-25%, -25%)'
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                      </>
+                    )}
                   </div>
-                  <p className="text-2xl font-semibold mt-4">2023-24</p>
+                  
+                  {/* Card Content */}
+                  <div className="p-8 text-white">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
+                      {brochure.title}
+                    </h3>
+                    <p className="text-gray-300 text-base mb-6 leading-relaxed">
+                      {brochure.description}
+                    </p>
+                    
+                    {/* File Info */}
+                    <div className="flex items-center gap-4 mb-8 text-sm text-gray-400">
+                      <span className="flex items-center gap-2">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                        PDF Format
+                      </span>
+                      <span>•</span>
+                      <span>Multiple Pages</span>
+                    </div>
+                    
+                    {/* Action Buttons */}
+                    <div className="flex gap-4">
+                      <button
+                        onClick={() => window.open(`/Brochure/${brochure.filename}`, '_blank')}
+                        className="flex-1 flex items-center justify-center gap-3 bg-gray-700 hover:bg-gray-600 text-white px-6 py-4 rounded-xl font-medium transition-colors duration-200 text-lg"
+                      >
+                        <Eye size={20} />
+                        Quick View
+                      </button>
+                      <button
+                        onClick={() => handleDownload(brochure.filename, brochure.title)}
+                        className="flex-1 flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-500 text-white px-6 py-4 rounded-xl font-medium transition-colors duration-200 text-lg"
+                      >
+                        <Download size={20} />
+                        Download
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-4xl font-bold text-orange-500">Brochure</h3>
-                  <p className="text-2xl text-gray-600 mt-4">Patil Group Fastening plant brochure</p>
-                </div>
-              </div>
-
-              {/* Column 3 */}
-              <div className="lg:pl-8 space-y-12 text-center lg:text-left">
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#8A393B]">CSR PRIL Ar 2021 - 22</h3>
-                <div className="space-y-6 -mr-4 sm:-mr-6 lg:-mr-8">
-                  <div className="h-2 bg-gradient-to-l from-blue-600 via-orange-500 to-transparent rounded-full"></div>
-                  <div className="w-2/3 h-2 bg-gradient-to-l from-blue-600 via-orange-500 to-transparent rounded-full"></div>
-                </div>
-                <p className="text-2xl text-gray-600">Cme brochure</p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
+
     </div>
   );
 };

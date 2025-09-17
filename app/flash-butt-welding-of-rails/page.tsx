@@ -52,51 +52,125 @@ const FlashButtWeldingOfRailsPage = () => {
       </div>
 
       {/* Description Section */}
-      <section className="bg-black py-12 sm:py-16 md:py-20 text-white fade-in-section">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed">
+      <section className="bg-white py-8 sm:py-10 md:py-12 relative">
+        {/* Top Left Gradient Line */}
+        <div 
+          className="absolute hidden lg:block fade-in-section"
+          style={{
+            width: '864px',
+            height: '28px',
+            left: '0px',
+            top: '0px',
+            background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
+          }}
+        />
+        
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+          <p className="text-black text-lg sm:text-2xl leading-relaxed">
             Our flash butt welding plants deliver factory-controlled, high-integrity welded rail panels. Using precision electrical resistance welding, each joint is formed without filler, reducing thermal distortion and improving fatigue resistance.
           </p>
         </div>
+
+        {/* Bottom Right Gradient Line */}
+        <div 
+          className="absolute hidden lg:block fade-in-section"
+          style={{
+            width: '864px',
+            height: '28px',
+            right: '0px',
+            bottom: '40px',
+            background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
+          }}
+        />
       </section>
 
-      {/* Introduction Section */}
-      <section className="bg-black py-8 sm:py-12 md:py-16 fade-in-section">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white text-black p-6 sm:p-8 rounded-lg shadow-lg">
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed text-center">
+      {/* Main Content Section */}
+      <section className="bg-white py-8 sm:py-10 md:py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+          <div className="bg-[#F5F4F1] p-8 sm:p-10 md:p-12 rounded-lg shadow-sm">
+            <p className="text-[#8A393B] text-lg sm:text-xl md:text-2xl leading-relaxed font-medium">
               Patil Group operates India's largest Flash Butt Welding depots, equipped to weld 20-rail panels with advanced infrastructure. With mechanised rail handling systems, these facilities ensure efficiency, safety, and world-class precision for Indian Railways.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Locations and Applications Section */}
-      <section className="bg-black text-white py-12 sm:py-16 md:py-24 lg:py-32 fade-in-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-8 md:gap-12 fade-in-section">
-            <div className="w-full md:w-1/2 order-2 md:order-1">
-              <Image src="/flashbutt2.webp" alt="Flash butt welding equipment" width={600} height={400} className="rounded-lg shadow-lg w-full h-auto" loading="lazy" />
+      {/* Locations and Facilities Section */}
+      <section className="bg-white py-8 sm:py-10 md:py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 fade-in-section">
+            {/* Image */}
+            <div className="w-full md:w-1/2">
+              <Image 
+                src="/flashbutt2.webp" 
+                alt="Flash butt welding equipment operation" 
+                width={800} 
+                height={600} 
+                className="rounded-lg shadow-lg w-full h-auto object-cover" 
+                loading="lazy" 
+              />
             </div>
-            <div className="w-full md:w-1/2 bg-white text-black p-6 sm:p-8 rounded-lg shadow-xl order-1 md:order-2">
-              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#8A393B] leading-relaxed">Patil Group's welding plants are located in:</h3>
-              <ul className="mt-4 space-y-2 list-disc pl-6 text-base sm:text-lg">
-                <li>New Bongaigaon, Assam</li>
-                <li>Rangapani, West Bengal</li>
+            
+            {/* Content */}
+            <div className="w-full md:w-1/2">
+              <h3 className="text-[#F2913F] text-xl sm:text-2xl md:text-3xl font-bold mb-4">
+                Patil Group's welding plants are located in:
+              </h3>
+              <ul className="space-y-2 text-black text-lg sm:text-2xl">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-black rounded-full mr-3 flex-shrink-0"></span>
+                  New Bongaigaon, Assam
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-black rounded-full mr-3 flex-shrink-0"></span>
+                  Rangapani, West Bengal
+                </li>
               </ul>
             </div>
           </div>
-          <div className="mt-12 sm:mt-16 md:mt-24 max-w-4xl fade-in-section">
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-300 leading-relaxed">
+          
+          {/* Bottom Text */}
+          <div className="mt-8 md:mt-10 fade-in-section">
+            <p className="text-black text-lg sm:text-xl md:text-2xl leading-relaxed">
               These facilities support large-scale panel production and direct dispatch to project sites.
-              <span className="block text-orange-400 font-semibold mt-2 sm:mt-3">This system has been integral to:</span>
             </p>
-            <ul className="mt-4 sm:mt-6 space-y-2 sm:space-y-3 list-disc pl-6 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-400">
-              <li>Northeast Frontier Railway projects</li>
-              <li>Konkan Railway sections</li>
-              <li>Bridge and tunnel approaches requiring jointless long panels</li>
-            </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Applications Section */}
+      <section className="bg-white py-8 sm:py-10 md:py-12 relative">
+        {/* Gradient Line */}
+        <div 
+          className="absolute hidden lg:block fade-in-section"
+          style={{
+            width: '864px',
+            height: '28px',
+            right: '0px',
+            top: '60px',
+            background: 'linear-gradient(270deg, #F2913F 0%, #1E3888 50%, #8A393B 100%)'
+          }}
+        />
+        
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+          <h3 className="text-[#F2913F] text-xl sm:text-2xl md:text-3xl font-bold mb-6">
+            This system has been integral to:
+          </h3>
+          
+          <ul className="space-y-3 text-black text-lg sm:text-xl md:text-2xl">
+            <li className="flex items-center">
+              <span className="w-2 h-2 bg-black rounded-full mr-4 flex-shrink-0"></span>
+              Northeast Frontier Railway projects
+            </li>
+            <li className="flex items-center">
+              <span className="w-2 h-2 bg-black rounded-full mr-4 flex-shrink-0"></span>
+              Konkan Railway sections
+            </li>
+            <li className="flex items-center">
+              <span className="w-2 h-2 bg-black rounded-full mr-4 flex-shrink-0"></span>
+              Bridge and tunnel approaches requiring jointless long panels
+            </li>
+          </ul>
         </div>
       </section>
       

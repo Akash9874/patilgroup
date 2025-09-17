@@ -8,7 +8,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 
 const LeadershipCard = ({ image, name, post }: { image: string, name: string, post: string }) => (
-  <div className="bg-[#1E1E1E] text-white">
+  <div className="bg-white text-black">
     <div className="relative h-[450px] sm:h-[550px] md:h-[600px] bg-white">
       <Image
         src={image}
@@ -18,9 +18,9 @@ const LeadershipCard = ({ image, name, post }: { image: string, name: string, po
         objectPosition="center top"
       />
     </div>
-    <div className="text-center mt-3 sm:mt-4 font-clash px-2">
-      <p className="font-bold text-sm sm:text-base">{post}</p>
-      <p className="text-sm sm:text-base">{name}</p>
+    <div className="text-center mt-3 sm:mt-4 font-clash px-2 py-3 bg-[#8A393B]">
+      <p className="font-bold text-sm sm:text-base text-white mb-1">{post}</p>
+      <p className="text-sm sm:text-base text-white font-medium">{name}</p>
     </div>
   </div>
 );
@@ -194,27 +194,30 @@ const ManagementPage = () => {
       </section>
 
       {/* Responsive Our Leadership Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-[#1E1E1E] text-white">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white text-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Enhanced Section Header */}
-          <div className="text-center mb-8 sm:mb-12 md:mb-16">
-            {/* Mobile Header */}
-            <div className="md:hidden">
-              <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 mx-4 border border-gray-700/30">
-                <h2 className="text-2xl sm:text-3xl font-clash font-bold text-amber-500 mb-2">
+          {/* Legacy in Rail Header */}
+          <div className="mb-8 sm:mb-12 md:mb-16 relative">
+            {/* Heading with gradient lines */}
+            <div className="w-full">
+              <div className="flex items-center mb-6">
+                <div className="flex-1 h-2" style={{
+                  background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
+                }}></div>
+                <div className="px-8">
+                  <h2 className="text-4xl sm:text-5xl lg:text-6xl font-clash font-bold text-[#8A393B] leading-tight whitespace-nowrap">
                   Legacy in Rail
                 </h2>
-                <p className="text-base sm:text-lg text-[#8A393B] font-semibold">Led by Experience</p>
-                <div className="w-16 h-0.5 bg-gradient-to-r from-amber-500 to-[#8A393B] mx-auto mt-4 rounded-full"></div>
+                </div>
+                <div className="flex-1 h-2" style={{
+                  background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
+                }}></div>
               </div>
-            </div>
-            
-            {/* Desktop Header */}
-            <div className="hidden md:block">
-              <h2 className="text-4xl lg:text-5xl font-clash font-bold text-amber-500 mb-3 sm:mb-4">
-                Legacy in Rail
-              </h2>
-              <p className="text-xl md:text-2xl text-[#8A393B] font-semibold">Led by Experience</p>
+              
+              {/* Subtitle */}
+              <div className="text-center">
+                <p className="text-xl sm:text-2xl lg:text-3xl text-[#F2913F] font-semibold">Led by Experience</p>
+              </div>
             </div>
           </div>
           
@@ -224,7 +227,7 @@ const ManagementPage = () => {
               <div className="flex touch-pan-y">
                 {leadershipData.map((leader, i) => (
                   <div key={i} className="flex-shrink-0 w-[90%] sm:w-[80%] pl-4 first:pl-6 last:pr-6">
-                    <div className="leadership-card-mobile rounded-2xl border border-gray-700/30 backdrop-blur-sm bg-gray-800/20 overflow-hidden shadow-xl">
+                    <div className="leadership-card-mobile rounded-2xl border border-gray-300/30 backdrop-blur-sm bg-white overflow-hidden shadow-xl">
                       {/* Full Photo Container */}
                       <div className="relative h-[350px] sm:h-[400px] bg-white">
                         <Image
@@ -237,15 +240,13 @@ const ManagementPage = () => {
                       </div>
                       
                       {/* Designation and Name Below Photo */}
-                      <div className="p-4 sm:p-6 text-center bg-[#1E1E1E]">
-                        <p className="text-sm sm:text-base text-amber-400 font-bold uppercase tracking-wider mb-2">
+                      <div className="p-4 sm:p-6 text-center bg-[#8A393B]">
+                        <p className="text-sm sm:text-base text-white font-bold mb-1">
                           {leader.post}
                         </p>
-                        <h3 className="text-base sm:text-lg font-semibold text-white leading-tight">
+                        <h3 className="text-base sm:text-lg font-medium text-white leading-tight">
                           {leader.name}
                         </h3>
-                        {/* Visual accent */}
-                        <div className="w-16 h-1 bg-gradient-to-r from-amber-500 to-[#8A393B] mx-auto mt-3 rounded-full"></div>
                       </div>
                     </div>
                   </div>
@@ -256,17 +257,17 @@ const ManagementPage = () => {
             {/* Mobile Navigation Arrows */}
             <button 
               onClick={mobileScrollPrev} 
-              className="absolute top-1/2 left-2 transform -translate-y-1/2 p-2 rounded-full bg-gray-800/80 hover:bg-gray-700/80 transition-colors z-10 backdrop-blur-sm border border-gray-600/30"
+              className="absolute top-1/2 left-2 transform -translate-y-1/2 p-2 rounded-full bg-gray-200/80 hover:bg-gray-300/80 transition-colors z-10 backdrop-blur-sm border border-gray-400/30"
               aria-label="Previous management member"
             >
-              <ArrowLeft className="h-5 w-5 text-amber-500" />
+              <ArrowLeft className="h-5 w-5 text-[#F2913F]" />
             </button>
             <button 
               onClick={mobileScrollNext} 
-              className="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 rounded-full bg-gray-800/80 hover:bg-gray-700/80 transition-colors z-10 backdrop-blur-sm border border-gray-600/30"
+              className="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 rounded-full bg-gray-200/80 hover:bg-gray-300/80 transition-colors z-10 backdrop-blur-sm border border-gray-400/30"
               aria-label="Next management member"
             >
-              <ArrowRight className="h-5 w-5 text-amber-500" />
+              <ArrowRight className="h-5 w-5 text-[#F2913F]" />
             </button>
 
             {/* Mobile Scroll Indicator */}
@@ -277,8 +278,8 @@ const ManagementPage = () => {
                   onClick={() => mobileEmblaApi && mobileEmblaApi.scrollTo(index)}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     index === selectedIndex 
-                      ? 'bg-amber-500 scale-125' 
-                      : 'bg-gray-600 opacity-50 hover:opacity-75'
+                      ? 'bg-[#F2913F] scale-125' 
+                      : 'bg-gray-400 opacity-50 hover:opacity-75'
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -287,7 +288,7 @@ const ManagementPage = () => {
             
             {/* Mobile Swipe Hint */}
             <div className="text-center mt-4">
-              <p className="text-xs text-gray-400 font-medium">
+              <p className="text-xs text-gray-600 font-medium">
                 ← Swipe to explore →
               </p>
             </div>
@@ -305,11 +306,11 @@ const ManagementPage = () => {
               </div>
             </div>
 
-            <button onClick={scrollPrev} className="absolute top-1/2 -left-16 transform -translate-y-1/2 p-3 rounded-full bg-gray-800/80 hover:bg-gray-700/80 transition-colors z-10 backdrop-blur-sm border border-gray-600/30">
-              <ArrowLeft className="h-6 w-6 text-amber-500" />
+            <button onClick={scrollPrev} className="absolute top-1/2 -left-16 transform -translate-y-1/2 p-3 rounded-full bg-gray-200/80 hover:bg-gray-300/80 transition-colors z-10 backdrop-blur-sm border border-gray-400/30">
+              <ArrowLeft className="h-6 w-6 text-[#F2913F]" />
             </button>
-            <button onClick={scrollNext} className="absolute top-1/2 -right-16 transform -translate-y-1/2 p-3 rounded-full bg-gray-800/80 hover:bg-gray-700/80 transition-colors z-10 backdrop-blur-sm border border-gray-600/30">
-              <ArrowRight className="h-6 w-6 text-amber-500" />
+            <button onClick={scrollNext} className="absolute top-1/2 -right-16 transform -translate-y-1/2 p-3 rounded-full bg-gray-200/80 hover:bg-gray-300/80 transition-colors z-10 backdrop-blur-sm border border-gray-400/30">
+              <ArrowRight className="h-6 w-6 text-[#F2913F]" />
             </button>
           </div>
         </div>
