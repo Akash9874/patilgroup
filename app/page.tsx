@@ -241,7 +241,7 @@ export default function Home() {
               <p className="text-gray-400 text-xs lg:text-sm mb-1">Mar 2024</p>
               <h3 className="text-white text-sm lg:text-base xl:text-lg font-medium mb-3 lg:mb-4 leading-tight">
                 Sleepers supplied for new<br />
-                Pune Metro Corridor
+                Nagpur Metro Corridor
               </h3>
               <Link href="/news" className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
                 Read More
@@ -454,8 +454,8 @@ export default function Home() {
             {/* Mobile Layout */}
             <div className="md:hidden text-center mb-6">
               <h2 className="text-3xl font-bold text-[#8A393B] mb-8">Our Projects</h2>
-              <div className="flex items-center justify-center gap-1">
-                <CarouselPrevious className="relative w-10 h-10 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 shadow-sm" />
+              <div className="flex items-center justify-center">
+                <CarouselPrevious className="relative w-10 h-10 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 shadow-sm -mr-1" />
                 <CarouselNext className="relative w-10 h-10 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706] shadow-sm" />
               </div>
             </div>
@@ -465,8 +465,8 @@ export default function Home() {
               <div>
                 <h2 className="text-4xl font-bold text-[#8A393B] mb-2">Our Projects</h2>
               </div>
-              <div className="flex items-center gap-0">
-                <CarouselPrevious className="relative w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700" />
+              <div className="flex items-center">
+                <CarouselPrevious className="relative w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 -mr-14" />
                 <CarouselNext className="relative w-12 h-12 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706]" />
               </div>
             </div>
