@@ -8,17 +8,21 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 
 const LeadershipCard = ({ image, name, post }: { image: string, name: string, post: string }) => (
-  <div className="bg-white text-black">
-    <div className="relative h-[450px] sm:h-[550px] md:h-[600px] bg-white">
+  <div className="bg-white text-black transform transition-transform duration-300 hover:scale-105 will-change-transform">
+    <div className="relative h-[450px] sm:h-[550px] md:h-[600px] bg-white overflow-hidden">
       <Image
         src={image}
         alt={name}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center top"
+        fill
+        className="object-cover object-center-top transition-transform duration-500 hover:scale-110 will-change-transform"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        priority={false}
+        quality={90}
+        placeholder="blur"
+        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
       />
     </div>
-    <div className="text-center mt-3 sm:mt-4 font-clash px-2 py-3 bg-[#8A393B]">
+    <div className="text-center mt-3 sm:mt-4 font-clash px-2 py-3 bg-[#8A393B] transition-colors duration-300">
       <p className="font-bold text-sm sm:text-base text-white mb-1">{post}</p>
       <p className="text-sm sm:text-base text-white font-medium">{name}</p>
     </div>
@@ -27,77 +31,77 @@ const LeadershipCard = ({ image, name, post }: { image: string, name: string, po
 
 const leadershipData = [
   {
-    image: '/management/lapatil.jpg',
+    image: '/management/lspatilsir.jpg',
     name: 'Dr.L. S. Patil',
     post: 'Executive Chairman',
   },
   {
-    image: '/management/padmajapatil.jpg',
+    image: '/management/padmajamaam.jpg',
     name: 'Mrs.Padmaja Patil',
     post: 'Director',
   },
   {
-    image: '/management/Mr Vikash Kumar Gupta - Group CEO.jpg',
+    image: '/management/vikashguptasir.jpg',
     name: 'Mr.Vikash Kumar Gupta',
     post: 'Group Director & CEO',
   },
   {
-    image: '/management/manish.jpg',
+    image: '/management/manishsir.jpg',
     name: 'Mr.Manish Ishwarlal Panchal',
     post: 'Executive Director',
   },
   {
-    image: '/management/ajay.jpg',
+    image: '/management/ajayrajputsir.jpg',
     name: 'Dr.Ajay Rajput',
     post: 'MD Marketing',
   },
   {
-    image: '/management/Mr Kaushik Ghosh - Group Managing Director.jpg',
+    image: '/management/kaushikghoshsir.jpg',
     name: 'Mr.Kaushik Ghosh',
     post: 'MD Track System',
   },
   {
-    image: '/management/avchandra.jpg',
+    image: '/management/avchandrasir.jpg',
     name: 'Mr.A.V. Chandra Gupta',
     post: 'CEO - Growth Centre',
   },
   {
-    image: '/management/Mr Jawahar Lal Sinhari - CFO.jpg',
+    image: '/management/jawaharsir.jpg',
     name: 'Mr.Jawahar Lal Sinhari',
     post: 'Group CFO',
   },
   {
-    image: '/management/sajjan.jpg',
+    image: '/management/bnsajjansir.jpg',
     name: 'Mr.B.N. Sajjan',
     post: 'Executive Director- Corporate Affairs',
   },
   {
-    image: '/management/_DSC5895.jpg',
+    image: '/management/princesir.jpg',
     name: 'Mr.D.Prince',
     post: 'Director - Sleeper Operations',
   },
   {
-    image: '/management/arjyakumar.jpg',
+    image: '/management/arjyakumarsir.jpg',
     name: 'Mr.Arjya Kumar Mishra',
     post: 'Group CHRO',
   },
   {
-    image: '/management/phanikumar.jpg',
+    image: '/management/dvrphanisir.jpg',
     name: 'Mr.DVR Phani Kumar',
     post: 'CEO Track Systems,Engg & Contracting',
   },
   {
-    image: '/management/rahulagarwal.jpg',
+    image: '/management/rahulsir.jpg',
     name: 'Mr.Rahul Agarwal',
     post: 'Director Foundry',
   },
   {
-    image: '/management/Mr Satish Chandra Ayla - CEO TRack Systems and Engineering.jpg',
+    image: '/management/satishchandrasir.jpg',
     name: 'Mr.Satish Chandra Alya',
     post: 'COO-Track',
   },
   {
-    image: '/management/_DSC5857.jpg',
+    image: '/management/gowrishankarsir.jpg',
     name: 'Mr.Gowri Sankar Lavudi',
     post: 'Vice President - RMBD',
   },
@@ -106,33 +110,86 @@ const leadershipData = [
 const ManagementPage = () => {
   useScrollAnimation();
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [emblaRef, emblaApi] = useEmblaCarousel({ slidesToScroll: 'auto', containScroll: 'trimSnaps' });
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+  
+  // Desktop carousel with smooth animations
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    slidesToScroll: 1,
+    containScroll: 'trimSnaps',
+    skipSnaps: false,
+    duration: 25,
+    dragFree: false,
+    loop: false,
+    align: 'start'
+  });
+  
+  // Mobile carousel with optimized performance
   const [mobileEmblaRef, mobileEmblaApi] = useEmblaCarousel({ 
     align: 'center',
     containScroll: 'trimSnaps',
-    dragFree: true,
-    loop: false
+    dragFree: false,
+    loop: false,
+    skipSnaps: false,
+    duration: 20,
+    startIndex: 0,
+    slidesToScroll: 1
   });
 
-  const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
-  const scrollNext = () => emblaApi && emblaApi.scrollNext();
+  const scrollPrev = () => {
+    if (emblaApi && canScrollPrev) {
+      emblaApi.scrollPrev();
+    }
+  };
   
-  const mobileScrollPrev = () => mobileEmblaApi && mobileEmblaApi.scrollPrev();
-  const mobileScrollNext = () => mobileEmblaApi && mobileEmblaApi.scrollNext();
+  const scrollNext = () => {
+    if (emblaApi && canScrollNext) {
+      emblaApi.scrollNext();
+    }
+  };
+  
+  const mobileScrollPrev = () => {
+    if (mobileEmblaApi) {
+      mobileEmblaApi.scrollPrev();
+    }
+  };
+  
+  const mobileScrollNext = () => {
+    if (mobileEmblaApi) {
+      mobileEmblaApi.scrollNext();
+    }
+  };
 
-  const onSelect = () => {
+  const onDesktopSelect = () => {
+    if (!emblaApi) return;
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  };
+
+  const onMobileSelect = () => {
     if (!mobileEmblaApi) return;
     setSelectedIndex(mobileEmblaApi.selectedScrollSnap());
   };
 
   useEffect(() => {
-    if (!mobileEmblaApi) return;
-    onSelect();
-    mobileEmblaApi.on('select', onSelect);
+    if (!emblaApi) return;
+    onDesktopSelect();
+    emblaApi.on('select', onDesktopSelect);
+    emblaApi.on('reInit', onDesktopSelect);
     return () => {
-      if (mobileEmblaApi) {
-        mobileEmblaApi.off('select', onSelect);
-      }
+      emblaApi.off('select', onDesktopSelect);
+      emblaApi.off('reInit', onDesktopSelect);
+    };
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!mobileEmblaApi) return;
+    onMobileSelect();
+    mobileEmblaApi.on('select', onMobileSelect);
+    mobileEmblaApi.on('reInit', onMobileSelect);
+    return () => {
+      mobileEmblaApi.off('select', onMobileSelect);
+      mobileEmblaApi.off('reInit', onMobileSelect);
     };
   }, [mobileEmblaApi]);
   
@@ -224,23 +281,27 @@ const ManagementPage = () => {
           {/* Mobile Layout - Swipeable Carousel */}
           <div className="md:hidden relative">
             <div className="overflow-hidden" ref={mobileEmblaRef}>
-              <div className="flex touch-pan-y">
+              <div className="flex touch-pan-y" style={{ backfaceVisibility: 'hidden', perspective: '1000px' }}>
                 {leadershipData.map((leader, i) => (
-                  <div key={i} className="flex-shrink-0 w-[90%] sm:w-[80%] pl-4 first:pl-6 last:pr-6">
-                    <div className="leadership-card-mobile rounded-2xl border border-gray-300/30 backdrop-blur-sm bg-white overflow-hidden shadow-xl">
+                  <div key={i} className="flex-shrink-0 w-[90%] sm:w-[80%] pl-4 first:pl-6 last:pr-6 will-change-transform" style={{ transform: 'translateZ(0)' }}>
+                    <div className="leadership-card-mobile rounded-2xl border border-gray-300/30 backdrop-blur-sm bg-white overflow-hidden shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl will-change-transform">
                       {/* Full Photo Container */}
-                      <div className="relative h-[350px] sm:h-[400px] bg-white">
+                      <div className="relative h-[350px] sm:h-[400px] bg-white overflow-hidden">
                         <Image
                           src={leader.image}
                           alt={leader.name}
                           fill
-                          className="object-cover object-center-top"
+                          className="object-cover object-center-top transition-transform duration-500 hover:scale-110 will-change-transform"
                           sizes="(max-width: 640px) 90vw, 80vw"
+                          priority={i < 3}
+                          quality={90}
+                          placeholder="blur"
+                          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                         />
                       </div>
                       
                       {/* Designation and Name Below Photo */}
-                      <div className="p-4 sm:p-6 text-center bg-[#8A393B]">
+                      <div className="p-4 sm:p-6 text-center bg-[#8A393B] transition-colors duration-300">
                         <p className="text-sm sm:text-base text-white font-bold mb-1">
                           {leader.post}
                         </p>
@@ -257,14 +318,14 @@ const ManagementPage = () => {
             {/* Mobile Navigation Arrows */}
             <button 
               onClick={mobileScrollPrev} 
-              className="absolute top-1/2 left-2 transform -translate-y-1/2 p-2 rounded-full bg-gray-200/80 hover:bg-gray-300/80 transition-colors z-10 backdrop-blur-sm border border-gray-400/30"
+              className="absolute top-1/2 left-2 transform -translate-y-1/2 p-2 rounded-full bg-gray-200/80 hover:bg-gray-300/80 active:bg-gray-400/80 transition-all duration-150 z-10 backdrop-blur-sm border border-gray-400/30 hover:scale-105 active:scale-95"
               aria-label="Previous management member"
             >
               <ArrowLeft className="h-5 w-5 text-[#F2913F]" />
             </button>
             <button 
               onClick={mobileScrollNext} 
-              className="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 rounded-full bg-gray-200/80 hover:bg-gray-300/80 transition-colors z-10 backdrop-blur-sm border border-gray-400/30"
+              className="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 rounded-full bg-gray-200/80 hover:bg-gray-300/80 active:bg-gray-400/80 transition-all duration-150 z-10 backdrop-blur-sm border border-gray-400/30 hover:scale-105 active:scale-95"
               aria-label="Next management member"
             >
               <ArrowRight className="h-5 w-5 text-[#F2913F]" />
@@ -297,20 +358,36 @@ const ManagementPage = () => {
           {/* Desktop Layout - Original Carousel */}
           <div className="hidden md:block relative">
             <div className="overflow-hidden" ref={emblaRef}>
-              <div className="flex">
+              <div className="flex" style={{ backfaceVisibility: 'hidden', perspective: '1000px' }}>
                 {leadershipData.map((leader, i) => (
-                  <div key={i} className="flex-grow-0 flex-shrink-0 w-full md:w-1/3 pl-4 sm:pl-6 md:pl-8">
+                  <div key={i} className="flex-grow-0 flex-shrink-0 w-full md:w-1/3 pl-4 sm:pl-6 md:pl-8 will-change-transform" style={{ transform: 'translateZ(0)' }}>
                     <LeadershipCard image={leader.image} name={leader.name} post={leader.post} />
                   </div>
                 ))}
               </div>
             </div>
 
-            <button onClick={scrollPrev} className="absolute top-1/2 -left-16 transform -translate-y-1/2 p-3 rounded-full bg-gray-200/80 hover:bg-gray-300/80 transition-colors z-10 backdrop-blur-sm border border-gray-400/30">
-              <ArrowLeft className="h-6 w-6 text-[#F2913F]" />
+            <button 
+              onClick={scrollPrev} 
+              disabled={!canScrollPrev}
+              className={`absolute top-1/2 -left-16 transform -translate-y-1/2 p-3 rounded-full transition-all duration-200 z-10 backdrop-blur-sm border border-gray-400/30 ${
+                canScrollPrev 
+                  ? 'bg-gray-200/80 hover:bg-gray-300/80 active:bg-gray-400/80 hover:scale-105 active:scale-95 cursor-pointer' 
+                  : 'bg-gray-100/50 cursor-not-allowed opacity-50'
+              }`}
+            >
+              <ArrowLeft className={`h-6 w-6 ${canScrollPrev ? 'text-[#F2913F]' : 'text-gray-400'}`} />
             </button>
-            <button onClick={scrollNext} className="absolute top-1/2 -right-16 transform -translate-y-1/2 p-3 rounded-full bg-gray-200/80 hover:bg-gray-300/80 transition-colors z-10 backdrop-blur-sm border border-gray-400/30">
-              <ArrowRight className="h-6 w-6 text-[#F2913F]" />
+            <button 
+              onClick={scrollNext} 
+              disabled={!canScrollNext}
+              className={`absolute top-1/2 -right-16 transform -translate-y-1/2 p-3 rounded-full transition-all duration-200 z-10 backdrop-blur-sm border border-gray-400/30 ${
+                canScrollNext 
+                  ? 'bg-gray-200/80 hover:bg-gray-300/80 active:bg-gray-400/80 hover:scale-105 active:scale-95 cursor-pointer' 
+                  : 'bg-gray-100/50 cursor-not-allowed opacity-50'
+              }`}
+            >
+              <ArrowRight className={`h-6 w-6 ${canScrollNext ? 'text-[#F2913F]' : 'text-gray-400'}`} />
             </button>
           </div>
         </div>
