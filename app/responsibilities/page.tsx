@@ -84,7 +84,7 @@ const ResponsibilitiesPage = () => {
                 CSR Policy
               </h2>
             </div>
-            
+
             {/* CSR Committee - Center */}
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F2913F] mb-6">
@@ -99,16 +99,16 @@ const ResponsibilitiesPage = () => {
                 <div className="text-xl md:text-2xl font-bold text-black">2024-25</div>
               </div>
               <div className="text-xl md:text-2xl font-bold text-black">2023-24</div>
-            </div>
-            
+              </div>
+
             {/* CSR PRIL */}
             <div className="text-center lg:text-right">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-8">
                 CSR PRIL<br />
                 Ar 2021- 22
               </h2>
-            </div>
           </div>
+        </div>
 
           {/* Bottom Section with Brochures */}
           <div className="w-full">
@@ -121,7 +121,7 @@ const ResponsibilitiesPage = () => {
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F2913F] leading-tight whitespace-nowrap">
                   Brochure
                 </h2>
-              </div>
+                </div>
               <div className="flex-1 h-2" style={{
                 background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
               }}></div>
@@ -177,7 +177,7 @@ const ResponsibilitiesPage = () => {
                       </span>
                       <span>•</span>
                       <span>Multiple Pages</span>
-                    </div>
+                </div>
                     
                     {/* Action Buttons */}
                     <div className="flex gap-4">
@@ -195,8 +195,8 @@ const ResponsibilitiesPage = () => {
                         <Download size={20} />
                         Download
                       </button>
-                    </div>
-                  </div>
+                </div>
+              </div>
                 </div>
               ))}
             </div>

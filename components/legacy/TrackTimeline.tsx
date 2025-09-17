@@ -2,6 +2,7 @@
 
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from 'next/image';
 
 export type TimelineSide = 'left' | 'right';
 
@@ -81,6 +82,17 @@ export default function TrackTimeline({
 								{/* Enhanced Content Card */}
 								<div className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 shadow-sm timeline-card border border-gray-100">
 									<p className="text-2xl sm:text-3xl font-extrabold text-[#F2913F] mb-3">{item.year}</p>
+									{item.image && (
+										<div className="mb-4">
+											<Image
+												src={item.image}
+												alt={`${item.year} timeline image`}
+												width={400}
+												height={250}
+												className="w-full h-auto rounded-lg object-cover"
+											/>
+										</div>
+									)}
 									<h4 className="text-lg sm:text-xl font-semibold text-[#8A393B] leading-relaxed mb-2 text-justify">{item.title}</h4>
 									{item.body && <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{item.body}</p>}
 								</div>
@@ -120,44 +132,148 @@ export default function TrackTimeline({
                     style={{ y: trainY, x: trainXOffset }}
                 />
 
-				<ul className="relative space-y-32">
-					{normalizedItems.map((item, index) => (
-						<li key={`${item.year}-${index}`} className="relative">
-							<div className={`grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-20 items-start ${item.side === 'left' ? '' : ''}`}>
-								{item.side === 'left' ? (
-									<>
-										<motion.div
-											initial={{ opacity: 0, y: 40 }}
-											whileInView={{ opacity: 1, y: 0 }}
-											transition={{ duration: 0.6 }}
-											viewport={{ once: true, amount: 0.3 }}
-											className="text-right"
-										>
-											<p className="text-4xl md:text-5xl font-extrabold text-[#F2913F]">{item.year}</p>
-											<h4 className="text-2xl md:text-3xl font-semibold mt-4 text-[#8A393B] leading-relaxed text-justify">{item.title}</h4>
-											{item.body && <p className="text-lg text-gray-700 mt-4 leading-relaxed">{item.body}</p>}
-										</motion.div>
-										<div className="hidden md:block" />
-									</>
-								) : (
-									<>
-										<div className="hidden md:block" />
-										<motion.div
-											initial={{ opacity: 0, y: 40 }}
-											whileInView={{ opacity: 1, y: 0 }}
-											transition={{ duration: 0.6 }}
-											viewport={{ once: true, amount: 0.3 }}
-										>
-											<p className="text-4xl md:text-5xl font-extrabold text-[#F2913F]">{item.year}</p>
-											<h4 className="text-2xl md:text-3xl font-semibold mt-4 text-[#8A393B] leading-relaxed text-justify">{item.title}</h4>
-											{item.body && <p className="text-lg text-gray-700 mt-4 leading-relaxed">{item.body}</p>}
-										</motion.div>
-									</>
-								)}
-							</div>
-						</li>
+				{/* 1970s - Single vertical layout */}
+				<div className="relative mb-32">
+					{normalizedItems.slice(0, 1).map((item, index) => (
+						<div key={`${item.year}-${index}`} className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-20 items-start">
+							{item.image ? (
+								<motion.div
+									initial={{ opacity: 0, x: -40 }}
+									whileInView={{ opacity: 1, x: 0 }}
+									transition={{ duration: 0.6 }}
+									viewport={{ once: true, amount: 0.3 }}
+									className="flex justify-end"
+								>
+									<Image
+										src={item.image}
+										alt={`${item.year} timeline image`}
+										width={500}
+										height={350}
+										className="rounded-lg shadow-lg object-cover max-w-full h-auto"
+									/>
+								</motion.div>
+							) : (
+								<div className="hidden md:block" />
+							)}
+							<motion.div
+								initial={{ opacity: 0, y: 40 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.6 }}
+								viewport={{ once: true, amount: 0.3 }}
+							>
+								<p className="text-4xl md:text-5xl font-extrabold text-[#F2913F]">{item.year}</p>
+								<h4 className="text-2xl md:text-3xl font-semibold mt-4 text-[#8A393B] leading-relaxed text-justify">{item.title}</h4>
+								{item.body && <p className="text-lg text-gray-700 mt-4 leading-relaxed">{item.body}</p>}
+							</motion.div>
+						</div>
 					))}
-				</ul>
+				</div>
+
+				{/* 1980s to Late 2020s - Paired horizontal layout */}
+				<div className="relative space-y-16">
+					{/* Group items in pairs, excluding first (1970s) and last (2025) */}
+					{Array.from({ length: Math.ceil((normalizedItems.length - 2) / 2) }, (_, pairIndex) => {
+						const startIndex = 1 + pairIndex * 2; // Start from index 1 (skip 1970s)
+						const leftItem = normalizedItems[startIndex];
+						const rightItem = normalizedItems[startIndex + 1];
+						
+						return (
+							<div key={`pair-${pairIndex}`} className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-20 items-start">
+								{/* Left side item */}
+								{leftItem && (
+									<motion.div
+										initial={{ opacity: 0, x: -40 }}
+										whileInView={{ opacity: 1, x: 0 }}
+										transition={{ duration: 0.6 }}
+										viewport={{ once: true, amount: 0.3 }}
+										className="text-right"
+									>
+										<p className="text-4xl md:text-5xl font-extrabold text-[#F2913F]">{leftItem.year}</p>
+										<h4 className="text-2xl md:text-3xl font-semibold mt-4 text-[#8A393B] leading-relaxed text-justify">{leftItem.title}</h4>
+										{leftItem.body && <p className="text-lg text-gray-700 mt-4 leading-relaxed">{leftItem.body}</p>}
+										{leftItem.image && (
+											<div className="mt-6">
+												<Image
+													src={leftItem.image}
+													alt={`${leftItem.year} timeline image`}
+													width={500}
+													height={350}
+													className="rounded-lg shadow-lg object-cover max-w-full h-auto ml-auto"
+												/>
+											</div>
+										)}
+									</motion.div>
+								)}
+								
+								{/* Right side item */}
+								{rightItem && (
+									<motion.div
+										initial={{ opacity: 0, x: 40 }}
+										whileInView={{ opacity: 1, x: 0 }}
+										transition={{ duration: 0.6, delay: 0.2 }}
+										viewport={{ once: true, amount: 0.3 }}
+									>
+										<p className="text-4xl md:text-5xl font-extrabold text-[#F2913F]">{rightItem.year}</p>
+										<h4 className="text-2xl md:text-3xl font-semibold mt-4 text-[#8A393B] leading-relaxed text-justify">{rightItem.title}</h4>
+										{rightItem.body && <p className="text-lg text-gray-700 mt-4 leading-relaxed">{rightItem.body}</p>}
+										{rightItem.image && (
+											<div className="mt-6">
+												<Image
+													src={rightItem.image}
+													alt={`${rightItem.year} timeline image`}
+													width={500}
+													height={350}
+													className="rounded-lg shadow-lg object-cover max-w-full h-auto"
+												/>
+											</div>
+										)}
+									</motion.div>
+								)}
+								
+								{/* Fill empty space if only one item in pair */}
+								{!rightItem && <div className="hidden md:block" />}
+							</div>
+						);
+					})}
+				</div>
+
+				{/* 2025 - Single vertical layout */}
+				<div className="relative mt-32">
+					{normalizedItems.slice(-1).map((item, index) => (
+						<div key={`${item.year}-${index}`} className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-20 items-start">
+							<motion.div
+								initial={{ opacity: 0, y: 40 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.6 }}
+								viewport={{ once: true, amount: 0.3 }}
+								className="text-right"
+							>
+								<p className="text-4xl md:text-5xl font-extrabold text-[#F2913F]">{item.year}</p>
+								<h4 className="text-2xl md:text-3xl font-semibold mt-4 text-[#8A393B] leading-relaxed text-justify">{item.title}</h4>
+								{item.body && <p className="text-lg text-gray-700 mt-4 leading-relaxed">{item.body}</p>}
+							</motion.div>
+							{item.image ? (
+								<motion.div
+									initial={{ opacity: 0, x: 40 }}
+									whileInView={{ opacity: 1, x: 0 }}
+									transition={{ duration: 0.6 }}
+									viewport={{ once: true, amount: 0.3 }}
+									className="flex justify-start"
+								>
+									<Image
+										src={item.image}
+										alt={`${item.year} timeline image`}
+										width={500}
+										height={350}
+										className="rounded-lg shadow-lg object-cover max-w-full h-auto"
+									/>
+								</motion.div>
+							) : (
+								<div className="hidden md:block" />
+							)}
+						</div>
+					))}
+				</div>
 			</div>
 		</section>
 	);

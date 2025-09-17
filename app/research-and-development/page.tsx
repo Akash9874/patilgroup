@@ -158,7 +158,7 @@ const ResearchAndDevelopmentPage = () => {
           <p className="mt-3 sm:mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-[#8A393B]">
             The Salient features of the New Design:
           </p>
-          <ol className="mt-6 sm:mt-8 space-y-3 sm:space-y-4 list-decimal list-inside text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
+          <ul className="mt-6 sm:mt-8 space-y-3 sm:space-y-4 list-disc list-inside text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
             <li>
               The adoption of M60 grade concrete, which means more durable sleepers with increase in the life span.
             </li>
@@ -180,7 +180,7 @@ const ResearchAndDevelopmentPage = () => {
             <li>
               Apart from all the above advantages, it has got all the advantages what the present design of RDSO RT - 2496 has got.
             </li>
-          </ol>
+          </ul>
         </div>
       </section>
     </div>

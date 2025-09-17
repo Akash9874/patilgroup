@@ -7,7 +7,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        clash: ['"Clash Grotesk"', 'sans-serif'],
+        sans: ['var(--font-helvetica)', 'Helvetica', 'Arial', 'sans-serif'],
+        helvetica: ['var(--font-helvetica)', 'Helvetica', 'Arial', 'sans-serif'],
+        clash: ['"Clash Grotesk"', 'sans-serif'], // Keep clash available if needed
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
