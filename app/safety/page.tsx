@@ -68,7 +68,7 @@ const SafetyPage = () => {
                 Protecting tracks
               </h2>
               <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#F2913F] leading-tight">
-                Securing Journeys
+                Securing journeys
               </h3>
             </div>
           </div>
@@ -76,7 +76,7 @@ const SafetyPage = () => {
           {/* Description text */}
             <div className="text-center">
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed max-w-5xl mx-auto text-justify">
-                Patil Group builds practical, durable solutions to keep railway corridors safe and operational. From high speed routes to regional lines, our systems are made to prevent intrusions, reduce risks and ensure uninterrupted train movement.
+                Patil Group builds practical, durable solutions to keep railway corridors safe and operational. From high-speed routes to regional lines, our systems are made to prevent intrusions, reduce risks and ensure uninterrupted train movement.
               </p>
           </div>
         </div>
@@ -218,7 +218,7 @@ const SafetyPage = () => {
                   <div>
                     <h4 className="text-2xl md:text-3xl font-bold text-black mb-4">Crash barriers and security walls</h4>
                     <p className="text-xl md:text-2xl text-gray-800 leading-relaxed mb-6 text-justify">
-                      Crash barriers and security walls are critical safety installations designed to shield work zones, safeguard trackside equipment, and prevent unauthorized access. Built with reinforced materials, they provide a strong physical barrier against vehicle impact and trespassing, significantly reducing the risk of accidents near rail corridors. These systems are engineered for durability, withstanding harsh weather and continuous operational stress while requiring minimal upkeep. Beyond protection, they also help streamline operations by clearly demarcating restricted areas, ensuring both worker and passenger safety. Widely deployed across major infrastructure projects, crash barriers and security walls form an essential layer of defence in modern rail networks.
+                      Crash barriers and security walls are critical safety installations designed to shield work zones, safeguard trackside equipment, and prevent unauthorized access. Built with reinforced materials, they provide a strong physical barrier against vehicle impact and trespassing, significantly reducing the risk of accidents near rail corridors. These systems are engineered for durability, withstanding harsh weather and continuous operational stress while requiring minimal upkeep. Beyond protection, they also help streamline operations by clearly demarcating restricted areas, ensuring both worker and passenger safety. Widely deployed across major infrastructure projects, crash barriers and security walls form an essential layer of defense in modern rail networks.
                     </p>
                     <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
                       <Image

@@ -25,11 +25,11 @@ const WiresPage = () => {
           <div className="relative z-20 h-full flex items-center justify-center">
             <div className="text-center px-6 w-full max-w-lg mx-auto">
               <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-3 drop-shadow-2xl">
-                HTS WIRES
+                HTS Wires
               </h1>
               <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full shadow-lg"></div>
               <p className="text-white text-xl sm:text-2xl mt-8 font-medium drop-shadow-xl leading-relaxed">
-                High Tensile Steel Wires for Railway Infrastructure
+                High-tensile steel wires for railway infrastructure
               </p>
             </div>
           </div>
@@ -48,7 +48,7 @@ const WiresPage = () => {
           <div className="relative z-20 h-full flex items-center max-w-7xl mx-auto px-8">
             <div className="w-1/3">
               <h1 className="text-7xl font-bold text-white mt-2">
-                HTS<br/>WIRES
+                HTS<br/>Wires
               </h1>
             </div>
           </div>
@@ -115,10 +115,10 @@ const WiresPage = () => {
           <div className="mb-8 sm:mb-12 md:mb-16 fade-in-section">
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8">
               <span className="text-[#8A393B]">HTS Wires</span><br />
-              <span className="text-[#F2913F] ml-12 sm:ml-20 md:ml-32 lg:ml-40">Strength Behind Every Track</span>
+              <span className="text-[#F2913F] ml-12 sm:ml-20 md:ml-32 lg:ml-40">Strength behind every track</span>
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed text-justify">
-              Patil Group is India's largest HTS wire manufacturer for concrete sleepers, producing 3-ply 3 mm and 7-ply 9.5 mm strand wires at ISO 9001-certified plants. With a total capacity of 60,000 MTPA, we are among the largest suppliers of steel wires for ports, tunnels, major bridges, and Indian Railways' largest single order.
+              Patil Group is India's largest HTS wire manufacturer for concrete sleepers, producing 3‑ply 3 mm and 7‑ply 9.5 mm strand wires at ISO 9001‑certified plants. With a total capacity of 60,000 MTPA, we are among the largest suppliers of steel wires for ports, tunnels, major bridges, and Indian Railways’ largest single order.
             </p>
           </div>
           
@@ -242,7 +242,7 @@ const WiresPage = () => {
                     Products include
                   </p>
                   <p className="text-lg sm:text-xl md:text-2xl text-gray-700">
-                    3 mm × 3 ply, 9.5 mm × 7 ply, and 4 mm PC wire.
+                    3 mm × 3‑ply, 9.5 mm × 7‑ply, and 4 mm PC wire.
                   </p>
                 </div>
               </div>
@@ -256,8 +256,8 @@ const WiresPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="fade-in-section">
             <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              <span className="text-[#F2913F]">Aluminium Conductor Steel </span>
-              <span className="text-[#8A393B]">Reinforced (ACSR) Core Wire</span>
+              <span className="text-[#F2913F]">Aluminum Conductor Steel </span>
+              <span className="text-[#8A393B]">Reinforced (ACSR) core wire</span>
             </h3>
             <p className="text-xl sm:text-2xl md:text-3xl text-gray-700 leading-relaxed">
               Manufactured for electric traction used in 25 kV railway systems

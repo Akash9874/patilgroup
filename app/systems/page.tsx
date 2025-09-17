@@ -20,7 +20,7 @@ const systemsData = [
   },
   {
     title: 'Precast Plinth',
-    description: 'Factory-prepared plinth units that offer cleaner installation, reduced onsite time, and greater curve control.',
+    description: 'Factory-prepared plinth units that offer cleaner installation, reduced on-site time, and greater curve control.',
     link: '/precast-plinth',
     image: '/precast1.jpg'
   },
@@ -167,7 +167,7 @@ const SystemsContent = () => {
       </section>
 
       {/* Systems Section */}
-      <section className="bg-white text-gray-800 pb-24 overflow-hidden">
+      <section className="bg-white text-gray-800 pt-16 md:pt-24 pb-24 overflow-hidden">
         <div className="space-y-12 md:space-y-24">
           {systemsData.map((system, index) => (
             <div key={index} className="relative group fade-in-section">

@@ -13,7 +13,7 @@ const TurnoutsAndSwitchesPage = () => {
       <div className="relative h-[600px]">
         <Image
           src="/engineering-infra.jpg" // placeholder
-          alt="Turnouts & Switches"
+          alt="Turnouts and switches"
           layout="fill"
           objectFit="cover"
           className="z-0"
@@ -23,7 +23,7 @@ const TurnoutsAndSwitchesPage = () => {
           <div className="w-1/2">
             <p className="text-7xl font-bold text-[#8A393B] opacity-75">05</p>
             <h1 className="text-7xl font-bold text-white mt-2">
-              Turnouts &<br/>Switches
+              Turnouts and<br/>Switches
             </h1>
           </div>
         </div>
@@ -36,7 +36,7 @@ const TurnoutsAndSwitchesPage = () => {
             <h2 className="text-3xl font-semibold mb-6">Engineered for precise movement and control</h2>
             <h3 className="text-5xl font-bold text-[#8A393B] mb-6">Key Applications:</h3>
             <ul className="list-disc list-inside space-y-2 text-xl">
-              <li>High speed and heavy haul rail</li>
+              <li>High-speed and heavy haul rail</li>
               <li>Urban metro systems</li>
               <li>Slab track and ballasted track systems</li>
               <li>All gauges and fastening types</li>

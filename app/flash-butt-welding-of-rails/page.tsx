@@ -24,7 +24,7 @@ const FlashButtWeldingOfRailsPage = () => {
           <div className="absolute inset-0 flex items-center justify-center z-20">
             <div className="text-center px-6">
               <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-4 drop-shadow-2xl">
-                Flash Butt Welding
+                Flash‑butt welding
               </h1>
               <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full shadow-lg"></div>
             </div>
@@ -41,10 +41,10 @@ const FlashButtWeldingOfRailsPage = () => {
           <div className="absolute bottom-0 left-0 z-20">
             <div className="px-6 sm:px-8 md:px-12 pb-16">
               <h1 className="text-white font-bold leading-[0.95] text-6xl md:text-7xl lg:text-8xl">
-                Flash Butt Welding
+                Flash‑butt welding
               </h1>
               <p className="text-gray-200 text-lg mt-4 font-medium">
-                High-Precision Rail Panel Fabrication
+                High‑precision rail‑panel fabrication
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ const FlashButtWeldingOfRailsPage = () => {
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
           <p className="text-black text-lg sm:text-2xl leading-relaxed">
-            Our flash butt welding plants deliver factory-controlled, high-integrity welded rail panels. Using precision electrical resistance welding, each joint is formed without filler, reducing thermal distortion and improving fatigue resistance.
+            Our flash‑butt welding plants deliver factory‑controlled, high‑integrity welded rail panels. Using precision electrical‑resistance welding, each joint is formed without filler, reducing thermal distortion and improving fatigue resistance.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ const FlashButtWeldingOfRailsPage = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
           <div className="bg-[#F5F4F1] p-8 sm:p-10 md:p-12 rounded-lg shadow-sm">
             <p className="text-[#8A393B] text-lg sm:text-xl md:text-2xl leading-relaxed font-medium">
-              Patil Group operates India's largest Flash Butt Welding depots, equipped to weld 20-rail panels with advanced infrastructure. With mechanised rail handling systems, these facilities ensure efficiency, safety, and world-class precision for Indian Railways.
+              Patil Group operates India's largest flash‑butt welding depots, equipped to weld 20‑rail panels with advanced infrastructure. With mechanized rail‑handling systems, these facilities ensure efficiency, safety, and world‑class precision for Indian Railways.
             </p>
           </div>
         </div>

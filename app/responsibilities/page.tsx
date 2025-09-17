@@ -11,8 +11,8 @@ const ResponsibilitiesPage = () => {
 
   const brochures = [
     {
-      title: "Corporate Brochure",
-      filename: "PG Brochure .pdf",
+      title: "Corporate brochure",
+      filename: "PG-brochure.pdf",
       description: "Complete overview of Patil Group's services and capabilities",
       coverImage: "/Brochure/coverimage1.jpg",
       hasCoverImage: true
@@ -105,7 +105,7 @@ const ResponsibilitiesPage = () => {
             <div className="text-center lg:text-right">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-8">
                 CSR PRIL<br />
-                Ar 2021- 22
+                AR 2021–22
               </h2>
           </div>
         </div>
@@ -119,7 +119,7 @@ const ResponsibilitiesPage = () => {
               }}></div>
               <div className="px-8">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F2913F] leading-tight whitespace-nowrap">
-                  Brochure
+                  Brochures
                 </h2>
                 </div>
               <div className="flex-1 h-2" style={{

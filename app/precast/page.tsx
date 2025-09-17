@@ -10,9 +10,9 @@ const PrecastPage = () => {
   // Product data with images and descriptions
   const products = [
     {
-      name: 'U Drains',
+      name: 'U-drains',
       image: '/p2.jpg',
-      description: 'Engineered for rapid surface water management, our U Drains ensure smooth flow and easy maintenance in urban and highway projects. Manufactured using high-strength concrete with integrated reinforcement, these U-shaped drainage channels provide superior hydraulic performance while maintaining structural integrity under heavy traffic loads. Their modular construction allows quick installation and seamless integration with existing drainage networks.'
+      description: 'Engineered for rapid surface-water management, our U-drains ensure smooth flow and easy maintenance in urban and highway projects. Manufactured using high-strength concrete with integrated reinforcement, these U-shaped drainage channels provide superior hydraulic performance while maintaining structural integrity under heavy traffic loads. Their modular construction allows quick installation and seamless integration with existing drainage networks.'
     },
     {
       name: 'Box Culverts',
@@ -25,9 +25,9 @@ const PrecastPage = () => {
       description: 'Factory-finished manhole chambers that enable faster underground utility access with superior structural integrity. Produced under controlled conditions with advanced sealing systems and corrosion-resistant materials, they ensure consistent quality, watertight performance, and resistance to harsh underground environments. Ideal for sewer lines, stormwater drains, telecom, and power networks, providing reliable solutions for modern urban infrastructure.'
     },
     {
-      name: 'Beams & Columns',
+      name: 'Beams and Columns',
       image: '/p3.jpg',
-      description: 'Precision-moulded precast beams and columns that offer high load capacity and faster assembly at site. Manufactured in controlled factory conditions with high-grade concrete and strategically placed reinforcement, they ensure dimensional accuracy, consistent strength, and superior surface finish. Designed to withstand heavy loads and dynamic stresses, these components are ideal for bridges, industrial structures, and commercial complexes.'
+      description: 'Precision-molded precast beams and columns that offer high load capacity and faster on-site assembly. Manufactured in controlled factory conditions with high-grade concrete and strategically placed reinforcement, they ensure dimensional accuracy, consistent strength, and a superior surface finish. Designed to withstand heavy loads and dynamic stresses, these components are ideal for bridges, industrial structures, and commercial complexes.'
     },
     {
       name: 'Walls',
@@ -40,12 +40,12 @@ const PrecastPage = () => {
       description: 'Precast floor and roof slabs enabling faster project turnaround with reduced on-site labor dependency. Manufactured under strict quality control with optimized reinforcement layouts and high-performance concrete mixtures, these slabs ensure uniform strength, superior finish, and long-term durability. Suitable for residential, commercial, and industrial structures, providing cost-effective solutions that enhance construction speed and efficiency.'
     },
     {
-      name: 'Bus Stops',
+      name: 'Bus stops',
       image: '/precast3.jpg',
       description: 'Smartly designed precast bus stop units combining strength, aesthetics, and ease of installation. Produced with high-grade concrete and engineered with weather-resistant materials, these units incorporate integrated seating, lighting provisions, and advertisement panels while maintaining structural integrity. Perfect for smart city initiatives, these prefabricated units significantly reduce installation time and maintenance costs.'
     },
     {
-      name: 'Toilet Blocks',
+      name: 'Toilet blocks',
       image: '/p6.jpg',
       description: 'Portable and hygienic precast toilet blocks tailored for urban, rural, and smart city sanitation projects. These units incorporate advanced ventilation systems, anti-bacterial surface treatments, and water-efficient fixtures to ensure optimal hygiene standards and user comfort. Essential for public facilities, construction sites, and rural development programs, supporting government sanitation initiatives with dignified, accessible facilities.'
     },

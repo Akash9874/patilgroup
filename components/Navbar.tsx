@@ -90,16 +90,16 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
         navIsScrolled
-          ? 'bg-black/40 backdrop-blur-sm shadow-sm' 
-          : 'bg-black/30'
+          ? 'bg-black/90 backdrop-blur-md shadow-lg' 
+          : 'bg-black/70 backdrop-blur-sm'
       }`}
       style={{ 
         position: 'fixed', 
         top: 0, 
-        transform: 'translateY(0px)',
-        willChange: 'background-color'
+        transform: 'translateY(0)',
+        willChange: 'background-color, backdrop-filter'
       }}
       onMouseLeave={() => {
         setIsAboutMenuOpen(false);
@@ -277,7 +277,7 @@ const Navbar = () => {
       </div>
       
       {/* About Us Mega Menu */}
-      <div className={`absolute top-full left-0 w-full bg-black/40 backdrop-blur-sm shadow-lg transition-all duration-300 ease-in-out ${isAboutMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
+      <div className={`absolute top-full left-0 w-full bg-black/90 backdrop-blur-md shadow-lg transition-all duration-300 ease-in-out ${isAboutMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {aboutLinks.map((link) => (
@@ -290,7 +290,7 @@ const Navbar = () => {
       </div>
 
       {/* Products Mega Menu */}
-      <div className={`absolute top-full left-0 w-full bg-black/40 backdrop-blur-sm shadow-lg transition-all duration-300 ease-in-out ${isProductsMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
+      <div className={`absolute top-full left-0 w-full bg-black/90 backdrop-blur-md shadow-lg transition-all duration-300 ease-in-out ${isProductsMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {productLinks.map((link) => (
@@ -303,7 +303,7 @@ const Navbar = () => {
       </div>
 
       {/* Systems Mega Menu */}
-      <div className={`absolute top-full left-0 w-full bg-black/40 backdrop-blur-sm shadow-lg transition-all duration-300 ease-in-out ${isSystemsMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
+      <div className={`absolute top-full left-0 w-full bg-black/90 backdrop-blur-md shadow-lg transition-all duration-300 ease-in-out ${isSystemsMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {systemLinks.map((link) => (
@@ -607,7 +607,7 @@ const Navbar = () => {
                  onClick={() => setIsMobileMenuOpen(false)}
                  className="block py-4 border-b border-gray-800 text-white hover:text-amber-400 transition-colors duration-200"
                >
-                 <span className="text-lg font-medium">Career</span>
+                 <span className="text-lg font-medium">Careers</span>
                </Link>
 
 

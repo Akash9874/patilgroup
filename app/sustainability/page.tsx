@@ -139,7 +139,7 @@ every process."
               {
                 title: "Water reuse", 
                 items: ["Recycled curing water is processed through closed-loop Water Treatment Plants (WTPs), dramatically reducing overall consumption and ensuring efficient use of every drop. By implementing zero-discharge processes across all facilities, the system prevents waste and protects natural water bodies from contamination."],
-                image: "/wateresue.jpg",
+                image: "/waterreuse.jpg",
                 color: "from-blue-500 to-cyan-600"
               },
               {
@@ -224,7 +224,7 @@ every process."
                 </div>
                 <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
                   <Image
-                    src="/wateresue.jpg"
+                    src="/waterreuse.jpg"
                     alt="Water reuse system"
                     width={800}
                     height={700}

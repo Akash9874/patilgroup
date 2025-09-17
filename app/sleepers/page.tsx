@@ -85,7 +85,7 @@ const SleepersPage = () => {
             <div className="md:hidden text-center fade-in-section">
               <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/30">
                 <TypingAnimation
-                  text="Patil Group manufactures pre stressed concrete sleepers designed for high load, high speed rail conditions"
+                  text="Patil Group manufactures prestressed concrete sleepers designed for high-load, high-speed rail conditions"
                   showCursor
                   speed={30}
                   className="block text-base sm:text-lg font-light text-white leading-relaxed"
@@ -98,7 +98,7 @@ const SleepersPage = () => {
             <div className="hidden md:flex">
                 <div className="w-full md:w-4/5 pr-6 md:pr-10">
                     <TypingAnimation
-                        text="Patil Group manufactures pre stressed concrete sleepers designed for high load, high speed rail conditions"
+                        text="Patil Group manufactures prestressed concrete sleepers designed for high-load, high-speed rail conditions"
                         showCursor
                         speed={30}
                         className="block text-lg md:text-2xl font-light text-white leading-relaxed fade-in-section"
@@ -119,7 +119,7 @@ const SleepersPage = () => {
               Composite Sleepers
             </h2>
             <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F2913F] mb-8 leading-tight ml-16 sm:ml-20 md:ml-32 lg:ml-40">
-              Smarter, Sustainable Track Solutions
+              Smarter, sustainable track solutions
             </h3>
           </div>
 
@@ -203,7 +203,7 @@ const SleepersPage = () => {
                 onClick={() => toggleSection('bridge')}
               >
                 <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F]">
-                  Bridge & Girder Applications
+                  Bridge and Girder Applications
                 </h4>
                 <svg 
                   className={`w-6 h-6 text-[#F2913F] transition-transform duration-300 ${
@@ -239,7 +239,7 @@ const SleepersPage = () => {
                 onClick={() => toggleSection('special')}
               >
                 <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F]">
-                  Special & Custom Sleepers
+                  Special and Custom Sleepers
                 </h4>
                 <svg 
                   className={`w-6 h-6 text-[#F2913F] transition-transform duration-300 ${
@@ -257,7 +257,7 @@ const SleepersPage = () => {
                   <ul className="space-y-3 text-gray-800 text-lg">
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-[#F2913F] rounded-full mt-3 mr-4 flex-shrink-0"></span>
-                      Tailored for ballasted track, open-deck bridges, points & crossings, and level crossings.
+                      Tailored for ballasted track, open-deck bridges, points and crossings, and level crossings.
                     </li>
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-[#F2913F] rounded-full mt-3 mr-4 flex-shrink-0"></span>

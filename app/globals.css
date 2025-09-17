@@ -128,8 +128,15 @@ img,
 /* Smooth scrolling optimizations */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 100px; /* Increased to account for navbar height */
   -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure navbar stays on top */
+nav {
+  position: fixed !important;
+  top: 0 !important;
+  z-index: 9999 !important;
 }
 
 * {

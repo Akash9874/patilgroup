@@ -158,7 +158,7 @@ export default function Home() {
                 </h2>
                 <p className="text-gray-400 text-xs mb-3">Mar 2024</p>
                 <h3 className="text-white text-base font-medium mb-4 leading-tight">
-                  Sleepers supplied for new Pune Metro Corridor
+                  Sleepers supplied for the new Pune Metro corridor
                 </h3>
                 <Link href="/news" className="text-[#F2913F] font-medium text-sm hover:text-[#D97706] transition-colors duration-300 flex items-center group">
                   Read More
@@ -184,7 +184,7 @@ export default function Home() {
                 </h2>
                 <p className="text-gray-400 text-xs mb-3">Dec 2023</p>
                 <h3 className="text-white text-base font-medium mb-4 leading-tight">
-                  Partnered on Mumbai-Ahmedabad bullet train trial track
+                  Partnered on the Mumbai–Ahmedabad bullet train trial track
                 </h3>
                 <Link href="/news" className="text-[#F2913F] font-medium text-sm hover:text-[#D97706] transition-colors duration-300 flex items-center group">
                   Read More
@@ -405,14 +405,14 @@ export default function Home() {
               <div className="bg-white rounded-xl p-4 shadow-sm fade-in-section">
                 <div className="text-center">
                   <StatCounter end={50} duration={2.5} suffix="+" />
-                  <div className="text-gray-500 text-xs font-medium mt-1">years on the job</div>
+                  <div className="text-gray-500 text-xs font-medium mt-1">years of experience</div>
                 </div>
               </div>
               
               <div className="bg-white rounded-xl p-4 shadow-sm fade-in-section" style={{ animationDelay: '200ms' }}>
                 <div className="text-center">
                   <StatCounter end={100} duration={2.5} suffix="%" />
-                  <div className="text-gray-500 text-xs font-medium mt-1">Clients Satisfactions</div>
+                  <div className="text-gray-500 text-xs font-medium mt-1">Client Satisfaction</div>
                 </div>
               </div>
               
@@ -428,11 +428,11 @@ export default function Home() {
             <div className="hidden md:grid grid-cols-3 text-center">
               <div className="flex flex-col items-center justify-center fade-in-section">
                 <StatCounter end={50} duration={2.5} suffix="+" />
-                <div className="text-gray-500 text-base font-medium">years on the job</div>
+                <div className="text-gray-500 text-base font-medium">years of experience</div>
               </div>
               <div className="flex flex-col items-center justify-center fade-in-section" style={{ transitionDelay: '200ms' }}>
                 <StatCounter end={100} duration={2.5} suffix="%" />
-                <div className="text-gray-500 text-base font-medium">Clients Satisfactions</div>
+                <div className="text-gray-500 text-base font-medium">Client Satisfaction</div>
               </div>
               <div className="flex flex-col items-center justify-center fade-in-section" style={{ transitionDelay: '400ms' }}>
                 <StatCounter end={4000000} duration={2.5} suffix="+" />

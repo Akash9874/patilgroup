@@ -22,7 +22,7 @@ const products = [
     },
     {
       name: "Wires",
-      description: "Pre stressed steel strands for sleeper reinforcement",
+      description: "Prestressed steel strands for sleeper reinforcement",
       link: "/wires",
       image: "/htswireslider.jpg",
     },
@@ -83,7 +83,7 @@ const ProductsPage = () => {
       </section>
 
       {/* Middle section redesigned to match Systems page style */}
-      <section className="bg-white text-gray-800 pb-24 overflow-hidden">
+      <section className="bg-white text-gray-800 pt-16 md:pt-24 pb-24 overflow-hidden">
         <div className="space-y-12 md:space-y-24">
           {products.map((p, index) => (
             <div key={index} className="relative group fade-in-section">

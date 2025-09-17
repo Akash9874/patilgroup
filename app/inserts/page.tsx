@@ -17,7 +17,7 @@ const InsertsPage = () => {
         <div className="md:hidden h-screen relative">
           <Image
             src="/insertshero1.jpg"
-            alt="SGCI Inserts, Base Plates and Other Engineering Castings"
+            alt="SGCI Inserts, Base Plates, and Other Engineering Castings"
             layout="fill"
             objectFit="cover"
             className="z-0"
@@ -27,7 +27,7 @@ const InsertsPage = () => {
           <div className="relative z-20 h-full flex items-center justify-center">
             <div className="text-center px-6 w-full max-w-lg mx-auto">
               <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-3 drop-shadow-2xl">
-                SGCI Inserts & Castings
+                SGCI Inserts and Castings
               </h1>
               <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full shadow-lg"></div>
               <p className="text-white text-xl sm:text-2xl mt-8 font-medium drop-shadow-xl leading-relaxed">
@@ -41,7 +41,7 @@ const InsertsPage = () => {
         <div className="hidden md:block relative h-[600px]">
           <Image
             src="/insertshero1.jpg"
-            alt="SGCI Inserts, Base Plates and Other Engineering Castings"
+            alt="SGCI Inserts, Base Plates, and Other Engineering Castings"
             layout="fill"
             objectFit="cover"
             className="z-0"
@@ -69,10 +69,10 @@ const InsertsPage = () => {
             </h3>
             <div className="space-y-6 sm:space-y-8 text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed">
               <p className="text-justify">
-                Patil Group manufactures ductile iron and cast iron castings on advanced DISA ARPA 450 and ARPA 300 lines. With facilities in Bokaro (23,000 MT) and Hyderabad (13,000 MT), we deliver castings from 1 kg to 40 kg with assured consistency.
+                Patil Group manufactures ductile-iron and cast-iron castings on advanced DISA ARPA 450 and ARPA 300 lines. With facilities in Bokaro (23,000 MT) and Hyderabad (13,000 MT), we deliver castings from 1 kg to 40 kg with assured consistency.
               </p>
               <p className="text-justify">
-                Both plants hold RDSO and Delhi Metro approvals and are equipped with special-purpose machines and IoT systems, fully aligned with Industry 4.0 standards
+                Both plants hold RDSO and Delhi Metro approvals and are equipped with special-purpose machines and IoT systems, fully aligned with Industry 4.0 standards.
               </p>
             </div>
           </div>
@@ -102,7 +102,7 @@ const InsertsPage = () => {
                   <div className="space-y-1">
                     <h4 className="text-lg sm:text-xl font-bold text-black">SGCI INSERT</h4>
                     <p className="text-lg sm:text-xl text-black">RT 6901</p>
-                    <p className="text-lg sm:text-xl text-black">1.484 Kg</p>
+                    <p className="text-lg sm:text-xl text-black">1.484 kg</p>
               </div>
             </div>
 
@@ -120,7 +120,7 @@ const InsertsPage = () => {
                   <div className="space-y-1">
                     <h4 className="text-lg sm:text-xl font-bold text-black">SGCI INSERT</h4>
                     <p className="text-lg sm:text-xl text-black">RT 3705</p>
-                    <p className="text-lg sm:text-xl text-black">1.97 Kg</p>
+                    <p className="text-lg sm:text-xl text-black">1.97 kg</p>
                   </div>
                 </div>
               </div>
@@ -143,7 +143,7 @@ const InsertsPage = () => {
                 />
               </div>
               <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700 leading-relaxed text-justify">
-                Patil Group produces SGCI inserts for all sleeper types, with our Bokaro plant housing the country's largest facility at a capacity of 1.3 million inserts per month.
+                Patil Group produces SGCI inserts for all sleeper types, with our Bokaro plant housing the country's largest facility, with a capacity of 1.3 million inserts per month.
               </p>
             </div>
           </div>
@@ -159,7 +159,7 @@ const InsertsPage = () => {
             width: '364px',
             height: '28px',
             left: '0px',
-            top: '60px',
+            top: '70px',
             background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
           }}
         />
@@ -177,7 +177,7 @@ const InsertsPage = () => {
             {/* Left side - Content */}
             <div className="lg:col-span-2">
               <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700 leading-relaxed text-justify">
-                We manufacture 2-hole and 4-hole base plates for metro projects, supplying directly to MMRDA and DMRC to support reliable urban transit.
+                We manufacture two-hole and four-hole base plates for metro projects, supplying directly to MMRDA and DMRC to support reliable urban transit.
               </p>
             </div>
 
@@ -186,15 +186,15 @@ const InsertsPage = () => {
               <div className="bg-gray-50 rounded-lg p-6 mb-4">
             <Image
               src="/baseplates.jpg"
-                  alt="MMRDA Project Coated 4 hole Base Plate" 
+                  alt="MMRDA project coated four-hole base plate" 
                   width={500} 
               height={500}
                   className="mx-auto object-contain h-96 w-auto" 
                 />
               </div>
               <div className="space-y-1">
-                <h4 className="text-lg sm:text-xl font-bold text-black">MMRDA Project</h4>
-                <p className="text-lg sm:text-xl text-black">Coated 4 hole Base Plate</p>
+                <h4 className="text-lg sm:text-xl font-bold text-black">MMRDA project</h4>
+                <p className="text-lg sm:text-xl text-black">Coated four-hole base plate</p>
                 <p className="text-lg sm:text-xl text-black">9.30 kg</p>
               </div>
             </div>
@@ -216,7 +216,7 @@ const InsertsPage = () => {
                   <div className="bg-gray-50 rounded-lg p-6 mb-4 w-full max-w-sm">
               <Image
                 src="/bsytem1.jpg"
-                        alt="DAKO-CZ India Pvt Ltd Hinge" 
+                        alt="DAKO-CZ India Pvt Ltd hinge" 
                         width={300} 
                         height={200} 
                         className="mx-auto object-contain h-40 w-auto" 
@@ -226,7 +226,7 @@ const InsertsPage = () => {
                     <h4 className="text-lg sm:text-xl font-bold text-black">DAKO-CZ India Pvt Ltd, Hyderabad</h4>
                     <p className="text-lg sm:text-xl text-black">Hinge</p>
                     <p className="text-lg sm:text-xl text-black">BK 5551</p>
-                    <p className="text-lg sm:text-xl text-black">13.0kg</p>
+                    <p className="text-lg sm:text-xl text-black">13.0 kg</p>
                   </div>
                 </div>
 
@@ -235,7 +235,7 @@ const InsertsPage = () => {
                   <div className="bg-gray-50 rounded-lg p-6 mb-4 w-full max-w-sm">
               <Image
                 src="/bsystem2.jpg"
-                        alt="DAKO-CZ India Pvt Ltd Lining Holder" 
+                        alt="DAKO-CZ India Pvt Ltd lining holder" 
                         width={300} 
                         height={200} 
                         className="mx-auto object-contain h-40 w-auto" 
@@ -243,7 +243,7 @@ const InsertsPage = () => {
                     </div>
                   <div className="space-y-1">
                     <h4 className="text-lg sm:text-xl font-bold text-black">DAKO-CZ India Pvt Ltd, Hyderabad</h4>
-                    <p className="text-lg sm:text-xl text-black">Lining Holder LH & RH</p>
+                    <p className="text-lg sm:text-xl text-black">Lining holder (LH and RH)</p>
                     <p className="text-lg sm:text-xl text-black">20270-163 & 20270-164</p>
                     <p className="text-lg sm:text-xl text-black">8.10 kg</p>
                   </div>
@@ -284,7 +284,7 @@ const InsertsPage = () => {
             width: '364px',
             height: '28px',
             left: '0px',
-            top: '20px',
+            top: '30px',
             background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
           }}
         />
@@ -300,7 +300,7 @@ const InsertsPage = () => {
                 </h2>
               </div>
               <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700 leading-relaxed text-justify">
-                We supply precision castings for suspension assemblies, covering eight labyrinth ring types and suspension tubes, engineered for stability and long service life
+                We supply precision castings for suspension assemblies, covering eight labyrinth ring types and suspension tubes, engineered for stability and long service life.
               </p>
             </div>
 
@@ -309,7 +309,7 @@ const InsertsPage = () => {
               <div className="bg-gray-50 rounded-lg p-6 mb-4">
             <Image
               src="/suspension.jpg"
-                  alt="Indore Nitriders Lining Ladyrinthring" 
+                  alt="Indore Nitriders lining labyrinth ring" 
                   width={300} 
                   height={300} 
                   className="mx-auto object-contain h-64 w-auto" 
@@ -317,9 +317,9 @@ const InsertsPage = () => {
               </div>
               <div className="space-y-1 text-left">
                 <h4 className="text-lg sm:text-xl font-bold text-black">Indore Nitriders; Indore Lining</h4>
-                <p className="text-lg sm:text-xl text-black">Ladyrinthring (8 different Parts)</p>
+                <p className="text-lg sm:text-xl text-black">Labyrinth ring (eight different parts)</p>
                 <p className="text-lg sm:text-xl text-black">1209-01-211-927</p>
-                <p className="text-lg sm:text-xl text-black">10.00 to 30.00kg</p>
+                <p className="text-lg sm:text-xl text-black">10.00 to 30.00 kg</p>
               </div>
             </div>
           </div>

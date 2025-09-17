@@ -112,7 +112,7 @@ const FastenersPage = () => {
             <div className="flex">
                 <div className="w-full md:w-4/5 pr-0 md:pr-6 lg:pr-10">
                     <TypingAnimation
-                      text="Patil Group has already set up global manufacturing facilities under the Make in India initiative capable of supplying world class fastening systems for railway infrastructure"
+                      text="Patil Group has set up global manufacturing facilities under the Make in India initiative, capable of supplying world-class fastening systems for railway infrastructure"
                       showCursor
                       speed={30}
                       className="block text-base sm:text-lg md:text-xl lg:text-2xl font-light text-white leading-relaxed fade-in-section"
@@ -147,7 +147,7 @@ const FastenersPage = () => {
         <div 
           className="absolute hidden lg:block fade-in-section"
           style={{
-            width: '864px',
+            width: '764px',
             height: '28px',
             right: '0px',
             top: '70px',
@@ -176,7 +176,7 @@ const FastenersPage = () => {
                 </div>
                 <div>
                   <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F] mb-4">
-                    ERC clips: mark III and V
+                    ERC clips: Mark III and V
                   </h4>
                   <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
                     Manufactured in Medchal<br />
@@ -188,7 +188,7 @@ const FastenersPage = () => {
                     Production Capacity
                   </h4>
                   <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
-                    Manufactured around 110000 units Per Annum
+                    Approximately 110,000 units per annum
                   </p>
                 </div>
               </div>
@@ -241,7 +241,7 @@ const FastenersPage = () => {
                 <div>
                   <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
                     Allows tension clamping and tilt protection<br /><br />
-                    Reduces long term maintenance
+                    Reduces long-term maintenance
                   </p>
                 </div>
               </div>
@@ -257,7 +257,7 @@ const FastenersPage = () => {
                 </div>
                 <div>
                   <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
-                    - World class labs<br />
+                    - World-class labs<br />
                     - Fatigue testing machines<br />
                     - GOM Scanner<br />
                     - Salt spray testing machine<br />
@@ -266,7 +266,7 @@ const FastenersPage = () => {
                 </div>
                 <div>
                   <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
-                    According to STR(Standard Technology Requirement) by RDSO. These testing machines are not available anywhere in india.
+                    As per STR (Schedule of Technical Requirements) of RDSO. These testing machines are not available anywhere else in India.
                   </p>
                 </div>
               </div>
@@ -282,7 +282,7 @@ const FastenersPage = () => {
         <div
           className="absolute hidden lg:block fade-in-section"
           style={{
-            width: '564px',
+            width: '464px',
             height: '28px',
             left: '0px',
             top: '50%',
@@ -294,7 +294,7 @@ const FastenersPage = () => {
         <div
           className="absolute hidden lg:block fade-in-section"
           style={{
-            width: '564px',
+            width: '464px',
             height: '28px',
             right: '0px',
             top: '50%',
@@ -336,16 +336,16 @@ const FastenersPage = () => {
                 <div className="order-1 lg:order-2">
                   <div className="space-y-4">
                     <div className="flex justify-between items-center border-b border-gray-200 pb-3">
-                      <span className="text-gray-700 text-lg">Maximum Axle Load (Upto)</span>
-                      <span className="text-[#F2913F] font-bold text-lg">22.5 Ton</span>
+                      <span className="text-gray-700 text-lg">Maximum axle load (up to)</span>
+                      <span className="text-[#F2913F] font-bold text-lg">22.5 tonnes</span>
                     </div>
                     <div className="flex justify-between items-center border-b border-gray-200 pb-3">
-                      <span className="text-gray-700 text-lg">Maximum Speed (Upto)</span>
-                      <span className="text-[#F2913F] font-bold text-lg">300 Kmph</span>
+                      <span className="text-gray-700 text-lg">Maximum speed (up to)</span>
+                      <span className="text-[#F2913F] font-bold text-lg">300 km/h</span>
                     </div>
                     <div className="flex justify-between items-center border-b border-gray-200 pb-3">
                       <span className="text-gray-700 text-lg">Toe Load (per clip)</span>
-                      <span className="text-[#F2913F] font-bold text-lg">9 KN</span>
+                      <span className="text-[#F2913F] font-bold text-lg">9 kN</span>
                     </div>
                     <div className="flex justify-between items-center border-b border-gray-200 pb-3">
                       <span className="text-gray-700 text-lg">Insulation</span>
@@ -353,14 +353,14 @@ const FastenersPage = () => {
                     </div>
                     <div className="flex justify-between items-center border-b border-gray-200 pb-3">
                       <span className="text-gray-700 text-lg">Static stiffness of pad</span>
-                      <span className="text-[#F2913F] font-bold text-lg">22.5 KN/mm</span>
+                      <span className="text-[#F2913F] font-bold text-lg">22.5 kN/mm</span>
                     </div>
                     <div className="flex justify-between items-center border-b border-gray-200 pb-3">
                       <span className="text-gray-700 text-lg">Longitudinal restraint (as per EN 13146)</span>
-                      <span className="text-[#F2913F] font-bold text-lg">9 KN</span>
+                      <span className="text-[#F2913F] font-bold text-lg">9 kN</span>
                     </div>
                     <div className="pt-4">
-                      <p className="text-gray-700 text-lg">Pre assembled system suitable for all slab track installations</p>
+                      <p className="text-gray-700 text-lg">Pre-assembled system suitable for all slab-track installations</p>
                     </div>
                   </div>
                 </div>
@@ -389,16 +389,16 @@ const FastenersPage = () => {
                 <div>
                   <div className="space-y-4">
                     <div className="flex justify-between items-center border-b border-gray-200 pb-3">
-                      <span className="text-gray-700 text-lg">Maximum Axle Load (Upto)</span>
-                      <span className="text-[#F2913F] font-bold text-lg">22.5 Ton</span>
+                      <span className="text-gray-700 text-lg">Maximum axle load (up to)</span>
+                      <span className="text-[#F2913F] font-bold text-lg">22.5 tonnes</span>
                     </div>
                     <div className="flex justify-between items-center border-b border-gray-200 pb-3">
-                      <span className="text-gray-700 text-lg">Maximum Speed (Upto)</span>
-                      <span className="text-[#F2913F] font-bold text-lg">300 Kmph</span>
+                      <span className="text-gray-700 text-lg">Maximum speed (up to)</span>
+                      <span className="text-[#F2913F] font-bold text-lg">300 km/h</span>
                     </div>
                     <div className="flex justify-between items-center border-b border-gray-200 pb-3">
                       <span className="text-gray-700 text-lg">Toe Load (per clip)</span>
-                      <span className="text-[#F2913F] font-bold text-lg">9 KN</span>
+                      <span className="text-[#F2913F] font-bold text-lg">9 kN</span>
                     </div>
                     <div className="flex justify-between items-center border-b border-gray-200 pb-3">
                       <span className="text-gray-700 text-lg">Insulation</span>
@@ -406,11 +406,11 @@ const FastenersPage = () => {
                     </div>
                     <div className="flex justify-between items-center border-b border-gray-200 pb-3">
                       <span className="text-gray-700 text-lg">Static stiffness of pad</span>
-                      <span className="text-[#F2913F] font-bold text-lg">22.5 KN/mm</span>
+                      <span className="text-[#F2913F] font-bold text-lg">22.5 kN/mm</span>
                     </div>
                     <div className="flex justify-between items-center border-b border-gray-200 pb-3">
                       <span className="text-gray-700 text-lg">Longitudinal restraint (as per EN 13146)</span>
-                      <span className="text-[#F2913F] font-bold text-lg">9 KN</span>
+                      <span className="text-[#F2913F] font-bold text-lg">9 kN</span>
                     </div>
                     <div className="pt-4">
                       <p className="text-gray-700 text-lg">Optimized for vibration and noise reduction.<br />Ideal for urban rail and steel structure tracks.</p>
@@ -439,13 +439,13 @@ const FastenersPage = () => {
                 The W clamp is a resilient fastening component used in railway tracks.
               </p>
               <p>
-                It ensures secure holding of rails to sleepers — maintaining track stability under dynamic loads.
+                It ensures secure retention of rails to sleepers—maintaining track stability under dynamic loads.
               </p>
               <p>
                 Its design allows controlled flexibility, reducing vibration and stress on the fastening system.
               </p>
               <p>
-                Patil Group manufactures W clamps with precision engineering and tested spring steel — built for long service life, safety, and performance across diverse track conditions.
+                Patil Group manufactures W clamps using precision engineering and tested spring steel—built for long service life, safety, and performance across diverse track conditions.
               </p>
             </div>
 
@@ -499,12 +499,12 @@ const FastenersPage = () => {
               </h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center border-b border-gray-200 pb-3">
-                  <span className="font-medium text-gray-700">Maximum Axle Load (Upto)</span>
-                  <span className="text-[#F2913F] font-bold text-lg">18 Tonne</span>
+                  <span className="font-medium text-gray-700">Maximum axle load (up to)</span>
+                  <span className="text-[#F2913F] font-bold text-lg">18 tonnes</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-gray-200 pb-3">
-                  <span className="font-medium text-gray-700">Maximum Speed (Upto)</span>
-                  <span className="text-[#F2913F] font-bold text-lg">110 kmph</span>
+                  <span className="font-medium text-gray-700">Maximum speed (up to)</span>
+                  <span className="text-[#F2913F] font-bold text-lg">110 km/h</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-gray-200 pb-3">
                   <span className="font-medium text-gray-700">Curve radius (minimum)</span>
@@ -536,12 +536,12 @@ const FastenersPage = () => {
               </h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center border-b border-gray-200 pb-3">
-                  <span className="font-medium text-gray-700">Maximum Axle Load (Upto)</span>
-                  <span className="text-[#F2913F] font-bold text-lg">22 Tonne</span>
+                  <span className="font-medium text-gray-700">Maximum axle load (up to)</span>
+                  <span className="text-[#F2913F] font-bold text-lg">22 tonnes</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-gray-200 pb-3">
-                  <span className="font-medium text-gray-700">Maximum Speed (Upto)</span>
-                  <span className="text-[#F2913F] font-bold text-lg">200 kmph</span>
+                  <span className="font-medium text-gray-700">Maximum speed (up to)</span>
+                  <span className="text-[#F2913F] font-bold text-lg">200 km/h</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-gray-200 pb-3">
                   <span className="font-medium text-gray-700">Curve radius (minimum)</span>
