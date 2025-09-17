@@ -134,7 +134,7 @@ const WiresPage = () => {
             width: '864px',
             height: '28px',
             right: '0px',
-            top: '60px',
+            top: '70px',
             background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
           }}
         />

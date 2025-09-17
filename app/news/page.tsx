@@ -8,7 +8,7 @@ import { motion, Variants } from 'framer-motion';
 
 const cards = [
   {
-    image: '/engineering-infra.jpg',
+    image: '/highspeedtrain.jpg',
     title: 'Modern Fastening for high speed trains.',
     paragraphs: [
       "Under the Atmanirbhar Bharat initiative, Patil Group has developed a modern fastening system for Indian Railways' ballasted tracks, supporting semi-high-speed (200 kmph) and heavy axle load operations with ±1 mm gauge tolerance.",
@@ -21,19 +21,19 @@ const cards = [
   },
   // Placeholder slots for 5 more cards; you can replace with your designs later
   {
-    image: '/engineering-infra.jpg',
-    title: 'India’s largest foundry opened in Bokaro by Patil group.',
+    image: '/foundrynews.jpg',
+    title: "India's largest foundry opened in Bokaro by Patil group.",
     paragraphs: [
-      'Established in 2020, Patil Foundry Bokaro is one of India’s largest manufacturers of ductile iron castings, serving global railways and general engineering sectors.',
+      'Established in 2020, Patil Foundry Bokaro is one of India\'s largest manufacturers of ductile iron castings, serving global railways and general engineering sectors.',
       'With Indian Railways as a key customer, the foundry features a Disa high-pressure automatic molding line, auto pouring, and sand testing facilities. Focused on quality, it aims for global market leadership.',
     ],
     bullets: [],
   },
   {
-    image: '/engineering-infra.jpg',
+    image: '/whistleblowerpolicynews.jpg',
     title: 'Introducing the Whistleblower Policy',
     paragraphs: [
-      "Patil Group’s Whistleblower Policy enables confidential, anonymous reporting of misconduct or policy violations without fear of retaliation. Aligned with our values of trust and accountability, it fosters a safe, ethical, and transparent work environment.",
+      "Patil Group's Whistleblower Policy enables confidential, anonymous reporting of misconduct or policy violations without fear of retaliation. Aligned with our values of trust and accountability, it fosters a safe, ethical, and transparent work environment.",
     ],
     bullets: [
       'Anonymous & confidential reporting',
@@ -42,26 +42,26 @@ const cards = [
     ],
   },
   {
-    image: '/engineering-infra.jpg',
+    image: '/apnatech.jpg',
     title: "Patil Group recently acquired 'ApnaTech'.",
     paragraphs: [
-      'Patil Group has acquired Apna Technologies (ApnaTech), a market leader in railway track diagnosis systems. ApnaTech specializes in safety-enhancing solutions like Wheel Impact Load Detectors, Hot Box Detectors, and Onboard Systems. This strategic move strengthens Patil Group’s position in the growing railway infrastructure sector.',
+      'Patil Group has acquired Apna Technologies (ApnaTech), a market leader in railway track diagnosis systems. ApnaTech specializes in safety-enhancing solutions like Wheel Impact Load Detectors, Hot Box Detectors, and Onboard Systems. This strategic move strengthens Patil Group\'s position in the growing railway infrastructure sector.',
     ],
     bullets: [],
   },
   {
-    image: '/engineering-infra.jpg',
+    image: '/railwaytunnel.jpg',
     title: "India's Longest Railway Tunnel opens to Traffic",
     paragraphs: [
-      "Patil Group is proud to be part of Asia’s second-longest railway tunnel project, connecting Qazigund and Banihal through an 11 km stretch in Jammu & Kashmir. As a complete system solution provider, Patil supplies RHEDA® bi-block sleepers, Vossloh 300-1U fastenings, and offers design and technical support for ballastless track installation. The tunnel enables travel between the regions in just 6.6 minutes.",
+      "Patil Group is proud to be part of Asia's second-longest railway tunnel project, connecting Qazigund and Banihal through an 11 km stretch in Jammu & Kashmir. As a complete system solution provider, Patil supplies RHEDA® bi-block sleepers, Vossloh 300-1U fastenings, and offers design and technical support for ballastless track installation. The tunnel enables travel between the regions in just 6.6 minutes.",
     ],
     bullets: [],
   },
   {
-    image: '/engineering-infra.jpg',
-    title: 'India’s First Ever High-Speed Ballastless Track Rail Corridor',
+    image: '/newstrack.jpg',
+    title: "India's First Ever High-Speed Ballastless Track Rail Corridor",
     paragraphs: [
-      "We are proud to announce the opening of India’s first ever high-speed ballastless track rail corridor, in the process turning a new chapter in high-speed railway by M/S PATIL RAIL INFRASTRUCTURE PVT Ltd., with a partnership of Delhi Airport Metro Express Link (DAMEL).",
+      "We are proud to announce the opening of India's first ever high-speed ballastless track rail corridor, in the process turning a new chapter in high-speed railway by M/S PATIL RAIL INFRASTRUCTURE PVT Ltd., with a partnership of Delhi Airport Metro Express Link (DAMEL).",
     ],
     bullets: [],
   },

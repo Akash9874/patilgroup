@@ -127,13 +127,13 @@ const FastenersPage = () => {
              <div className="bg-white py-8 sm:py-12 md:py-16">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
            <div className="mb-8 sm:mb-12 md:mb-16 fade-in-section">
-             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed">
+             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed text-justify">
                Fasteners are the critical link between rails and sleepers, ensuring safety and performance across diverse track conditions. Patil Group, in collaboration with global leaders in fastening technology, has built proven expertise in designing, manufacturing, and supplying advanced fastening systems for modern rail networks.
              </p>
            </div>
            
            <div className="mb-8 sm:mb-12 md:mb-16 fade-in-section">
-             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed">
+             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed text-justify">
                Patil Group has over two decades of experience in track fastening systems — beginning with joint ventures and the development of a local vendor base. In 2020, the Group established a dedicated fastening plant, bringing all processes under one roof and adding in-house capabilities in die tool design and heat treatment. Today, Patil Group is the largest fastening supplier for metros and a trusted partner to Indian Railways across multiple zones.
              </p>
            </div>
@@ -150,7 +150,7 @@ const FastenersPage = () => {
             width: '864px',
             height: '28px',
             right: '0px',
-            top: '60px',
+            top: '70px',
             background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
           }}
         />

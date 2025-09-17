@@ -1,12 +1,11 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
   const [scrollY, setScrollY] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAboutMenuOpen, setIsAboutMenuOpen] = useState(false);
   const [isProductsMenuOpen, setIsProductsMenuOpen] = useState(false);
@@ -14,31 +13,10 @@ const Navbar = () => {
   const [isMobileAboutExpanded, setIsMobileAboutExpanded] = useState(false);
   const [isMobileProductsExpanded, setIsMobileProductsExpanded] = useState(false);
   const [isMobileSystemsExpanded, setIsMobileSystemsExpanded] = useState(false);
-  const lastScrollY = useRef(0);
 
   useEffect(() => {
-    let ticking = false;
-    
     const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const currentScrollY = window.scrollY;
-          
-          // Show navbar when scrolling up, hide when scrolling down
-          if (currentScrollY < lastScrollY.current || currentScrollY <= 10) {
-            // Scrolling up or at the top of page
-            setIsVisible(true);
-          } else if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
-            // Scrolling down and past 100px
-            setIsVisible(false);
-          }
-          
-          setScrollY(currentScrollY);
-          lastScrollY.current = currentScrollY;
-          ticking = false;
-        });
-        ticking = true;
-      }
+      setScrollY(window.scrollY);
     };
     
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -47,8 +25,6 @@ const Navbar = () => {
     };
   }, []);
 
-  // Always show navbar when dropdown menus are open or mobile menu is open
-  const shouldShowNavbar = isVisible || isAboutMenuOpen || isProductsMenuOpen || isSystemsMenuOpen || isMobileMenuOpen;
   const navIsScrolled = scrollY > 50 || isAboutMenuOpen || isProductsMenuOpen || isSystemsMenuOpen;
 
   const aboutLinks = [
@@ -57,6 +33,7 @@ const Navbar = () => {
     { href: '/management', label: 'Management' },
     { href: '/news', label: 'In News' },
     { href: '/responsibilities', label: 'Our Resources' },
+    { href: '/our-presence', label: 'Our Presence' },
     { href: '/sustainability', label: 'Sustainability' },
     { href: '/our-clientele', label: 'Our Clientele' },
   ];
@@ -113,13 +90,17 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
         navIsScrolled
           ? 'bg-black/40 backdrop-blur-sm shadow-sm' 
           : 'bg-black/30'
-      } ${
-        shouldShowNavbar ? 'translate-y-0' : '-translate-y-full'
       }`}
+      style={{ 
+        position: 'fixed', 
+        top: 0, 
+        transform: 'translateY(0px)',
+        willChange: 'background-color'
+      }}
       onMouseLeave={() => {
         setIsAboutMenuOpen(false);
         setIsProductsMenuOpen(false);
@@ -296,7 +277,7 @@ const Navbar = () => {
       </div>
       
       {/* About Us Mega Menu */}
-      <div className={`absolute top-full left-0 w-full bg-black shadow-lg transition-all duration-300 ease-in-out ${isAboutMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
+      <div className={`absolute top-full left-0 w-full bg-black/40 backdrop-blur-sm shadow-lg transition-all duration-300 ease-in-out ${isAboutMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {aboutLinks.map((link) => (
@@ -309,7 +290,7 @@ const Navbar = () => {
       </div>
 
       {/* Products Mega Menu */}
-      <div className={`absolute top-full left-0 w-full bg-black shadow-lg transition-all duration-300 ease-in-out ${isProductsMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
+      <div className={`absolute top-full left-0 w-full bg-black/40 backdrop-blur-sm shadow-lg transition-all duration-300 ease-in-out ${isProductsMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {productLinks.map((link) => (
@@ -322,7 +303,7 @@ const Navbar = () => {
       </div>
 
       {/* Systems Mega Menu */}
-      <div className={`absolute top-full left-0 w-full bg-black shadow-lg transition-all duration-300 ease-in-out ${isSystemsMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
+      <div className={`absolute top-full left-0 w-full bg-black/40 backdrop-blur-sm shadow-lg transition-all duration-300 ease-in-out ${isSystemsMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {systemLinks.map((link) => (
@@ -437,6 +418,13 @@ const Navbar = () => {
                        className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
                      >
                        Our Resources
+                     </Link>
+                     <Link 
+                       href="/our-presence" 
+                       onClick={() => setIsMobileMenuOpen(false)}
+                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                     >
+                       Our Presence
                      </Link>
                      <Link 
                        href="/sustainability" 
