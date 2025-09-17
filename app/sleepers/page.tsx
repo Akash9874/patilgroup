@@ -15,7 +15,7 @@ const SleepersPage = () => {
       special: true
     });
 
-    const toggleSection = (section: string) => {
+    const toggleSection = (section: keyof typeof expandedSections) => {
       setExpandedSections(prev => ({
         ...prev,
         [section]: !prev[section]
