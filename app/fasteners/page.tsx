@@ -176,7 +176,7 @@ const FastenersPage = () => {
                 </div>
                 <div>
                   <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F] mb-4">
-                    ERC clips: Mark III and V
+                    ERC clips: Mark III & V
                   </h4>
                   <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
                     Manufactured in Medchal<br />
