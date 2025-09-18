@@ -63,16 +63,16 @@ const OurPresencePage = () => {
           </p>
         </div>
         
-        {/* Map Container with Legend */}
-        <div className="mx-auto py-6 sm:py-8 md:py-10 fade-in-section px-4 md:px-6 lg:px-12">
+        {/* Map Container with Legend - Hidden on mobile */}
+        <div className="hidden md:block mx-auto py-6 sm:py-8 md:py-10 fade-in-section px-4 md:px-6 lg:px-12">
           <div className="flex flex-col md:flex-row items-start gap-8 max-w-7xl mx-auto">
             {/* Map */}
             <div className="w-full md:flex-1">
               <IndiaMap />
             </div>
             
-            {/* Legend - Hidden on mobile */}
-            <div className="hidden md:block md:w-80 lg:w-96">
+            {/* Legend */}
+            <div className="md:w-80 lg:w-96">
               <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 sticky top-8">
                 <h3 className="text-xl lg:text-2xl font-bold text-[#8A393B] mb-6 text-center">
                   Our Locations
