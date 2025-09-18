@@ -38,7 +38,7 @@ const Footer = () => {
               </button>
             </Link>
           </div>
-          <div className="relative md:absolute right-0 bottom-0 mt-4 md:mt-0">
+          <div className="relative md:absolute right-0 md:-bottom-8 lg:-bottom-12 mt-4 md:mt-0">
             <Image 
               src="/trainfooter.svg"
               alt="Footer illustration"
