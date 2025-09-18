@@ -134,11 +134,11 @@ const ResponsibilitiesPage = () => {
               }}></div>
               </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 max-w-6xl mx-auto">
               {brochures.map((brochure, index) => (
-                <div key={index} className="bg-black rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
+                <div key={index} className="bg-black rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl hover:shadow-3xl transition-all duration-300 sm:hover:scale-105">
                   {/* Card Header with Cover Image or PDF Preview */}
-                  <div className="relative h-80 bg-white overflow-hidden">
+                  <div className="relative h-60 sm:h-72 lg:h-80 bg-white overflow-hidden">
                     {brochure.hasCoverImage && brochure.coverImage ? (
                       <>
                         <Image
@@ -168,16 +168,16 @@ const ResponsibilitiesPage = () => {
                   </div>
                   
                   {/* Card Content */}
-                  <div className="p-8" style={{color: '#F2913F'}}>
-                    <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight" style={{color: '#F2913F'}}>
+                  <div className="p-6 sm:p-8" style={{color: '#F2913F'}}>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 leading-tight" style={{color: '#F2913F'}}>
                       {brochure.title}
                     </h3>
-                    <p className="text-base mb-6 leading-relaxed" style={{color: '#F2913F'}}>
+                    <p className="text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed" style={{color: '#F2913F'}}>
                       {brochure.description}
                     </p>
                     
                     {/* File Info */}
-                    <div className="flex items-center gap-4 mb-8 text-sm" style={{color: '#F2913F'}}>
+                    <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8 text-xs sm:text-sm" style={{color: '#F2913F'}}>
                       <span className="flex items-center gap-2">
                         <div className="w-2 h-2 rounded-full" style={{backgroundColor: '#F2913F'}}></div>
                         PDF Format
@@ -187,26 +187,26 @@ const ResponsibilitiesPage = () => {
                 </div>
                     
                     {/* Action Buttons */}
-                    <div className="flex gap-4">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                       <button
                         onClick={() => handleQuickView(brochure)}
-                        className="flex-1 flex items-center justify-center gap-3 text-black px-6 py-4 rounded-xl font-medium transition-colors duration-200 text-lg"
+                        className="flex-1 flex items-center justify-center gap-2 sm:gap-3 text-black px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-medium transition-colors duration-200 text-base sm:text-lg"
                         style={{backgroundColor: '#F2913F'}}
                         onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E6822B'}
                         onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#F2913F'}
                       >
-                        <Eye size={20} />
-                        Quick View
+                        <Eye size={18} className="sm:w-5 sm:h-5" />
+                        <span>Quick View</span>
                       </button>
                       <button
                         onClick={() => handleDownload(brochure.filename, brochure.title)}
-                        className="flex-1 flex items-center justify-center gap-3 text-black px-6 py-4 rounded-xl font-medium transition-colors duration-200 text-lg"
+                        className="flex-1 flex items-center justify-center gap-2 sm:gap-3 text-black px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-medium transition-colors duration-200 text-base sm:text-lg"
                         style={{backgroundColor: '#F2913F'}}
                         onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E6822B'}
                         onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#F2913F'}
                       >
-                        <Download size={20} />
-                        Download
+                        <Download size={18} className="sm:w-5 sm:h-5" />
+                        <span>Download</span>
                       </button>
                 </div>
               </div>
@@ -219,26 +219,44 @@ const ResponsibilitiesPage = () => {
 
       {/* PDF Viewer Modal */}
       {showPdfViewer && selectedPdf && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
-          <div className="relative w-full max-w-6xl h-[90vh] bg-white rounded-2xl overflow-hidden">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-0 sm:p-4">
+          <div className="relative w-full h-full sm:max-w-6xl sm:h-[90vh] bg-white sm:rounded-2xl overflow-hidden">
             {/* Modal Header */}
-            <div className="absolute top-0 left-0 right-0 bg-black text-white px-6 py-4 flex justify-between items-center z-10">
-              <h3 className="text-xl font-semibold">{selectedPdf.title}</h3>
+            <div className="absolute top-0 left-0 right-0 bg-black text-white px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center z-10">
+              <h3 className="text-base sm:text-xl font-semibold truncate pr-2">{selectedPdf.title}</h3>
               <button
                 onClick={() => setShowPdfViewer(false)}
-                className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+                className="p-2 hover:bg-white/20 rounded-lg transition-colors flex-shrink-0"
+                aria-label="Close viewer"
               >
-                <X size={24} />
+                <X size={20} className="sm:w-6 sm:h-6" />
               </button>
             </div>
             
             {/* PDF Iframe */}
-            <div className="pt-16 h-full">
+            <div className="pt-12 sm:pt-16 h-full bg-gray-100">
               <iframe
                 src={`/Brochure/${selectedPdf.filename}#view=FitH&navpanes=0`}
                 className="w-full h-full"
                 title={selectedPdf.title}
+                style={{ border: 'none' }}
               />
+              
+              {/* Mobile Download Hint */}
+              <div className="sm:hidden absolute bottom-0 left-0 right-0 bg-black/90 text-white p-3 text-center">
+                <p className="text-xs">
+                  If the PDF doesn't display properly, 
+                  <button 
+                    onClick={() => {
+                      handleDownload(selectedPdf.filename, selectedPdf.title);
+                      setShowPdfViewer(false);
+                    }}
+                    className="underline ml-1 font-semibold"
+                  >
+                    download it instead
+                  </button>
+                </p>
+              </div>
             </div>
           </div>
         </div>
