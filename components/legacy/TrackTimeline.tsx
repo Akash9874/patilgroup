@@ -258,13 +258,13 @@ export default function TrackTimeline({
 									whileInView={{ opacity: 1, x: 0 }}
 									transition={{ duration: 0.6 }}
 									viewport={{ once: true, amount: 0.3 }}
-									className="flex justify-start"
+									className="flex justify-start mt-8"
 								>
 									<Image
 										src={item.image}
 										alt={`${item.year} timeline image`}
-										width={500}
-										height={350}
+										width={800}
+										height={500}
 										className="rounded-lg shadow-lg object-cover max-w-full h-auto"
 									/>
 								</motion.div>

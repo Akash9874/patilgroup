@@ -498,179 +498,179 @@ const SleepersPage = () => {
                     <tbody className="text-[#F2913F]">
                         <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Permissible axle load:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Permissible axle load:</span><br />
                                 <span className="font-bold text-lg">25 metric tonnes</span>
                             </td>
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Permissible axle load:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Permissible axle load:</span><br />
                                 <span className="font-bold text-lg">25 metric tonnes</span>
                             </td>
                             <td className="p-5 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Permissible axle load:</span><br />
+                                <span className="text-gray-800 text-sm font-bold">Permissible axle load:</span><br />
                                 <span className="font-bold text-lg">25 metric tonnes</span>
                             </td>
                         </tr>
                         <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Maximum speed:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Maximum speed:</span><br />
                                 <span className="font-bold text-lg">100km/h</span>
                             </td>
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Maximum speed:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Maximum speed:</span><br />
                                 <span className="font-bold text-lg">100km/h</span>
                             </td>
                             <td className="p-5 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Maximum speed:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Maximum speed:</span><br />
                                 <span className="font-bold text-lg">100km/h</span>
                             </td>
                         </tr>
                         <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Concrete grade:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Concrete grade:</span><br />
                                 <span className="font-bold text-lg">M60</span>
                             </td>
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Concrete grade:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Concrete grade:</span><br />
                                 <span className="font-bold text-lg">M60</span>
                             </td>
                             <td className="p-5 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Concrete grade:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Concrete grade:</span><br />
                                 <span className="font-bold text-lg">M60</span>
                             </td>
                         </tr>
                         <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Concrete volume:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Concrete volume:</span><br />
                                 <span className="font-bold text-lg">136237.5 cm3</span>
                             </td>
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Concrete volume:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Concrete volume:</span><br />
                                 <span className="font-bold text-lg">161975 cm3</span>
                             </td>
                             <td className="p-5 text-center font-medium">
-                                <span className="text-gray-700 text-sm">No of sleepers:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">No of sleepers:</span><br />
                                 <span className="font-bold text-lg">96</span>
                             </td>
                         </tr>
                         <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Weight (without rail fastenings):</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Weight (without rail fastenings):</span><br />
                                 <span className="font-bold text-lg">347 kg</span>
                             </td>
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Weight (without rail fastenings):</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Weight (without rail fastenings):</span><br />
                                 <span className="font-bold text-lg">405 kg</span>
                             </td>
                             <td className="p-5 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Sleeper RMT:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Sleeper RMT:</span><br />
                                 <span className="font-bold text-lg">326.29</span>
                             </td>
                         </tr>
                         <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Length:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Length:</span><br />
                                 <span className="font-bold text-lg">2750 mm</span>
                             </td>
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Length:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Length:</span><br />
                                 <span className="font-bold text-lg">2750 mm</span>
                             </td>
                             <td className="p-5 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Width:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Width:</span><br />
                                 <span className="font-bold text-lg">240 mm</span>
                             </td>
                         </tr>
                         <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Width:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Width:</span><br />
                                 <span className="font-bold text-lg">230 mm</span>
                             </td>
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Width:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Width:</span><br />
                                 <span className="font-bold text-lg">300 mm</span>
                             </td>
                             <td className="p-5 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Sleeper height:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Sleeper height:</span><br />
                                 <span className="font-bold text-lg">230 mm</span>
                             </td>
                         </tr>
                         <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Height of rail-seat centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Height of rail-seat centre:</span><br />
                                 <span className="font-bold text-lg">230 mm</span>
                             </td>
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Height of rail-seat centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Height of rail-seat centre:</span><br />
                                 <span className="font-bold text-lg">190 mm</span>
                             </td>
                             <td className="p-5 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Height of rail-seat centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Height of rail-seat centre:</span><br />
                                 <span className="font-bold text-lg">230 mm</span>
                             </td>
                         </tr>
                         <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Top Width of rail-seat centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Top Width of rail-seat centre:</span><br />
                                 <span className="font-bold text-lg">210 mm</span>
                             </td>
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Top Width of rail-seat centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Top Width of rail-seat centre:</span><br />
                                 <span className="font-bold text-lg">300mm</span>
                             </td>
                             <td className="p-5 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Top Width of rail-seat centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Top Width of rail-seat centre:</span><br />
                                 <span className="font-bold text-lg">240 mm</span>
                             </td>
                         </tr>
                         <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Bottom Width of rail-seat centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Bottom Width of rail-seat centre:</span><br />
                                 <span className="font-bold text-lg">230 mm</span>
                             </td>
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Bottom Width of rail-seat centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Bottom Width of rail-seat centre:</span><br />
                                 <span className="font-bold text-lg">320 mm</span>
                             </td>
                             <td className="p-5 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Bottom Width of rail-seat centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Bottom Width of rail-seat centre:</span><br />
                                 <span className="font-bold text-lg">260 mm</span>
                             </td>
                         </tr>
                         <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200">
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Top Width of sleeper centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Top Width of sleeper centre:</span><br />
                                 <span className="font-bold text-lg">180 mm</span>
                             </td>
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Top Width of sleeper centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Top Width of sleeper centre:</span><br />
                                 <span className="font-bold text-lg">300 mm</span>
                             </td>
                             <td className="p-5 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Top Width of sleeper centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Top Width of sleeper centre:</span><br />
                                 <span className="font-bold text-lg">240 mm</span>
                             </td>
                         </tr>
                         <tr className="border-b border-gray-100 hover:bg-gray-50/50 transition-colors duration-200 bg-gray-25">
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Width of sleeper centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Width of sleeper centre:</span><br />
                                 <span className="font-bold text-lg">230 mm</span>
                             </td>
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Bottom Width of sleeper centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Bottom Width of sleeper centre:</span><br />
                                 <span className="font-bold text-lg">320 mm</span>
                             </td>
                             <td className="p-5 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Bottom Width of sleeper centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Bottom Width of sleeper centre:</span><br />
                                 <span className="font-bold text-lg">260 mm</span>
                             </td>
                         </tr>
                         <tr className="hover:bg-gray-50/50 transition-colors duration-200">
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Height of sleeper centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Height of sleeper centre:</span><br />
                                 <span className="font-bold text-lg">200 mm</span>
                             </td>
                             <td className="p-5 border-r border-gray-100 text-center font-medium">
-                                <span className="text-gray-700 text-sm">Height of sleeper centre:</span><br />
+                                <span className="text-gray-700 text-sm font-bold">Height of sleeper centre:</span><br />
                                 <span className="font-bold text-lg">190 mm</span>
                             </td>
                             <td className="p-5 text-center font-medium">
