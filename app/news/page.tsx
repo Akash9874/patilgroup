@@ -198,11 +198,6 @@ const NewsPage = () => {
 
       {/* Responsive Our Latest News Section */}
       <section className="relative py-8 sm:py-12 md:py-16 lg:py-20">
-        {/* Background grid lines for subtle framing - Desktop only */}
-        <div className="absolute inset-0 pointer-events-none hidden lg:block">
-          <div className="absolute left-1/3 top-0 bottom-0 w-px bg-gray-300/60" />
-          <div className="absolute left-2/3 top-0 bottom-0 w-px bg-gray-300/60" />
-        </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2 
