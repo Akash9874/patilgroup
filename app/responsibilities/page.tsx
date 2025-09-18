@@ -8,11 +8,13 @@ import Image from 'next/image';
 
 const ResponsibilitiesPage = () => {
   useScrollAnimation();
+  const [showPdfViewer, setShowPdfViewer] = useState(false);
+  const [selectedPdf, setSelectedPdf] = useState<{title: string; filename: string} | null>(null);
 
   const brochures = [
     {
       title: "Corporate brochure",
-      filename: "PG-brochure.pdf",
+      filename: "PG Brochure .pdf",
       description: "Complete overview of Patil Group's services and capabilities",
       coverImage: "/Brochure/coverimage1.jpg",
       hasCoverImage: true
@@ -32,6 +34,11 @@ const ResponsibilitiesPage = () => {
     link.href = `/Brochure/${filename}`;
     link.download = filename;
     link.click();
+  };
+
+  const handleQuickView = (brochure: {title: string; filename: string}) => {
+    setSelectedPdf(brochure);
+    setShowPdfViewer(true);
   };
 
   return (
@@ -182,7 +189,7 @@ const ResponsibilitiesPage = () => {
                     {/* Action Buttons */}
                     <div className="flex gap-4">
                       <button
-                        onClick={() => window.open(`/Brochure/${brochure.filename}`, '_blank')}
+                        onClick={() => handleQuickView(brochure)}
                         className="flex-1 flex items-center justify-center gap-3 text-black px-6 py-4 rounded-xl font-medium transition-colors duration-200 text-lg"
                         style={{backgroundColor: '#F2913F'}}
                         onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E6822B'}
@@ -209,6 +216,33 @@ const ResponsibilitiesPage = () => {
           </div>
         </div>
       </section>
+
+      {/* PDF Viewer Modal */}
+      {showPdfViewer && selectedPdf && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
+          <div className="relative w-full max-w-6xl h-[90vh] bg-white rounded-2xl overflow-hidden">
+            {/* Modal Header */}
+            <div className="absolute top-0 left-0 right-0 bg-black text-white px-6 py-4 flex justify-between items-center z-10">
+              <h3 className="text-xl font-semibold">{selectedPdf.title}</h3>
+              <button
+                onClick={() => setShowPdfViewer(false)}
+                className="p-2 hover:bg-white/20 rounded-lg transition-colors"
+              >
+                <X size={24} />
+              </button>
+            </div>
+            
+            {/* PDF Iframe */}
+            <div className="pt-16 h-full">
+              <iframe
+                src={`/Brochure/${selectedPdf.filename}#view=FitH&navpanes=0`}
+                className="w-full h-full"
+                title={selectedPdf.title}
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );

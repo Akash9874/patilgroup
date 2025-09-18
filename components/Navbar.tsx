@@ -420,13 +420,6 @@ const Navbar = () => {
                        Our Resources
                      </Link>
                      <Link 
-                       href="/our-presence" 
-                       onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
-                     >
-                       Our Presence
-                     </Link>
-                     <Link 
                        href="/sustainability" 
                        onClick={() => setIsMobileMenuOpen(false)}
                        className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
