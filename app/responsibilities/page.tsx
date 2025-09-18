@@ -188,9 +188,10 @@ const ResponsibilitiesPage = () => {
                     
                     {/* Action Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                      {/* Quick View - Hidden on mobile */}
                       <button
                         onClick={() => handleQuickView(brochure)}
-                        className="flex-1 flex items-center justify-center gap-2 sm:gap-3 text-black px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-medium transition-colors duration-200 text-base sm:text-lg"
+                        className="hidden sm:flex flex-1 items-center justify-center gap-2 sm:gap-3 text-black px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-medium transition-colors duration-200 text-base sm:text-lg"
                         style={{backgroundColor: '#F2913F'}}
                         onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E6822B'}
                         onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#F2913F'}
@@ -198,9 +199,10 @@ const ResponsibilitiesPage = () => {
                         <Eye size={18} className="sm:w-5 sm:h-5" />
                         <span>Quick View</span>
                       </button>
+                      {/* Download - Full width on mobile */}
                       <button
                         onClick={() => handleDownload(brochure.filename, brochure.title)}
-                        className="flex-1 flex items-center justify-center gap-2 sm:gap-3 text-black px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-medium transition-colors duration-200 text-base sm:text-lg"
+                        className="flex w-full sm:flex-1 items-center justify-center gap-2 sm:gap-3 text-black px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-medium transition-colors duration-200 text-base sm:text-lg"
                         style={{backgroundColor: '#F2913F'}}
                         onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E6822B'}
                         onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#F2913F'}
