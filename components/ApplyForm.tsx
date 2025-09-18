@@ -117,7 +117,7 @@ const ApplyForm = () => {
   return (
     <div className="bg-black py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-orange-500 mb-12">
+        <h2 className="text-5xl md:text-6xl font-bold text-center text-orange-500 mb-12">
           Apply Now
         </h2>
         
@@ -146,52 +146,52 @@ const ApplyForm = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-2">
-              <label htmlFor="first-name" className="text-gray-400">First name*</label>
+              <label htmlFor="first-name" className="text-lg text-gray-400">First name*</label>
               <Input 
                 id="first-name" 
                 name="first-name"
                 required
                 disabled={isSubmitting}
-                className="bg-black border-gray-700 rounded-full text-white" 
+                className="bg-black border-gray-700 rounded-full text-white text-base" 
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="last-name" className="text-gray-400">Last name*</label>
+              <label htmlFor="last-name" className="text-lg text-gray-400">Last name*</label>
               <Input 
                 id="last-name" 
                 name="last-name"
                 required
                 disabled={isSubmitting}
-                className="bg-black border-gray-700 rounded-full text-white" 
+                className="bg-black border-gray-700 rounded-full text-white text-base" 
               />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-2">
-              <label htmlFor="email" className="text-gray-400">Email*</label>
+              <label htmlFor="email" className="text-lg text-gray-400">Email*</label>
               <Input 
                 id="email" 
                 name="email"
                 type="email" 
                 required
                 disabled={isSubmitting}
-                className="bg-black border-gray-700 rounded-full text-white" 
+                className="bg-black border-gray-700 rounded-full text-white text-base" 
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="phone" className="text-gray-400">Phone*</label>
+              <label htmlFor="phone" className="text-lg text-gray-400">Phone*</label>
               <Input 
                 id="phone" 
                 name="phone"
                 type="tel" 
                 required
                 disabled={isSubmitting}
-                className="bg-black border-gray-700 rounded-full text-white" 
+                className="bg-black border-gray-700 rounded-full text-white text-base" 
               />
             </div>
           </div>
           <div className="space-y-2">
-            <label htmlFor="address" className="text-gray-400">Address*</label>
+            <label htmlFor="address" className="text-lg text-gray-400">Address*</label>
             <Input 
               id="address" 
               name="address"
@@ -201,20 +201,20 @@ const ApplyForm = () => {
             />
           </div>
           <div className="space-y-2">
-            <label htmlFor="position" className="text-gray-400">Position*</label>
+            <label htmlFor="position" className="text-lg text-gray-400">Position*</label>
             <Input 
               id="position" 
               name="position"
               required
               disabled={isSubmitting}
               placeholder="e.g. Civil Engineer, Project Manager, Quality Control Specialist"
-              className="bg-black border-gray-700 rounded-full text-white" 
+              className="bg-black border-gray-700 rounded-full text-white text-base placeholder:text-sm" 
             />
           </div>
           
           {/* Resume/CV Upload */}
           <div className="space-y-2">
-            <label htmlFor="resume" className="text-gray-400">Resume/CV*</label>
+            <label htmlFor="resume" className="text-lg text-gray-400">Resume/CV*</label>
             <div className="relative">
               {!selectedFile ? (
                 <input
@@ -225,7 +225,7 @@ const ApplyForm = () => {
                   required
                   disabled={isSubmitting}
                   onChange={handleFileChange}
-                  className="w-full px-4 py-3 bg-black border border-gray-700 rounded-full text-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#F2913F] file:text-white hover:file:bg-[#8A393B] file:cursor-pointer cursor-pointer transition-all duration-300"
+                  className="w-full px-4 py-4 bg-black border border-gray-700 rounded-full text-white text-base file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-base file:font-semibold file:bg-[#F2913F] file:text-white hover:file:bg-[#8A393B] file:cursor-pointer cursor-pointer transition-all duration-300"
                 />
               ) : (
                 <div className="w-full px-4 py-3 bg-black border border-gray-700 rounded-full text-white flex items-center justify-between">
@@ -236,10 +236,10 @@ const ApplyForm = () => {
                       </svg>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm text-white truncate">
+                      <p className="text-base text-white truncate">
                         {selectedFile.name}
                       </p>
-                      <p className="text-xs text-gray-400">
+                      <p className="text-sm text-gray-400">
                         {(selectedFile.size / 1024 / 1024).toFixed(2)} MB
                       </p>
                     </div>
@@ -258,7 +258,7 @@ const ApplyForm = () => {
                 </div>
               )}
             </div>
-            <p className="text-xs text-gray-500 mt-1">
+            <p className="text-sm text-gray-500 mt-1">
               Accepted formats: PDF, DOC, DOCX (Max size: 10MB)
             </p>
           </div>
@@ -266,7 +266,7 @@ const ApplyForm = () => {
             <Button 
               type="submit" 
               disabled={isSubmitting}
-              className="bg-[#F2913F] text-white hover:bg-[#8A393B] rounded-full px-12 py-3 font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="bg-[#F2913F] text-white text-lg hover:bg-[#8A393B] rounded-full px-14 py-4 font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? 'Submitting...' : 'Submit Application'}
             </Button>
@@ -274,11 +274,11 @@ const ApplyForm = () => {
           
           {/* Contact info for alternative submission */}
           <div className="text-center pt-4">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-base">
               Having trouble? Email us directly at{' '}
               <a 
                 href="mailto:careers@patilgroup.com" 
-                className="text-[#F2913F] hover:text-[#8A393B] transition-colors"
+                className="text-[#F2913F] hover:text-[#8A393B] transition-colors text-base"
               >
                 careers@patilgroup.com
               </a>

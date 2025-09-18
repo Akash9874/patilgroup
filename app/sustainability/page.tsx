@@ -114,7 +114,7 @@ every process."
           <div className="md:hidden text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold leading-tight">
               <span className="text-[#8A393B]">Clean power</span>
-              <span className="italic text-[#8A393B] font-normal block sm:inline"> clean cycles</span>
+              <span className="italic text-[#008000] font-normal block sm:inline"> clean cycles</span>
             </h2>
             <div className="w-16 h-1 bg-gradient-to-r from-green-500 to-[#8A393B] mx-auto mt-4 rounded-full"></div>
           </div>
@@ -123,7 +123,7 @@ every process."
           <div className="hidden md:block">
             <h2 className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight">
               <span className="text-[#8A393B]">Clean power</span>
-              <span className="italic text-[#8A393B] font-normal"> clean cycles</span>
+              <span className="italic text-[#008000] font-normal"> clean cycles</span>
             </h2>
           </div>
 

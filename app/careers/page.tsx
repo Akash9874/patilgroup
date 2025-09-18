@@ -14,12 +14,12 @@ const CareersContent = () => {
   
   return (
     <>
-      <section className="relative h-screen bg-black flex items-center">
+      <section className="relative h-screen bg-black flex items-end">
         <div className="absolute inset-0 h-full w-full opacity-60">
           <Image src="/ourreso.jpg" alt="Architectural Structure" fill className="object-cover" priority sizes="100vw" />
         </div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+        <div className="relative z-10 w-full text-center pb-20">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white animate-fadeInUp">
             Careers
           </h1>

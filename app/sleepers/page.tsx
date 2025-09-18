@@ -337,7 +337,7 @@ const SleepersPage = () => {
         <div
           className="absolute hidden lg:block fade-in-section"
           style={{
-            width: '764px',
+            width: '564px',
             height: '28px',
             left: '0px',
             top: '50%',
@@ -350,7 +350,7 @@ const SleepersPage = () => {
         <div
           className="absolute hidden lg:block fade-in-section"
           style={{
-            width: '764px',
+            width: '564px',
             height: '28px',
             right: '0px',
             top: '50%',

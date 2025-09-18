@@ -52,7 +52,7 @@ const BallastlessTrackUrbanMetroPage = () => {
         <div 
           className="absolute hidden lg:block fade-in-section"
           style={{
-            width: '864px',
+            width: '764px',
             height: '28px',
             left: '0px',
             top: '0px',
@@ -70,7 +70,7 @@ const BallastlessTrackUrbanMetroPage = () => {
         <div 
           className="absolute hidden lg:block fade-in-section"
           style={{
-            width: '864px',
+            width: '664px',
             height: '28px',
             right: '0px',
             bottom: '40px',
@@ -204,7 +204,7 @@ const BallastlessTrackUrbanMetroPage = () => {
         <div 
           className="absolute hidden lg:block fade-in-section"
           style={{
-            width: '764px',
+            width: '564px',
             height: '28px',
             left: '0px',
             top: '30%',
@@ -217,7 +217,7 @@ const BallastlessTrackUrbanMetroPage = () => {
         <div 
           className="absolute hidden lg:block fade-in-section"
           style={{
-            width: '754px',
+            width: '554px',
             height: '28px',
             right: '0px',
             top: '30%',

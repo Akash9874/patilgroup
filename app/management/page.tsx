@@ -88,7 +88,7 @@ const leadershipData = [
   {
     image: '/management/dvrphanisir.jpg',
     name: 'Mr. DVR Phani Kumar',
-    post: 'CEO - Track Systems, Engineering & Contracting',
+    post: 'CEO - Track Systems, Engineering',
   },
   {
     image: '/management/rahulsir.jpg',
@@ -98,7 +98,7 @@ const leadershipData = [
   {
     image: '/management/satishchandrasir.jpg',
     name: 'Mr. Satish Chandra Alya',
-    post: 'COO - Track',
+    post: 'COO - Track Systems',
   },
   {
     image: '/management/gowrishankarsir.jpg',

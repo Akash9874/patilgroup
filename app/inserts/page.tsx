@@ -156,7 +156,7 @@ const InsertsPage = () => {
         <div 
           className="absolute hidden lg:block fade-in-section"
           style={{
-            width: '364px',
+            width: '164px',
             height: '28px',
             left: '0px',
             top: '70px',
@@ -261,7 +261,7 @@ const InsertsPage = () => {
                 <div 
                   className="hidden lg:block ml-4 flex-shrink-0"
                   style={{
-                    width: '400px',
+                    width: '500px',
                     height: '28px',
                     background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
                   }}
@@ -281,7 +281,7 @@ const InsertsPage = () => {
         <div 
           className="absolute hidden lg:block fade-in-section"
           style={{
-            width: '364px',
+            width: '264px',
             height: '28px',
             left: '0px',
             top: '30px',

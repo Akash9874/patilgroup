@@ -21,7 +21,7 @@ const PrecastPage = () => {
     },
     {
       name: 'Manhole Chambers',
-      image: '/precast2.jpg',
+      image: '/manholechamber.jpg',
       description: 'Factory-finished manhole chambers that enable faster underground utility access with superior structural integrity. Produced under controlled conditions with advanced sealing systems and corrosion-resistant materials, they ensure consistent quality, watertight performance, and resistance to harsh underground environments. Ideal for sewer lines, stormwater drains, telecom, and power networks, providing reliable solutions for modern urban infrastructure.'
     },
     {
@@ -41,7 +41,7 @@ const PrecastPage = () => {
     },
     {
       name: 'Bus stops',
-      image: '/precast3.jpg',
+      image: '/precastbusstop.jpg',
       description: 'Smartly designed precast bus stop units combining strength, aesthetics, and ease of installation. Produced with high-grade concrete and engineered with weather-resistant materials, these units incorporate integrated seating, lighting provisions, and advertisement panels while maintaining structural integrity. Perfect for smart city initiatives, these prefabricated units significantly reduce installation time and maintenance costs.'
     },
     {
@@ -56,7 +56,7 @@ const PrecastPage = () => {
     },
     {
       name: 'Road Dividers',
-      image: '/precast2.jpg',
+      image: '/roaddividers.jpg',
       description: 'Precast road medians ensuring safer traffic segregation with easy installation and relocation features. Built with high-strength concrete and incorporating crash-tested designs with reflective elements, these dividers enhance road safety while providing clear lane demarcation under all lighting conditions. Essential for urban road networks, expressways, and construction zone management, facilitating traffic flow optimization while maintaining safety standards.'
     },
     {
@@ -104,7 +104,7 @@ const PrecastPage = () => {
               </h1>
               <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full shadow-lg"></div>
               <p className="text-white text-xl sm:text-2xl mt-8 font-medium drop-shadow-xl leading-relaxed">
-                Built for Speed, Strength, and Precision
+                Built for Speed, Strength,Precision
               </p>
             </div>
           </div>
@@ -170,7 +170,7 @@ const PrecastPage = () => {
                     }}
                   />
                   <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#F2913F] leading-tight">
-                    speed, strength, & precision
+                    speed, strength, precision
                   </h3>
                 </div>
               </div>

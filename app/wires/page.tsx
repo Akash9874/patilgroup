@@ -131,7 +131,7 @@ const WiresPage = () => {
         <div 
           className="absolute hidden lg:block fade-in-section"
           style={{
-            width: '864px',
+            width: '664px',
             height: '28px',
             right: '0px',
             top: '70px',
