@@ -170,10 +170,10 @@ const SafetyPage = () => {
             
 
             
-            {/* Additional Safety Fencing Heading */}
+            {/* Other Safety Fencing Heading */}
             <div className="mb-8 fade-in-section">
               <h3 className="text-2xl sm:text-3xl font-bold mb-2">
-                <span className="text-[#8A393B]">Additional </span>
+                <span className="text-[#8A393B]">Other </span>
                 <span className="text-[#F2913F]">Safety Fencing</span>
               </h3>
               <div className="w-20 h-1 bg-gradient-to-r from-[#8A393B] to-[#F2913F] rounded-full"></div>
@@ -254,10 +254,10 @@ const SafetyPage = () => {
           {/* Desktop Layout */}
           <div className="hidden lg:block">
             <div className="slide-in-left">
-                {/* Additional Safety Fencing Heading */}
+                {/* Other Safety Fencing Heading */}
                 <div className="mb-12 fade-in-section">
                   <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-                    <span className="text-[#8A393B]">Additional </span>
+                    <span className="text-[#8A393B]">Other </span>
                     <span className="text-[#F2913F]">Safety Fencing</span>
                   </h3>
                   <div className="w-32 h-2 bg-gradient-to-r from-[#8A393B] to-[#F2913F] rounded-full"></div>

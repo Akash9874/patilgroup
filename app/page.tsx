@@ -262,11 +262,9 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <p className="text-gray-400 text-xs lg:text-sm mb-1">Dec 2023</p>
+              <p className="text-gray-400 text-xs lg:text-sm mb-1">Dec 2020</p>
               <h3 className="text-white text-sm lg:text-base xl:text-lg font-medium mb-3 lg:mb-4 leading-tight">
-                Partnered on Mumbai-<br />
-                Ahmedabad bullet train trial<br />
-                track
+                Acquired ApnaTech
               </h3>
               <Link href="/news" className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
                 Read More

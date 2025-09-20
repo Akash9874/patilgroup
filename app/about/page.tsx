@@ -144,13 +144,13 @@ const AboutUsPage = () => {
         </div>
       </section>
 
-      {/* Country Customer Company Section */}
+      {/* Zero Bad Section */}
       <section className="bg-white py-8 sm:py-10 md:py-12 relative">
         {/* Left Edge Gradient Line */}
         <div 
           className="absolute hidden lg:block fade-in-section"
           style={{
-            width: '564px',
+            width: '364px',
             height: '28px',
             left: '0px',
             top: '50%',
@@ -163,7 +163,7 @@ const AboutUsPage = () => {
         <div 
           className="absolute hidden lg:block fade-in-section"
           style={{
-            width: '564px',
+            width: '364px',
             height: '28px',
             right: '0px',
             top: '50%',
@@ -173,19 +173,28 @@ const AboutUsPage = () => {
         />
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
-          <div className="text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-              <div className="mb-2">
-                <span className="text-[#8A393B]">Country </span>
-                <span className="text-[#F2913F]">1<sup className="text-lg sm:text-xl md:text-2xl">st</sup></span>
-                <span className="mx-4 sm:mx-6 md:mx-8 text-[#8A393B]">Customer </span>
-                <span className="text-[#F2913F]">2<sup className="text-lg sm:text-xl md:text-2xl">nd</sup></span>
-              </div>
-              <div>
-                <span className="text-[#8A393B]">Company & Employees </span>
-                <span className="text-[#F2913F]">3<sup className="text-lg sm:text-xl md:text-2xl">rd</sup></span>
-              </div>
-            </h2>
+          {/* Three Boxes */}
+          <div className="space-y-4 sm:space-y-6 max-w-2xl mx-auto">
+            {/* Country 1st */}
+            <div className="bg-[#8A393B] text-white py-4 sm:py-6 px-6 sm:px-8 rounded-2xl shadow-lg">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">
+                Country <span className="text-[#F2913F]">1<sup className="text-lg sm:text-xl">st</sup></span>
+              </h3>
+            </div>
+            
+            {/* Customer 2nd */}
+            <div className="bg-[#F2913F] text-black py-4 sm:py-6 px-6 sm:px-8 rounded-2xl shadow-lg">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">
+                Customer <span className="text-[#8A393B]">2<sup className="text-lg sm:text-xl">nd</sup></span>
+              </h3>
+            </div>
+            
+            {/* Company & Employees 3rd */}
+            <div className="bg-[#8A393B] text-white py-4 sm:py-6 px-6 sm:px-8 rounded-2xl shadow-lg">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">
+                Company & Employees <span className="text-[#F2913F]">3<sup className="text-lg sm:text-xl">rd</sup></span>
+              </h3>
+            </div>
           </div>
         </div>
       </section>

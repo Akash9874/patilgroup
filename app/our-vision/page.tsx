@@ -99,7 +99,7 @@ const OurVisionPage = () => {
         <div 
           className="absolute hidden lg:block fade-in-section"
           style={{
-            width: '380px',
+            width: '280px',
             height: '28px',
             left: '0px',
             bottom: '258px',
