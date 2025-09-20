@@ -87,36 +87,77 @@ const SafetyPage = () => {
       <section className="relative bg-white text-black py-8 sm:py-12 md:py-16">
         {/* Background Image Section with Overlay Text */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 mb-8 sm:mb-12 md:mb-16 fade-in-section">
-          <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 rounded-lg overflow-hidden">
-            <Image
-              src="/safetyprecastnew.png"
-              alt="Track fencing and safety infrastructure"
-              fill
-              className="object-cover"
-              priority
-            />
-            
-            {/* Dark overlay for text readability */}
-            <div className="absolute inset-0 bg-black/40"></div>
-            
-            {/* Right edge gradient line */}
-            <div 
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 h-1 sm:h-1.5 md:h-2 w-64 sm:w-80 md:w-96 lg:w-[500px] xl:w-[600px]"
-              style={{
-                background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
-              }}
-            ></div>
-            
-            {/* Text Overlay */}
-            <div className="absolute inset-0 flex items-center">
-              <div className="px-6 sm:px-8 md:px-12 w-full">
-                <div className="max-w-4xl">
-                  <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-2 sm:mb-4 drop-shadow-2xl">
-                    Track fencing
-                  </h3>
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#F2913F] leading-tight drop-shadow-2xl">
-                    Precast Safety Infrastructure
-                  </h3>
+          {/* Mobile Layout */}
+          <div className="lg:hidden">
+            <div className="relative h-40 sm:h-48 rounded-lg overflow-hidden">
+              <Image
+                src="/safetyprecastnew.png"
+                alt="Track fencing and safety infrastructure"
+                fill
+                className="object-cover"
+                priority
+              />
+              
+              {/* Dark overlay for text readability */}
+              <div className="absolute inset-0 bg-black/50"></div>
+              
+              {/* Mobile gradient line */}
+              <div 
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 h-1 w-32 sm:w-40"
+                style={{
+                  background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
+                }}
+              ></div>
+              
+              {/* Mobile Text Overlay */}
+              <div className="absolute inset-0 flex items-center">
+                <div className="px-4 sm:px-6 w-full">
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 sm:mb-2 drop-shadow-2xl">
+                      Track fencing
+                    </h3>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#F2913F] leading-tight drop-shadow-2xl">
+                      Precast Safety Infrastructure
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Layout */}
+          <div className="hidden lg:block">
+            <div className="relative h-72 xl:h-80 rounded-lg overflow-hidden">
+              <Image
+                src="/safetyprecastnew.png"
+                alt="Track fencing and safety infrastructure"
+                fill
+                className="object-cover"
+                priority
+              />
+              
+              {/* Dark overlay for text readability */}
+              <div className="absolute inset-0 bg-black/40"></div>
+              
+              {/* Desktop gradient line */}
+              <div 
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 h-2 w-[500px] xl:w-[600px]"
+                style={{
+                  background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
+                }}
+              ></div>
+              
+              {/* Desktop Text Overlay */}
+              <div className="absolute inset-0 flex items-center">
+                <div className="px-12 w-full">
+                  <div className="max-w-4xl">
+                    <h3 className="text-6xl xl:text-7xl font-bold text-white mb-4 drop-shadow-2xl">
+                      Track fencing
+                    </h3>
+                    <h3 className="text-5xl xl:text-6xl font-bold text-[#F2913F] leading-tight drop-shadow-2xl">
+                      Precast Safety Infrastructure
+                    </h3>
+                  </div>
                 </div>
               </div>
             </div>

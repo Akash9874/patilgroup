@@ -45,7 +45,7 @@ const Navbar = () => {
     { href: '/wires', label: 'Wires' },
     { href: '/inserts', label: 'Inserts' },
     { href: '/precast', label: 'Precast' },
-    { href: '/safety', label: 'Rail Safety' },
+    { href: '/safety', label: 'Track Safety' },
   ];
 
   const systemLinks = [
@@ -393,6 +393,13 @@ const Navbar = () => {
                        About Us
                      </Link>
                      <Link 
+                       href="/our-vision" 
+                       onClick={() => setIsMobileMenuOpen(false)}
+                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                     >
+                       Our Vision
+                     </Link>
+                     <Link 
                        href="/legacy" 
                        onClick={() => setIsMobileMenuOpen(false)}
                        className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
@@ -511,7 +518,7 @@ const Navbar = () => {
                        onClick={() => setIsMobileMenuOpen(false)}
                        className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
                      >
-                       Safety
+                       Track Safety
                      </Link>
                    </div>
                  </div>
