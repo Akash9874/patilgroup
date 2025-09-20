@@ -92,7 +92,7 @@ const Navbar = () => {
   return (
     <nav 
       data-navbar
-      className="sticky top-0 z-[9999] bg-black shadow-lg w-full"
+      className="sticky top-0 z-[9999] bg-black/80 backdrop-blur-md shadow-lg w-full"
       style={{
         position: 'sticky',
         top: 0,
