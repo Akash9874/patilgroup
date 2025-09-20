@@ -108,7 +108,7 @@ const Navbar = () => {
       }}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20 sm:h-24 md:h-26">
+        <div className="flex justify-between items-center h-24 sm:h-28 md:h-32 lg:h-36">
           {/* Logo */}
           <div className="flex items-center animate-fadeInLeft -ml-2 sm:-ml-4 md:-ml-8 lg:-ml-12 xl:-ml-16">
               <Link href="/" onMouseEnter={() => setIsAboutMenuOpen(false)}>
@@ -120,7 +120,7 @@ const Navbar = () => {
                     width={175}
                     height={90}
                     loading="eager"
-                    className="h-16 sm:h-18 md:h-20 lg:h-22 xl:h-24 2xl:h-28 w-auto transition-all duration-300 hover-scale cursor-pointer"
+                    className="h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 2xl:h-40 w-auto transition-all duration-300 hover-scale cursor-pointer"
                   />
                 </picture>
               </Link>
