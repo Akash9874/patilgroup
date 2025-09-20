@@ -170,7 +170,7 @@ const PrecastPage = () => {
                     }}
                   />
                   <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#F2913F] leading-tight">
-                    speed, strength, precision
+                    speed strength precision
                   </h3>
                 </div>
               </div>
