@@ -74,7 +74,7 @@ const OurPresencePage = () => {
             {/* Legend */}
             <div className="md:w-80 lg:w-96">
               <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 sticky top-8">
-                <h3 className="text-xl lg:text-2xl font-bold text-[#8A393B] mb-6 text-center">
+                <h3 className="text-2xl lg:text-3xl font-bold text-[#8A393B] mb-6 text-center">
                   Our Locations
                 </h3>
                 
@@ -105,12 +105,12 @@ const OurPresencePage = () => {
                         style={{ backgroundColor: location.color }}
                       ></div>
                       <div className="flex-1 min-w-0">
-                        <h4 className="font-semibold text-[#8A393B] text-sm mb-1">{location.state}</h4>
+                        <h4 className="font-semibold text-[#8A393B] text-base lg:text-lg mb-1">{location.state}</h4>
                         <div className="flex flex-wrap gap-1">
                           {location.cities.map((city, cityIndex) => (
                             <span 
                               key={cityIndex} 
-                              className="text-xs bg-[#F2913F]/10 text-[#F2913F] px-2 py-1 rounded-full font-medium"
+                              className="text-sm bg-[#F2913F]/10 text-[#F2913F] px-3 py-1.5 rounded-full font-medium"
                             >
                               {city}
                             </span>
@@ -125,12 +125,12 @@ const OurPresencePage = () => {
                 <div className="mt-6 pt-4 border-t border-gray-200">
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div className="bg-gradient-to-br from-[#8A393B]/10 to-[#8A393B]/5 rounded-lg p-3">
-                      <p className="text-xl font-bold text-[#8A393B]">17</p>
-                      <p className="text-xs text-gray-600 font-medium">States</p>
+                      <p className="text-2xl lg:text-3xl font-bold text-[#8A393B]">17</p>
+                      <p className="text-sm text-gray-600 font-medium">States</p>
                     </div>
                     <div className="bg-gradient-to-br from-[#F2913F]/10 to-[#F2913F]/5 rounded-lg p-3">
-                      <p className="text-xl font-bold text-[#F2913F]">25+</p>
-                      <p className="text-xs text-gray-600 font-medium">Locations</p>
+                      <p className="text-2xl lg:text-3xl font-bold text-[#F2913F]">25+</p>
+                      <p className="text-sm text-gray-600 font-medium">Locations</p>
                     </div>
                   </div>
                 </div>
@@ -142,7 +142,7 @@ const OurPresencePage = () => {
         {/* Mobile Location List */}
         <div className="md:hidden px-4 pb-8">
           <div className="max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold text-[#8A393B] mb-6 text-center">
+            <h3 className="text-2xl font-bold text-[#8A393B] mb-6 text-center">
               Our Locations
             </h3>
             
@@ -170,10 +170,10 @@ const OurPresencePage = () => {
                 <div key={index} className="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:shadow-md transition-shadow duration-300">
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
-                      <h4 className="text-base font-semibold text-[#8A393B] mb-1">{location.state}</h4>
+                      <h4 className="text-lg font-semibold text-[#8A393B] mb-1">{location.state}</h4>
                       <div className="flex flex-wrap gap-2">
                         {location.cities.map((city, cityIndex) => (
-                          <span key={cityIndex} className="text-xs bg-[#F2913F]/10 text-[#F2913F] px-2 py-1 rounded-full font-medium">
+                          <span key={cityIndex} className="text-sm bg-[#F2913F]/10 text-[#F2913F] px-3 py-1.5 rounded-full font-medium">
                             {city}
                           </span>
                         ))}
@@ -192,12 +192,12 @@ const OurPresencePage = () => {
               <div className="bg-gradient-to-br from-[#8A393B]/10 to-[#F2913F]/10 rounded-2xl p-6 border border-gray-200">
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div>
-                    <p className="text-2xl font-bold text-[#8A393B]">17</p>
-                    <p className="text-xs text-gray-600 font-medium">States</p>
+                    <p className="text-3xl font-bold text-[#8A393B]">17</p>
+                    <p className="text-sm text-gray-600 font-medium">States</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-[#F2913F]">25+</p>
-                    <p className="text-xs text-gray-600 font-medium">Locations</p>
+                    <p className="text-3xl font-bold text-[#F2913F]">25+</p>
+                    <p className="text-sm text-gray-600 font-medium">Locations</p>
                   </div>
                 </div>
               </div>

@@ -288,9 +288,29 @@ const SafetyPage = () => {
 
       {/* Made for Indian Railways */}
       <section className="bg-white text-black py-8 sm:py-12 md:py-16 fade-in-section">
-        <div className="w-full pt-8">
-          {/* Heading with full-width gradient lines */}
-          <div className="relative mb-8">
+        <div className="w-full pt-4 sm:pt-8">
+          {/* Mobile Layout */}
+          <div className="md:hidden px-4 mb-8">
+            <div className="text-center">
+              {/* Mobile gradient line above */}
+              <div className="w-24 h-1.5 mx-auto mb-6 rounded-full" style={{
+                background: 'linear-gradient(90deg, #F2913F 0%, #8A393B 100%)'
+              }}></div>
+              
+              {/* Mobile heading - allows wrapping */}
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#F2913F] leading-tight mb-6">
+                Made for Indian Railways
+              </h3>
+              
+              {/* Mobile gradient line below */}
+              <div className="w-24 h-1.5 mx-auto mb-8 rounded-full" style={{
+                background: 'linear-gradient(90deg, #8A393B 0%, #F2913F 100%)'
+              }}></div>
+            </div>
+          </div>
+          
+          {/* Desktop Layout - Original */}
+          <div className="hidden md:block relative mb-8">
             <div className="flex items-center">
               <div className="flex-1 h-2" style={{
                 background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
@@ -309,7 +329,7 @@ const SafetyPage = () => {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
             {/* Description */}
             <div className="text-center">
-              <p className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed max-w-4xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-black leading-relaxed max-w-4xl mx-auto">
                 Every product is manufactured under strict quality control in a factory environment. This ensures consistent strength, precise dimensions and long service life — meeting the standards of modern railway operations.
               </p>
             </div>

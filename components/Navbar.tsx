@@ -120,7 +120,7 @@ const Navbar = () => {
                     width={175}
                     height={90}
                     loading="eager"
-                    className="h-12 sm:h-14 md:h-16 lg:h-18 xl:h-20 2xl:h-24 w-auto transition-all duration-300 hover-scale cursor-pointer"
+                    className="h-16 sm:h-18 md:h-20 lg:h-22 xl:h-24 2xl:h-28 w-auto transition-all duration-300 hover-scale cursor-pointer"
                   />
                 </picture>
               </Link>
@@ -420,6 +420,13 @@ const Navbar = () => {
                        Our Resources
                      </Link>
                      <Link 
+                       href="/our-presence" 
+                       onClick={() => setIsMobileMenuOpen(false)}
+                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                     >
+                       Our Presence
+                     </Link>
+                     <Link 
                        href="/sustainability" 
                        onClick={() => setIsMobileMenuOpen(false)}
                        className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
@@ -453,7 +460,7 @@ const Navbar = () => {
                  
                  {/* Products Submenu */}
                  <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                   isMobileProductsExpanded ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'
+                   isMobileProductsExpanded ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
                  }`}>
                    <div className="py-2 pl-4 bg-gray-900">
                      <Link 
