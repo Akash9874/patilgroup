@@ -91,16 +91,13 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
-        navIsScrolled
-          ? 'bg-black/90 backdrop-blur-md shadow-lg' 
-          : 'bg-black/70 backdrop-blur-sm'
-      }`}
-      style={{ 
-        position: 'fixed', 
-        top: 0, 
-        transform: 'translateY(0)',
-        willChange: 'background-color, backdrop-filter'
+      data-navbar
+      className="sticky top-0 z-[9999] bg-black shadow-lg w-full"
+      style={{
+        position: 'sticky',
+        top: 0,
+        zIndex: 9999,
+        width: '100%'
       }}
       onMouseLeave={() => {
         setIsAboutMenuOpen(false);

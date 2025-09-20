@@ -185,47 +185,47 @@ const PrecastPage = () => {
 
             {/* Desktop Layout */}
             <div className="hidden lg:grid grid-cols-2 gap-12 items-center">
-              
-              {/* Left side - Map */}
-              <div className="slide-in-left">
-                <Image
-                  src="/precastmap.jpg"
-                  alt="Precast Manufacturing Map across India"
-                  width={600}
-                  height={700}
-                  className="w-full h-auto rounded-lg shadow-lg"
-                  loading="lazy"
-                />
-              </div>
+            
+            {/* Left side - Map */}
+            <div className="slide-in-left">
+            <Image
+                src="/precastmap.jpg"
+                alt="Precast Manufacturing Map across India"
+                width={600}
+                height={700}
+                className="w-full h-auto rounded-lg shadow-lg"
+                loading="lazy"
+            />
+          </div>
 
-              {/* Right side - Content */}
-              <div className="slide-in-right">
-                <div className="mb-6">
+            {/* Right side - Content */}
+            <div className="slide-in-right">
+              <div className="mb-6">
                   <h2 className="text-7xl font-bold text-[#8A393B] leading-tight mb-4">
-                    Built for
-                  </h2>
-                  <div className="flex items-center mb-6">
-                    <div 
-                      className="mr-4 flex-shrink-0"
-                      style={{
-                        width: '200px',
-                        height: '28px',
-                        background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
-                      }}
-                    />
+                  Built for
+                </h2>
+                <div className="flex items-center mb-6">
+                  <div 
+                    className="mr-4 flex-shrink-0"
+                    style={{
+                      width: '200px',
+                      height: '28px',
+                      background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
+                    }}
+                  />
                     <h3 className="text-6xl font-bold text-[#F2913F] leading-tight">
-                      speed strength precision
-                    </h3>
-                  </div>
+                    speed strength precision
+                  </h3>
                 </div>
-                
+              </div>
+              
                 <div className="space-y-6 text-2xl text-gray-700 leading-relaxed">
-                  <p className="text-justify">
-                    Patil Group delivers one-stop infrastructure solutions with a daily precast capacity of 3,410 m³. Our portfolio spans diverse products, from culverts and drains to walls, slabs, and modular systems, supporting urban and industrial growth across India.
-                  </p>
-                  <p className="text-justify">
-                    Driven by scale, diversity, and precision, we continue to expand into new markets while shaping durable foundations for tomorrow.
-                  </p>
+                <p className="text-justify">
+                  Patil Group delivers one-stop infrastructure solutions with a daily precast capacity of 3,410 m³. Our portfolio spans diverse products, from culverts and drains to walls, slabs, and modular systems, supporting urban and industrial growth across India.
+                </p>
+                <p className="text-justify">
+                  Driven by scale, diversity, and precision, we continue to expand into new markets while shaping durable foundations for tomorrow.
+                </p>
                 </div>
               </div>
             </div>
@@ -296,15 +296,15 @@ const PrecastPage = () => {
                   {/* Image */}
                   <div className="col-span-1">
                     <div className="bg-gray-50 rounded-lg p-4">
-                      <Image
+                    <Image
                         src={product.image}
                         alt={product.name}
-                        width={300}
-                        height={200}
+                      width={300}
+                      height={200}
                         className="rounded-lg object-cover w-full h-auto"
-                      />
-                    </div>
+                    />
                   </div>
+            </div>
 
                   {/* Content */}
                   <div className="col-span-2">

@@ -178,7 +178,7 @@ const SafetyPage = () => {
               </h3>
               <div className="w-20 h-1 bg-gradient-to-r from-[#8A393B] to-[#F2913F] rounded-full"></div>
             </div>
-
+            
             {/* Mobile Content Cards with Images */}
             <div className="space-y-6">
               {[
@@ -259,7 +259,7 @@ const SafetyPage = () => {
                   <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
                     <span className="text-[#8A393B]">Other </span>
                     <span className="text-[#F2913F]">Safety Fencing</span>
-                  </h3>
+                </h3>
                   <div className="w-32 h-2 bg-gradient-to-r from-[#8A393B] to-[#F2913F] rounded-full"></div>
                 </div>
 

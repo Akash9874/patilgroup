@@ -146,7 +146,7 @@ const InsertsPage = () => {
 
             {/* Desktop Layout */}
             <div className="hidden lg:grid grid-cols-3 gap-12 items-center">
-              {/* Left side - Product Images */}
+            {/* Left side - Product Images */}
               <div className="col-span-2">
                 <div className="grid grid-cols-2 gap-12">
                 
@@ -183,7 +183,7 @@ const InsertsPage = () => {
                       <h4 className="text-xl font-bold text-black">SGCI INSERT</h4>
                       <p className="text-xl text-black">RT 3705</p>
                       <p className="text-xl text-black">1.97 kg</p>
-                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -392,7 +392,7 @@ const InsertsPage = () => {
                       <p className="text-xl text-black">Hinge</p>
                       <p className="text-xl text-black">BK 5551</p>
                       <p className="text-xl text-black">13.0 kg</p>
-                    </div>
+                  </div>
                 </div>
 
                 {/* Lining Holder Component */}
@@ -411,7 +411,7 @@ const InsertsPage = () => {
                       <p className="text-xl text-black">Lining holder (LH and RH)</p>
                       <p className="text-xl text-black">20270-163 & 20270-164</p>
                       <p className="text-xl text-black">8.10 kg</p>
-                    </div>
+                  </div>
                 </div>
               </div>
             </div>
