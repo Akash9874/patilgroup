@@ -39,12 +39,12 @@ const SleepersPage = () => {
           
           <div className="relative z-20 h-full flex items-center justify-center">
             <div className="text-center px-6">
-              <div className="bg-black/70 backdrop-blur-md rounded-3xl p-8 border border-white/10 shadow-2xl">
-                <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4">
+              <div className="p-8">
+                <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4 drop-shadow-2xl">
                   Concrete Sleepers
                 </h1>
                 <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full shadow-lg"></div>
-                <p className="text-gray-200 text-sm mt-4 font-medium">
+                <p className="text-white text-sm mt-4 font-medium drop-shadow-2xl">
                   Engineered for durability and performance
                 </p>
               </div>

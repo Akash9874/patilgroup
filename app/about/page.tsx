@@ -144,6 +144,52 @@ const AboutUsPage = () => {
         </div>
       </section>
 
+      {/* Country Customer Company Section */}
+      <section className="bg-white py-8 sm:py-10 md:py-12 relative">
+        {/* Left Edge Gradient Line */}
+        <div 
+          className="absolute hidden lg:block fade-in-section"
+          style={{
+            width: '564px',
+            height: '28px',
+            left: '0px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
+          }}
+        />
+        
+        {/* Right Edge Gradient Line */}
+        <div 
+          className="absolute hidden lg:block fade-in-section"
+          style={{
+            width: '564px',
+            height: '28px',
+            right: '0px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
+          }}
+        />
+        
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+          <div className="text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+              <div className="mb-2">
+                <span className="text-[#8A393B]">Country </span>
+                <span className="text-[#F2913F]">1<sup className="text-lg sm:text-xl md:text-2xl">st</sup></span>
+                <span className="mx-4 sm:mx-6 md:mx-8 text-[#8A393B]">Customer </span>
+                <span className="text-[#F2913F]">2<sup className="text-lg sm:text-xl md:text-2xl">nd</sup></span>
+              </div>
+              <div>
+                <span className="text-[#8A393B]">Company & Employees </span>
+                <span className="text-[#F2913F]">3<sup className="text-lg sm:text-xl md:text-2xl">rd</sup></span>
+              </div>
+            </h2>
+          </div>
+        </div>
+      </section>
+
       {/* Responsive Philosophy Section */}
       <section className="py-16 sm:py-24 md:py-32 bg-white relative overflow-hidden fade-in-section">
         <div 

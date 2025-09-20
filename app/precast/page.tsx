@@ -140,48 +140,93 @@ const PrecastPage = () => {
       {/* Built for speed, strength, & precision Section */}
       <section className="bg-white py-8 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center fade-in-section">
+          <div className="fade-in-section">
             
-            {/* Left side - Map */}
-            <div className="slide-in-left">
-            <Image
-                src="/precastmap.jpg"
-                alt="Precast Manufacturing Map across India"
-                width={600}
-                height={700}
-                className="w-full h-auto rounded-lg shadow-lg"
-                loading="lazy"
-            />
-          </div>
-
-            {/* Right side - Content */}
-            <div className="slide-in-right">
-              <div className="mb-6">
-                <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#8A393B] leading-tight mb-4">
+            {/* Mobile Layout */}
+            <div className="lg:hidden">
+              {/* Mobile Header */}
+              <div className="text-center mb-8">
+                <h2 className="text-3xl sm:text-4xl font-bold text-[#8A393B] leading-tight mb-4">
                   Built for
                 </h2>
-                <div className="flex items-center mb-6">
-                  <div 
-                    className="mr-4 flex-shrink-0"
-                    style={{
-                      width: '200px',
-                      height: '28px',
-                      background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
-                    }}
-                  />
-                  <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#F2913F] leading-tight">
+                <div className="flex flex-col items-center mb-6">
+                  <div className="w-20 h-1.5 bg-gradient-to-r from-[#8A393B] to-[#F2913F] mb-3 rounded-full"></div>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-[#F2913F] leading-tight text-center">
                     speed strength precision
                   </h3>
                 </div>
               </div>
               
-              <div className="space-y-6 text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+              {/* Mobile Content */}
+              <div className="space-y-6 text-base sm:text-lg text-gray-700 leading-relaxed mb-8">
                 <p className="text-justify">
                   Patil Group delivers one-stop infrastructure solutions with a daily precast capacity of 3,410 m³. Our portfolio spans diverse products, from culverts and drains to walls, slabs, and modular systems, supporting urban and industrial growth across India.
                 </p>
                 <p className="text-justify">
                   Driven by scale, diversity, and precision, we continue to expand into new markets while shaping durable foundations for tomorrow.
                 </p>
+              </div>
+              
+              {/* Mobile Map */}
+              <div className="bg-gray-50 rounded-xl p-4 sm:p-6">
+                <Image
+                  src="/precastmap.jpg"
+                  alt="Precast Manufacturing Map across India"
+                  width={400}
+                  height={500}
+                  className="w-full h-auto rounded-lg"
+                  loading="lazy"
+                />
+                <p className="text-center text-sm text-gray-600 mt-3">
+                  Manufacturing locations across India
+                </p>
+              </div>
+            </div>
+
+            {/* Desktop Layout */}
+            <div className="hidden lg:grid grid-cols-2 gap-12 items-center">
+              
+              {/* Left side - Map */}
+              <div className="slide-in-left">
+                <Image
+                  src="/precastmap.jpg"
+                  alt="Precast Manufacturing Map across India"
+                  width={600}
+                  height={700}
+                  className="w-full h-auto rounded-lg shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Right side - Content */}
+              <div className="slide-in-right">
+                <div className="mb-6">
+                  <h2 className="text-7xl font-bold text-[#8A393B] leading-tight mb-4">
+                    Built for
+                  </h2>
+                  <div className="flex items-center mb-6">
+                    <div 
+                      className="mr-4 flex-shrink-0"
+                      style={{
+                        width: '200px',
+                        height: '28px',
+                        background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
+                      }}
+                    />
+                    <h3 className="text-6xl font-bold text-[#F2913F] leading-tight">
+                      speed strength precision
+                    </h3>
+                  </div>
+                </div>
+                
+                <div className="space-y-6 text-2xl text-gray-700 leading-relaxed">
+                  <p className="text-justify">
+                    Patil Group delivers one-stop infrastructure solutions with a daily precast capacity of 3,410 m³. Our portfolio spans diverse products, from culverts and drains to walls, slabs, and modular systems, supporting urban and industrial growth across India.
+                  </p>
+                  <p className="text-justify">
+                    Driven by scale, diversity, and precision, we continue to expand into new markets while shaping durable foundations for tomorrow.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -190,7 +235,7 @@ const PrecastPage = () => {
 
       {/* Product Portfolio */}
       <section className="bg-white text-black py-8 sm:py-12 md:py-20 fade-in-section relative">
-        {/* Right Edge Gradient Line */}
+        {/* Right Edge Gradient Line - Desktop Only */}
         <div 
           className="absolute hidden lg:block fade-in-section"
           style={{
@@ -204,35 +249,70 @@ const PrecastPage = () => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Header */}
-          <div className="mb-8 sm:mb-10 md:mb-14">
-            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#8A393B]">Product Portfolio</h3>
+          <div className="mb-8 sm:mb-10 md:mb-14 text-center lg:text-left">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#8A393B]">Product Portfolio</h3>
+            <div className="w-20 h-1 bg-gradient-to-r from-[#8A393B] to-[#F2913F] mx-auto lg:mx-0 mt-3 rounded-full lg:hidden"></div>
           </div>
 
-          {/* Product grid layout */}
-          <div className="space-y-8 sm:space-y-10 md:space-y-12">
+          {/* Mobile Layout */}
+          <div className="lg:hidden space-y-6">
             {products.map((product, index) => (
-              <div key={product.name} className="border-b border-gray-200 pb-6 sm:pb-8">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
+              <div key={product.name} className="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                {/* Mobile Card Layout */}
+                <div className="p-4 sm:p-6">
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                    {/* Image */}
+                    <div className="flex-shrink-0 sm:w-32 sm:h-32">
+                      <div className="bg-white rounded-lg p-2 h-full">
+                        <Image
+                          src={product.image}
+                          alt={product.name}
+                          width={120}
+                          height={120}
+                          className="rounded-lg object-cover w-full h-24 sm:h-full"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="flex-1">
+                      <h4 className="text-lg sm:text-xl font-semibold text-[#F2913F] mb-2">{product.name}</h4>
+                      <p className="text-sm sm:text-base text-gray-700 leading-relaxed line-clamp-3">
+                        {product.description.substring(0, 150)}...
+                      </p>
+                      <div className="h-0.5 w-16 bg-gradient-to-r from-[#8A393B] to-[#F2913F] mt-3"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop Layout */}
+          <div className="hidden lg:block space-y-12">
+            {products.map((product, index) => (
+              <div key={product.name} className="border-b border-gray-200 pb-8">
+                <div className="grid grid-cols-3 gap-8 items-start">
                   {/* Image */}
-                  <div className="lg:col-span-1">
+                  <div className="col-span-1">
                     <div className="bg-gray-50 rounded-lg p-4">
-                    <Image
+                      <Image
                         src={product.image}
                         alt={product.name}
-                      width={300}
-                      height={200}
+                        width={300}
+                        height={200}
                         className="rounded-lg object-cover w-full h-auto"
-                    />
+                      />
+                    </div>
                   </div>
-            </div>
 
                   {/* Content */}
-                  <div className="lg:col-span-2">
-                    <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-amber-500 mb-4">{product.name}</h4>
-                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-justify mb-6">
+                  <div className="col-span-2">
+                    <h4 className="text-4xl font-semibold text-amber-500 mb-4">{product.name}</h4>
+                    <p className="text-2xl leading-relaxed text-justify mb-6">
                       {product.description}
                     </p>
-                    <div className="h-1.5 w-32 sm:w-40 md:w-56 bg-gradient-to-r from-[#8A393B] via-amber-500 to-transparent"></div>
+                    <div className="h-1.5 w-56 bg-gradient-to-r from-[#8A393B] via-amber-500 to-transparent"></div>
                   </div>
                 </div>
               </div>

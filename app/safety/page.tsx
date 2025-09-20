@@ -27,17 +27,17 @@ const SafetyPage = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/40 z-10"></div>
           <div className="relative z-20 h-full flex items-center justify-center">
             <div className="text-center px-6 w-full max-w-sm">
-              <div className="bg-black/80 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
+              <div className="p-8">
                 <div className="animate-fadeInUp">
-                  <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4">
+                  <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4 drop-shadow-2xl">
                     Rail wayside safety
                   </h1>
                   <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mb-4 rounded-full shadow-lg"></div>
-                  <p className="text-gray-200 text-base font-medium tracking-wide">Protecting tracks, securing journeys</p>
+                  <p className="text-gray-200 text-base font-medium tracking-wide drop-shadow-2xl">Protecting tracks, securing journeys</p>
                   
                   {/* Mobile CTA Hint */}
                   <div className="mt-6 opacity-80">
-                    <p className="text-gray-300 text-sm animate-pulse">
+                    <p className="text-gray-300 text-sm animate-pulse drop-shadow-xl">
                       Scroll to explore safety solutions →
                     </p>
                   </div>
@@ -83,22 +83,61 @@ const SafetyPage = () => {
       </section>
 
 
-      {/* Responsive Track fencing / Precast Safety Infrastructure */}
+      {/* Track fencing / Precast Safety Infrastructure with Background */}
       <section className="relative bg-white text-black py-8 sm:py-12 md:py-16">
+        {/* Background Image Section with Overlay Text */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 mb-8 sm:mb-12 md:mb-16 fade-in-section">
+          <div className="relative h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 rounded-lg overflow-hidden">
+            <Image
+              src="/safetyprecastnew.png"
+              alt="Track fencing and safety infrastructure"
+              fill
+              className="object-cover"
+              priority
+            />
+            
+            {/* Dark overlay for text readability */}
+            <div className="absolute inset-0 bg-black/40"></div>
+            
+            {/* Right edge gradient line */}
+            <div 
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 h-1 sm:h-1.5 md:h-2 w-64 sm:w-80 md:w-96 lg:w-[500px] xl:w-[600px]"
+              style={{
+                background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
+              }}
+            ></div>
+            
+            {/* Text Overlay */}
+            <div className="absolute inset-0 flex items-center">
+              <div className="px-6 sm:px-8 md:px-12 w-full">
+                <div className="max-w-4xl">
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-2 sm:mb-4 drop-shadow-2xl">
+                    Track fencing
+                  </h3>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#F2913F] leading-tight drop-shadow-2xl">
+                    Precast Safety Infrastructure
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Mobile Layout */}
           <div className="lg:hidden">
-            {/* Mobile Headers */}
-            <div className="text-center mb-8 fade-in-section">
-              <h3 className="text-3xl sm:text-4xl font-bold text-amber-500 mb-2">Track fencing</h3>
-              <div className="w-16 h-1 bg-gradient-to-r from-amber-500 to-[#8A393B] mx-auto mb-4 rounded-full"></div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-[#8A393B] leading-tight">
-                Precast Safety Infrastructure
-              </h3>
-            </div>
             
 
             
+            {/* Additional Safety Fencing Heading */}
+            <div className="mb-8 fade-in-section">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-2">
+                <span className="text-[#8A393B]">Additional </span>
+                <span className="text-[#F2913F]">Safety Fencing</span>
+              </h3>
+              <div className="w-20 h-1 bg-gradient-to-r from-[#8A393B] to-[#F2913F] rounded-full"></div>
+            </div>
+
             {/* Mobile Content Cards with Images */}
             <div className="space-y-6">
               {[
@@ -171,15 +210,17 @@ const SafetyPage = () => {
             </div>
           </div>
           
-          {/* Desktop Layout - Original */}
+          {/* Desktop Layout */}
           <div className="hidden lg:block">
             <div className="slide-in-left">
-                {/* Main headings */}
-                <h3 className="text-6xl md:text-7xl lg:text-8xl font-bold text-amber-500 mb-8">Track fencing</h3>
-                
-                <h3 className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#8A393B] leading-tight mb-16">
-                  Precast Safety<br />Infrastructure
-                </h3>
+                {/* Additional Safety Fencing Heading */}
+                <div className="mb-12 fade-in-section">
+                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                    <span className="text-[#8A393B]">Additional </span>
+                    <span className="text-[#F2913F]">Safety Fencing</span>
+                  </h3>
+                  <div className="w-32 h-2 bg-gradient-to-r from-[#8A393B] to-[#F2913F] rounded-full"></div>
+                </div>
 
                 {/* Content sections with spacing */}
                 <div className="space-y-8">

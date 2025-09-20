@@ -29,6 +29,7 @@ const Navbar = () => {
 
   const aboutLinks = [
     { href: '/about', label: 'About Us' },
+    { href: '/our-vision', label: 'Our Vision' },
     { href: '/legacy', label: 'Our Legacy' },
     { href: '/management', label: 'Management' },
     { href: '/news', label: 'In News' },
@@ -44,7 +45,7 @@ const Navbar = () => {
     { href: '/wires', label: 'Wires' },
     { href: '/inserts', label: 'Inserts' },
     { href: '/precast', label: 'Precast' },
-    { href: '/safety', label: 'Safety' },
+    { href: '/safety', label: 'Rail Safety' },
   ];
 
   const systemLinks = [
@@ -338,7 +339,7 @@ const Navbar = () => {
          {/* Full Screen Navigation Panel */}
          <div className="w-full h-full bg-black flex flex-col overflow-hidden">
            {/* Header */}
-           <div className="flex items-center justify-end px-6 py-6 border-b border-gray-800 shrink-0">
+           <div className="flex items-center justify-end px-6 py-6 shrink-0">
              <button
                onClick={() => setIsMobileMenuOpen(false)}
                className="p-2 text-white hover:text-amber-400 transition-colors duration-200"
@@ -349,7 +350,7 @@ const Navbar = () => {
            </div>
            
            {/* Brand Section */}
-           <div className="px-6 py-6 border-b border-gray-800 shrink-0">
+           <div className="px-6 py-6 shrink-0">
            </div>
            
            {/* Navigation Content */}

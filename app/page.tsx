@@ -334,11 +334,8 @@ export default function Home() {
               {/* Mobile Text */}
               <div className="bg-white rounded-2xl p-6 shadow-lg">
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#8A393B] leading-tight mb-4">
-                  Engineering Infrastructure for the long run.
+                  More than <span className="text-[#F2913F]">1 billion sleepers</span> in service since last 30 years, <span className="text-[#F2913F]">world's largest manufacturer</span>
                 </h2>
-                <p className="text-gray-700 text-base leading-relaxed">
-                  We make and deliver components that hold the railway together. Concrete sleepers, fastening systems, turnout parts and more.
-                </p>
               </div>
             </div>
             
@@ -387,12 +384,8 @@ export default function Home() {
                 {/* White Text Box */}
                 <div className="bg-white p-12">
                   <h2 className="text-4xl font-bold text-[#8A393B] leading-tight mb-6">
-                    Engineering Infrastructure<br />
-                    for the long run.
+                    More than <span className="text-[#F2913F]">1 billion sleepers</span> in service since last 30 years, <span className="text-[#F2913F]">world's largest manufacturer</span>
                   </h2>
-                  <p className="text-gray-700 text-lg leading-relaxed">
-                    We make and deliver components that hold the railway together. Concrete sleepers, fastening systems, turnout parts and more.
-                  </p>
                 </div>
               </div>
             </div>

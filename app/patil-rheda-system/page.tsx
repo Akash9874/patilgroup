@@ -105,7 +105,7 @@ const PatilRhedaSystemPage = () => {
             {/* Image */}
             <div className="w-full md:w-1/2">
               <Image 
-                src="/rheda1.jpg" 
+                src="/rhedaimagenew.jpg" 
                 alt="RHEDA system tunnel implementation" 
                 width={800} 
                 height={600} 
