@@ -8,8 +8,7 @@ import Image from 'next/image';
 
 const ResponsibilitiesPage = () => {
   useScrollAnimation();
-  const [showPdfViewer, setShowPdfViewer] = useState(false);
-  const [selectedPdf, setSelectedPdf] = useState<{title: string; filename: string} | null>(null);
+  const [expandedBrochure, setExpandedBrochure] = useState<number | null>(null);
 
   const brochures = [
     {
@@ -36,9 +35,8 @@ const ResponsibilitiesPage = () => {
     link.click();
   };
 
-  const handleQuickView = (brochure: {title: string; filename: string}) => {
-    setSelectedPdf(brochure);
-    setShowPdfViewer(true);
+  const handleQuickView = (index: number) => {
+    setExpandedBrochure(expandedBrochure === index ? null : index);
   };
 
   return (
@@ -136,82 +134,135 @@ const ResponsibilitiesPage = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 max-w-6xl mx-auto">
               {brochures.map((brochure, index) => (
-                <div key={index} className="bg-black rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl hover:shadow-3xl transition-all duration-300 sm:hover:scale-105">
-                  {/* Card Header with Cover Image or PDF Preview */}
-                  <div className="relative h-60 sm:h-72 lg:h-80 bg-white overflow-hidden">
-                    {brochure.hasCoverImage && brochure.coverImage ? (
-                      <>
-                        <Image
-                          src={brochure.coverImage}
-                          alt={`${brochure.title} Cover`}
-                          fill
-                          className="object-cover object-center"
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
-                      </>
-                    ) : (
-                      <>
+                <div key={index} className={`bg-gray-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl transition-all duration-300 ${expandedBrochure === index ? 'lg:col-span-2' : ''}`}>
+                  {/* Collapsed State */}
+                  {expandedBrochure !== index && (
+                    <>
+                      {/* Card Header with Cover Image */}
+                      <div className="relative h-60 sm:h-72 lg:h-80 bg-white overflow-hidden">
+                        {brochure.hasCoverImage && brochure.coverImage ? (
+                          <>
+                            <Image
+                              src={brochure.coverImage}
+                              alt={`${brochure.title} Cover`}
+                              fill
+                              className="object-cover object-center"
+                              sizes="(max-width: 768px) 100vw, 50vw"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                          </>
+                        ) : (
+                          <>
+                            <iframe
+                              src={`/Brochure/${brochure.filename}#page=1&view=FitH&toolbar=0&navpanes=0&scrollbar=0`}
+                              className="w-full h-full transform scale-150 origin-top-left pointer-events-none"
+                              title={`${brochure.title} Preview`}
+                              style={{
+                                width: '150%',
+                                height: '150%',
+                                transform: 'scale(0.67) translate(-25%, -25%)'
+                              }}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                          </>
+                        )}
+                      </div>
+                      
+                      {/* Card Content */}
+                      <div className="p-6 sm:p-8 bg-gray-100">
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 leading-tight text-gray-800">
+                          {brochure.title}
+                        </h3>
+                        <p className="text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed text-gray-600">
+                          {brochure.description}
+                        </p>
+                        
+                        {/* File Info */}
+                        <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8 text-xs sm:text-sm text-gray-500">
+                          <span className="flex items-center gap-2">
+                            <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                            15 pages
+                          </span>
+                          <span>•</span>
+                          <span>1.1 MB</span>
+                        </div>
+                        
+                        {/* Action Buttons */}
+                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                          {/* Quick View */}
+                          <button
+                            onClick={() => handleQuickView(index)}
+                            className="flex flex-1 items-center justify-center gap-2 sm:gap-3 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-medium transition-colors duration-200 text-base sm:text-lg bg-gray-700 hover:bg-gray-800"
+                          >
+                            <Eye size={18} className="sm:w-5 sm:h-5" />
+                            <span>Quick View</span>
+                          </button>
+                          {/* Download */}
+                          <button
+                            onClick={() => handleDownload(brochure.filename, brochure.title)}
+                            className="flex flex-1 items-center justify-center gap-2 sm:gap-3 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-medium transition-colors duration-200 text-base sm:text-lg bg-blue-600 hover:bg-blue-700"
+                          >
+                            <Download size={18} className="sm:w-5 sm:h-5" />
+                            <span>Download</span>
+                          </button>
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  {/* Expanded State - Inline Preview */}
+                  {expandedBrochure === index && (
+                    <div className="bg-gray-800 text-white">
+                      {/* Header */}
+                      <div className="p-6 border-b border-gray-700">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h3 className="text-2xl font-bold text-blue-400 mb-2">
+                              {brochure.title}
+                            </h3>
+                            <p className="text-gray-300 text-sm">
+                              {brochure.description}
+                            </p>
+                          </div>
+                          <div className="text-right text-sm text-gray-400">
+                            <div className="flex items-center gap-2 mb-1">
+                              <div className="w-2 h-2 rounded-full bg-blue-400"></div>
+                              15 pages
+                            </div>
+                            <div>1.1 MB</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* PDF Preview */}
+                      <div className="relative bg-white" style={{ height: '600px' }}>
                         <iframe
-                          src={`/Brochure/${brochure.filename}#page=1&view=FitH&toolbar=0&navpanes=0&scrollbar=0`}
-                          className="w-full h-full transform scale-150 origin-top-left pointer-events-none"
+                          src={`/Brochure/${brochure.filename}#view=FitH&navpanes=0&toolbar=0`}
+                          className="w-full h-full"
                           title={`${brochure.title} Preview`}
-                          style={{
-                            width: '150%',
-                            height: '150%',
-                            transform: 'scale(0.67) translate(-25%, -25%)'
-                          }}
+                          style={{ border: 'none' }}
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
-                      </>
-                    )}
-                  </div>
-                  
-                  {/* Card Content */}
-                  <div className="p-6 sm:p-8" style={{color: '#F2913F'}}>
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 leading-tight" style={{color: '#F2913F'}}>
-                      {brochure.title}
-                    </h3>
-                    <p className="text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed" style={{color: '#F2913F'}}>
-                      {brochure.description}
-                    </p>
-                    
-                    {/* File Info */}
-                    <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8 text-xs sm:text-sm" style={{color: '#F2913F'}}>
-                      <span className="flex items-center gap-2">
-                        <div className="w-2 h-2 rounded-full" style={{backgroundColor: '#F2913F'}}></div>
-                        PDF Format
-                      </span>
-                      <span>•</span>
-                      <span>Multiple Pages</span>
-                </div>
-                    
-                    {/* Action Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                      {/* Quick View - Hidden on mobile */}
-                      <button
-                        onClick={() => handleQuickView(brochure)}
-                        className="hidden sm:flex flex-1 items-center justify-center gap-2 sm:gap-3 text-black px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-medium transition-colors duration-200 text-base sm:text-lg"
-                        style={{backgroundColor: '#F2913F'}}
-                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E6822B'}
-                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#F2913F'}
-                      >
-                        <Eye size={18} className="sm:w-5 sm:h-5" />
-                        <span>Quick View</span>
-                      </button>
-                      {/* Download - Full width on mobile */}
-                      <button
-                        onClick={() => handleDownload(brochure.filename, brochure.title)}
-                        className="flex w-full sm:flex-1 items-center justify-center gap-2 sm:gap-3 text-black px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-medium transition-colors duration-200 text-base sm:text-lg"
-                        style={{backgroundColor: '#F2913F'}}
-                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#E6822B'}
-                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#F2913F'}
-                      >
-                        <Download size={18} className="sm:w-5 sm:h-5" />
-                        <span>Download</span>
-                      </button>
-                </div>
-              </div>
+                      </div>
+
+                      {/* Action Buttons */}
+                      <div className="p-6 flex flex-col sm:flex-row gap-3">
+                        <button
+                          onClick={() => setExpandedBrochure(null)}
+                          className="flex items-center justify-center gap-2 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 bg-gray-700 hover:bg-gray-600"
+                        >
+                          <X size={18} />
+                          <span>Close Preview</span>
+                        </button>
+                        <button
+                          onClick={() => handleDownload(brochure.filename, brochure.title)}
+                          className="flex items-center justify-center gap-2 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 bg-blue-600 hover:bg-blue-700"
+                        >
+                          <Download size={18} />
+                          <span>Download</span>
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -219,50 +270,6 @@ const ResponsibilitiesPage = () => {
         </div>
       </section>
 
-      {/* PDF Viewer Modal */}
-      {showPdfViewer && selectedPdf && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-0 sm:p-4">
-          <div className="relative w-full h-full sm:max-w-6xl sm:h-[90vh] bg-white sm:rounded-2xl overflow-hidden">
-            {/* Modal Header */}
-            <div className="absolute top-0 left-0 right-0 bg-black text-white px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center z-10">
-              <h3 className="text-base sm:text-xl font-semibold truncate pr-2">{selectedPdf.title}</h3>
-              <button
-                onClick={() => setShowPdfViewer(false)}
-                className="p-2 hover:bg-white/20 rounded-lg transition-colors flex-shrink-0"
-                aria-label="Close viewer"
-              >
-                <X size={20} className="sm:w-6 sm:h-6" />
-              </button>
-            </div>
-            
-            {/* PDF Iframe */}
-            <div className="pt-12 sm:pt-16 h-full bg-gray-100">
-              <iframe
-                src={`/Brochure/${selectedPdf.filename}#view=FitH&navpanes=0`}
-                className="w-full h-full"
-                title={selectedPdf.title}
-                style={{ border: 'none' }}
-              />
-              
-              {/* Mobile Download Hint */}
-              <div className="sm:hidden absolute bottom-0 left-0 right-0 bg-black/90 text-white p-3 text-center">
-                <p className="text-xs">
-                  If the PDF doesn't display properly, 
-                  <button 
-                    onClick={() => {
-                      handleDownload(selectedPdf.filename, selectedPdf.title);
-                      setShowPdfViewer(false);
-                    }}
-                    className="underline ml-1 font-semibold"
-                  >
-                    download it instead
-                  </button>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
     </div>
   );
