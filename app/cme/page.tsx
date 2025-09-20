@@ -278,7 +278,7 @@ const CMEPage = () => {
           {/* Left: Copy */}
           <div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#F2913F] leading-tight fade-in-section">
-              Empowering Rural Youth through Skill Development
+              Empowering Rural Youth through Skill Development centre in Bilaspur
             </h2>
             <h3 className="mt-3 sm:mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold text-[#8A393B] fade-in-section">
               Skilling Rural India for a Smarter Tomorrow
