@@ -241,7 +241,29 @@ const ResponsibilitiesPage = () => {
                           className="w-full h-full"
                           title={`${brochure.title} Preview`}
                           style={{ border: 'none' }}
+                          onError={() => {
+                            console.error('PDF iframe failed to load');
+                          }}
                         />
+                        
+                        {/* Fallback message if PDF doesn't load */}
+                        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                          <div className="text-center p-8">
+                            <div className="text-gray-400 mb-4">
+                              <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                              </svg>
+                            </div>
+                            <p className="text-gray-600 mb-4">PDF preview not available</p>
+                            <button
+                              onClick={() => handleDownload(brochure.filename, brochure.title)}
+                              className="inline-flex items-center gap-2 text-white px-4 py-2 rounded-lg font-medium bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
+                            >
+                              <Download size={16} />
+                              <span>Download PDF</span>
+                            </button>
+                          </div>
+                        </div>
                       </div>
 
                       {/* Action Buttons */}
