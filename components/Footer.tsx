@@ -74,7 +74,15 @@ const Footer = () => {
               <a href="tel:+914039556700" className="hover:text-orange-400 transition-colors">+91 40 3955 6700</a>
               </p>
             <div className="flex space-x-3 sm:space-x-4">
-              <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-400 transition-colors"><Linkedin size={16} className="sm:w-5 sm:h-5" /></a>
+              <a 
+                href="https://www.linkedin.com/company/patil-group/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Patil Group on LinkedIn"
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-orange-400 transition-colors"
+              >
+                <Linkedin size={16} className="sm:w-5 sm:h-5" />
+              </a>
             </div>
           </div>
 
