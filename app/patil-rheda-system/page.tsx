@@ -17,37 +17,51 @@ const PatilRhedaSystemPage = () => {
     <div>
       <div className="relative">
         {/* Mobile Layout */}
-        <div className="md:hidden h-screen relative">
-          <img src="/rhedarjeda.jpg" alt="Patil RHEDA system" className="h-full w-full object-cover z-0" />
-          <div className="absolute inset-0 bg-black/50 z-10"></div>
+        <div className="md:hidden h-screen min-h-[600px] relative">
+          <Image 
+            src="/rhedarjeda.jpg" 
+            alt="Patil RHEDA system" 
+            fill
+            className="object-cover object-center z-0" 
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-black/60 z-10"></div>
           
-          <div className="absolute inset-0 flex items-center justify-center z-20">
-            <div className="text-center px-6">
-              <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-4 drop-shadow-2xl">
-                Patil RHEDA<br />system
+          <div className="absolute inset-0 flex items-center justify-center z-20 px-4 sm:px-6">
+            <div className="text-center max-w-md mx-auto">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4 sm:mb-6 drop-shadow-2xl">
+                Patil RHEDA<br />System
               </h1>
-              <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full shadow-lg"></div>
-              <p className="text-gray-200 text-base mt-4 font-medium">
-                Advanced slab-track solution
+              <div className="w-16 sm:w-20 md:w-24 h-1 sm:h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full shadow-lg mb-4 sm:mb-6"></div>
+              <p className="text-gray-200 text-sm sm:text-base md:text-lg font-medium leading-relaxed">
+                Advanced slab-track solution optimized for tunnels and elevated structures
               </p>
             </div>
           </div>
         </div>
         
         {/* Desktop Layout */}
-        <div className="hidden md:block relative h-[600px]">
-          <img src="/rhedarjeda.jpg" alt="Patil RHEDA system" className="h-full w-full object-cover z-0" />
+        <div className="hidden md:block relative h-[600px] lg:h-[700px] xl:h-[800px]">
+          <Image 
+            src="/rhedarjeda.jpg" 
+            alt="Patil RHEDA system" 
+            fill
+            className="object-cover object-center z-0" 
+            priority
+            sizes="100vw"
+          />
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+          <div className="absolute inset-0 bg-black/50 z-10"></div>
           
           {/* Content */}
-          <div className="absolute bottom-0 left-0 z-20">
-            <div className="px-6 sm:px-8 md:px-12 pb-16">
-              <h1 className="text-white font-bold leading-[0.95] text-6xl md:text-7xl lg:text-8xl">
-                Patil RHEDA system
+          <div className="absolute bottom-0 left-0 z-20 w-full">
+            <div className="px-6 sm:px-8 md:px-12 lg:px-16 pb-12 md:pb-16 lg:pb-20">
+              <h1 className="text-white font-bold leading-[0.95] text-5xl md:text-6xl lg:text-7xl xl:text-8xl drop-shadow-2xl">
+                Patil RHEDA System
               </h1>
-              <p className="text-gray-200 text-lg mt-4 font-medium">
-                Advanced slab-track solution
+              <p className="text-gray-200 text-base md:text-lg lg:text-xl mt-4 font-medium max-w-2xl">
+                Advanced slab-track solution optimized for tunnels and elevated structures
               </p>
             </div>
           </div>

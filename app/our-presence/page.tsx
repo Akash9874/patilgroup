@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import IndiaMap from '../../components/IndiaMap';
 import HLSVideo from '@/components/HLSVideo';
@@ -145,6 +146,18 @@ const OurPresencePage = () => {
             <h3 className="text-2xl font-bold text-[#8A393B] mb-6 text-center">
               Our Locations
             </h3>
+            
+            {/* Mobile Map Image */}
+            <div className="mb-8">
+              <Image
+                src="/ourpresencemapmobile.jpg"
+                alt="Our Presence Map - Mobile"
+                width={600}
+                height={400}
+                className="w-full h-auto rounded-lg shadow-lg"
+                loading="lazy"
+              />
+            </div>
             
             {/* State-wise location cards */}
             <div className="space-y-3">
