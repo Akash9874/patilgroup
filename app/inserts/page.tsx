@@ -107,7 +107,7 @@ const InsertsPage = () => {
                   <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
                     <div className="flex-shrink-0">
                       <Image 
-                        src="/inserts45.jpg" 
+                        src="/inserts45.png" 
                         alt="SGCI Insert RT 6901" 
                         width={200} 
                         height={200} 
@@ -127,7 +127,7 @@ const InsertsPage = () => {
                   <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
                     <div className="flex-shrink-0">
                       <Image 
-                        src="/insertss69.jpg" 
+                        src="/insertss69.png" 
                         alt="SGCI Insert RT 3705" 
                         width={200} 
                         height={200} 
@@ -154,7 +154,7 @@ const InsertsPage = () => {
                 <div className="text-center">
                   <div className="bg-gray-50 rounded-lg p-6 mb-4">
                     <Image 
-                      src="/inserts45.jpg" 
+                      src="/inserts45.png" 
                       alt="SGCI Insert RT 6901" 
                       width={300} 
                       height={350} 
@@ -172,7 +172,7 @@ const InsertsPage = () => {
                 <div className="text-center">
                   <div className="bg-gray-50 rounded-lg p-6 mb-4">
                     <Image 
-                      src="/insertss69.jpg" 
+                      src="/insertss69.png" 
                       alt="SGCI Insert RT 3705" 
                       width={300} 
                       height={350} 
@@ -248,7 +248,7 @@ const InsertsPage = () => {
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-full max-w-xs">
                     <Image
-                      src="/baseplates.jpg"
+                      src="/baseplates.png"
                       alt="MMRDA project coated four-hole base plate" 
                       width={300} 
                       height={300}
@@ -286,7 +286,7 @@ const InsertsPage = () => {
                 <div className="col-span-1 text-center">
               <div className="bg-gray-50 rounded-lg p-6 mb-4">
             <Image
-              src="/baseplates.jpg"
+              src="/baseplates.png"
                   alt="MMRDA project coated four-hole base plate" 
                   width={500} 
               height={500}
@@ -330,7 +330,7 @@ const InsertsPage = () => {
                   <div className="flex flex-col sm:flex-row items-center gap-4">
                     <div className="flex-shrink-0">
                       <Image
-                        src="/bsytem1.jpg"
+                        src="/bsytem1.png"
                         alt="DAKO-CZ India Pvt Ltd hinge" 
                         width={150} 
                         height={150} 
@@ -351,7 +351,7 @@ const InsertsPage = () => {
                   <div className="flex flex-col sm:flex-row items-center gap-4">
                     <div className="flex-shrink-0">
                       <Image
-                        src="/bsystem2.jpg"
+                        src="/bsystem2.png"
                         alt="DAKO-CZ India Pvt Ltd lining holder" 
                         width={150} 
                         height={150} 
@@ -380,7 +380,7 @@ const InsertsPage = () => {
                 <div className="flex flex-col items-start">
                   <div className="bg-gray-50 rounded-lg p-6 mb-4 w-full max-w-sm">
               <Image
-                src="/bsytem1.jpg"
+                src="/bsytem1.png"
                         alt="DAKO-CZ India Pvt Ltd hinge" 
                         width={300} 
                         height={200} 
@@ -399,7 +399,7 @@ const InsertsPage = () => {
                 <div className="flex flex-col items-start">
                   <div className="bg-gray-50 rounded-lg p-6 mb-4 w-full max-w-sm">
               <Image
-                src="/bsystem2.jpg"
+                src="/bsystem2.png"
                         alt="DAKO-CZ India Pvt Ltd lining holder" 
                         width={300} 
                         height={200} 
@@ -476,7 +476,7 @@ const InsertsPage = () => {
                 <div className="flex flex-col items-center gap-4">
                   <div className="w-full max-w-xs">
                     <Image
-                      src="/suspension.jpg"
+                      src="/suspension.png"
                       alt="Indore Nitriders lining labyrinth ring" 
                       width={250} 
                       height={250} 
@@ -512,7 +512,7 @@ const InsertsPage = () => {
               <div className="col-span-1 text-center">
               <div className="bg-gray-50 rounded-lg p-6 mb-4">
             <Image
-              src="/suspension.jpg"
+              src="/suspension.png"
                   alt="Indore Nitriders lining labyrinth ring" 
                   width={300} 
                   height={300} 
