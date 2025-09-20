@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Linkedin, ArrowUp } from 'lucide-react';
+import { Linkedin, ArrowUp, MapPin } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -32,11 +32,21 @@ const Footer = () => {
             <div>
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-xl font-bold">6-3-1342/4 Raj Bhavan Rd, Raj Bhavan Quarters Colony Somajiguda,<br />Hyderabad, Telangana 500082</h3>
             </div>
-            <Link href="/contact" className="inline-block mt-6">
-              <button className="bg-[#F2913F] text-black font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-full text-xs sm:text-sm hover:bg-orange-400 transition-colors">
-                Contact Us
+            <div className="flex items-center gap-4 mt-6">
+              <Link href="/contact" className="inline-block">
+                <button className="bg-[#F2913F] text-black font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-full text-xs sm:text-sm hover:bg-orange-400 transition-colors">
+                  Contact Us
+                </button>
+              </Link>
+              <button 
+                onClick={() => window.open('https://maps.app.goo.gl/Hyms5ZonVwVXRy6t7?g_st=aw', '_blank')}
+                className="bg-[#F2913F] text-black p-2 sm:p-3 rounded-full hover:bg-orange-400 transition-colors"
+                aria-label="View location on Google Maps"
+                title="View our location on Google Maps"
+              >
+                <MapPin size={18} className="sm:w-5 sm:h-5" />
               </button>
-            </Link>
+            </div>
           </div>
           <div className="relative md:absolute right-0 md:-bottom-8 lg:-bottom-12 mt-4 md:mt-0">
             <Image 
