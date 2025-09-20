@@ -184,7 +184,7 @@ export default function Home() {
                 </h2>
                 <p className="text-gray-400 text-xs mb-3">Dec 2023</p>
                 <h3 className="text-white text-base font-medium mb-4 leading-tight">
-                  Partnered on the Mumbai–Ahmedabad bullet train trial track
+                  Acquired ApnaTech
                 </h3>
                 <Link href="/news" className="text-[#F2913F] font-medium text-sm hover:text-[#D97706] transition-colors duration-300 flex items-center group">
                   Read More
