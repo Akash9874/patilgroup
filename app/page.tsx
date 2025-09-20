@@ -158,7 +158,7 @@ export default function Home() {
                 </h2>
                 <p className="text-gray-400 text-xs mb-3">Mar 2024</p>
                 <h3 className="text-white text-base font-medium mb-4 leading-tight">
-                  Sleepers supplied for the new NagpurMetro corridor
+                  Sleepers supplied for bullet trains
                 </h3>
                 <Link href="/news" className="text-[#F2913F] font-medium text-sm hover:text-[#D97706] transition-colors duration-300 flex items-center group">
                   Read More
@@ -241,7 +241,7 @@ export default function Home() {
               <p className="text-gray-400 text-xs lg:text-sm mb-1">Mar 2024</p>
               <h3 className="text-white text-sm lg:text-base xl:text-lg font-medium mb-3 lg:mb-4 leading-tight">
                 Sleepers supplied for new<br />
-                Nagpur Metro Corridor
+                Bullet trains
               </h3>
               <Link href="/news" className="text-[#F2913F] font-medium text-sm lg:text-base hover:text-[#D97706] transition-colors duration-300">
                 Read More

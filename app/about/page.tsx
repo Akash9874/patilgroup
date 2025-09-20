@@ -258,7 +258,7 @@ const AboutUsPage = () => {
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
                   color: 'transparent'
-                }} className="font-bold">four hundred kilometres</span> delivered each year.
+                }} className="font-bold">4 Thousand kilometres</span> delivered each year.
               </p>
             </div>
           </div>
@@ -286,7 +286,7 @@ const AboutUsPage = () => {
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
                 color: 'transparent'
-              }}>four hundred kilometres</span> delivered each year.
+              }}>4 Thousand kilometres</span> delivered each year.
             </p>
           </div>
         </div>

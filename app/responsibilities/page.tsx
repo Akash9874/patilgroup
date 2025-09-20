@@ -1,14 +1,13 @@
 "use client";
 
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from '@/components/Navbar';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { Download, Eye, X } from 'lucide-react';
+import { Download } from 'lucide-react';
 import Image from 'next/image';
 
 const ResponsibilitiesPage = () => {
   useScrollAnimation();
-  const [expandedBrochure, setExpandedBrochure] = useState<number | null>(null);
 
   const brochures = [
     {
@@ -35,9 +34,6 @@ const ResponsibilitiesPage = () => {
     link.click();
   };
 
-  const handleQuickView = (index: number) => {
-    setExpandedBrochure(expandedBrochure === index ? null : index);
-  };
 
   return (
     <div className="bg-white">
@@ -134,157 +130,65 @@ const ResponsibilitiesPage = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 max-w-6xl mx-auto">
               {brochures.map((brochure, index) => (
-                <div key={index} className={`bg-gray-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl transition-all duration-300 ${expandedBrochure === index ? 'lg:col-span-2' : ''}`}>
-                  {/* Collapsed State */}
-                  {expandedBrochure !== index && (
-                    <>
-                      {/* Card Header with Cover Image */}
-                      <div className="relative h-60 sm:h-72 lg:h-80 bg-white overflow-hidden">
-                        {brochure.hasCoverImage && brochure.coverImage ? (
-                          <>
-                            <Image
-                              src={brochure.coverImage}
-                              alt={`${brochure.title} Cover`}
-                              fill
-                              className="object-cover object-center"
-                              sizes="(max-width: 768px) 100vw, 50vw"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
-                          </>
-                        ) : (
-                          <>
-                            <iframe
-                              src={`/Brochure/${brochure.filename}#page=1&view=FitH&toolbar=0&navpanes=0&scrollbar=0`}
-                              className="w-full h-full transform scale-150 origin-top-left pointer-events-none"
-                              title={`${brochure.title} Preview`}
-                              style={{
-                                width: '150%',
-                                height: '150%',
-                                transform: 'scale(0.67) translate(-25%, -25%)'
-                              }}
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
-                          </>
-                        )}
-                      </div>
-                      
-                      {/* Card Content */}
-                      <div className="p-6 sm:p-8 bg-gray-100">
-                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 leading-tight text-gray-800">
-                          {brochure.title}
-                        </h3>
-                        <p className="text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed text-gray-600">
-                          {brochure.description}
-                        </p>
-                        
-                        {/* File Info */}
-                        <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8 text-xs sm:text-sm text-gray-500">
-                          <span className="flex items-center gap-2">
-                            <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-                            15 pages
-                          </span>
-                          <span>•</span>
-                          <span>1.1 MB</span>
-                        </div>
-                        
-                        {/* Action Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                          {/* Quick View */}
-                          <button
-                            onClick={() => handleQuickView(index)}
-                            className="flex flex-1 items-center justify-center gap-2 sm:gap-3 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-medium transition-colors duration-200 text-base sm:text-lg bg-gray-700 hover:bg-gray-800"
-                          >
-                            <Eye size={18} className="sm:w-5 sm:h-5" />
-                            <span>Quick View</span>
-                          </button>
-                          {/* Download */}
-                          <button
-                            onClick={() => handleDownload(brochure.filename, brochure.title)}
-                            className="flex flex-1 items-center justify-center gap-2 sm:gap-3 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-medium transition-colors duration-200 text-base sm:text-lg bg-blue-600 hover:bg-blue-700"
-                          >
-                            <Download size={18} className="sm:w-5 sm:h-5" />
-                            <span>Download</span>
-                          </button>
-                        </div>
-                      </div>
-                    </>
-                  )}
-
-                  {/* Expanded State - Inline Preview */}
-                  {expandedBrochure === index && (
-                    <div className="bg-gray-800 text-white">
-                      {/* Header */}
-                      <div className="p-6 border-b border-gray-700">
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <h3 className="text-2xl font-bold text-blue-400 mb-2">
-                              {brochure.title}
-                            </h3>
-                            <p className="text-gray-300 text-sm">
-                              {brochure.description}
-                            </p>
-                          </div>
-                          <div className="text-right text-sm text-gray-400">
-                            <div className="flex items-center gap-2 mb-1">
-                              <div className="w-2 h-2 rounded-full bg-blue-400"></div>
-                              15 pages
-                            </div>
-                            <div>1.1 MB</div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* PDF Preview */}
-                      <div className="relative bg-white" style={{ height: '600px' }}>
+                <div key={index} className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl hover:shadow-3xl transition-all duration-300 sm:hover:scale-105">
+                  {/* Card Header with Cover Image or PDF Preview */}
+                  <div className="relative h-60 sm:h-72 lg:h-80 bg-white overflow-hidden">
+                    {brochure.hasCoverImage && brochure.coverImage ? (
+                      <>
+                        <Image
+                          src={brochure.coverImage}
+                          alt={`${brochure.title} Cover`}
+                          fill
+                          className="object-cover object-center"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                      </>
+                    ) : (
+                      <>
                         <iframe
-                          src={`/Brochure/${brochure.filename}#view=FitH&navpanes=0&toolbar=0`}
-                          className="w-full h-full"
+                          src={`/Brochure/${brochure.filename}#page=1&view=FitH&toolbar=0&navpanes=0&scrollbar=0`}
+                          className="w-full h-full transform scale-150 origin-top-left pointer-events-none"
                           title={`${brochure.title} Preview`}
-                          style={{ border: 'none' }}
-                          onError={() => {
-                            console.error('PDF iframe failed to load');
+                          style={{
+                            width: '150%',
+                            height: '150%',
+                            transform: 'scale(0.67) translate(-25%, -25%)'
                           }}
                         />
-                        
-                        {/* Fallback message if PDF doesn't load */}
-                        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                          <div className="text-center p-8">
-                            <div className="text-gray-400 mb-4">
-                              <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                              </svg>
-                            </div>
-                            <p className="text-gray-600 mb-4">PDF preview not available</p>
-                            <button
-                              onClick={() => handleDownload(brochure.filename, brochure.title)}
-                              className="inline-flex items-center gap-2 text-white px-4 py-2 rounded-lg font-medium bg-blue-600 hover:bg-blue-700 transition-colors duration-200"
-                            >
-                              <Download size={16} />
-                              <span>Download PDF</span>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Action Buttons */}
-                      <div className="p-6 flex flex-col sm:flex-row gap-3">
-                        <button
-                          onClick={() => setExpandedBrochure(null)}
-                          className="flex items-center justify-center gap-2 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 bg-gray-700 hover:bg-gray-600"
-                        >
-                          <X size={18} />
-                          <span>Close Preview</span>
-                        </button>
-                        <button
-                          onClick={() => handleDownload(brochure.filename, brochure.title)}
-                          className="flex items-center justify-center gap-2 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 bg-blue-600 hover:bg-blue-700"
-                        >
-                          <Download size={18} />
-                          <span>Download</span>
-                        </button>
-                      </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+                      </>
+                    )}
+                  </div>
+                  
+                  {/* Card Content */}
+                  <div className="p-6 sm:p-8 bg-white">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 leading-tight text-gray-800">
+                      {brochure.title}
+                    </h3>
+                    <p className="text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed text-gray-600">
+                      {brochure.description}
+                    </p>
+                    
+                    {/* File Info */}
+                    <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8 text-xs sm:text-sm text-gray-500">
+                      <span className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-[#F2913F]"></div>
+                        PDF Format
+                      </span>
+                      <span>•</span>
+                      <span>Multiple Pages</span>
                     </div>
-                  )}
+                    
+                    {/* Download Button */}
+                    <button
+                      onClick={() => handleDownload(brochure.filename, brochure.title)}
+                      className="flex w-full items-center justify-center gap-2 sm:gap-3 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-xl font-medium transition-colors duration-200 text-base sm:text-lg bg-[#F2913F] hover:bg-[#E6822B]"
+                    >
+                      <Download size={18} className="sm:w-5 sm:h-5" />
+                      <span>Download PDF</span>
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
