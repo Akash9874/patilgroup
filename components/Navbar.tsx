@@ -92,7 +92,11 @@ const Navbar = () => {
   return (
     <nav 
       data-navbar
-      className="sticky top-0 z-[9999] bg-black/80 backdrop-blur-md shadow-lg w-full"
+      className={`sticky top-0 z-[9999] shadow-lg w-full transition-all duration-300 ${
+        scrollY > 50 
+          ? 'bg-black/80 backdrop-blur-md' 
+          : 'bg-black'
+      }`}
       style={{
         position: 'sticky',
         top: 0,
