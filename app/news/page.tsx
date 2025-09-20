@@ -210,7 +210,7 @@ const NewsPage = () => {
               ease: "easeOut" as const
             }}
           >
-            Our Latest News
+            Our Latest 
           </motion.h2>
 
           {/* Mobile Auto Carousel */}

@@ -29,7 +29,7 @@ const Navbar = () => {
 
   const aboutLinks = [
     { href: '/about', label: 'About Us' },
-    { href: '/our-vision', label: 'Our Vision' },
+    { href: '/our-vision', label: 'Our Values' },
     { href: '/legacy', label: 'Our Legacy' },
     { href: '/management', label: 'Management' },
     { href: '/news', label: 'In News' },
@@ -92,16 +92,22 @@ const Navbar = () => {
   return (
     <nav 
       data-navbar
-      className={`sticky top-0 z-[9999] shadow-lg w-full transition-all duration-300 ${
+      className={`lg:sticky lg:top-0 fixed top-0 left-0 right-0 z-[9999] shadow-lg w-full transition-all duration-300 ${
         scrollY > 50 
           ? 'bg-black/80 backdrop-blur-md' 
           : 'bg-black'
       }`}
       style={{
-        position: 'sticky',
+        position: 'fixed',
         top: 0,
+        left: 0,
+        right: 0,
         zIndex: 9999,
-        width: '100%'
+        width: '100%',
+        WebkitTransform: 'translateZ(0)',
+        transform: 'translateZ(0)',
+        WebkitBackfaceVisibility: 'hidden',
+        backfaceVisibility: 'hidden'
       }}
       onMouseLeave={() => {
         setIsAboutMenuOpen(false);
@@ -394,11 +400,11 @@ const Navbar = () => {
                        About Us
                      </Link>
                      <Link 
-                       href="/our-vision" 
+                       href="/our-vision"
                        onClick={() => setIsMobileMenuOpen(false)}
                        className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
                      >
-                       Our Vision
+                       Our Values
                      </Link>
                      <Link 
                        href="/legacy" 

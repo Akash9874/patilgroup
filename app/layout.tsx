@@ -110,7 +110,7 @@ export default function RootLayout({
       </head>
       <body className={`${helvetica.className} ${helvetica.variable}`}>
         <Navbar />
-        <main>{children}</main>
+        <main className="lg:pt-0 pt-24 sm:pt-28 md:pt-32">{children}</main>
         <Footer />
         <Toaster />
       </body>
