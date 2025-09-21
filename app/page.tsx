@@ -91,7 +91,7 @@ export default function Home() {
           <div className="absolute inset-0 w-full h-full">
             <HLSVideo
               ref={videoRef}
-              src="https://customer-s72jzio0nxah9yqo.cloudflarestream.com/cc79ccb5bb4c9ec3887f1e629654f2a2/manifest/video.m3u8"
+              src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/f322e306934e467e14d0ece7835151b7/manifest/video.m3u8"
               fallbackSrc="/herovideo.mp4"
               autoPlay
               loop
