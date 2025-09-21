@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import Navbar from '@/components/Navbar';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
@@ -195,8 +194,6 @@ const ManagementPage = () => {
   
   return (
     <div className="bg-[#1E1E1E] text-white">
-      <Navbar />
-      
       {/* Responsive Management Hero Section */}
       <section className="relative h-screen">
         {/* Background Image */}

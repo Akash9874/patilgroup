@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState, useRef } from 'react';
-import Navbar from '@/components/Navbar';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { ArrowRight } from 'lucide-react';
 import {
@@ -57,7 +56,6 @@ const CMEPage = () => {
 
   return (
     <div className="bg-white">
-      <Navbar />
       <section className="relative h-screen">
         <div className="absolute inset-0">
           <HLSVideo

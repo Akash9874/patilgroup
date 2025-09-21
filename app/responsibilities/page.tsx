@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import Navbar from '@/components/Navbar';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { Download } from 'lucide-react';
 import Image from 'next/image';
@@ -37,8 +36,6 @@ const ResponsibilitiesPage = () => {
 
   return (
     <div className="bg-white">
-      <Navbar />
-      
       {/* Hero Section */}
       <section className="relative bg-black">
         {/* Mobile Layout */}
