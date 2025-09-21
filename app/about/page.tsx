@@ -175,7 +175,7 @@ const AboutUsPage = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
           {/* Title */}
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8A393B] to-[#F2913F]">
+            <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8A393B] to-[#F2913F]">
               Our Business Decision - Making Principles
             </h2>
           </div>
