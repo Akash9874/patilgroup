@@ -381,6 +381,44 @@
     Patil Group
     """
 
+# Whistleblower report form notifications
+[[forms]]
+  name = "whistleblower-report"
+  
+  # Email notifications for confidential reports
+  [forms.notifications]
+    email = "compliance@patilgroup.com"
+    subject = "Confidential Whistleblower Report - Patil Group"
+    
+  # Auto-reply to reporters
+  [forms.auto_reply]
+    enabled = true
+    subject = "Report Received - Patil Group Compliance"
+    body = """
+    Dear Reporter,
+
+    Thank you for bringing this matter to our attention through our Whistleblower Policy channel.
+
+    We have successfully received your confidential report. Please be assured that:
+
+    - Your report will be handled with complete confidentiality
+    - We take all concerns seriously and will investigate thoroughly
+    - You are protected against any form of retaliation
+    - Our compliance team will review and take appropriate action
+
+    Your report details:
+    - Contact Email: {{email}}
+    - Report Date: {{date}}
+
+    If you need to provide additional information or have questions about this process, please contact us at compliance@patilgroup.com
+
+    Thank you for helping us maintain our commitment to integrity and transparency.
+
+    Best regards,
+    Compliance Team
+    Patil Group
+    """
+
 
 # ========================================
 # PLUGINS
