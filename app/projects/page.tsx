@@ -4,7 +4,6 @@ import React from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import { ArrowRight, ArrowLeft, X } from 'lucide-react';
 import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import { TypingAnimation } from '@/components/TypingAnimation';
@@ -188,19 +187,19 @@ const ProjectsPage = () => {
 
   return (
     <>
-      <Navbar />
       <section className="relative h-screen overflow-hidden">
         <div className="absolute inset-0">
-          <HLSVideo
-            src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/ae093ac5c8019622880548a174967052/manifest/video.m3u8"
-            fallbackSrc="/djiproject.mp4"
+          <video
+            src="/dijiprojectnew (1).mp4"
             autoPlay
             loop
             muted
             playsInline
             className="w-full h-full object-cover"
             preload="metadata"
-          />
+          >
+            Your browser does not support the video tag.
+          </video>
           <div className="absolute inset-0 bg-black/40" />
         </div>
         <div className="relative z-10 h-full flex items-center">
