@@ -34,7 +34,7 @@ const ContactPage = () => {
             
             {/* Address */}
             <div className="text-center">
-              <h3 className="text-2xl md:text-3xl font-semibold text-[#8A393B] mb-4">Address</h3>
+              <h3 className="text-2xl md:text-3xl font-semibold text-[#8A393B] mb-4">Address(CHQ)</h3>
               <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
                 6-3-1342/4<br />
                 Raj Bhavan Rd, Raj Bhavan Quarters Colony<br />
