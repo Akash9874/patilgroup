@@ -128,7 +128,7 @@ const Footer = () => {
         {/* CIN Information */}
         <div className="border-t border-gray-800 pt-6 mt-8">
           <p className="text-gray-400 text-sm text-center">
-            CIN: U60100TG1996PTC023894 | © 2025 Patil Rail Infrastructure Pvt. Ltd. (PRIL). All rights reserved.
+            CIN: U60100TG1996PTC023894 | © 2025 Patil Rail Infrastructure Pvt. Ltd. (PRIL). <strong>All rights reserved.</strong>
           </p>
         </div>
       </div>

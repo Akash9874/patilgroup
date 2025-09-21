@@ -8,6 +8,7 @@ import { useToast } from '@/hooks/use-toast';
 const ApplyForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
   const validateFile = (file: File): string | null => {
@@ -97,6 +98,9 @@ const ApplyForm = () => {
           description: "Thank you for your interest in joining Patil Group. We'll review your application and resume and get back to you soon.",
         });
         
+        // Set submitted state to show confirmation
+        setIsSubmitted(true);
+        
         // Reset form
         (e.target as HTMLFormElement).reset();
         setSelectedFile(null);
@@ -114,15 +118,22 @@ const ApplyForm = () => {
     }
   };
 
+  // Function to reset and show form again
+  const handleApplyAgain = () => {
+    setIsSubmitted(false);
+  };
+
   return (
     <div className="bg-black py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-5xl md:text-6xl font-bold text-center text-orange-500 mb-12">
-          Apply Now
-        </h2>
+        {!isSubmitted ? (
+          <>
+            <h2 className="text-5xl md:text-6xl font-bold text-center text-orange-500 mb-12">
+              Apply Now
+            </h2>
         
-        {/* Hidden form for Netlify Forms detection */}
-        <form name="career-application" data-netlify="true" hidden>
+            {/* Hidden form for Netlify Forms detection */}
+            <form name="career-application" data-netlify="true" hidden>
           <input type="text" name="first-name" />
           <input type="text" name="last-name" />
           <input type="email" name="email" />
@@ -285,6 +296,45 @@ const ApplyForm = () => {
             </p>
           </div>
         </form>
+          </>
+        ) : (
+          /* Show confirmation message when submitted */
+          <div className="text-center py-16">
+            <div className="mb-8">
+              <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-green-500 mb-6">
+                Application Submitted Successfully!
+              </h2>
+              <p className="text-xl text-gray-300 mb-4 max-w-2xl mx-auto">
+                Thank you for your interest in joining Patil Group. We have received your application and resume.
+              </p>
+              <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+                Our HR team will review your application carefully and contact you within 5-7 business days regarding the next steps in our recruitment process.
+              </p>
+              <div className="space-y-4">
+                <Button 
+                  onClick={handleApplyAgain}
+                  className="bg-[#F2913F] text-white text-lg hover:bg-[#8A393B] rounded-full px-8 py-3 font-semibold transition-all duration-300 mr-4"
+                >
+                  Submit Another Application
+                </Button>
+                <p className="text-gray-400 text-base">
+                  Questions? Contact us at{' '}
+                  <a 
+                    href="mailto:careers@patilgroup.com" 
+                    className="text-[#F2913F] hover:text-[#8A393B] transition-colors"
+                  >
+                    careers@patilgroup.com
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -13,6 +13,10 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
   },
+  // Increase body size limit for file uploads (resume files up to 10MB)
+  serverActions: {
+    bodySizeLimit: '10mb',
+  },
   // Headers are handled by netlify.toml for better static export compatibility
 };
 
