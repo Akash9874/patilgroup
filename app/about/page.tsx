@@ -135,7 +135,7 @@ const AboutUsPage = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <p className="text-center font-bold text-[#F2913F] leading-snug text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
             We began in the 1960s with a single<br className="hidden sm:block" />
-            concrete sleeper plant.
+            {" "}concrete sleeper plant.
           </p>
           <p className="mt-6 sm:mt-8 md:mt-10 text-center font-bold text-[#8A393B] leading-snug text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
             Today, we supply track components to<br className="hidden sm:block" />
