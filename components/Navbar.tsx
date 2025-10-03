@@ -6,6 +6,8 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [prevScrollY, setPrevScrollY] = useState(0);
+  const [isNavVisible, setIsNavVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAboutMenuOpen, setIsAboutMenuOpen] = useState(false);
   const [isProductsMenuOpen, setIsProductsMenuOpen] = useState(false);
@@ -15,11 +17,34 @@ const Navbar = () => {
   const [isMobileSystemsExpanded, setIsMobileSystemsExpanded] = useState(false);
 
   useEffect(() => {
+    let lastScroll = 0;
+    
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll <= 0) {
+        setIsNavVisible(true);
+        return;
+      }
+      
+      if (currentScroll > lastScroll && currentScroll > 80) {
+        // Scrolling DOWN
+        console.log('Hiding navbar, scroll:', currentScroll);
+        setIsNavVisible(false);
+        setIsAboutMenuOpen(false);
+        setIsProductsMenuOpen(false);
+        setIsSystemsMenuOpen(false);
+      } else if (currentScroll < lastScroll) {
+        // Scrolling UP
+        console.log('Showing navbar, scroll:', currentScroll);
+        setIsNavVisible(true);
+      }
+      
+      lastScroll = currentScroll;
     };
     
     window.addEventListener('scroll', handleScroll, { passive: true });
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -92,22 +117,11 @@ const Navbar = () => {
   return (
     <nav 
       data-navbar
-      className={`lg:sticky lg:top-0 fixed top-0 left-0 right-0 z-[9999] shadow-lg w-full transition-all duration-300 ${
-        scrollY > 50 
-          ? 'bg-black/80 backdrop-blur-md' 
-          : 'bg-black'
+      className={`fixed top-0 left-0 right-0 z-[9999] shadow-md w-full bg-white ${
+        isNavVisible ? '' : '-translate-y-full'
       }`}
       style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 9999,
-        width: '100%',
-        WebkitTransform: 'translateZ(0)',
-        transform: 'translateZ(0)',
-        WebkitBackfaceVisibility: 'hidden',
-        backfaceVisibility: 'hidden'
+        transition: 'transform 0.3s ease-in-out',
       }}
       onMouseLeave={() => {
         setIsAboutMenuOpen(false);
@@ -116,53 +130,56 @@ const Navbar = () => {
       }}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24 sm:h-28 md:h-32 lg:h-36">
+        <div className="flex justify-between items-center h-20 sm:h-22 md:h-24 lg:h-28">
           {/* Logo */}
-          <div className="flex items-center animate-fadeInLeft -ml-2 sm:-ml-4 md:-ml-8 lg:-ml-12 xl:-ml-16">
+          <div className="flex items-center animate-fadeInLeft -ml-2 sm:-ml-4 md:-ml-6 lg:-ml-10">
               <Link href="/" onMouseEnter={() => setIsAboutMenuOpen(false)}>
                 <picture>
                   <source srcSet="/pg.png" type="image/png" />
                   <img
                     src="/pg.png"
                     alt="Patil Group Logo"
-                    width={175}
-                    height={90}
+                    width={140}
+                    height={70}
                     loading="eager"
-                    className="h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 2xl:h-40 w-auto transition-all duration-300 hover-scale cursor-pointer"
+                    className="h-16 sm:h-18 md:h-20 lg:h-24 w-auto transition-all duration-300 hover-scale cursor-pointer"
                   />
                 </picture>
               </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8 animate-fadeInRight">
-            <Link href="/" onMouseEnter={() => {
-              setIsAboutMenuOpen(false);
-              setIsProductsMenuOpen(false);
-              setIsSystemsMenuOpen(false);
-            }} className={`transition-all duration-300 font-medium relative group ${
-              navIsScrolled ? 'text-white hover:text-amber-400' : 'text-white hover:text-amber-400'
-            }`}>
-              Home
-              <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                navIsScrolled ? 'bg-amber-400' : 'bg-amber-400'
-              }`}></span>
-            </Link>
-            
+          <div className="hidden lg:flex items-center justify-between flex-1 ml-8 animate-fadeInRight">
+            {/* Left side navigation items */}
+            <div className="flex items-center gap-6">
             <div onMouseEnter={() => {
               setIsAboutMenuOpen(true);
               setIsProductsMenuOpen(false);
               setIsSystemsMenuOpen(false);
             }}>
-              <Link href="/about" className={`transition-all duration-300 font-medium relative group flex items-center gap-1 ${
-                navIsScrolled ? 'text-white hover:text-amber-400' : 'text-white hover:text-amber-400'
-              }`}>
-                About
+                <button className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F] flex items-center gap-1">
+                  About Us
                 <ChevronDown size={16} className={`transition-transform duration-300 ${isAboutMenuOpen ? 'rotate-180' : ''}`} />
-                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                  navIsScrolled ? 'bg-amber-400' : 'bg-amber-400'
-                }`}></span>
+                </button>
+              </div>
+
+              <Link href="/projects" onMouseEnter={() => {
+                setIsAboutMenuOpen(false);
+                setIsProductsMenuOpen(false);
+                setIsSystemsMenuOpen(false);
+              }} className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F]">
+                Projects
               </Link>
+
+              <div onMouseEnter={() => {
+                setIsAboutMenuOpen(false);
+                setIsProductsMenuOpen(false);
+                setIsSystemsMenuOpen(true);
+              }}>
+                <button className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F] flex items-center gap-1">
+                  Systems
+                  <ChevronDown size={16} className={`transition-transform duration-300 ${isSystemsMenuOpen ? 'rotate-180' : ''}`} />
+                </button>
             </div>
 
             <div onMouseEnter={() => {
@@ -170,95 +187,54 @@ const Navbar = () => {
               setIsProductsMenuOpen(true);
               setIsSystemsMenuOpen(false);
             }}>
-              <Link href="/products" className={`transition-all duration-300 font-medium relative group flex items-center gap-1 ${
-                navIsScrolled ? 'text-white hover:text-amber-400' : 'text-white hover:text-amber-400'
-              }`}>
+                <button className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F] flex items-center gap-1">
                 Products
                 <ChevronDown size={16} className={`transition-transform duration-300 ${isProductsMenuOpen ? 'rotate-180' : ''}`} />
-                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                  navIsScrolled ? 'bg-amber-400' : 'bg-amber-400'
-                }`}></span>
-              </Link>
+                </button>
             </div>
-            <div onMouseEnter={() => {
-              setIsAboutMenuOpen(false);
-              setIsProductsMenuOpen(false);
-              setIsSystemsMenuOpen(true);
-            }}>
-              <Link href="/systems" className={`transition-all duration-300 font-medium relative group flex items-center gap-1 ${
-                navIsScrolled ? 'text-white hover:text-amber-400' : 'text-white hover:text-amber-400'
-              }`}>
-                Systems
-                <ChevronDown size={16} className={`transition-transform duration-300 ${isSystemsMenuOpen ? 'rotate-180' : ''}`} />
-                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                  navIsScrolled ? 'bg-amber-400' : 'bg-amber-400'
-                }`}></span>
-              </Link>
-            </div>
-            <Link href="/projects" onMouseEnter={() => {
-              setIsAboutMenuOpen(false);
-              setIsProductsMenuOpen(false);
-              setIsSystemsMenuOpen(false);
-            }} className={`transition-all duration-300 font-medium relative group ${
-              navIsScrolled ? 'text-white hover:text-amber-400' : 'text-white hover:text-amber-400'
-            }`}>
-              Projects
-              <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                navIsScrolled ? 'bg-amber-400' : 'bg-amber-400'
-              }`}></span>
-            </Link>
+
             <Link href="/cme" onMouseEnter={() => {
               setIsAboutMenuOpen(false);
               setIsProductsMenuOpen(false);
               setIsSystemsMenuOpen(false);
-            }} className={`transition-all duration-300 font-medium relative group ${
-              navIsScrolled ? 'text-white hover:text-amber-400' : 'text-white hover:text-amber-400'
-            }`}>
+              }} className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F]">
               CME
-              <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                navIsScrolled ? 'bg-amber-400' : 'bg-amber-400'
-              }`}></span>
             </Link>
+
             <Link href="/research-and-development" onMouseEnter={() => {
               setIsAboutMenuOpen(false);
               setIsProductsMenuOpen(false);
               setIsSystemsMenuOpen(false);
-            }} className={`transition-all duration-300 font-medium relative group ${
-              navIsScrolled ? 'text-white hover:text-amber-400' : 'text-white hover:text-amber-400'
-            }`}>
+              }} className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F]">
               R&D
-              <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                navIsScrolled ? 'bg-amber-400' : 'bg-amber-400'
-              }`}></span>
             </Link>
+            </div>
+
+            {/* Right side navigation items */}
+            <div className="flex items-center gap-6">
             <Link href="/careers" onMouseEnter={() => {
               setIsAboutMenuOpen(false);
               setIsProductsMenuOpen(false);
               setIsSystemsMenuOpen(false);
-            }} className={`transition-all duration-300 font-medium relative group ${
-              navIsScrolled ? 'text-white hover:text-amber-400' : 'text-white hover:text-amber-400'
-            }`}>
+              }} className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F]">
               Careers
-              <span className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                navIsScrolled ? 'bg-amber-400' : 'bg-amber-400'
-              }`}></span>
             </Link>
+
             <Link href="/contact" onMouseEnter={() => {
               setIsAboutMenuOpen(false);
               setIsProductsMenuOpen(false);
               setIsSystemsMenuOpen(false);
-            }} className="bg-[#8A393B] text-white px-6 py-2 rounded-full hover:bg-[#793032] transition-all duration-300 font-medium hover-lift hover-glow">
-              Contact
+              }} className="bg-[#F2913F] text-white px-6 py-2.5 rounded-full hover:bg-[#D97706] transition-all duration-300 font-medium">
+                Contact Us
             </Link>
+            </div>
           </div>
 
           {/* Modern Mobile Menu Button */}
           <div className="lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`relative p-3 rounded-xl transition-all duration-300 hover:bg-white/10 active:scale-95 ${
-                navIsScrolled ? 'text-white hover:text-amber-400' : 'text-white hover:text-amber-400'
-              } ${isMobileMenuOpen ? 'bg-white/10 scale-95' : ''}`}
+              className={`relative p-3 rounded-xl transition-all duration-300 hover:bg-gray-100 active:scale-95 text-gray-800 hover:text-[#F2913F] ${isMobileMenuOpen ? 'bg-gray-100 scale-95' : ''}`}
               aria-label="Toggle mobile menu"
               aria-expanded={isMobileMenuOpen}
             >
@@ -285,11 +261,29 @@ const Navbar = () => {
       </div>
       
       {/* About Us Mega Menu */}
-      <div className={`absolute top-full left-0 w-full bg-black/90 backdrop-blur-md shadow-lg transition-all duration-300 ease-in-out ${isAboutMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {aboutLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="text-2xl font-semibold text-white hover:text-amber-400 transition-colors duration-300">
+      <div 
+        className={`absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-500 ease-in-out ${
+          isAboutMenuOpen 
+            ? 'opacity-100 visible translate-y-0 max-h-[600px]' 
+            : 'opacity-0 invisible -translate-y-4 max-h-0'
+        }`}
+        style={{
+          transformOrigin: 'top',
+          transitionProperty: 'opacity, transform, max-height',
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex flex-col">
+            {aboutLinks.map((link, index) => (
+              <Link 
+                key={link.href} 
+                href={link.href} 
+                className="text-xl font-bold text-gray-900 hover:text-[#F2913F] px-4 py-2 transition-colors duration-300"
+                style={{
+                  animation: isAboutMenuOpen ? `slideIn 0.3s ease-out ${index * 0.05}s forwards` : 'none',
+                  opacity: isAboutMenuOpen ? 1 : 0,
+                }}
+              >
                 {link.label}
               </Link>
             ))}
@@ -298,11 +292,29 @@ const Navbar = () => {
       </div>
 
       {/* Products Mega Menu */}
-      <div className={`absolute top-full left-0 w-full bg-black/90 backdrop-blur-md shadow-lg transition-all duration-300 ease-in-out ${isProductsMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {productLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="text-2xl font-semibold text-white hover:text-amber-400 transition-colors duration-300">
+      <div 
+        className={`absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-500 ease-in-out ${
+          isProductsMenuOpen 
+            ? 'opacity-100 visible translate-y-0 max-h-[600px]' 
+            : 'opacity-0 invisible -translate-y-4 max-h-0'
+        }`}
+        style={{
+          transformOrigin: 'top',
+          transitionProperty: 'opacity, transform, max-height',
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex flex-col">
+            {productLinks.map((link, index) => (
+              <Link 
+                key={link.href} 
+                href={link.href} 
+                className="text-xl font-bold text-gray-900 hover:text-[#F2913F] px-4 py-2 transition-colors duration-300"
+                style={{
+                  animation: isProductsMenuOpen ? `slideIn 0.3s ease-out ${index * 0.05}s forwards` : 'none',
+                  opacity: isProductsMenuOpen ? 1 : 0,
+                }}
+              >
                 {link.label}
               </Link>
             ))}
@@ -311,17 +323,48 @@ const Navbar = () => {
       </div>
 
       {/* Systems Mega Menu */}
-      <div className={`absolute top-full left-0 w-full bg-black/90 backdrop-blur-md shadow-lg transition-all duration-300 ease-in-out ${isSystemsMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-4'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {systemLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="text-2xl font-semibold text-white hover:text-amber-400 transition-colors duration-300">
+      <div 
+        className={`absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-500 ease-in-out ${
+          isSystemsMenuOpen 
+            ? 'opacity-100 visible translate-y-0 max-h-[600px]' 
+            : 'opacity-0 invisible -translate-y-4 max-h-0'
+        }`}
+        style={{
+          transformOrigin: 'top',
+          transitionProperty: 'opacity, transform, max-height',
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex flex-col">
+            {systemLinks.map((link, index) => (
+              <Link 
+                key={link.href} 
+                href={link.href} 
+                className="text-xl font-bold text-gray-900 hover:text-[#F2913F] px-4 py-2 transition-colors duration-300"
+                style={{
+                  animation: isSystemsMenuOpen ? `slideIn 0.3s ease-out ${index * 0.05}s forwards` : 'none',
+                  opacity: isSystemsMenuOpen ? 1 : 0,
+                }}
+              >
                 {link.label}
               </Link>
             ))}
           </div>
         </div>
       </div>
+      
+      <style jsx>{`
+        @keyframes slideIn {
+          from {
+            opacity: 0;
+            transform: translateX(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      `}</style>
 
              {/* Full Screen Mobile Navigation */}
        <div 

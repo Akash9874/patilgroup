@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 const TermsOfServicePage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
   return (
     <div className="bg-white text-gray-800">
       <Navbar />

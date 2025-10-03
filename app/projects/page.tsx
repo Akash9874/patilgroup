@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import { ArrowRight, ArrowLeft, X } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Image from 'next/image';
@@ -174,7 +174,7 @@ const projectsData = [
 ];
 
 const ProjectsPage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     loop: true,
@@ -187,7 +187,7 @@ const ProjectsPage = () => {
 
   return (
     <>
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative h-screen max-h-screen overflow-hidden">
         <div className="absolute inset-0">
           <video
             src="/dijiprojectnew (1).mp4"

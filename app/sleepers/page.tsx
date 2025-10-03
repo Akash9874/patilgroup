@@ -2,11 +2,11 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import { TypingAnimation } from '@/components/TypingAnimation';
 
 const SleepersPage = () => {
-    useScrollAnimation();
+    useGSAPAnimations();
     
     // State for dropdown sections
     const [expandedSections, setExpandedSections] = useState({

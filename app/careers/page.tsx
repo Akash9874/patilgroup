@@ -2,12 +2,12 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import ApplyForm from '@/components/ApplyForm';
 import { Linkedin, ArrowRight } from 'lucide-react';
 
 const CareersContent = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
   const [activeTab, setActiveTab] = useState('Engineering');
 
   const tabs = ['Engineering', 'Production', 'Projects', 'Support'];

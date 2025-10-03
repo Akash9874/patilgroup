@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 
 const logos1 = [
   '/client logos/client 1.png',
@@ -33,7 +33,7 @@ const logos2 = [
 ];
 
 const OurClientelePage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
 
   return (
     <div className="bg-black text-white">

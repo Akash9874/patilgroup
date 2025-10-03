@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState, useRef } from 'react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import { ArrowRight } from 'lucide-react';
 import {
   Carousel,
@@ -13,7 +13,7 @@ import { type CarouselApi } from "@/components/ui/carousel";
 import HLSVideo from '@/components/HLSVideo';
 
 const CMEPage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
 
   const [api, setApi] = useState<CarouselApi>();
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);

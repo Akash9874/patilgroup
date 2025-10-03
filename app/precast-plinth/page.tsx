@@ -5,10 +5,10 @@ import { TypingAnimation } from '@/components/TypingAnimation';
 import { ArrowRight } from 'lucide-react';
 import ContentSlider from '@/components/ContentSlider';
 import ExploreSolutions from '@/components/ExploreSolutions';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 
 const PrecastPlinthPage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
 
   const sliderData = [
     { image: '/23_precast_plinth_process.jpg' },

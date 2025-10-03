@@ -2,10 +2,10 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 
 const WiresPage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
 
   return (
     <div className="bg-black text-white">

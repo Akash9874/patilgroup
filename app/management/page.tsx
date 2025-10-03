@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
@@ -107,7 +107,7 @@ const leadershipData = [
 ];
 
 const ManagementPage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);

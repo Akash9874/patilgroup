@@ -1,25 +1,25 @@
 "use client";
 import Image from 'next/image';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 
 const BallastlessTrackUrbanMetroPage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
   
   return (
     <div>
-      <div className="relative">
+      <div className="relative h-screen max-h-screen overflow-hidden">
         {/* Mobile Layout */}
-        <div className="md:hidden h-screen relative">
+        <div className="md:hidden h-full relative">
           <img src="/ballastlesstrackhero.png" alt="Ballastless Track Urban Metro" className="h-full w-full object-cover z-0" />
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           
-          <div className="absolute inset-0 flex items-center justify-center z-20">
+          <div className="absolute inset-0 flex items-center justify-center z-20 py-8">
             <div className="text-center px-6">
-              <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-4 drop-shadow-2xl">
+              <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4 drop-shadow-2xl">
                 Ballastless Track<br />for Urban Metros
               </h1>
               <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full shadow-lg"></div>
-              <p className="text-gray-200 text-base mt-4 font-medium">
+              <p className="text-gray-200 text-sm sm:text-base mt-4 font-medium">
                 Precision metro solutions
               </p>
             </div>
@@ -27,18 +27,18 @@ const BallastlessTrackUrbanMetroPage = () => {
         </div>
         
         {/* Desktop Layout */}
-        <div className="hidden md:block relative h-[600px]">
+        <div className="hidden md:block relative h-full">
           <img src="/ballastlesstrackhero.png" alt="Ballastless Track Urban Metro" className="h-full w-full object-cover z-0" />
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
           
           {/* Content */}
-          <div className="absolute bottom-0 left-0 z-20">
-            <div className="px-6 sm:px-8 md:px-12 pb-16">
-              <h1 className="text-white font-bold leading-[0.95] text-6xl md:text-7xl lg:text-8xl">
+          <div className="absolute bottom-0 left-0 z-20 pb-12 lg:pb-16">
+            <div className="px-6 sm:px-8 md:px-12">
+              <h1 className="text-white font-bold leading-[0.95] text-5xl md:text-6xl lg:text-7xl">
                 Ballastless Track<br />for Urban Metros
               </h1>
-              <p className="text-gray-200 text-lg mt-4 font-medium">
+              <p className="text-gray-200 text-base md:text-lg mt-4 font-medium">
                 Precision Metro Solutions
               </p>
             </div>

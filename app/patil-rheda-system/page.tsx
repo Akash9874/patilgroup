@@ -3,10 +3,10 @@ import React from 'react';
 import Image from 'next/image';
 import ContentSlider from '@/components/ContentSlider';
 import ExploreSolutions from '@/components/ExploreSolutions';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 
 const PatilRhedaSystemPage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
 
   const sliderData = [
     { image: '/patil_rheda_image_carousel.png' },

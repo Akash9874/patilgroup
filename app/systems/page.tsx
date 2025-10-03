@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import { ArrowRight } from 'lucide-react';
 
 const systemsData = [
@@ -84,7 +84,7 @@ const TypewriterText: React.FC<{
 };
 
 const SystemsContent = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
 
   return (
     <>

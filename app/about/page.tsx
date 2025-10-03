@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import { PlusCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import CountUp from 'react-countup';
@@ -46,12 +46,12 @@ const AboutUsPage = () => {
     { name: 'Rubber elements' },
   ];
 
-  useScrollAnimation();
+  useGSAPAnimations();
 
   return (
     <div className="bg-white">
-      {/* Fully Responsive Hero Section */}
-      <section className="relative h-screen overflow-hidden">
+      {/* Fully Responsive Hero Section - Single Frame */}
+      <section className="relative h-screen max-h-screen overflow-hidden">
         {/* Optimized Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -71,12 +71,12 @@ const AboutUsPage = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
           
           {/* Mobile Content Container */}
-          <div className="relative z-10 h-full flex items-center justify-center px-4">
+          <div className="relative z-10 h-full flex items-center justify-center px-4 py-8">
             <div className="w-full max-w-lg mx-auto text-center">
               {/* Title */}
               <h1 className="text-white font-bold leading-tight text-center drop-shadow-2xl">
-                <span className="text-4xl sm:text-5xl block mb-3">Through the</span>
-                <span className="text-4xl sm:text-5xl block">tracks of time</span>
+                <span className="text-3xl sm:text-4xl md:text-5xl block mb-3">Through the</span>
+                <span className="text-3xl sm:text-4xl md:text-5xl block">tracks of time</span>
               </h1>
               
               {/* Animated Accent Line */}

@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import ContentSlider from '@/components/ContentSlider';
 import ExploreSolutions from '@/components/ExploreSolutions';
 
@@ -10,7 +10,7 @@ const UnderSleeperPadsPage = () => {
     { image: '/usp_carousel.png' }
   ];
 
-  useScrollAnimation();
+  useGSAPAnimations();
 
   return (
     <div>

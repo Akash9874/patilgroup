@@ -2,12 +2,12 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import { TypingAnimation } from '@/components/TypingAnimation';
 import { TiltCard } from '@/components/TiltCard';
 
 const InsertsPage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
 
   return (
     <div className="bg-black text-white">

@@ -1,14 +1,14 @@
 "use client";
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import Image from 'next/image';
 import { TypingAnimation } from '@/components/TypingAnimation';
 
 export default function SustainabilityPage() {
-  useScrollAnimation();
+  useGSAPAnimations();
   return (
     <div>
-      {/* Responsive Hero Section */}
-      <section className="relative h-[70vh] md:h-[80vh] w-full overflow-hidden fade-in-section">
+      {/* Responsive Hero Section - Single Frame */}
+      <section className="relative h-screen max-h-screen w-full overflow-hidden fade-in-section">
         {/* Background video */}
         <video
           autoPlay

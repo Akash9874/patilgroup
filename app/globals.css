@@ -125,9 +125,8 @@ img,
   }
 }
 
-/* Smooth scrolling optimizations */
+/* Smooth scrolling handled by Lenis - disable native */
 html {
-  scroll-behavior: smooth;
   scroll-padding-top: 100px; /* Increased to account for navbar height */
   -webkit-overflow-scrolling: touch;
 }
@@ -168,11 +167,9 @@ body nav {
   }
 }
 
-/* Desktop-specific sticky navbar rules */
+/* Navbar positioning - allow component to control */
 @media (min-width: 1025px) {
   nav[data-navbar] {
-    position: sticky !important;
-    top: 0 !important;
     z-index: 9999 !important;
     width: 100% !important;
   }
@@ -495,30 +492,13 @@ video {
 }
 
 /* Intersection Observer animations with smooth easing */
-.fade-in-section {
-  opacity: 0;
-  transform: translate3d(0, 30px, 0);
-  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+/* GSAP-controlled animations - initial states set in JS */
+.fade-in-section,
+.slide-in-left,
+.slide-in-right,
+.scale-in,
+.stagger-item {
   will-change: transform, opacity;
-}
-
-.fade-in-section.is-visible {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-
-.slide-in-left {
-  opacity: 0;
-  transform: translate3d(-50px, 0, 0);
-  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  will-change: transform, opacity;
-}
-
-.slide-in-left.is-visible {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
 }
 
 .slide-in-right {

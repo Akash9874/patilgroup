@@ -1,11 +1,11 @@
 "use client";
 
 import React from 'react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import Footer from '@/components/Footer';
 
 const PrivacyPolicyPage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
   return (
     <div className="bg-black text-white">
       <main className="min-h-screen py-32">

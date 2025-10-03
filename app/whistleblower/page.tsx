@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from 'react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 
 const WhistleblowerPage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();

@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 
 const ContactPage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
   return (
     <div className="bg-black text-white min-h-screen">
       {/* Image Section */}

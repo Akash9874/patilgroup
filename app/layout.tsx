@@ -5,6 +5,7 @@ import localFont from 'next/font/local';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
+import LenisProvider from '@/components/LenisProvider';
 
 const helvetica = localFont({
   src: [
@@ -89,7 +90,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <head>
         {/* Favicon and app icons */}
         <link rel="icon" type="image/png" sizes="32x32" href="/pg.png" />
@@ -109,10 +110,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className={`${helvetica.className} ${helvetica.variable}`}>
-        <Navbar />
-        <main className="lg:pt-0 pt-24 sm:pt-28 md:pt-32">{children}</main>
-        <Footer />
-        <Toaster />
+        <LenisProvider>
+          <Navbar />
+          <main className="lg:pt-0 pt-20 sm:pt-22 md:pt-24">{children}</main>
+          <Footer />
+          <Toaster />
+        </LenisProvider>
       </body>
     </html>
   );

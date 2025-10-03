@@ -1,7 +1,7 @@
 "use client";
 import { ArrowRight } from 'lucide-react';
 import React from 'react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import { AnimatedProductList } from '@/components/AnimatedProductList';
 import { TypingAnimation } from '@/components/TypingAnimation';
 import { GridLines } from '@/components/GridLines';
@@ -41,11 +41,11 @@ const products = [
   ];
 
 const ProductsPage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
 
   return (
     <div className="bg-black text-white">
-      <section className="relative h-screen">
+      <section className="relative h-screen max-h-screen overflow-hidden">
         {/* Background Video */}
         <div className="absolute inset-0 w-full h-full">
           <HLSVideo
@@ -62,21 +62,21 @@ const ProductsPage = () => {
         </div>
 
         {/* Mobile Layout */}
-        <div className="md:hidden relative z-10 h-full flex items-center justify-center">
+        <div className="md:hidden relative z-10 h-full flex items-center justify-center py-8">
           <div className="text-center px-6 w-full max-w-lg mx-auto">
-            <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight drop-shadow-2xl animate-fadeInUp">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight drop-shadow-2xl animate-fadeInUp">
               Track<br/>Components
             </h1>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full animate-pulse shadow-lg"></div>
-            <p className="text-white text-xl sm:text-2xl mt-8 font-medium tracking-wide drop-shadow-xl leading-relaxed">
+            <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-6 rounded-full animate-pulse shadow-lg"></div>
+            <p className="text-white text-lg sm:text-xl mt-6 font-medium tracking-wide drop-shadow-xl leading-relaxed">
               Explore our railway solutions
             </p>
           </div>
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden md:flex relative z-10 h-full items-end justify-start p-8 sm:p-12 lg:p-16">
-          <h1 className="text-6xl md:text-8xl font-bold text-white animate-fadeInUp">
+        <div className="hidden md:flex relative z-10 h-full items-end justify-start p-8 sm:p-12 lg:p-16 pb-12 lg:pb-16">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white animate-fadeInUp">
             Track<br/>Components
           </h1>
         </div>

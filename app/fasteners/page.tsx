@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import { TypingAnimation } from '@/components/TypingAnimation';
 import {
   Carousel,
@@ -13,7 +13,7 @@ import {
 import { type CarouselApi } from "@/components/ui/carousel";
 
 const FastenersPage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
 
   const [api, setApi] = useState<CarouselApi>();
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -56,9 +56,9 @@ const FastenersPage = () => {
   
   return (
     <div className="bg-white text-black">
-      <div className="relative">
+      <div className="relative h-screen max-h-screen overflow-hidden">
         {/* Mobile Layout */}
-        <div className="md:hidden h-screen relative">
+        <div className="md:hidden h-full relative">
           <Image
             src="/fastenerheroimage.JPG"
             alt="Fasteners Hero Image"
@@ -82,7 +82,7 @@ const FastenersPage = () => {
         </div>
         
         {/* Desktop Layout */}
-        <div className="hidden md:block relative h-[600px]">
+        <div className="hidden md:block relative h-full">
           <Image
             src="/fastenerheroimage.JPG"
             alt="Fasteners Hero Image"

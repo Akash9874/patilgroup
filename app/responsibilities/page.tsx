@@ -1,12 +1,12 @@
 "use client";
 
 import React from 'react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import { Download } from 'lucide-react';
 import Image from 'next/image';
 
 const ResponsibilitiesPage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
 
   const brochures = [
     {

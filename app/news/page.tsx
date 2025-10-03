@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import Navbar from '@/components/Navbar';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
@@ -130,7 +130,7 @@ const textVariants: Variants = {
 };
 
 const NewsPage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
   const [index, setIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [isPaused, setIsPaused] = useState(false);

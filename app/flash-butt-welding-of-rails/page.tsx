@@ -3,10 +3,10 @@ import React from 'react';
 import Image from 'next/image';
 import ContentSlider from '@/components/ContentSlider';
 import ExploreSolutions from '@/components/ExploreSolutions';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 
 const FlashButtWeldingOfRailsPage = () => {
-  useScrollAnimation();
+  useGSAPAnimations();
 
   const sliderData = [
     { image: '/21_flash_butt_equipment.jpg' },
