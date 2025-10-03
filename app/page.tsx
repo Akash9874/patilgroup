@@ -66,6 +66,20 @@ const StatCounter = ({ end, duration, suffix = '', prefix = '' }: { end: number;
 export default function Home() {
   useGSAPAnimations();
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [showText, setShowText] = useState(false);
+  const [zoomLevel, setZoomLevel] = useState(1);
+
+  useEffect(() => {
+    // Set zoom based on screen size
+    const updateZoom = () => {
+      setZoomLevel(window.innerWidth >= 1024 ? 1.2 : 1);
+    };
+    
+    updateZoom();
+    window.addEventListener('resize', updateZoom);
+    
+    return () => window.removeEventListener('resize', updateZoom);
+  }, []);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -73,11 +87,22 @@ export default function Home() {
       videoRef.current.play().catch(error => {
         console.error("Video play failed:", error);
       });
+
+      // Listen for video end event
+      const handleVideoEnd = () => {
+        setShowText(true);
+      };
+
+      videoRef.current.addEventListener('ended', handleVideoEnd);
+
+      return () => {
+        videoRef.current?.removeEventListener('ended', handleVideoEnd);
+      };
     }
   }, []);
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden" style={{ zoom: zoomLevel }}>
       {/* Hero Section - Single Frame */}
       <section className="relative h-screen max-h-screen overflow-hidden bg-black">
         {/* Video Background */}
@@ -95,7 +120,7 @@ export default function Home() {
         </div>
 
         {/* Hero Content Overlay - Optimized spacing to fit in one frame */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 py-8">
+        <div className={`relative z-10 h-full flex flex-col items-center justify-start pt-24 sm:pt-28 md:pt-32 lg:pt-40 text-center px-4 sm:px-6 lg:px-8 transition-opacity duration-1000 ${showText ? 'opacity-100' : 'opacity-0'}`}>
           {/* Main Heading */}
           <h1 className="mb-6 sm:mb-8 md:mb-10">
             <div className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-1 sm:mb-2">

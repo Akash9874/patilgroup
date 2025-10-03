@@ -278,7 +278,7 @@ const Navbar = () => {
               <Link 
                 key={link.href} 
                 href={link.href} 
-                className="text-xl font-bold text-gray-900 hover:text-[#F2913F] px-4 py-2 transition-colors duration-300"
+                className="text-2xl font-bold text-gray-900 hover:text-[#F2913F] px-4 py-3 transition-colors duration-300"
                 style={{
                   animation: isAboutMenuOpen ? `slideIn 0.3s ease-out ${index * 0.05}s forwards` : 'none',
                   opacity: isAboutMenuOpen ? 1 : 0,
@@ -309,7 +309,7 @@ const Navbar = () => {
               <Link 
                 key={link.href} 
                 href={link.href} 
-                className="text-xl font-bold text-gray-900 hover:text-[#F2913F] px-4 py-2 transition-colors duration-300"
+                className="text-2xl font-bold text-gray-900 hover:text-[#F2913F] px-4 py-3 transition-colors duration-300"
                 style={{
                   animation: isProductsMenuOpen ? `slideIn 0.3s ease-out ${index * 0.05}s forwards` : 'none',
                   opacity: isProductsMenuOpen ? 1 : 0,
@@ -340,7 +340,7 @@ const Navbar = () => {
               <Link 
                 key={link.href} 
                 href={link.href} 
-                className="text-xl font-bold text-gray-900 hover:text-[#F2913F] px-4 py-2 transition-colors duration-300"
+                className="text-2xl font-bold text-gray-900 hover:text-[#F2913F] px-4 py-3 transition-colors duration-300"
                 style={{
                   animation: isSystemsMenuOpen ? `slideIn 0.3s ease-out ${index * 0.05}s forwards` : 'none',
                   opacity: isSystemsMenuOpen ? 1 : 0,
