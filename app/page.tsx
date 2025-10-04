@@ -56,7 +56,7 @@ const StatCounter = ({ end, duration, suffix = '', prefix = '' }: { end: number;
   });
 
   return (
-    <div ref={ref} className="text-5xl font-bold text-black mb-2">
+    <div ref={ref} className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-2">
       {inView ? <CountUp end={end} duration={duration} separator="," suffix={suffix} prefix={prefix} /> : '0'}
     </div>
   );
@@ -88,10 +88,10 @@ const NewsCard = ({ date, title, delay }: { date: string; title: string; delay: 
           transitionDelay: inView ? `${delay + 100}ms` : '0ms',
         }}
       >
-        <span className="text-[#8A393B] font-semibold text-lg sm:text-xl">{date}</span>
+        <span className="text-[#8A393B] font-semibold text-base sm:text-lg">{date}</span>
       </div>
       <h3 
-        className={`text-gray-900 font-medium text-base sm:text-lg mb-6 leading-relaxed transition-all duration-600 ${
+        className={`text-gray-900 font-medium text-sm sm:text-base mb-6 leading-relaxed transition-all duration-600 ${
           inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}
         style={{
@@ -159,14 +159,14 @@ const OurProjectsSection = () => {
   });
 
   return (
-    <section ref={ref} className="bg-white py-12 sm:py-16 md:py-24 will-change-transform">
+    <section ref={ref} className="bg-white py-10 sm:py-12 md:py-16 will-change-transform">
       <Carousel
         opts={{ align: "start", loop: true, skipSnaps: false, dragFree: false }}
         className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         {/* Header with fade-in */}
         <div 
-          className={`mb-8 sm:mb-10 md:mb-12 transition-all duration-800 ${
+          className={`mb-6 sm:mb-8 md:mb-10 transition-all duration-800 ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
           style={{
@@ -174,30 +174,28 @@ const OurProjectsSection = () => {
           }}
         >
           {/* Mobile Layout */}
-          <div className="md:hidden text-center mb-6">
-            <h2 className="text-3xl font-bold text-[#8A393B] mb-8">Our Projects</h2>
+          <div className="md:hidden text-center mb-5">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#8A393B] mb-6">Our Projects</h2>
             <div className="flex items-center justify-center">
-              <CarouselPrevious className="relative w-10 h-10 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 shadow-sm -mr-1" />
-              <CarouselNext className="relative w-10 h-10 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706] shadow-sm" />
+              <CarouselPrevious className="relative w-9 h-9 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 shadow-sm -mr-1" />
+              <CarouselNext className="relative w-9 h-9 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706] shadow-sm" />
             </div>
           </div>
           
           {/* Desktop Layout */}
-          <div className="hidden md:flex justify-between items-end">
-            <div>
-              <h2 className="text-4xl font-bold text-[#8A393B] mb-2">Our Projects</h2>
-            </div>
-            <div className="flex items-center">
-              <CarouselPrevious className="relative w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 -mr-14" />
-              <CarouselNext className="relative w-12 h-12 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706]" />
+          <div className="hidden md:flex justify-between items-center">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#8A393B]">Our Projects</h2>
+            <div className="flex items-center gap-2">
+              <CarouselPrevious className="static w-10 h-10 lg:w-12 lg:h-12 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700" />
+              <CarouselNext className="static w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706]" />
             </div>
           </div>
         </div>
         
         {/* Carousel Content with fade-in */}
-        <CarouselContent className="-ml-2 sm:-ml-4">
+        <CarouselContent className="-ml-2 sm:-ml-3">
           {projects.map((project, index) => (
-            <CarouselItem key={index} className="pl-2 sm:pl-4 basis-4/5 sm:basis-3/5 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+            <CarouselItem key={index} className="pl-2 sm:pl-3 basis-4/5 sm:basis-3/5 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
               <div 
                 className={`group will-change-transform transition-all ${
                   inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
@@ -209,13 +207,13 @@ const OurProjectsSection = () => {
                 }}
               >
                 {/* Mobile-Optimized Image Container */}
-                <div className="mb-3 sm:mb-4 overflow-hidden rounded-xl sm:rounded-2xl bg-gray-100 will-change-transform">
+                <div className="mb-2 sm:mb-3 overflow-hidden rounded-lg sm:rounded-xl bg-gray-100 will-change-transform">
                   <Image
                     src={project.image}
                     alt={project.city}
-                    width={400}
-                    height={500}
-                    className="w-full h-[280px] sm:h-[350px] md:h-[400px] lg:h-[450px] object-cover transition-transform duration-300 group-hover:scale-105"
+                    width={350}
+                    height={400}
+                    className="w-full h-[220px] sm:h-[280px] md:h-[320px] lg:h-[350px] object-cover transition-transform duration-300 group-hover:scale-105"
                     loading="eager"
                     priority={index < 2}
                     quality={85}
@@ -226,13 +224,13 @@ const OurProjectsSection = () => {
                 
                 {/* Mobile-Optimized Text Content */}
                 <div className="px-1 sm:px-0">
-                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 text-gray-900 group-hover:text-[#8A393B] transition-colors duration-300">{project.city}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold mb-1.5 sm:mb-2 text-gray-900 group-hover:text-[#8A393B] transition-colors duration-300">{project.city}</h3>
                   <Link 
                     href={project.link} 
-                    className="inline-flex items-center text-sm sm:text-base font-medium text-gray-700 hover:text-[#F2913F] border-b border-gray-300 hover:border-[#F2913F] transition-all duration-300 group-hover:translate-x-1"
+                    className="inline-flex items-center text-xs sm:text-sm font-medium text-gray-700 hover:text-[#F2913F] border-b border-gray-300 hover:border-[#F2913F] transition-all duration-300 group-hover:translate-x-1"
                   >
                     View Project
-                    <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
@@ -254,7 +252,7 @@ const NationwidePresenceSection = () => {
   });
 
   return (
-    <section className="relative py-48 overflow-hidden">
+    <section className="relative py-32 sm:py-36 md:py-40 overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full z-0">
         <HLSVideo
@@ -274,7 +272,7 @@ const NationwidePresenceSection = () => {
       <div ref={ref} className="relative z-10 max-w-4xl mx-auto px-4 text-center">
         {/* Main Heading */}
         <h2 
-          className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 text-white px-4 transition-all duration-800 will-change-transform ${
+          className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white px-4 transition-all duration-800 will-change-transform ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
           style={{
@@ -294,7 +292,7 @@ const NationwidePresenceSection = () => {
         
         {/* Gradient Line */}
         <div
-          className={`h-1.5 w-96 mx-auto mb-10 transition-all duration-700 will-change-transform ${
+          className={`h-1.5 w-72 sm:w-96 mx-auto mb-8 transition-all duration-700 will-change-transform ${
             inView ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
           }`}
           style={{
@@ -307,7 +305,7 @@ const NationwidePresenceSection = () => {
         
         {/* Subtitle */}
         <p 
-          className={`text-4xl text-gray-200 font-medium mb-8 transition-all duration-700 will-change-transform ${
+          className={`text-2xl sm:text-3xl md:text-4xl text-gray-200 font-medium mb-6 transition-all duration-700 will-change-transform ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
           style={{
@@ -320,7 +318,7 @@ const NationwidePresenceSection = () => {
         
         {/* Description */}
         <p 
-          className={`text-xl text-gray-300 max-w-lg mx-auto leading-relaxed transition-all duration-700 will-change-transform ${
+          className={`text-base sm:text-lg md:text-xl text-gray-300 max-w-lg mx-auto leading-relaxed transition-all duration-700 will-change-transform ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
           style={{
@@ -394,23 +392,23 @@ export default function Home() {
         </div>
 
         {/* Hero Content Overlay - Compact spacing */}
-        <div className={`relative z-10 flex flex-col items-center justify-center py-16 sm:py-20 md:py-24 lg:py-28 text-center px-4 sm:px-6 lg:px-8`}>
+        <div className={`relative z-10 flex flex-col items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 text-center px-4 sm:px-6 lg:px-8`}>
           {/* Main Heading - First Animation */}
-          <h1 className={`mb-6 sm:mb-8 md:mb-10 transition-all duration-1000 ${showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <div className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-1 sm:mb-2">
+          <h1 className={`mb-5 sm:mb-6 md:mb-8 transition-all duration-1000 ${showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <div className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-1 sm:mb-2">
               WORLD'S
         </div>
-            <div className="text-[#F2913F] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-1 sm:mb-2">
+            <div className="text-[#F2913F] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-1 sm:mb-2">
               LARGEST RAILWAY
         </div>
-            <div className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
+            <div className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">
               MANUFACTURER
               </div>
           </h1>
 
           {/* Stats Section - Second Animation (after 800ms) */}
           <div 
-            className={`grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-10 mb-6 sm:mb-8 md:mb-12 max-w-5xl w-full transition-all duration-1000`}
+            className={`grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-5 sm:mb-6 md:mb-8 max-w-5xl w-full transition-all duration-1000`}
             style={{
               opacity: showText ? 1 : 0,
               transform: showText ? 'translateY(0)' : 'translateY(20px)',
@@ -419,30 +417,30 @@ export default function Home() {
           >
             {/* Stat 1 */}
             <div className="flex flex-col items-center">
-              <div className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-1 sm:mb-2">
+              <div className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">
                 {showText ? <CountUp end={50} duration={2} suffix="+" delay={0.8} /> : '0+'}
               </div>
-              <div className="text-[#F2913F] text-sm sm:text-base md:text-lg font-medium">years on the job</div>
+              <div className="text-[#F2913F] text-xs sm:text-sm md:text-base font-medium">years on the job</div>
             </div>
 
             {/* Stat 2 */}
             <div className="flex flex-col items-center justify-center border-l border-r border-white/30 px-3 sm:px-4">
-              <div className="text-[#F2913F] text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Uncompromising</div>
-              <div className="text-[#F2913F] text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Quality Standards</div>
+              <div className="text-[#F2913F] text-base sm:text-lg md:text-xl lg:text-2xl font-bold">Uncompromising</div>
+              <div className="text-[#F2913F] text-base sm:text-lg md:text-xl lg:text-2xl font-bold">Quality Standards</div>
           </div>
 
             {/* Stat 3 */}
             <div className="flex flex-col items-center">
-              <div className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-1 sm:mb-2">
+              <div className="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">
                 {showText ? <CountUp end={400000} duration={2} separator="," suffix="+" delay={0.8} /> : '0+'}
               </div>
-              <div className="text-[#F2913F] text-sm sm:text-base md:text-lg font-medium">Safe Sleepers per year</div>
+              <div className="text-[#F2913F] text-xs sm:text-sm md:text-base font-medium">Safe Sleepers per year</div>
             </div>
           </div>
 
           {/* Tagline - Third Animation (after 1600ms) */}
           <div 
-            className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight pb-4 sm:pb-6 md:pb-8 transition-all duration-1000`}
+            className={`text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold leading-tight pb-3 sm:pb-4 md:pb-6 transition-all duration-1000`}
             style={{
               opacity: showText ? 1 : 0,
               transform: showText ? 'translateY(0)' : 'translateY(20px)',

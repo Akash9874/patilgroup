@@ -58,40 +58,27 @@ const OurVisionPage = () => {
   return (
     <div className="bg-white">
       {/* Vision Section */}
-      <section ref={visionRef} className="bg-white py-12 sm:py-16 md:py-20 relative">
-        {/* Right Edge Gradient Line - Desktop Only */}
+      <section ref={visionRef} className="bg-white py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
+        {/* Gradient Line - Absolute positioned from right edge */}
         <div 
-          className={`absolute hidden lg:block transition-all duration-1000 will-change-transform ${
+          className={`absolute right-0 hidden md:block transition-all duration-1000 will-change-transform ${
             visionInView ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
           }`}
           style={{
-            width: '864px',
-            height: '28px',
-            right: '0px',
-            top: '100px',
-            background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
+            top: '110px',
+            width: 'min(1133px, 80vw)',
+            height: 'clamp(20px, 2vw, 28px)',
+            background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)',
             transformOrigin: 'right',
             transitionDelay: '300ms',
             transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
           }}
         />
         
-        {/* Mobile Gradient Line */}
-        <div 
-          className={`lg:hidden absolute top-0 right-0 w-3/4 h-1 bg-gradient-to-l from-[#8A393B] via-[#1E3888] to-[#F2913F] opacity-80 transition-all duration-1000 will-change-transform ${
-            visionInView ? 'opacity-80 scale-x-100' : 'opacity-0 scale-x-0'
-          }`}
-          style={{
-            transformOrigin: 'right',
-            transitionDelay: '300ms',
-            transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
-          }}
-        ></div>
-        
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Vision Heading */}
           <div 
-            className={`mb-6 sm:mb-8 md:mb-12 text-center lg:text-left transition-all duration-700 will-change-transform ${
+            className={`mb-6 sm:mb-8 md:mb-10 lg:mb-16 transition-all duration-700 will-change-transform ${
               visionInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
             style={{
@@ -99,16 +86,19 @@ const OurVisionPage = () => {
               transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
             }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#8A393B] mb-3 sm:mb-4">
+            <h2 
+              className="font-bold text-[#8A393B] text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+              style={{
+                lineHeight: '110%',
+              }}
+            >
               Vision
             </h2>
-            {/* Mobile underline */}
-            <div className="lg:hidden w-20 h-1 bg-gradient-to-r from-[#8A393B] to-[#F2913F] mx-auto rounded-full"></div>
           </div>
           
           {/* Vision Content */}
           <div 
-            className={`text-center lg:text-left transition-all duration-700 will-change-transform ${
+            className={`transition-all duration-700 will-change-transform ${
               visionInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
             style={{
@@ -116,7 +106,15 @@ const OurVisionPage = () => {
               transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
             }}
           >
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-700 leading-relaxed">
+            <p 
+              className="text-[#414141] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+              style={{
+                textAlign: 'justify',
+                fontWeight: 400,
+                lineHeight: '150%',
+                maxWidth: '1248px',
+              }}
+            >
               To be the world largest and low cost railway track component producer. To benchmark as quality producer of track components by merging the efficiencies of excellence in quality, productivity & cost. To make rail travel faster and safer.
             </p>
           </div>
@@ -124,40 +122,27 @@ const OurVisionPage = () => {
       </section>
 
       {/* Mission Section */}
-      <section ref={missionRef} className="bg-white py-12 sm:py-16 md:py-20 relative">
-        {/* Left Edge Gradient Line - Desktop Only */}
+      <section ref={missionRef} className="bg-white py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
+        {/* Gradient Line - Absolute positioned from left edge */}
         <div 
-          className={`absolute hidden lg:block transition-all duration-1000 will-change-transform ${
+          className={`absolute left-0 hidden md:block transition-all duration-1000 will-change-transform ${
             missionInView ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
           }`}
           style={{
-            width: '280px',
-            height: '28px',
-            left: '0px',
-            bottom: '290px',
-            background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
+            top: '110px',
+            width: 'min(1060px, 75vw)',
+            height: 'clamp(20px, 2vw, 28px)',
+            background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)',
             transformOrigin: 'left',
             transitionDelay: '300ms',
             transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
           }}
         />
         
-        {/* Mobile Gradient Line */}
-        <div 
-          className={`lg:hidden absolute bottom-0 left-0 w-3/4 h-1 bg-gradient-to-r from-[#8A393B] via-[#1E3888] to-[#F2913F] opacity-80 transition-all duration-1000 will-change-transform ${
-            missionInView ? 'opacity-80 scale-x-100' : 'opacity-0 scale-x-0'
-          }`}
-          style={{
-            transformOrigin: 'left',
-            transitionDelay: '300ms',
-            transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
-          }}
-        ></div>
-        
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Mission Heading */}
           <div 
-            className={`mb-6 sm:mb-8 md:mb-12 text-center lg:text-left transition-all duration-700 will-change-transform ${
+            className={`mb-6 sm:mb-8 md:mb-10 lg:mb-16 transition-all duration-700 will-change-transform ${
               missionInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
             style={{
@@ -165,16 +150,19 @@ const OurVisionPage = () => {
               transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
             }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#8A393B] mb-3 sm:mb-4">
+            <h2 
+              className="font-bold text-[#8A393B] text-right text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+              style={{
+                lineHeight: '110%',
+              }}
+            >
               Mission
             </h2>
-            {/* Mobile underline */}
-            <div className="lg:hidden w-20 h-1 bg-gradient-to-r from-[#8A393B] to-[#F2913F] mx-auto rounded-full"></div>
           </div>
           
           {/* Mission Content */}
           <div 
-            className={`text-center lg:text-left transition-all duration-700 will-change-transform ${
+            className={`transition-all duration-700 will-change-transform ${
               missionInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
             style={{
@@ -182,7 +170,15 @@ const OurVisionPage = () => {
               transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
             }}
           >
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-700 leading-relaxed">
+            <p 
+              className="text-[#414141] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"
+              style={{
+                textAlign: 'justify',
+                fontWeight: 400,
+                lineHeight: '150%',
+                maxWidth: '1248px',
+              }}
+            >
               Increasing the productivity and quality by strictly adhering to the manufacturing excellence process. Treating human resources as partners. Practicing continuous price discovery process. Bringing in customer delight with on time supply. Predominant growth by adding new customers.
             </p>
           </div>
@@ -248,20 +244,21 @@ const OurVisionPage = () => {
               {['Quality', 'Customer Centric', 'Human Centric', 'Innovative', 'Sustainable growth', 'Adaptive', 'Competitive'].map((value, index) => (
                 <div 
                   key={value}
-                  className={`inline-block px-6 py-3 text-white font-semibold rounded-full shadow-lg will-change-transform ${
+                  className={`inline-block px-4 py-2 sm:px-6 sm:py-3 text-white text-sm sm:text-base font-semibold shadow-lg will-change-transform ${
                     coreValuesInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                   }`}
                   style={{
                     background: activeValueIndex === index 
-                      ? 'linear-gradient(to right, #F2913F, #FF8C42)' 
-                      : 'linear-gradient(to right, #8A393B, #A04547)',
+                      ? '#F2913F' 
+                      : '#8A393B',
+                    borderRadius: '11px',
                     transitionDelay: `${600 + index * 80}ms`,
                     transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
                     transition: 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1), background 0.8s ease-in-out',
                   }}
                 >
                   {value}
-                </div>
+              </div>
               ))}
             </div>
             
@@ -272,13 +269,14 @@ const OurVisionPage = () => {
                 {['Quality', 'Customer Centric', 'Human Centric', 'Innovative'].map((value, index) => (
                   <div 
                     key={value}
-                    className={`px-8 py-3 text-white text-lg sm:text-xl md:text-2xl font-semibold rounded-full shadow-lg will-change-transform ${
+                    className={`px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 text-white text-base sm:text-lg md:text-xl lg:text-2xl font-semibold shadow-lg will-change-transform ${
                       coreValuesInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                     }`}
                     style={{
                       background: activeValueIndex === index 
-                        ? 'linear-gradient(to right, #F2913F, #FF8C42)' 
-                        : 'linear-gradient(to right, #8A393B, #A04547)',
+                        ? '#F2913F' 
+                        : '#8A393B',
+                      borderRadius: '11px',
                       transitionDelay: `${600 + index * 80}ms`,
                       transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
                       transition: 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1), background 0.8s ease-in-out',
@@ -296,13 +294,14 @@ const OurVisionPage = () => {
                   return (
                     <div 
                       key={value}
-                      className={`px-8 py-3 text-white text-lg sm:text-xl md:text-2xl font-semibold rounded-full shadow-lg will-change-transform ${
+                      className={`px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 text-white text-base sm:text-lg md:text-xl lg:text-2xl font-semibold shadow-lg will-change-transform ${
                         coreValuesInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                       }`}
                       style={{
                         background: activeValueIndex === globalIndex 
-                          ? 'linear-gradient(to right, #F2913F, #FF8C42)' 
-                          : 'linear-gradient(to right, #8A393B, #A04547)',
+                          ? '#F2913F' 
+                          : '#8A393B',
+                        borderRadius: '11px',
                         transitionDelay: `${920 + index * 80}ms`,
                         transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
                         transition: 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1), background 0.8s ease-in-out',
