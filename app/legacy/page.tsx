@@ -20,10 +20,12 @@ export default function LegacyPage() {
           preload="metadata"
         />
         
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/50 z-[1]" />
+        
         {/* Mobile Layout */}
-        <div className="md:hidden absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-          <div className="relative z-10 h-full flex items-center justify-start px-4">
+        <div className="md:hidden absolute inset-0 z-10">
+          <div className="relative h-full flex items-center justify-start px-4">
             <div className="w-full max-w-lg">
               <h1 className="text-white font-bold" style={{ fontFamily: '"Helvetica Neue"', fontSize: '48px', fontWeight: 700, lineHeight: '75%' }}>
                 <span className="block">Our</span>
