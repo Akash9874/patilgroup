@@ -5,9 +5,6 @@ import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
-  const [scrollY, setScrollY] = useState(0);
-  const [prevScrollY, setPrevScrollY] = useState(0);
-  const [isNavVisible, setIsNavVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAboutMenuOpen, setIsAboutMenuOpen] = useState(false);
   const [isProductsMenuOpen, setIsProductsMenuOpen] = useState(false);
@@ -15,42 +12,6 @@ const Navbar = () => {
   const [isMobileAboutExpanded, setIsMobileAboutExpanded] = useState(false);
   const [isMobileProductsExpanded, setIsMobileProductsExpanded] = useState(false);
   const [isMobileSystemsExpanded, setIsMobileSystemsExpanded] = useState(false);
-
-  useEffect(() => {
-    let lastScroll = 0;
-    
-    const handleScroll = () => {
-      const currentScroll = window.pageYOffset;
-      
-      if (currentScroll <= 0) {
-        setIsNavVisible(true);
-        return;
-      }
-      
-      if (currentScroll > lastScroll && currentScroll > 80) {
-        // Scrolling DOWN
-        console.log('Hiding navbar, scroll:', currentScroll);
-        setIsNavVisible(false);
-        setIsAboutMenuOpen(false);
-        setIsProductsMenuOpen(false);
-        setIsSystemsMenuOpen(false);
-      } else if (currentScroll < lastScroll) {
-        // Scrolling UP
-        console.log('Showing navbar, scroll:', currentScroll);
-        setIsNavVisible(true);
-      }
-      
-      lastScroll = currentScroll;
-    };
-    
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const navIsScrolled = scrollY > 50 || isAboutMenuOpen || isProductsMenuOpen || isSystemsMenuOpen;
 
   const aboutLinks = [
     { href: '/about', label: 'About Us' },
@@ -117,11 +78,8 @@ const Navbar = () => {
   return (
     <nav 
       data-navbar
-      className={`fixed top-0 left-0 right-0 z-[9999] shadow-md w-full bg-white ${
-        isNavVisible ? '' : '-translate-y-full'
-      }`}
+      className="w-full bg-white"
       style={{
-        transition: 'transform 0.3s ease-in-out',
         height: '103px',
       }}
       onMouseLeave={() => {

@@ -214,7 +214,7 @@ export default function SustainabilityPage() {
                     position: 'relative'
                   }}>
                     <Image
-                      src="/dust control_.png"
+                      src="/dust control.jpg"
                       alt="Dust control system"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -232,9 +232,9 @@ export default function SustainabilityPage() {
 
       {/* Responsive Efficiency and intent statements */}
       <section className="bg-white py-8 sm:py-12 md:py-16 fade-in-section">
-        {/* Mobile Layout */}
-        <div className="md:hidden max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-          <div className="space-y-6 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+          {/* Mobile Layout */}
+          <div className="md:hidden space-y-6 text-center">
             <div className="bg-white rounded-2xl p-6">
               <p className="text-[#8A393B] font-semibold text-lg sm:text-xl leading-snug mb-3">
                 Every decision — audited for efficiency
@@ -249,30 +249,18 @@ export default function SustainabilityPage() {
               <div className="w-24 h-1 bg-gradient-to-l from-[#F2913F] to-transparent mx-auto rounded-full" />
             </div>
           </div>
-        </div>
-        
-        {/* Desktop Layout - Full width gradients from screen edges */}
-        <div className="hidden md:block space-y-4">
-          <div className="flex items-center w-full">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex items-center flex-1">
-              <p className="text-[#8A393B] font-semibold text-3xl sm:text-4xl md:text-5xl leading-tight whitespace-nowrap">
+          
+          {/* Desktop Layout - Two lines stacked */}
+          <div className="hidden md:block space-y-4">
+            <div className="flex items-center">
+              <p className="text-[#8A393B] font-semibold text-3xl sm:text-4xl md:text-5xl leading-tight">
                 Every decision — audited for efficiency
               </p>
+              <div className="ml-auto h-2 md:h-3 flex-1 max-w-2xl bg-gradient-to-r from-[#F2913F] via-[#1E3888] to-transparent rounded-full" />
             </div>
-            <div className="flex-1" style={{
-              width: '648px',
-              height: '28px',
-              background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
-            }} />
-          </div>
-          <div className="flex items-center w-full">
-            <div className="flex-1" style={{
-              width: '648px',
-              height: '28px',
-              background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
-            }} />
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 flex items-center justify-end flex-1">
-              <p className="text-[#008000] font-semibold text-3xl sm:text-4xl md:text-5xl leading-tight text-right whitespace-nowrap">
+            <div className="flex items-center">
+              <div className="mr-auto h-2 md:h-3 flex-1 max-w-2xl bg-gradient-to-l from-[#F2913F] via-[#1E3888] to-transparent rounded-full" />
+              <p className="text-[#008000] font-semibold text-3xl sm:text-4xl md:text-5xl leading-tight text-right">
                 Every plant — aligned with green intent
               </p>
             </div>
