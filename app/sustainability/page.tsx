@@ -27,82 +27,34 @@ export default function SustainabilityPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30" />
           <div className="relative z-10 h-full flex items-center justify-center">
             <div className="text-center px-4 w-full max-w-lg mx-auto">
-              <h1 className="text-white font-bold leading-tight text-5xl sm:text-6xl drop-shadow-2xl">
+              <h1 className="text-white font-bold leading-tight text-5xl sm:text-6xl drop-shadow-2xl mb-6">
                 Sustainability
               </h1>
-              <div className="w-24 h-1.5 bg-gradient-to-r from-green-400 via-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full animate-pulse shadow-lg"></div>
-              <p className="text-white text-xl sm:text-2xl mt-8 leading-relaxed drop-shadow-xl font-medium">
-                Green innovation in railway engineering
+              <p className="text-[#F2913F] text-lg sm:text-xl font-medium leading-relaxed drop-shadow-xl">
+                Quiet changes. Tangible outcomes.
+              </p>
+              <p className="text-white text-lg sm:text-xl mt-3 leading-relaxed drop-shadow-xl">
+                Built into every plant, <span className="font-semibold">every process.</span>
               </p>
             </div>
           </div>
         </div>
         
-        {/* Desktop Layout - Bottom left positioning */}
+        {/* Desktop Layout - Centered positioning */}
         <div className="hidden md:block">
           <div className="absolute inset-0 bg-black/60" />
-          <div className="absolute bottom-0 left-0 z-10">
-            <div className="px-6 md:px-8 lg:px-12 pb-16">
-              <h1 className="text-white font-bold leading-none text-6xl sm:text-7xl md:text-8xl lg:text-9xl drop-shadow-lg">
+          <div className="absolute inset-0 z-10 flex items-center justify-center">
+            <div className="text-center px-6 md:px-8 lg:px-12">
+              <h1 className="text-white font-bold leading-none text-6xl sm:text-7xl md:text-8xl drop-shadow-lg mb-6">
                 Sustainability
               </h1>
+              <p className="text-[#F2913F] text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed drop-shadow-xl">
+                Quiet changes. Tangible outcomes.
+              </p>
+              <p className="text-white text-2xl md:text-3xl lg:text-4xl mt-4 leading-relaxed drop-shadow-xl">
+                Built into every plant, <span className="font-semibold">every process.</span>
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Responsive Split headline section */}
-      <section className="bg-black py-8 sm:py-12 md:py-16 lg:py-24 fade-in-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-          {/* Mobile Layout */}
-          <div className="md:hidden space-y-8 text-center">
-            <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/30">
-              <TypingAnimation
-                text="Quiet changes. Tangible outcomes."
-                showCursor={true}
-                speed={80}
-                startAfterMs={500}
-                cursorColor="#8A393B"
-                className="text-2xl sm:text-3xl font-bold text-[#8A393B] leading-tight"
-              />
-            </div>
-            
-            <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/30">
-              <TypingAnimation
-                text="Built into every plant, every process."
-                showCursor={true}
-                speed={80}
-                startAfterMs={1500}
-                cursorColor="#F2913F"
-                className="text-2xl sm:text-3xl font-bold text-[#F2913F] leading-tight"
-              />
-            </div>
-          </div>
-          
-          {/* Desktop Layout - Original */}
-          <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#8A393B] leading-tight">
-              <TypingAnimation
-                text="Quiet changes.
-Tangible outcomes."
-                showCursor={true}
-                speed={80}
-                startAfterMs={500}
-                cursorColor="#8A393B"
-                className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#8A393B] leading-tight"
-              />
-            </p>
-            <p className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#F2913F] leading-tight md:text-right">
-              <TypingAnimation
-                text="Built into every plant,
-every process."
-                showCursor={true}
-                speed={80}
-                startAfterMs={1500}
-                cursorColor="#F2913F"
-                className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#F2913F] leading-tight md:text-right"
-              />
-            </p>
           </div>
         </div>
       </section>

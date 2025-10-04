@@ -194,86 +194,41 @@ const ManagementPage = () => {
   
   return (
     <div className="bg-[#1E1E1E] text-white">
-      {/* Responsive Management Hero Section */}
-      <section className="relative h-screen">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/managementhero.webp"
-            alt="Management hero background"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
-            priority
-          />
-        </div>
-        
-        {/* Mobile Layout */}
-        <div className="md:hidden absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
-          <div className="relative z-10 h-full flex items-center justify-center">
-            <div className="text-center px-4 w-full max-w-lg mx-auto">
-              <h2 className="text-white text-4xl sm:text-5xl font-medium font-clash mb-3 drop-shadow-2xl">Our</h2>
-              <h1 className="text-white text-5xl sm:text-6xl font-bold font-clash leading-tight drop-shadow-2xl">Management</h1>
-              <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full shadow-lg"></div>
-              <p className="text-white text-xl sm:text-2xl mt-8 leading-relaxed drop-shadow-xl font-medium">Meet our experienced leadership team</p>
-            </div>
-          </div>
-        </div>
-        
-        {/* Tablet Layout */}
-        <div className="hidden md:block lg:hidden absolute inset-0">
-          <div className="absolute inset-0 bg-black/50"></div>
-          <div className="relative z-10 h-full flex items-center">
-            <div className="pl-8">
-              <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 max-w-lg">
-                <h2 className="text-white text-5xl font-medium font-clash mb-2">Our</h2>
-                <h1 className="text-white text-6xl font-bold font-clash leading-tight">Management</h1>
-                <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mt-6 rounded-full"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Desktop Layout - Bottom Left Positioning */}
-        <div className="hidden lg:block">
-          <div className="absolute inset-0 bg-black/40"></div>
-          <div className="absolute bottom-0 left-0 z-10">
-            <div className="pl-16 xl:pl-24 pb-16">
-              <h2 className="text-white text-6xl lg:text-7xl font-medium font-clash">Our</h2>
-              <h1 className="text-white text-8xl lg:text-9xl font-bold font-clash -mt-3 lg:-mt-4">Management</h1>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Responsive Our Leadership Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white text-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Legacy in Rail Header */}
-          <div className="mb-8 sm:mb-12 md:mb-16 relative">
-            {/* Heading with gradient lines */}
-            <div className="w-full">
-              <div className="flex items-center mb-6">
-                <div className="flex-1 h-2" style={{
-                  background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
-                }}></div>
-                <div className="px-8">
-                  <h2 className="text-4xl sm:text-5xl lg:text-6xl font-clash font-bold text-[#8A393B] leading-tight whitespace-nowrap">
+        {/* Legacy in Rail Header - Full Width */}
+        <div className="mb-8 sm:mb-12 md:mb-16 relative">
+          {/* Heading with gradient lines from screen edges */}
+          <div className="w-full">
+            <div className="flex items-center mb-6">
+              {/* Left gradient from left edge of screen */}
+              <div className="flex-1" style={{
+                height: '28px',
+                background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
+              }}></div>
+              
+              {/* Heading */}
+              <div className="px-8 flex-shrink-0">
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-clash font-bold text-[#8A393B] leading-tight whitespace-nowrap">
                   Legacy in Rail
                 </h2>
-                </div>
-                <div className="flex-1 h-2" style={{
-                  background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
-                }}></div>
               </div>
               
-              {/* Subtitle */}
-              <div className="text-center">
-                <p className="text-xl sm:text-2xl lg:text-3xl text-[#F2913F] font-semibold">Led by Experience</p>
-              </div>
+              {/* Right gradient to right edge of screen */}
+              <div className="flex-1" style={{
+                height: '28px',
+                background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
+              }}></div>
+            </div>
+            
+            {/* Subtitle */}
+            <div className="text-center">
+              <p className="text-xl sm:text-2xl lg:text-3xl text-[#F2913F] font-semibold">Led by Experience</p>
             </div>
           </div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Mobile Layout - Swipeable Carousel */}
           <div className="md:hidden relative">
