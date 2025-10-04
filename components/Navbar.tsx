@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
@@ -15,37 +15,63 @@ const Navbar = () => {
   const [isMobileAboutExpanded, setIsMobileAboutExpanded] = useState(false);
   const [isMobileProductsExpanded, setIsMobileProductsExpanded] = useState(false);
   const [isMobileSystemsExpanded, setIsMobileSystemsExpanded] = useState(false);
+  
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
-    let lastScroll = 0;
+    let ticking = false;
     
-    const handleScroll = () => {
-      const currentScroll = window.pageYOffset;
+    const updateNavbar = (currentScrollY: number) => {
+      console.log('📍 Scroll:', currentScrollY.toFixed(0), 'Last:', lastScrollY.current.toFixed(0), 'Direction:', currentScrollY > lastScrollY.current ? 'DOWN ⬇️' : 'UP ⬆️');
       
-      if (currentScroll <= 0) {
+      // At the very top - always show
+      if (currentScrollY <= 10) {
+        console.log('✅ At top, showing navbar');
         setIsNavVisible(true);
-        return;
-      }
-      
-      if (currentScroll > lastScroll && currentScroll > 80) {
-        // Scrolling DOWN
-        console.log('Hiding navbar, scroll:', currentScroll);
+      } 
+      // Scrolling DOWN - hide navbar
+      else if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        console.log('❌ Scrolling DOWN, hiding navbar');
         setIsNavVisible(false);
         setIsAboutMenuOpen(false);
         setIsProductsMenuOpen(false);
         setIsSystemsMenuOpen(false);
-      } else if (currentScroll < lastScroll) {
-        // Scrolling UP
-        console.log('Showing navbar, scroll:', currentScroll);
+      } 
+      // Scrolling UP - show navbar (from any position)
+      else if (currentScrollY < lastScrollY.current && lastScrollY.current - currentScrollY > 5) {
+        console.log('✅ Scrolling UP, showing navbar');
         setIsNavVisible(true);
       }
       
-      lastScroll = currentScroll;
+      lastScrollY.current = currentScrollY <= 0 ? 0 : currentScrollY;
+      ticking = false;
     };
     
+    // Primary: Listen for Lenis scroll events
+    const lenisScrollHandler = (e: CustomEvent) => {
+      const currentScrollY = e.detail?.scroll || 0;
+      if (!ticking) {
+        window.requestAnimationFrame(() => updateNavbar(currentScrollY));
+        ticking = true;
+      }
+    };
+    
+    // Fallback: Native scroll listener
+    const handleScroll = () => {
+      const currentScrollY = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+      
+      if (!ticking) {
+        window.requestAnimationFrame(() => updateNavbar(currentScrollY));
+        ticking = true;
+      }
+    };
+    
+    // Attach listeners
+    window.addEventListener('lenis-scroll', lenisScrollHandler as EventListener);
     window.addEventListener('scroll', handleScroll, { passive: true });
     
     return () => {
+      window.removeEventListener('lenis-scroll', lenisScrollHandler as EventListener);
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -117,11 +143,12 @@ const Navbar = () => {
   return (
     <nav 
       data-navbar
-      className={`fixed top-0 left-0 right-0 z-[9999] shadow-md w-full bg-white ${
-        isNavVisible ? '' : '-translate-y-full'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-[9999] shadow-md w-full bg-white`}
       style={{
-        transition: 'transform 0.3s ease-in-out',
+        height: '103px',
+        transform: isNavVisible ? 'translateY(0)' : 'translateY(-110%)',
+        transition: 'transform 300ms cubic-bezier(0.4, 0, 0.2, 1)',
+        willChange: 'transform',
       }}
       onMouseLeave={() => {
         setIsAboutMenuOpen(false);
@@ -129,8 +156,8 @@ const Navbar = () => {
         setIsSystemsMenuOpen(false);
       }}
     >
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20 sm:h-22 md:h-24 lg:h-28">
+      <div className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-[103px]">
           {/* Logo */}
           <div className="flex items-center animate-fadeInLeft -ml-2 sm:-ml-4 md:-ml-6 lg:-ml-10">
               <Link href="/" onMouseEnter={() => setIsAboutMenuOpen(false)}>
@@ -262,26 +289,34 @@ const Navbar = () => {
       
       {/* About Us Mega Menu */}
       <div 
-        className={`absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-500 ease-in-out ${
+        className={`absolute left-0 right-0 bg-white shadow-lg overflow-hidden ${
           isAboutMenuOpen 
-            ? 'opacity-100 visible translate-y-0 max-h-[600px]' 
-            : 'opacity-0 invisible -translate-y-4 max-h-0'
+            ? 'opacity-100 visible translate-y-0' 
+            : 'opacity-0 invisible -translate-y-4 pointer-events-none'
         }`}
         style={{
+          top: '103px',
+          width: '100%',
           transformOrigin: 'top',
-          transitionProperty: 'opacity, transform, max-height',
+          transitionProperty: 'opacity, transform, visibility',
+          transitionDuration: isAboutMenuOpen ? '0.4s' : '0.3s',
+          transitionTimingFunction: isAboutMenuOpen 
+            ? 'cubic-bezier(0.4, 0, 0.2, 1)' 
+            : 'cubic-bezier(0.6, 0, 0.8, 0.4)',
+          transitionDelay: isAboutMenuOpen ? '0s' : '0s',
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6">
           <div className="flex flex-col">
             {aboutLinks.map((link, index) => (
               <Link 
                 key={link.href} 
                 href={link.href} 
-                className="text-2xl font-bold text-gray-900 hover:text-[#F2913F] px-4 py-3 transition-colors duration-300"
+                className="text-lg font-bold text-gray-900 hover:text-[#F2913F] px-6 py-3 transition-all duration-200 ease-out border-l-2 border-transparent hover:border-[#F2913F]"
                 style={{
-                  animation: isAboutMenuOpen ? `slideIn 0.3s ease-out ${index * 0.05}s forwards` : 'none',
-                  opacity: isAboutMenuOpen ? 1 : 0,
+                  animation: isAboutMenuOpen ? `fadeSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.06}s forwards` : 'none',
+                  opacity: 0,
+                  transform: 'translateX(-8px)',
                 }}
               >
                 {link.label}
@@ -293,26 +328,34 @@ const Navbar = () => {
 
       {/* Products Mega Menu */}
       <div 
-        className={`absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-500 ease-in-out ${
+        className={`absolute left-0 right-0 bg-white shadow-lg overflow-hidden ${
           isProductsMenuOpen 
-            ? 'opacity-100 visible translate-y-0 max-h-[600px]' 
-            : 'opacity-0 invisible -translate-y-4 max-h-0'
+            ? 'opacity-100 visible translate-y-0' 
+            : 'opacity-0 invisible -translate-y-4 pointer-events-none'
         }`}
         style={{
+          top: '103px',
+          width: '100%',
           transformOrigin: 'top',
-          transitionProperty: 'opacity, transform, max-height',
+          transitionProperty: 'opacity, transform, visibility',
+          transitionDuration: isProductsMenuOpen ? '0.4s' : '0.3s',
+          transitionTimingFunction: isProductsMenuOpen 
+            ? 'cubic-bezier(0.4, 0, 0.2, 1)' 
+            : 'cubic-bezier(0.6, 0, 0.8, 0.4)',
+          transitionDelay: isProductsMenuOpen ? '0s' : '0s',
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6">
           <div className="flex flex-col">
             {productLinks.map((link, index) => (
               <Link 
                 key={link.href} 
                 href={link.href} 
-                className="text-2xl font-bold text-gray-900 hover:text-[#F2913F] px-4 py-3 transition-colors duration-300"
+                className="text-lg font-bold text-gray-900 hover:text-[#F2913F] px-6 py-3 transition-all duration-200 ease-out border-l-2 border-transparent hover:border-[#F2913F]"
                 style={{
-                  animation: isProductsMenuOpen ? `slideIn 0.3s ease-out ${index * 0.05}s forwards` : 'none',
-                  opacity: isProductsMenuOpen ? 1 : 0,
+                  animation: isProductsMenuOpen ? `fadeSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.06}s forwards` : 'none',
+                  opacity: 0,
+                  transform: 'translateX(-8px)',
                 }}
               >
                 {link.label}
@@ -324,26 +367,34 @@ const Navbar = () => {
 
       {/* Systems Mega Menu */}
       <div 
-        className={`absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-500 ease-in-out ${
+        className={`absolute left-0 right-0 bg-white shadow-lg overflow-hidden ${
           isSystemsMenuOpen 
-            ? 'opacity-100 visible translate-y-0 max-h-[600px]' 
-            : 'opacity-0 invisible -translate-y-4 max-h-0'
+            ? 'opacity-100 visible translate-y-0' 
+            : 'opacity-0 invisible -translate-y-4 pointer-events-none'
         }`}
         style={{
+          top: '103px',
+          width: '100%',
           transformOrigin: 'top',
-          transitionProperty: 'opacity, transform, max-height',
+          transitionProperty: 'opacity, transform, visibility',
+          transitionDuration: isSystemsMenuOpen ? '0.4s' : '0.3s',
+          transitionTimingFunction: isSystemsMenuOpen 
+            ? 'cubic-bezier(0.4, 0, 0.2, 1)' 
+            : 'cubic-bezier(0.6, 0, 0.8, 0.4)',
+          transitionDelay: isSystemsMenuOpen ? '0s' : '0s',
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6">
           <div className="flex flex-col">
             {systemLinks.map((link, index) => (
               <Link 
                 key={link.href} 
                 href={link.href} 
-                className="text-2xl font-bold text-gray-900 hover:text-[#F2913F] px-4 py-3 transition-colors duration-300"
+                className="text-lg font-bold text-gray-900 hover:text-[#F2913F] px-6 py-3 transition-all duration-200 ease-out border-l-2 border-transparent hover:border-[#F2913F]"
                 style={{
-                  animation: isSystemsMenuOpen ? `slideIn 0.3s ease-out ${index * 0.05}s forwards` : 'none',
-                  opacity: isSystemsMenuOpen ? 1 : 0,
+                  animation: isSystemsMenuOpen ? `fadeSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.06}s forwards` : 'none',
+                  opacity: 0,
+                  transform: 'translateX(-8px)',
                 }}
               >
                 {link.label}
@@ -354,10 +405,10 @@ const Navbar = () => {
       </div>
       
       <style jsx>{`
-        @keyframes slideIn {
+        @keyframes fadeSlideIn {
           from {
             opacity: 0;
-            transform: translateX(-10px);
+            transform: translateX(-8px);
           }
           to {
             opacity: 1;

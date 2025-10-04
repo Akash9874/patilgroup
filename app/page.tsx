@@ -102,9 +102,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="overflow-x-hidden" style={{ zoom: zoomLevel }}>
-      {/* Hero Section - Single Frame */}
-      <section className="relative h-screen max-h-screen overflow-hidden bg-black">
+    <div className="overflow-x-hidden" style={{ zoom: zoomLevel, width: '100%', maxWidth: '100vw' }}>
+      {/* Hero Section - Compact to content */}
+      <section className="relative overflow-hidden bg-black" style={{ maxWidth: '100vw' }}>
         {/* Video Background */}
           <div className="absolute inset-0 w-full h-full">
           <video
@@ -119,10 +119,10 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
 
-        {/* Hero Content Overlay - Optimized spacing to fit in one frame */}
-        <div className={`relative z-10 h-full flex flex-col items-center justify-start pt-24 sm:pt-28 md:pt-32 lg:pt-40 text-center px-4 sm:px-6 lg:px-8 transition-opacity duration-1000 ${showText ? 'opacity-100' : 'opacity-0'}`}>
-          {/* Main Heading */}
-          <h1 className="mb-6 sm:mb-8 md:mb-10">
+        {/* Hero Content Overlay - Compact spacing */}
+        <div className={`relative z-10 flex flex-col items-center justify-center py-16 sm:py-20 md:py-24 lg:py-28 text-center px-4 sm:px-6 lg:px-8`}>
+          {/* Main Heading - First Animation */}
+          <h1 className={`mb-6 sm:mb-8 md:mb-10 transition-all duration-1000 ${showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <div className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-1 sm:mb-2">
               WORLD'S
         </div>
@@ -134,11 +134,20 @@ export default function Home() {
               </div>
           </h1>
 
-          {/* Stats Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-10 mb-6 sm:mb-8 md:mb-12 max-w-5xl w-full">
+          {/* Stats Section - Second Animation (after 800ms) */}
+          <div 
+            className={`grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-10 mb-6 sm:mb-8 md:mb-12 max-w-5xl w-full transition-all duration-1000`}
+            style={{
+              opacity: showText ? 1 : 0,
+              transform: showText ? 'translateY(0)' : 'translateY(20px)',
+              transitionDelay: showText ? '800ms' : '0ms',
+            }}
+          >
             {/* Stat 1 */}
             <div className="flex flex-col items-center">
-              <div className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-1 sm:mb-2">50+</div>
+              <div className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-1 sm:mb-2">
+                {showText ? <CountUp end={50} duration={2} suffix="+" delay={0.8} /> : '0+'}
+              </div>
               <div className="text-[#F2913F] text-sm sm:text-base md:text-lg font-medium">years on the job</div>
             </div>
 
@@ -150,13 +159,22 @@ export default function Home() {
 
             {/* Stat 3 */}
             <div className="flex flex-col items-center">
-              <div className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-1 sm:mb-2">4,00,000+</div>
+              <div className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-1 sm:mb-2">
+                {showText ? <CountUp end={400000} duration={2} separator="," suffix="+" delay={0.8} /> : '0+'}
+              </div>
               <div className="text-[#F2913F] text-sm sm:text-base md:text-lg font-medium">Safe Sleepers per year</div>
             </div>
           </div>
 
-          {/* Tagline */}
-          <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
+          {/* Tagline - Third Animation (after 1600ms) */}
+          <div 
+            className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight pb-4 sm:pb-6 md:pb-8 transition-all duration-1000`}
+            style={{
+              opacity: showText ? 1 : 0,
+              transform: showText ? 'translateY(0)' : 'translateY(20px)',
+              transitionDelay: showText ? '1600ms' : '0ms',
+            }}
+          >
             <span className="text-[#F2913F]">Built to Scale.</span>{' '}
             <span className="text-[#8A393B]">Built to Last.</span>
             <br className="hidden sm:block" />
@@ -166,49 +184,55 @@ export default function Home() {
       </section>
 
       {/* Recent News and Updates Section */}
-      <section className="bg-[#F5F4F1] py-12 sm:py-16 md:py-20">
+      <section className="bg-[#F5F4F1] py-12 sm:py-16 md:py-20 will-change-transform fade-in-section overflow-hidden" style={{ maxWidth: '100vw' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {/* Card 1 */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300 fade-in-section">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300 will-change-transform">
               <div className="mb-4">
                 <span className="text-[#8A393B] font-semibold text-lg sm:text-xl">Mar 2024</span>
               </div>
               <h3 className="text-gray-900 font-medium text-base sm:text-lg mb-6 leading-relaxed">
-                Sleepers supplied for new Pune Metro Corridor
+                Sleepers supplied for new Bullet trains
               </h3>
               <a 
                 href="/news" 
-                className="inline-flex items-center text-[#F2913F] hover:text-[#D97706] font-medium text-sm sm:text-base transition-colors duration-200"
+                className="group inline-flex items-center text-[#F2913F] hover:text-[#D97706] font-medium text-sm sm:text-base transition-colors duration-200"
               >
-                Read More
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span className="relative">
+                  Read More
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#F2913F] transition-all duration-300 ease-out group-hover:w-full"></span>
+                </span>
+                <svg className="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </a>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300 fade-in-section" style={{ animationDelay: '150ms' }}>
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300 will-change-transform">
               <div className="mb-4">
-                <span className="text-[#8A393B] font-semibold text-lg sm:text-xl">Dec 2023</span>
+                <span className="text-[#8A393B] font-semibold text-lg sm:text-xl">Dec 2020</span>
               </div>
               <h3 className="text-gray-900 font-medium text-base sm:text-lg mb-6 leading-relaxed">
-                Partnered on Mumbai-Ahmedabad bullet train trial track
+                Acquired ApnaTech
               </h3>
               <a 
                 href="/news" 
-                className="inline-flex items-center text-[#F2913F] hover:text-[#D97706] font-medium text-sm sm:text-base transition-colors duration-200"
+                className="group inline-flex items-center text-[#F2913F] hover:text-[#D97706] font-medium text-sm sm:text-base transition-colors duration-200"
               >
-                Read More
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span className="relative">
+                  Read More
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#F2913F] transition-all duration-300 ease-out group-hover:w-full"></span>
+                </span>
+                <svg className="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </a>
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300 fade-in-section" style={{ animationDelay: '300ms' }}>
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300 will-change-transform">
               <div className="mb-4">
                 <span className="text-[#8A393B] font-semibold text-lg sm:text-xl">Sep 2023</span>
               </div>
@@ -217,10 +241,13 @@ export default function Home() {
               </h3>
               <a 
                 href="/news" 
-                className="inline-flex items-center text-[#F2913F] hover:text-[#D97706] font-medium text-sm sm:text-base transition-colors duration-200"
+                className="group inline-flex items-center text-[#F2913F] hover:text-[#D97706] font-medium text-sm sm:text-base transition-colors duration-200"
               >
-                Read More
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span className="relative">
+                  Read More
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#F2913F] transition-all duration-300 ease-out group-hover:w-full"></span>
+                </span>
+                <svg className="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </a>
@@ -235,7 +262,7 @@ export default function Home() {
               {/* Explore Precast Solution Button */}
             <Link 
               href="/precast" 
-                className="group inline-flex items-center gap-3 bg-[#8A393B] hover:bg-[#6d2c2f] px-6 py-3 md:px-8 md:py-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-base md:text-lg font-medium text-white whitespace-nowrap fade-in-section flex-shrink-0 z-10"
+                className="group inline-flex items-center gap-3 bg-[#8A393B] hover:bg-[#F2913F] px-6 py-3 md:px-8 md:py-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-500 ease-out text-base md:text-lg font-medium text-white whitespace-nowrap flex-shrink-0 z-10 will-change-transform"
             >
                 Explore Precast Solution
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -247,9 +274,12 @@ export default function Home() {
         
           {/* Gradient Line extending to viewport right edge */}
           <div 
-            className="absolute top-0 right-0 h-7 fade-in-section"
-                style={{
-              left: 'calc(max(50% - 640px + 350px, 350px))',
+            className="absolute right-0 h-7 will-change-transform"
+            style={{
+              top: '50%',
+              transform: 'translateY(-50%)',
+              width: '60%',
+              maxWidth: 'calc(100vw - 350px)',
               background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
             }}
           />
@@ -257,13 +287,13 @@ export default function Home() {
       </section>
 
       {/* Responsive Our Projects Section */}
-      <section className="bg-white py-12 sm:py-16 md:py-24">
+      <section className="bg-white py-12 sm:py-16 md:py-24 will-change-transform fade-in-section overflow-hidden" style={{ maxWidth: '100vw' }}>
         <Carousel
-          opts={{ align: "start", loop: true }}
+          opts={{ align: "start", loop: true, skipSnaps: false, dragFree: false }}
           className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         >
           {/* Mobile-Optimized Header */}
-          <div className="mb-8 sm:mb-10 md:mb-12 fade-in-section">
+          <div className="mb-8 sm:mb-10 md:mb-12">
             {/* Mobile Layout */}
             <div className="md:hidden text-center mb-6">
               <h2 className="text-3xl font-bold text-[#8A393B] mb-8">Our Projects</h2>
@@ -289,16 +319,18 @@ export default function Home() {
           <CarouselContent className="-ml-2 sm:-ml-4">
             {projects.map((project, index) => (
               <CarouselItem key={index} className="pl-2 sm:pl-4 basis-4/5 sm:basis-3/5 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                <div className="fade-in-section group">
+                <div className="group will-change-transform">
                   {/* Mobile-Optimized Image Container */}
-                  <div className="mb-3 sm:mb-4 overflow-hidden rounded-xl sm:rounded-2xl bg-gray-100">
+                  <div className="mb-3 sm:mb-4 overflow-hidden rounded-xl sm:rounded-2xl bg-gray-100 will-change-transform">
                     <Image
                       src={project.image}
                       alt={project.city}
                       width={400}
                       height={500}
                       className="w-full h-[280px] sm:h-[350px] md:h-[400px] lg:h-[450px] object-cover transition-transform duration-300 group-hover:scale-105"
-                      loading="lazy"
+                      loading="eager"
+                      priority={index < 2}
+                      quality={85}
                       placeholder="blur"
                       blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                     />
@@ -325,7 +357,7 @@ export default function Home() {
       </section>
       
       {/* Nationwide Presence Section */}
-      <section className="relative py-48 overflow-hidden">
+      <section className="relative py-48 overflow-hidden fade-in-section" style={{ maxWidth: '100vw' }}>
         {/* Background Video */}
         <div className="absolute inset-0 w-full h-full z-0">
             <HLSVideo

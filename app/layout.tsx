@@ -90,7 +90,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <head>
         {/* Favicon and app icons */}
         <link rel="icon" type="image/png" sizes="32x32" href="/pg.png" />
@@ -109,10 +109,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className={`${helvetica.className} ${helvetica.variable}`}>
+      <body className={`${helvetica.className} ${helvetica.variable} overflow-x-hidden`}>
         <LenisProvider>
           <Navbar />
-          <main className="lg:pt-0 pt-20 sm:pt-22 md:pt-24">{children}</main>
+          <main className="lg:pt-0 pt-20 sm:pt-22 md:pt-24 overflow-x-hidden" style={{ width: '100%', maxWidth: '100vw' }}>{children}</main>
           <Footer />
           <Toaster />
         </LenisProvider>

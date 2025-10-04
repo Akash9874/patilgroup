@@ -9,47 +9,6 @@ const OurVisionPage = () => {
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px]">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/ourvisionhero.jpg"
-            alt="Our Vision Hero Background"
-            fill
-            className="object-cover object-center"
-            priority
-            sizes="100vw"
-          />
-        </div>
-        
-        {/* Black translucent overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
-        
-        {/* Content */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 sm:px-6">
-          {/* Patil Group Logo */}
-          <div className="mb-6 sm:mb-8 md:mb-12">
-            <Image
-              src="/pg.png"
-              alt="Patil Group Logo"
-              width={400}
-              height={400}
-              className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 xl:w-96 xl:h-96 2xl:w-[28rem] 2xl:h-[28rem] object-contain"
-              priority
-            />
-          </div>
-          
-          {/* Our Vision Heading */}
-          <div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 sm:mb-4 drop-shadow-2xl">
-              Our Vision
-            </h1>
-            <div className="w-16 sm:w-24 md:w-32 lg:w-40 h-1 bg-white mx-auto"></div>
-          </div>
-        </div>
-      </section>
-
       {/* Vision Section */}
       <section className="bg-white py-12 sm:py-16 md:py-20 relative">
         {/* Right Edge Gradient Line - Desktop Only */}
@@ -59,7 +18,7 @@ const OurVisionPage = () => {
             width: '864px',
             height: '28px',
             right: '0px',
-            top: '70px',
+            top: '100px',
             background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
           }}
         />
@@ -95,7 +54,7 @@ const OurVisionPage = () => {
             width: '280px',
             height: '28px',
             left: '0px',
-            bottom: '258px',
+            bottom: '290px',
             background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
           }}
         />
@@ -124,97 +83,81 @@ const OurVisionPage = () => {
 
       {/* Core Values Section */}
       <section className="bg-black py-12 sm:py-16 md:py-20 lg:py-24 relative">
-        {/* Top Gradient Line - Responsive */}
+        {/* Top Gradient Line */}
         <div 
-          className="absolute h-3 sm:h-5 lg:h-7"
+          className="absolute"
           style={{
             top: '0px',
             left: '0px',
-            width: '70%',
-            background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
+            width: '40%',
+            height: '28px',
+            flexShrink: 0,
+            background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 38%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
           }}
         />
         
-        {/* Bottom Gradient Line - Responsive */}
+        {/* Bottom Gradient Line - Full Width */}
         <div 
-          className="absolute h-3 sm:h-5 lg:h-7"
+          className="absolute h-3 sm:h-4 md:h-5 lg:h-6"
           style={{
             bottom: '0px',
-            right: '0px',
-            width: '70%',
-            background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
+            left: '1200px',
+            width: '40%',
+            background: 'linear-gradient(90deg, #F2913F 0%, #1E3888 25%, #8A393B 50%, #1E3888 75%, #F2913F 100%)'
           }}
         />
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
           {/* Core Values Heading */}
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#F2913F] mb-3 sm:mb-4">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#F2913F]">
               Core Values
             </h2>
-            {/* Mobile underline */}
-            <div className="lg:hidden w-24 h-1 bg-gradient-to-r from-[#8A393B] to-[#F2913F] mx-auto rounded-full"></div>
           </div>
           
-          {/* Values Grid - Mobile Optimized */}
-          <div className="text-center">
-            {/* Mobile Layout - Stack in single column on small screens */}
-            <div className="block sm:hidden space-y-6">
-              <div className="text-xl font-bold text-white px-4 py-3 bg-white/10 rounded-lg backdrop-blur-sm">
-                Quality
-              </div>
-              <div className="text-xl font-bold text-white px-4 py-3 bg-white/10 rounded-lg backdrop-blur-sm">
-                Customer Centric
-              </div>
-              <div className="text-xl font-bold text-white px-4 py-3 bg-white/10 rounded-lg backdrop-blur-sm">
-                Human Centric
-              </div>
-              <div className="text-xl font-bold text-white px-4 py-3 bg-white/10 rounded-lg backdrop-blur-sm">
-                Innovative
-              </div>
-              <div className="text-xl font-bold text-white px-4 py-3 bg-white/10 rounded-lg backdrop-blur-sm">
-                Sustainable Growth
-              </div>
-              <div className="text-xl font-bold text-white px-4 py-3 bg-white/10 rounded-lg backdrop-blur-sm">
-                Adaptive
-              </div>
-              <div className="text-xl font-bold text-white px-4 py-3 bg-white/10 rounded-lg backdrop-blur-sm">
-                Competitive
-              </div>
-            </div>
-            
-            {/* Tablet and Desktop Layout */}
-            <div className="hidden sm:block">
-              {/* First Row */}
-              <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16 mb-6 sm:mb-8 md:mb-12 lg:mb-16">
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-white">
-                  Quality
-                </span>
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-white">
-                  Customer Centric
-                </span>
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-white">
-                  Human Centric
-                </span>
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-white">
-                  Innovative
-                </span>
-              </div>
-              
-              {/* Second Row */}
-              <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16">
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-white">
-                  Sustainable Growth
-                </span>
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-white">
-                  Adaptive
-                </span>
-                <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold text-white">
-                  Competitive
-                </span>
-              </div>
-            </div>
+          {/* Values Pills */}
+          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6">
+            <span className="core-value-pill px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-3.5 text-white text-base sm:text-lg md:text-xl lg:text-2xl font-semibold rounded-full" style={{ animationDelay: '0s' }}>
+              Quality
+            </span>
+            <span className="core-value-pill px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-3.5 text-white text-base sm:text-lg md:text-xl lg:text-2xl font-semibold rounded-full" style={{ animationDelay: '1.5s' }}>
+              Customer Centric
+            </span>
+            <span className="core-value-pill px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-3.5 text-white text-base sm:text-lg md:text-xl lg:text-2xl font-semibold rounded-full" style={{ animationDelay: '3s' }}>
+              Human Centric
+            </span>
+            <span className="core-value-pill px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-3.5 text-white text-base sm:text-lg md:text-xl lg:text-2xl font-semibold rounded-full" style={{ animationDelay: '4.5s' }}>
+              Innovative
+            </span>
+            <span className="core-value-pill px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-3.5 text-white text-base sm:text-lg md:text-xl lg:text-2xl font-semibold rounded-full" style={{ animationDelay: '6s' }}>
+              Sustainable growth
+            </span>
+            <span className="core-value-pill px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-3.5 text-white text-base sm:text-lg md:text-xl lg:text-2xl font-semibold rounded-full" style={{ animationDelay: '7.5s' }}>
+              Adaptive
+            </span>
+            <span className="core-value-pill px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-3.5 text-white text-base sm:text-lg md:text-xl lg:text-2xl font-semibold rounded-full" style={{ animationDelay: '9s' }}>
+              Competitive
+            </span>
           </div>
+          
+          <style jsx>{`
+            @keyframes colorShift {
+              0% {
+                background-color: #8A393B;
+              }
+              20% {
+                background-color: #F2913F;
+              }
+              40%, 100% {
+                background-color: #8A393B;
+              }
+            }
+            
+            .core-value-pill {
+              background-color: #8A393B;
+              animation: colorShift 10.5s ease-in-out infinite;
+            }
+          `}</style>
         </div>
       </section>
     </div>
