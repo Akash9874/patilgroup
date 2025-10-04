@@ -28,21 +28,12 @@ export default function LenisProvider({
       wheelMultiplier: 1,
       touchMultiplier: 2,
       infinite: false,
-      autoResize: true,
     });
 
     lenisRef.current = lenis;
 
     // Integrate Lenis with GSAP ScrollTrigger
-    lenis.on('scroll', (e: any) => {
-      ScrollTrigger.update();
-      
-      // Emit custom event for navbar scroll detection
-      const event = new CustomEvent('lenis-scroll', { 
-        detail: { scroll: e.scroll, direction: e.direction } 
-      });
-      window.dispatchEvent(event);
-    });
+    lenis.on('scroll', ScrollTrigger.update);
 
     // Update Lenis on every frame
     gsap.ticker.add((time) => {

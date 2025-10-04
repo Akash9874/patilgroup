@@ -50,9 +50,9 @@ const AboutUsPage = () => {
 
   return (
     <div className="bg-white">
-      {/* Hero Section - Image with Text Overlay */}
-      <section className="relative h-screen overflow-hidden">
-        {/* Background Image */}
+      {/* Fully Responsive Hero Section - Single Frame */}
+      <section className="relative h-screen max-h-screen overflow-hidden">
+        {/* Optimized Background Image */}
         <div className="absolute inset-0">
           <Image
             src="/abouthero.JPG"
@@ -63,33 +63,86 @@ const AboutUsPage = () => {
             sizes="100vw"
             quality={90}
           />
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/60"></div>
         </div>
         
-        {/* Content Overlay */}
-        <div className="relative z-10 h-full flex flex-col justify-between py-20 md:py-24 lg:py-32">
-          {/* Main Heading - Left aligned, vertically centered */}
-          <div className="flex-1 flex items-center">
-            <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 w-full">
-              <h1 className="text-white font-bold leading-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+        {/* Mobile Layout - Enhanced */}
+        <div className="md:hidden absolute inset-0">
+          {/* Enhanced Mobile Gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+          
+          {/* Mobile Content Container */}
+          <div className="relative z-10 h-full flex items-center justify-center px-4 py-8">
+            <div className="w-full max-w-lg mx-auto text-center">
+              {/* Title */}
+              <h1 className="text-white font-bold leading-tight text-center drop-shadow-2xl">
+                <span className="text-3xl sm:text-4xl md:text-5xl block mb-3">Through the</span>
+                <span className="text-3xl sm:text-4xl md:text-5xl block">tracks of time</span>
+              </h1>
+              
+              {/* Animated Accent Line */}
+              <div className="flex justify-center mt-8 mb-8">
+                <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] via-[#1E3888] to-[#8A393B] rounded-full animate-pulse shadow-lg"></div>
+              </div>
+              
+              {/* Subtitle */}
+              <p className="text-white text-center text-xl sm:text-2xl leading-relaxed drop-shadow-xl font-medium">
+                Decades of expertise in railway engineering excellence
+              </p>
+              
+              {/* Optional scroll hint */}
+              <div className="text-center mt-8">
+                <p className="text-white/80 text-sm font-medium animate-bounce drop-shadow-lg">
+                  Scroll to explore ↓
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Tablet Layout - Hybrid */}
+        <div className="hidden md:block lg:hidden absolute inset-0">
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="relative z-10 h-full flex items-center">
+            <div className="w-full px-8">
+              <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 max-w-2xl">
+                <h1 className="text-white font-bold leading-tight text-5xl md:text-6xl">
+                  Through<br />the tracks<br />of time
+                </h1>
+                <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mt-6 rounded-full"></div>
+                <p className="text-gray-200 text-lg mt-6 leading-relaxed max-w-lg">
+                  Decades of expertise in railway engineering excellence
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Desktop Layout - Bottom Left Position */}
+        <div className="hidden lg:block">
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute bottom-0 left-0 z-10">
+            <div className="px-6 sm:px-8 md:px-12 pb-16">
+              <h1 className="text-white font-bold leading-[0.95] text-6xl md:text-7xl lg:text-8xl">
                 Through<br />the tracks<br />of time
               </h1>
             </div>
           </div>
-          
-          {/* Description - Bottom center */}
-          <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16 w-full text-center">
-            <p className="text-[#F2913F] text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-relaxed">
-              We began in the 1960s with a single concrete sleeper plant.
-            </p>
-            <p className="text-[#F2913F] text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-relaxed mt-2">
-              Today, we supply track components to railways and metros across India.
-            </p>
-          </div>
         </div>
       </section>
 
+      {/* Responsive Intro Text Section */}
+      <section className="bg-black py-12 sm:py-16 md:py-20 fade-in-section">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <p className="text-center font-bold text-[#F2913F] leading-snug text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+            We began in the 1960s with a single<br className="hidden sm:block" />
+            {" "}concrete sleeper plant.
+          </p>
+          <p className="mt-6 sm:mt-8 md:mt-10 text-center font-bold text-[#8A393B] leading-snug text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+            Today, we supply track components to<br className="hidden sm:block" />
+            railways and metros across India.
+          </p>
+        </div>
+      </section>
 
       {/* Zero Bad Section */}
       <section className="bg-white py-8 sm:py-10 md:py-12 relative">

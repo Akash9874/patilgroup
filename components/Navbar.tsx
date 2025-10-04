@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
@@ -15,63 +15,37 @@ const Navbar = () => {
   const [isMobileAboutExpanded, setIsMobileAboutExpanded] = useState(false);
   const [isMobileProductsExpanded, setIsMobileProductsExpanded] = useState(false);
   const [isMobileSystemsExpanded, setIsMobileSystemsExpanded] = useState(false);
-  
-  const lastScrollY = useRef(0);
 
   useEffect(() => {
-    let ticking = false;
+    let lastScroll = 0;
     
-    const updateNavbar = (currentScrollY: number) => {
-      console.log('📍 Scroll:', currentScrollY.toFixed(0), 'Last:', lastScrollY.current.toFixed(0), 'Direction:', currentScrollY > lastScrollY.current ? 'DOWN ⬇️' : 'UP ⬆️');
+    const handleScroll = () => {
+      const currentScroll = window.pageYOffset;
       
-      // At the very top - always show
-      if (currentScrollY <= 10) {
-        console.log('✅ At top, showing navbar');
+      if (currentScroll <= 0) {
         setIsNavVisible(true);
-      } 
-      // Scrolling DOWN - hide navbar
-      else if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
-        console.log('❌ Scrolling DOWN, hiding navbar');
+        return;
+      }
+      
+      if (currentScroll > lastScroll && currentScroll > 80) {
+        // Scrolling DOWN
+        console.log('Hiding navbar, scroll:', currentScroll);
         setIsNavVisible(false);
         setIsAboutMenuOpen(false);
         setIsProductsMenuOpen(false);
         setIsSystemsMenuOpen(false);
-      } 
-      // Scrolling UP - show navbar (from any position)
-      else if (currentScrollY < lastScrollY.current && lastScrollY.current - currentScrollY > 5) {
-        console.log('✅ Scrolling UP, showing navbar');
+      } else if (currentScroll < lastScroll) {
+        // Scrolling UP
+        console.log('Showing navbar, scroll:', currentScroll);
         setIsNavVisible(true);
       }
       
-      lastScrollY.current = currentScrollY <= 0 ? 0 : currentScrollY;
-      ticking = false;
+      lastScroll = currentScroll;
     };
     
-    // Primary: Listen for Lenis scroll events
-    const lenisScrollHandler = (e: CustomEvent) => {
-      const currentScrollY = e.detail?.scroll || 0;
-      if (!ticking) {
-        window.requestAnimationFrame(() => updateNavbar(currentScrollY));
-        ticking = true;
-      }
-    };
-    
-    // Fallback: Native scroll listener
-    const handleScroll = () => {
-      const currentScrollY = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-      
-      if (!ticking) {
-        window.requestAnimationFrame(() => updateNavbar(currentScrollY));
-        ticking = true;
-      }
-    };
-    
-    // Attach listeners
-    window.addEventListener('lenis-scroll', lenisScrollHandler as EventListener);
     window.addEventListener('scroll', handleScroll, { passive: true });
     
     return () => {
-      window.removeEventListener('lenis-scroll', lenisScrollHandler as EventListener);
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -143,12 +117,12 @@ const Navbar = () => {
   return (
     <nav 
       data-navbar
-      className={`fixed top-0 left-0 right-0 z-[9999] shadow-md w-full bg-white`}
+      className={`fixed top-0 left-0 right-0 z-[9999] shadow-md w-full bg-white ${
+        isNavVisible ? '' : '-translate-y-full'
+      }`}
       style={{
+        transition: 'transform 0.3s ease-in-out',
         height: '103px',
-        transform: isNavVisible ? 'translateY(0)' : 'translateY(-110%)',
-        transition: 'transform 300ms cubic-bezier(0.4, 0, 0.2, 1)',
-        willChange: 'transform',
       }}
       onMouseLeave={() => {
         setIsAboutMenuOpen(false);
