@@ -65,7 +65,7 @@ const OurVisionPage = () => {
             visionInView ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
           }`}
           style={{
-            top: '110px',
+            top: '60px',
             width: 'min(1133px, 80vw)',
             height: 'clamp(20px, 2vw, 28px)',
             background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)',
@@ -129,7 +129,7 @@ const OurVisionPage = () => {
             missionInView ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
           }`}
           style={{
-            top: '110px',
+            top: '60px',
             width: 'min(1060px, 75vw)',
             height: 'clamp(20px, 2vw, 28px)',
             background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)',

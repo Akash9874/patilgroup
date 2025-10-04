@@ -177,10 +177,10 @@ const Navbar = () => {
                 setIsProductsMenuOpen(false);
                 setIsSystemsMenuOpen(true);
               }}>
-                <Link href="/systems" className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F] flex items-center gap-1">
+                <button className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F] flex items-center gap-1">
                   Systems
                   <ChevronDown size={16} className={`transition-transform duration-300 ${isSystemsMenuOpen ? 'rotate-180' : ''}`} />
-                </Link>
+                </button>
             </div>
 
             <div onMouseEnter={() => {
@@ -188,10 +188,10 @@ const Navbar = () => {
               setIsProductsMenuOpen(true);
               setIsSystemsMenuOpen(false);
             }}>
-                <Link href="/products" className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F] flex items-center gap-1">
+                <button className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F] flex items-center gap-1">
                 Products
                 <ChevronDown size={16} className={`transition-transform duration-300 ${isProductsMenuOpen ? 'rotate-180' : ''}`} />
-                </Link>
+                </button>
             </div>
 
             <Link href="/cme" onMouseEnter={() => {

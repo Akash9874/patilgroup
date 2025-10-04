@@ -45,7 +45,7 @@ const ProductsPage = () => {
 
   return (
     <div className="bg-black text-white">
-      <section className="relative">
+      <section className="relative h-screen max-h-screen overflow-hidden">
         {/* Background Video */}
         <div className="absolute inset-0 w-full h-full">
           <HLSVideo
@@ -62,7 +62,7 @@ const ProductsPage = () => {
         </div>
 
         {/* Mobile Layout */}
-        <div className="md:hidden relative z-10 flex items-center justify-center py-24 sm:py-28">
+        <div className="md:hidden relative z-10 h-full flex items-center justify-center py-8">
           <div className="text-center px-6 w-full max-w-lg mx-auto">
             <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight drop-shadow-2xl animate-fadeInUp">
               Track<br/>Components
@@ -75,7 +75,7 @@ const ProductsPage = () => {
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden md:flex relative z-10 items-start justify-start py-36 sm:py-40 md:py-48 lg:py-56 xl:py-64 px-8 sm:px-12 lg:px-16">
+        <div className="hidden md:flex relative z-10 h-full items-end justify-start p-8 sm:p-12 lg:p-16 pb-12 lg:pb-16">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white animate-fadeInUp">
             Track<br/>Components
           </h1>

@@ -56,7 +56,7 @@ const CMEPage = () => {
 
   return (
     <div className="bg-white">
-      <section className="relative">
+      <section className="relative h-screen">
         <div className="absolute inset-0">
           <HLSVideo
             src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/012c31e4679d5efd6ce8fc4e507dccca/manifest/video.m3u8"
@@ -70,7 +70,7 @@ const CMEPage = () => {
           />
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
-        <div className="relative z-10 flex items-center justify-start py-24 sm:py-28 md:py-36 lg:py-44 xl:py-52 px-4 sm:px-8 md:px-16">
+        <div className="relative z-10 h-full flex items-center justify-start p-4 sm:p-8 md:p-16">
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold font-clash leading-tight text-white fade-in-section">
             Centre for<br />Manufacturing<br />Excellence
           </h1>
