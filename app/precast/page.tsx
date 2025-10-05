@@ -84,7 +84,7 @@ const PrecastPage = () => {
   return (
     <div className="bg-white text-black">
       {/* Hero Section */}
-      <div className="relative">
+      <div className="relative hero-section">
         {/* Mobile Layout */}
         <div className="md:hidden h-screen relative">
           <Image
@@ -92,13 +92,13 @@ const PrecastPage = () => {
             alt="Precast Solutions"
             layout="fill"
             objectFit="cover"
-            className="z-0"
+            className="z-0 hero-video"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 z-10"></div>
           
-          <div className="relative z-20 h-full flex items-center justify-center">
-            <div className="text-center px-6 w-full max-w-lg mx-auto">
+          <div className="relative z-20 h-full flex items-center justify-start px-6 hero-content">
+            <div className="text-left px-6 w-full max-w-2xl mx-auto">
               <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-3 drop-shadow-2xl">
                 Precast Solutions
               </h1>
@@ -111,13 +111,13 @@ const PrecastPage = () => {
         </div>
         
         {/* Desktop Layout */}
-        <div className="hidden md:block relative h-[600px]">
+        <div className="hidden md:block relative h-screen">
           <Image
             src="/Precast-Concrete.jpeg"
             alt="Precast Solutions"
             layout="fill"
             objectFit="cover"
-            className="z-0"
+            className="z-0 hero-video"
             priority
           />
 
@@ -125,9 +125,9 @@ const PrecastPage = () => {
           <div className="absolute inset-0 bg-black/60 z-10"></div>
 
           {/* Left aligned content */}
-          <div className="relative z-20 max-w-7xl mx-auto h-full flex items-center">
-            <div className="w-full md:w-1/2 p-8 md:p-12 fade-in-section animate-fadeInUp">
-              <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
+          <div className="relative z-20 max-w-7xl mx-auto h-full flex items-center hero-content">
+            <div className="w-full md:w-1/2 p-8 md:p-16 fade-in-section">
+              <h1 className="text-6xl md:text-7xl font-bold text-white leading-tight">
                 Precast
                 <br />
                 Solutions

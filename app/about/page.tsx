@@ -50,105 +50,68 @@ const AboutUsPage = () => {
 
   return (
     <div className="bg-white">
-      {/* Fully Responsive Hero Section - Single Frame */}
-      <section className="relative h-screen max-h-screen overflow-hidden">
-        {/* Optimized Background Image */}
-        <div className="absolute inset-0">
+      {/* New About - Track background header */}
+      <section className="relative w-full bg-white overflow-hidden py-20 sm:py-24 md:py-28">
+        {/* Left track image */}
+        <div
+          className="pointer-events-none absolute z-0 left-0 top-1/2 w-[120vw] h-72 sm:h-96 md:h-[28rem] lg:h-[32rem] xl:h-[36rem]"
+          style={{ WebkitMaskImage: 'linear-gradient(to right, black 98%, transparent 100%)', maskImage: 'linear-gradient(to right, black 98%, transparent 100%)', transform: 'translate(-12vw, -50%)' }}
+        >
           <Image
-            src="/abouthero.JPG"
-            alt="About Hero"
+            src="/trackkkk.png"
+            alt="Rail track left"
             fill
-            className="object-cover object-center"
+            sizes="(min-width: 1024px) 65vw, 90vw"
             priority
-            sizes="100vw"
-            quality={90}
+            className="object-contain object-left"
           />
         </div>
-        
-        {/* Mobile Layout - Enhanced */}
-        <div className="md:hidden absolute inset-0">
-          {/* Enhanced Mobile Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
-          
-          {/* Mobile Content Container */}
-          <div className="relative z-10 h-full flex items-center justify-center px-4 py-8">
-            <div className="w-full max-w-lg mx-auto text-center">
-              {/* Title */}
-              <h1 className="text-white font-bold leading-tight text-center drop-shadow-2xl">
-                <span className="text-3xl sm:text-4xl md:text-5xl block mb-3">Through the</span>
-                <span className="text-3xl sm:text-4xl md:text-5xl block">tracks of time</span>
-              </h1>
-              
-              {/* Animated Accent Line */}
-              <div className="flex justify-center mt-8 mb-8">
-                <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] via-[#1E3888] to-[#8A393B] rounded-full animate-pulse shadow-lg"></div>
-              </div>
-              
-              {/* Subtitle */}
-              <p className="text-white text-center text-xl sm:text-2xl leading-relaxed drop-shadow-xl font-medium">
-                Decades of expertise in railway engineering excellence
-              </p>
-              
-              {/* Optional scroll hint */}
-              <div className="text-center mt-8">
-                <p className="text-white/80 text-sm font-medium animate-bounce drop-shadow-lg">
-                  Scroll to explore ↓
-                </p>
-              </div>
-            </div>
-          </div>
+
+        {/* Right track image (mirrored) */}
+        <div
+          className="pointer-events-none absolute z-0 right-0 top-1/2 -translate-y-1/2 w-[120vw] h-72 sm:h-96 md:h-[28rem] lg:h-[32rem] xl:h-[36rem]"
+          style={{ WebkitMaskImage: 'linear-gradient(to left, black 98%, transparent 100%)', maskImage: 'linear-gradient(to left, black 98%, transparent 100%)' }}
+        >
+          <Image
+            src="/trackkkk.png"
+            alt="Rail track right"
+            fill
+            sizes="(min-width: 1024px) 65vw, 90vw"
+            priority
+            className="object-contain object-right"
+          />
         </div>
-        
-        {/* Tablet Layout - Hybrid */}
-        <div className="hidden md:block lg:hidden absolute inset-0">
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="relative z-10 h-full flex items-center">
-            <div className="w-full px-8">
-              <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 max-w-2xl">
-                <h1 className="text-white font-bold leading-tight text-5xl md:text-6xl">
-                  Through<br />the tracks<br />of time
-                </h1>
-                <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mt-6 rounded-full"></div>
-                <p className="text-gray-200 text-lg mt-6 leading-relaxed max-w-lg">
-                  Decades of expertise in railway engineering excellence
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Desktop Layout - Bottom Left Position */}
-        <div className="hidden lg:block">
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute bottom-0 left-0 z-10">
-            <div className="px-6 sm:px-8 md:px-12 pb-16">
-              <h1 className="text-white font-bold leading-[0.95] text-6xl md:text-7xl lg:text-8xl">
-                Through<br />the tracks<br />of time
-              </h1>
-            </div>
-          </div>
+
+        {/* Centered heading */}
+        <div className="relative z-10 flex items-center justify-center">
+          <h1 className="text-[#8A393B] text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-center">
+            <span className="block">Through</span>
+            <span className="block">the tracks</span>
+            <span className="block">of time</span>
+          </h1>
         </div>
       </section>
 
-      {/* Responsive Intro Text Section */}
-      <section className="bg-black py-12 sm:py-16 md:py-20 fade-in-section">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <p className="text-center font-bold text-[#F2913F] leading-snug text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-            We began in the 1960s with a single<br className="hidden sm:block" />
-            {" "}concrete sleeper plant.
-          </p>
-          <p className="mt-6 sm:mt-8 md:mt-10 text-center font-bold text-[#8A393B] leading-snug text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-            Today, we supply track components to<br className="hidden sm:block" />
-            railways and metros across India.
-          </p>
+      {/* Legacy blurb card */}
+      <section className="bg-white py-6 sm:py-8 md:py-10">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="rounded-2xl border border-gray-200 bg-[#F7F6F4] shadow-sm px-4 sm:px-8 py-6 sm:py-8 text-center">
+            <p className="text-[#F2913F] font-bold text-lg sm:text-xl md:text-2xl">
+              We began in the 1960s with a single concrete sleeper plant.
+            </p>
+            <p className="mt-2 text-[#8A393B] font-semibold text-xl sm:text-2xl md:text-3xl leading-snug">
+              Today, we supply track components to railways and
+              <br className="hidden sm:block" /> metros across India.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Zero Bad Section */}
-      <section className="bg-white py-8 sm:py-10 md:py-12 relative">
+      <section className="bg-white py-8 sm:py-10 md:py-12 relative fade-in-section" data-delay="0.1" data-duration="0.9">
         {/* Left Edge Gradient Line */}
         <div 
-          className="absolute hidden lg:block fade-in-section"
+          className="absolute hidden lg:block reveal-line-left"
           style={{
             width: '364px',
             height: '28px',
@@ -161,7 +124,7 @@ const AboutUsPage = () => {
         
         {/* Right Edge Gradient Line */}
         <div 
-          className="absolute hidden lg:block fade-in-section"
+          className="absolute hidden lg:block reveal-line-right"
           style={{
             width: '364px',
             height: '28px',
@@ -174,30 +137,30 @@ const AboutUsPage = () => {
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
           {/* Title */}
-          <div className="text-center mb-8 sm:mb-12">
+          <div className="text-center mb-8 sm:mb-12 fade-heading" data-delay="0.15" data-duration="0.9">
             <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8A393B] to-[#F2913F]">
               Our Business Decision - Making Principles
             </h2>
           </div>
           
           {/* Three Boxes */}
-          <div className="space-y-4 sm:space-y-6 max-w-2xl mx-auto">
+          <div className="space-y-4 sm:space-y-6 max-w-2xl mx-auto stagger-children" data-stagger="0.15" data-duration="0.7">
             {/* Country 1st */}
-            <div className="bg-[#8A393B] text-white py-4 sm:py-6 px-6 sm:px-8 rounded-2xl shadow-lg">
+            <div className="bg-[#8A393B] text-white py-4 sm:py-6 px-6 sm:px-8 rounded-2xl shadow-lg stagger-item">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">
                 Country <span className="text-[#F2913F]">1<sup className="text-lg sm:text-xl">st</sup></span>
               </h3>
             </div>
             
             {/* Customer 2nd */}
-            <div className="bg-[#F2913F] text-black py-4 sm:py-6 px-6 sm:px-8 rounded-2xl shadow-lg">
+            <div className="bg-[#F2913F] text-black py-4 sm:py-6 px-6 sm:px-8 rounded-2xl shadow-lg stagger-item">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">
                 Customer <span className="text-[#8A393B]">2<sup className="text-lg sm:text-xl">nd</sup></span>
               </h3>
             </div>
             
             {/* Company & Employees 3rd */}
-            <div className="bg-[#8A393B] text-white py-4 sm:py-6 px-6 sm:px-8 rounded-2xl shadow-lg">
+            <div className="bg-[#8A393B] text-white py-4 sm:py-6 px-6 sm:px-8 rounded-2xl shadow-lg stagger-item">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">
                 Company & Employees <span className="text-[#F2913F]">3<sup className="text-lg sm:text-xl">rd</sup></span>
               </h3>
@@ -207,7 +170,7 @@ const AboutUsPage = () => {
       </section>
 
       {/* Responsive Philosophy Section */}
-      <section className="py-16 sm:py-24 md:py-32 bg-white relative overflow-hidden fade-in-section">
+      <section className="py-16 sm:py-24 md:py-32 bg-white relative overflow-hidden fade-in-section" data-delay="0.1" data-duration="1">
         <div 
           className="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-90"
           style={{ backgroundImage: "url('/worldmap.png')" }}

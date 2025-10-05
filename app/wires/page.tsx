@@ -10,7 +10,7 @@ const WiresPage = () => {
   return (
     <div className="bg-black text-white">
       {/* Hero Section */}
-      <div className="relative">
+      <div className="relative hero-section">
         {/* Mobile Layout */}
         <div className="md:hidden h-screen relative">
           <Image
@@ -18,12 +18,12 @@ const WiresPage = () => {
             alt="HTS Wires"
             layout="fill"
             objectFit="cover"
-            className="z-0"
+            className="z-0 hero-video"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 z-10"></div>
           
-          <div className="relative z-20 h-full flex items-center justify-center">
-            <div className="text-center px-6 w-full max-w-lg mx-auto">
+          <div className="relative z-20 h-full flex items-center justify-start hero-content px-6">
+            <div className="text-left w-full max-w-lg mx-auto">
               <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-3 drop-shadow-2xl">
                 HTS Wires
               </h1>
@@ -36,18 +36,18 @@ const WiresPage = () => {
         </div>
         
         {/* Desktop Layout */}
-        <div className="hidden md:block relative h-[600px]">
+        <div className="hidden md:block relative h-screen">
           <Image
             src="/wires123.jpg"
             alt="HTS Wires"
             layout="fill"
             objectFit="cover"
-            className="z-0"
+            className="z-0 hero-video"
           />
           <div className="absolute inset-0 bg-black bg-opacity-60 z-10" />
-          <div className="relative z-20 h-full flex items-center max-w-7xl mx-auto px-8">
-            <div className="w-1/3">
-              <h1 className="text-7xl font-bold text-white mt-2">
+          <div className="relative z-20 h-full flex items-center max-w-7xl mx-auto px-8 hero-content">
+            <div className="w-1/2">
+              <h1 className="text-7xl lg:text-8xl font-bold text-white mt-2">
                 HTS<br/>Wires
               </h1>
             </div>

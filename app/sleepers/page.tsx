@@ -23,7 +23,7 @@ const SleepersPage = () => {
     };
   return (
     <div className="bg-white text-black">
-      <div className="relative">
+      <div className="relative hero-section">
         {/* Mobile Layout */}
         <div className="md:hidden h-screen relative">
           <video
@@ -32,18 +32,18 @@ const SleepersPage = () => {
             muted
             loop
             playsInline
-            className="absolute inset-0 w-full h-full object-cover z-0"
+            className="absolute inset-0 w-full h-full object-cover z-0 hero-video"
             preload="metadata"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 z-10"></div>
           
-          <div className="relative z-20 h-full flex items-center justify-center">
-            <div className="text-center px-6">
+          <div className="relative z-20 h-full flex items-center justify-start hero-content px-6">
+            <div className="text-left max-w-md">
               <div className="p-8">
                 <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4 drop-shadow-2xl">
                   Concrete Sleepers
                 </h1>
-                <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full shadow-lg"></div>
+                <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] rounded-full shadow-lg"></div>
                 <p className="text-white text-sm mt-4 font-medium drop-shadow-2xl">
                   Engineered for durability and performance
                 </p>
@@ -53,24 +53,24 @@ const SleepersPage = () => {
         </div>
         
         {/* Desktop Layout */}
-        <div className="hidden md:block relative h-auto md:h-[600px]">
+        <div className="hidden md:block relative h-screen">
           <video
             src="/1.mp4"
             autoPlay
             muted
             loop
-            className="absolute top-0 left-0 w-full h-full object-cover z-0"
+            className="absolute top-0 left-0 w-full h-full object-cover z-0 hero-video"
             preload="metadata"
           />
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
           
           {/* Content */}
-          <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row h-full z-20">
+          <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row h-full z-20 hero-content">
             {/* Left Panel */}
-            <div className="w-full md:w-1/3 flex flex-col justify-center p-8 md:p-12">
+            <div className="w-full md:w-1/2 flex flex-col justify-center p-8 md:p-16">
               <div className="text-left">
-                <h1 className="text-5xl lg:text-6xl font-bold text-white mt-2">
+                <h1 className="text-6xl lg:text-7xl font-bold text-white mt-2">
                   Concrete Sleepers
                 </h1>
               </div>

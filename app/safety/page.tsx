@@ -10,7 +10,7 @@ const SafetyPage = () => {
   return (
     <div className="bg-white text-black">
       {/* Responsive Hero Section */}
-      <div className="relative h-[60vh] sm:h-[70vh] md:h-[600px]">
+      <div className="relative h-screen hero-section">
         {/* Background Image */}
         <Image
           src="/safetyside.jpg"
@@ -18,18 +18,18 @@ const SafetyPage = () => {
           layout="fill"
           objectFit="cover"
           objectPosition="center"
-          className="z-0"
+          className="z-0 hero-video"
           priority
         />
         
         {/* Mobile Layout */}
         <div className="md:hidden absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/40 z-10"></div>
-          <div className="relative z-20 h-full flex items-center justify-center">
-            <div className="text-center px-6 w-full max-w-sm">
+          <div className="relative z-20 h-full flex items-center justify-start hero-content px-6">
+            <div className="text-left w-full max-w-md">
               <div className="p-8">
                 <div className="animate-fadeInUp">
-                  <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4 drop-shadow-2xl">
+                  <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-4 drop-shadow-2xl">
                     Rail wayside safety
                   </h1>
                   <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mb-4 rounded-full shadow-lg"></div>
@@ -50,9 +50,9 @@ const SafetyPage = () => {
         {/* Desktop Layout - Bottom left positioning */}
         <div className="hidden md:block">
           <div className="absolute inset-0 bg-black/60 z-10"></div>
-          <div className="absolute bottom-0 left-0 z-20">
-            <div className="px-6 md:px-8 lg:px-12 pb-16">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg">Rail wayside safety</h1>
+          <div className="absolute inset-0 z-20 hero-content flex items-center justify-start">
+            <div className="px-8 lg:px-12">
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-tight drop-shadow-lg">Rail wayside safety</h1>
             </div>
           </div>
         </div>

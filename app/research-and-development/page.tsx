@@ -8,13 +8,13 @@ const ResearchAndDevelopmentPage = () => {
 
   return (
     <div className="bg-white">
-      <div className="relative">
+      <div className="relative hero-section">
         {/* Mobile Layout */}
         <div className="md:hidden h-screen relative">
-          <Image src="/rndimage2.JPG" alt="R&D Hero" fill className="object-cover z-0" priority sizes="100vw" />
+          <Image src="/rndimage2.JPG" alt="R&D Hero" fill className="object-cover z-0 hero-video" priority sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 z-10"></div>
           
-          <div className="relative z-20 h-full flex items-center justify-center">
+          <div className="relative z-20 h-full flex items-center justify-center hero-content">
             <div className="text-center px-6 w-full max-w-lg mx-auto">
               <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-3 drop-shadow-2xl">
                 Research and Development
@@ -29,13 +29,13 @@ const ResearchAndDevelopmentPage = () => {
         
         {/* Desktop Layout */}
         <div className="hidden md:block relative h-screen">
-          <Image src="/rndimage2.JPG" alt="R&D Hero" fill className="object-cover z-0" priority sizes="100vw" />
+          <Image src="/rndimage2.JPG" alt="R&D Hero" fill className="object-cover z-0 hero-video" priority sizes="100vw" />
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
           
           {/* Content */}
-          <div className="absolute bottom-0 left-0 z-20">
-            <div className="px-6 sm:px-8 md:px-12 pb-16">
+          <div className="absolute inset-0 z-20 hero-content flex items-center justify-start">
+            <div className="px-6 sm:px-8 md:px-12">
               <h1 className="text-white font-bold leading-[0.95] text-6xl md:text-7xl lg:text-8xl">
                 Research and<br />Development
               </h1>

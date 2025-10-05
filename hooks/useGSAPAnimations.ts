@@ -16,112 +16,125 @@ export const useGSAPAnimations = () => {
     triggersRef.current.forEach(trigger => trigger.kill());
     triggersRef.current = [];
 
-    // Fade in sections
+    // Fade in sections (configurable via data attributes)
     const fadeElements = gsap.utils.toArray('.fade-in-section');
     fadeElements.forEach((element: any) => {
-      gsap.set(element, { opacity: 0, y: 50 });
-      
-      const trigger = ScrollTrigger.create({
-        trigger: element,
-        start: 'top 85%',
-        end: 'bottom 20%',
-        onEnter: () => {
-          gsap.to(element, {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: 'power2.out'
-          });
-        },
-        once: true,
-      });
-      triggersRef.current.push(trigger);
+      const delay = parseFloat(element?.dataset?.delay ?? '0');
+      const duration = parseFloat(element?.dataset?.duration ?? '0.85');
+      const yOffset = parseFloat(element?.dataset?.offset ?? '40');
+      const startPos = element?.dataset?.start ?? 'top 85%';
+
+      gsap.set(element, { opacity: 0, y: yOffset });
+
+      const trigger = gsap.fromTo(
+        element,
+        { opacity: 0, y: yOffset },
+        {
+          opacity: 1,
+          y: 0,
+          duration,
+          delay,
+          ease: 'power2.out',
+          overwrite: 'auto',
+          scrollTrigger: {
+            trigger: element,
+            start: startPos,
+            once: true,
+          },
+        }
+      );
+      triggersRef.current.push(trigger.scrollTrigger as ScrollTrigger);
     });
 
     // Slide in from left
     const slideLeftElements = gsap.utils.toArray('.slide-in-left');
     slideLeftElements.forEach((element: any) => {
+      const delay = parseFloat(element?.dataset?.delay ?? '0');
+      const duration = parseFloat(element?.dataset?.duration ?? '1');
       gsap.set(element, { x: -100, opacity: 0 });
       
-      const trigger = ScrollTrigger.create({
-        trigger: element,
-        start: 'top 85%',
-        onEnter: () => {
-          gsap.to(element, {
-            x: 0,
-            opacity: 1,
-            duration: 1,
-            ease: 'power3.out'
-          });
+      const tween = gsap.to(element, {
+        x: 0,
+        opacity: 1,
+        duration,
+        delay,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: element,
+          start: 'top 85%',
+          once: true,
         },
-        once: true,
       });
-      triggersRef.current.push(trigger);
+      triggersRef.current.push(tween.scrollTrigger as ScrollTrigger);
     });
 
     // Slide in from right
     const slideRightElements = gsap.utils.toArray('.slide-in-right');
     slideRightElements.forEach((element: any) => {
+      const delay = parseFloat(element?.dataset?.delay ?? '0');
+      const duration = parseFloat(element?.dataset?.duration ?? '1');
       gsap.set(element, { x: 100, opacity: 0 });
       
-      const trigger = ScrollTrigger.create({
-        trigger: element,
-        start: 'top 85%',
-        onEnter: () => {
-          gsap.to(element, {
-            x: 0,
-            opacity: 1,
-            duration: 1,
-            ease: 'power3.out'
-          });
+      const tween = gsap.to(element, {
+        x: 0,
+        opacity: 1,
+        duration,
+        delay,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: element,
+          start: 'top 85%',
+          once: true,
         },
-        once: true,
       });
-      triggersRef.current.push(trigger);
+      triggersRef.current.push(tween.scrollTrigger as ScrollTrigger);
     });
 
     // Scale up animations
     const scaleElements = gsap.utils.toArray('.scale-in');
     scaleElements.forEach((element: any) => {
-      gsap.set(element, { scale: 0.8, opacity: 0 });
+      const delay = parseFloat(element?.dataset?.delay ?? '0');
+      const duration = parseFloat(element?.dataset?.duration ?? '0.8');
+      gsap.set(element, { scale: 0.92, opacity: 0 });
       
-      const trigger = ScrollTrigger.create({
-        trigger: element,
-        start: 'top 80%',
-        onEnter: () => {
-          gsap.to(element, {
-            scale: 1,
-            opacity: 1,
-            duration: 0.8,
-            ease: 'back.out(1.7)'
-          });
+      const tween = gsap.to(element, {
+        scale: 1,
+        opacity: 1,
+        duration,
+        delay,
+        ease: 'back.out(1.6)',
+        scrollTrigger: {
+          trigger: element,
+          start: 'top 80%',
+          once: true,
         },
-        once: true,
       });
-      triggersRef.current.push(trigger);
+      triggersRef.current.push(tween.scrollTrigger as ScrollTrigger);
     });
 
     // Stagger animations for children
     const staggerContainers = gsap.utils.toArray('.stagger-children');
     staggerContainers.forEach((container: any) => {
       const children = container.querySelectorAll('.stagger-item');
-      gsap.set(children, { opacity: 0, y: 30 });
+      const delay = parseFloat(container?.dataset?.delay ?? '0');
+      const duration = parseFloat(container?.dataset?.duration ?? '0.6');
+      const stagger = parseFloat(container?.dataset?.stagger ?? '0.15');
+      gsap.set(children, { opacity: 0, y: 24 });
       
-      const trigger = ScrollTrigger.create({
-        trigger: container,
-        start: 'top 80%',
-        onEnter: () => {
-          gsap.to(children, {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            stagger: 0.15,
-            ease: 'power2.out'
-          });
+      const tween = gsap.to(children, {
+        opacity: 1,
+        y: 0,
+        duration,
+        delay,
+        stagger,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: container,
+          start: 'top 80%',
+          once: true,
         },
-        once: true,
       });
-      triggersRef.current.push(trigger);
+      triggersRef.current.push(tween.scrollTrigger as ScrollTrigger);
     });
 
     // Parallax effect for images
@@ -231,9 +244,9 @@ export const useGSAPAnimations = () => {
       triggersRef.current.push(trigger);
     });
 
-    // Parallax effect for hero section
-    const hero = document.querySelector('.hero-section');
-    if (hero) {
+    // Parallax effect for hero sections (support multiple per page)
+    const heros = gsap.utils.toArray<HTMLElement>('.hero-section');
+    heros.forEach((hero) => {
       const video = hero.querySelector('.hero-video');
       const content = hero.querySelector('.hero-content');
 
@@ -247,6 +260,45 @@ export const useGSAPAnimations = () => {
             gsap.to(video, { yPercent: self.progress * 30, ease: 'none' });
           },
         });
+
+    // Line reveal animations (scale from left/right)
+    const revealLeftLines = gsap.utils.toArray('.reveal-line-left');
+    revealLeftLines.forEach((line: any) => {
+      const delay = parseFloat(line?.dataset?.delay ?? '0');
+      const duration = parseFloat(line?.dataset?.duration ?? '0.9');
+      gsap.set(line, { scaleX: 0, transformOrigin: 'left center' });
+      const tween = gsap.to(line, {
+        scaleX: 1,
+        duration,
+        delay,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: line,
+          start: 'top 85%',
+          once: true,
+        },
+      });
+      triggersRef.current.push(tween.scrollTrigger as ScrollTrigger);
+    });
+
+    const revealRightLines = gsap.utils.toArray('.reveal-line-right');
+    revealRightLines.forEach((line: any) => {
+      const delay = parseFloat(line?.dataset?.delay ?? '0');
+      const duration = parseFloat(line?.dataset?.duration ?? '0.9');
+      gsap.set(line, { scaleX: 0, transformOrigin: 'right center' });
+      const tween = gsap.to(line, {
+        scaleX: 1,
+        duration,
+        delay,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: line,
+          start: 'top 85%',
+          once: true,
+        },
+      });
+      triggersRef.current.push(tween.scrollTrigger as ScrollTrigger);
+    });
         triggersRef.current.push(trigger);
       }
 
@@ -262,7 +314,7 @@ export const useGSAPAnimations = () => {
         });
         triggersRef.current.push(trigger);
       }
-    }
+    });
 
     // Cleanup
     return () => {
