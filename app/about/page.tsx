@@ -263,10 +263,9 @@ const AboutUsPage = () => {
                   <h3 className="text-7xl font-semibold text-black">The work has changed.</h3>
                 </div>
                 <div 
-                    className="h-7 mt-4 fade-in-section" 
+                    className="h-7 mt-4 fade-in-section w-11/12" 
                     style={{ 
                       transitionDelay: '200ms',
-                      width: '1102px',
                       background: 'linear-gradient(to right, #8A393B, #1E3888, #F2913F, transparent)' 
                     }}
                 ></div>
@@ -277,10 +276,9 @@ const AboutUsPage = () => {
                   <h3 className="text-7xl font-semibold text-black">The approach has not.</h3>
                 </div>
                 <div 
-                    className="h-7 mt-4 ml-auto fade-in-section"
+                    className="h-7 mt-4 ml-auto fade-in-section w-11/12"
                     style={{ 
                       transitionDelay: '200ms',
-                      width: '1102px',
                       background: 'linear-gradient(to left, #8A393B, #1E3888, #F2913F, transparent)' 
                     }}
                 ></div>
@@ -373,7 +371,7 @@ const AboutUsPage = () => {
         
         {/* Desktop Layout - Original */}
         <div className="hidden md:block">
-          <div className="flex justify-center items-center max-w-7xl mx-auto">
+          <div className="flex justify-center items-center max-w-7xl mx-auto max-w-full w-auto">
             <img src="/indiaflag.png" alt="Indian Flag" className="w-[636px] h-96" />
             <img src="/makeindia.png" alt="Make in India" className="h-56 mx-8" />
             <img src="/indiaflag.png" alt="Indian Flag" className="w-[636px] h-96 transform scale-x-[-1]" />

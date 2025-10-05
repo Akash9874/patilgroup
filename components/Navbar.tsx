@@ -56,22 +56,13 @@ const Navbar = () => {
   // Prevent scroll when mobile menu is open and reset submenus
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-      document.body.style.height = '100vh';
-      document.documentElement.style.overflow = 'hidden';
+      document.body.classList.add('menu-open');
     } else {
-      document.body.style.overflow = 'unset';
-      document.body.style.height = 'unset';
-      document.documentElement.style.overflow = 'unset';
-      // Reset all mobile submenus when main menu closes
-      setIsMobileAboutExpanded(false);
-      setIsMobileProductsExpanded(false);
-      setIsMobileSystemsExpanded(false);
+      document.body.classList.remove('menu-open');
     }
+
     return () => {
-      document.body.style.overflow = 'unset';
-      document.body.style.height = 'unset';
-      document.documentElement.style.overflow = 'unset';
+      document.body.classList.remove('menu-open');
     };
   }, [isMobileMenuOpen]);
 
@@ -143,8 +134,8 @@ const Navbar = () => {
 
             <div onMouseEnter={() => {
               setIsAboutMenuOpen(false);
-              setIsProductsMenuOpen(true);
-              setIsSystemsMenuOpen(false);
+              setIsProductsMenuOpen(false);
+              setIsSystemsMenuOpen(true);
             }}>
                 <button className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F] flex items-center gap-1">
                 Products
@@ -353,20 +344,18 @@ const Navbar = () => {
        <div 
          className={`lg:hidden fixed z-[9999] bg-black transition-all duration-500 ease-in-out ${
            isMobileMenuOpen 
-             ? 'translate-x-0 opacity-100 visible' 
-             : 'translate-x-full opacity-0 invisible'
+             ? 'opacity-100 visible' 
+             : 'opacity-0 invisible'
          }`}
          style={{ 
            position: 'fixed',
            top: 0,
-           left: 0,
-           right: 0,
            bottom: 0,
-           width: '100vw', 
+           width: '100%', 
            height: '100vh',
            backgroundColor: '#000000',
            zIndex: 9999,
-           transform: isMobileMenuOpen ? 'translateX(0)' : 'translateX(100%)'
+           right: isMobileMenuOpen ? '0' : '-100%'
          }}
        >         
          {/* Full Screen Navigation Panel */}

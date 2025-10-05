@@ -341,19 +341,6 @@ export default function Home() {
   useGSAPAnimations();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [showText, setShowText] = useState(false);
-  const [zoomLevel, setZoomLevel] = useState(1);
-
-  useEffect(() => {
-    // Set zoom based on screen size
-    const updateZoom = () => {
-      setZoomLevel(window.innerWidth >= 1024 ? 1.2 : 1);
-    };
-    
-    updateZoom();
-    window.addEventListener('resize', updateZoom);
-    
-    return () => window.removeEventListener('resize', updateZoom);
-  }, []);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -376,7 +363,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="overflow-x-hidden" style={{ zoom: zoomLevel }}>
+    <div>
       {/* Hero Section - Compact to content */}
       <section className="relative overflow-hidden bg-black">
         {/* Video Background */}
