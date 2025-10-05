@@ -17,8 +17,7 @@ const Footer = () => {
       {/* Contact headline above address */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 md:pt-16">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-extrabold leading-tight">
-          <span className="text-amber-500">Get in touch with us for all</span><br />
-          <span className="text-[#8A393B]">your railway needs.</span>
+          
         </h2>
         <p className="mt-4 sm:mt-6 max-w-3xl text-xs sm:text-sm md:text-base text-gray-300">
           By addressing the growing demands of modern railways while offering substantial cost and environmental benefits, Patil Group's composite sleepers represent the future of sustainable, high-performance railway infrastructure.
@@ -26,8 +25,8 @@ const Footer = () => {
       </div>
 
       {/* Pre-footer section */}
-      <div className="relative bg-black pt-4 sm:pt-6 md:pt-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
+      <div className="bg-black pt-4 sm:pt-6 md:pt-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="mb-6 md:mb-0">
             <div>
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-xl font-bold">6-3-1342/4 Raj Bhavan Rd, Raj Bhavan Quarters Colony Somajiguda,<br />Hyderabad, Telangana 500082</h3>
@@ -48,7 +47,7 @@ const Footer = () => {
               </button>
             </div>
           </div>
-          <div className="relative md:absolute right-0 md:-bottom-8 lg:-bottom-12 mt-4 md:mt-0">
+          <div className="md:absolute right-0 md:-bottom-24 lg:-bottom-28 xl:-bottom-32 mt-4 md:mt-0">
             <Image 
               src="/trainfooter.svg"
               alt="Footer illustration"
@@ -66,7 +65,7 @@ const Footer = () => {
 
           {/* About & Socials */}
             <div className="space-y-6">
-            <p className="max-w-xs text-sm sm:text-base">Discover Inspired Solutions Tailored to Your Unique Style and Needs.</p>
+            
             <p className="text-xs sm:text-sm">
               <a href="mailto:info@patilgroup.com" className="hover:text-orange-400 transition-colors">info@patilgroup.com</a>
               </p>
@@ -137,3 +136,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

@@ -25,7 +25,6 @@ const ResponsibilitiesPage = () => {
     }
   ];
 
-
   const handleDownload = (filename: string, title: string) => {
     const link = document.createElement('a');
     link.href = `/Brochure/${filename}`;
@@ -33,98 +32,37 @@ const ResponsibilitiesPage = () => {
     link.click();
   };
 
-
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-black">
-        {/* Mobile Layout */}
-        <div className="md:hidden relative h-screen flex flex-col">
-          <div className="absolute inset-0">
-            <img src="/ourrespoheroimage.jpg" alt="Our Resources" className="h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-black/60"></div>
-          </div>
-          <div className="relative z-10 flex-1 flex items-center justify-center px-6">
-            <div className="text-center max-w-lg mx-auto">
-              <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight drop-shadow-2xl animate-fadeInUp">
-                Our Resources
-              </h1>
-              <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full animate-pulse shadow-lg"></div>
-              <p className="text-white text-xl sm:text-2xl mt-8 font-medium tracking-wide drop-shadow-xl leading-relaxed">
-                Empowering communities through responsibility
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Desktop Layout */}
-        <div className="hidden md:block relative h-screen">
-          <div className="absolute inset-0 h-full w-full">
-            <img src="/ourrespoheroimage.jpg" alt="Our Resources" className="h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-black opacity-50"></div>
-          </div>
-          <div className="relative z-10 h-full flex items-center justify-start pl-4 sm:pl-8 md:pl-16 lg:pl-24">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white text-left px-4">
-              Our <br /> Resources
-            </h1>
-          </div>
-        </div>
-      </section>
-
       {/* CSR Resources Section */}
       <section className="bg-white text-black py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Top Section with all three components */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-            {/* CSR Policy */}
-            <div className="text-center lg:text-left">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-8">
-                CSR Policy
-              </h2>
-            </div>
-
-            {/* CSR Committee - Center */}
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F2913F] mb-6">
-                Composition of<br />
-                CSR Committee
-              </h2>
-              <p className="text-lg md:text-xl text-gray-600 mb-8">CSR Annual Action Plan_FY</p>
-              
-              {/* Year Display */}
-              <div className="flex justify-center items-center space-x-8 md:space-x-16 mb-6">
-                <div className="text-xl md:text-2xl font-bold text-black">2022-23</div>
-                <div className="text-xl md:text-2xl font-bold text-black">2024-25</div>
-              </div>
-              <div className="text-xl md:text-2xl font-bold text-black">2023-24</div>
-              </div>
-
-            {/* CSR PRIL */}
-            <div className="text-center lg:text-right">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B] mb-8">
-                CSR PRIL<br />
-                AR 2021–22
-              </h2>
-          </div>
-        </div>
-
-          {/* Bottom Section with Brochures */}
-          <div className="w-full">
-            {/* Brochure heading with gradient lines */}
-            <div className="flex items-center mb-12">
-              <div className="flex-1 h-2" style={{
+        {/* Brochures Section - Full Width Header */}
+        <div className="w-full mb-12">
+          {/* Brochure heading with gradient lines from screen edges */}
+          <div className="flex items-center">
+            <div className="flex-1" style={{
+              height: '28px',
                 background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
               }}></div>
-              <div className="px-8">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#F2913F] leading-tight whitespace-nowrap">
+            <div className="px-8 flex-shrink-0">
+              <h2 className="font-bold text-[#8A393B] leading-tight whitespace-nowrap" style={{
+                fontFamily: '"Helvetica Neue"',
+                fontSize: '64px',
+                fontWeight: 700,
+                lineHeight: '75%'
+              }}>
                   Brochures
                 </h2>
                 </div>
-              <div className="flex-1 h-2" style={{
+            <div className="flex-1" style={{
+              height: '28px',
                 background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 70%, rgba(242, 145, 63, 0) 100%)'
               }}></div>
+          </div>
               </div>
 
+        {/* Brochures Content - Centered Container */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 max-w-6xl mx-auto">
               {brochures.map((brochure, index) => (
                 <div key={index} className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl hover:shadow-3xl transition-all duration-300 sm:hover:scale-105">
@@ -188,15 +126,11 @@ const ResponsibilitiesPage = () => {
                   </div>
                 </div>
               ))}
-            </div>
           </div>
         </div>
       </section>
-
-
     </div>
   );
 };
 
 export default ResponsibilitiesPage;
-

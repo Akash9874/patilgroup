@@ -56,30 +56,291 @@ const StatCounter = ({ end, duration, suffix = '', prefix = '' }: { end: number;
   });
 
   return (
-    <div ref={ref} className="text-5xl font-bold text-black mb-2">
+    <div ref={ref} className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-2">
       {inView ? <CountUp end={end} duration={duration} separator="," suffix={suffix} prefix={prefix} /> : '0'}
     </div>
   );
 };
 
+const NewsCard = ({ date, title, delay }: { date: string; title: string; delay: number }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  return (
+    <div 
+      ref={ref}
+      className={`bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300 will-change-transform ${
+        inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+      style={{
+        transitionDelay: inView ? `${delay}ms` : '0ms',
+        transitionDuration: '800ms',
+        transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+      }}
+    >
+      <div 
+        className={`mb-4 transition-all duration-600 ${
+          inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}
+        style={{
+          transitionDelay: inView ? `${delay + 100}ms` : '0ms',
+        }}
+      >
+        <span className="text-[#8A393B] font-semibold text-base sm:text-lg">{date}</span>
+      </div>
+      <h3 
+        className={`text-gray-900 font-medium text-sm sm:text-base mb-6 leading-relaxed transition-all duration-600 ${
+          inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}
+        style={{
+          transitionDelay: inView ? `${delay + 200}ms` : '0ms',
+        }}
+      >
+        {title}
+      </h3>
+      <a 
+        href="/news" 
+        className={`group inline-flex items-center text-[#F2913F] hover:text-[#D97706] font-medium text-sm sm:text-base transition-all duration-600 ${
+          inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}
+        style={{
+          transitionDelay: inView ? `${delay + 300}ms` : '0ms',
+        }}
+      >
+        <span className="relative">
+          Read More
+          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#F2913F] transition-all duration-300 ease-out group-hover:w-full"></span>
+        </span>
+        <svg className="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  );
+};
+
+const GradientLine = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+
+  return (
+    <div 
+      ref={ref}
+      className="absolute right-0 h-7 will-change-transform overflow-hidden"
+      style={{
+        top: '50%',
+        transform: 'translateY(-50%)',
+        left: 'calc(max(50% - 640px + 350px, 350px))',
+      }}
+    >
+      <div 
+        className={`h-full transition-all duration-1000 ease-out ${
+          inView ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
+        }`}
+        style={{
+          background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
+          transformOrigin: 'right',
+          width: '100%',
+          height: '100%',
+        }}
+      />
+    </div>
+  );
+};
+
+const OurProjectsSection = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  return (
+    <section ref={ref} className="bg-white py-8 sm:py-10 md:py-12 will-change-transform">
+      <Carousel
+        opts={{ align: "start", loop: true, skipSnaps: false, dragFree: false }}
+        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
+        {/* Header with fade-in */}
+        <div 
+          className={`mb-6 sm:mb-8 md:mb-10 transition-all duration-800 ${
+            inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+          style={{
+            transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+        >
+          {/* Mobile Layout */}
+          <div className="md:hidden text-center mb-5">
+            <h2 className="text-2xl font-bold text-[#8A393B] mb-6">Our Projects</h2>
+            <div className="flex items-center justify-center">
+              <CarouselPrevious className="relative w-9 h-9 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 shadow-sm -mr-1" />
+              <CarouselNext className="relative w-9 h-9 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706] shadow-sm" />
+            </div>
+          </div>
+          
+          {/* Desktop Layout */}
+          <div className="hidden md:flex justify-between items-end">
+            <div>
+              <h2 className="text-3xl font-bold text-[#8A393B] mb-2">Our Projects</h2>
+            </div>
+            <div className="flex items-center">
+              <CarouselPrevious className="relative w-10 h-10 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 -mr-14" />
+              <CarouselNext className="relative w-10 h-10 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706]" />
+            </div>
+          </div>
+        </div>
+        
+        {/* Carousel Content with fade-in */}
+        <CarouselContent className="-ml-2 sm:-ml-4">
+          {projects.map((project, index) => (
+            <CarouselItem key={index} className="pl-2 sm:pl-4 basis-4/5 sm:basis-3/5 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+              <div 
+                className={`group will-change-transform transition-all ${
+                  inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+                }`}
+                style={{
+                  transitionDuration: '600ms',
+                  transitionDelay: inView ? `${150 + index * 80}ms` : '0ms',
+                  transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+                }}
+              >
+                {/* Mobile-Optimized Image Container */}
+                <div className="mb-2 sm:mb-3 overflow-hidden rounded-xl sm:rounded-2xl bg-gray-100 will-change-transform">
+                  <Image
+                    src={project.image}
+                    alt={project.city}
+                    width={400}
+                    height={500}
+                    className="w-full h-[220px] sm:h-[280px] md:h-[320px] lg:h-[360px] object-cover transition-transform duration-300 group-hover:scale-105"
+                    loading="eager"
+                    priority={index < 2}
+                    quality={85}
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                  />
+                </div>
+                
+                {/* Mobile-Optimized Text Content */}
+                <div className="px-1 sm:px-0">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2 text-gray-900 group-hover:text-[#8A393B] transition-colors duration-300">{project.city}</h3>
+                  <Link 
+                    href={project.link} 
+                    className="inline-flex items-center text-xs sm:text-sm font-medium text-gray-700 hover:text-[#F2913F] border-b border-gray-300 hover:border-[#F2913F] transition-all duration-300 group-hover:translate-x-1"
+                  >
+                    View Project
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+    </section>
+  );
+};
+
+// Nationwide Presence Section Component
+const NationwidePresenceSection = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  return (
+    <section className="relative pt-36 pb-20 sm:pt-40 sm:pb-24 md:pt-48 md:pb-28 overflow-hidden">
+      {/* Background Video */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <HLSVideo
+          src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/b8827e1671f7ff0a0f082f98ddd944c4/manifest/video.m3u8"
+          fallbackSrc="/lppatil.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+          preload="metadata"
+        />
+        {/* Add a dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+      </div>
+
+      <div ref={ref} className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+        {/* Main Heading */}
+        <h2 
+          className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white px-4 transition-all duration-800 will-change-transform ${
+            inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+          style={{
+            transitionDelay: '200ms',
+            transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+        >
+          <span
+            className="bg-clip-text text-transparent"
+            style={{
+              backgroundImage: 'linear-gradient(90deg, #F2913F, #ffcba4, #F2913F)',
+            }}
+          >
+            Nationwide Presence.
+          </span>
+        </h2>
+        
+        {/* Gradient Line */}
+        <div
+          className={`h-1 w-60 sm:w-80 mx-auto mb-6 transition-all duration-700 will-change-transform ${
+            inView ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
+          }`}
+          style={{
+            background: 'linear-gradient(90deg, #F2913F 0%, #1E3888 50%, #8A393B 100%)',
+            transitionDelay: '500ms',
+            transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+            transformOrigin: 'center',
+          }}
+        />
+        
+        {/* Subtitle */}
+        <p 
+          className={`text-xl sm:text-2xl md:text-3xl text-gray-200 font-medium mb-4 transition-all duration-700 will-change-transform ${
+            inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+          style={{
+            transitionDelay: '700ms',
+            transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+        >
+          From city metros to national corridors
+        </p>
+        
+        {/* Description */}
+        <p 
+          className={`text-sm sm:text-base md:text-lg text-gray-300 max-w-lg mx-auto leading-relaxed transition-all duration-700 will-change-transform ${
+            inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+          style={{
+            transitionDelay: '900ms',
+            transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+        >
+          Our products run across India.
+          <br />
+          We support both new and upgrade projects at every scale.
+        </p>
+      </div>
+    </section>
+  );
+};
 
 export default function Home() {
   useGSAPAnimations();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [showText, setShowText] = useState(false);
-  const [zoomLevel, setZoomLevel] = useState(1);
-
-  useEffect(() => {
-    // Set zoom based on screen size
-    const updateZoom = () => {
-      setZoomLevel(window.innerWidth >= 1024 ? 1.2 : 1);
-    };
-    
-    updateZoom();
-    window.addEventListener('resize', updateZoom);
-    
-    return () => window.removeEventListener('resize', updateZoom);
-  }, []);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -102,9 +363,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="overflow-x-hidden" style={{ zoom: zoomLevel }}>
-      {/* Hero Section - Single Frame */}
-      <section className="relative h-screen max-h-screen overflow-hidden bg-black">
+    <div>
+      {/* Hero Section - Compact to content */}
+      <section className="relative overflow-hidden bg-black">
         {/* Video Background */}
           <div className="absolute inset-0 w-full h-full">
           <video
@@ -119,44 +380,62 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
 
-        {/* Hero Content Overlay - Optimized spacing to fit in one frame */}
-        <div className={`relative z-10 h-full flex flex-col items-center justify-start pt-24 sm:pt-28 md:pt-32 lg:pt-40 text-center px-4 sm:px-6 lg:px-8 transition-opacity duration-1000 ${showText ? 'opacity-100' : 'opacity-0'}`}>
-          {/* Main Heading */}
-          <h1 className="mb-6 sm:mb-8 md:mb-10">
-            <div className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-1 sm:mb-2">
+        {/* Hero Content Overlay - Compact spacing */}
+        <div className={`relative z-10 flex flex-col items-center justify-center py-16 sm:py-20 md:py-24 lg:py-28 text-center px-4 sm:px-6 lg:px-8`}>
+          {/* Main Heading - First Animation */}
+          <h1 className={`mb-4 sm:mb-5 md:mb-6 transition-all duration-1000 ${showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <div className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-1">
               WORLD'S
         </div>
-            <div className="text-[#F2913F] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-1 sm:mb-2">
+            <div className="text-[#F2913F] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-1">
               LARGEST RAILWAY
         </div>
-            <div className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
+            <div className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">
               MANUFACTURER
               </div>
           </h1>
 
-          {/* Stats Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 md:gap-10 mb-6 sm:mb-8 md:mb-12 max-w-5xl w-full">
+          {/* Stats Section - Second Animation (after 800ms) */}
+          <div 
+            className={`grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 mb-4 sm:mb-5 md:mb-6 max-w-4xl w-full transition-all duration-1000`}
+            style={{
+              opacity: showText ? 1 : 0,
+              transform: showText ? 'translateY(0)' : 'translateY(20px)',
+              transitionDelay: showText ? '800ms' : '0ms',
+            }}
+          >
             {/* Stat 1 */}
             <div className="flex flex-col items-center">
-              <div className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-1 sm:mb-2">50+</div>
-              <div className="text-[#F2913F] text-sm sm:text-base md:text-lg font-medium">years on the job</div>
+              <div className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-1">
+                {showText ? <CountUp end={50} duration={2} suffix="+" delay={0.8} /> : '0+'}
+              </div>
+              <div className="text-[#F2913F] text-xs sm:text-sm font-medium">years on the job</div>
             </div>
 
             {/* Stat 2 */}
-            <div className="flex flex-col items-center justify-center border-l border-r border-white/30 px-3 sm:px-4">
-              <div className="text-[#F2913F] text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Uncompromising</div>
-              <div className="text-[#F2913F] text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">Quality Standards</div>
+            <div className="flex flex-col items-center justify-center border-l border-r border-white/30 px-2 sm:px-3">
+              <div className="text-[#F2913F] text-sm sm:text-base md:text-lg lg:text-xl font-bold">Uncompromising</div>
+              <div className="text-[#F2913F] text-sm sm:text-base md:text-lg lg:text-xl font-bold">Quality Standards</div>
           </div>
 
             {/* Stat 3 */}
             <div className="flex flex-col items-center">
-              <div className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-1 sm:mb-2">4,00,000+</div>
-              <div className="text-[#F2913F] text-sm sm:text-base md:text-lg font-medium">Safe Sleepers per year</div>
+              <div className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-1">
+                {showText ? <CountUp end={400000} duration={2} separator="," suffix="+" delay={0.8} /> : '0+'}
+              </div>
+              <div className="text-[#F2913F] text-xs sm:text-sm font-medium">Safe Sleepers per year</div>
             </div>
           </div>
 
-          {/* Tagline */}
-          <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
+          {/* Tagline - Third Animation (after 1600ms) */}
+          <div 
+            className={`text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold leading-tight pb-2 sm:pb-3 md:pb-4 transition-all duration-1000`}
+            style={{
+              opacity: showText ? 1 : 0,
+              transform: showText ? 'translateY(0)' : 'translateY(20px)',
+              transitionDelay: showText ? '1600ms' : '0ms',
+            }}
+          >
             <span className="text-[#F2913F]">Built to Scale.</span>{' '}
             <span className="text-[#8A393B]">Built to Last.</span>
             <br className="hidden sm:block" />
@@ -166,65 +445,29 @@ export default function Home() {
       </section>
 
       {/* Recent News and Updates Section */}
-      <section className="bg-[#F5F4F1] py-12 sm:py-16 md:py-20">
+      <section className="bg-[#F5F4F1] py-8 sm:py-10 md:py-12 will-change-transform">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {/* Card 1 */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300 fade-in-section">
-              <div className="mb-4">
-                <span className="text-[#8A393B] font-semibold text-lg sm:text-xl">Mar 2024</span>
-              </div>
-              <h3 className="text-gray-900 font-medium text-base sm:text-lg mb-6 leading-relaxed">
-                Sleepers supplied for new Pune Metro Corridor
-              </h3>
-              <a 
-                href="/news" 
-                className="inline-flex items-center text-[#F2913F] hover:text-[#D97706] font-medium text-sm sm:text-base transition-colors duration-200"
-              >
-                Read More
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
+            <NewsCard 
+              date="Mar 2024"
+              title="Sleepers supplied for new Bullet trains"
+              delay={0}
+            />
 
             {/* Card 2 */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300 fade-in-section" style={{ animationDelay: '150ms' }}>
-              <div className="mb-4">
-                <span className="text-[#8A393B] font-semibold text-lg sm:text-xl">Dec 2023</span>
-              </div>
-              <h3 className="text-gray-900 font-medium text-base sm:text-lg mb-6 leading-relaxed">
-                Partnered on Mumbai-Ahmedabad bullet train trial track
-              </h3>
-              <a 
-                href="/news" 
-                className="inline-flex items-center text-[#F2913F] hover:text-[#D97706] font-medium text-sm sm:text-base transition-colors duration-200"
-              >
-                Read More
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
+            <NewsCard 
+              date="Dec 2020"
+              title="Acquired ApnaTech"
+              delay={150}
+            />
 
             {/* Card 3 */}
-            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300 fade-in-section" style={{ animationDelay: '300ms' }}>
-              <div className="mb-4">
-                <span className="text-[#8A393B] font-semibold text-lg sm:text-xl">Sep 2023</span>
-              </div>
-              <h3 className="text-gray-900 font-medium text-base sm:text-lg mb-6 leading-relaxed">
-                Recognized by RDSO for product innovation
-              </h3>
-              <a 
-                href="/news" 
-                className="inline-flex items-center text-[#F2913F] hover:text-[#D97706] font-medium text-sm sm:text-base transition-colors duration-200"
-              >
-                Read More
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
+            <NewsCard 
+              date="Sep 2023"
+              title="Recognized by RDSO for product innovation"
+              delay={300}
+            />
           </div>
         </div>
         
@@ -235,7 +478,7 @@ export default function Home() {
               {/* Explore Precast Solution Button */}
             <Link 
               href="/precast" 
-                className="group inline-flex items-center gap-3 bg-[#8A393B] hover:bg-[#6d2c2f] px-6 py-3 md:px-8 md:py-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-base md:text-lg font-medium text-white whitespace-nowrap fade-in-section flex-shrink-0 z-10"
+                className="group inline-flex items-center gap-3 bg-[#8A393B] hover:bg-[#F2913F] px-6 py-3 md:px-8 md:py-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-500 ease-out text-base md:text-lg font-medium text-white whitespace-nowrap flex-shrink-0 z-10 will-change-transform"
             >
                 Explore Precast Solution
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -246,129 +489,15 @@ export default function Home() {
         </div>
         
           {/* Gradient Line extending to viewport right edge */}
-          <div 
-            className="absolute top-0 right-0 h-7 fade-in-section"
-                style={{
-              left: 'calc(max(50% - 640px + 350px, 350px))',
-              background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
-            }}
-          />
+          <GradientLine />
         </div>
       </section>
 
       {/* Responsive Our Projects Section */}
-      <section className="bg-white py-12 sm:py-16 md:py-24">
-        <Carousel
-          opts={{ align: "start", loop: true }}
-          className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-        >
-          {/* Mobile-Optimized Header */}
-          <div className="mb-8 sm:mb-10 md:mb-12 fade-in-section">
-            {/* Mobile Layout */}
-            <div className="md:hidden text-center mb-6">
-              <h2 className="text-3xl font-bold text-[#8A393B] mb-8">Our Projects</h2>
-              <div className="flex items-center justify-center">
-                <CarouselPrevious className="relative w-10 h-10 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 shadow-sm -mr-1" />
-                <CarouselNext className="relative w-10 h-10 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706] shadow-sm" />
-              </div>
-            </div>
-            
-            {/* Desktop Layout */}
-            <div className="hidden md:flex justify-between items-end">
-              <div>
-                <h2 className="text-4xl font-bold text-[#8A393B] mb-2">Our Projects</h2>
-              </div>
-              <div className="flex items-center">
-                <CarouselPrevious className="relative w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 -mr-14" />
-                <CarouselNext className="relative w-12 h-12 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706]" />
-              </div>
-            </div>
-          </div>
-          
-          {/* Responsive Carousel Content */}
-          <CarouselContent className="-ml-2 sm:-ml-4">
-            {projects.map((project, index) => (
-              <CarouselItem key={index} className="pl-2 sm:pl-4 basis-4/5 sm:basis-3/5 md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-                <div className="fade-in-section group">
-                  {/* Mobile-Optimized Image Container */}
-                  <div className="mb-3 sm:mb-4 overflow-hidden rounded-xl sm:rounded-2xl bg-gray-100">
-                    <Image
-                      src={project.image}
-                      alt={project.city}
-                      width={400}
-                      height={500}
-                      className="w-full h-[280px] sm:h-[350px] md:h-[400px] lg:h-[450px] object-cover transition-transform duration-300 group-hover:scale-105"
-                      loading="lazy"
-                      placeholder="blur"
-                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                    />
-                  </div>
-                  
-                  {/* Mobile-Optimized Text Content */}
-                  <div className="px-1 sm:px-0">
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3 text-gray-900 group-hover:text-[#8A393B] transition-colors duration-300">{project.city}</h3>
-                    <Link 
-                      href={project.link} 
-                      className="inline-flex items-center text-sm sm:text-base font-medium text-gray-700 hover:text-[#F2913F] border-b border-gray-300 hover:border-[#F2913F] transition-all duration-300 group-hover:translate-x-1"
-                    >
-                      View Project
-                      <svg className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-      </section>
+      <OurProjectsSection />
       
       {/* Nationwide Presence Section */}
-      <section className="relative py-48 overflow-hidden">
-        {/* Background Video */}
-        <div className="absolute inset-0 w-full h-full z-0">
-            <HLSVideo
-                src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/b8827e1671f7ff0a0f082f98ddd944c4/manifest/video.m3u8"
-                fallbackSrc="/lppatil.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-                preload="metadata"
-            />
-            {/* Add a dark overlay for better text readability */}
-            <div className="absolute inset-0 bg-black opacity-50"></div>
-        </div>
-
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center fade-in-section">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 text-white px-4">
-                <span
-                    className="bg-clip-text text-transparent"
-                    style={{
-                        backgroundImage: 'linear-gradient(90deg, #F2913F, #ffcba4, #F2913F)',
-                    }}
-                >
-                    Nationwide Presence.
-                </span>
-            </h2>
-            <div
-                className="h-1.5 w-96 mx-auto mb-10"
-                style={{
-                    background: 'linear-gradient(90deg, #F2913F 0%, #1E3888 50%, #8A393B 100%)',
-                }}
-            />
-            <p className="text-4xl text-gray-200 font-medium mb-8">
-                From city metros to national corridors
-            </p>
-            <p className="text-xl text-gray-300 max-w-lg mx-auto leading-relaxed">
-                Our products run across India.
-                <br />
-                We support both new and upgrade projects at every scale.
-            </p>
-        </div>
-      </section>
+      <NationwidePresenceSection />
     </div>
   );
 }

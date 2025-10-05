@@ -8,6 +8,8 @@
 @layer base {
   html, body {
     font-family: var(--font-helvetica), 'Helvetica', 'Arial', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   
   /* Ensure all text elements use Helvetica */
@@ -177,6 +179,11 @@ body nav {
 
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+body.menu-open {
+  overflow: hidden;
+  height: 100vh;
 }
 
 /* Performance optimizations for all animations */
@@ -538,7 +545,6 @@ img {
 /* Smooth momentum scrolling for mobile */
 body {
   -webkit-overflow-scrolling: touch;
-  overflow-x: hidden;
 }
 
 /* Improve text rendering */
@@ -1064,3 +1070,4 @@ h1, h2, h3, h4, h5, h6, p {
 .flip-stagger-1 { animation-delay: 0.05s; }
 .flip-stagger-2 { animation-delay: 0.1s; }
 .flip-stagger-3 { animation-delay: 0.15s; }
+

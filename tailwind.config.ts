@@ -7,8 +7,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-helvetica)', 'Helvetica', 'Arial', 'sans-serif'],
-        helvetica: ['var(--font-helvetica)', 'Helvetica', 'Arial', 'sans-serif'],
+        sans: ['var(--font-helvetica)', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+        helvetica: ['var(--font-helvetica)', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
         clash: ['"Clash Grotesk"', 'sans-serif'], // Keep clash available if needed
       },
       backgroundImage: {

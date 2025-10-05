@@ -5,9 +5,6 @@ import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
-  const [scrollY, setScrollY] = useState(0);
-  const [prevScrollY, setPrevScrollY] = useState(0);
-  const [isNavVisible, setIsNavVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAboutMenuOpen, setIsAboutMenuOpen] = useState(false);
   const [isProductsMenuOpen, setIsProductsMenuOpen] = useState(false);
@@ -15,42 +12,6 @@ const Navbar = () => {
   const [isMobileAboutExpanded, setIsMobileAboutExpanded] = useState(false);
   const [isMobileProductsExpanded, setIsMobileProductsExpanded] = useState(false);
   const [isMobileSystemsExpanded, setIsMobileSystemsExpanded] = useState(false);
-
-  useEffect(() => {
-    let lastScroll = 0;
-    
-    const handleScroll = () => {
-      const currentScroll = window.pageYOffset;
-      
-      if (currentScroll <= 0) {
-        setIsNavVisible(true);
-        return;
-      }
-      
-      if (currentScroll > lastScroll && currentScroll > 80) {
-        // Scrolling DOWN
-        console.log('Hiding navbar, scroll:', currentScroll);
-        setIsNavVisible(false);
-        setIsAboutMenuOpen(false);
-        setIsProductsMenuOpen(false);
-        setIsSystemsMenuOpen(false);
-      } else if (currentScroll < lastScroll) {
-        // Scrolling UP
-        console.log('Showing navbar, scroll:', currentScroll);
-        setIsNavVisible(true);
-      }
-      
-      lastScroll = currentScroll;
-    };
-    
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const navIsScrolled = scrollY > 50 || isAboutMenuOpen || isProductsMenuOpen || isSystemsMenuOpen;
 
   const aboutLinks = [
     { href: '/about', label: 'About Us' },
@@ -95,33 +56,22 @@ const Navbar = () => {
   // Prevent scroll when mobile menu is open and reset submenus
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-      document.body.style.height = '100vh';
-      document.documentElement.style.overflow = 'hidden';
+      document.body.classList.add('menu-open');
     } else {
-      document.body.style.overflow = 'unset';
-      document.body.style.height = 'unset';
-      document.documentElement.style.overflow = 'unset';
-      // Reset all mobile submenus when main menu closes
-      setIsMobileAboutExpanded(false);
-      setIsMobileProductsExpanded(false);
-      setIsMobileSystemsExpanded(false);
+      document.body.classList.remove('menu-open');
     }
+
     return () => {
-      document.body.style.overflow = 'unset';
-      document.body.style.height = 'unset';
-      document.documentElement.style.overflow = 'unset';
+      document.body.classList.remove('menu-open');
     };
   }, [isMobileMenuOpen]);
 
   return (
     <nav 
       data-navbar
-      className={`fixed top-0 left-0 right-0 z-[9999] shadow-md w-full bg-white ${
-        isNavVisible ? '' : '-translate-y-full'
-      }`}
+      className="w-full bg-white"
       style={{
-        transition: 'transform 0.3s ease-in-out',
+        height: '103px',
       }}
       onMouseLeave={() => {
         setIsAboutMenuOpen(false);
@@ -129,8 +79,8 @@ const Navbar = () => {
         setIsSystemsMenuOpen(false);
       }}
     >
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20 sm:h-22 md:h-24 lg:h-28">
+      <div className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-[103px]">
           {/* Logo */}
           <div className="flex items-center animate-fadeInLeft -ml-2 sm:-ml-4 md:-ml-6 lg:-ml-10">
               <Link href="/" onMouseEnter={() => setIsAboutMenuOpen(false)}>
@@ -184,8 +134,8 @@ const Navbar = () => {
 
             <div onMouseEnter={() => {
               setIsAboutMenuOpen(false);
-              setIsProductsMenuOpen(true);
-              setIsSystemsMenuOpen(false);
+              setIsProductsMenuOpen(false);
+              setIsSystemsMenuOpen(true);
             }}>
                 <button className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F] flex items-center gap-1">
                 Products
@@ -262,26 +212,34 @@ const Navbar = () => {
       
       {/* About Us Mega Menu */}
       <div 
-        className={`absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-500 ease-in-out ${
+        className={`absolute left-0 right-0 bg-white shadow-lg overflow-hidden ${
           isAboutMenuOpen 
-            ? 'opacity-100 visible translate-y-0 max-h-[600px]' 
-            : 'opacity-0 invisible -translate-y-4 max-h-0'
+            ? 'opacity-100 visible translate-y-0' 
+            : 'opacity-0 invisible -translate-y-4 pointer-events-none'
         }`}
         style={{
+          top: '103px',
+          width: '100%',
           transformOrigin: 'top',
-          transitionProperty: 'opacity, transform, max-height',
+          transitionProperty: 'opacity, transform, visibility',
+          transitionDuration: isAboutMenuOpen ? '0.4s' : '0.3s',
+          transitionTimingFunction: isAboutMenuOpen 
+            ? 'cubic-bezier(0.4, 0, 0.2, 1)' 
+            : 'cubic-bezier(0.6, 0, 0.8, 0.4)',
+          transitionDelay: isAboutMenuOpen ? '0s' : '0s',
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6">
           <div className="flex flex-col">
             {aboutLinks.map((link, index) => (
               <Link 
                 key={link.href} 
                 href={link.href} 
-                className="text-2xl font-bold text-gray-900 hover:text-[#F2913F] px-4 py-3 transition-colors duration-300"
+                className="text-lg font-bold text-gray-900 hover:text-[#F2913F] px-6 py-3 transition-all duration-200 ease-out border-l-2 border-transparent hover:border-[#F2913F]"
                 style={{
-                  animation: isAboutMenuOpen ? `slideIn 0.3s ease-out ${index * 0.05}s forwards` : 'none',
-                  opacity: isAboutMenuOpen ? 1 : 0,
+                  animation: isAboutMenuOpen ? `fadeSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.06}s forwards` : 'none',
+                  opacity: 0,
+                  transform: 'translateX(-8px)',
                 }}
               >
                 {link.label}
@@ -293,26 +251,34 @@ const Navbar = () => {
 
       {/* Products Mega Menu */}
       <div 
-        className={`absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-500 ease-in-out ${
+        className={`absolute left-0 right-0 bg-white shadow-lg overflow-hidden ${
           isProductsMenuOpen 
-            ? 'opacity-100 visible translate-y-0 max-h-[600px]' 
-            : 'opacity-0 invisible -translate-y-4 max-h-0'
+            ? 'opacity-100 visible translate-y-0' 
+            : 'opacity-0 invisible -translate-y-4 pointer-events-none'
         }`}
         style={{
+          top: '103px',
+          width: '100%',
           transformOrigin: 'top',
-          transitionProperty: 'opacity, transform, max-height',
+          transitionProperty: 'opacity, transform, visibility',
+          transitionDuration: isProductsMenuOpen ? '0.4s' : '0.3s',
+          transitionTimingFunction: isProductsMenuOpen 
+            ? 'cubic-bezier(0.4, 0, 0.2, 1)' 
+            : 'cubic-bezier(0.6, 0, 0.8, 0.4)',
+          transitionDelay: isProductsMenuOpen ? '0s' : '0s',
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6">
           <div className="flex flex-col">
             {productLinks.map((link, index) => (
               <Link 
                 key={link.href} 
                 href={link.href} 
-                className="text-2xl font-bold text-gray-900 hover:text-[#F2913F] px-4 py-3 transition-colors duration-300"
+                className="text-lg font-bold text-gray-900 hover:text-[#F2913F] px-6 py-3 transition-all duration-200 ease-out border-l-2 border-transparent hover:border-[#F2913F]"
                 style={{
-                  animation: isProductsMenuOpen ? `slideIn 0.3s ease-out ${index * 0.05}s forwards` : 'none',
-                  opacity: isProductsMenuOpen ? 1 : 0,
+                  animation: isProductsMenuOpen ? `fadeSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.06}s forwards` : 'none',
+                  opacity: 0,
+                  transform: 'translateX(-8px)',
                 }}
               >
                 {link.label}
@@ -324,26 +290,34 @@ const Navbar = () => {
 
       {/* Systems Mega Menu */}
       <div 
-        className={`absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-500 ease-in-out ${
+        className={`absolute left-0 right-0 bg-white shadow-lg overflow-hidden ${
           isSystemsMenuOpen 
-            ? 'opacity-100 visible translate-y-0 max-h-[600px]' 
-            : 'opacity-0 invisible -translate-y-4 max-h-0'
+            ? 'opacity-100 visible translate-y-0' 
+            : 'opacity-0 invisible -translate-y-4 pointer-events-none'
         }`}
         style={{
+          top: '103px',
+          width: '100%',
           transformOrigin: 'top',
-          transitionProperty: 'opacity, transform, max-height',
+          transitionProperty: 'opacity, transform, visibility',
+          transitionDuration: isSystemsMenuOpen ? '0.4s' : '0.3s',
+          transitionTimingFunction: isSystemsMenuOpen 
+            ? 'cubic-bezier(0.4, 0, 0.2, 1)' 
+            : 'cubic-bezier(0.6, 0, 0.8, 0.4)',
+          transitionDelay: isSystemsMenuOpen ? '0s' : '0s',
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6">
           <div className="flex flex-col">
             {systemLinks.map((link, index) => (
               <Link 
                 key={link.href} 
                 href={link.href} 
-                className="text-2xl font-bold text-gray-900 hover:text-[#F2913F] px-4 py-3 transition-colors duration-300"
+                className="text-lg font-bold text-gray-900 hover:text-[#F2913F] px-6 py-3 transition-all duration-200 ease-out border-l-2 border-transparent hover:border-[#F2913F]"
                 style={{
-                  animation: isSystemsMenuOpen ? `slideIn 0.3s ease-out ${index * 0.05}s forwards` : 'none',
-                  opacity: isSystemsMenuOpen ? 1 : 0,
+                  animation: isSystemsMenuOpen ? `fadeSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) ${index * 0.06}s forwards` : 'none',
+                  opacity: 0,
+                  transform: 'translateX(-8px)',
                 }}
               >
                 {link.label}
@@ -354,10 +328,10 @@ const Navbar = () => {
       </div>
       
       <style jsx>{`
-        @keyframes slideIn {
+        @keyframes fadeSlideIn {
           from {
             opacity: 0;
-            transform: translateX(-10px);
+            transform: translateX(-8px);
           }
           to {
             opacity: 1;
@@ -370,20 +344,18 @@ const Navbar = () => {
        <div 
          className={`lg:hidden fixed z-[9999] bg-black transition-all duration-500 ease-in-out ${
            isMobileMenuOpen 
-             ? 'translate-x-0 opacity-100 visible' 
-             : 'translate-x-full opacity-0 invisible'
+             ? 'opacity-100 visible' 
+             : 'opacity-0 invisible'
          }`}
          style={{ 
            position: 'fixed',
            top: 0,
-           left: 0,
-           right: 0,
            bottom: 0,
-           width: '100vw', 
+           width: '100%', 
            height: '100vh',
            backgroundColor: '#000000',
            zIndex: 9999,
-           transform: isMobileMenuOpen ? 'translateX(0)' : 'translateX(100%)'
+           right: isMobileMenuOpen ? '0' : '-100%'
          }}
        >         
          {/* Full Screen Navigation Panel */}
