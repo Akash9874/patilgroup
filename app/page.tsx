@@ -15,6 +15,12 @@ import {
 } from "@/components/ui/carousel"
 import SwitchingText from '@/components/SwitchingText';
 import HLSVideo from '@/components/HLSVideo';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const projects = [
   {
@@ -162,11 +168,11 @@ const OurProjectsSection = () => {
     <section ref={ref} className="bg-white py-8 sm:py-10 md:py-12 will-change-transform">
       <Carousel
         opts={{ align: "start", loop: true, skipSnaps: false, dragFree: false }}
-        className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        className="w-full"
       >
         {/* Header with fade-in */}
         <div 
-          className={`mb-6 sm:mb-8 md:mb-10 transition-all duration-800 ${
+          className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 sm:mb-8 md:mb-10 transition-all duration-800 ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
           style={{
@@ -341,19 +347,6 @@ export default function Home() {
   useGSAPAnimations();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [showText, setShowText] = useState(false);
-  const [zoomLevel, setZoomLevel] = useState(1);
-
-  useEffect(() => {
-    // Set zoom based on screen size
-    const updateZoom = () => {
-      setZoomLevel(window.innerWidth >= 1024 ? 1.2 : 1);
-    };
-    
-    updateZoom();
-    window.addEventListener('resize', updateZoom);
-    
-    return () => window.removeEventListener('resize', updateZoom);
-  }, []);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -376,11 +369,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="overflow-x-hidden" style={{ zoom: zoomLevel }}>
+    <div>
       {/* Hero Section - Compact to content */}
-      <section className="relative overflow-hidden bg-black">
+      <section className="relative h-screen overflow-hidden bg-black hero-section">
         {/* Video Background */}
-          <div className="absolute inset-0 w-full h-full">
+          <div className="absolute inset-0 w-full h-full hero-video">
           <video
             ref={videoRef}
             src="/heronewvideo.mp4"
@@ -394,16 +387,16 @@ export default function Home() {
         </div>
 
         {/* Hero Content Overlay - Compact spacing */}
-        <div className={`relative z-10 flex flex-col items-center justify-center py-16 sm:py-20 md:py-24 lg:py-28 text-center px-4 sm:px-6 lg:px-8`}>
+        <div className={`relative z-10 flex h-full flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 hero-content`}>
           {/* Main Heading - First Animation */}
           <h1 className={`mb-4 sm:mb-5 md:mb-6 transition-all duration-1000 ${showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <div className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-1">
+            <div className="text-white text-5xl font-bold mb-1">
               WORLD'S
         </div>
-            <div className="text-[#F2913F] text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-1">
+            <div className="text-[#F2913F] text-5xl font-bold mb-1">
               LARGEST RAILWAY
         </div>
-            <div className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">
+            <div className="text-white text-5xl font-bold">
               MANUFACTURER
               </div>
           </h1>

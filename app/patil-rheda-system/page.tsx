@@ -42,7 +42,7 @@ const PatilRhedaSystemPage = () => {
         </div>
         
         {/* Desktop Layout */}
-        <div className="hidden md:block relative h-[600px] lg:h-[700px] xl:h-[800px]">
+        <div className="hidden md:block relative h-screen">
           <Image 
             src="/rhedarjeda.jpg" 
             alt="Patil RHEDA system" 

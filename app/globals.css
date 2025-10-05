@@ -8,6 +8,8 @@
 @layer base {
   html, body {
     font-family: var(--font-helvetica), 'Helvetica', 'Arial', sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   
   /* Ensure all text elements use Helvetica */
@@ -177,6 +179,20 @@ body nav {
 
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+body.menu-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+nav {
+  background-color: transparent !important;
+}
+
+nav.scrolled, nav:hover {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px);
 }
 
 /* Performance optimizations for all animations */
@@ -538,7 +554,6 @@ img {
 /* Smooth momentum scrolling for mobile */
 body {
   -webkit-overflow-scrolling: touch;
-  overflow-x: hidden;
 }
 
 /* Improve text rendering */

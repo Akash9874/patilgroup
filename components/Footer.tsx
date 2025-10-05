@@ -25,8 +25,8 @@ const Footer = () => {
       </div>
 
       {/* Pre-footer section */}
-      <div className="relative bg-black pt-4 sm:pt-6 md:pt-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
+      <div className="bg-black pt-4 sm:pt-6 md:pt-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
           <div className="mb-6 md:mb-0">
             <div>
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-xl font-bold">6-3-1342/4 Raj Bhavan Rd, Raj Bhavan Quarters Colony Somajiguda,<br />Hyderabad, Telangana 500082</h3>
@@ -47,7 +47,7 @@ const Footer = () => {
               </button>
             </div>
           </div>
-          <div className="relative md:absolute right-0 md:-bottom-24 lg:-bottom-28 xl:-bottom-32 mt-4 md:mt-0">
+          <div className="md:absolute right-0 md:-bottom-24 lg:-bottom-28 xl:-bottom-32 mt-4 md:mt-0">
             <Image 
               src="/trainfooter.svg"
               alt="Footer illustration"
