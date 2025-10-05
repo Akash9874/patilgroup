@@ -19,15 +19,17 @@ const Footer = () => {
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-extrabold leading-tight">
           
         </h2>
-        <p className="mt-4 sm:mt-6 max-w-3xl text-xs sm:text-sm md:text-base text-gray-300">
-          By addressing the growing demands of modern railways while offering substantial cost and environmental benefits, Patil Group's composite sleepers represent the future of sustainable, high-performance railway infrastructure.
+        <p className="mt-4 sm:mt-6 max-w-3xl text-[9px] sm:text-[11px] md:text-xs text-gray-300 leading-relaxed">
+          By addressing the growing demands of modern railways while offering substantial cost and environmental benefits,
+          <br />
+          Patil Group's composite sleepers represent the future of sustainable, high-performance railway infrastructure.
         </p>
       </div>
 
       {/* Pre-footer section */}
       <div className="bg-black pt-4 sm:pt-6 md:pt-8">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center">
-          <div className="mb-6 md:mb-0">
+          <div className="mb-6 md:mb-0 md:pr-64 lg:pr-96 xl:pr-[36rem]">
             <div>
               <h3 className="text-lg sm:text-xl md:text-2xl lg:text-xl font-bold">6-3-1342/4 Raj Bhavan Rd, Raj Bhavan Quarters Colony Somajiguda,<br />Hyderabad, Telangana 500082</h3>
             </div>

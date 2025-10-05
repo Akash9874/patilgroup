@@ -187,8 +187,8 @@ const ProjectsPage = () => {
 
   return (
     <>
-      <section className="relative h-screen max-h-screen overflow-hidden">
-        <div className="absolute inset-0">
+      <section className="relative h-screen max-h-screen overflow-hidden hero-section">
+        <div className="absolute inset-0 hero-video">
           <video
             src="/dijiprojectnew (1).mp4"
             autoPlay
@@ -200,9 +200,9 @@ const ProjectsPage = () => {
           >
             Your browser does not support the video tag.
           </video>
-          <div className="absolute inset-0 bg-black/40" />
         </div>
-        <div className="relative z-10 h-full flex items-center">
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 z-10 hero-content flex items-center">
           <div className="pl-6 sm:pl-8 md:pl-16 lg:pl-24">
             <h2 className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium font-clash">Our</h2>
             <h1 className="text-white text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-bold font-clash -mt-1 sm:-mt-2 md:-mt-4">Projects</h1>

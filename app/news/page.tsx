@@ -174,25 +174,32 @@ const NewsPage = () => {
   return (
     <div className="bg-[#F1EFF0] text-gray-800 overflow-hidden">
       
-      <section className="relative h-[50vh] sm:h-[60vh] overflow-hidden">
-        {/* Background Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover"
-          preload="metadata"
-        >
-          <source src="/innews.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      <section className="relative h-[50vh] sm:h-[60vh] overflow-hidden hero-section">
+        {/* Background Video wrapped for parallax */}
+        <div className="absolute inset-0 w-full h-full hero-video">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+            preload="metadata"
+          >
+            <source src="/innews.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
-        {/* Bottom-left Overlay Text */}
-        <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 md:bottom-8 md:left-8 lg:bottom-12 lg:left-12 z-10">
-          <h1 className="text-white font-bold leading-none text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
-            In News
-          </h1>
+        {/* Overlay for better text contrast */}
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        {/* Bottom-left Overlay Text (parallax content) */}
+        <div className="absolute inset-0 z-10 hero-content">
+          <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 md:bottom-8 md:left-8 lg:bottom-12 lg:left-12">
+            <h1 className="text-white font-bold leading-none text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
+              In News
+            </h1>
+          </div>
         </div>
       </section>
 

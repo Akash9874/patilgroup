@@ -45,9 +45,9 @@ const ProductsPage = () => {
 
   return (
     <div className="bg-black text-white">
-      <section className="relative h-screen max-h-screen overflow-hidden">
-        {/* Background Video */}
-        <div className="absolute inset-0 w-full h-full">
+      <section className="relative h-screen max-h-screen overflow-hidden hero-section">
+        {/* Background Video for parallax */}
+        <div className="absolute inset-0 w-full h-full hero-video">
           <HLSVideo
             src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/7f508f8619fc694d88c228bc4df4c260/manifest/video.m3u8"
             fallbackSrc="/productherovideo.mp4"
@@ -58,27 +58,31 @@ const ProductsPage = () => {
             className="w-full h-full object-cover"
             preload="metadata"
           />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
+        {/* Contrast overlay */}
+        <div className="absolute inset-0 bg-black/50"></div>
 
-        {/* Mobile Layout */}
-        <div className="md:hidden relative z-10 h-full flex items-center justify-center py-8">
-          <div className="text-center px-6 w-full max-w-lg mx-auto">
-            <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight drop-shadow-2xl animate-fadeInUp">
+        {/* Hero Content for parallax */}
+        <div className="absolute inset-0 z-10 hero-content">
+          {/* Mobile Layout */}
+          <div className="md:hidden h-full flex items-center justify-start py-8">
+            <div className="text-left px-6 w-full max-w-lg">
+              <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight drop-shadow-2xl animate-fadeInUp">
+                Track<br/>Components
+              </h1>
+              <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mt-6 rounded-full animate-pulse shadow-lg"></div>
+              <p className="text-white text-lg sm:text-xl mt-6 font-medium tracking-wide drop-shadow-xl leading-relaxed">
+                Explore our railway solutions
+              </p>
+            </div>
+          </div>
+
+          {/* Desktop Layout */}
+          <div className="hidden md:flex h-full items-center justify-start p-8 sm:p-12 lg:p-16">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white animate-fadeInUp">
               Track<br/>Components
             </h1>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-6 rounded-full animate-pulse shadow-lg"></div>
-            <p className="text-white text-lg sm:text-xl mt-6 font-medium tracking-wide drop-shadow-xl leading-relaxed">
-              Explore our railway solutions
-            </p>
           </div>
-        </div>
-
-        {/* Desktop Layout */}
-        <div className="hidden md:flex relative z-10 h-full items-end justify-start p-8 sm:p-12 lg:p-16 pb-12 lg:pb-16">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white animate-fadeInUp">
-            Track<br/>Components
-          </h1>
         </div>
       </section>
 

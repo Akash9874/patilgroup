@@ -7,25 +7,31 @@ export default function SustainabilityPage() {
   useGSAPAnimations();
   return (
     <div>
-      {/* Responsive Hero Section - Single Frame */}
-      <section className="relative h-screen max-h-screen w-full overflow-hidden fade-in-section">
-        {/* Background video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          preload="metadata"
-        >
-          <source src="/sustainhero.webm" type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
+      {/* Responsive Hero Section - Single Frame with Parallax */}
+      <section className="relative h-screen max-h-screen w-full overflow-hidden fade-in-section hero-section">
+        {/* Background video (parallax layer) */}
+        <div className="absolute inset-0 w-full h-full hero-video">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+            preload="metadata"
+          >
+            <source src="/sustainhero.webm" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
         
-        {/* Mobile Layout */}
-        <div className="md:hidden absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30" />
-          <div className="relative z-10 h-full flex items-center justify-center">
+        {/* Overlays for contrast */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30 md:hidden" />
+        <div className="absolute inset-0 bg-black/60 hidden md:block" />
+        
+        {/* Hero content (parallax layer) */}
+        <div className="absolute inset-0 z-10 hero-content">
+          {/* Mobile Layout */}
+          <div className="md:hidden h-full flex items-center justify-center">
             <div className="text-center px-4 w-full max-w-lg mx-auto">
               <h1 className="text-white font-bold leading-tight text-5xl sm:text-6xl drop-shadow-2xl mb-6">
                 Sustainability
@@ -38,12 +44,9 @@ export default function SustainabilityPage() {
               </p>
             </div>
           </div>
-        </div>
-        
-        {/* Desktop Layout - Centered positioning */}
-        <div className="hidden md:block">
-          <div className="absolute inset-0 bg-black/60" />
-          <div className="absolute inset-0 z-10 flex items-center justify-center">
+          
+          {/* Desktop Layout - Centered positioning */}
+          <div className="hidden md:flex h-full items-center justify-center">
             <div className="text-center px-6 md:px-8 lg:px-12">
               <h1 className="text-white font-bold leading-none text-6xl sm:text-7xl md:text-8xl drop-shadow-lg mb-6">
                 Sustainability

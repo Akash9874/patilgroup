@@ -41,17 +41,21 @@ const Navbar = () => {
     { href: '/precast-plinth', label: 'Precast Plinth' },
   ];
 
-  // Close mobile menu when clicking outside
+  // Close menus when clicking outside nav
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (isMobileMenuOpen && !(event.target as Element).closest('nav')) {
+      const clickedOutsideNav = !(event.target as Element).closest('nav');
+      if (clickedOutsideNav) {
         setIsMobileMenuOpen(false);
+        setIsAboutMenuOpen(false);
+        setIsProductsMenuOpen(false);
+        setIsSystemsMenuOpen(false);
       }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [isMobileMenuOpen]);
+  }, []);
 
   // Prevent scroll when mobile menu is open and reset submenus
   useEffect(() => {
@@ -76,10 +80,14 @@ const Navbar = () => {
           navbar.classList.remove('scrolled');
         }
       }
+      // Close any open desktop dropdown while scrolling
+      setIsAboutMenuOpen(false);
+      setIsProductsMenuOpen(false);
+      setIsSystemsMenuOpen(false);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true } as any);
+    return () => window.removeEventListener('scroll', handleScroll as any);
   }, []);
 
   return (
@@ -100,6 +108,10 @@ const Navbar = () => {
         if (navbar) {
           navbar.classList.remove('hovered');
         }
+        // Ensure all desktop dropdowns are closed when leaving nav
+        setIsAboutMenuOpen(false);
+        setIsProductsMenuOpen(false);
+        setIsSystemsMenuOpen(false);
       }}
     >
       <div className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
@@ -149,21 +161,21 @@ const Navbar = () => {
                 setIsProductsMenuOpen(false);
                 setIsSystemsMenuOpen(true);
               }}>
-                <button className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F] flex items-center gap-1">
+                <Link href="/systems" className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F] flex items-center gap-1">
                   Systems
                   <ChevronDown size={16} className={`transition-transform duration-300 ${isSystemsMenuOpen ? 'rotate-180' : ''}`} />
-                </button>
+                </Link>
             </div>
 
-            <div onMouseEnter={() => {
+              <div onMouseEnter={() => {
               setIsAboutMenuOpen(false);
-              setIsProductsMenuOpen(false);
-              setIsSystemsMenuOpen(true);
+              setIsSystemsMenuOpen(false);
+              setIsProductsMenuOpen(true);
             }}>
-                <button className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F] flex items-center gap-1">
+                <Link href="/products" className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F] flex items-center gap-1">
                 Products
                 <ChevronDown size={16} className={`transition-transform duration-300 ${isProductsMenuOpen ? 'rotate-180' : ''}`} />
-                </button>
+                </Link>
             </div>
 
             <Link href="/cme" onMouseEnter={() => {
@@ -251,6 +263,7 @@ const Navbar = () => {
             : 'cubic-bezier(0.6, 0, 0.8, 0.4)',
           transitionDelay: isAboutMenuOpen ? '0s' : '0s',
         }}
+        onMouseLeave={() => setIsAboutMenuOpen(false)}
       >
         <div className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6">
           <div className="flex flex-col">
@@ -264,6 +277,7 @@ const Navbar = () => {
                   opacity: 0,
                   transform: 'translateX(-8px)',
                 }}
+                onClick={() => setIsAboutMenuOpen(false)}
               >
                 {link.label}
               </Link>
@@ -290,6 +304,7 @@ const Navbar = () => {
             : 'cubic-bezier(0.6, 0, 0.8, 0.4)',
           transitionDelay: isProductsMenuOpen ? '0s' : '0s',
         }}
+        onMouseLeave={() => setIsProductsMenuOpen(false)}
       >
         <div className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6">
           <div className="flex flex-col">
@@ -303,6 +318,7 @@ const Navbar = () => {
                   opacity: 0,
                   transform: 'translateX(-8px)',
                 }}
+                onClick={() => setIsProductsMenuOpen(false)}
               >
                 {link.label}
               </Link>
@@ -329,6 +345,7 @@ const Navbar = () => {
             : 'cubic-bezier(0.6, 0, 0.8, 0.4)',
           transitionDelay: isSystemsMenuOpen ? '0s' : '0s',
         }}
+        onMouseLeave={() => setIsSystemsMenuOpen(false)}
       >
         <div className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6">
           <div className="flex flex-col">
@@ -342,6 +359,7 @@ const Navbar = () => {
                   opacity: 0,
                   transform: 'translateX(-8px)',
                 }}
+                onClick={() => setIsSystemsMenuOpen(false)}
               >
                 {link.label}
               </Link>

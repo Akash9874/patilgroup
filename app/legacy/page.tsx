@@ -1,54 +1,61 @@
 "use client";
 import HLSVideo from '@/components/HLSVideo';
+import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 
 export default function LegacyPage() {
+  useGSAPAnimations();
   const TrackTimeline = require('../../components/legacy/TrackTimeline').default as any;
   const { legacyTimeline } = require('./timelineData');
   return (
     <div>
       {/* Responsive Legacy Hero Section */}
-      <section className="relative h-[85vh] md:h-[90vh] w-full overflow-hidden">
-        {/* Background video */}
-        <HLSVideo
-          src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/ceec789bbff98173c6c4a3fda4c5520d/manifest/video.m3u8"
-          fallbackSrc="/ourlegacy1.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          preload="metadata"
-        />
+      <section className="relative h-[85vh] md:h-[90vh] w-full overflow-hidden hero-section">
+        {/* Background video (wrapped for parallax) */}
+        <div className="absolute inset-0 w-full h-full hero-video">
+          <HLSVideo
+            src="https://customer-5j20f6geb6l5wmm2.cloudflarestream.com/ceec789bbff98173c6c4a3fda4c5520d/manifest/video.m3u8"
+            fallbackSrc="/ourlegacy1.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+            preload="metadata"
+          />
+        </div>
         
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50 z-[1]" />
         
-        {/* Mobile Layout */}
-        <div className="md:hidden absolute inset-0 z-10">
-          <div className="relative h-full flex items-center justify-start px-4">
-            <div className="w-full max-w-lg">
-              <h1 className="text-white font-bold" style={{ fontFamily: '"Helvetica Neue"', fontSize: '48px', fontWeight: 700, lineHeight: '75%' }}>
-                <span className="block">Our</span>
-                <span className="block">Legacy</span>
-              </h1>
-              <p className="text-[#F2913F] mt-4" style={{ fontFamily: '"Helvetica Neue"', fontSize: '32px', fontWeight: 700, lineHeight: '38px' }}>
-                Grounded in Use
-              </p>
+        {/* Hero Content (wrapped for parallax) */}
+        <div className="absolute inset-0 z-10 hero-content">
+          {/* Mobile Layout */}
+          <div className="md:hidden absolute inset-0">
+            <div className="relative h-full flex items-center justify-start px-4">
+              <div className="w-full max-w-lg">
+                <h1 className="text-white font-bold" style={{ fontFamily: '\"Helvetica Neue\"', fontSize: '48px', fontWeight: 700, lineHeight: '75%' }}>
+                  <span className="block">Our</span>
+                  <span className="block mt-2">Legacy</span>
+                </h1>
+                <p className="text-[#F2913F] mt-6" style={{ fontFamily: '\"Helvetica Neue\"', fontSize: '28px', fontWeight: 700, lineHeight: '34px' }}>
+                  Grounded in Use
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
         {/* Desktop Layout - Left side positioning */}
-        <div className="hidden md:block absolute left-0 z-10" style={{ top: '50%', transform: 'translateY(-50%)' }}>
+        <div className="hidden md:block absolute left-0" style={{ top: '50%', transform: 'translateY(-50%)' }}>
           <div className="px-6 md:px-8 lg:px-12">
             <h1 className="text-white font-bold leading-[75%]" style={{ fontFamily: '"Helvetica Neue"', fontSize: '64px', fontWeight: 700, lineHeight: '75%' }}>
               <span className="block">Our</span>
-              <span className="block">Legacy</span>
+              <span className="block mt-3">Legacy</span>
             </h1>
-            <p className="text-[#F2913F] mt-4" style={{ fontFamily: '"Helvetica Neue"', fontSize: '64px', fontWeight: 700, lineHeight: '48px' }}>
+            <p className="text-[#F2913F] mt-8" style={{ fontFamily: '"Helvetica Neue"', fontSize: '48px', fontWeight: 700, lineHeight: '56px' }}>
               Grounded in Use
             </p>
           </div>
+        </div>
         </div>
       </section>
 

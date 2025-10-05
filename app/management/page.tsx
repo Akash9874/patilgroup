@@ -7,13 +7,13 @@ import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 
 const LeadershipCard = ({ image, name, post }: { image: string, name: string, post: string }) => (
-  <div className="bg-white text-black transform transition-transform duration-300 hover:scale-105 will-change-transform">
+  <div className="group bg-white text-black transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl will-change-transform">
     <div className="relative h-[450px] sm:h-[550px] md:h-[600px] bg-white overflow-hidden">
       <Image
         src={image}
         alt={name}
         fill
-        className="object-cover object-center-top transition-transform duration-500 hover:scale-110 will-change-transform"
+        className="object-cover object-center-top transition-transform duration-500 will-change-transform"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         priority={false}
         quality={90}
@@ -21,9 +21,9 @@ const LeadershipCard = ({ image, name, post }: { image: string, name: string, po
         blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
       />
     </div>
-    <div className="text-center mt-3 sm:mt-4 font-clash px-2 py-3 bg-[#8A393B] transition-colors duration-300">
-      <p className="font-bold text-sm sm:text-base text-white mb-1">{post}</p>
-      <p className="text-sm sm:text-base text-white font-medium">{name}</p>
+    <div className="text-center mt-3 sm:mt-4 font-clash px-2 py-3 bg-[#8A393B] transition-colors duration-500 ease-out group-hover:bg-[#F2913F]">
+      <p className="font-bold text-sm sm:text-base text-white mb-1 transition-colors duration-500 ease-out group-hover:text-black">{post}</p>
+      <p className="text-sm sm:text-base text-white font-medium transition-colors duration-500 ease-out group-hover:text-black">{name}</p>
     </div>
   </div>
 );
@@ -236,14 +236,14 @@ const ManagementPage = () => {
               <div className="flex touch-pan-y" style={{ backfaceVisibility: 'hidden', perspective: '1000px' }}>
                 {leadershipData.map((leader, i) => (
                   <div key={i} className="flex-shrink-0 w-[90%] sm:w-[80%] pl-4 first:pl-6 last:pr-6 will-change-transform" style={{ transform: 'translateZ(0)' }}>
-                    <div className="leadership-card-mobile rounded-2xl border border-gray-300/30 backdrop-blur-sm bg-white overflow-hidden shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl will-change-transform">
+                    <div className="group leadership-card-mobile rounded-2xl border border-gray-300/30 backdrop-blur-sm bg-white overflow-hidden shadow-xl transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl will-change-transform">
                       {/* Full Photo Container */}
                       <div className="relative h-[350px] sm:h-[400px] bg-white overflow-hidden">
                         <Image
                           src={leader.image}
                           alt={leader.name}
                           fill
-                          className="object-cover object-center-top transition-transform duration-500 hover:scale-110 will-change-transform"
+                          className="object-cover object-center-top transition-transform duration-500 will-change-transform"
                           sizes="(max-width: 640px) 90vw, 80vw"
                           priority={i < 3}
                           quality={90}
@@ -253,11 +253,11 @@ const ManagementPage = () => {
                       </div>
                       
                       {/* Designation and Name Below Photo */}
-                      <div className="p-4 sm:p-6 text-center bg-[#8A393B] transition-colors duration-300">
-                        <p className="text-sm sm:text-base text-white font-bold mb-1">
+                      <div className="p-4 sm:p-6 text-center bg-[#8A393B] transition-colors duration-500 ease-out group-hover:bg-[#F2913F]">
+                        <p className="text-sm sm:text-base text-white font-bold mb-1 transition-colors duration-500 ease-out group-hover:text-black">
                           {leader.post}
                         </p>
-                        <h3 className="text-base sm:text-lg font-medium text-white leading-tight">
+                        <h3 className="text-base sm:text-lg font-medium text-white leading-tight transition-colors duration-500 ease-out group-hover:text-black">
                           {leader.name}
                         </h3>
                       </div>
