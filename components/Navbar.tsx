@@ -66,17 +66,40 @@ const Navbar = () => {
     };
   }, [isMobileMenuOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.querySelector('[data-navbar]');
+      if (navbar) {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <nav 
       data-navbar
-      className="w-full bg-white"
+      className="w-full fixed top-0 z-[9999] transition-colors duration-300"
       style={{
         height: '103px',
       }}
+      onMouseEnter={() => {
+        const navbar = document.querySelector('[data-navbar]');
+        if (navbar) {
+          navbar.classList.add('hovered');
+        }
+      }}
       onMouseLeave={() => {
-        setIsAboutMenuOpen(false);
-        setIsProductsMenuOpen(false);
-        setIsSystemsMenuOpen(false);
+        const navbar = document.querySelector('[data-navbar]');
+        if (navbar) {
+          navbar.classList.remove('hovered');
+        }
       }}
     >
       <div className="max-w-[1440px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8">

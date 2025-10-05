@@ -186,6 +186,15 @@ body.menu-open {
   height: 100vh;
 }
 
+nav {
+  background-color: transparent !important;
+}
+
+nav.scrolled, nav:hover {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px);
+}
+
 /* Performance optimizations for all animations */
 body {
   -webkit-font-smoothing: antialiased;

@@ -197,7 +197,7 @@ const ManagementPage = () => {
       {/* Responsive Our Leadership Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white text-black">
         {/* Legacy in Rail Header - Full Width */}
-        <div className="mb-8 sm:mb-12 md:mb-16 relative">
+        <div className="w-screen overflow-hidden mb-8 sm:mb-12 md:mb-16 relative">
           {/* Heading with gradient lines from screen edges */}
           <div className="w-full">
             <div className="flex items-center mb-6">

@@ -37,7 +37,7 @@ const ResponsibilitiesPage = () => {
       {/* CSR Resources Section */}
       <section className="bg-white text-black py-16 md:py-24">
         {/* Brochures Section - Full Width Header */}
-        <div className="w-full mb-12">
+        <div className="w-screen overflow-hidden mb-12">
           {/* Brochure heading with gradient lines from screen edges */}
           <div className="flex items-center">
             <div className="flex-1" style={{
