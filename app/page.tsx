@@ -230,15 +230,15 @@ const OurProjectsSection = () => {
                   />
                 </div>
                 
-                {/* Mobile-Optimized Text Content */}
-                <div className="px-1 sm:px-0">
+                {/* Center-aligned Text Content */}
+                <div className="px-1 sm:px-0 text-center">
                   <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2 text-gray-900 group-hover:text-[#8A393B] transition-colors duration-300">{project.city}</h3>
                   <Link 
                     href={project.link} 
-                    className="inline-flex items-center text-xs sm:text-sm font-medium text-gray-700 hover:text-[#F2913F] border-b border-gray-300 hover:border-[#F2913F] transition-all duration-300 group-hover:translate-x-1"
+                    className="inline-flex items-center justify-center text-xs sm:text-sm font-medium text-gray-700 hover:text-[#F2913F] border-b border-gray-300 hover:border-[#F2913F] transition-all duration-300"
                   >
                     View Project
-                    <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
