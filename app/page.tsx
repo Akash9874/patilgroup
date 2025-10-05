@@ -389,21 +389,22 @@ export default function Home() {
         {/* Hero Content Overlay - Compact spacing */}
         <div className={`relative z-10 flex h-full flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 hero-content`}>
           {/* Main Heading - First Animation */}
-          <h1 className={`mb-4 sm:mb-5 md:mb-6 transition-all duration-1000 ${showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <div className="text-white text-5xl font-bold mb-1">
-              WORLD'S
-        </div>
-            <div className="text-[#F2913F] text-5xl font-bold mb-1">
-              LARGEST RAILWAY
-        </div>
-            <div className="text-white text-5xl font-bold">
+          <h1 className={`mb-6 transition-all duration-1000 ${showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <div className="text-white text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-1">
+              WORLD’S
+            </div>
+            <div className="text-[#F2913F] text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-1">
+              LARGEST SLEEPER
+            </div>
+            <div className="text-white text-6xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6">
               MANUFACTURER
-              </div>
+            </div>
+            {/* Stats removed as requested */}
           </h1>
 
           {/* Stats Section - Second Animation (after 800ms) */}
           <div 
-            className={`grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 mb-4 sm:mb-5 md:mb-6 max-w-4xl w-full transition-all duration-1000`}
+            className={`grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 mb-4 sm:mb-5 md:mb-6 max-w-4xl w-full transition-all duration-1000`}
             style={{
               opacity: showText ? 1 : 0,
               transform: showText ? 'translateY(0)' : 'translateY(20px)',
@@ -418,12 +419,6 @@ export default function Home() {
               <div className="text-[#F2913F] text-xs sm:text-sm font-medium">years on the job</div>
             </div>
 
-            {/* Stat 2 */}
-            <div className="flex flex-col items-center justify-center border-l border-r border-white/30 px-2 sm:px-3">
-              <div className="text-[#F2913F] text-sm sm:text-base md:text-lg lg:text-xl font-bold">Uncompromising</div>
-              <div className="text-[#F2913F] text-sm sm:text-base md:text-lg lg:text-xl font-bold">Quality Standards</div>
-          </div>
-
             {/* Stat 3 */}
             <div className="flex flex-col items-center">
               <div className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-1">
@@ -435,17 +430,15 @@ export default function Home() {
 
           {/* Tagline - Third Animation (after 1600ms) */}
           <div 
-            className={`text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold leading-tight pb-2 sm:pb-3 md:pb-4 transition-all duration-1000`}
+            className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight pb-2 sm:pb-3 md:pb-4 transition-all duration-1000`}
             style={{
               opacity: showText ? 1 : 0,
               transform: showText ? 'translateY(0)' : 'translateY(20px)',
               transitionDelay: showText ? '1600ms' : '0ms',
             }}
           >
-            <span className="text-[#F2913F]">Built to Scale.</span>{' '}
-            <span className="text-[#8A393B]">Built to Last.</span>
-            <br className="hidden sm:block" />
-            <span className="text-[#8A393B]">Built to Keep Moving.</span>
+            <span className="text-[#F2913F]">One enduring</span>{' '}
+            <span className="text-white">standard of quality.</span>
           </div>
         </div>
       </section>
