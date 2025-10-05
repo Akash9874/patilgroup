@@ -28,7 +28,7 @@ const ResearchAndDevelopmentPage = () => {
         </div>
         
         {/* Desktop Layout */}
-        <div className="hidden md:block relative h-[600px]">
+        <div className="hidden md:block relative h-screen">
           <Image src="/rndimage2.JPG" alt="R&D Hero" fill className="object-cover z-0" priority sizes="100vw" />
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>

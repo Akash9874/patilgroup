@@ -231,6 +231,39 @@ export const useGSAPAnimations = () => {
       triggersRef.current.push(trigger);
     });
 
+    // Parallax effect for hero section
+    const hero = document.querySelector('.hero-section');
+    if (hero) {
+      const video = hero.querySelector('.hero-video');
+      const content = hero.querySelector('.hero-content');
+
+      if (video) {
+        const trigger = ScrollTrigger.create({
+          trigger: hero,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+          onUpdate: (self) => {
+            gsap.to(video, { yPercent: self.progress * 30, ease: 'none' });
+          },
+        });
+        triggersRef.current.push(trigger);
+      }
+
+      if (content) {
+        const trigger = ScrollTrigger.create({
+          trigger: hero,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true,
+          onUpdate: (self) => {
+            gsap.to(content, { yPercent: self.progress * -30, opacity: 1 - self.progress, ease: 'power1.out' });
+          },
+        });
+        triggersRef.current.push(trigger);
+      }
+    }
+
     // Cleanup
     return () => {
       triggersRef.current.forEach(trigger => trigger.kill());
