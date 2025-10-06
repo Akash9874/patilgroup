@@ -14,7 +14,7 @@ const CareersContent = () => {
   
   return (
     <>
-      <section className="relative h-screen bg-black flex items-center justify-center hero-section">
+      <section className="relative h-screen bg-black flex items-center justify-center hero-section z-20">
         <div className="absolute inset-0 h-full w-full opacity-60 hero-image">
           <Image src="/ourreso.jpg" alt="Architectural Structure" fill className="object-cover" priority sizes="100vw" />
         </div>
@@ -26,7 +26,7 @@ const CareersContent = () => {
         </div>
       </section>
 
-      <section className="bg-black py-20">
+      <section className="bg-black py-20 relative z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center">
             <div className="flex-shrink-0">

@@ -9,7 +9,7 @@ export default function LegacyPage() {
   return (
     <div>
       {/* Responsive Legacy Hero Section */}
-      <section className="relative h-[85vh] md:h-[90vh] w-full overflow-hidden hero-section">
+      <section className="relative h-screen w-full overflow-hidden hero-section">
         {/* Background video (wrapped for parallax) */}
         <div className="absolute inset-0 w-full h-full hero-video">
           <HLSVideo
