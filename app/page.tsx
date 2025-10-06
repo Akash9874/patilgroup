@@ -165,28 +165,27 @@ const OurProjectsSection = () => {
   });
 
   return (
-    <section ref={ref} className="bg-white py-16 sm:py-24 our-projects-carousel overflow-hidden">
-      <Carousel
-        opts={{ align: "start", loop: true }}
-        className="w-full pl-4 sm:pl-6 lg:pl-8"
-      >
-        {/* Header */}
+    <section ref={ref} className="bg-white py-16 sm:py-24 our-projects-carousel">
+      {/* Centered Header */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div 
-          className={`flex justify-between items-center mb-10 pr-4 sm:pr-6 lg:pr-8 transition-all duration-800 ${
+          className={`flex justify-between items-center mb-10 transition-all duration-800 ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-[#8A393B]">Our Projects</h2>
-          <div className="hidden sm:flex items-center gap-2">
-            <CarouselPrevious className="relative w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 transition-colors" />
-            <CarouselNext className="relative w-12 h-12 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706] transition-colors" />
-          </div>
+          {/* Buttons are part of the Carousel now, so this div is removed */}
         </div>
-        
-        {/* Carousel Content */}
-        <CarouselContent className="-ml-6">
+      </div>
+      
+      {/* Full-bleed Carousel */}
+      <Carousel
+        opts={{ align: "start", loop: true }}
+        className="w-full"
+      >
+        <CarouselContent className="-ml-4 px-2.5">
           {projects.map((project, index) => (
-            <CarouselItem key={index} className="pl-6 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 project-card">
+            <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 project-card">
               <div className="group">
                 <div className="overflow-hidden rounded-2xl mb-5 shadow-lg transform transition-transform duration-300 group-hover:-translate-y-2">
                   <Image
@@ -206,6 +205,12 @@ const OurProjectsSection = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
+        <div className="absolute top-0 right-0 max-w-7xl mx-auto w-full h-full pointer-events-none">
+            <div className="hidden sm:flex items-center gap-1 absolute top-[-4.5rem] right-4 sm:right-6 lg:right-8">
+                <CarouselPrevious className="w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 transition-colors pointer-events-auto" />
+                <CarouselNext className="w-12 h-12 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706] transition-colors pointer-events-auto" />
+            </div>
+        </div>
         <div className="sm:hidden flex justify-center items-center gap-2 mt-8">
           <CarouselPrevious className="relative w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 transition-colors" />
           <CarouselNext className="relative w-12 h-12 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706] transition-colors" />
@@ -379,7 +384,7 @@ export default function Home() {
               <div className="text-white text-xl sm:text-3xl md:text-4xl font-bold mb-1">
                 {showText ? <CountUp end={50} duration={2} suffix="+" delay={0.8} /> : '0+'}
               </div>
-              <div className="text-[#F2913F] text-xs sm:text-sm font-medium">years on the job</div>
+              <div className="text-[#F2913F] text-base sm:text-lg font-medium">years on the job</div>
             </div>
 
             {/* Stat 3 */}
@@ -387,7 +392,7 @@ export default function Home() {
               <div className="text-white text-xl sm:text-3xl md:text-4xl font-bold mb-1">
                 {showText ? <CountUp end={400000} duration={2} separator="," suffix="+" delay={0.8} /> : '0+'}
               </div>
-              <div className="text-[#F2913F] text-xs sm:text-sm font-medium">Safe Sleepers per year</div>
+              <div className="text-[#F2913F] text-base sm:text-lg font-medium">Safe Sleepers per year</div>
             </div>
           </div>
 
