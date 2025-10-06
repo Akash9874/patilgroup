@@ -211,10 +211,6 @@ const OurProjectsSection = () => {
                 <CarouselNext className="w-12 h-12 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706] transition-colors pointer-events-auto" />
             </div>
         </div>
-        <div className="sm:hidden flex justify-center items-center gap-2 mt-8">
-          <CarouselPrevious className="relative w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-gray-100 text-gray-700 transition-colors" />
-          <CarouselNext className="relative w-12 h-12 rounded-full bg-[#F2913F] text-white hover:bg-[#D97706] transition-colors" />
-        </div>
       </Carousel>
     </section>
   );

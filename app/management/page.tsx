@@ -267,22 +267,6 @@ const ManagementPage = () => {
               </div>
             </div>
 
-            {/* Mobile Navigation Arrows */}
-            <button 
-              onClick={mobileScrollPrev} 
-              className="absolute top-1/2 left-2 transform -translate-y-1/2 p-2 rounded-full bg-gray-200/80 hover:bg-gray-300/80 active:bg-gray-400/80 transition-all duration-150 z-10 backdrop-blur-sm border border-gray-400/30 hover:scale-105 active:scale-95"
-              aria-label="Previous management member"
-            >
-              <ArrowLeft className="h-5 w-5 text-[#F2913F]" />
-            </button>
-            <button 
-              onClick={mobileScrollNext} 
-              className="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 rounded-full bg-gray-200/80 hover:bg-gray-300/80 active:bg-gray-400/80 transition-all duration-150 z-10 backdrop-blur-sm border border-gray-400/30 hover:scale-105 active:scale-95"
-              aria-label="Next management member"
-            >
-              <ArrowRight className="h-5 w-5 text-[#F2913F]" />
-            </button>
-
             {/* Mobile Scroll Indicator */}
             <div className="flex justify-center mt-6 space-x-2">
               {leadershipData.map((_, index) => (

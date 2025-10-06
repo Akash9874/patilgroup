@@ -90,7 +90,7 @@ const AboutUsPage = () => {
       <section className="bg-white overflow-hidden py-20 sm:py-24 md:py-28">
         <div className="flex items-center justify-center w-full">
             {/* Left track */}
-            <div className="flex-1 min-w-0 h-40 sm:h-48 md:h-56 relative" style={{ WebkitMaskImage: 'linear-gradient(to left, transparent 10%, black 100%)', maskImage: 'linear-gradient(to left, transparent 10%, black 100%)' }}>8
+            <div className="flex-1 min-w-0 h-40 sm:h-48 md:h-56 relative" style={{ WebkitMaskImage: 'linear-gradient(to left, transparent 10%, black 100%)', maskImage: 'linear-gradient(to left, transparent 10%, black 100%)' }}>
                 <Image src="/trackkkk.png" alt="Rail track left" fill className="object-cover object-right scale-x-[-1]" priority />
             </div>
 

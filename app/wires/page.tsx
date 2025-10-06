@@ -10,7 +10,7 @@ const WiresPage = () => {
   return (
     <div className="bg-black text-white">
       {/* Hero Section */}
-      <div className="relative hero-section">
+      <div className="relative hero-section z-20">
         {/* Mobile Layout */}
         <div className="md:hidden h-screen relative">
           <Image
@@ -56,7 +56,7 @@ const WiresPage = () => {
       </div>
 
       {/* Manufacturing Facilities Header Section */}
-      <div className="bg-black py-8 sm:py-12 md:py-16">
+      <div className="bg-black py-8 sm:py-12 md:py-16 relative z-30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           {/* Header */}
           <div className="text-center fade-in-section">

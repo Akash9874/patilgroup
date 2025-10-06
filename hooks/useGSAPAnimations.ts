@@ -270,40 +270,76 @@ export const useGSAPAnimations = () => {
     });
 
     // Parallax effect for hero sections (support multiple per page)
-    const heros = gsap.utils.toArray<HTMLElement>('.hero-section');
-    heros.forEach((hero) => {
-      const background = hero.querySelector('.hero-video, .hero-image');
-      const content = hero.querySelector('.hero-content');
+    const mm = gsap.matchMedia();
 
-      if (background) {
-        const trigger = ScrollTrigger.create({
-          trigger: hero,
-          start: 'top top',
-          end: 'bottom top',
-          scrub: true,
-          onUpdate: (self) => {
-            gsap.to(background, { yPercent: self.progress * 30, ease: 'none' });
-          },
-        });
-        if (trigger) {
-          triggersRef.current.push(trigger);
-        }
-      }
+    mm.add("(min-width: 768px)", () => {
+      // Desktop parallax
+      const heros = gsap.utils.toArray<HTMLElement>('.hero-section');
+      heros.forEach((hero) => {
+        const background = hero.querySelector('.hero-video, .hero-image');
+        const content = hero.querySelector('.hero-content');
 
-      if (content) {
-        const trigger = ScrollTrigger.create({
-          trigger: hero,
-          start: 'top top',
-          end: 'bottom top',
-          scrub: true,
-          onUpdate: (self) => {
-            gsap.to(content, { yPercent: self.progress * -30, opacity: 1 - self.progress, ease: 'power1.out' });
-          },
-        });
-        if (trigger) {
-          triggersRef.current.push(trigger);
+        if (background) {
+          const trigger = ScrollTrigger.create({
+            trigger: hero,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true,
+            onUpdate: (self) => {
+              gsap.to(background, { yPercent: self.progress * 30, ease: 'none' });
+            },
+          });
+          if (trigger) triggersRef.current.push(trigger);
         }
-      }
+
+        if (content) {
+          const trigger = ScrollTrigger.create({
+            trigger: hero,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true,
+            onUpdate: (self) => {
+              gsap.to(content, { yPercent: self.progress * -30, opacity: 1 - self.progress, ease: 'power1.out' });
+            },
+          });
+          if (trigger) triggersRef.current.push(trigger);
+        }
+      });
+    });
+
+    mm.add("(max-width: 767px)", () => {
+      // Mobile parallax (less intense)
+      const heros = gsap.utils.toArray<HTMLElement>('.hero-section');
+      heros.forEach((hero) => {
+        const background = hero.querySelector('.hero-video, .hero-image');
+        const content = hero.querySelector('.hero-content');
+
+        if (background) {
+          const trigger = ScrollTrigger.create({
+            trigger: hero,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true,
+            onUpdate: (self) => {
+              gsap.to(background, { yPercent: self.progress * 15, ease: 'none' }); // Reduced effect
+            },
+          });
+          if (trigger) triggersRef.current.push(trigger);
+        }
+
+        if (content) {
+           const trigger = ScrollTrigger.create({
+            trigger: hero,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true,
+            onUpdate: (self) => {
+              gsap.to(content, { yPercent: self.progress * -15, opacity: 1 - (self.progress * 0.5), ease: 'power1.out' }); // Reduced effect
+            },
+          });
+          if (trigger) triggersRef.current.push(trigger);
+        }
+      });
     });
 
     // Cleanup

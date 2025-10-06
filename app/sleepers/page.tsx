@@ -23,7 +23,7 @@ const SleepersPage = () => {
     };
   return (
     <div className="bg-white text-black">
-      <div className="relative hero-section">
+      <div className="relative hero-section z-20">
         {/* Mobile Layout */}
         <div className="md:hidden h-screen relative">
           <video
@@ -79,7 +79,7 @@ const SleepersPage = () => {
         </div>
       </div>
 
-      <div className="bg-black py-8 sm:py-10 md:py-12">
+      <div className="bg-black py-8 sm:py-10 md:py-12 relative z-30">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
             {/* Mobile Layout */}
             <div className="md:hidden text-center fade-in-section">
