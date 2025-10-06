@@ -100,7 +100,7 @@ export default function SustainabilityPage() {
               {
                 title: "Dust control",
                 items: ["Factory air is managed at the source through advanced multi-stage dust extraction systems installed across all units, creating a cleaner, safer, and healthier environment for every worker. High-efficiency filtration technology ensures that airborne particles are captured before they spread, maintaining optimal air quality standards throughout operations."],
-                image: "/dust control.jpg",
+                image: "/dust control_.png",
                 color: "from-gray-500 to-slate-600"
               }
             ].map((section, index) => (
@@ -189,7 +189,7 @@ export default function SustainabilityPage() {
                     position: 'relative'
                   }}>
                     <Image
-                      src="/waterreuse.jpg"
+                      src="/water.jpg"
                       alt="Water reuse system"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -217,7 +217,7 @@ export default function SustainabilityPage() {
                     position: 'relative'
                   }}>
                     <Image
-                      src="/dust control.jpg"
+                      src="/dust control_.png"
                       alt="Dust control system"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
