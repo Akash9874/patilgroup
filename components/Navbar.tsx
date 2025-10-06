@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
@@ -12,6 +13,7 @@ const Navbar = () => {
   const [isMobileAboutExpanded, setIsMobileAboutExpanded] = useState(false);
   const [isMobileProductsExpanded, setIsMobileProductsExpanded] = useState(false);
   const [isMobileSystemsExpanded, setIsMobileSystemsExpanded] = useState(false);
+  const pathname = usePathname();
 
   const aboutLinks = [
     { href: '/about', label: 'About Us' },
@@ -71,29 +73,45 @@ const Navbar = () => {
   }, [isMobileMenuOpen]);
 
   useEffect(() => {
+    const navbar = document.querySelector<HTMLElement>('[data-navbar]');
+    if (!navbar) return;
+
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
-      const navbar = document.querySelector('[data-navbar]');
-      if (navbar) {
-        if (window.scrollY > 50) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
+      const currentScrollY = window.scrollY;
+      const isScrolled = currentScrollY > 50;
+
+      // Add a delta check to avoid flickering on minor scrolls
+      if (Math.abs(lastScrollY - currentScrollY) < 10) {
+        return;
       }
-      // Close any open desktop dropdown while scrolling
+
+      navbar.classList.toggle('scrolled', isScrolled);
+
+      if (currentScrollY > lastScrollY && isScrolled) {
+        navbar.classList.add('navbar-hidden');
+      } else {
+        navbar.classList.remove('navbar-hidden');
+      }
+
+      lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+      
       setIsAboutMenuOpen(false);
       setIsProductsMenuOpen(false);
       setIsSystemsMenuOpen(false);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true } as any);
-    return () => window.removeEventListener('scroll', handleScroll as any);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const isAboutPage = pathname === '/about';
 
   return (
     <nav 
       data-navbar
-      className="w-full fixed top-0 z-[9999] transition-colors duration-300"
+      className={`w-full fixed top-0 z-[9999] transition-all duration-300 ${isAboutPage ? 'navbar-solid' : ''} ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}
       style={{
         height: '103px',
       }}

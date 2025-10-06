@@ -112,7 +112,7 @@ export default function RootLayout({
       <body className={`${helvetica.className} ${helvetica.variable}`}>
         <LenisProvider>
           <Navbar />
-          <main className="lg:pt-0 pt-20 sm:pt-22 md:pt-24">{children}</main>
+          <main>{children}</main>
           <Footer />
           <Toaster />
         </LenisProvider>

@@ -10,39 +10,36 @@ const ResearchAndDevelopmentPage = () => {
     <div className="bg-white">
       <div className="relative hero-section">
         {/* Mobile Layout */}
-        <div className="md:hidden h-screen relative">
-          <Image src="/rndimage2.JPG" alt="R&D Hero" fill className="object-cover z-0 hero-video" priority sizes="100vw" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 z-10"></div>
-          
-          <div className="relative z-20 h-full flex items-center justify-center hero-content">
-            <div className="text-center px-6 w-full max-w-lg mx-auto">
-              <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-3 drop-shadow-2xl">
-                Research and Development
-              </h1>
-              <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full shadow-lg"></div>
-              <p className="text-white text-xl sm:text-2xl mt-8 font-medium drop-shadow-xl leading-relaxed">
-                Innovation & Technology Solutions
-              </p>
-            </div>
+        <div className="md:hidden relative h-screen bg-black flex items-center justify-center text-center hero-section">
+          <div className="absolute inset-0 opacity-50 hero-image">
+            <Image src="/rndimage2.JPG" alt="R&D Hero" fill className="object-cover" priority sizes="100vw" />
+          </div>
+          <div className="relative z-10 p-4 hero-content">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 animate-fadeInUp">Research and Development</h1>
+            <p className="text-lg sm:text-xl text-gray-200 animate-fadeInUp animate-delay-200">Driving innovation in railway technology.</p>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full shadow-lg"></div>
+            <p className="text-white text-xl sm:text-2xl mt-8 font-medium drop-shadow-xl leading-relaxed">
+              Innovation & Technology Solutions
+            </p>
           </div>
         </div>
         
         {/* Desktop Layout */}
-        <div className="hidden md:block relative h-screen">
-          <Image src="/rndimage2.JPG" alt="R&D Hero" fill className="object-cover z-0 hero-video" priority sizes="100vw" />
+        <div className="hidden md:block relative h-screen hero-section">
+          <div className="absolute inset-0 hero-image">
+            <Image src="/rndimage2.JPG" alt="R&D Hero" fill className="object-cover z-0" priority sizes="100vw" />
+          </div>
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
           
           {/* Content */}
-          <div className="absolute inset-0 z-20 hero-content flex items-center justify-start">
-            <div className="px-6 sm:px-8 md:px-12">
-              <h1 className="text-white font-bold leading-[0.95] text-6xl md:text-7xl lg:text-8xl">
-                Research and<br />Development
-              </h1>
-              <p className="text-gray-200 text-lg mt-4 font-medium">
-                Innovation and technology solutions
-              </p>
-            </div>
+          <div className="relative h-full flex flex-col justify-center items-center text-center z-20 hero-content">
+            <h1 className="text-7xl font-bold text-white mb-6 animate-fadeInUp">
+              Research and Development
+            </h1>
+            <p className="text-gray-200 text-lg mt-4 font-medium">
+              Innovation and technology solutions
+            </p>
           </div>
         </div>
       </div>

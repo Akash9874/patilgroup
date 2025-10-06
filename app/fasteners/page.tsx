@@ -56,9 +56,9 @@ const FastenersPage = () => {
   
   return (
     <div className="bg-white text-black">
-      <div className="relative h-screen max-h-screen overflow-hidden">
+      <div className="relative h-screen max-h-screen overflow-hidden hero-section">
         {/* Mobile Layout */}
-        <div className="md:hidden h-full relative">
+        <div className="md:hidden h-full relative hero-image">
           <Image
             src="/fastenerheroimage.JPG"
             alt="Fasteners Hero Image"
@@ -68,7 +68,7 @@ const FastenersPage = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 z-10"></div>
           
-          <div className="relative z-20 h-full flex items-center justify-center">
+          <div className="relative z-20 h-full flex items-center justify-center hero-content">
             <div className="text-center px-6 w-full max-w-lg mx-auto">
               <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-3 drop-shadow-2xl">
                 Fasteners
@@ -82,7 +82,7 @@ const FastenersPage = () => {
         </div>
         
         {/* Desktop Layout */}
-        <div className="hidden md:block relative h-full">
+        <div className="hidden md:block relative h-full hero-image">
           <Image
             src="/fastenerheroimage.JPG"
             alt="Fasteners Hero Image"
@@ -94,7 +94,7 @@ const FastenersPage = () => {
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
           
           {/* Content */}
-          <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row h-full z-20">
+          <div className="relative max-w-7xl mx-auto flex flex-col md:flex-row h-full z-20 hero-content">
             {/* Left Panel */}
             <div className="w-full md:w-1/3 flex flex-col justify-center p-8 lg:p-12">
               <div className="text-left">

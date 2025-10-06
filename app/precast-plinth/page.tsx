@@ -17,13 +17,13 @@ const PrecastPlinthPage = () => {
 
   return (
     <div>
-      <div className="relative">
+      <div className="relative hero-section">
         {/* Mobile Layout */}
-        <div className="md:hidden h-screen relative">
+        <div className="md:hidden h-screen relative hero-image">
           <img src="/preee.jpg" alt="Precast Plinth" className="h-full w-full object-cover z-0" />
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           
-          <div className="absolute inset-0 flex items-center justify-center z-20">
+          <div className="absolute inset-0 flex items-center justify-center z-20 hero-content">
             <div className="text-center px-6">
               <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-4 drop-shadow-2xl">
                 Precast Plinth
@@ -37,13 +37,13 @@ const PrecastPlinthPage = () => {
         </div>
         
         {/* Desktop Layout */}
-        <div className="hidden md:block relative h-[600px]">
+        <div className="hidden md:block relative h-screen hero-image">
           <img src="/preee.jpg" alt="Precast Plinth" className="h-full w-full object-cover z-0" />
           {/* Overlay */}
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
           
           {/* Content */}
-          <div className="absolute bottom-0 left-0 z-20">
+          <div className="absolute bottom-0 left-0 z-20 hero-content">
             <div className="px-6 sm:px-8 md:px-12 pb-16">
               <h1 className="text-white font-bold leading-[0.95] text-6xl md:text-7xl lg:text-8xl">
                 Precast Plinth

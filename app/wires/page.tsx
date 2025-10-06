@@ -18,7 +18,7 @@ const WiresPage = () => {
             alt="HTS Wires"
             layout="fill"
             objectFit="cover"
-            className="z-0 hero-video"
+            className="z-0 hero-image"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 z-10"></div>
           
@@ -42,7 +42,7 @@ const WiresPage = () => {
             alt="HTS Wires"
             layout="fill"
             objectFit="cover"
-            className="z-0 hero-video"
+            className="z-0 hero-image"
           />
           <div className="absolute inset-0 bg-black bg-opacity-60 z-10" />
           <div className="relative z-20 h-full flex items-center max-w-7xl mx-auto px-8 hero-content">

@@ -56,7 +56,7 @@ const OurVisionPage = () => {
   }, [coreValuesInView, hasAnimated]);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white pt-[103px]">
       {/* Vision Section */}
       <section ref={visionRef} className="bg-white py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
         {/* Gradient Line - Absolute positioned from right edge */}

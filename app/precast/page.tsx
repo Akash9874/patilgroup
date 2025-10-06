@@ -92,7 +92,7 @@ const PrecastPage = () => {
             alt="Precast Solutions"
             layout="fill"
             objectFit="cover"
-            className="z-0 hero-video"
+            className="z-0 hero-image"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 z-10"></div>
@@ -117,7 +117,7 @@ const PrecastPage = () => {
             alt="Precast Solutions"
             layout="fill"
             objectFit="cover"
-            className="z-0 hero-video"
+            className="z-0 hero-image"
             priority
           />
 

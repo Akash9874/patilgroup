@@ -92,12 +92,12 @@ const SystemsContent = () => {
         {/* Mobile Layout */}
         <div className="md:hidden min-h-screen">
           {/* Mobile Hero Header */}
-          <div className="relative h-screen flex flex-col">
-            <div className="absolute inset-0">
+          <div className="relative h-screen flex flex-col hero-section">
+            <div className="absolute inset-0 hero-image">
               <Image src="/rndimage.JPG" alt="Systems" fill className="object-cover" priority />
               <div className="absolute inset-0 bg-black/60"></div>
             </div>
-            <div className="relative z-10 flex-1 flex items-center justify-center px-6">
+            <div className="relative z-10 flex-1 flex items-center justify-center px-6 hero-content">
               <div className="text-center w-full max-w-lg mx-auto">
                 <h1 className="text-5xl sm:text-6xl font-bold animate-fadeInUp drop-shadow-2xl text-white">
                   Our Systems
@@ -130,24 +130,24 @@ const SystemsContent = () => {
         {/* Desktop Layout */}
         <div className="hidden md:block h-screen">
           {/* Top half */}
-          <div className="h-1/2 flex">
+          <div className="h-1/2 flex hero-section">
             {/* Left side */}
-            <div className="w-1/2 flex items-center justify-center p-8">
+            <div className="w-1/2 flex items-center justify-center p-8 hero-content">
               <h1 className="text-8xl font-bold animate-fadeInUp">Our Systems</h1>
             </div>
             {/* Right side */}
-            <div className="w-1/2 relative">
+            <div className="w-1/2 relative hero-image">
               <Image src="/rndimage.JPG" alt="Systems" fill className="object-cover" sizes="50vw" priority />
             </div>
           </div>
           {/* Bottom half */}
-          <div className="h-1/2 flex">
+          <div className="h-1/2 flex hero-section">
             {/* Left side */}
-            <div className="w-1/2 relative">
+            <div className="w-1/2 relative hero-image">
               <Image src="/system23.jpg" alt="Engineering Excellence" fill className="object-cover" sizes="50vw" />
             </div>
             {/* Right side */}
-            <div className="w-1/2 bg-[#1A1A1A] flex flex-col justify-center p-12 animate-fadeInUp">
+            <div className="w-1/2 bg-[#1A1A1A] flex flex-col justify-center p-12 animate-fadeInUp hero-content">
               <h2 className="text-5xl font-bold leading-tight">
                 <TypewriterText
                   segments={[

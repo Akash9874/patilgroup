@@ -18,7 +18,7 @@ const SafetyPage = () => {
           layout="fill"
           objectFit="cover"
           objectPosition="center"
-          className="z-0 hero-video"
+          className="z-0 hero-image"
           priority
         />
         

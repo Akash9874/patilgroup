@@ -193,7 +193,7 @@ const ManagementPage = () => {
   }, [mobileEmblaApi]);
   
   return (
-    <div className="bg-[#1E1E1E] text-white">
+    <div className="bg-[#1E1E1E] text-white pt-[103px]">
       {/* Responsive Our Leadership Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white text-black">
         {/* Legacy in Rail Header - Full Width */}

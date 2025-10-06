@@ -191,14 +191,20 @@ const AboutUsPage = () => {
             
             {/* Desktop Layout - Original */}
             <div className="hidden md:block max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-left fade-in-section" style={{ transitionDelay: '0ms' }}>
-                    <h2 className="text-8xl font-bold text-[#8A393B]">Built for long life</h2>
+                <div className="text-left stagger-container" data-stagger="0.2">
+                    <h2 className="text-5xl lg:text-8xl font-bold text-[#8A393B]">
+                      <span className="stagger-item inline-block">Built</span> <span className="stagger-item inline-block">for</span> <span className="stagger-item inline-block">long</span> <span className="stagger-item inline-block">life</span>
+                    </h2>
                 </div>
-                <div className="text-center mt-4 fade-in-section" style={{ transitionDelay: '200ms' }}>
-                    <h2 className="text-8xl font-bold text-[#8A393B]">Delivered at scale</h2>
+                <div className="text-center mt-4 stagger-container" data-stagger="0.2" data-delay="0.2">
+                    <h2 className="text-5xl lg:text-8xl font-bold text-[#8A393B]">
+                      <span className="stagger-item inline-block">Delivered</span> <span className="stagger-item inline-block">at</span> <span className="stagger-item inline-block">scale</span>
+                    </h2>
                 </div>
-                <div className="text-right mt-4 fade-in-section" style={{ transitionDelay: '400ms' }}>
-                    <p className="text-5xl text-[#F2913F]">Approved across systems</p>
+                <div className="text-right mt-4 stagger-container" data-stagger="0.2" data-delay="0.4">
+                    <p className="text-3xl lg:text-5xl text-[#F2913F]">
+                      <span className="stagger-item inline-block">Approved</span> <span className="stagger-item inline-block">across</span> <span className="stagger-item inline-block">systems</span>
+                    </p>
                 </div>
             </div>
 
@@ -222,33 +228,37 @@ const AboutUsPage = () => {
             {/* Desktop Approach Section - Original */}
             <div className="hidden md:block">
               <div className="mt-32">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left fade-in-section" style={{ transitionDelay: '0ms' }}>
-                  <h3 className="text-7xl font-semibold text-black">The work has changed.</h3>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left stagger-container" data-stagger="0.15">
+                  <h3 className="text-4xl lg:text-7xl font-semibold text-black">
+                    <span className="stagger-item inline-block">The</span> <span className="stagger-item inline-block">work</span> <span className="stagger-item inline-block">has</span> <span className="stagger-item inline-block">changed.</span>
+                  </h3>
                 </div>
                 <div 
-                    className="h-7 mt-4 fade-in-section w-11/12" 
+                    className="h-7 mt-4 reveal-line-left" 
+                    data-delay="0.4"
                     style={{ 
-                      transitionDelay: '200ms',
                       background: 'linear-gradient(to right, #8A393B, #1E3888, #F2913F, transparent)' 
                     }}
                 ></div>
               </div>
 
               <div className="mt-24">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-right fade-in-section" style={{ transitionDelay: '0ms' }}>
-                  <h3 className="text-7xl font-semibold text-black">The approach has not.</h3>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-right stagger-container" data-stagger="0.15">
+                  <h3 className="text-4xl lg:text-7xl font-semibold text-black">
+                    <span className="stagger-item inline-block">The</span> <span className="stagger-item inline-block">approach</span> <span className="stagger-item inline-block">has</span> <span className="stagger-item inline-block">not.</span>
+                  </h3>
                 </div>
                 <div 
-                    className="h-7 mt-4 ml-auto fade-in-section w-11/12"
+                    className="h-7 mt-4 ml-auto reveal-line-right"
+                    data-delay="0.4"
                     style={{ 
-                      transitionDelay: '200ms',
                       background: 'linear-gradient(to left, #8A393B, #1E3888, #F2913F, transparent)' 
                     }}
                 ></div>
               </div>
               
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-section" style={{ transitionDelay: '400ms' }}>
-                  <p className="mt-32 text-5xl font-semibold text-[#8A393B]">We build what holds.</p>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-section" data-delay="0.2">
+                  <p className="mt-32 text-3xl lg:text-5xl font-semibold text-[#8A393B]">We build what holds.</p>
               </div>
             </div>
         </div>
@@ -288,8 +298,8 @@ const AboutUsPage = () => {
           
           {/* Desktop Layout - Original */}
           <div className="hidden md:block">
-            <h2 className="text-7xl font-bold text-black">In service</h2>
-            <p className="mt-8 text-5xl text-black">
+            <h2 className="text-5xl lg:text-7xl font-bold text-black">In service</h2>
+            <p className="mt-8 text-3xl lg:text-5xl text-black">
               <StatCounter 
                 end={4000000} 
                 duration={2.5} 
@@ -302,7 +312,7 @@ const AboutUsPage = () => {
                 className="text-[#F2913F]"
               />
             </p>
-            <p className="mt-4 text-5xl text-black">
+            <p className="mt-4 text-3xl lg:text-5xl text-black">
               Over <span style={{
                 background: 'linear-gradient(to right, #8A393B, #F2913F)',
                 WebkitBackgroundClip: 'text',

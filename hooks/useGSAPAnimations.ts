@@ -137,6 +137,31 @@ export const useGSAPAnimations = () => {
       triggersRef.current.push(tween.scrollTrigger as ScrollTrigger);
     });
 
+    // Staggered animation for project cards
+    const projectCards = gsap.utils.toArray('.project-card');
+    if (projectCards.length > 0) {
+      projectCards.forEach((card, index) => {
+        gsap.set(card, { opacity: 0, y: 50 });
+        const trigger = ScrollTrigger.create({
+          trigger: card as gsap.DOMTarget,
+          start: 'top 90%',
+          onEnter: () => {
+            gsap.to(card, {
+              opacity: 1,
+              y: 0,
+              duration: 0.6,
+              delay: index * 0.1,
+              ease: 'power2.out'
+            });
+          },
+          once: true,
+        });
+        if (trigger) {
+          triggersRef.current.push(trigger);
+        }
+      });
+    }
+
     // Parallax effect for images
     const parallaxImages = gsap.utils.toArray('.parallax-image');
     parallaxImages.forEach((image: any) => {
@@ -247,59 +272,22 @@ export const useGSAPAnimations = () => {
     // Parallax effect for hero sections (support multiple per page)
     const heros = gsap.utils.toArray<HTMLElement>('.hero-section');
     heros.forEach((hero) => {
-      const video = hero.querySelector('.hero-video');
+      const background = hero.querySelector('.hero-video, .hero-image');
       const content = hero.querySelector('.hero-content');
 
-      if (video) {
+      if (background) {
         const trigger = ScrollTrigger.create({
           trigger: hero,
           start: 'top top',
           end: 'bottom top',
           scrub: true,
           onUpdate: (self) => {
-            gsap.to(video, { yPercent: self.progress * 30, ease: 'none' });
+            gsap.to(background, { yPercent: self.progress * 30, ease: 'none' });
           },
         });
-
-    // Line reveal animations (scale from left/right)
-    const revealLeftLines = gsap.utils.toArray('.reveal-line-left');
-    revealLeftLines.forEach((line: any) => {
-      const delay = parseFloat(line?.dataset?.delay ?? '0');
-      const duration = parseFloat(line?.dataset?.duration ?? '0.9');
-      gsap.set(line, { scaleX: 0, transformOrigin: 'left center' });
-      const tween = gsap.to(line, {
-        scaleX: 1,
-        duration,
-        delay,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: line,
-          start: 'top 85%',
-          once: true,
-        },
-      });
-      triggersRef.current.push(tween.scrollTrigger as ScrollTrigger);
-    });
-
-    const revealRightLines = gsap.utils.toArray('.reveal-line-right');
-    revealRightLines.forEach((line: any) => {
-      const delay = parseFloat(line?.dataset?.delay ?? '0');
-      const duration = parseFloat(line?.dataset?.duration ?? '0.9');
-      gsap.set(line, { scaleX: 0, transformOrigin: 'right center' });
-      const tween = gsap.to(line, {
-        scaleX: 1,
-        duration,
-        delay,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: line,
-          start: 'top 85%',
-          once: true,
-        },
-      });
-      triggersRef.current.push(tween.scrollTrigger as ScrollTrigger);
-    });
-        triggersRef.current.push(trigger);
+        if (trigger) {
+          triggersRef.current.push(trigger);
+        }
       }
 
       if (content) {
@@ -312,13 +300,19 @@ export const useGSAPAnimations = () => {
             gsap.to(content, { yPercent: self.progress * -30, opacity: 1 - self.progress, ease: 'power1.out' });
           },
         });
-        triggersRef.current.push(trigger);
+        if (trigger) {
+          triggersRef.current.push(trigger);
+        }
       }
     });
 
     // Cleanup
     return () => {
-      triggersRef.current.forEach(trigger => trigger.kill());
+      triggersRef.current.forEach(trigger => {
+        if (trigger && typeof trigger.kill === 'function') {
+          trigger.kill();
+        }
+      });
       triggersRef.current = [];
     };
   }, []);
