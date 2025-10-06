@@ -113,11 +113,11 @@ const WiresPage = () => {
       <div className="bg-white text-black py-8 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="mb-8 sm:mb-12 md:mb-16 fade-in-section">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8">
+            <h2 className="fluid-h2 font-bold mb-6 sm:mb-8">
               <span className="text-[#8A393B]">HTS Wires</span><br />
               <span className="text-[#F2913F] ml-12 sm:ml-20 md:ml-32 lg:ml-40">Strength behind every track</span>
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed text-justify">
+            <p className="fluid-body text-gray-700 text-justify">
               Patil Group is India's largest HTS wire manufacturer for concrete sleepers, producing 3‑ply 3 mm and 7‑ply 9.5 mm strand wires at ISO 9001‑certified plants. With a total capacity of 60,000 MTPA, we are among the largest suppliers of steel wires for ports, tunnels, major bridges, and Indian Railways’ largest single order.
             </p>
           </div>
@@ -142,7 +142,7 @@ const WiresPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Section Header */}
           <div className="fade-in-section mb-12">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#8A393B]">
+            <h2 className="fluid-h2 font-bold text-[#8A393B]">
               Product Types
             </h2>
           </div>
@@ -154,12 +154,12 @@ const WiresPage = () => {
             <div className="bg-[#F5F4F1] rounded-lg p-8 lg:p-10">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div>
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F2913F]">
+                  <h3 className="fluid-h3 font-bold text-[#F2913F]">
                     3 ply × 3 mm HTS stranded wires
                   </h3>
                 </div>
                 <div>
-                  <p className="text-xl sm:text-2xl md:text-3xl text-gray-700">
+                  <p className="fluid-body text-gray-700">
                     as per IS 6006:1983
                   </p>
                 </div>
@@ -170,12 +170,12 @@ const WiresPage = () => {
             <div className="bg-[#F5F4F1] rounded-lg p-8 lg:p-10">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div>
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F2913F]">
+                  <h3 className="fluid-h3 font-bold text-[#F2913F]">
                     7 ply × 9.5 mm HTS stranded wires
                   </h3>
                 </div>
                 <div>
-                  <p className="text-xl sm:text-2xl md:text-3xl text-gray-700">
+                  <p className="fluid-body text-gray-700">
                     as per IS 6006:1983
                   </p>
                 </div>
@@ -186,12 +186,12 @@ const WiresPage = () => {
             <div className="bg-[#F5F4F1] rounded-lg p-8 lg:p-10">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
                 <div>
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F2913F]">
+                  <h3 className="fluid-h3 font-bold text-[#F2913F]">
                     4 mm HT wire (indented)
                   </h3>
                 </div>
                 <div>
-                  <ul className="space-y-2 text-xl sm:text-2xl md:text-3xl text-gray-700">
+                  <ul className="space-y-2 fluid-body text-gray-700">
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-[#F2913F] rounded-full mt-3 mr-4 flex-shrink-0"></span>
                       as per IS 6003:1983

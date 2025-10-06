@@ -63,14 +63,14 @@ const InsertsPage = () => {
           <div className="fade-in-section">
             {/* Mobile Layout */}
             <div className="text-center md:text-left">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#8A393B] mb-3 sm:mb-4">
+              <h2 className="fluid-h3 font-bold text-[#8A393B] mb-3 sm:mb-4">
               Precision Castings
             </h2>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#F2913F] mb-6 sm:mb-8 md:mb-12">
+              <h3 className="fluid-h3 font-bold text-[#F2913F] mb-6 sm:mb-8 md:mb-12">
               for Modern Mobility
             </h3>
             </div>
-            <div className="space-y-4 sm:space-y-6 md:space-y-8 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-700 leading-relaxed">
+            <div className="space-y-4 sm:space-y-6 md:space-y-8 fluid-body text-gray-700">
               <p className="text-justify">
                 Patil Group manufactures ductile-iron and cast-iron castings on advanced DISA ARPA 450 and ARPA 300 lines. With facilities in Bokaro (23,000 MT) and Hyderabad (13,000 MT), we deliver castings from 1 kg to 40 kg with assured consistency.
               </p>
@@ -91,11 +91,11 @@ const InsertsPage = () => {
             <div className="lg:hidden">
               {/* Mobile Header */}
               <div className="text-center mb-6 sm:mb-8">
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#8A393B] leading-tight mb-4">
+                <h2 className="fluid-h3 font-bold text-[#8A393B] leading-tight mb-4">
                   SGCI Inserts
                 </h2>
                 <div className="w-16 h-1 bg-gradient-to-r from-[#8A393B] to-[#F2913F] mx-auto mb-4 rounded-full"></div>
-                <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                <p className="fluid-body-sm text-gray-700">
                   Patil Group produces SGCI inserts for all sleeper types, with our Bokaro plant housing the country's largest facility, with a capacity of 1.3 million inserts per month.
                 </p>
               </div>
@@ -115,9 +115,9 @@ const InsertsPage = () => {
                       />
                     </div>
                     <div className="text-center sm:text-left">
-                      <h4 className="text-lg font-bold text-black mb-2">SGCI INSERT</h4>
-                      <p className="text-base text-gray-600 mb-1">RT 6901</p>
-                      <p className="text-base font-medium text-[#F2913F]">1.484 kg</p>
+                      <h4 className="fluid-h4 font-bold text-black mb-2">SGCI INSERT</h4>
+                      <p className="fluid-body-sm text-gray-600 mb-1">RT 6901</p>
+                      <p className="fluid-body-sm font-medium text-[#F2913F]">1.484 kg</p>
                     </div>
                   </div>
                 </div>
@@ -135,9 +135,9 @@ const InsertsPage = () => {
                       />
                     </div>
                     <div className="text-center sm:text-left">
-                      <h4 className="text-lg font-bold text-black mb-2">SGCI INSERT</h4>
-                      <p className="text-base text-gray-600 mb-1">RT 3705</p>
-                      <p className="text-base font-medium text-[#F2913F]">1.97 kg</p>
+                      <h4 className="fluid-h4 font-bold text-black mb-2">SGCI INSERT</h4>
+                      <p className="fluid-body-sm text-gray-600 mb-1">RT 3705</p>
+                      <p className="fluid-body-sm font-medium text-[#F2913F]">1.97 kg</p>
                     </div>
                   </div>
                 </div>
@@ -162,9 +162,9 @@ const InsertsPage = () => {
                     />
                   </div>
                   <div className="space-y-1">
-                      <h4 className="text-xl font-bold text-black">SGCI INSERT</h4>
-                      <p className="text-xl text-black">RT 6901</p>
-                      <p className="text-xl text-black">1.484 kg</p>
+                      <h4 className="fluid-h4 font-bold text-black">SGCI INSERT</h4>
+                      <p className="fluid-body text-black">RT 6901</p>
+                      <p className="fluid-body text-black">1.484 kg</p>
               </div>
             </div>
 
@@ -180,9 +180,9 @@ const InsertsPage = () => {
                     />
                   </div>
                   <div className="space-y-1">
-                      <h4 className="text-xl font-bold text-black">SGCI INSERT</h4>
-                      <p className="text-xl text-black">RT 3705</p>
-                      <p className="text-xl text-black">1.97 kg</p>
+                      <h4 className="fluid-h4 font-bold text-black">SGCI INSERT</h4>
+                      <p className="fluid-body text-black">RT 3705</p>
+                      <p className="fluid-body text-black">1.97 kg</p>
                   </div>
                 </div>
               </div>
@@ -191,7 +191,7 @@ const InsertsPage = () => {
             {/* Right side - Content */}
               <div className="col-span-1 relative">
               <div className="flex items-center mb-6">
-                  <h2 className="text-5xl font-bold text-[#8A393B] leading-tight whitespace-nowrap">
+                  <h2 className="fluid-h3 font-bold text-[#8A393B] leading-tight whitespace-nowrap">
                   SGCI Inserts
                 </h2>
                 {/* Inline Gradient Line */}
@@ -204,7 +204,7 @@ const InsertsPage = () => {
                   }}
                 />
               </div>
-                <p className="text-4xl text-gray-700 leading-relaxed text-justify">
+                <p className="fluid-body text-gray-700 text-justify">
                 Patil Group produces SGCI inserts for all sleeper types, with our Bokaro plant housing the country's largest facility, with a capacity of 1.3 million inserts per month.
               </p>
               </div>
@@ -234,11 +234,11 @@ const InsertsPage = () => {
             <div className="lg:hidden">
               {/* Mobile Header */}
               <div className="text-center mb-6 sm:mb-8">
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#8A393B] mb-4">
+                <h2 className="fluid-h3 font-bold text-[#8A393B] mb-4">
                   Base Plates
                 </h2>
                 <div className="w-16 h-1 bg-gradient-to-r from-[#8A393B] to-[#F2913F] mx-auto mb-4 rounded-full"></div>
-                <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">
+                <p className="fluid-body-sm text-gray-700 mb-6">
                   We manufacture two-hole and four-hole base plates for metro projects, supplying directly to MMRDA and DMRC to support reliable urban transit.
                 </p>
               </div>
@@ -268,7 +268,7 @@ const InsertsPage = () => {
             <div className="hidden lg:block">
           {/* Section Header */}
               <div className="text-left mb-12">
-                <h2 className="text-7xl font-bold text-[#8A393B]">
+                <h2 className="fluid-h2 font-bold text-[#8A393B]">
               Base Plates
             </h2>
           </div>
@@ -277,7 +277,7 @@ const InsertsPage = () => {
             
             {/* Left side - Content */}
                 <div className="col-span-2">
-                  <p className="text-4xl text-gray-700 leading-relaxed text-justify">
+                  <p className="fluid-body text-gray-700 text-justify">
                 We manufacture two-hole and four-hole base plates for metro projects, supplying directly to MMRDA and DMRC to support reliable urban transit.
               </p>
             </div>
@@ -294,9 +294,9 @@ const InsertsPage = () => {
                 />
               </div>
               <div className="space-y-1">
-                    <h4 className="text-xl font-bold text-black">MMRDA project</h4>
-                    <p className="text-xl text-black">Coated four-hole base plate</p>
-                    <p className="text-xl text-black">9.30 kg</p>
+                    <h4 className="fluid-h4 font-bold text-black">MMRDA project</h4>
+                    <p className="fluid-body text-black">Coated four-hole base plate</p>
+                    <p className="fluid-body text-black">9.30 kg</p>
                   </div>
                 </div>
               </div>
@@ -314,11 +314,11 @@ const InsertsPage = () => {
             <div className="lg:hidden">
               {/* Mobile Header */}
               <div className="text-center mb-6 sm:mb-8">
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#8A393B] mb-4">
+                <h2 className="fluid-h3 font-bold text-[#8A393B] mb-4">
                   Railway Braking System
                 </h2>
                 <div className="w-16 h-1 bg-gradient-to-r from-[#8A393B] to-[#F2913F] mx-auto mb-4 rounded-full"></div>
-                <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+                <p className="fluid-body-sm text-gray-700">
                   Our foundries deliver critical castings for railway braking assemblies, including lining holders, double eyes, hinges, levers, connectors, covers, and cylinders—ensuring safety and durability in service.
                 </p>
               </div>
@@ -338,10 +338,10 @@ const InsertsPage = () => {
                       />
                     </div>
                     <div className="text-center sm:text-left flex-1">
-                      <h4 className="text-sm font-bold text-black mb-1">DAKO-CZ India Pvt Ltd, Hyderabad</h4>
-                      <p className="text-sm text-gray-600 mb-1">Hinge</p>
-                      <p className="text-sm text-gray-600 mb-1">BK 5551</p>
-                      <p className="text-sm font-medium text-[#F2913F]">13.0 kg</p>
+                      <h4 className="fluid-body-sm font-bold text-black mb-1">DAKO-CZ India Pvt Ltd, Hyderabad</h4>
+                      <p className="fluid-small text-gray-600 mb-1">Hinge</p>
+                      <p className="fluid-small text-gray-600 mb-1">BK 5551</p>
+                      <p className="fluid-small font-medium text-[#F2913F]">13.0 kg</p>
                     </div>
                   </div>
                 </div>
@@ -359,10 +359,10 @@ const InsertsPage = () => {
                       />
                     </div>
                     <div className="text-center sm:text-left flex-1">
-                      <h4 className="text-sm font-bold text-black mb-1">DAKO-CZ India Pvt Ltd, Hyderabad</h4>
-                      <p className="text-sm text-gray-600 mb-1">Lining holder (LH and RH)</p>
-                      <p className="text-sm text-gray-600 mb-1">20270-163 & 20270-164</p>
-                      <p className="text-sm font-medium text-[#F2913F]">8.10 kg</p>
+                      <h4 className="fluid-body-sm font-bold text-black mb-1">DAKO-CZ India Pvt Ltd, Hyderabad</h4>
+                      <p className="fluid-small text-gray-600 mb-1">Lining holder (LH and RH)</p>
+                      <p className="fluid-small text-gray-600 mb-1">20270-163 & 20270-164</p>
+                      <p className="fluid-small font-medium text-[#F2913F]">8.10 kg</p>
                     </div>
                   </div>
                 </div>
@@ -419,7 +419,7 @@ const InsertsPage = () => {
             {/* Right side - Content */}
               <div className="col-span-3 relative">
               <div className="flex items-center mb-6">
-                  <h2 className="text-5xl font-bold text-[#8A393B] leading-tight whitespace-nowrap">
+                  <h2 className="fluid-h3 font-bold text-[#8A393B] leading-tight whitespace-nowrap">
                   Railway Braking System
                 </h2>
                 {/* Inline Gradient Line */}
@@ -432,7 +432,7 @@ const InsertsPage = () => {
                   }}
                 />
               </div>
-                <p className="text-4xl text-gray-700 leading-relaxed text-justify">
+                <p className="fluid-body text-gray-700 text-justify">
                 Our foundries deliver critical castings for railway braking assemblies, including lining holders, double eyes, hinges, levers, connectors, covers, and cylinders—ensuring safety and durability in service.
               </p>
               </div>
@@ -499,11 +499,11 @@ const InsertsPage = () => {
               {/* Left side - Content */}
               <div className="col-span-2">
                 <div className="mb-4">
-                  <h2 className="text-5xl font-bold text-[#8A393B] leading-tight whitespace-nowrap mb-4">
+                  <h2 className="fluid-h3 font-bold text-[#8A393B] leading-tight whitespace-nowrap mb-4">
                     Railway Suspension System
                   </h2>
                 </div>
-                <p className="text-4xl text-gray-700 leading-relaxed text-justify">
+                <p className="fluid-body text-gray-700 text-justify">
                 We supply precision castings for suspension assemblies, covering eight labyrinth ring types and suspension tubes, engineered for stability and long service life.
               </p>
             </div>

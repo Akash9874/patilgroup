@@ -58,7 +58,7 @@ const ResearchAndDevelopmentPage = () => {
       {/* Alternate Material - CMA */}
       <section className="bg-white text-black py-8 sm:py-12 md:py-16 lg:py-20 fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#8A393B]">
+          <h2 className="fluid-h2 font-extrabold text-[#8A393B]">
             Alternate material: CMA
           </h2>
           <div className="mt-4 sm:mt-6 h-px w-full bg-gray-200"></div>
@@ -67,7 +67,7 @@ const ResearchAndDevelopmentPage = () => {
             {/* Left column */}
             <div>
               <div className="h-1.5 sm:h-2 w-3/4 bg-gradient-to-r from-[#8A393B] via-[#F2913F] to-transparent rounded-full"></div>
-              <div className="mt-4 sm:mt-6 space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
+              <div className="mt-4 sm:mt-6 space-y-3 sm:space-y-4 fluid-body">
                 <p>
                   Extensive research by the research and development team led to a composite mineral admixture (CMA), a fly-ash-based product. Fly ash not only reduces cost but also significantly enhances concrete durability.
                 </p>
@@ -80,7 +80,7 @@ const ResearchAndDevelopmentPage = () => {
             {/* Right column */}
             <div>
               <div className="h-1.5 sm:h-2 w-3/4 ml-auto bg-gradient-to-r from-transparent via-[#F2913F] to-[#8A393B] rounded-full"></div>
-              <div className="mt-4 sm:mt-6 space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
+              <div className="mt-4 sm:mt-6 space-y-3 sm:space-y-4 fluid-body">
                 <p>
                   CMA has successfully replaced 20% of the cement.
                 </p>
@@ -96,12 +96,12 @@ const ResearchAndDevelopmentPage = () => {
       {/* Stricter Tolerance Track */}
       <section className="bg-white text-black py-8 sm:py-12 md:py-16 lg:py-20 fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#8A393B]">
+          <h2 className="fluid-h2 font-extrabold text-[#8A393B]">
             Stricter tolerance track
           </h2>
           <div className="mt-4 sm:mt-6 h-px w-full bg-gray-200"></div>
 
-          <div className="mt-6 sm:mt-8 md:mt-10 space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
+          <div className="mt-6 sm:mt-8 md:mt-10 space-y-4 sm:space-y-6 fluid-body">
               <p>
               Existing track gauge (Broad Gauge) is 1673 mm, with tolerances of −2 to +3 (1671 mm to 1676 mm). Indian Railways is increasing operating speeds from 110 km/h to 160 km/h and beyond.
               </p>
@@ -122,10 +122,10 @@ const ResearchAndDevelopmentPage = () => {
           </div>
 
           <div className="mt-8 sm:mt-12 md:mt-16">
-            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#F2913F] mb-4 sm:mb-6">
+            <h3 className="fluid-h3 font-bold text-[#F2913F] mb-4 sm:mb-6">
               Linerless fastening system
             </h3>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
+            <p className="fluid-body">
               A major problem today is rail-foot corrosion, leading to premature rail renewal due to moisture trapped in liners. Our Patil linerless fastening system addresses this issue and has been developed indigenously.
             </p>
           </div>
@@ -135,10 +135,10 @@ const ResearchAndDevelopmentPage = () => {
       {/* New Design of Concrete Sleeper */}
       <section className="bg-white text-black py-8 sm:py-12 md:py-16 lg:py-20 fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#8A393B]">
+          <h2 className="fluid-h2 font-extrabold text-[#8A393B]">
             New design of concrete sleeper
           </h2>
-          <div className="mt-4 sm:mt-6 space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
+          <div className="mt-4 sm:mt-6 space-y-3 sm:space-y-4 fluid-body">
             <p>
               The Indian Railways concrete sleeper design is about 30 years old. In that time, input materials such as cement, admixtures, and steel have improved significantly, and loading patterns and speeds have changed. In collaboration with the Railway Board, a new sleeper design was developed to meet future challenges. Given that Indian Railways uses millions of sleepers, even small economies yield large savings—one of the key drivers behind this project. With more than 25 years of experience manufacturing concrete sleepers and extensive expertise in high‑tensile steel wire, Patil Group has helped make this project a reality.
             </p>
@@ -149,13 +149,13 @@ const ResearchAndDevelopmentPage = () => {
       {/* Technical Advantages of the New Sleepers Design */}
       <section className="bg-white text-black py-8 sm:py-12 md:py-16 lg:py-20 fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-amber-500">
+          <h2 className="fluid-h2 font-extrabold text-amber-500">
             Technical advantages of the new sleeper design
           </h2>
-          <p className="mt-3 sm:mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-[#8A393B]">
+          <p className="mt-3 sm:mt-4 fluid-body font-semibold text-[#8A393B]">
             Salient features of the new design:
           </p>
-          <ul className="mt-6 sm:mt-8 space-y-3 sm:space-y-4 list-disc list-inside text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
+          <ul className="mt-6 sm:mt-8 space-y-3 sm:space-y-4 list-disc list-inside fluid-body">
             <li>
               Adoption of M60‑grade concrete, resulting in more durable sleepers with increased lifespan.
             </li>

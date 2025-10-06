@@ -64,10 +64,10 @@ const SafetyPage = () => {
           {/* Split Heading Layout */}
           <div className="text-center mb-8 sm:mb-12">
             <div className="space-y-2 sm:space-y-4">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#8A393B] leading-tight">
+              <h2 className="fluid-h2 font-bold text-[#8A393B] leading-tight">
                 Protecting tracks
               </h2>
-              <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#F2913F] leading-tight">
+              <h3 className="fluid-h3 font-bold text-[#F2913F] leading-tight">
                 Securing journeys
               </h3>
             </div>
@@ -75,7 +75,7 @@ const SafetyPage = () => {
           
           {/* Description text */}
             <div className="text-center">
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed max-w-5xl mx-auto text-justify">
+            <p className="fluid-body text-gray-700 max-w-5xl mx-auto text-justify">
                 Patil Group builds practical, durable solutions to keep railway corridors safe and operational. From high-speed routes to regional lines, our systems are made to prevent intrusions, reduce risks and ensure uninterrupted train movement.
               </p>
           </div>
@@ -256,7 +256,7 @@ const SafetyPage = () => {
             <div className="slide-in-left">
                 {/* Other Safety Fencing Heading */}
                 <div className="mb-12 fade-in-section">
-                  <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                  <h3 className="fluid-h3 font-bold mb-4">
                     <span className="text-[#8A393B]">Other </span>
                     <span className="text-[#F2913F]">Safety Fencing</span>
                 </h3>
@@ -266,8 +266,8 @@ const SafetyPage = () => {
                 {/* Content sections with spacing */}
                 <div className="space-y-8">
                   <div>
-                    <h4 className="text-2xl md:text-3xl font-bold text-black mb-4">W beam fence</h4>
-                    <p className="text-xl md:text-2xl text-gray-800 leading-relaxed mb-6 text-justify">
+                    <h4 className="fluid-h4 font-bold text-black mb-4">W beam fence</h4>
+                    <p className="fluid-body text-gray-800 mb-6 text-justify">
                       Galvanized steel with a corrugated W profile, this fencing system is engineered to provide strong and reliable protection. It is designed to prevent animals, vehicles, and trespassers from entering the track zone, ensuring operational safety and minimizing accidents. Durable and weather-resistant, the W beam fence requires minimal maintenance while offering long-term performance. Already in use along critical corridors such as Mumbai to Ahmedabad, it stands as a proven solution for large-scale rail infrastructure projects.
                     </p>
                     <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
@@ -282,8 +282,8 @@ const SafetyPage = () => {
                   </div>
 
                   <div>
-                    <h4 className="text-2xl md:text-3xl font-bold text-black mb-4">Fixed knot wire fence</h4>
-                    <p className="text-xl md:text-2xl text-gray-800 leading-relaxed mb-6 text-justify">
+                    <h4 className="fluid-h4 font-bold text-black mb-4">Fixed knot wire fence</h4>
+                    <p className="fluid-body text-gray-800 mb-6 text-justify">
                       Made from high-tensile steel mesh, the fixed knot wire fence offers reliable and long-lasting perimeter security. Its unique knotting design ensures rigidity and strength, preventing displacement and maintaining tension over large stretches. Quick to install and adaptable to uneven or sloping terrain, it provides an efficient barrier against both human intrusion and animal entry. With low maintenance needs and high durability, the fixed knot wire fence is a cost-effective solution for securing extensive rail corridors and sensitive infrastructure zones.
                     </p>
                     <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
@@ -298,8 +298,8 @@ const SafetyPage = () => {
                   </div>
 
                   <div>
-                    <h4 className="text-2xl md:text-3xl font-bold text-black mb-4">Crash barriers and security walls</h4>
-                    <p className="text-xl md:text-2xl text-gray-800 leading-relaxed mb-6 text-justify">
+                    <h4 className="fluid-h4 font-bold text-black mb-4">Crash barriers and security walls</h4>
+                    <p className="fluid-body text-gray-800 mb-6 text-justify">
                       Crash barriers and security walls are critical safety installations designed to shield work zones, safeguard trackside equipment, and prevent unauthorized access. Built with reinforced materials, they provide a strong physical barrier against vehicle impact and trespassing, significantly reducing the risk of accidents near rail corridors. These systems are engineered for durability, withstanding harsh weather and continuous operational stress while requiring minimal upkeep. Beyond protection, they also help streamline operations by clearly demarcating restricted areas, ensuring both worker and passenger safety. Widely deployed across major infrastructure projects, crash barriers and security walls form an essential layer of defense in modern rail networks.
                     </p>
                     <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
@@ -314,8 +314,8 @@ const SafetyPage = () => {
                   </div>
 
                   <div>
-                    <h4 className="text-2xl md:text-3xl font-bold text-black mb-4">Platform copings</h4>
-                    <p className="text-xl md:text-2xl text-gray-800 leading-relaxed mb-6 text-justify">
+                    <h4 className="fluid-h4 font-bold text-black mb-4">Platform copings</h4>
+                    <p className="fluid-body text-gray-800 mb-6 text-justify">
                       Platform copings are precision-engineered elements designed to ensure passenger safety and comfort at stations. Manufactured with anti-slip surfaces, they minimize the risk of slips and falls, even under wet conditions. Integrated tactile indicators provide essential guidance for visually impaired passengers, helping them navigate platforms with confidence and security. Built to withstand heavy foot traffic and daily operational stress, these copings combine durability with functionality. Their consistent quality and reliable performance make them an indispensable feature across modern railway and metro networks, supporting both safety and accessibility standards.
                     </p>
                     <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
@@ -330,8 +330,8 @@ const SafetyPage = () => {
                   </div>
 
                   <div>
-                    <h4 className="text-2xl md:text-3xl font-bold text-black mb-4">Cable troughs and drains</h4>
-                    <p className="text-xl md:text-2xl text-gray-800 leading-relaxed mb-6 text-justify">
+                    <h4 className="fluid-h4 font-bold text-black mb-4">Cable troughs and drains</h4>
+                    <p className="fluid-body text-gray-800 mb-6 text-justify">
                       Cable troughs and drains are essential components for maintaining safe and efficient rail operations. Designed to securely house and protect signaling and power lines, they prevent accidental damage, tampering, and exposure to harsh environmental conditions. At the same time, integrated drainage systems ensure that rainwater and runoff are effectively channelled away, keeping the tracks free from waterlogging and structural damage. Built with durable, weather-resistant materials, these systems require minimal maintenance while offering long-term reliability. By combining protection for critical infrastructure with effective trackside water management, cable troughs and drains play a vital role in ensuring uninterrupted rail services and operational safety.
                     </p>
                     <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
@@ -346,8 +346,8 @@ const SafetyPage = () => {
                 </div>
                 
                   <div>
-                    <h4 className="text-2xl md:text-3xl font-bold text-black mb-4">Noise barriers</h4>
-                    <p className="text-xl md:text-2xl text-gray-800 leading-relaxed mb-6 text-justify">
+                    <h4 className="fluid-h4 font-bold text-black mb-4">Noise barriers</h4>
+                    <p className="fluid-body text-gray-800 mb-6 text-justify">
                       Noise barriers are engineered to minimize sound disturbance in residential and sensitive zones along railway corridors. By reducing the transmission of operational noise, they create a quieter environment for surrounding communities, enhancing overall quality of life. In addition to comfort, these barriers improve safety by limiting distractions for both passengers and operators. Constructed from durable, weather-resistant materials, they are designed to perform effectively over long service cycles with minimal maintenance. Noise barriers are a critical feature of modern rail infrastructure, balancing the demands of high-capacity rail systems with environmental responsibility and community well-being.
                     </p>
                     <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 mb-8">

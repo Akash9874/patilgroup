@@ -146,19 +146,19 @@ const PrecastPage = () => {
             <div className="lg:hidden">
               {/* Mobile Header */}
               <div className="text-center mb-8">
-                <h2 className="text-3xl sm:text-4xl font-bold text-[#8A393B] leading-tight mb-4">
+              <h2 className="fluid-h3 font-bold text-[#8A393B] leading-tight mb-4">
                   Built for
                 </h2>
                 <div className="flex flex-col items-center mb-6">
                   <div className="w-20 h-1.5 bg-gradient-to-r from-[#8A393B] to-[#F2913F] mb-3 rounded-full"></div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-[#F2913F] leading-tight text-center">
+                  <h3 className="fluid-h3 font-bold text-[#F2913F] leading-tight text-center">
                     speed strength precision
                   </h3>
                 </div>
               </div>
               
               {/* Mobile Content */}
-              <div className="space-y-6 text-base sm:text-lg text-gray-700 leading-relaxed mb-8">
+              <div className="space-y-6 fluid-body text-gray-700 mb-8">
                 <p className="text-justify">
                   Patil Group delivers one-stop infrastructure solutions with a daily precast capacity of 3,410 m³. Our portfolio spans diverse products, from culverts and drains to walls, slabs, and modular systems, supporting urban and industrial growth across India.
                 </p>
@@ -201,7 +201,7 @@ const PrecastPage = () => {
             {/* Right side - Content */}
             <div className="slide-in-right">
               <div className="mb-6">
-                  <h2 className="text-7xl font-bold text-[#8A393B] leading-tight mb-4">
+                  <h2 className="fluid-h2 font-bold text-[#8A393B] leading-tight mb-4">
                   Built for
                 </h2>
                 <div className="flex items-center mb-6">
@@ -213,13 +213,13 @@ const PrecastPage = () => {
                       background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
                     }}
                   />
-                    <h3 className="text-6xl font-bold text-[#F2913F] leading-tight">
+                    <h3 className="fluid-h2 font-bold text-[#F2913F] leading-tight">
                     speed strength precision
                   </h3>
                 </div>
               </div>
               
-                <div className="space-y-6 text-2xl text-gray-700 leading-relaxed">
+                <div className="space-y-6 fluid-body text-gray-700">
                 <p className="text-justify">
                   Patil Group delivers one-stop infrastructure solutions with a daily precast capacity of 3,410 m³. Our portfolio spans diverse products, from culverts and drains to walls, slabs, and modular systems, supporting urban and industrial growth across India.
                 </p>
@@ -250,7 +250,7 @@ const PrecastPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Header */}
           <div className="mb-8 sm:mb-10 md:mb-14 text-center lg:text-left">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#8A393B]">Product Portfolio</h3>
+            <h3 className="fluid-h3 font-bold text-[#8A393B]">Product Portfolio</h3>
             <div className="w-20 h-1 bg-gradient-to-r from-[#8A393B] to-[#F2913F] mx-auto lg:mx-0 mt-3 rounded-full lg:hidden"></div>
           </div>
 
@@ -276,8 +276,8 @@ const PrecastPage = () => {
 
                     {/* Content */}
                     <div className="flex-1">
-                      <h4 className="text-lg sm:text-xl font-semibold text-[#F2913F] mb-2">{product.name}</h4>
-                      <p className="text-sm sm:text-base text-gray-700 leading-relaxed line-clamp-3">
+                      <h4 className="fluid-h4 font-semibold text-[#F2913F] mb-2">{product.name}</h4>
+                      <p className="fluid-body-sm text-gray-700 line-clamp-3">
                         {product.description.substring(0, 150)}...
                       </p>
                       <div className="h-0.5 w-16 bg-gradient-to-r from-[#8A393B] to-[#F2913F] mt-3"></div>
@@ -308,8 +308,8 @@ const PrecastPage = () => {
 
                   {/* Content */}
                   <div className="col-span-2">
-                    <h4 className="text-4xl font-semibold text-amber-500 mb-4">{product.name}</h4>
-                    <p className="text-2xl leading-relaxed text-justify mb-6">
+                    <h4 className="fluid-h3 font-semibold text-amber-500 mb-4">{product.name}</h4>
+                    <p className="fluid-body text-justify mb-6">
                       {product.description}
                     </p>
                     <div className="h-1.5 w-56 bg-gradient-to-r from-[#8A393B] via-amber-500 to-transparent"></div>

@@ -61,7 +61,7 @@ const BallastlessTrackUrbanMetroPage = () => {
         />
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
-          <p className="text-black text-lg sm:text-2xl leading-relaxed">
+          <p className="text-black fluid-body">
             Urban metro systems demand high precision, uninterrupted service, and long-term structural integrity. Our ballastless track system for urban metros is based on precast plinths, offering a modular, high-performance solution for elevated and underground corridors.
           </p>
         </div>
@@ -83,10 +83,10 @@ const BallastlessTrackUrbanMetroPage = () => {
       <section className="bg-white py-6 sm:py-8 md:py-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
           <div className="bg-[#F5F4F1] p-8 sm:p-10 md:p-12 rounded-lg shadow-sm">
-            <h2 className="text-[#8A393B] text-xl sm:text-3xl md:text-5xl font-bold mb-6">
+            <h2 className="text-[#8A393B] fluid-h2 font-bold mb-6">
               Leading change in Indian Railways
             </h2>
-            <p className="text-black text-lg sm:text-xl md:text-2xl leading-relaxed">
+            <p className="text-black fluid-body">
               At Patil Group, we pioneered the adoption of RHEDA ballastless track systems in India—an achievement that reshaped track infrastructure for one of the world's busiest rail networks. Our journey was marked by challenges, breakthroughs, and innovation, and it has set a new benchmark for safety, precision, and reliability in Indian Railways.
                 </p>
               </div>
@@ -99,7 +99,7 @@ const BallastlessTrackUrbanMetroPage = () => {
           <h3 className="text-[#F2913F] text-xl sm:text-2xl md:text-3xl font-bold mb-6">
             The challenge
           </h3>
-          <ul className="space-y-3 text-black text-lg sm:text-xl md:text-2xl">
+          <ul className="space-y-3 text-black fluid-body">
             <li className="flex items-start">
               <span className="w-2 h-2 bg-black rounded-full mr-4 flex-shrink-0 mt-3"></span>
               <span>Convincing Indian Railways to adopt Patil RHEDA technology was not easy, as existing BLT designs were already in place.</span>
@@ -122,7 +122,7 @@ const BallastlessTrackUrbanMetroPage = () => {
           <h3 className="text-[#F2913F] text-xl sm:text-2xl md:text-3xl font-bold mb-6">
             Turning point
           </h3>
-          <p className="text-black text-lg sm:text-xl md:text-2xl leading-relaxed">
+          <p className="text-black fluid-body">
                   In December 2006, after months of discussions, technical presentations, and outreach, we earned the trust of Indian Railways and secured approval to adopt Patil RHEDA sleepers.
                 </p>
               </div>
@@ -134,7 +134,7 @@ const BallastlessTrackUrbanMetroPage = () => {
           <h3 className="text-[#F2913F] text-xl sm:text-2xl md:text-3xl font-bold mb-6">
             Design and development
           </h3>
-          <ul className="space-y-3 text-black text-lg sm:text-xl md:text-2xl">
+          <ul className="space-y-3 text-black fluid-body">
             <li className="flex items-start">
               <span className="w-2 h-2 bg-black rounded-full mr-4 flex-shrink-0 mt-3"></span>
               <span>Creating a sleeper for India's most demanding track system required unmatched precision and innovation.</span>
@@ -156,7 +156,7 @@ const BallastlessTrackUrbanMetroPage = () => {
           {/* Outcome Box */}
           <div className="bg-[#F5F4F1] p-6 sm:p-8 rounded-lg mt-6">
             <h4 className="text-[#F2913F] text-lg sm:text-2xl font-bold mb-3">Outcome</h4>
-            <p className="text-black text-base sm:text-lg md:text-2xl leading-relaxed">
+            <p className="text-black fluid-body">
                     A sleeper design that delivers both strength and reliability, validated through repeated trials.
                   </p>
                 </div>
@@ -169,7 +169,7 @@ const BallastlessTrackUrbanMetroPage = () => {
           <h3 className="text-[#F2913F] text-xl sm:text-2xl md:text-3xl font-bold mb-6">
             Installation and execution
           </h3>
-          <ul className="space-y-3 text-black text-lg sm:text-xl md:text-2xl">
+          <ul className="space-y-3 text-black fluid-body">
             <li className="flex items-start">
               <span className="w-2 h-2 bg-black rounded-full mr-4 flex-shrink-0 mt-3"></span>
               <span>Execution demanded as much precision as design.</span>
@@ -191,7 +191,7 @@ const BallastlessTrackUrbanMetroPage = () => {
           {/* Result Box */}
           <div className="bg-[#F5F4F1] p-6 sm:p-8 rounded-lg mt-6">
             <h4 className="text-[#F2913F] text-lg sm:text-2xl font-bold mb-3">Outcome</h4>
-            <p className="text-black text-base sm:text-lg md:text-2xl leading-relaxed">
+            <p className="text-black fluid-body">
                     Safe, efficient, and timely installation of Patil RHEDA sleepers—demonstrating our ability to deliver complex infrastructure under pressure.
                   </p>
                 </div>
@@ -230,7 +230,7 @@ const BallastlessTrackUrbanMetroPage = () => {
           <h3 className="text-[#8A393B] text-xl sm:text-2xl md:text-5xl font-bold mb-6 text-center">
             Legacy and impact
           </h3>
-          <p className="text-black text-lg sm:text-xl md:text-2xl leading-relaxed text-center">
+          <p className="text-black fluid-body text-center">
                   Today, Patil RHEDA and BLT systems are synonymous with reliability in Indian Railways. By overcoming early challenges, we proved that innovation and perseverance can redefine national infrastructure.
                 </p>
               </div>
@@ -254,7 +254,7 @@ const BallastlessTrackUrbanMetroPage = () => {
             
             {/* Content */}
             <div className="w-full md:w-1/2">
-              <p className="text-[#F2913F] text-lg sm:text-xl md:text-2xl leading-relaxed">
+              <p className="text-[#F2913F] fluid-body">
                 With reduced on-site casting, consistent alignment, and low maintenance needs, it supports fast-track construction and dependable daily operations across dense urban environments.
               </p>
             </div>
@@ -268,7 +268,7 @@ const BallastlessTrackUrbanMetroPage = () => {
           <h2 className="text-[#8A393B] text-2xl sm:text-3xl md:text-4xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-tight">
             Ballastless Track System for Main Lines
           </h2>
-          <p className="text-black text-lg sm:text-xl md:text-2xl leading-relaxed max-w-4xl">
+          <p className="text-black fluid-body max-w-4xl">
             In mainline applications—such as tunnels, bridges, and station zones—ballastless track offers a durable, low-maintenance alternative to conventional systems. Our design accommodates high-speed movement, continuous loading, and complex terrain.
           </p>
         </div>
@@ -292,10 +292,10 @@ const BallastlessTrackUrbanMetroPage = () => {
             
             {/* Content */}
             <div className="w-full md:w-1/2">
-              <p className="text-[#8A393B] text-lg sm:text-xl md:text-2xl font-bold mb-6 leading-relaxed">
+              <p className="text-[#8A393B] fluid-body font-bold mb-6">
                 This system has been successfully deployed in multiple metro projects, including:
               </p>
-              <ul className="space-y-2 text-black text-lg sm:text-xl md:text-2xl">
+              <ul className="space-y-2 text-black fluid-body">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-black rounded-full mr-3 flex-shrink-0"></span>
                   Bangalore Metro
@@ -321,7 +321,7 @@ const BallastlessTrackUrbanMetroPage = () => {
       {/* Performance Statement Section */}
       <section className="bg-white py-6 sm:py-8 md:py-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
-          <p className="text-[#8A393B] text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-relaxed text-justify">
+          <p className="text-[#8A393B] fluid-body font-bold text-justify">
               Engineered for long operational life with minimal intervention, the system ensures stable geometry, reduced deflection, and consistent track performance under both freight and passenger traffic.
             </p>
         </div>

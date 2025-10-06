@@ -66,7 +66,7 @@ const FlashButtWeldingOfRailsPage = () => {
         />
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
-          <p className="text-black text-lg sm:text-2xl leading-relaxed">
+          <p className="text-black fluid-body">
             Our flash‑butt welding plants deliver factory‑controlled, high‑integrity welded rail panels. Using precision electrical‑resistance welding, each joint is formed without filler, reducing thermal distortion and improving fatigue resistance.
           </p>
         </div>
@@ -88,7 +88,7 @@ const FlashButtWeldingOfRailsPage = () => {
       <section className="bg-white py-8 sm:py-10 md:py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
           <div className="bg-[#F5F4F1] p-8 sm:p-10 md:p-12 rounded-lg shadow-sm">
-            <p className="text-[#8A393B] text-lg sm:text-xl md:text-2xl leading-relaxed font-medium">
+            <p className="text-[#8A393B] fluid-body font-medium">
               Patil Group operates India's largest flash‑butt welding depots, equipped to weld 20‑rail panels with advanced infrastructure. With mechanized rail‑handling systems, these facilities ensure efficiency, safety, and world‑class precision for Indian Railways.
             </p>
           </div>
@@ -113,10 +113,10 @@ const FlashButtWeldingOfRailsPage = () => {
             
             {/* Content */}
             <div className="w-full md:w-1/2">
-              <h3 className="text-[#F2913F] text-xl sm:text-2xl md:text-3xl font-bold mb-4">
+              <h3 className="text-[#F2913F] fluid-h3 font-bold mb-4">
                 Patil Group's welding plants are located in:
               </h3>
-              <ul className="space-y-2 text-black text-lg sm:text-2xl">
+              <ul className="space-y-2 text-black fluid-body">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-black rounded-full mr-3 flex-shrink-0"></span>
                   New Bongaigaon, Assam
@@ -131,7 +131,7 @@ const FlashButtWeldingOfRailsPage = () => {
           
           {/* Bottom Text */}
           <div className="mt-8 md:mt-10 fade-in-section">
-            <p className="text-black text-lg sm:text-xl md:text-2xl leading-relaxed">
+            <p className="text-black fluid-body">
               These facilities support large-scale panel production and direct dispatch to project sites.
             </p>
           </div>
@@ -153,11 +153,11 @@ const FlashButtWeldingOfRailsPage = () => {
         />
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
-          <h3 className="text-[#F2913F] text-xl sm:text-2xl md:text-3xl font-bold mb-6">
+          <h3 className="text-[#F2913F] fluid-h3 font-bold mb-6">
             This system has been integral to:
           </h3>
           
-          <ul className="space-y-3 text-black text-lg sm:text-xl md:text-2xl">
+          <ul className="space-y-3 text-black fluid-body">
             <li className="flex items-center">
               <span className="w-2 h-2 bg-black rounded-full mr-4 flex-shrink-0"></span>
               Northeast Frontier Railway projects

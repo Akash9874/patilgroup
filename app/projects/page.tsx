@@ -226,7 +226,7 @@ const ProjectsPage = () => {
           </div>
           <div className="w-full md:w-1/2 flex items-center p-6 sm:p-8 md:p-16">
             <div>
-              <h2 className="font-bold font-clash hero-subtitle leading-tight">
+              <h2 className="font-bold font-clash fluid-h2 leading-tight">
                 <TypingAnimation
                   text="Engineering Excellence for a Stronger Tomorrow"
                   showCursor={true}
@@ -270,7 +270,7 @@ const ProjectsPage = () => {
                     className="transition-transform duration-500 group-hover:scale-110"
                   />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4 sm:p-6">
-                    <h3 className="text-white text-lg sm:text-xl md:text-2xl font-bold">{project.title}</h3>
+                    <h3 className="text-white fluid-h4 font-bold">{project.title}</h3>
                     </div>
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <DialogTrigger asChild>
@@ -286,7 +286,7 @@ const ProjectsPage = () => {
                     className="w-[94vw] h-[85vh] max-w-none sm:max-w-[85vw] sm:w-auto sm:h-auto lg:max-w-[85vw] bg-[#18181B] text-gray-300 border border-gray-600 shadow-2xl p-0 rounded-lg sm:rounded-xl overflow-hidden fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 flex flex-col"
                   >
                     <DialogHeader className="p-2 sm:p-3 lg:p-6 border-b border-gray-700 bg-[#18181B] z-10 flex flex-row items-center justify-between flex-shrink-0">
-                      <DialogTitle className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-orange-500 pr-2 sm:pr-4 leading-tight">{project.title}</DialogTitle>
+                      <DialogTitle className="fluid-h3 font-bold text-orange-500 pr-2 sm:pr-4 leading-tight">{project.title}</DialogTitle>
                       <DialogClose asChild>
                         <button className="p-2 sm:p-1 rounded-full text-gray-400 hover:text-white hover:bg-gray-700 transition-colors flex-shrink-0 touch-manipulation">
                           <X className="h-5 w-5 sm:h-4 sm:w-4 lg:h-5 lg:w-5" />
@@ -311,13 +311,13 @@ const ProjectsPage = () => {
                         />
                         
                         <div>
-                          <h4 className="text-base sm:text-lg font-semibold text-orange-400 mb-3 border-b border-gray-700 pb-2">Project Overview</h4>
-                          <p className="text-sm sm:text-base text-gray-400 leading-relaxed">{project.description}</p>
+                          <h4 className="fluid-h3 font-semibold text-orange-400 mb-3 border-b border-gray-700 pb-2">Project Overview</h4>
+                          <p className="text-gray-400 fluid-body">{project.description}</p>
                         </div>
                         
                         <div className="bg-zinc-800/50 p-3 sm:p-4 rounded-lg border border-gray-700">
-                          <h4 className="text-base sm:text-lg font-semibold text-orange-400 mb-3">Project Details</h4>
-                          <div className="text-sm sm:text-base space-y-2">
+                          <h4 className="fluid-h3 font-semibold text-orange-400 mb-3">Project Details</h4>
+                          <div className="fluid-body space-y-2">
                             <div className="flex flex-col space-y-1">
                               <strong className="text-gray-500">Client:</strong>
                               <span className="text-gray-300">{project.client}</span>

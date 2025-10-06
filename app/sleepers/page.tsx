@@ -88,7 +88,7 @@ const SleepersPage = () => {
                   text="Patil Group manufactures prestressed concrete sleepers designed for high-load, high-speed rail conditions"
                   showCursor
                   speed={30}
-                  className="block text-base sm:text-lg font-light text-white leading-relaxed"
+                  className="block fluid-body font-light text-white"
                   cursorColor="#ffffff"
                 />
               </div>
@@ -101,7 +101,7 @@ const SleepersPage = () => {
                         text="Patil Group manufactures prestressed concrete sleepers designed for high-load, high-speed rail conditions"
                         showCursor
                         speed={30}
-                        className="block text-lg md:text-2xl font-light text-white leading-relaxed fade-in-section"
+                        className="block fluid-body font-light text-white fade-in-section"
                         cursorColor="#ffffff"
                     />
                 </div>
@@ -115,17 +115,13 @@ const SleepersPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Header */}
           <div className="mb-8 fade-in-section">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#8A393B] mb-4 leading-tight">
-              Composite Sleepers
-            </h2>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#F2913F] mb-8 leading-tight ml-16 sm:ml-20 md:ml-32 lg:ml-40">
-              Smarter, sustainable track solutions
-            </h3>
+            <h2 className="text-[#8A393B] fluid-h2 font-bold mb-4 leading-tight">Composite Sleepers</h2>
+            <h3 className="fluid-h3 font-bold text-[#F2913F] mb-8 leading-tight ml-16 sm:ml-20 md:ml-32 lg:ml-40">Smarter, sustainable track solutions</h3>
           </div>
 
           {/* Description */}
           <div className="max-w-6xl mx-auto fade-in-section">
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed text-justify">
+            <p className="fluid-body text-gray-700 text-justify">
               We introduced EFG TieTek design composite sleepers to India as a durable, eco-friendly alternative to wood and steel. Made from recyclable materials and tested to AREMA standards, they offer a service life of 60+ years. RDSO-approved and in use on Indian Railways since 2002, our sleepers set new benchmarks in strength, safety, and sustainability.
             </p>
           </div>
@@ -149,7 +145,7 @@ const SleepersPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Range Header */}
           <div className="fade-in-section mb-8">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A393B]">
+            <h3 className="fluid-h3 font-bold text-[#8A393B]">
               Our Composite Sleeper Range
             </h3>
           </div>
@@ -162,7 +158,7 @@ const SleepersPage = () => {
                 className="flex items-center justify-between p-6 cursor-pointer hover:bg-[#F0EDE8] transition-colors duration-200"
                 onClick={() => toggleSection('standard')}
               >
-                <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F]">
+                <h4 className="fluid-h3 font-bold text-[#F2913F]">
                   Standard Composite Sleepers
                 </h4>
                 <svg 
@@ -178,7 +174,7 @@ const SleepersPage = () => {
               </div>
               {expandedSections.standard && (
                 <div className="px-6 pb-6">
-                  <ul className="space-y-3 text-gray-800 text-lg">
+                  <ul className="space-y-3 text-gray-800 fluid-body">
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-[#F2913F] rounded-full mt-3 mr-4 flex-shrink-0"></span>
                       Designed as a direct replacement for wooden and steel channel sleepers.
@@ -202,7 +198,7 @@ const SleepersPage = () => {
                 className="flex items-center justify-between p-6 cursor-pointer hover:bg-[#F0EDE8] transition-colors duration-200"
                 onClick={() => toggleSection('bridge')}
               >
-                <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F]">
+                <h4 className="fluid-h3 font-bold text-[#F2913F]">
                   Bridge and Girder Applications
                 </h4>
                 <svg 
@@ -218,7 +214,7 @@ const SleepersPage = () => {
               </div>
               {expandedSections.bridge && (
                 <div className="px-6 pb-6">
-                  <ul className="space-y-3 text-gray-800 text-lg">
+                  <ul className="space-y-3 text-gray-800 fluid-body">
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-[#8A393B] rounded-full mt-3 mr-4 flex-shrink-0"></span>
                       Approved by RDSO for use on steel girder bridges in India.
@@ -238,7 +234,7 @@ const SleepersPage = () => {
                 className="flex items-center justify-between p-6 cursor-pointer hover:bg-[#F0EDE8] transition-colors duration-200"
                 onClick={() => toggleSection('special')}
               >
-                <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F]">
+                <h4 className="fluid-h3 font-bold text-[#F2913F]">
                   Special and Custom Sleepers
                 </h4>
                 <svg 
@@ -254,7 +250,7 @@ const SleepersPage = () => {
               </div>
               {expandedSections.special && (
                 <div className="px-6 pb-6">
-                  <ul className="space-y-3 text-gray-800 text-lg">
+                  <ul className="space-y-3 text-gray-800 fluid-body">
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-[#F2913F] rounded-full mt-3 mr-4 flex-shrink-0"></span>
                       Tailored for ballasted track, open-deck bridges, points and crossings, and level crossings.

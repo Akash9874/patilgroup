@@ -154,7 +154,7 @@ const AboutUsPage = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
           {/* Title */}
           <div className="text-center mb-12 fade-heading" data-delay="0.15" data-duration="0.9">
-            <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+            <h2 className="fluid-h2 font-bold">
               <span className="text-[#8A393B]">Our Business Decision - </span>
               <span className="text-[#F2913F]">Making Principles</span>
             </h2>
@@ -164,22 +164,22 @@ const AboutUsPage = () => {
           <div className="space-y-4 sm:space-y-6 max-w-2xl mx-auto stagger-children" data-stagger="0.15" data-duration="0.7">
             {/* Country 1st */}
             <div className="bg-[#8A393B] text-white py-4 sm:py-6 px-6 sm:px-8 rounded-2xl shadow-lg stagger-item">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">
-                Country <span className="text-[#F2913F]">1<sup className="text-lg sm:text-xl">st</sup></span>
+              <h3 className="fluid-h3 font-bold text-center">
+                Country <span className="text-[#F2913F]">1<sup className="fluid-small">st</sup></span>
               </h3>
             </div>
             
             {/* Customer 2nd */}
             <div className="bg-[#F2913F] text-black py-4 sm:py-6 px-6 sm:px-8 rounded-2xl shadow-lg stagger-item">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">
-                Customer <span className="text-[#8A393B]">2<sup className="text-lg sm:text-xl">nd</sup></span>
+              <h3 className="fluid-h3 font-bold text-center">
+                Customer <span className="text-[#8A393B]">2<sup className="fluid-small">nd</sup></span>
               </h3>
             </div>
             
             {/* Company & Employees 3rd */}
             <div className="bg-[#8A393B] text-white py-4 sm:py-6 px-6 sm:px-8 rounded-2xl shadow-lg stagger-item">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-center">
-                Company & Employees <span className="text-[#F2913F]">3<sup className="text-lg sm:text-xl">rd</sup></span>
+              <h3 className="fluid-h3 font-bold text-center">
+                Company & Employees <span className="text-[#F2913F]">3<sup className="fluid-small">rd</sup></span>
               </h3>
             </div>
           </div>
@@ -196,13 +196,13 @@ const AboutUsPage = () => {
             {/* Mobile Layout */}
             <div className="md:hidden max-w-4xl mx-auto px-4 space-y-8 text-center">
                 <div className="fade-in-section" style={{ transitionDelay: '0ms' }}>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#8A393B] leading-tight">Built for long life</h2>
+                    <h2 className="fluid-h2 font-bold text-[#8A393B] leading-tight">Built for long life</h2>
                 </div>
                 <div className="fade-in-section" style={{ transitionDelay: '200ms' }}>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-[#8A393B] leading-tight">Delivered at scale</h2>
+                    <h2 className="fluid-h2 font-bold text-[#8A393B] leading-tight">Delivered at scale</h2>
                 </div>
                 <div className="fade-in-section" style={{ transitionDelay: '400ms' }}>
-                    <p className="text-2xl sm:text-3xl font-semibold text-[#F2913F]">Approved across systems</p>
+                    <p className="fluid-h3 font-semibold text-[#F2913F]">Approved across systems</p>
                 </div>
             </div>
             
@@ -211,17 +211,17 @@ const AboutUsPage = () => {
               <div className="philosophy-item">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-left stagger-container" data-stagger="0.2">
-                        <h2 className="text-5xl lg:text-8xl font-bold text-[#8A393B]">
+                        <h2 className="fluid-h2 font-bold text-[#8A393B]">
                           <span className="stagger-item inline-block">Built</span> <span className="stagger-item inline-block">for</span> <span className="stagger-item inline-block">long</span> <span className="stagger-item inline-block">life</span>
                         </h2>
                     </div>
                     <div className="text-center mt-4 stagger-container" data-stagger="0.2" data-delay="0.2">
-                        <h2 className="text-5xl lg:text-8xl font-bold text-[#8A393B]">
+                        <h2 className="fluid-h2 font-bold text-[#8A393B]">
                           <span className="stagger-item inline-block">Delivered</span> <span className="stagger-item inline-block">at</span> <span className="stagger-item inline-block">scale</span>
                         </h2>
                     </div>
                     <div className="text-right mt-4 stagger-container" data-stagger="0.2" data-delay="0.4">
-                        <p className="text-3xl lg:text-5xl text-[#F2913F]">
+                        <p className="fluid-h3 text-[#F2913F]">
                           <span className="stagger-item inline-block">Approved</span> <span className="stagger-item inline-block">across</span> <span className="stagger-item inline-block">systems</span>
                         </p>
                     </div>
@@ -231,7 +231,7 @@ const AboutUsPage = () => {
               <div className="philosophy-item">
                 <div className="mt-32">
                   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left stagger-container" data-stagger="0.15">
-                    <h3 className="text-4xl lg:text-7xl font-semibold text-black">
+                    <h3 className="fluid-h3 font-semibold text-black">
                       <span className="stagger-item inline-block">The</span> <span className="stagger-item inline-block">work</span> <span className="stagger-item inline-block">has</span> <span className="stagger-item inline-block">changed.</span>
                     </h3>
                   </div>
@@ -248,7 +248,7 @@ const AboutUsPage = () => {
               <div className="philosophy-item">
                 <div className="mt-24">
                   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-right stagger-container" data-stagger="0.15">
-                    <h3 className="text-4xl lg:text-7xl font-semibold text-black">
+                    <h3 className="fluid-h3 font-semibold text-black">
                       <span className="stagger-item inline-block">The</span> <span className="stagger-item inline-block">approach</span> <span className="stagger-item inline-block">has</span> <span className="stagger-item inline-block">not.</span>
                     </h3>
                   </div>
@@ -264,7 +264,7 @@ const AboutUsPage = () => {
               
               <div className="philosophy-item">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <p className="mt-32 text-3xl lg:text-5xl font-semibold text-[#8A393B]">We build what holds.</p>
+                    <p className="mt-32 fluid-h3 font-semibold text-[#8A393B]">We build what holds.</p>
                 </div>
               </div>
             </div>
@@ -276,7 +276,7 @@ const AboutUsPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Mobile Layout */}
           <div className="md:hidden space-y-6">
-            <h2 className="text-3xl sm:text-4xl font-bold text-black">In service</h2>
+            <h2 className="fluid-h2 font-bold text-black">In service</h2>
             <div className="space-y-4 text-lg sm:text-xl text-black leading-relaxed">
               <p>
                 <StatCounter 

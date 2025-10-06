@@ -121,7 +121,7 @@ const SystemsContent = () => {
               <span className="text-[#8A393B]">Stronger Tomorrow.</span>
             </h2>
             <div className="w-16 border-t border-gray-700 mb-6"></div>
-            <p className="text-base leading-relaxed text-gray-300">
+            <p className="fluid-body text-gray-300">
               Track systems are where structural integrity meets engineering detail. Over the years, we've developed and implemented advanced rail systems across urban metros, mainlines, tunnels, and yards — engineered to last, with a focus on precision and long-term performance.
             </p>
           </div>
@@ -148,7 +148,7 @@ const SystemsContent = () => {
             </div>
             {/* Right side */}
             <div className="w-1/2 bg-[#1A1A1A] flex flex-col justify-center p-12 animate-fadeInUp hero-content">
-              <h2 className="text-5xl font-bold leading-tight">
+              <h2 className="fluid-h3 font-bold leading-tight">
                 <TypewriterText
                   segments={[
                     { text: 'Engineering Excellence', className: 'text-[#F2913F]' },
@@ -158,7 +158,7 @@ const SystemsContent = () => {
                 />
               </h2>
               <div className="w-1/2 border-t border-gray-700 my-8"></div>
-              <p className="text-lg">
+              <p className="fluid-body">
                 Track systems are where structural integrity meets engineering detail. Over the years, we've developed and implemented advanced rail systems across urban metros, mainlines, tunnels, and yards — engineered to last, with a focus on precision and long-term performance.
               </p>
             </div>
@@ -176,9 +176,9 @@ const SystemsContent = () => {
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
                   <div className="h-48 bg-cover bg-center" style={{ backgroundImage: system.image ? `url(${system.image})` : 'none' }}></div>
                   <div className="p-6">
-                    <h3 className="text-2xl font-bold text-amber-600 mb-3">{system.title}</h3>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{system.description}</p>
-                    <a href={system.link} className="group/link inline-flex items-center gap-3 font-medium text-lg text-black">
+                    <h3 className="fluid-h3 font-bold text-amber-600 mb-3">{system.title}</h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed fluid-body">{system.description}</p>
+                    <a href={system.link} className="group/link inline-flex items-center gap-3 font-medium fluid-body text-black">
                       Read more
                       <span className="flex items-center justify-center w-6 h-6 rounded-full border border-gray-400 text-gray-600 transition-all duration-300 group-hover/link:bg-black group-hover/link:text-white group-hover/link:border-black">
                         <ArrowRight size={14} className="transform transition-transform group-hover/link:translate-x-1" />

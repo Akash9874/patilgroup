@@ -81,7 +81,7 @@ export default function TrackTimeline({
 								
 								{/* Enhanced Content Card */}
 								<div className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 shadow-sm timeline-card border border-gray-100">
-									<p className="text-2xl sm:text-3xl font-extrabold text-[#F2913F] mb-3">{item.year}</p>
+                                    <p className="fluid-h4 font-extrabold text-[#F2913F] mb-3">{item.year}</p>
 									{item.image && (
 										<div className="mb-4">
 											<Image
@@ -93,8 +93,8 @@ export default function TrackTimeline({
 											/>
 										</div>
 									)}
-									<h4 className="text-lg sm:text-xl font-semibold text-[#8A393B] leading-relaxed mb-2 text-justify">{item.title}</h4>
-									{item.body && <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{item.body}</p>}
+                                    <h4 className="fluid-h4 font-semibold text-[#8A393B] leading-relaxed mb-2 text-justify">{item.title}</h4>
+                                    {item.body && <p className="fluid-body-sm text-gray-700">{item.body}</p>}
 								</div>
 							</motion.div>
 						))}
@@ -161,9 +161,9 @@ export default function TrackTimeline({
 								transition={{ duration: 0.6 }}
 								viewport={{ once: true, amount: 0.3 }}
 							>
-								<p className="text-4xl md:text-5xl font-extrabold text-[#F2913F]">{item.year}</p>
-								<h4 className="text-2xl md:text-3xl font-semibold mt-4 text-[#8A393B] leading-relaxed text-justify">{item.title}</h4>
-								{item.body && <p className="text-lg text-gray-700 mt-4 leading-relaxed">{item.body}</p>}
+                                <p className="fluid-h3 font-extrabold text-[#F2913F]">{item.year}</p>
+                                <h4 className="fluid-h4 font-semibold mt-4 text-[#8A393B] leading-relaxed text-justify">{item.title}</h4>
+                                {item.body && <p className="fluid-body-sm text-gray-700 mt-4">{item.body}</p>}
 							</motion.div>
 						</div>
 					))}
@@ -188,9 +188,9 @@ export default function TrackTimeline({
 										viewport={{ once: true, amount: 0.3 }}
 										className="text-right"
 									>
-										<p className="text-4xl md:text-5xl font-extrabold text-[#F2913F]">{leftItem.year}</p>
-										<h4 className="text-2xl md:text-3xl font-semibold mt-4 text-[#8A393B] leading-relaxed text-justify">{leftItem.title}</h4>
-										{leftItem.body && <p className="text-lg text-gray-700 mt-4 leading-relaxed">{leftItem.body}</p>}
+                                        <p className="fluid-h3 font-extrabold text-[#F2913F]">{leftItem.year}</p>
+                                        <h4 className="fluid-h4 font-semibold mt-4 text-[#8A393B] leading-relaxed text-justify">{leftItem.title}</h4>
+                                        {leftItem.body && <p className="fluid-body-sm text-gray-700 mt-4">{leftItem.body}</p>}
 										{leftItem.image && (
 											<div className="mt-6">
 												<Image
@@ -213,9 +213,9 @@ export default function TrackTimeline({
 										transition={{ duration: 0.6, delay: 0.2 }}
 										viewport={{ once: true, amount: 0.3 }}
 									>
-										<p className="text-4xl md:text-5xl font-extrabold text-[#F2913F]">{rightItem.year}</p>
-										<h4 className="text-2xl md:text-3xl font-semibold mt-4 text-[#8A393B] leading-relaxed text-justify">{rightItem.title}</h4>
-										{rightItem.body && <p className="text-lg text-gray-700 mt-4 leading-relaxed">{rightItem.body}</p>}
+                                        <p className="fluid-h3 font-extrabold text-[#F2913F]">{rightItem.year}</p>
+                                        <h4 className="fluid-h4 font-semibold mt-4 text-[#8A393B] leading-relaxed text-justify">{rightItem.title}</h4>
+                                        {rightItem.body && <p className="fluid-body-sm text-gray-700 mt-4">{rightItem.body}</p>}
 										{rightItem.image && (
 											<div className="mt-6">
 												<Image
@@ -248,9 +248,9 @@ export default function TrackTimeline({
 								viewport={{ once: true, amount: 0.3 }}
 								className="text-right"
 							>
-								<p className="text-4xl md:text-5xl font-extrabold text-[#F2913F]">{item.year}</p>
-								<h4 className="text-2xl md:text-3xl font-semibold mt-4 text-[#8A393B] leading-relaxed text-justify">{item.title}</h4>
-								{item.body && <p className="text-lg text-gray-700 mt-4 leading-relaxed">{item.body}</p>}
+                                <p className="fluid-h3 font-extrabold text-[#F2913F]">{item.year}</p>
+                                <h4 className="fluid-h4 font-semibold mt-4 text-[#8A393B] leading-relaxed text-justify">{item.title}</h4>
+                                {item.body && <p className="fluid-body-sm text-gray-700 mt-4">{item.body}</p>}
 							</motion.div>
 							{item.image ? (
 								<motion.div

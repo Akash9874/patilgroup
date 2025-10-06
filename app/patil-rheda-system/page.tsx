@@ -91,7 +91,7 @@ const PatilRhedaSystemPage = () => {
         <section className="bg-white py-6 sm:py-8 md:py-10">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
             <div className="bg-[#F5F4F1] p-8 sm:p-10 md:p-12 rounded-lg shadow-sm">
-              <p className="text-black text-lg sm:text-xl md:text-2xl leading-relaxed">
+              <p className="text-black fluid-body">
                 At Patil Group, the Patil RHEDA system adapts to the unique requirements of every project. Its core design uses modified bi‑block sleepers embedded in a monolithic concrete slab, delivering strength and durability. With highly elastic rail fastenings, it ensures the vertical rail deflection needed for balanced load distribution and smooth, reliable train travel.
               </p>
             </div>
@@ -116,10 +116,10 @@ const PatilRhedaSystemPage = () => {
               
               {/* Content */}
               <div className="w-full md:w-1/2">
-                <h3 className="text-[#8A393B] text-xl sm:text-2xl md:text-3xl font-bold mb-6">
+                <h3 className="text-[#8A393B] fluid-h3 font-bold mb-6">
                   Implemented in:
                 </h3>
-                <ul className="space-y-2 text-black text-lg sm:text-xl md:text-2xl">
+                <ul className="space-y-2 text-black fluid-body">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-black rounded-full mr-3 flex-shrink-0"></span>
                     Mumbai Metro (tunnel sections)
@@ -138,7 +138,7 @@ const PatilRhedaSystemPage = () => {
             
             {/* Bottom Text */}
             <div className="mt-8 md:mt-10 fade-in-section">
-              <p className="text-black text-lg sm:text-xl md:text-2xl leading-relaxed">
+              <p className="text-black fluid-body">
                 This system ensures secure placement, minimal settlement, and long-term alignment—even under high dynamic loading and temperature variation.
               </p>
             </div>

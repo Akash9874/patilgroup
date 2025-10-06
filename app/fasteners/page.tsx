@@ -115,7 +115,7 @@ const FastenersPage = () => {
                       text="Patil Group has set up global manufacturing facilities under the Make in India initiative, capable of supplying world-class fastening systems for railway infrastructure"
                       showCursor
                       speed={30}
-                      className="block text-base sm:text-lg md:text-xl lg:text-2xl font-light text-white leading-relaxed fade-in-section"
+                      className="block fluid-body-sm font-light text-white fade-in-section"
                       cursorColor="#ffffff"
                     />
                 </div>
@@ -127,13 +127,13 @@ const FastenersPage = () => {
              <div className="bg-white py-8 sm:py-12 md:py-16">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
            <div className="mb-8 sm:mb-12 md:mb-16 fade-in-section">
-             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed text-justify">
+             <p className="fluid-body text-gray-700 text-justify">
                Fasteners are the critical link between rails and sleepers, ensuring safety and performance across diverse track conditions. Patil Group, in collaboration with global leaders in fastening technology, has built proven expertise in designing, manufacturing, and supplying advanced fastening systems for modern rail networks.
              </p>
            </div>
            
            <div className="mb-8 sm:mb-12 md:mb-16 fade-in-section">
-             <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700 leading-relaxed text-justify">
+             <p className="fluid-body text-gray-700 text-justify">
                Patil Group has over two decades of experience in track fastening systems — beginning with joint ventures and the development of a local vendor base. In 2020, the Group established a dedicated fastening plant, bringing all processes under one roof and adding in-house capabilities in die tool design and heat treatment. Today, Patil Group is the largest fastening supplier for metros and a trusted partner to Indian Railways across multiple zones.
              </p>
            </div>
@@ -158,7 +158,7 @@ const FastenersPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           {/* Section Header */}
           <div className="fade-in-section mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#8A393B] mb-8">
+            <h2 className="fluid-h3 font-bold text-[#8A393B] mb-8">
               For Mainline Ballasted Track
             </h2>
           </div>
@@ -170,24 +170,24 @@ const FastenersPage = () => {
             <div className="bg-[#F5F4F1] rounded-lg p-8 lg:p-10">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
                 <div>
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F2913F]">
+                  <h3 className="fluid-h3 font-bold text-[#F2913F]">
                     Elastic Rail Clips
                   </h3>
                 </div>
                 <div>
-                  <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F] mb-4">
+                  <h4 className="fluid-h4 font-bold text-[#F2913F] mb-4">
                     ERC clips: Mark III & V
                   </h4>
-                  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+                  <p className="fluid-body-sm text-gray-700">
                     Manufactured in Medchal<br />
                     Approved by RDSO for Indian Railways and freight corridors
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F] mb-4">
+                  <h4 className="fluid-h4 font-bold text-[#F2913F] mb-4">
                     Production Capacity
                   </h4>
-                  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+                  <p className="fluid-body-sm text-gray-700">
                     Approximately 110,000 units per annum
                   </p>
                 </div>
@@ -198,22 +198,22 @@ const FastenersPage = () => {
             <div className="bg-[#F5F4F1] rounded-lg p-8 lg:p-10">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
                 <div>
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F2913F]">
+                  <h3 className="fluid-h3 font-bold text-[#F2913F]">
                     GFN Liners
                   </h3>
                 </div>
                 <div>
-                  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+                  <p className="fluid-body-sm text-gray-700">
                     GFN liner production<br />
                     84 lakh units per annum<br />
                     RDSO approved
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F] mb-4">
+                  <h4 className="fluid-h4 font-bold text-[#F2913F] mb-4">
                     SKL Series
                   </h4>
-                  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+                  <p className="fluid-body-sm text-gray-700">
                     - SKL 12<br />
                     - SKL 15<br />
                     - System W 14 HH
@@ -226,20 +226,20 @@ const FastenersPage = () => {
             <div className="bg-[#F5F4F1] rounded-lg p-8 lg:p-10">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
                 <div>
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F2913F]">
+                  <h3 className="fluid-h3 font-bold text-[#F2913F]">
                     System W 14<br />HH
                   </h3>
                 </div>
                 <div>
-                  <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#F2913F] mb-4">
+                  <h4 className="fluid-h4 font-bold text-[#F2913F] mb-4">
                     (Heavy Haul)
                   </h4>
-                  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+                  <p className="fluid-body-sm text-gray-700">
                     Used in freight and heavy axle routes
                   </p>
                 </div>
                 <div>
-                  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+                  <p className="fluid-body-sm text-gray-700">
                     Allows tension clamping and tilt protection<br /><br />
                     Reduces long-term maintenance
                   </p>
@@ -251,12 +251,12 @@ const FastenersPage = () => {
             <div className="bg-[#F5F4F1] rounded-lg p-8 lg:p-10">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
                 <div>
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F2913F]">
+                  <h3 className="fluid-h3 font-bold text-[#F2913F]">
                     Lab Facilities
                   </h3>
                 </div>
                 <div>
-                  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+                  <p className="fluid-body-sm text-gray-700">
                     - World-class labs<br />
                     - Fatigue testing machines<br />
                     - GOM Scanner<br />
@@ -265,7 +265,7 @@ const FastenersPage = () => {
                   </p>
                 </div>
                 <div>
-                  <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+                  <p className="fluid-body-sm text-gray-700">
                     As per STR (Schedule of Technical Requirements) of RDSO. These testing machines are not available anywhere else in India.
                   </p>
                 </div>

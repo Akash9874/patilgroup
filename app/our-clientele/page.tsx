@@ -58,7 +58,7 @@ const OurClientelePage = () => {
                 Our Clientele
               </h1>
               <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full animate-pulse shadow-lg"></div>
-              <p className="text-white text-xl sm:text-2xl mt-8 leading-relaxed drop-shadow-xl font-medium">
+              <p className="text-white fluid-body mt-8 leading-relaxed drop-shadow-xl font-medium">
                 Trusted by India's leading organizations
               </p>
             </div>
@@ -80,7 +80,7 @@ const OurClientelePage = () => {
         {/* Mobile Layout - Grid */}
         <div className="md:hidden px-4">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-8">
+            <h2 className="fluid-h2 font-bold text-white text-center mb-8">
               Trusted Partners
             </h2>
             

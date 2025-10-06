@@ -71,11 +71,11 @@ const PrecastPlinthPage = () => {
         />
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
-          <h2 className="text-[#8A393B] text-2xl sm:text-3xl md:text-6xl font-bold mb-8">
+          <h2 className="text-[#8A393B] fluid-h2 font-bold mb-8">
             Modular Track Infrastructure 
           </h2>
           
-          <div className="space-y-6 text-black text-xl sm:text-3xl leading-relaxed">
+          <div className="space-y-6 text-black fluid-body">
             <p>
               Patil Rail Infrastructure Pvt. Ltd and ITD Bangkok together developed an innovative modification to the existing plinth type track structure adopted with fastening system.
             </p>
@@ -87,7 +87,7 @@ const PrecastPlinthPage = () => {
             <div>
               <p className="font-semibold text-black mb-4">Such a system brings in the following advantages:</p>
               
-              <ul className="space-y-2 text-black text-xl sm:text-3xl">
+              <ul className="space-y-2 text-black fluid-body">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-black rounded-full mr-3 flex-shrink-0"></span>
                   Cost effectiveness
@@ -129,11 +129,11 @@ const PrecastPlinthPage = () => {
         />
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
-          <h3 className="text-[#F2913F] text-2xl sm:text-3xl md:text-7xl font-bold mb-6">
+          <h3 className="text-[#F2913F] fluid-h2 font-bold mb-6">
               The Plinth Solutions can be implemented in the following situations:
             </h3>
             
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 sm:gap-8 text-black text-xl sm:text-2xl md:text-3xl">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 sm:gap-8 text-black fluid-body">
             <div className="text-center sm:text-left font-bold">
               Elevated track
             </div>
@@ -150,10 +150,10 @@ const PrecastPlinthPage = () => {
       {/* Speed Specification Section */}
       <section className="bg-white py-6 sm:py-8 md:py-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
-          <h3 className="text-[#8A393B] text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6">
+          <h3 className="text-[#8A393B] fluid-h3 font-bold text-center mb-6">
             Plinth system of Urban Metro is meant for speeds up to 110 kmph.
           </h3>
-          <p className="text-black text-xl sm:text-2xl md:text-3xl leading-relaxed text-center">
+          <p className="text-black fluid-body text-center">
             Our varied references in this product make us hopeful to aspire for further forthcoming urban metro projects in various cities.
           </p>
         </div>
@@ -177,10 +177,10 @@ const PrecastPlinthPage = () => {
             
             {/* Content */}
             <div className="w-full md:w-1/2">
-              <h3 className="text-[#8A393B] text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
+              <h3 className="text-[#8A393B] fluid-h3 font-bold mb-6">
                 This system has been used in:
               </h3>
-              <ul className="space-y-2 text-black text-xl sm:text-2xl md:text-3xl">
+              <ul className="space-y-2 text-black fluid-body">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-black rounded-full mr-3 flex-shrink-0"></span>
                   Mumbai Metro Line 2A
@@ -206,7 +206,7 @@ const PrecastPlinthPage = () => {
       {/* Benefits Summary Section */}
       <section className="bg-white py-6 sm:py-8 md:py-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
-          <p className="text-[#8A393B] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-relaxed text-justify">
+          <p className="text-[#8A393B] fluid-body font-bold text-justify">
             Its modular nature enables speed of installation and minimal site disruption, while maintaining structural integrity and alignment across straight and curved sections
           </p>
         </div>
