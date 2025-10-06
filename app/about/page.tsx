@@ -1,12 +1,14 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useGSAPAnimations } from '@/hooks/useGSAPAnimations';
 import { PlusCircle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const StatCounter = ({ end, duration, suffix = '', prefix = '', className = '' }: { 
   end: number; 
@@ -48,49 +50,63 @@ const AboutUsPage = () => {
 
   useGSAPAnimations();
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const philosophySection = document.getElementById('philosophy-section');
+    if (!philosophySection) return;
+
+    const items = gsap.utils.toArray('.philosophy-item');
+    if (items.length === 0) return;
+    
+    gsap.set(items, { opacity: 0, y: 30 });
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: philosophySection,
+            start: 'top 60%',
+            toggleActions: 'play none none none',
+        }
+    });
+
+    tl.to(items, {
+        opacity: 1,
+        y: 0,
+        stagger: 0.4,
+        duration: 0.8,
+        ease: 'power2.out',
+    });
+
+    return () => {
+        if (tl.scrollTrigger) {
+            tl.scrollTrigger.kill();
+        }
+        tl.kill();
+    };
+  }, []);
+
   return (
     <div className="bg-white">
       {/* New About - Track background header */}
-      <section className="relative w-full bg-white overflow-hidden py-20 sm:py-24 md:py-28">
-        {/* Left track image */}
-        <div
-          className="pointer-events-none absolute z-0 left-0 top-1/2 w-[120vw] h-72 sm:h-96 md:h-[28rem] lg:h-[32rem] xl:h-[36rem]"
-          style={{ WebkitMaskImage: 'linear-gradient(to right, black 98%, transparent 100%)', maskImage: 'linear-gradient(to right, black 98%, transparent 100%)', transform: 'translate(-12vw, -50%)' }}
-        >
-          <Image
-            src="/trackkkk.png"
-            alt="Rail track left"
-            fill
-            sizes="(min-width: 1024px) 65vw, 90vw"
-            priority
-            className="object-contain object-left"
-          />
-        </div>
+      <section className="bg-white overflow-hidden py-20 sm:py-24 md:py-28">
+        <div className="flex items-center justify-center w-full">
+            {/* Left track */}
+            <div className="flex-1 min-w-0 h-40 sm:h-48 md:h-56 relative" style={{ WebkitMaskImage: 'linear-gradient(to left, transparent 10%, black 100%)', maskImage: 'linear-gradient(to left, transparent 10%, black 100%)' }}>8
+                <Image src="/trackkkk.png" alt="Rail track left" fill className="object-cover object-right scale-x-[-1]" priority />
+            </div>
 
-        {/* Right track image (mirrored) */}
-        <div
-          className="pointer-events-none absolute z-0 right-0 top-1/2 -translate-y-1/2 w-[120vw] h-72 sm:h-96 md:h-[28rem] lg:h-[32rem] xl:h-[36rem]"
-          style={{ WebkitMaskImage: 'linear-gradient(to left, black 98%, transparent 100%)', maskImage: 'linear-gradient(to left, black 98%, transparent 100%)' }}
-        >
-          <Image
-            src="/trackkkk.png"
-            alt="Rail track right"
-            fill
-            sizes="(min-width: 1024px) 65vw, 90vw"
-            priority
-            className="object-contain object-right"
-          />
-        </div>
+            {/* Centered heading */}
+            <h1 className="flex-shrink-0 text-[#8A393B] text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-center px-4 sm:px-6">
+                <span className="block">Through</span>
+                <span className="block">the tracks</span>
+                <span className="block">of time</span>
+            </h1>
 
-        {/* Centered heading */}
-        <div className="relative z-10 flex items-center justify-center">
-          <h1 className="text-[#8A393B] text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-center">
-            <span className="block">Through</span>
-            <span className="block">the tracks</span>
-            <span className="block">of time</span>
-          </h1>
+            {/* Right track */}
+            <div className="flex-1 min-w-0 h-40 sm:h-48 md:h-56 relative" style={{ WebkitMaskImage: 'linear-gradient(to right, transparent 10%, black 100%)', maskImage: 'linear-gradient(to right, transparent 10%, black 100%)' }}>
+                <Image src="/trackkkk.png" alt="Rail track right" fill className="object-cover object-left" priority />
+            </div>
         </div>
-      </section>
+    </section>
 
       {/* Legacy blurb card */}
       <section className="bg-white py-6 sm:py-8 md:py-10">
@@ -137,9 +153,10 @@ const AboutUsPage = () => {
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
           {/* Title */}
-          <div className="text-center mb-8 sm:mb-12 fade-heading" data-delay="0.15" data-duration="0.9">
-            <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#8A393B] to-[#F2913F]">
-              Our Business Decision - Making Principles
+          <div className="text-center mb-12 fade-heading" data-delay="0.15" data-duration="0.9">
+            <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+              <span className="text-[#8A393B]">Our Business Decision - </span>
+              <span className="text-[#F2913F]">Making Principles</span>
             </h2>
           </div>
           
@@ -170,7 +187,7 @@ const AboutUsPage = () => {
       </section>
 
       {/* Responsive Philosophy Section */}
-      <section className="py-16 sm:py-24 md:py-32 bg-white relative overflow-hidden fade-in-section" data-delay="0.1" data-duration="1">
+      <section id="philosophy-section" className="py-16 sm:py-24 md:py-32 bg-white relative overflow-hidden">
         <div 
           className="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-90"
           style={{ backgroundImage: "url('/worldmap.png')" }}
@@ -189,76 +206,66 @@ const AboutUsPage = () => {
                 </div>
             </div>
             
-            {/* Desktop Layout - Original */}
-            <div className="hidden md:block max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-left stagger-container" data-stagger="0.2">
-                    <h2 className="text-5xl lg:text-8xl font-bold text-[#8A393B]">
-                      <span className="stagger-item inline-block">Built</span> <span className="stagger-item inline-block">for</span> <span className="stagger-item inline-block">long</span> <span className="stagger-item inline-block">life</span>
-                    </h2>
-                </div>
-                <div className="text-center mt-4 stagger-container" data-stagger="0.2" data-delay="0.2">
-                    <h2 className="text-5xl lg:text-8xl font-bold text-[#8A393B]">
-                      <span className="stagger-item inline-block">Delivered</span> <span className="stagger-item inline-block">at</span> <span className="stagger-item inline-block">scale</span>
-                    </h2>
-                </div>
-                <div className="text-right mt-4 stagger-container" data-stagger="0.2" data-delay="0.4">
-                    <p className="text-3xl lg:text-5xl text-[#F2913F]">
-                      <span className="stagger-item inline-block">Approved</span> <span className="stagger-item inline-block">across</span> <span className="stagger-item inline-block">systems</span>
-                    </p>
-                </div>
-            </div>
-
-            {/* Mobile Approach Section */}
-            <div className="md:hidden mt-12 max-w-4xl mx-auto px-4 space-y-8 text-center">
-              <div className="fade-in-section" style={{ transitionDelay: '0ms' }}>
-                <h3 className="text-2xl sm:text-3xl font-bold text-black leading-tight">The work has changed.</h3>
-                <div className="w-24 h-1 bg-gradient-to-r from-[#8A393B] via-[#1E3888] to-[#F2913F] mx-auto mt-3 rounded-full"></div>
-              </div>
-              
-              <div className="fade-in-section" style={{ transitionDelay: '200ms' }}>
-                <h3 className="text-2xl sm:text-3xl font-bold text-black leading-tight">The approach has not.</h3>
-                <div className="w-24 h-1 bg-gradient-to-l from-[#8A393B] via-[#1E3888] to-[#F2913F] mx-auto mt-3 rounded-full"></div>
-              </div>
-              
-              <div className="fade-in-section" style={{ transitionDelay: '400ms' }}>
-                <p className="text-xl sm:text-2xl font-bold text-[#8A393B] mt-8">We build what holds.</p>
-              </div>
-            </div>
-            
-            {/* Desktop Approach Section - Original */}
+            {/* Desktop Layout - Re-structured for sequential animation */}
             <div className="hidden md:block">
-              <div className="mt-32">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left stagger-container" data-stagger="0.15">
-                  <h3 className="text-4xl lg:text-7xl font-semibold text-black">
-                    <span className="stagger-item inline-block">The</span> <span className="stagger-item inline-block">work</span> <span className="stagger-item inline-block">has</span> <span className="stagger-item inline-block">changed.</span>
-                  </h3>
+              <div className="philosophy-item">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-left stagger-container" data-stagger="0.2">
+                        <h2 className="text-5xl lg:text-8xl font-bold text-[#8A393B]">
+                          <span className="stagger-item inline-block">Built</span> <span className="stagger-item inline-block">for</span> <span className="stagger-item inline-block">long</span> <span className="stagger-item inline-block">life</span>
+                        </h2>
+                    </div>
+                    <div className="text-center mt-4 stagger-container" data-stagger="0.2" data-delay="0.2">
+                        <h2 className="text-5xl lg:text-8xl font-bold text-[#8A393B]">
+                          <span className="stagger-item inline-block">Delivered</span> <span className="stagger-item inline-block">at</span> <span className="stagger-item inline-block">scale</span>
+                        </h2>
+                    </div>
+                    <div className="text-right mt-4 stagger-container" data-stagger="0.2" data-delay="0.4">
+                        <p className="text-3xl lg:text-5xl text-[#F2913F]">
+                          <span className="stagger-item inline-block">Approved</span> <span className="stagger-item inline-block">across</span> <span className="stagger-item inline-block">systems</span>
+                        </p>
+                    </div>
                 </div>
-                <div 
-                    className="h-7 mt-4 reveal-line-left" 
-                    data-delay="0.4"
-                    style={{ 
-                      background: 'linear-gradient(to right, #8A393B, #1E3888, #F2913F, transparent)' 
-                    }}
-                ></div>
               </div>
 
-              <div className="mt-24">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-right stagger-container" data-stagger="0.15">
-                  <h3 className="text-4xl lg:text-7xl font-semibold text-black">
-                    <span className="stagger-item inline-block">The</span> <span className="stagger-item inline-block">approach</span> <span className="stagger-item inline-block">has</span> <span className="stagger-item inline-block">not.</span>
-                  </h3>
+              <div className="philosophy-item">
+                <div className="mt-32">
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left stagger-container" data-stagger="0.15">
+                    <h3 className="text-4xl lg:text-7xl font-semibold text-black">
+                      <span className="stagger-item inline-block">The</span> <span className="stagger-item inline-block">work</span> <span className="stagger-item inline-block">has</span> <span className="stagger-item inline-block">changed.</span>
+                    </h3>
+                  </div>
+                  <div 
+                      className="h-7 mt-4 reveal-line-left" 
+                      data-delay="0.4"
+                      style={{ 
+                        background: 'linear-gradient(to right, #8A393B, #1E3888, #F2913F, transparent)' 
+                      }}
+                  ></div>
                 </div>
-                <div 
-                    className="h-7 mt-4 ml-auto reveal-line-right"
-                    data-delay="0.4"
-                    style={{ 
-                      background: 'linear-gradient(to left, #8A393B, #1E3888, #F2913F, transparent)' 
-                    }}
-                ></div>
+              </div>
+
+              <div className="philosophy-item">
+                <div className="mt-24">
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-right stagger-container" data-stagger="0.15">
+                    <h3 className="text-4xl lg:text-7xl font-semibold text-black">
+                      <span className="stagger-item inline-block">The</span> <span className="stagger-item inline-block">approach</span> <span className="stagger-item inline-block">has</span> <span className="stagger-item inline-block">not.</span>
+                    </h3>
+                  </div>
+                  <div 
+                      className="h-7 mt-4 ml-auto reveal-line-right"
+                      data-delay="0.4"
+                      style={{ 
+                        background: 'linear-gradient(to left, #8A393B, #1E3888, #F2913F, transparent)' 
+                      }}
+                  ></div>
+                </div>
               </div>
               
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-section" data-delay="0.2">
-                  <p className="mt-32 text-3xl lg:text-5xl font-semibold text-[#8A393B]">We build what holds.</p>
+              <div className="philosophy-item">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <p className="mt-32 text-3xl lg:text-5xl font-semibold text-[#8A393B]">We build what holds.</p>
+                </div>
               </div>
             </div>
         </div>
