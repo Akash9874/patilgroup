@@ -97,12 +97,12 @@ const SystemsContent = () => {
               <Image src="/rndimage.JPG" alt="Systems" fill className="object-cover" priority />
               <div className="absolute inset-0 bg-black/60"></div>
             </div>
-            <div className="relative z-10 flex-1 flex items-center justify-center px-6 hero-content">
-              <div className="text-center w-full max-w-lg mx-auto">
+            <div className="relative z-10 flex-1 flex items-center justify-start px-6 hero-content">
+              <div className="text-left w-full max-w-lg">
                 <h1 className="text-5xl sm:text-6xl font-bold animate-fadeInUp drop-shadow-2xl text-white">
                   Our Systems
                 </h1>
-                <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full animate-pulse shadow-lg"></div>
+                <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mr-auto mt-8 rounded-full animate-pulse shadow-lg"></div>
                 <p className="text-white text-xl sm:text-2xl mt-8 font-medium tracking-wide drop-shadow-xl leading-relaxed">
                   Advanced railway engineering solutions
                 </p>
@@ -132,7 +132,7 @@ const SystemsContent = () => {
           {/* Top half */}
           <div className="h-1/2 flex hero-section">
             {/* Left side */}
-            <div className="w-1/2 flex items-center justify-center p-8 hero-content">
+            <div className="w-1/2 flex items-center justify-start p-8 text-left hero-content">
               <h1 className="text-8xl font-bold animate-fadeInUp">Our Systems</h1>
             </div>
             {/* Right side */}

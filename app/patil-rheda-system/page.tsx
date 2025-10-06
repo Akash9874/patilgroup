@@ -17,11 +17,11 @@ const PatilRhedaSystemPage = () => {
     <div>
       <div className="relative">
         {/* Mobile Layout */}
-        <div className="md:hidden relative h-screen bg-black flex items-center justify-center text-center hero-section">
+        <div className="md:hidden relative h-screen bg-black flex items-center justify-start hero-section">
           <div className="absolute inset-0 opacity-50 hero-image">
             <Image src="/rhedarjeda.jpg" alt="Patil RHEDA system" fill className="object-cover" priority sizes="100vw" />
           </div>
-          <div className="relative z-10 p-4 hero-content">
+          <div className="relative z-10 p-4 px-6 text-left hero-content">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-2 animate-fadeInUp">Patil RHEDA System</h1>
             <p className="text-lg sm:text-xl text-gray-200 animate-fadeInUp animate-delay-200">Advanced track solutions for modern railways.</p>
           </div>
@@ -40,13 +40,15 @@ const PatilRhedaSystemPage = () => {
             />
           </div>
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-          <div className="relative h-full flex flex-col justify-center items-start text-left z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 hero-content">
-            <h1 className="text-6xl lg:text-7xl font-bold text-white mb-4 animate-fadeInUp">
-              Patil RHEDA System
-            </h1>
-            <p className="text-gray-200 text-base md:text-lg lg:text-xl mt-4 font-medium max-w-2xl">
-              Advanced slab-track solution optimized for tunnels and elevated structures
-            </p>
+          <div className="absolute inset-0 z-20 flex items-center text-left hero-content">
+            <div className="px-4 sm:px-6 lg:px-8 max-w-7xl">
+              <h1 className="text-6xl lg:text-7xl font-bold text-white mb-4 animate-fadeInUp">
+                Patil RHEDA System
+              </h1>
+              <p className="text-gray-200 text-base md:text-lg lg:text-xl mt-4 font-medium max-w-2xl">
+                Advanced slab-track solution optimized for tunnels and elevated structures
+              </p>
+            </div>
           </div>
         </div>
       </div>

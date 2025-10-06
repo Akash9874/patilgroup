@@ -23,12 +23,12 @@ const PrecastPlinthPage = () => {
           <img src="/preee.jpg" alt="Precast Plinth" className="h-full w-full object-cover z-0" />
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           
-          <div className="absolute inset-0 flex items-center justify-center z-20 hero-content">
-            <div className="text-center px-6">
+          <div className="absolute inset-0 flex items-center justify-start z-20 hero-content">
+            <div className="text-left px-6">
               <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-4 drop-shadow-2xl">
                 Precast Plinth
               </h1>
-              <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto rounded-full shadow-lg"></div>
+              <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mr-auto rounded-full shadow-lg"></div>
               <p className="text-gray-200 text-base mt-4 font-medium">
                 Modular Track Infrastructure
               </p>
@@ -43,8 +43,8 @@ const PrecastPlinthPage = () => {
           <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
           
           {/* Content */}
-          <div className="absolute bottom-0 left-0 z-20 hero-content">
-            <div className="px-6 sm:px-8 md:px-12 pb-16">
+          <div className="absolute inset-0 z-20 flex items-center hero-content">
+            <div className="px-6 sm:px-8 md:px-12 text-left">
               <h1 className="text-white font-bold leading-[0.95] text-6xl md:text-7xl lg:text-8xl">
                 Precast Plinth
               </h1>
