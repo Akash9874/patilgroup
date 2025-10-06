@@ -86,20 +86,20 @@ const IndiaMap: React.FC = () => {
     // Adjusted to ensure pins stay within the map boundaries
     const statePositions: Record<string, { x: number; y: number }> = {
       'IN-UT': { x: 25, y: 25 },      // Uttarakhand - North
-      'IN-AP': { x: 25, y: 75 },      // Andhra Pradesh - Southeast coast  
+      'IN-AP': { x: 25, y: 77 },      // Andhra Pradesh - Southeast coast  
       'IN-BR': { x: 45, y: 40 },      // Bihar - East
       'IN-WB': { x: 48, y: 47 },      // West Bengal - East
       'IN-TG': { x: 27, y: 65 },      // Telangana - South-central
       'IN-OD': { x: 40, y: 56 },      // Odisha - East coast
       'IN-AS': { x: 55, y: 39 },      // Assam - Northeast (moved left from edge)
       'IN-UP': { x: 28, y: 33 },      // Uttar Pradesh - North-central
-      'IN-RJ': { x: 10, y: 33 },      // Rajasthan - Northwest
+      'IN-RJ': { x: 15, y: 37 },      // Rajasthan - Northwest
       'IN-CT': { x: 35, y: 50 },      // Chhattisgarh - Central-east
-      'IN-JH': { x: 39, y: 48 },      // Jharkhand - East
-      'IN-HR': { x: 18, y: 28 },      // Haryana - North
-      'IN-GJ': { x: 5, y: 47 },      // Gujarat - West
+      'IN-JH': { x: 42, y: 48 },      // Jharkhand - East
+      'IN-HR': { x: 20, y: 28 },      // Haryana - North
+      'IN-GJ': { x: 8, y: 50 },      // Gujarat - West
       'IN-KA': { x: 20, y: 80 },      // Karnataka - Southwest
-      'IN-TN': { x: 24, y: 85 },      // Tamil Nadu - South
+      'IN-TN': { x: 24, y: 89 },      // Tamil Nadu - South
       'IN-DL': { x: 22, y: 32 },      // Delhi - North
       'IN-MP': { x: 25, y: 50 },      // Madhya Pradesh - Central
     };

@@ -88,7 +88,7 @@ const SystemsContent = () => {
 
   return (
     <>
-      <section className="relative bg-black text-white">
+      <section className="relative bg-black text-white overflow-hidden">
         {/* Mobile Layout */}
         <div className="md:hidden min-h-screen">
           {/* Mobile Hero Header */}
@@ -130,7 +130,7 @@ const SystemsContent = () => {
         {/* Desktop Layout */}
         <div className="hidden md:block h-screen">
           {/* Top half */}
-          <div className="h-1/2 flex hero-section">
+          <div className="h-1/2 flex hero-section relative overflow-hidden">
             {/* Left side */}
             <div className="w-1/2 flex items-center justify-start p-8 text-left hero-content">
               <h1 className="text-8xl font-bold animate-fadeInUp">Our Systems</h1>
@@ -141,7 +141,7 @@ const SystemsContent = () => {
             </div>
           </div>
           {/* Bottom half */}
-          <div className="h-1/2 flex hero-section">
+          <div className="h-1/2 flex hero-section relative overflow-hidden">
             {/* Left side */}
             <div className="w-1/2 relative hero-image">
               <Image src="/system23.jpg" alt="Engineering Excellence" fill className="object-cover" sizes="50vw" />
@@ -167,7 +167,7 @@ const SystemsContent = () => {
       </section>
 
       {/* Systems Section */}
-      <section className="bg-white text-gray-800 pt-16 md:pt-24 pb-24 overflow-hidden">
+      <section className="relative z-10 bg-white text-gray-800 pt-16 md:pt-24 pb-24 overflow-hidden">
         <div className="space-y-12 md:space-y-24">
           {systemsData.map((system, index) => (
             <div key={index} className="relative group fade-in-section">
@@ -195,15 +195,15 @@ const SystemsContent = () => {
               </div>
 
               {/* Desktop Layout */}
-              <div className="hidden md:block h-56">
+              <div className="hidden md:block h-56 relative overflow-hidden">
                 <div 
-                  className="absolute top-0 left-0 h-full bg-gray-100 w-5/12 bg-cover bg-center"
+                  className="absolute top-0 left-0 h-full bg-gray-100 w-5/12 bg-cover bg-center z-0"
                   style={{ 
                     clipPath: 'polygon(0 0, 100% 0, 85% 100%, 0% 100%)',
                     backgroundImage: system.image ? `url(${system.image})` : 'none'
                   }}
                 ></div>
-                <div className="relative max-w-screen-xl mx-auto h-full">
+                <div className="relative max-w-screen-xl mx-auto h-full z-10">
                   <div className="absolute left-5 top-0 h-full flex items-center w-6/12 transform translate-x-[85%]">
                     <div className="pr-8">
                       <h3 className="text-3xl font-bold font-clash tracking-wide text-amber-600">{system.title}</h3>
