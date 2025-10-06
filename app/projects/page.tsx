@@ -20,7 +20,7 @@ import {
 const projectsData = [
   {
     title: 'Delhi Phase III',
-    image: '/delhimonu.jpg',
+    image: '/delhi metro.png',
     description: `Patil Group was entrusted with the supply and installation of fastening systems across key corridors of Delhi Metro Phase III. The project covered multiple extensions — including Kalindi Kunj to Botanical Garden, Noida City Centre to Sector 62, Dilshad Garden to Ghaziabad, and Escorts Mujesar to Ballabhgarh. We delivered and installed over 2 lakh fastening assemblies, supporting both elevated and underground track structures. The project demanded high precision and performance under challenging urban transit conditions.`,
     client: 'Delhi Metro Rail Corporation (DMRC)',
     principalClient: 'DMRC',
@@ -35,7 +35,7 @@ const projectsData = [
   },
   {
     title: 'Noida Corridor',
-    image: '/noidamonu.jpg',
+    image: '/noida metroo.png',
     description: `Patil Group secured the supply of over 2.1 lakh fastening assemblies for the ballastless track on Line-8 (Janakpuri West - Majlis Park - R.K. Ashram), including 69,000 four-anchor and 1,44,150 two-anchor sets to support both elevated and underground segments.`,
     client: 'Delhi Metro Rail Corporation (DMRC)',
     principalClient: 'DMRC',
@@ -50,7 +50,7 @@ const projectsData = [
   },
   {
     title: 'Kolkata Stretch',
-    image: '/kolkatamonu.jpg',
+    image: '/kolkata metro.png',
     description: `Patil Group contributed to the expansion of the Kolkata Metro network by supplying fastening systems for the Noapara to Barasat via Bimanbandar corridor. This route includes underground, at-grade, and elevated sections. We supplied over 66,000 fastening assemblies engineered for the specific structural and vibration conditions of Kolkata’s mixed-terrain metro line.`,
     client: 'Paras Railtech Pvt. Ltd.',
     principalClient: 'Metro Authority, Kolkata',
@@ -65,7 +65,7 @@ const projectsData = [
   },
   {
     title: 'Ahmedabad Phase II',
-    image: '/ahemdabadmonu.webp',
+    image: '/ahemdabad metro.png',
     description: `For the Phase II expansion of the Ahmedabad Metro, Patil Group supplied fastening systems for the corridor stretching from Motera Stadium to Mahatma Mandir. Over 2 lakh fastening assemblies were delivered to support the construction of ballastless track systems across elevated and at-grade sections.`,
     client: 'KEC International Ltd.',
     principalClient: 'Gujarat Metro Rail Corporation (GMRCL)',
@@ -80,7 +80,7 @@ const projectsData = [
   },
   {
     title: 'Mumbai Line 2B',
-    image: '/mumbaimonu.jpeg',
+    image: '/mumbai metro.png',
     description: `Patil Group supplied fastening systems for Mumbai Metro Line 2B, a critical corridor connecting DN Nagar to Mandale via Bandra. We delivered over 76,000 fastening assemblies, designed for high-traffic, elevated urban infrastructure.`,
     client: 'KEC International Ltd.',
     principalClient: 'Mumbai Metropolitan Region Development Authority (MMRDA)',
@@ -95,7 +95,7 @@ const projectsData = [
   },
   {
     title: 'Mumbai Line 7X',
-    image: '/mumbaimonu2.jpg',
+    image: '/mumbai metro.png',
     description: `Patil Group supplied fastening systems for the extension of Mumbai Metro Line 7, connecting Gundavali to the Chhatrapati Shivaji International Airport (CSIA). This strategic link enhances airport connectivity via the western suburbs. We delivered over 85,000 fastening assemblies, engineered for durability in high-traffic urban transit.`,
     client: 'Paras Railtech Pvt. Ltd.',
     principalClient: 'DMRC',
@@ -204,7 +204,7 @@ const ProjectsPage = () => {
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 z-10 hero-content flex items-center">
           <div className="pl-6 sm:pl-8 md:pl-16 lg:pl-24">
-            <h2 className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium font-clash">Our</h2>
+            <h2 className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold font-clash">Our</h2>
             <h1 className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-clash -mt-1 sm:-mt-2 md:-mt-4">Projects</h1>
           </div>
         </div>
