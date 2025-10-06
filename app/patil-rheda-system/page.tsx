@@ -19,7 +19,7 @@ const PatilRhedaSystemPage = () => {
         {/* Mobile Layout */}
         <div className="md:hidden relative h-screen bg-black flex items-center justify-start hero-section">
           <div className="absolute inset-0 opacity-50 hero-image">
-            <Image src="/rhedarjeda.jpg" alt="Patil RHEDA system" fill className="object-cover" priority sizes="100vw" />
+            <Image src="/Rheda hero image.png" alt="Patil RHEDA system" fill className="object-cover" priority sizes="100vw" />
           </div>
           <div className="relative z-10 p-4 px-6 text-left hero-content">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-2 animate-fadeInUp">Patil RHEDA System</h1>
@@ -31,7 +31,7 @@ const PatilRhedaSystemPage = () => {
         <div className="hidden md:block relative h-screen hero-section">
           <div className="absolute inset-0 hero-image">
             <Image 
-              src="/rhedarjeda.jpg" 
+              src="/Rheda hero image.png" 
               alt="Patil RHEDA system" 
               fill
               className="object-cover object-center z-0" 
