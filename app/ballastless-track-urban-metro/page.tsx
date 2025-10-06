@@ -15,11 +15,11 @@ const BallastlessTrackUrbanMetroPage = () => {
           
           <div className="absolute inset-0 flex items-center justify-start z-20 py-8 hero-content">
             <div className="text-left px-6">
-              <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4 drop-shadow-2xl">
+              <h1 className="hero-title font-bold text-white leading-tight mb-4 drop-shadow-2xl">
                 Ballastless Track<br />for Urban Metros
               </h1>
               <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mr-auto rounded-full shadow-lg"></div>
-              <p className="text-gray-200 text-sm sm:text-base mt-4 font-medium">
+              <p className="text-gray-200 hero-subtitle mt-4 font-medium">
                 Precision metro solutions
               </p>
             </div>
@@ -35,10 +35,10 @@ const BallastlessTrackUrbanMetroPage = () => {
           {/* Content */}
           <div className="absolute inset-0 z-20 flex items-center hero-content">
             <div className="px-6 sm:px-8 md:px-12 text-left">
-              <h1 className="text-white font-bold leading-[0.95] text-5xl md:text-6xl lg:text-7xl">
+              <h1 className="text-white font-bold leading-[0.95] hero-title">
                 Ballastless Track<br />for Urban Metros
               </h1>
-              <p className="text-gray-200 text-base md:text-lg mt-4 font-medium">
+              <p className="text-gray-200 hero-subtitle mt-4 font-medium">
                 Precision Metro Solutions
               </p>
             </div>

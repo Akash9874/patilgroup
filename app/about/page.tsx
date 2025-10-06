@@ -95,7 +95,7 @@ const AboutUsPage = () => {
             </div>
 
             {/* Centered heading */}
-            <h1 className="flex-shrink-0 text-[#8A393B] text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-center px-4 sm:px-6">
+            <h1 className="flex-shrink-0 text-[#8A393B] hero-title font-extrabold leading-tight text-center px-4 sm:px-6">
                 <span className="block">Through</span>
                 <span className="block">the tracks</span>
                 <span className="block">of time</span>

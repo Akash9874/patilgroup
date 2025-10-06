@@ -33,13 +33,13 @@ export default function SustainabilityPage() {
           {/* Mobile Layout */}
           <div className="md:hidden h-full flex items-center justify-center">
             <div className="text-center px-4 w-full max-w-lg mx-auto">
-              <h1 className="text-white font-bold leading-tight text-5xl sm:text-6xl drop-shadow-2xl mb-6">
+              <h1 className="text-white font-bold hero-title drop-shadow-2xl mb-6">
                 Sustainability
               </h1>
-              <p className="text-[#F2913F] text-lg sm:text-xl font-medium leading-relaxed drop-shadow-xl">
+              <p className="text-[#F2913F] font-medium hero-subtitle drop-shadow-xl">
                 Quiet changes. Tangible outcomes.
               </p>
-              <p className="text-white text-lg sm:text-xl mt-3 leading-relaxed drop-shadow-xl">
+              <p className="text-white hero-subtitle mt-3 drop-shadow-xl">
                 Built into every plant, <span className="font-semibold">every process.</span>
               </p>
             </div>
@@ -48,13 +48,13 @@ export default function SustainabilityPage() {
           {/* Desktop Layout - Centered positioning */}
           <div className="hidden md:flex h-full items-center justify-center">
             <div className="text-center px-6 md:px-8 lg:px-12">
-              <h1 className="text-white font-bold leading-none text-6xl sm:text-7xl md:text-8xl drop-shadow-lg mb-6">
+              <h1 className="text-white font-bold hero-title drop-shadow-lg mb-6">
                 Sustainability
               </h1>
-              <p className="text-[#F2913F] text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed drop-shadow-xl">
+              <p className="text-[#F2913F] font-medium hero-subtitle drop-shadow-xl">
                 Quiet changes. Tangible outcomes.
               </p>
-              <p className="text-white text-2xl md:text-3xl lg:text-4xl mt-4 leading-relaxed drop-shadow-xl">
+              <p className="text-white hero-subtitle mt-4 drop-shadow-xl">
                 Built into every plant, <span className="font-semibold">every process.</span>
               </p>
             </div>

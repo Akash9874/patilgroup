@@ -15,7 +15,7 @@ const ResearchAndDevelopmentPage = () => {
             <Image src="/rndimage2.JPG" alt="R&D Hero" fill className="object-cover" priority sizes="100vw" />
           </div>
           <div className="relative z-10 p-4 hero-content">
-            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 animate-fadeInUp">Research and Development</h1>
+            <h1 className="hero-title font-bold text-white mb-4 animate-fadeInUp">Research and Development</h1>
             <p className="text-lg sm:text-xl text-gray-200 animate-fadeInUp animate-delay-200">Driving innovation in railway technology.</p>
             <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full shadow-lg"></div>
             <p className="text-white text-xl sm:text-2xl mt-8 font-medium drop-shadow-xl leading-relaxed">

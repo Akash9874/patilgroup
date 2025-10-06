@@ -11,7 +11,7 @@ const ContactPage = () => {
       <div className="relative h-[50vh] hero-section">
         <img src="/seework2.jpg" alt="Contact us background" className="w-full h-full object-cover hero-image" />
         <div className="absolute bottom-0 left-0 p-8 hero-content">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white px-4">Contact</h1>
+          <h1 className="hero-title font-bold text-white px-4">Contact</h1>
         </div>
         </div>
 

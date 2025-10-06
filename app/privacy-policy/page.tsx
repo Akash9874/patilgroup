@@ -10,7 +10,7 @@ const PrivacyPolicyPage = () => {
     <div className="bg-black text-white">
       <main className="min-h-screen py-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
-          <h1 className="text-6xl font-bold font-clash text-white mb-16">Privacy Policy</h1>
+          <h1 className="hero-title font-bold font-clash text-white mb-16">Privacy Policy</h1>
           
           <div className="space-y-12">
             <div>

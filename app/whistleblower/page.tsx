@@ -55,7 +55,7 @@ const WhistleblowerPage = () => {
       <div className="max-w-4xl mx-auto fade-in-section">
         {!isSubmitted ? (
           <>
-            <h1 className="text-5xl font-bold text-center text-orange-500">
+            <h1 className="hero-title font-bold text-center text-orange-500">
               Whistleblower Policy
             </h1>
             <p className="mt-8 text-lg text-gray-300 text-center leading-relaxed max-w-3xl mx-auto">
@@ -161,7 +161,7 @@ const WhistleblowerPage = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-green-500 mb-6">
+              <h1 className="hero-title font-bold text-green-500 mb-6">
                 Report Submitted Successfully!
               </h1>
               <p className="text-xl text-gray-300 mb-4 max-w-2xl mx-auto">

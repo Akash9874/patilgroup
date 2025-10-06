@@ -33,11 +33,11 @@ export default function LegacyPage() {
           <div className="md:hidden absolute inset-0">
             <div className="relative h-full flex items-center justify-start px-4">
               <div className="w-full max-w-lg">
-                <h1 className="text-white font-bold" style={{ fontFamily: '\"Helvetica Neue\"', fontSize: '48px', fontWeight: 700, lineHeight: '75%' }}>
+                <h1 className="text-white font-bold hero-title">
                   <span className="block">Our</span>
                   <span className="block mt-2">Legacy</span>
                 </h1>
-                <p className="text-[#F2913F] mt-6" style={{ fontFamily: '\"Helvetica Neue\"', fontSize: '28px', fontWeight: 700, lineHeight: '34px' }}>
+                <p className="text-[#F2913F] mt-6 hero-subtitle font-bold">
                   Grounded in Use
                 </p>
               </div>
@@ -47,11 +47,11 @@ export default function LegacyPage() {
         {/* Desktop Layout - Left side positioning */}
         <div className="hidden md:block absolute left-0" style={{ top: '50%', transform: 'translateY(-50%)' }}>
           <div className="px-6 md:px-8 lg:px-12">
-            <h1 className="text-white font-bold leading-[75%]" style={{ fontFamily: '"Helvetica Neue"', fontSize: '64px', fontWeight: 700, lineHeight: '75%' }}>
+            <h1 className="text-white font-bold leading-[75%] hero-title">
               <span className="block">Our</span>
               <span className="block mt-3">Legacy</span>
             </h1>
-            <p className="text-[#F2913F] mt-8" style={{ fontFamily: '"Helvetica Neue"', fontSize: '48px', fontWeight: 700, lineHeight: '56px' }}>
+            <p className="text-[#F2913F] mt-8 hero-subtitle font-bold">
               Grounded in Use
             </p>
           </div>

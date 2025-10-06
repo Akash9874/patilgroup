@@ -24,7 +24,7 @@ const WiresPage = () => {
           
           <div className="relative z-20 h-full flex items-center justify-start hero-content px-6">
             <div className="text-left w-full max-w-lg mx-auto">
-              <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-3 drop-shadow-2xl">
+              <h1 className="hero-title font-bold text-white leading-tight mb-3 drop-shadow-2xl">
                 HTS Wires
               </h1>
               <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full shadow-lg"></div>
@@ -47,7 +47,7 @@ const WiresPage = () => {
           <div className="absolute inset-0 bg-black bg-opacity-60 z-10" />
           <div className="relative z-20 h-full flex items-center max-w-7xl mx-auto px-8 hero-content">
             <div className="w-1/2">
-              <h1 className="text-7xl font-bold text-white mt-2">
+              <h1 className="hero-title font-bold text-white mt-2">
                 HTS<br/>Wires
               </h1>
             </div>

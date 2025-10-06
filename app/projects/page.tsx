@@ -204,8 +204,8 @@ const ProjectsPage = () => {
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 z-10 hero-content flex items-center">
           <div className="pl-6 sm:pl-8 md:pl-16 lg:pl-24">
-            <h2 className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold font-clash">Our</h2>
-            <h1 className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-clash -mt-1 sm:-mt-2 md:-mt-4">Projects</h1>
+            <h2 className="text-white font-bold font-clash hero-title">Our</h2>
+            <h1 className="text-white font-bold font-clash hero-title -mt-1 sm:-mt-2 md:-mt-4">Projects</h1>
           </div>
         </div>
       </section>
@@ -226,7 +226,7 @@ const ProjectsPage = () => {
           </div>
           <div className="w-full md:w-1/2 flex items-center p-6 sm:p-8 md:p-16">
             <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-clash leading-tight">
+              <h2 className="font-bold font-clash hero-subtitle leading-tight">
                 <TypingAnimation
                   text="Engineering Excellence for a Stronger Tomorrow"
                   showCursor={true}

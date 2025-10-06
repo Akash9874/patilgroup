@@ -40,7 +40,7 @@ const SleepersPage = () => {
           <div className="relative z-20 h-full flex items-center justify-start hero-content px-6">
             <div className="text-left max-w-md">
               <div className="p-8">
-                <h1 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4 drop-shadow-2xl">
+                <h1 className="hero-title font-bold text-white leading-tight mb-4 drop-shadow-2xl">
                   Concrete Sleepers
                 </h1>
                 <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] rounded-full shadow-lg"></div>
@@ -70,7 +70,7 @@ const SleepersPage = () => {
             {/* Left Panel */}
             <div className="w-full md:w-1/2 flex flex-col justify-center p-8 md:p-16">
               <div className="text-left">
-                <h1 className="text-6xl lg:text-7xl font-bold text-white mt-2">
+                <h1 className="hero-title font-bold text-white mt-2">
                   Concrete Sleepers
                 </h1>
               </div>

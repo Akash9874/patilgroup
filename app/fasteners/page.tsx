@@ -70,7 +70,7 @@ const FastenersPage = () => {
           
           <div className="relative z-20 h-full flex items-center justify-center hero-content">
             <div className="text-center px-6 w-full max-w-lg mx-auto">
-              <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-3 drop-shadow-2xl">
+              <h1 className="hero-title font-bold text-white leading-tight mb-3 drop-shadow-2xl">
                 Fasteners
               </h1>
               <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full shadow-lg"></div>
@@ -98,7 +98,7 @@ const FastenersPage = () => {
             {/* Left Panel */}
             <div className="w-full md:w-1/3 flex flex-col justify-center p-8 lg:p-12">
               <div className="text-left">
-                <h1 className="text-5xl lg:text-6xl font-bold text-white mt-2">
+                <h1 className="hero-title font-bold text-white mt-2">
                   Fasteners
                 </h1>
               </div>

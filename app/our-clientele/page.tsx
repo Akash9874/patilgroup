@@ -54,7 +54,7 @@ const OurClientelePage = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30" />
           <div className="relative z-10 h-full flex items-center justify-center">
             <div className="text-center px-4 w-full max-w-lg mx-auto">
-              <h1 className="text-white font-bold leading-tight text-5xl sm:text-6xl drop-shadow-2xl">
+              <h1 className="text-white font-bold leading-tight hero-title drop-shadow-2xl">
                 Our Clientele
               </h1>
               <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-8 rounded-full animate-pulse shadow-lg"></div>
@@ -68,7 +68,7 @@ const OurClientelePage = () => {
         {/* Desktop Layout - Original */}
         <div className="hidden md:block">
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white text-center leading-tight px-4">
+            <h1 className="hero-title font-bold text-white text-center leading-tight px-4">
               Our <br /> Clientele
             </h1>
           </div>

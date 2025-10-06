@@ -20,7 +20,7 @@ const CareersContent = () => {
         </div>
 
         <div className="relative z-10 w-full text-center hero-content">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white animate-fadeInUp">
+          <h1 className="hero-title font-bold text-white animate-fadeInUp">
             Careers
           </h1>
         </div>

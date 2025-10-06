@@ -99,11 +99,11 @@ const SystemsContent = () => {
             </div>
             <div className="relative z-10 flex-1 flex items-center justify-start px-6 hero-content">
               <div className="text-left w-full max-w-lg">
-                <h1 className="text-5xl sm:text-6xl font-bold animate-fadeInUp drop-shadow-2xl text-white">
+                <h1 className="hero-title font-bold animate-fadeInUp drop-shadow-2xl text-white">
                   Our Systems
                 </h1>
                 <div className="w-24 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mr-auto mt-8 rounded-full animate-pulse shadow-lg"></div>
-                <p className="text-white text-xl sm:text-2xl mt-8 font-medium tracking-wide drop-shadow-xl leading-relaxed">
+                <p className="text-white hero-subtitle mt-8 font-medium tracking-wide drop-shadow-xl">
                   Advanced railway engineering solutions
                 </p>
               </div>
@@ -133,7 +133,7 @@ const SystemsContent = () => {
           <div className="h-1/2 flex hero-section relative overflow-hidden">
             {/* Left side */}
             <div className="w-1/2 flex items-center justify-start p-8 text-left hero-content">
-              <h1 className="text-8xl font-bold animate-fadeInUp">Our Systems</h1>
+              <h1 className="hero-title font-bold animate-fadeInUp">Our Systems</h1>
             </div>
             {/* Right side */}
             <div className="w-1/2 relative hero-image">

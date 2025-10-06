@@ -22,7 +22,7 @@ const TurnoutsAndSwitchesPage = () => {
         <div className="relative z-20 h-full flex items-center max-w-7xl mx-auto px-8">
           <div className="w-1/2">
             <p className="text-7xl font-bold text-[#8A393B] opacity-75">05</p>
-            <h1 className="text-7xl font-bold text-white mt-2">
+            <h1 className="hero-title font-bold text-white mt-2">
               Turnouts and<br/>Switches
             </h1>
           </div>

@@ -29,7 +29,7 @@ const OurPresencePage = () => {
           <div className="relative z-10 h-full flex items-center justify-center">
             <div className="text-center px-4">
               <div className="p-8">
-                <h1 className="text-white font-bold leading-tight text-3xl sm:text-4xl drop-shadow-2xl">
+                <h1 className="text-white font-bold leading-tight hero-title drop-shadow-2xl">
                   Our Presence
                 </h1>
                 <div className="w-20 h-1 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mt-6 rounded-full animate-pulse"></div>
@@ -45,7 +45,7 @@ const OurPresencePage = () => {
         <div className="hidden md:block">
           <div className="absolute inset-0 bg-black/30" />
           <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 md:bottom-12 md:left-12">
-            <h1 className="text-white font-bold leading-none text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="text-white font-bold leading-none hero-title">
               Our Presence
             </h1>
           </div>
