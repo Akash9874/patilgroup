@@ -49,13 +49,13 @@ const Footer = () => {
               </button>
             </div>
           </div>
-          <div className="md:absolute right-0 md:-bottom-24 lg:-bottom-28 xl:-bottom-32 mt-4 md:mt-0">
+          <div className="md:absolute right-0 md:-bottom-24 lg:-bottom-28 xl:-bottom-32 mt-4 md:mt-12">
             <Image 
               src="/trainfooter.svg"
               alt="Footer illustration"
               width={350}
               height={200}
-              className="object-contain w-64 sm:w-80 md:w-96 lg:w-[500px] xl:w-[600px] h-auto"
+              className="object-contain w-64 sm:w-80 md:w-96 lg:w-[500px] xl:w-[600px] h-auto px-6"
             />
           </div>
         </div>

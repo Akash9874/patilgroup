@@ -354,13 +354,13 @@ export default function Home() {
         <div className={`relative z-10 flex h-full flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 hero-content`}>
           {/* Main Heading - First Animation */}
           <h1 className={`mb-6 transition-all duration-1000 ${showText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <div className="text-white text-4xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight mb-1">
+            <div className="text-white text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-1">
               WORLD’S
             </div>
-            <div className="text-[#F2913F] text-4xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight mb-1">
+            <div className="text-[#F2913F] text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-1">
               LARGEST SLEEPER
             </div>
-            <div className="text-white text-4xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight mb-6">
+            <div className="text-white text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
               MANUFACTURER
             </div>
             {/* Stats removed as requested */}

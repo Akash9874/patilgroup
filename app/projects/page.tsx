@@ -205,7 +205,7 @@ const ProjectsPage = () => {
         <div className="absolute inset-0 z-10 hero-content flex items-center">
           <div className="pl-6 sm:pl-8 md:pl-16 lg:pl-24">
             <h2 className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium font-clash">Our</h2>
-            <h1 className="text-white text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-bold font-clash -mt-1 sm:-mt-2 md:-mt-4">Projects</h1>
+            <h1 className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-clash -mt-1 sm:-mt-2 md:-mt-4">Projects</h1>
           </div>
         </div>
       </section>
