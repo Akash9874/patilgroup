@@ -138,7 +138,7 @@ export const useGSAPAnimations = () => {
     });
 
     // Staggered animation for project cards
-    const projectCards = gsap.utils.toArray('.project-card');
+    const projectCards = gsap.utils.toArray<gsap.DOMTarget>('.project-card');
     if (projectCards.length > 0) {
       projectCards.forEach((card, index) => {
         gsap.set(card, { opacity: 0, y: 50 });
