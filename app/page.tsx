@@ -25,12 +25,12 @@ if (typeof window !== 'undefined') {
 const projects = [
   {
     city: "Bangalore Metro",
-    image: "/bangaloremonu.webp",
+    image: "/bangalore metro.png",
     link: "/projects"
   },
   {
     city: "Delhi Phase III",
-    image: "/delhimonu.jpg",
+    image: "/delhi metro.png",
     link: "/projects"
   },
   {
@@ -40,17 +40,17 @@ const projects = [
   },
   {
     city: "Mumbai Line 7B",
-    image: "/mumbaimonu.jpeg",
+    image: "/mumbai metro.png",
     link: "/projects"
   },
   {
     city: "Kolkata Stretch",
-    image: "/kolkatamonu.jpg",
+    image: "/kolkata metro.png",
     link: "/projects"
   },
     {
     city: "Ahmedabad Phase II",
-    image: "/ahemdabadmonu.webp",
+    image: "/ahemdabad metro.png",
     link: "/projects"
   },
 ];
