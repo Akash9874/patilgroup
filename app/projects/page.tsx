@@ -283,7 +283,7 @@ const ProjectsPage = () => {
                   </div>
 
                   <DialogContent
-                    className="w-[94vw] h-[85vh] max-w-none sm:max-w-[85vw] sm:w-auto sm:h-auto lg:max-w-[85vw] bg-[#18181B] text-gray-300 border border-gray-600 shadow-2xl p-0 rounded-lg sm:rounded-xl overflow-hidden fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 flex flex-col"
+                    className="w-[94vw] max-h-[85vh] max-w-none sm:max-w-[85vw] sm:w-auto lg:max-w-[85vw] bg-[#18181B] text-gray-300 border border-gray-600 shadow-2xl p-0 rounded-lg sm:rounded-xl overflow-hidden fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 flex flex-col"
                   >
                     <DialogHeader className="p-2 sm:p-3 lg:p-6 border-b border-gray-700 bg-[#18181B] z-10 flex flex-row items-center justify-between flex-shrink-0">
                       <DialogTitle className="fluid-h3 font-bold text-orange-500 pr-2 sm:pr-4 leading-tight">{project.title}</DialogTitle>
@@ -295,7 +295,7 @@ const ProjectsPage = () => {
                       </DialogClose>
                     </DialogHeader>
                     <div
-                      className="overflow-y-auto flex-grow"
+                      className="overflow-y-auto overscroll-contain flex-grow"
                       onWheel={(e) => {
                         e.stopPropagation();
                       }}
