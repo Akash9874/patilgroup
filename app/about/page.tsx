@@ -127,27 +127,23 @@ const AboutUsPage = () => {
       <section className="bg-white py-8 sm:py-10 md:py-12 relative fade-in-section" data-delay="0.1" data-duration="0.9">
         {/* Left Edge Gradient Line */}
         <div 
-          className="absolute hidden lg:block reveal-line-left"
+          className="absolute hidden lg:block reveal-line-left gradient-line-ltr gradient-line-md"
           style={{
-            width: '364px',
             height: '28px',
             left: '0px',
             top: '50%',
-            transform: 'translateY(-50%)',
-            background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
+            transform: 'translateY(-50%)'
           }}
         />
         
         {/* Right Edge Gradient Line */}
         <div 
-          className="absolute hidden lg:block reveal-line-right"
+          className="absolute hidden lg:block reveal-line-right gradient-line-rtl gradient-line-md"
           style={{
-            width: '364px',
             height: '28px',
             right: '0px',
             top: '50%',
-            transform: 'translateY(-50%)',
-            background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
+            transform: 'translateY(-50%)'
           }}
         />
         

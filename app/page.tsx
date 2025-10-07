@@ -144,13 +144,11 @@ const GradientLine = () => {
       }}
     >
       <div 
-        className={`h-full transition-all duration-1000 ease-out ${
+        className={`h-full gradient-line-rtl gradient-line-md transition-all duration-1000 ease-out ${
           inView ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
         }`}
         style={{
-          background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
           transformOrigin: 'right',
-          width: '100%',
           height: '100%',
         }}
       />

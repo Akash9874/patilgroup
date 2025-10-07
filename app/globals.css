@@ -222,6 +222,20 @@ img {
   will-change: transform, opacity;
 }
 
+/* Reusable gradient line utilities */
+.gradient-line-ltr {
+  background: linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%);
+}
+
+.gradient-line-rtl {
+  background: linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%);
+}
+
+/* Sizes (width only; control height via Tailwind h-*) */
+.gradient-line-sm { width: clamp(140px, 30vw, 320px); }
+.gradient-line-md { width: clamp(160px, 35vw, 560px); }
+.gradient-line-lg { width: clamp(200px, 60vw, 864px); }
+
 /* Optimize video performance */
 video {
   -webkit-transform: translateZ(0);

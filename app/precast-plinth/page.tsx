@@ -118,13 +118,11 @@ const PrecastPlinthPage = () => {
       <section className="bg-white py-6 sm:py-8 md:py-10 relative">
         {/* Right Edge Gradient Line */}
         <div 
-          className="absolute hidden lg:block fade-in-section"
+          className="absolute hidden lg:block fade-in-section gradient-line-rtl gradient-line-lg"
           style={{
-            width: '680 px',
             height: '28px',
             right: '0px',
-            top: '40%',
-            background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
+            top: '40%'
           }}
         />
         

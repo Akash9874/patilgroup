@@ -195,14 +195,7 @@ const InsertsPage = () => {
                   SGCI Inserts
                 </h2>
                 {/* Inline Gradient Line */}
-                <div 
-                    className="ml-4 flex-shrink-0"
-                  style={{
-                    width: '400px',
-                    height: '28px',
-                    background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
-                  }}
-                />
+                <div className="ml-4 flex-shrink-0 h-7 gradient-line-ltr gradient-line-sm" />
               </div>
                 <p className="fluid-body text-gray-700 text-justify">
                 Patil Group produces SGCI inserts for all sleeper types, with our Bokaro plant housing the country's largest facility, with a capacity of 1.3 million inserts per month.
@@ -267,7 +260,7 @@ const InsertsPage = () => {
             {/* Desktop Layout */}
             <div className="hidden lg:block">
           {/* Section Header */}
-              <div className="text-left mb-12">
+              <div className="text-left mb-12 ml-24 xl:ml-32">
                 <h2 className="fluid-h2 font-bold text-[#8A393B]">
               Base Plates
             </h2>
@@ -423,14 +416,7 @@ const InsertsPage = () => {
                   Railway Braking System
                 </h2>
                 {/* Inline Gradient Line */}
-                <div 
-                    className="ml-4 flex-shrink-0"
-                  style={{
-                    width: '500px',
-                    height: '28px',
-                    background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
-                  }}
-                />
+                <div className="ml-4 flex-shrink-0 h-7 gradient-line-ltr gradient-line-md" />
               </div>
                 <p className="fluid-body text-gray-700 text-justify">
                 Our foundries deliver critical castings for railway braking assemblies, including lining holders, double eyes, hinges, levers, connectors, covers, and cylinders—ensuring safety and durability in service.
@@ -447,7 +433,7 @@ const InsertsPage = () => {
         <div 
           className="absolute hidden lg:block fade-in-section"
           style={{
-            width: '264px',
+            width: '160px',
             height: '28px',
             left: '0px',
             top: '30px',

@@ -58,13 +58,11 @@ const PatilRhedaSystemPage = () => {
         <section className="bg-white py-6 sm:py-8 md:py-10 relative">
           {/* Top Left Gradient Line */}
           <div 
-            className="absolute hidden lg:block fade-in-section"
+            className="absolute hidden lg:block fade-in-section gradient-line-ltr gradient-line-lg"
             style={{
-              width: '864px',
               height: '28px',
               left: '0px',
-              top: '0px',
-              background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
+              top: '0px'
             }}
           />
           
@@ -76,13 +74,11 @@ const PatilRhedaSystemPage = () => {
 
           {/* Bottom Right Gradient Line */}
           <div 
-            className="absolute hidden lg:block fade-in-section"
+            className="absolute hidden lg:block fade-in-section gradient-line-rtl gradient-line-lg"
             style={{
-              width: '864px',
               height: '28px',
               right: '0px',
-              bottom: '40px',
-              background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
+              bottom: '40px'
             }}
           />
         </section>
