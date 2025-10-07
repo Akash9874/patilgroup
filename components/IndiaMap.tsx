@@ -47,108 +47,35 @@ const IndiaMap: React.FC = () => {
       svgEl.removeEventListener('pointerleave', onLeave);
     };
   }, [svgMarkup]);
-
-  // Labels per state (based on provided mapping). We compute positions dynamically at the hovered state's centroid.
-  const labelsByState: Record<string, string[]> = useMemo(
-    () => ({
-      'IN-UT': ['Pathri'],
-      'IN-AP': ['Bobbili', 'Kovvur'],
-      'IN-BR': ['Gaya'],
-      'IN-WB': ['Anara'],
-      'IN-TG': ['Medchal', 'Kallakal', 'Wadiyaram'],
-      'IN-OD': ['Kaipadar'],
-      'IN-AS': ['Mirza', 'Bongaigaon'],
-      'IN-UP': ['Burhwal'],
-      'IN-RJ': ['Roopangarh'],
-      'IN-CT': ['Kargi'],
-      'IN-JH': ['Bokaro'],
-      'IN-HR': ['Sholaka'],
-      'IN-GJ': ['Udvada'],
-      'IN-KA': ['Tumkur', 'Hubli'],
-      'IN-TN': ['Tirumangalam'],
-      'IN-DL': ['Delhi'],
-      'IN-MP': ['Bhopal'],
-      'IN-TR': [],
-      'IN-MZ': [],
-      'IN-NL': [],
-      'IN-MN': [],
-    }),
+  
+  // Each pin has independent coordinates (percentages of the map container)
+  const activePins: Pin[] = useMemo(
+    () => [
+      { label: 'Pathri', x: 28, y: 30 },
+      { label: 'Sholaka', x: 20, y: 31 },
+      { label: 'Delhi', x: 22, y: 32 },
+      { label: 'Roopangarh', x: 17, y: 40 },
+      { label: 'Bhopal', x: 22, y: 45 },
+      { label: 'Kargi', x: 35, y: 50 },
+      { label: 'Gaya', x: 41, y: 43 },
+      { label: 'Bokaro', x: 42, y: 48 },
+      { label: 'Anara', x: 48, y: 47 },
+      { label: 'Kaipadar', x: 40, y: 59 },
+      { label: 'Mirza', x: 53, y: 39 },
+      { label: 'Bongaigaon', x: 57, y: 39 },
+      { label: 'Udvada', x: 11, y: 55 },
+      { label: 'Medchal', x: 24, y: 68 },
+      { label: 'Kallakal', x: 26, y: 66.5 },
+      { label: 'Wadiyaram', x: 27, y: 68 },
+      { label: 'Bobbili', x: 35, y: 67 },
+      { label: 'Kovvur', x: 28, y: 73 },
+      { label: 'Hubli', x: 17, y: 75 },
+      { label: 'Tumkur', x: 20, y: 80 },
+      { label: 'Tirumangalam', x: 24, y: 92 },
+      { label: 'Burhwal', x: 28, y: 33 },
+    ],
     []
   );
-
-
-
-  // Compute all pins for all states at once
-  const activePins: Pin[] = useMemo(() => {
-    const pins: Pin[] = [];
-    
-    // Predefined positions for each state's pins (as percentage of container)
-    // Adjusted to ensure pins stay within the map boundaries
-    const statePositions: Record<string, { x: number; y: number }> = {
-      'IN-UT': { x: 25, y: 25 },      // Uttarakhand - North
-      'IN-AP': { x: 25, y: 77 },      // Andhra Pradesh - Southeast coast  
-      'IN-BR': { x: 45, y: 40 },      // Bihar - East
-      'IN-WB': { x: 48, y: 47 },      // West Bengal - East
-      'IN-TG': { x: 27, y: 65 },      // Telangana - South-central
-      'IN-OD': { x: 40, y: 56 },      // Odisha - East coast
-      'IN-AS': { x: 55, y: 39 },      // Assam - Northeast (moved left from edge)
-      'IN-UP': { x: 28, y: 33 },      // Uttar Pradesh - North-central
-      'IN-RJ': { x: 15, y: 37 },      // Rajasthan - Northwest
-      'IN-CT': { x: 35, y: 50 },      // Chhattisgarh - Central-east
-      'IN-JH': { x: 42, y: 48 },      // Jharkhand - East
-      'IN-HR': { x: 20, y: 28 },      // Haryana - North
-      'IN-GJ': { x: 8, y: 50 },      // Gujarat - West
-      'IN-KA': { x: 20, y: 80 },      // Karnataka - Southwest
-      'IN-TN': { x: 24, y: 89 },      // Tamil Nadu - South
-      'IN-DL': { x: 22, y: 32 },      // Delhi - North
-      'IN-MP': { x: 25, y: 50 },      // Madhya Pradesh - Central
-    };
-
-    Object.entries(labelsByState).forEach(([stateId, labels]) => {
-      const statePos = statePositions[stateId];
-      if (!statePos || labels.length === 0) return;
-      
-      labels.forEach((label, idx) => {
-        // For states with multiple locations, spread them horizontally and vertically
-        let xOffset = 0;
-        let yOffset = 0;
-        
-        // Special handling for states with multiple locations
-        if (stateId === 'IN-TG' && labels.length > 1) {
-          // Telangana - spread horizontally
-          xOffset = (idx - 1) * 3;
-          yOffset = idx * 1.5;
-        } else if (stateId === 'IN-AP' && labels.length > 1) {
-          // Andhra Pradesh - one north, one south
-          if (label === 'Bobbili') {
-            yOffset = -3; // Northern AP
-          } else if (label === 'Kovvur') {
-            yOffset = 2; // Southern AP
-          }
-        } else if (stateId === 'IN-AS' && labels.length > 1) {
-          // Assam - spread horizontally
-          xOffset = (idx - 0.5) * 4;
-        } else if (stateId === 'IN-KA' && labels.length > 1) {
-          // Karnataka - Tumkur near Bangalore, Hubli northwest
-          if (label === 'Hubli') {
-            xOffset = -3;
-            yOffset = -2;
-          }
-        } else {
-          // Default stacking for other states with multiple locations
-          yOffset = idx * 2;
-        }
-        
-        pins.push({
-          x: statePos.x + xOffset,
-          y: statePos.y + yOffset,
-          label
-        });
-      });
-    });
-    
-    return pins;
-  }, [labelsByState]);
   return (
     <div className="map-container" aria-label="India map" ref={containerRef}>
       {/* Enhanced Mobile Instructions */}
