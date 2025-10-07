@@ -206,8 +206,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  transform: translateZ(0);
-  backface-visibility: hidden;
 }
 
 /* Hardware acceleration for smooth animations */
