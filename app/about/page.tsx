@@ -236,7 +236,7 @@ const AboutUsPage = () => {
                     </h3>
                   </div>
                   <div 
-                      className="h-7 mt-4 reveal-line-left" 
+                      className="h-7 mt-4 w-1/2 reveal-line-left" 
                       data-delay="0.4"
                       style={{ 
                         background: 'linear-gradient(to right, #8A393B, #1E3888, #F2913F, transparent)' 
@@ -253,7 +253,7 @@ const AboutUsPage = () => {
                     </h3>
                   </div>
                   <div 
-                      className="h-7 mt-4 ml-auto reveal-line-right"
+                      className="h-7 mt-4 ml-auto w-1/2 reveal-line-right"
                       data-delay="0.4"
                       style={{ 
                         background: 'linear-gradient(to left, #8A393B, #1E3888, #F2913F, transparent)' 
