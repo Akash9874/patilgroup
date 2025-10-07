@@ -311,25 +311,40 @@ export default function Home() {
   useGSAPAnimations();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [showText, setShowText] = useState(false);
+  const [videoDuration, setVideoDuration] = useState<number | null>(null);
 
   useEffect(() => {
-    if (videoRef.current) {
-      // Play video once on mount
-      videoRef.current.play().catch(error => {
-        console.error("Video play failed:", error);
-      });
+    if (!videoRef.current) return;
 
-      // Listen for video end event
-      const handleVideoEnd = () => {
+    // Play video once on mount
+    videoRef.current.play().catch(() => {
+      // ignore; autoplay might be blocked on some platforms
+    });
+
+    const handleLoadedMetadata = () => {
+      setVideoDuration(videoRef.current?.duration ?? null);
+    };
+
+    const handleTimeUpdate = () => {
+      const current = videoRef.current?.currentTime ?? 0;
+      const duration = videoDuration ?? videoRef.current?.duration ?? 0;
+      // Start text just before the video finishes to avoid any post-end lag
+      if (!showText && duration > 0 && current >= Math.max(0, duration - 1)) {
         setShowText(true);
-      };
+      }
+    };
 
-      videoRef.current.addEventListener('ended', handleVideoEnd);
+    const handleEnded = () => setShowText(true);
 
-      return () => {
-        videoRef.current?.removeEventListener('ended', handleVideoEnd);
-      };
-    }
+    videoRef.current.addEventListener('loadedmetadata', handleLoadedMetadata);
+    videoRef.current.addEventListener('timeupdate', handleTimeUpdate);
+    videoRef.current.addEventListener('ended', handleEnded);
+
+    return () => {
+      videoRef.current?.removeEventListener('loadedmetadata', handleLoadedMetadata);
+      videoRef.current?.removeEventListener('timeupdate', handleTimeUpdate);
+      videoRef.current?.removeEventListener('ended', handleEnded);
+    };
   }, []);
 
   return (
