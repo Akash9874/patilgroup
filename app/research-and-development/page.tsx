@@ -37,7 +37,7 @@ const ResearchAndDevelopmentPage = () => {
             <h1 className="text-7xl font-bold text-white mb-6 animate-fadeInUp">
               Research and Development
             </h1>
-            <p className="text-gray-200 text-lg mt-4 font-medium">
+            <p className="text-gray-200 text-xl lg:text-3xl mt-4 font-medium">
               Innovation and technology solutions
             </p>
           </div>

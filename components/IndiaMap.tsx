@@ -47,7 +47,7 @@ const IndiaMap: React.FC = () => {
       svgEl.removeEventListener('pointerleave', onLeave);
     };
   }, [svgMarkup]);
-  
+
   // Each pin has independent coordinates (percentages of the map container)
   const activePins: Pin[] = useMemo(
     () => [
