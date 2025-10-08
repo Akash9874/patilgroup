@@ -261,7 +261,7 @@ const BallastlessTrackUrbanMetroPage = () => {
       {/* Main Line Section */}
       <section className="bg-white py-6 sm:py-8 md:py-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
-          <h2 className="text-[#8A393B] text-2xl sm:text-3xl md:text-4xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-tight">
+          <h2 className="text-[#8A393B] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 leading-tight">
             Ballastless Track System for Main Lines
           </h2>
           <p className="text-black fluid-body max-w-4xl">
@@ -277,8 +277,8 @@ const BallastlessTrackUrbanMetroPage = () => {
             {/* Image */}
             <div className="w-full md:w-1/2">
                 <Image
-                  src="/Ballastless-track-with-discrete-rail-seats-on-a-continuously-reinforced-concrete-pavement.png"
-                  alt="Ballastless track with discrete rail seats on continuously reinforced concrete pavement"
+                  src="/2nd Image ballestless change.png"
+                  alt="Ballastless track deployment across metro projects"
                 width={800} 
                 height={600} 
                 className="rounded-lg shadow-lg w-full h-auto object-cover" 

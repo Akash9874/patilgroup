@@ -116,31 +116,16 @@ const PrecastPlinthPage = () => {
 
       {/* Implementation Situations Section */}
       <section className="bg-white py-6 sm:py-8 md:py-10 relative">
-        {/* Right Edge Gradient Line */}
-        <div 
-          className="absolute hidden lg:block fade-in-section gradient-line-rtl gradient-line-lg"
-          style={{
-            height: '28px',
-            right: '0px',
-            top: '40%'
-          }}
-        />
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
           <h3 className="text-[#F2913F] fluid-h2 font-bold mb-6">
               The Plinth Solutions can be implemented in the following situations:
             </h3>
             
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 sm:gap-8 text-black fluid-body">
-            <div className="text-center sm:text-left font-bold">
-              Elevated track
-            </div>
-            <div className="text-center sm:text-left font-bold">
-              Depots
-            </div>
-            <div className="text-center sm:text-left font-bold">
-              Tunnels & viaducts.
-            </div>
+          <div className="flex flex-col sm:flex-row sm:justify-start sm:items-center gap-4 sm:gap-6 text-black fluid-body">
+            <span className="inline-block bg-gray-100 rounded-md px-4 py-2 font-bold">Elevated track</span>
+            <span className="inline-block bg-gray-100 rounded-md px-4 py-2 font-bold">Depots</span>
+            <span className="inline-block bg-gray-100 rounded-md px-4 py-2 font-bold">Tunnels & viaducts.</span>
           </div>
         </div>
       </section>
@@ -164,8 +149,8 @@ const PrecastPlinthPage = () => {
             {/* Image */}
             <div className="w-full md:w-1/2">
               <Image 
-                src="/precasttrack.jpeg" 
-                alt="Precast track implementation" 
+                src="/2nd image precast plinth.png" 
+                alt="Precast plinth track implementation" 
                 width={800} 
                 height={600} 
                 className="rounded-lg shadow-lg w-full h-auto object-cover" 
