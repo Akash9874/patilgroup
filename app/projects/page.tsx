@@ -283,7 +283,7 @@ const ProjectsPage = () => {
                   </div>
 
                   <DialogContent
-                    className="w-[94vw] max-h-[85vh] max-w-none sm:max-w-[85vw] sm:w-auto lg:max-w-[85vw] bg-[#18181B] text-gray-300 border border-gray-600 shadow-2xl p-0 rounded-lg sm:rounded-xl overflow-hidden fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 flex flex-col"
+                    className="w-[94vw] max-h-[90vh] max-w-none sm:max-w-[92vw] md:max-w-[88vw] lg:max-w-[85vw] bg-[#18181B] text-gray-300 border border-gray-600 shadow-2xl p-0 rounded-lg sm:rounded-xl overflow-hidden fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 flex flex-col"
                   >
                     <DialogHeader className="p-2 sm:p-3 lg:p-6 border-b border-gray-700 bg-[#18181B] z-10 flex flex-row items-center justify-between flex-shrink-0">
                       <DialogTitle className="fluid-h3 font-bold text-orange-500 pr-2 sm:pr-4 leading-tight">{project.title}</DialogTitle>
@@ -310,6 +310,26 @@ const ProjectsPage = () => {
                           className="rounded-lg object-cover w-full h-40 sm:h-48 shadow-lg"
                         />
                         
+                        {project.conclusion && (
+                          <div className="border-l-4 border-orange-500 pl-3 bg-zinc-800/30 p-3 sm:p-4 rounded-r-lg">
+                            <p className="text-sm sm:text-base font-medium text-gray-400 italic leading-relaxed">"{project.conclusion}"</p>
+                          </div>
+                        )}
+
+                        {project.specs && project.specs.length > 0 && (
+                          <div className="bg-zinc-800/50 p-3 sm:p-4 rounded-lg border border-gray-700 w-full">
+                            <h4 className="text-base sm:text-lg font-semibold text-orange-400 mb-3">Specifications</h4>
+                            <ul className="space-y-2">
+                              {project.specs.map((spec, i) => (
+                                <li key={i} className="flex items-start text-sm sm:text-base">
+                                  <ArrowRight size={14} className="mr-2 mt-0.5 text-orange-500 flex-shrink-0" />
+                                  <span className="text-gray-300">{spec}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+
                         <div>
                           <h4 className="fluid-h3 font-semibold text-orange-400 mb-3 border-b border-gray-700 pb-2">Project Overview</h4>
                           <p className="text-gray-400 fluid-body">{project.description}</p>
@@ -328,26 +348,6 @@ const ProjectsPage = () => {
                             </div>
                           </div>
                         </div>
-
-                        {project.specs && project.specs.length > 0 && (
-                          <div className="bg-zinc-800/50 p-3 sm:p-4 rounded-lg border border-gray-700">
-                            <h4 className="text-base sm:text-lg font-semibold text-orange-400 mb-3">Specifications</h4>
-                            <ul className="space-y-2">
-                              {project.specs.map((spec, i) => (
-                                <li key={i} className="flex items-start text-sm sm:text-base">
-                                  <ArrowRight size={14} className="mr-2 mt-0.5 text-orange-500 flex-shrink-0" />
-                                  <span className="text-gray-300">{spec}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-
-                        {project.conclusion && (
-                          <div className="border-l-4 border-orange-500 pl-3 bg-zinc-800/30 p-3 sm:p-4 rounded-r-lg">
-                            <p className="text-sm sm:text-base font-medium text-gray-400 italic leading-relaxed">"{project.conclusion}"</p>
-                          </div>
-                        )}
                       </div>
 
                       {/* Desktop Layout */}
@@ -365,6 +365,19 @@ const ProjectsPage = () => {
                               <p className="text-lg font-medium text-gray-400 italic">"{project.conclusion}"</p>
                             </div>
                           )}
+                          {project.specs && project.specs.length > 0 && (
+                            <div className="bg-zinc-800/50 p-4 rounded-lg border border-gray-700 w-full mt-6">
+                              <h4 className="text-lg font-semibold text-orange-400 mb-3">Specifications</h4>
+                              <ul className="space-y-2">
+                                {project.specs.map((spec, i) => (
+                                  <li key={i} className="flex items-start text-sm">
+                                    <ArrowRight size={14} className="mr-2 mt-0.5 text-orange-500 flex-shrink-0" />
+                                    <span className="text-gray-300">{spec}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
                         </div>
                         <div className="col-span-2 space-y-6">
                           <div>
@@ -379,20 +392,6 @@ const ProjectsPage = () => {
                               <p><strong className="text-gray-500 w-28 inline-block">Principal Client:</strong> {project.principalClient}</p>
                             </div>
                           </div>
-
-                          {project.specs && project.specs.length > 0 && (
-                            <div className="bg-zinc-800/50 p-4 rounded-lg border border-gray-700">
-                              <h4 className="text-lg font-semibold text-orange-400 mb-3">Specifications</h4>
-                              <ul className="space-y-2">
-                                {project.specs.map((spec, i) => (
-                                  <li key={i} className="flex items-start text-sm">
-                                    <ArrowRight size={14} className="mr-2 mt-0.5 text-orange-500 flex-shrink-0" />
-                                    <span>{spec}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
                         </div>
                       </div>
                     </div>
