@@ -45,7 +45,7 @@ const Footer = () => {
               </button>
             </div>
           </div>
-          <div className="md:absolute right-0 md:-bottom-32 lg:-bottom-36 xl:-bottom-40 mt-4 md:mt-12">
+          <div className="md:absolute right-0 md:-bottom-32 lg:-bottom-36 xl:-bottom-40 mt-4 md:mt-12 pointer-events-none">
             <Image 
               src="/trainfooter.svg"
               alt="Footer illustration"
@@ -100,15 +100,11 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex justify-between items-center mt-6 sm:mt-8">
               <div className="flex flex-wrap gap-4">
-                <Link href="/whistleblower">
-                  <button className="bg-[#F2913F] text-black font-bold py-3 px-6 rounded-full text-sm hover:bg-orange-400 transition-colors">
-                    WHISTLEBLOWER POLICY
-                  </button>
+                <Link href="/whistleblower" className="inline-block">
+                  <span className="inline-block bg-[#F2913F] text-black font-bold py-3 px-6 rounded-full text-sm hover:bg-orange-400 transition-colors">WHISTLEBLOWER POLICY</span>
                 </Link>
-                <Link href="/privacy-policy">
-                  <button className="bg-[#F2913F] text-black font-bold py-3 px-6 rounded-full text-sm hover:bg-orange-400 transition-colors">
-                    PRIVACY POLICY
-                  </button>
+                <Link href="/privacy-policy" className="inline-block">
+                  <span className="inline-block bg-[#F2913F] text-black font-bold py-3 px-6 rounded-full text-sm hover:bg-orange-400 transition-colors">PRIVACY POLICY</span>
                 </Link>
               </div>
              <button 
