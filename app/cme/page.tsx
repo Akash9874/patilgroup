@@ -114,69 +114,35 @@ const CMEPage = () => {
         </div>
       </section>
 
-      {/* Our Key Objectives */}
+      {/* Our Key Goals - compact layout in white section */}
       <section className="fade-in-section">
-        {/* Title Bar */}
-        <div className="bg-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-3 sm:py-4 md:py-6">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-[#F2913F] fade-in-section">Our Key Goals</h2>
-          </div>
-        </div>
-
-        {/* Content */}
         <div className="bg-white">
-          <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2">
-            {/* Left column with divider */}
-            <div className="md:border-r border-gray-200 p-4 sm:p-6 md:p-10 flex flex-col justify-between min-h-[20rem] sm:min-h-[26rem] md:min-h-[32rem]">
-              <div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#F2913F] fade-in-section mb-3 sm:mb-4">
-                  ZERO BAD
-                </h2>
-                <div className="mb-6 sm:mb-8 space-y-2 sm:space-y-3 fade-in-section">
-                  <div className="bg-[#8A393B] rounded-xl p-3 sm:p-4 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#8A393B]/30 hover:bg-[#9d4447]">
-                    <p className="text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl">
-                      Zero Breakdown
-                    </p>
-                  </div>
-                  <div className="bg-[#F2913F] rounded-xl p-3 sm:p-4 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#F2913F]/30 hover:bg-[#ff9f4a]">
-                    <p className="text-black font-bold text-sm sm:text-base md:text-lg lg:text-xl">
-                      Zero Accidents
-                    </p>
-                  </div>
-                  <div className="bg-[#8A393B] rounded-xl p-3 sm:p-4 cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#8A393B]/30 hover:bg-[#9d4447]">
-                    <p className="text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl">
-                      Zero Downtime
-                    </p>
-                  </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-12 sm:py-14 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-start">
+            {/* Left column */}
+            <div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#F2913F] mb-3 sm:mb-4">Our Key Goals</h2>
+              <p className="text-base sm:text-lg font-semibold text-[#8A393B] mb-4">ZERO-BAD Approach</p>
+              <div className="relative flex items-center overflow-visible">
+                <img src="/zero%20cme%20element.png" alt="Zero element" className="absolute left-0 top-1/2 -translate-y-1/2 h-36 sm:h-44 md:h-56 w-auto select-none z-0 opacity-95" />
+                <div className="relative z-10 flex-1 space-y-3 ml-24 sm:ml-32 md:ml-40">
+                  <div className="bg-[#8A393B] text-white rounded-lg px-5 py-2.5 text-base sm:text-lg font-semibold w-full max-w-sm">Breakdown</div>
+                  <div className="bg-[#F2913F] text-black rounded-lg px-5 py-2.5 text-base sm:text-lg font-semibold w-full max-w-sm">Accidents</div>
+                  <div className="bg-[#8A393B] text-white rounded-lg px-5 py-2.5 text-base sm:text-lg font-semibold w-full max-w-sm">Downtime</div>
                 </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-[#8A393B] fade-in-section mb-3 sm:mb-4">
-                  Focus Area
-                </h3>
-                <ul className="space-y-2 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-black/90 fade-in-section">
-                  <li className="flex items-start">
-                    <span className="text-[#F2913F] mr-2 sm:mr-3">•</span>
-                    Ensure HSE (Health, Safety and Environment)
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#F2913F] mr-2 sm:mr-3">•</span>
-                    Improving process and product quality
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#F2913F] mr-2 sm:mr-3">•</span>
-                    Enhance equipment and operations reliability
-                  </li>
-                </ul>
               </div>
-              <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-black/90 max-w-xl fade-in-section mt-4 sm:mt-6">
-                Achieving Process Excellence through Statistical quality control (SQC) and statistical process control (SPC)
-              </p>
+
+              <h3 className="mt-8 text-xl sm:text-2xl font-bold text-[#8A393B]">Focus Area</h3>
+              <ul className="mt-3 space-y-2 text-base sm:text-lg text-black/90">
+                <li className="flex items-start"><span className="text-[#F2913F] mr-2">•</span>Ensure HSE (Health, Safety and Environment)</li>
+                <li className="flex items-start"><span className="text-[#F2913F] mr-2">•</span>Improving process and product quality</li>
+                <li className="flex items-start"><span className="text-[#F2913F] mr-2">•</span>Enhance equipment and operations reliability</li>
+              </ul>
+              <p className="mt-4 text-sm sm:text-base text-black/80 max-w-xl">Achieving Process Excellence through Statistical quality control (SQC) and statistical process control (SPC)</p>
             </div>
 
-            {/* Right column with rectangular image */}
-            <div className="relative p-4 sm:p-6 md:p-10 flex items-center justify-center">
-              <div className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
-                <img src="/cmehero.JPG" alt="OEE Visual" className="w-full h-full object-cover" />
-              </div>
+            {/* Right column image */}
+            <div className="flex justify-center md:justify-end">
+              <img src="/cmenewperson.jpg" alt="CME shopfloor" className="w-full max-w-md sm:max-w-lg md:max-w-xl rounded-md object-cover" />
             </div>
           </div>
         </div>
@@ -272,28 +238,36 @@ const CMEPage = () => {
 
       {/* Empowering Rural Youth Section */}
       <section className="bg-white text-black py-8 sm:py-12 md:py-16 lg:py-24 fade-in-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-start">
           {/* Left: Copy */}
           <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#F2913F] leading-tight fade-in-section">
-              Empowering Rural Youth through Skill Development centre in Bilaspur
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#F2913F] leading-tight fade-in-section">
+              Empowering Rural Youth
+              <br className="hidden sm:block" /> through Skill Development
             </h2>
-            <h3 className="mt-3 sm:mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-semibold text-[#8A393B] fade-in-section">
+            <h3 className="mt-2 text-lg sm:text-xl md:text-2xl font-semibold text-[#8A393B] fade-in-section">
               Skilling Rural India for a Smarter Tomorrow
             </h3>
 
-            <div className="mt-4 sm:mt-6 md:mt-8 space-y-3 sm:space-y-4 md:space-y-6 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed fade-in-section">
+            <div className="mt-4 space-y-4 text-sm sm:text-base leading-relaxed fade-in-section max-w-xl text-justify">
               <p>
-                Recognizing the growing demand for skilled professionals in the railway industry, Patil Group is committed to playing its part in upskilling rural youth and preparing them for emerging opportunities.
+                Recognizing the growing demand for skilled professionals in the railway industry, Patil Group is committed to
+                playing its part in upskilling rural youth and preparing them for emerging opportunities.
               </p>
               <p>
-                At our Skill Development Centre, we provide hands-on training to graduates from ITIs and polytechnic institutes, equipping them with specialized skills essential for railway manufacturing and infrastructure projects. To ensure a seamless transition into the industry, we also offer assured employment upon successful completion of the program.
+                At our Skill Development Centre, we provide hands‑on training to graduates from ITIs and polytechnic institutes,
+                equipping them with specialized skills essential for railway manufacturing and infrastructure projects. To ensure a
+                seamless transition into the industry, we also offer assured employment upon successful completion of the program.
               </p>
             </div>
           </div>
 
-          {/* Right: Image */}
-          <div className="flex justify-center md:justify-end">
+          {/* Right: Image with gradient bar */}
+          <div className="relative flex justify-center md:justify-end">
+            <div
+              className="absolute -top-3 left-0 h-2 w-40 sm:w-56 rounded-full"
+              style={{ background: 'linear-gradient(90deg, #F2913F 0%, #1E3888 40%, #8A393B 100%)' }}
+            />
             <img
               src="/cmeonemore.JPG"
               alt="Skill development visual"
@@ -482,3 +456,5 @@ const CMEPage = () => {
 };
 
 export default CMEPage;
+
+

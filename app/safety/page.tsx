@@ -101,13 +101,7 @@ const SafetyPage = () => {
               {/* Dark overlay for text readability */}
               <div className="absolute inset-0 bg-black/50"></div>
               
-              {/* Mobile gradient line */}
-              <div 
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 h-1 w-32 sm:w-40"
-                style={{
-                  background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
-                }}
-              ></div>
+              {/* Gradient line removed as requested */}
               
               {/* Mobile Text Overlay */}
               <div className="absolute inset-0 flex items-center">
@@ -139,13 +133,7 @@ const SafetyPage = () => {
               {/* Dark overlay for text readability */}
               <div className="absolute inset-0 bg-black/40"></div>
               
-              {/* Desktop gradient line */}
-              <div 
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 h-2 w-[500px] xl:w-[600px]"
-                style={{
-                  background: 'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 100%)'
-                }}
-              ></div>
+              {/* Gradient line removed as requested */}
               
               {/* Desktop Text Overlay */}
               <div className="absolute inset-0 flex items-center">

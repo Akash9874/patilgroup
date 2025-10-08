@@ -426,21 +426,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {/* Card 1 */}
             <NewsCard 
-              date="Built to Scale"
+              date="Delivered at scale"
               title="Sleepers supplied for new Pune Metro Corridor"
               delay={0}
             />
 
             {/* Card 2 */}
             <NewsCard 
-              date="Built to Last"
+              date="Built for long life"
               title="Partnered on Mumbai-Ahmedabad bullet train trial track"
               delay={150}
             />
 
             {/* Card 3 */}
             <NewsCard 
-              date="Built to Keep Moving"
+              date="Approved across systems"
               title="Recognized by RDSO for product innovation"
               delay={300}
             />
