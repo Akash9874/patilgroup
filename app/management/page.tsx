@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 const LeadershipCard = ({ image, name, post }: { image: string, name: string, post: string }) => (
   <div className="group bg-white text-black transform transition-all duration-300 hover:-translate-y-1 hover:shadow-xl will-change-transform">
-    <div className="relative h-[450px] sm:h-[550px] md:h-[600px] bg-white overflow-hidden">
+    <div className="relative h-[400px] sm:h-[500px] md:h-[420px] bg-white overflow-hidden">
       <Image
         src={image}
         alt={name}
@@ -238,7 +238,7 @@ const ManagementPage = () => {
                   <div key={i} className="flex-shrink-0 w-[90%] sm:w-[80%] pl-4 first:pl-6 last:pr-6 will-change-transform" style={{ transform: 'translateZ(0)' }}>
                     <div className="group leadership-card-mobile rounded-2xl border border-gray-300/30 backdrop-blur-sm bg-white overflow-hidden shadow-xl transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl will-change-transform">
                       {/* Full Photo Container */}
-                      <div className="relative h-[350px] sm:h-[400px] bg-white overflow-hidden">
+                      <div className="relative h-[320px] sm:h-[360px] bg-white overflow-hidden">
                         <Image
                           src={leader.image}
                           alt={leader.name}
