@@ -113,8 +113,8 @@ const ResearchAndDevelopmentPage = () => {
 
           <div className="mt-8 sm:mt-12 md:mt-16 flex justify-center">
             <Image
-              src="/rndgauge.jpg"
-              alt="Stricter Tolerance Track Gauge"
+              src="/rnddddddd.png"
+              alt="Stricter tolerance track diagram"
               width={800}
               height={600}
               className="rounded-lg shadow-lg w-full max-w-4xl h-auto object-cover"
