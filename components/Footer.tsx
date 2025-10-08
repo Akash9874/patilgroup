@@ -19,11 +19,7 @@ const Footer = () => {
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-extrabold leading-tight">
           
         </h2>
-        <p className="mt-4 sm:mt-6 max-w-3xl text-[9px] sm:text-[11px] md:text-xs text-gray-300 leading-relaxed">
-          By addressing the growing demands of modern railways while offering substantial cost and environmental benefits,
-          <br />
-          Patil Group's composite sleepers represent the future of sustainable, high-performance railway infrastructure.
-        </p>
+        
       </div>
 
       {/* Pre-footer section */}
@@ -49,7 +45,7 @@ const Footer = () => {
               </button>
             </div>
           </div>
-          <div className="md:absolute right-0 md:-bottom-24 lg:-bottom-28 xl:-bottom-32 mt-4 md:mt-12">
+          <div className="md:absolute right-0 md:-bottom-32 lg:-bottom-36 xl:-bottom-40 mt-4 md:mt-12">
             <Image 
               src="/trainfooter.svg"
               alt="Footer illustration"
@@ -102,7 +98,7 @@ const Footer = () => {
 
           {/* Action Buttons */}
           <div className="md:col-span-2">
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center mt-6 sm:mt-8">
               <div className="flex flex-wrap gap-4">
                 <Link href="/whistleblower">
                   <button className="bg-[#F2913F] text-black font-bold py-3 px-6 rounded-full text-sm hover:bg-orange-400 transition-colors">

@@ -87,7 +87,7 @@ const AboutUsPage = () => {
   return (
     <div className="bg-white">
       {/* New About - Track background header */}
-      <section className="bg-white overflow-hidden py-20 sm:py-24 md:py-28">
+      <section className="bg-white overflow-hidden pt-20 sm:pt-24 md:pt-28 pb-4 sm:pb-6 md:pb-8">
         <div className="flex items-center justify-center w-full">
             {/* Left track */}
             <div className="flex-1 min-w-0 h-40 sm:h-48 md:h-56 relative" style={{ WebkitMaskImage: 'linear-gradient(to left, transparent 10%, black 100%)', maskImage: 'linear-gradient(to left, transparent 10%, black 100%)' }}>
@@ -107,7 +107,7 @@ const AboutUsPage = () => {
     </section>
 
       {/* Legacy blurb card */}
-      <section className="bg-white py-6 sm:py-8 md:py-10">
+      <section className="bg-white py-4 sm:py-5 md:py-6 -mt-10 sm:-mt-14 md:-mt-16">
         <div className="max-w-5xl mx-auto px-4">
           <div className="rounded-2xl border border-gray-200 bg-[#F7F6F4] shadow-sm px-4 sm:px-8 py-6 sm:py-8 text-center">
             <p className="text-[#F2913F] font-bold text-lg sm:text-xl md:text-2xl">
@@ -180,148 +180,102 @@ const AboutUsPage = () => {
         </div>
       </section>
 
-      {/* Responsive Philosophy Section */}
-      <section id="philosophy-section" className="py-16 sm:py-24 md:py-32 bg-white relative overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-no-repeat bg-center bg-cover opacity-90"
-          style={{ backgroundImage: "url('/worldmap.png')" }}
-        ></div>
+      {/* Responsive Philosophy Section (minimized) */}
+      <section id="philosophy-section" className="py-4 sm:py-6 md:py-8 bg-white relative overflow-hidden">
         <div className="relative z-10">
-            {/* Mobile Layout */}
-            <div className="md:hidden max-w-4xl mx-auto px-4 space-y-8 text-center">
-                <div className="fade-in-section" style={{ transitionDelay: '0ms' }}>
-                    <h2 className="fluid-h2 font-bold text-[#8A393B] leading-tight">Built for long life</h2>
-                </div>
-                <div className="fade-in-section" style={{ transitionDelay: '200ms' }}>
-                    <h2 className="fluid-h2 font-bold text-[#8A393B] leading-tight">Delivered at scale</h2>
-                </div>
-                <div className="fade-in-section" style={{ transitionDelay: '400ms' }}>
-                    <p className="fluid-h3 font-semibold text-[#F2913F]">Approved across systems</p>
-                </div>
-            </div>
-            
-            {/* Desktop Layout - Re-structured for sequential animation */}
+            {/* Desktop Layout - text removed as requested */}
             <div className="hidden md:block">
-              <div className="philosophy-item">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-left stagger-container" data-stagger="0.2">
-                        <h2 className="fluid-h2 font-bold text-[#8A393B]">
-                          <span className="stagger-item inline-block">Built</span> <span className="stagger-item inline-block">for</span> <span className="stagger-item inline-block">long</span> <span className="stagger-item inline-block">life</span>
-                        </h2>
-                    </div>
-                    <div className="text-center mt-4 stagger-container" data-stagger="0.2" data-delay="0.2">
-                        <h2 className="fluid-h2 font-bold text-[#8A393B]">
-                          <span className="stagger-item inline-block">Delivered</span> <span className="stagger-item inline-block">at</span> <span className="stagger-item inline-block">scale</span>
-                        </h2>
-                    </div>
-                    <div className="text-right mt-4 stagger-container" data-stagger="0.2" data-delay="0.4">
-                        <p className="fluid-h3 text-[#F2913F]">
-                          <span className="stagger-item inline-block">Approved</span> <span className="stagger-item inline-block">across</span> <span className="stagger-item inline-block">systems</span>
-                        </p>
-                    </div>
-                </div>
-              </div>
-
-              <div className="philosophy-item">
-                <div className="mt-32">
-                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left stagger-container" data-stagger="0.15">
-                    <h3 className="fluid-h3 font-semibold text-black">
-                      <span className="stagger-item inline-block">The</span> <span className="stagger-item inline-block">work</span> <span className="stagger-item inline-block">has</span> <span className="stagger-item inline-block">changed.</span>
-                    </h3>
-                  </div>
-                  <div 
-                      className="h-7 mt-4 w-1/2 reveal-line-left" 
-                      data-delay="0.4"
-                      style={{ 
-                        background: 'linear-gradient(to right, #8A393B, #1E3888, #F2913F, transparent)' 
-                      }}
-                  ></div>
-                </div>
-              </div>
-
-              <div className="philosophy-item">
-                <div className="mt-24">
-                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-right stagger-container" data-stagger="0.15">
-                    <h3 className="fluid-h3 font-semibold text-black">
-                      <span className="stagger-item inline-block">The</span> <span className="stagger-item inline-block">approach</span> <span className="stagger-item inline-block">has</span> <span className="stagger-item inline-block">not.</span>
-                    </h3>
-                  </div>
-                  <div 
-                      className="h-7 mt-4 ml-auto w-1/2 reveal-line-right"
-                      data-delay="0.4"
-                      style={{ 
-                        background: 'linear-gradient(to left, #8A393B, #1E3888, #F2913F, transparent)' 
-                      }}
-                  ></div>
-                </div>
-              </div>
               
-              <div className="philosophy-item">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <p className="mt-32 fluid-h3 font-semibold text-[#8A393B]">We build what holds.</p>
-                </div>
-              </div>
+
+              <div className="philosophy-item"></div>
+
+              <div className="philosophy-item"></div>
+              <div className="philosophy-item"></div>
             </div>
         </div>
       </section>
 
-      {/* Responsive In Service Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-white text-center fade-in-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Mobile Layout */}
-          <div className="md:hidden space-y-6">
-            <h2 className="fluid-h2 font-bold text-black">In service</h2>
-            <div className="space-y-4 text-lg sm:text-xl text-black leading-relaxed">
-              <p>
-                <StatCounter 
-                  end={4000000} 
-                  duration={2.5} 
-                  suffix=" sleepers and counting" 
-                  className="text-[#F2913F] font-bold"
-                /> used in <StatCounter 
-                  end={14} 
-                  duration={2} 
-                  suffix=" railway zones"
-                  className="text-[#F2913F] font-bold"
-                />
-              </p>
-              <p>
-                Over <span style={{
-                  background: 'linear-gradient(to right, #8A393B, #F2913F)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  color: 'transparent'
-                }} className="font-bold">4 Thousand kilometres</span> delivered each year.
-              </p>
+      {/* Innovation gradient statements */}
+      <section className="bg-white py-4 sm:py-6 md:py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
+          <div className="space-y-12">
+            {/* Left-edge gradient with text */}
+            <div>
+              <h3 className="text-black text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 text-left">
+                Innovation keeps our journey moving
+              </h3>
+              <div
+                className="h-6 rounded-full"
+                style={{
+                  width: '60vw',
+                  marginLeft: 'calc(50% - 50vw)',
+                  background:
+                    'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
+                }}
+              />
+            </div>
+
+            {/* Right-edge gradient with text */}
+            <div className="text-right">
+              <h3 className="text-black text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">
+                refining every detail, every decade.
+              </h3>
+              <div
+                className="h-6 rounded-full ml-auto"
+                style={{
+                  width: '60vw',
+                  marginLeft: 'calc(50% + 50vw - 60vw)',
+                  background:
+                    'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
+                }}
+              />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Responsive In Service Section */}
+      <section className="py-12 sm:py-16 md:py-24 bg-white text-center relative fade-in-section">
+        <div 
+          className="absolute inset-0 opacity-90"
+          style={{ 
+            backgroundImage: "url('/worldmap.png')",
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'contain'
+          }}
+        ></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Mobile Layout */}
+          <div className="md:hidden space-y-5">
+            <h2 className="text-3xl font-extrabold text-[#8A393B]">In Service</h2>
+            <p className="text-lg text-[#8A393B] font-semibold">
+              <StatCounter end={4000000} duration={2.5} /> sleepers and counting used in <StatCounter end={14} duration={2} /> railway zones.
+            </p>
+            <p className="text-lg font-semibold" style={{
+              background: 'linear-gradient(to right, #8A393B, #F2913F)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
+            }}>
+              Over four hundred kilo metres delivered each year.
+            </p>
+            <p className="text-base font-medium text-[#8A393B]">Approved across systems</p>
+          </div>
           
-          {/* Desktop Layout - Original */}
+          {/* Desktop Layout - Styled to match reference */}
           <div className="hidden md:block">
-            <h2 className="text-5xl lg:text-7xl font-bold text-black">In service</h2>
-            <p className="mt-8 text-3xl lg:text-5xl text-black">
-              <StatCounter 
-                end={4000000} 
-                duration={2.5} 
-                suffix=" sleepers and counting" 
-                className="text-[#F2913F]"
-              /> used in <StatCounter 
-                end={14} 
-                duration={2} 
-                suffix=" railway zones"
-                className="text-[#F2913F]"
-              />
+            <h2 className="text-6xl font-extrabold text-[#8A393B]">In Service</h2>
+            <p className="mt-6 text-2xl lg:text-3xl font-semibold text-[#8A393B]">
+              <StatCounter end={4000000} duration={2.5} /> sleepers and counting used in <StatCounter end={14} duration={2} /> railway zones.
             </p>
-            <p className="mt-4 text-3xl lg:text-5xl text-black">
-              Over <span style={{
-                background: 'linear-gradient(to right, #8A393B, #F2913F)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                color: 'transparent'
-              }}>4 Thousand kilometres</span> delivered each year.
+            <p className="mt-2 text-2xl lg:text-3xl font-semibold" style={{
+              background: 'linear-gradient(to right, #8A393B, #F2913F)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
+            }}>
+              Over four hundred kilo metres delivered each year.
             </p>
+            <p className="mt-4 text-xl font-medium text-[#8A393B]">Approved across systems</p>
           </div>
         </div>
       </section>
