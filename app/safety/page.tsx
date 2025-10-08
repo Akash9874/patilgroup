@@ -30,7 +30,7 @@ const SafetyPage = () => {
               <div className="p-8">
                 <div className="animate-fadeInUp">
                   <h1 className="hero-title font-bold text-white leading-tight mb-4 drop-shadow-2xl">
-                    Rail wayside safety
+                    Rail Wayside Safety
                   </h1>
                   <div className="w-20 h-1.5 bg-gradient-to-r from-[#F2913F] to-[#8A393B] mx-auto mb-4 rounded-full shadow-lg"></div>
                   <p className="text-gray-200 text-base font-medium tracking-wide drop-shadow-2xl">Protecting tracks, securing journeys</p>
@@ -52,7 +52,7 @@ const SafetyPage = () => {
           <div className="absolute inset-0 bg-black/60 z-10"></div>
           <div className="absolute inset-0 z-20 hero-content flex items-center justify-start">
             <div className="px-8 lg:px-12">
-              <h1 className="hero-title font-bold text-white leading-tight drop-shadow-lg">Rail wayside safety</h1>
+              <h1 className="hero-title font-bold text-white leading-tight drop-shadow-lg">Rail Wayside Safety</h1>
             </div>
           </div>
         </div>
