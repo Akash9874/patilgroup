@@ -243,7 +243,7 @@ const CMEPage = () => {
           <div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#F2913F] leading-tight fade-in-section">
               Empowering Rural Youth
-              <br className="hidden sm:block" /> through Skill Development
+              <br className="hidden sm:block" /> through Skill Development center in Bilaspur
             </h2>
             <h3 className="mt-2 text-lg sm:text-xl md:text-2xl font-semibold text-[#8A393B] fade-in-section">
               Skilling Rural India for a Smarter Tomorrow
