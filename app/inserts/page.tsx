@@ -61,14 +61,12 @@ const InsertsPage = () => {
       <div className="bg-white text-black py-8 sm:py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
           <div className="fade-in-section">
-            {/* Mobile Layout */}
-            <div className="text-center md:text-left">
-              <h2 className="fluid-h3 font-bold text-[#8A393B] mb-3 sm:mb-4">
-              Precision Castings
-            </h2>
-              <h3 className="fluid-h3 font-bold text-[#F2913F] mb-6 sm:mb-8 md:mb-12">
-              for Modern Mobility
-            </h3>
+            {/* Section Heading - inline title and subtitle */}
+            <div className="text-left mb-6 sm:mb-8 md:mb-10">
+              <div className="flex flex-wrap items-baseline gap-x-3">
+                <h2 className="fluid-h2 font-bold text-[#8A393B]">Precision Castings</h2>
+                <span className="fluid-h3 font-bold text-[#F2913F] whitespace-nowrap">for Modern Mobility</span>
+              </div>
             </div>
             <div className="space-y-4 sm:space-y-6 md:space-y-8 fluid-body text-gray-700">
               <p className="text-justify">
@@ -145,61 +143,60 @@ const InsertsPage = () => {
             </div>
 
             {/* Desktop Layout */}
-            <div className="hidden lg:grid grid-cols-3 gap-12 items-center">
-            {/* Left side - Product Images */}
+            <div className="hidden lg:grid grid-cols-3 gap-12 items-start">
+              {/* Left side - Content */}
+              <div className="col-span-1 relative">
+                <div className="flex items-center mb-6">
+                  <h2 className="fluid-h3 font-bold text-[#8A393B] leading-tight whitespace-nowrap">
+                    SGCI Inserts
+                  </h2>
+                  {/* Inline Gradient Line */}
+                  <div className="ml-4 flex-shrink-0 h-7 gradient-line-ltr gradient-line-sm" />
+                </div>
+                <p className="fluid-body text-gray-700 text-justify">
+                  Patil Group produces SGCI inserts for all sleeper types, with our Bokaro plant housing the country's largest facility, with a capacity of 1.3 million inserts per month.
+                </p>
+              </div>
+
+              {/* Right side - Product Images */}
               <div className="col-span-2">
                 <div className="grid grid-cols-2 gap-12">
-                
-                {/* SGCI Insert RT 6901 */}
-                <div className="text-center">
-                  <div className="bg-gray-50 rounded-lg p-6 mb-4">
-                    <Image 
-                      src="/inserts45.png" 
-                      alt="SGCI Insert RT 6901" 
-                      width={300} 
-                      height={350} 
-                      className="mx-auto object-contain h-64 w-auto" 
-                    />
-                  </div>
-                  <div className="space-y-1">
+                  {/* SGCI Insert RT 6901 */}
+                  <div className="text-center">
+                    <div className="bg-gray-50 rounded-lg p-6 mb-4">
+                      <Image
+                        src="/inserts45.png"
+                        alt="SGCI Insert RT 6901"
+                        width={300}
+                        height={350}
+                        className="mx-auto object-contain h-64 w-auto"
+                      />
+                    </div>
+                    <div className="space-y-1">
                       <h4 className="fluid-h4 font-bold text-black">SGCI INSERT</h4>
                       <p className="fluid-body text-black">RT 6901</p>
                       <p className="fluid-body text-black">1.484 kg</p>
-              </div>
-            </div>
-
-                {/* SGCI Insert RT 3705 */}
-                <div className="text-center">
-                  <div className="bg-gray-50 rounded-lg p-6 mb-4">
-                    <Image 
-                      src="/insertss69.png" 
-                      alt="SGCI Insert RT 3705" 
-                      width={300} 
-                      height={350} 
-                      className="mx-auto object-contain h-64 w-auto" 
-                    />
+                    </div>
                   </div>
-                  <div className="space-y-1">
+
+                  {/* SGCI Insert RT 3705 */}
+                  <div className="text-center">
+                    <div className="bg-gray-50 rounded-lg p-6 mb-4">
+                      <Image
+                        src="/insertss69.png"
+                        alt="SGCI Insert RT 3705"
+                        width={300}
+                        height={350}
+                        className="mx-auto object-contain h-64 w-auto"
+                      />
+                    </div>
+                    <div className="space-y-1">
                       <h4 className="fluid-h4 font-bold text-black">SGCI INSERT</h4>
                       <p className="fluid-body text-black">RT 3705</p>
                       <p className="fluid-body text-black">1.97 kg</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            {/* Right side - Content */}
-              <div className="col-span-1 relative">
-              <div className="flex items-center mb-6">
-                  <h2 className="fluid-h3 font-bold text-[#8A393B] leading-tight whitespace-nowrap">
-                  SGCI Inserts
-                </h2>
-                {/* Inline Gradient Line */}
-                <div className="ml-4 flex-shrink-0 h-7 gradient-line-ltr gradient-line-sm" />
-              </div>
-                <p className="fluid-body text-gray-700 text-justify">
-                Patil Group produces SGCI inserts for all sleeper types, with our Bokaro plant housing the country's largest facility, with a capacity of 1.3 million inserts per month.
-              </p>
               </div>
             </div>
           </div>
@@ -207,18 +204,7 @@ const InsertsPage = () => {
       </section>
 
       {/* Base Plates Section */}
-      <section className="bg-white py-8 sm:py-10 md:py-12 relative">
-        {/* Left Edge Gradient Line - Desktop Only */}
-        <div 
-          className="absolute hidden lg:block fade-in-section"
-          style={{
-            width: '164px',
-            height: '28px',
-            left: '0px',
-            top: '70px',
-            background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
-          }}
-        />
+      <section className="bg-white py-8 sm:py-10 md:py-12">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="fade-in-section">
@@ -259,36 +245,38 @@ const InsertsPage = () => {
 
             {/* Desktop Layout */}
             <div className="hidden lg:block">
-          {/* Section Header */}
-              <div className="text-left mb-12 ml-24 xl:ml-32">
-                <h2 className="fluid-h2 font-bold text-[#8A393B]">
-              Base Plates
-            </h2>
-          </div>
+              {/* Section Header with inline gradient */}
+              <div className="flex items-center mb-10">
+                <h2 className="fluid-h2 font-bold text-[#8A393B]">Base Plates</h2>
+                <div className="ml-4 flex-shrink-0 h-7 gradient-line-ltr gradient-line-md" />
+              </div>
 
               <div className="grid grid-cols-3 gap-12 items-center">
-            
-            {/* Left side - Content */}
-                <div className="col-span-2">
+                {/* Left - Description */}
+                <div className="col-span-1">
                   <p className="fluid-body text-gray-700 text-justify">
-                We manufacture two-hole and four-hole base plates for metro projects, supplying directly to MMRDA and DMRC to support reliable urban transit.
-              </p>
-            </div>
+                    We manufacture two-hole and four-hole base plates for metro projects, supplying directly to MMRDA and DMRC to support reliable urban transit.
+                  </p>
+                </div>
 
-            {/* Right side - Product Image and Specs */}
-                <div className="col-span-1 text-center">
-              <div className="bg-gray-50 rounded-lg p-6 mb-4">
-            <Image
-              src="/baseplates.png"
-                  alt="MMRDA project coated four-hole base plate" 
-                  width={500} 
-              height={500}
-                  className="mx-auto object-contain h-96 w-auto" 
-                />
-              </div>
-              <div className="space-y-1">
-                    <h4 className="fluid-h4 font-bold text-black">MMRDA project</h4>
-                    <p className="fluid-body text-black">Coated four-hole base plate</p>
+                {/* Center - Product Image */}
+                <div className="col-span-1">
+                  <div className="bg-gray-50 rounded-lg p-6">
+                    <Image
+                      src="/baseplates.png"
+                      alt="MMRDA project coated four-hole base plate"
+                      width={500}
+                      height={500}
+                      className="mx-auto object-contain h-72 w-auto"
+                    />
+                  </div>
+                </div>
+
+                {/* Right - Specs */}
+                <div className="col-span-1">
+                  <div className="space-y-1">
+                    <h4 className="fluid-h4 font-bold text-black">MMRDA Project</h4>
+                    <p className="fluid-body text-black">Coated 4 hole Base Plate</p>
                     <p className="fluid-body text-black">9.30 kg</p>
                   </div>
                 </div>
@@ -363,64 +351,55 @@ const InsertsPage = () => {
             </div>
 
             {/* Desktop Layout */}
-            <div className="hidden lg:grid grid-cols-5 gap-12 items-center">
-            
-            {/* Left side - Product Images */}
-              <div className="col-span-2">
-              <div className="space-y-12">
-                
-                {/* Hinge Component */}
-                <div className="flex flex-col items-start">
-                  <div className="bg-gray-50 rounded-lg p-6 mb-4 w-full max-w-sm">
-              <Image
-                src="/bsytem1.png"
-                        alt="DAKO-CZ India Pvt Ltd hinge" 
-                        width={300} 
-                        height={200} 
-                        className="mx-auto object-contain h-40 w-auto" 
-              />
-            </div>
-                  <div className="space-y-1">
-                      <h4 className="text-xl font-bold text-black">DAKO-CZ India Pvt Ltd, Hyderabad</h4>
-                      <p className="text-xl text-black">Hinge</p>
-                      <p className="text-xl text-black">BK 5551</p>
-                      <p className="text-xl text-black">13.0 kg</p>
-                  </div>
-                </div>
-
-                {/* Lining Holder Component */}
-                <div className="flex flex-col items-start">
-                  <div className="bg-gray-50 rounded-lg p-6 mb-4 w-full max-w-sm">
-              <Image
-                src="/bsystem2.png"
-                        alt="DAKO-CZ India Pvt Ltd lining holder" 
-                        width={300} 
-                        height={200} 
-                        className="mx-auto object-contain h-40 w-auto" 
-                      />
-                    </div>
-                  <div className="space-y-1">
-                      <h4 className="text-xl font-bold text-black">DAKO-CZ India Pvt Ltd, Hyderabad</h4>
-                      <p className="text-xl text-black">Lining holder (LH and RH)</p>
-                      <p className="text-xl text-black">20270-163 & 20270-164</p>
-                      <p className="text-xl text-black">8.10 kg</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right side - Content */}
-              <div className="col-span-3 relative">
+            <div className="hidden lg:block">
+              {/* Header */}
               <div className="flex items-center mb-6">
-                  <h2 className="fluid-h3 font-bold text-[#8A393B] leading-tight whitespace-nowrap">
-                  Railway Braking System
-                </h2>
-                {/* Inline Gradient Line */}
+                <h2 className="fluid-h2 font-bold text-[#8A393B]">Railway Braking System</h2>
                 <div className="ml-4 flex-shrink-0 h-7 gradient-line-ltr gradient-line-md" />
               </div>
-                <p className="fluid-body text-gray-700 text-justify">
+              <p className="fluid-body text-gray-700 text-justify mb-8">
                 Our foundries deliver critical castings for railway braking assemblies, including lining holders, double eyes, hinges, levers, connectors, covers, and cylinders—ensuring safety and durability in service.
               </p>
+
+              {/* Products row */}
+              <div className="grid grid-cols-2 gap-12">
+                {/* Left product - Lining Holder */}
+                <div>
+                  <div className="bg-gray-50 rounded-lg p-6 mb-3">
+                    <Image
+                      src="/bsystem2.png"
+                      alt="DAKO-CZ India Pvt Ltd lining holder"
+                      width={360}
+                      height={240}
+                      className="mx-auto object-contain h-40 w-auto"
+                    />
+                  </div>
+                  <div className="space-y-0.5">
+                    <h4 className="fluid-body-sm font-bold text-black">DAKO-CZ India Pvt Ltd, Hyderabad</h4>
+                    <p className="fluid-small text-black">Lining Holder LH & RH</p>
+                    <p className="fluid-small text-black">20270-163 & 20270-164</p>
+                    <p className="fluid-small text-black">8.10 kg</p>
+                  </div>
+                </div>
+
+                {/* Right product - Hinge */}
+                <div>
+                  <div className="bg-gray-50 rounded-lg p-6 mb-3">
+                    <Image
+                      src="/bsytem1.png"
+                      alt="DAKO-CZ India Pvt Ltd hinge"
+                      width={360}
+                      height={240}
+                      className="mx-auto object-contain h-40 w-auto"
+                    />
+                  </div>
+                  <div className="space-y-0.5">
+                    <h4 className="fluid-body-sm font-bold text-black">DAKO-CZ India Pvt Ltd, Hyderabad</h4>
+                    <p className="fluid-small text-black">Hinge</p>
+                    <p className="fluid-small text-black">BK 5551</p>
+                    <p className="fluid-small text-black">13.0 kg</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -428,18 +407,7 @@ const InsertsPage = () => {
       </section>
 
       {/* Railway Suspension System Section */}
-      <section className="bg-white py-8 sm:py-10 md:py-12 relative">
-        {/* Left Edge Gradient Line - Desktop Only */}
-        <div 
-          className="absolute hidden lg:block fade-in-section"
-          style={{
-            width: '160px',
-            height: '28px',
-            left: '0px',
-            top: '30px',
-            background: 'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)'
-          }}
-        />
+      <section className="bg-white py-8 sm:py-10 md:py-12">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
           <div className="fade-in-section">
@@ -480,36 +448,42 @@ const InsertsPage = () => {
             </div>
 
             {/* Desktop Layout */}
-            <div className="hidden lg:grid grid-cols-3 gap-12 items-start -mt-4">
-              
-              {/* Left side - Content */}
-              <div className="col-span-2">
-                <div className="mb-4">
-                  <h2 className="fluid-h3 font-bold text-[#8A393B] leading-tight whitespace-nowrap mb-4">
-                    Railway Suspension System
-                  </h2>
-                </div>
-                <p className="fluid-body text-gray-700 text-justify">
-                We supply precision castings for suspension assemblies, covering eight labyrinth ring types and suspension tubes, engineered for stability and long service life.
-              </p>
-            </div>
-
-            {/* Right side - Product Image and Specs */}
-              <div className="col-span-1 text-center">
-              <div className="bg-gray-50 rounded-lg p-6 mb-4">
-            <Image
-              src="/suspension.png"
-                  alt="Indore Nitriders lining labyrinth ring" 
-                  width={300} 
-                  height={300} 
-                  className="mx-auto object-contain h-64 w-auto" 
-                />
+            <div className="hidden lg:block">
+              {/* Section Header with inline gradient */}
+              <div className="flex items-center mb-6">
+                <h2 className="fluid-h2 font-bold text-[#8A393B]">Railway Suspension System</h2>
+                <div className="ml-4 flex-shrink-0 h-7 gradient-line-ltr gradient-line-md" />
               </div>
-              <div className="space-y-1 text-left">
-                  <h4 className="text-xl font-bold text-black">Indore Nitriders; Indore Lining</h4>
-                  <p className="text-xl text-black">Labyrinth ring (eight different parts)</p>
-                  <p className="text-xl text-black">1209-01-211-927</p>
-                  <p className="text-xl text-black">10.00 to 30.00 kg</p>
+
+              <div className="grid grid-cols-3 gap-12 items-center">
+                {/* Left - Description */}
+                <div className="col-span-1">
+                  <p className="fluid-body text-gray-700 text-justify">
+                    We supply precision castings for suspension assemblies, covering eight labyrinth ring types and suspension tubes, engineered for stability and long service life.
+                  </p>
+                </div>
+
+                {/* Center - Product Image */}
+                <div className="col-span-1">
+                  <div className="bg-gray-50 rounded-lg p-6">
+                    <Image
+                      src="/suspension.png"
+                      alt="Indore Nitriders lining labyrinth ring"
+                      width={360}
+                      height={360}
+                      className="mx-auto object-contain h-48 w-auto"
+                    />
+                  </div>
+                </div>
+
+                {/* Right - Specs */}
+                <div className="col-span-1">
+                  <div className="space-y-1">
+                    <h4 className="fluid-body-sm font-bold text-black">Indore Nitriders; Indore Lining</h4>
+                    <p className="fluid-small text-black">Labyrinth ring (8 different parts)</p>
+                    <p className="fluid-small text-black">1209-01-211-927</p>
+                    <p className="fluid-small text-black">10.00 to 30.00 kg</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -521,3 +495,4 @@ const InsertsPage = () => {
 };
 
 export default InsertsPage;
+
