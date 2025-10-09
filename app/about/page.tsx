@@ -87,33 +87,33 @@ const AboutUsPage = () => {
   return (
     <div className="bg-white">
       {/* New About - Track background header */}
-      <section className="bg-white overflow-hidden pt-20 sm:pt-24 md:pt-28 pb-4 sm:pb-6 md:pb-8">
+      <section className="bg-white overflow-hidden pt-32 sm:pt-24 md:pt-28 pb-4 sm:pb-6 md:pb-8">
         <div className="flex items-center justify-center w-full">
-            {/* Left track */}
-            <div className="flex-1 min-w-0 h-40 sm:h-48 md:h-56 relative" style={{ WebkitMaskImage: 'linear-gradient(to left, transparent 10%, black 100%)', maskImage: 'linear-gradient(to left, transparent 10%, black 100%)' }}>
+            {/* Left track - hide on mobile to prevent crowding */}
+            <div className="hidden sm:block flex-1 min-w-0 h-40 sm:h-48 md:h-56 relative" style={{ WebkitMaskImage: 'linear-gradient(to left, transparent 10%, black 100%)', maskImage: 'linear-gradient(to left, transparent 10%, black 100%)' }}>
                 <Image src="/trackkkk.png" alt="Rail track left" fill className="object-cover object-right scale-x-[-1]" priority />
             </div>
 
             {/* Centered heading */}
-            <h1 className="flex-shrink-0 text-[#8A393B] font-extrabold leading-tight text-center px-4 sm:px-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap">
+            <h1 className="flex-shrink-0 text-[#8A393B] font-extrabold leading-tight text-center px-4 sm:px-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-normal sm:whitespace-nowrap break-words max-w-[90vw]">
                 Through the tracks of time
             </h1>
 
-            {/* Right track */}
-            <div className="flex-1 min-w-0 h-40 sm:h-48 md:h-56 relative" style={{ WebkitMaskImage: 'linear-gradient(to right, transparent 10%, black 100%)', maskImage: 'linear-gradient(to right, transparent 10%, black 100%)' }}>
+            {/* Right track - hide on mobile to prevent crowding */}
+            <div className="hidden sm:block flex-1 min-w-0 h-40 sm:h-48 md:h-56 relative" style={{ WebkitMaskImage: 'linear-gradient(to right, transparent 10%, black 100%)', maskImage: 'linear-gradient(to right, transparent 10%, black 100%)' }}>
                 <Image src="/trackkkk.png" alt="Rail track right" fill className="object-cover object-left" priority />
             </div>
         </div>
     </section>
 
       {/* Legacy blurb card */}
-      <section className="bg-white py-4 sm:py-5 md:py-6 -mt-10 sm:-mt-14 md:-mt-16">
+      <section className="bg-white py-4 sm:py-5 md:py-6 mt-6 sm:-mt-14 md:-mt-16">
         <div className="max-w-5xl mx-auto px-4">
-          <div className="rounded-2xl border border-gray-200 bg-[#F7F6F4] shadow-sm px-4 sm:px-8 py-6 sm:py-8 text-center">
-            <p className="text-[#F2913F] font-bold text-lg sm:text-xl md:text-2xl">
+          <div className="rounded-2xl border border-gray-200 bg-[#F7F6F4] shadow-sm px-3 sm:px-8 py-5 sm:py-8 text-center">
+            <p className="text-[#F2913F] font-bold text-base sm:text-xl md:text-2xl">
               We began in the 1960s with a single concrete sleeper plant.
             </p>
-            <p className="mt-2 text-[#8A393B] font-semibold text-xl sm:text-2xl md:text-3xl leading-snug">
+            <p className="mt-2 text-[#8A393B] font-semibold text-lg sm:text-2xl md:text-3xl leading-snug">
               Today, we supply track components to railways and
               <br className="hidden sm:block" /> metros across India.
             </p>
@@ -148,7 +148,7 @@ const AboutUsPage = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
           {/* Title */}
           <div className="text-center mb-8 fade-heading" data-delay="0.15" data-duration="0.9">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold whitespace-nowrap">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold whitespace-normal break-words">
               <span className="text-[#8A393B]">Our Business Decision - </span>
               <span className="text-[#F2913F]">Making Principles</span>
             </h2>
@@ -198,16 +198,16 @@ const AboutUsPage = () => {
       {/* Innovation gradient statements */}
       <section className="bg-white py-4 sm:py-6 md:py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fade-in-section">
-          <div className="space-y-12">
+          <div className="space-y-10 sm:space-y-12">
             {/* Left-edge gradient with text */}
             <div>
               <h3 className="text-black text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 text-left">
                 Innovation keeps our journey moving
               </h3>
               <div
-                className="h-6 rounded-full"
+                className="h-4 sm:h-6 rounded-full"
                 style={{
-                  width: '60vw',
+                  width: '80vw',
                   marginLeft: 'calc(50% - 50vw)',
                   background:
                     'linear-gradient(90deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
@@ -221,9 +221,9 @@ const AboutUsPage = () => {
                 refining every detail, every decade.
               </h3>
               <div
-                className="h-6 rounded-full ml-auto"
+                className="h-4 sm:h-6 rounded-full ml-auto"
                 style={{
-                  width: '60vw',
+                  width: '80vw',
                   marginLeft: 'calc(50% + 50vw - 60vw)',
                   background:
                     'linear-gradient(270deg, #8A393B 0%, #1E3888 30%, #F2913F 60%, rgba(242, 145, 63, 0) 97.12%)',
@@ -235,7 +235,7 @@ const AboutUsPage = () => {
       </section>
 
       {/* Responsive In Service Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-white text-center relative fade-in-section">
+      <section className="py-10 sm:py-16 md:py-24 bg-white text-center relative fade-in-section">
         <div 
           className="absolute inset-0 opacity-90"
           style={{ 
@@ -281,12 +281,12 @@ const AboutUsPage = () => {
       </section>
 
       {/* Responsive Make in India Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-white text-center relative fade-in-section">
+      <section className="py-10 sm:py-16 md:py-24 bg-white text-center relative fade-in-section">
         {/* Mobile Layout */}
         <div className="md:hidden px-4">
           <div className="bg-gradient-to-r from-orange-50 to-green-50 rounded-2xl p-6 mx-auto max-w-sm">
-            <img src="/makeindia.png" alt="Make in India" className="h-20 sm:h-24 mx-auto mb-4" />
-            <p className="text-xl sm:text-2xl font-bold text-black leading-tight">Installed across India</p>
+            <img src="/makeindia.png" alt="Make in India" className="h-16 sm:h-24 mx-auto mb-4" />
+            <p className="text-lg sm:text-2xl font-bold text-black leading-tight">Installed across India</p>
             <div
               className="h-1.5 mt-3 mx-auto rounded-full"
               style={{
@@ -320,7 +320,7 @@ const AboutUsPage = () => {
       <div className="border-t border-gray-200"></div>
 
       {/* Responsive Clientele and Presence Section */}
-      <section className="py-12 sm:py-16 md:py-24 bg-white fade-in-section">
+      <section className="py-10 sm:py-16 md:py-24 bg-white fade-in-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 text-center">
             <div className="space-y-4 sm:space-y-6">
