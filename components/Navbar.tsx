@@ -237,7 +237,7 @@ const Navbar = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`relative p-3 rounded-xl transition-all duration-300 hover:bg-gray-100 active:scale-95 text-gray-800 hover:text-[#F2913F] ${isMobileMenuOpen ? 'bg-gray-100 scale-95' : ''}`}
+              className={`relative p-3 rounded-xl transition-all duration-300 hover:bg-gray-100 active:scale-95 text-black hover:text-[#F2913F] ${isMobileMenuOpen ? 'bg-gray-100 scale-95' : ''}`}
               aria-label="Toggle mobile menu"
               aria-expanded={isMobileMenuOpen}
             >
@@ -434,7 +434,7 @@ const Navbar = () => {
            <div className="px-6 py-6 shrink-0">
            </div>
            
-          {/* Navigation Content */}
+           {/* Navigation Content */}
           <div className="flex-1 overflow-y-auto px-6 py-4 bg-white" style={{ backgroundColor: '#ffffff' }}>
              {/* Navigation Menu Items */}
              <div className="space-y-1 mt-2">
@@ -665,7 +665,7 @@ const Navbar = () => {
                 className="block py-4 border-b border-gray-200 text-black hover:text-[#F2913F] transition-colors duration-200"
               >
                 <span className="text-lg font-medium">In News</span>
-              </Link>
+               </Link>
 
                {/* CME */}
                <Link 
@@ -692,7 +692,7 @@ const Navbar = () => {
                 className="block py-4 border-b border-gray-200 text-black hover:text-[#F2913F] transition-colors duration-200"
               >
                 <span className="text-lg font-medium">Sustainability</span>
-              </Link>
+               </Link>
 
                {/* Careers */}
                <Link 

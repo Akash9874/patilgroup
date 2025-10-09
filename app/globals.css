@@ -186,11 +186,14 @@ nav.navbar-solid .text-white {
 }
 
 /* Make navbar text white when transparent */
-nav:not(.scrolled):not(.hovered):not(.navbar-solid):not(.mobile-menu-open) .text-gray-800 {
-  color: white;
-}
-nav:not(.scrolled):not(.hovered):not(.navbar-solid):not(.mobile-menu-open) svg {
-  color: white;
+/* Keep mobile hamburger visible; limit white-on-transparent only for desktop */
+@media (min-width: 1025px) {
+  nav:not(.scrolled):not(.hovered):not(.navbar-solid):not(.mobile-menu-open) .text-gray-800 {
+    color: white;
+  }
+  nav:not(.scrolled):not(.hovered):not(.navbar-solid):not(.mobile-menu-open) svg {
+    color: white;
+  }
 }
 
 /* Ensure hamburger menu is always visible */
