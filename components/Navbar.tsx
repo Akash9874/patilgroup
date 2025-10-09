@@ -20,7 +20,7 @@ const Navbar = () => {
     { href: '/our-vision', label: 'Our Values' },
     { href: '/legacy', label: 'Our Legacy' },
     { href: '/management', label: 'Management' },
-    { href: '/news', label: 'In News' },
+    { href: '/news', label: 'News and Events' },
     { href: '/responsibilities', label: 'Our Resources' },
     { href: '/our-presence', label: 'Our Presence' },
     { href: '/sustainability', label: 'Sustainability' },
@@ -658,13 +658,13 @@ const Navbar = () => {
                  <span className="text-lg font-medium">Projects</span>
                </Link>
 
-              {/* In News (moved out of About for mobile) */}
+              {/* News and Events (moved out of About for mobile) */}
               <Link 
                 href="/news" 
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block py-4 border-b border-gray-200 text-black hover:text-[#F2913F] transition-colors duration-200"
               >
-                <span className="text-lg font-medium">In News</span>
+                <span className="text-lg font-medium">News and Events</span>
                </Link>
 
                {/* CME */}
