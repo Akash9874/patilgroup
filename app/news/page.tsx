@@ -197,7 +197,7 @@ const NewsPage = () => {
         <div className="absolute inset-0 z-10 hero-content">
           <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 md:bottom-8 md:left-8 lg:bottom-12 lg:left-12">
             <h1 className="text-white font-bold leading-none text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">
-              News and Events
+              News&Events
             </h1>
           </div>
         </div>

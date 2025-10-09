@@ -16,11 +16,10 @@ const Navbar = () => {
   const pathname = usePathname();
 
   const aboutLinks = [
-    { href: '/about', label: 'About Us' },
+    { href: '/about', label: 'About' },
     { href: '/our-vision', label: 'Our Values' },
     { href: '/legacy', label: 'Our Legacy' },
     { href: '/management', label: 'Management' },
-    { href: '/news', label: 'News and Events' },
     { href: '/responsibilities', label: 'Our Resources' },
     { href: '/our-presence', label: 'Our Presence' },
     { href: '/sustainability', label: 'Sustainability' },
@@ -161,7 +160,7 @@ const Navbar = () => {
               setIsSystemsMenuOpen(false);
             }}>
                 <button className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F] flex items-center gap-1">
-                  About Us
+                  Know us
                 <ChevronDown size={16} className={`transition-transform duration-300 ${isAboutMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
               </div>
@@ -172,6 +171,14 @@ const Navbar = () => {
                 setIsSystemsMenuOpen(false);
               }} className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F]">
                 Projects
+              </Link>
+
+              <Link href="/news" onMouseEnter={() => {
+                setIsAboutMenuOpen(false);
+                setIsProductsMenuOpen(false);
+                setIsSystemsMenuOpen(false);
+              }} className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F]">
+                News&Events
               </Link>
 
               <div onMouseEnter={() => {
@@ -453,7 +460,7 @@ const Navbar = () => {
                    onClick={() => setIsMobileAboutExpanded(!isMobileAboutExpanded)}
                   className="w-full flex items-center justify-between py-4 text-black hover:text-[#F2913F] transition-colors duration-200"
                  >
-                   <span className="text-lg font-medium">About Us</span>
+                   <span className="text-lg font-medium">Know us</span>
                   <div className={`text-gray-500 transition-transform duration-300 ${isMobileAboutExpanded ? 'rotate-90' : ''}`}>
                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                        <path d="M15 18l-6-6 6-6"/>
@@ -471,7 +478,7 @@ const Navbar = () => {
                        onClick={() => setIsMobileMenuOpen(false)}
                       className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
-                       About Us
+                       About
                      </Link>
                      <Link 
                        href="/our-vision"
@@ -664,7 +671,7 @@ const Navbar = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block py-4 border-b border-gray-200 text-black hover:text-[#F2913F] transition-colors duration-200"
               >
-                <span className="text-lg font-medium">News and Events</span>
+                <span className="text-lg font-medium">News&Events</span>
                </Link>
 
                {/* CME */}
