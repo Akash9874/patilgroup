@@ -84,7 +84,7 @@ const PrecastPage = () => {
   return (
     <div className="bg-white text-black">
       {/* Hero Section */}
-      <div className="relative hero-section">
+      <div className="relative hero-section no-mobile-parallax">
         {/* Mobile Layout */}
         <div className="md:hidden h-screen relative">
           <Image

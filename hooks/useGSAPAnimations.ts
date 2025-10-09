@@ -308,8 +308,8 @@ export const useGSAPAnimations = () => {
     });
 
     mm.add("(max-width: 767px)", () => {
-      // Mobile parallax (less intense)
-      const heros = gsap.utils.toArray<HTMLElement>('.hero-section');
+      // Mobile parallax (less intense). Allow opt-out via .no-mobile-parallax
+      const heros = gsap.utils.toArray<HTMLElement>('.hero-section:not(.no-mobile-parallax)');
       heros.forEach((hero) => {
         const background = hero.querySelector('.hero-video, .hero-image');
         const content = hero.querySelector('.hero-content');
