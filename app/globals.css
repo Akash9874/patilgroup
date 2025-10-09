@@ -201,6 +201,19 @@ nav:not(.scrolled):not(.hovered):not(.navbar-solid) .lg\\:hidden .text-gray-800 
   color: white;
 }
 
+/* Mobile navbar: white background and black text */
+@media (max-width: 1024px) {
+  nav[data-navbar] {
+    background-color: #ffffff !important;
+  }
+  nav[data-navbar] .text-gray-800,
+  nav[data-navbar] a,
+  nav[data-navbar] button,
+  nav[data-navbar] svg {
+    color: #111827;
+  }
+}
+
 /* Performance optimizations for all animations */
 body {
   -webkit-font-smoothing: antialiased;

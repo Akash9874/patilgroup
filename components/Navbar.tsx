@@ -401,7 +401,7 @@ const Navbar = () => {
 
              {/* Full Screen Mobile Navigation */}
        <div 
-         className={`lg:hidden fixed z-[9999] bg-black transition-all duration-500 ease-in-out ${
+        className={`lg:hidden fixed z-[9999] bg-white transition-all duration-500 ease-in-out ${
            isMobileMenuOpen 
              ? 'opacity-100 visible' 
              : 'opacity-0 invisible'
@@ -412,18 +412,18 @@ const Navbar = () => {
            bottom: 0,
            width: '100%', 
            height: '100vh',
-           backgroundColor: '#000000',
+          backgroundColor: '#ffffff',
            zIndex: 9999,
            right: isMobileMenuOpen ? '0' : '-100%'
          }}
        >         
          {/* Full Screen Navigation Panel */}
-         <div className="w-full h-full bg-black flex flex-col overflow-hidden">
+        <div className="w-full h-full bg-white flex flex-col overflow-hidden">
            {/* Header */}
            <div className="flex items-center justify-end px-6 py-6 shrink-0">
              <button
                onClick={() => setIsMobileMenuOpen(false)}
-               className="p-2 text-white hover:text-amber-400 transition-colors duration-200"
+              className="p-2 text-black hover:text-amber-500 transition-colors duration-200"
                aria-label="Close menu"
              >
                <X size={24} />
@@ -434,27 +434,27 @@ const Navbar = () => {
            <div className="px-6 py-6 shrink-0">
            </div>
            
-           {/* Navigation Content */}
-           <div className="flex-1 overflow-y-auto px-6 py-4 bg-black" style={{ backgroundColor: '#000000' }}>
+          {/* Navigation Content */}
+          <div className="flex-1 overflow-y-auto px-6 py-4 bg-white" style={{ backgroundColor: '#ffffff' }}>
              {/* Navigation Menu Items */}
              <div className="space-y-1 mt-2">
                {/* Home */}
                <Link 
                  href="/" 
                  onClick={() => setIsMobileMenuOpen(false)}
-                 className="block py-4 border-b border-gray-800 text-white hover:text-amber-400 transition-colors duration-200"
+                className="block py-4 border-b border-gray-200 text-black hover:text-[#F2913F] transition-colors duration-200"
                >
                  <span className="text-lg font-medium">Home</span>
                </Link>
 
                {/* About Us - Expandable */}
-               <div className="border-b border-gray-800">
+              <div className="border-b border-gray-200">
                  <button 
                    onClick={() => setIsMobileAboutExpanded(!isMobileAboutExpanded)}
-                   className="w-full flex items-center justify-between py-4 text-white hover:text-amber-400 transition-colors duration-200"
+                  className="w-full flex items-center justify-between py-4 text-black hover:text-[#F2913F] transition-colors duration-200"
                  >
                    <span className="text-lg font-medium">About Us</span>
-                   <div className={`text-gray-400 transition-transform duration-300 ${isMobileAboutExpanded ? 'rotate-90' : ''}`}>
+                  <div className={`text-gray-500 transition-transform duration-300 ${isMobileAboutExpanded ? 'rotate-90' : ''}`}>
                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                        <path d="M15 18l-6-6 6-6"/>
                      </svg>
@@ -465,67 +465,53 @@ const Navbar = () => {
                  <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
                    isMobileAboutExpanded ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
                  }`}>
-                   <div className="py-2 pl-4 bg-gray-900">
+                  <div className="py-2 pl-4 bg-gray-50">
                      <Link 
                        href="/about" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        About Us
                      </Link>
                      <Link 
                        href="/our-vision"
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        Our Values
                      </Link>
                      <Link 
                        href="/legacy" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        Our Legacy
                      </Link>
                      <Link 
                        href="/management" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        Management
                      </Link>
                      <Link 
-                       href="/news" 
-                       onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
-                     >
-                       In News
-                     </Link>
-                     <Link 
                        href="/responsibilities" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        Our Resources
                      </Link>
                      <Link 
                        href="/our-presence" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        Our Presence
                      </Link>
                      <Link 
-                       href="/sustainability" 
-                       onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
-                     >
-                       Sustainability
-                     </Link>
-                     <Link 
                        href="/our-clientele" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        Our Clientele
                      </Link>
@@ -534,13 +520,13 @@ const Navbar = () => {
                </div>
 
                {/* Products - Expandable */}
-               <div className="border-b border-gray-800">
+              <div className="border-b border-gray-200">
                  <button 
                    onClick={() => setIsMobileProductsExpanded(!isMobileProductsExpanded)}
-                   className="w-full flex items-center justify-between py-4 text-white hover:text-amber-400 transition-colors duration-200"
+                  className="w-full flex items-center justify-between py-4 text-black hover:text-[#F2913F] transition-colors duration-200"
                  >
                    <span className="text-lg font-medium">Products</span>
-                   <div className={`text-gray-400 transition-transform duration-300 ${isMobileProductsExpanded ? 'rotate-90' : ''}`}>
+                  <div className={`text-gray-500 transition-transform duration-300 ${isMobileProductsExpanded ? 'rotate-90' : ''}`}>
                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                        <path d="M15 18l-6-6 6-6"/>
                      </svg>
@@ -551,53 +537,53 @@ const Navbar = () => {
                  <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
                    isMobileProductsExpanded ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
                  }`}>
-                   <div className="py-2 pl-4 bg-gray-900">
+                  <div className="py-2 pl-4 bg-gray-50">
                      <Link 
                        href="/products" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        All Products
                      </Link>
                      <Link 
                        href="/sleepers" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        Sleepers
                      </Link>
                      <Link 
                        href="/fasteners" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        Fasteners
                      </Link>
                      <Link 
                        href="/wires" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        Wires
                      </Link>
                      <Link 
                        href="/inserts" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        Inserts
                      </Link>
                      <Link 
                        href="/precast" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        Precast
                      </Link>
                      <Link 
                        href="/safety" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        Track Safety
                      </Link>
@@ -606,13 +592,13 @@ const Navbar = () => {
                </div>
 
                {/* Systems - Expandable */}
-               <div className="border-b border-gray-800">
+              <div className="border-b border-gray-200">
                  <button 
                    onClick={() => setIsMobileSystemsExpanded(!isMobileSystemsExpanded)}
-                   className="w-full flex items-center justify-between py-4 text-white hover:text-amber-400 transition-colors duration-200"
+                  className="w-full flex items-center justify-between py-4 text-black hover:text-[#F2913F] transition-colors duration-200"
                  >
                    <span className="text-lg font-medium">Systems</span>
-                   <div className={`text-gray-400 transition-transform duration-300 ${isMobileSystemsExpanded ? 'rotate-90' : ''}`}>
+                  <div className={`text-gray-500 transition-transform duration-300 ${isMobileSystemsExpanded ? 'rotate-90' : ''}`}>
                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                        <path d="M15 18l-6-6 6-6"/>
                      </svg>
@@ -623,39 +609,39 @@ const Navbar = () => {
                  <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
                    isMobileSystemsExpanded ? 'max-h-[250px] opacity-100' : 'max-h-0 opacity-0'
                  }`}>
-                   <div className="py-2 pl-4 bg-gray-900">
+                  <div className="py-2 pl-4 bg-gray-50">
                      <Link 
                        href="/systems" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        All Systems
                      </Link>
                      <Link 
                        href="/ballastless-track-urban-metro" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        Ballastless Track
                      </Link>
                      <Link 
                        href="/flash-butt-welding-of-rails" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        Flash Butt Welding
                      </Link>
                      <Link 
                        href="/patil-rheda-system" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        Patil RHEDA System
                      </Link>
                      <Link 
                        href="/precast-plinth" 
                        onClick={() => setIsMobileMenuOpen(false)}
-                       className="block py-3 text-gray-300 hover:text-amber-400 transition-colors duration-200 text-base"
+                      className="block py-3 text-gray-700 hover:text-[#F2913F] transition-colors duration-200 text-base"
                      >
                        Precast Plinth
                      </Link>
@@ -667,16 +653,25 @@ const Navbar = () => {
                <Link 
                  href="/projects" 
                  onClick={() => setIsMobileMenuOpen(false)}
-                 className="block py-4 border-b border-gray-800 text-white hover:text-amber-400 transition-colors duration-200"
+                className="block py-4 border-b border-gray-200 text-black hover:text-[#F2913F] transition-colors duration-200"
                >
                  <span className="text-lg font-medium">Projects</span>
                </Link>
+
+              {/* In News (moved out of About for mobile) */}
+              <Link 
+                href="/news" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block py-4 border-b border-gray-200 text-black hover:text-[#F2913F] transition-colors duration-200"
+              >
+                <span className="text-lg font-medium">In News</span>
+              </Link>
 
                {/* CME */}
                <Link 
                  href="/cme" 
                  onClick={() => setIsMobileMenuOpen(false)}
-                 className="block py-4 border-b border-gray-800 text-white hover:text-amber-400 transition-colors duration-200"
+                className="block py-4 border-b border-gray-200 text-black hover:text-[#F2913F] transition-colors duration-200"
                >
                  <span className="text-lg font-medium">CME</span>
                </Link>
@@ -685,16 +680,25 @@ const Navbar = () => {
                <Link 
                  href="/research-and-development" 
                  onClick={() => setIsMobileMenuOpen(false)}
-                 className="block py-4 border-b border-gray-800 text-white hover:text-amber-400 transition-colors duration-200"
+                className="block py-4 border-b border-gray-200 text-black hover:text-[#F2913F] transition-colors duration-200"
                >
                  <span className="text-lg font-medium">R&D</span>
                </Link>
+
+              {/* Sustainability (moved out of About for mobile) */}
+              <Link 
+                href="/sustainability" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block py-4 border-b border-gray-200 text-black hover:text-[#F2913F] transition-colors duration-200"
+              >
+                <span className="text-lg font-medium">Sustainability</span>
+              </Link>
 
                {/* Careers */}
                <Link 
                  href="/careers" 
                  onClick={() => setIsMobileMenuOpen(false)}
-                 className="block py-4 border-b border-gray-800 text-white hover:text-amber-400 transition-colors duration-200"
+                className="block py-4 border-b border-gray-200 text-black hover:text-[#F2913F] transition-colors duration-200"
                >
                  <span className="text-lg font-medium">Careers</span>
                </Link>
@@ -704,7 +708,7 @@ const Navbar = () => {
                <Link 
                  href="/contact" 
                  onClick={() => setIsMobileMenuOpen(false)}
-                 className="block py-4 border-b border-gray-800 text-white hover:text-amber-400 transition-colors duration-200"
+                className="block py-4 border-b border-gray-200 text-black hover:text-[#F2913F] transition-colors duration-200"
                >
                  <span className="text-lg font-medium">Contact Us</span>
                </Link>
@@ -713,7 +717,7 @@ const Navbar = () => {
                <Link 
                  href="/privacy-policy" 
                  onClick={() => setIsMobileMenuOpen(false)}
-                 className="block py-4 text-white hover:text-amber-400 transition-colors duration-200"
+                className="block py-4 text-black hover:text-[#F2913F] transition-colors duration-200"
                >
                  <span className="text-lg font-medium">Privacy Policy</span>
                </Link>
