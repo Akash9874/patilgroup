@@ -173,14 +173,6 @@ const Navbar = () => {
                 Projects
               </Link>
 
-              <Link href="/news" onMouseEnter={() => {
-                setIsAboutMenuOpen(false);
-                setIsProductsMenuOpen(false);
-                setIsSystemsMenuOpen(false);
-              }} className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F]">
-                News&Events
-              </Link>
-
               <div onMouseEnter={() => {
                 setIsAboutMenuOpen(false);
                 setIsProductsMenuOpen(false);
@@ -217,6 +209,14 @@ const Navbar = () => {
               setIsSystemsMenuOpen(false);
               }} className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F]">
               R&D
+            </Link>
+
+            <Link href="/news" onMouseEnter={() => {
+              setIsAboutMenuOpen(false);
+              setIsProductsMenuOpen(false);
+              setIsSystemsMenuOpen(false);
+            }} className="transition-all duration-300 font-medium text-gray-800 hover:text-[#F2913F]">
+              News & Events
             </Link>
             </div>
 
@@ -665,14 +665,6 @@ const Navbar = () => {
                  <span className="text-lg font-medium">Projects</span>
                </Link>
 
-              {/* News and Events (moved out of About for mobile) */}
-              <Link 
-                href="/news" 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block py-4 border-b border-gray-200 text-black hover:text-[#F2913F] transition-colors duration-200"
-              >
-                <span className="text-lg font-medium">News&Events</span>
-               </Link>
 
                {/* CME */}
                <Link 
@@ -690,6 +682,15 @@ const Navbar = () => {
                 className="block py-4 border-b border-gray-200 text-black hover:text-[#F2913F] transition-colors duration-200"
                >
                  <span className="text-lg font-medium">R&D</span>
+               </Link>
+
+              {/* News and Events (moved after R&D for mobile) */}
+              <Link 
+                href="/news" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block py-4 border-b border-gray-200 text-black hover:text-[#F2913F] transition-colors duration-200"
+              >
+                <span className="text-lg font-medium">News & Events</span>
                </Link>
 
               {/* Sustainability (moved out of About for mobile) */}
